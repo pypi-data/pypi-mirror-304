@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sparta-airflow-timetables/__init__.py
+sparta-airflow-timetables/timetables.py
+sparta_airflow_timetables.egg-info/PKG-INFO
+sparta_airflow_timetables.egg-info/SOURCES.txt
+sparta_airflow_timetables.egg-info/dependency_links.txt
+sparta_airflow_timetables.egg-info/entry_points.txt
+sparta_airflow_timetables.egg-info/requires.txt
+sparta_airflow_timetables.egg-info/top_level.txt
