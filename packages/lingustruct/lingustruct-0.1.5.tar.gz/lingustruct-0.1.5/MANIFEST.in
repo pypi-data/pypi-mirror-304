@@ -1,0 +1,4 @@
+include README.md LICENSE
+include lingustruct/templates/*_s.json
+exclude lingustruct/templates/*.json
+exclude .env
