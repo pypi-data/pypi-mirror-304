@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: RufusAIToolkit
+Version: 0.1.0
+Summary: An AI-powered tool for intelligent web data extraction.
+Home-page: https://github.com/unrealdhanush/Rufus
+Author: Dhanush Balakrishna
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: aiohttp
+Requires-Dist: beautifulsoup4
+Requires-Dist: aiohttp-socks
+Requires-Dist: requests
+Requires-Dist: tldextract
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: nltk
+Requires-Dist: sentence-transformers
+Requires-Dist: tf-keras
+Requires-Dist: python-dotenv
+
