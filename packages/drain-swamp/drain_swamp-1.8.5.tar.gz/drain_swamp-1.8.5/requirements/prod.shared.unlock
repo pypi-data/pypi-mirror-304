@@ -1,0 +1,9 @@
+setuptools>=75.1.0
+click
+setuptools-scm
+importlib-metadata>=8.5.0
+pip-requirements-parser
+pip>=24.2
+drain-swamp-snippet
+pluggy
+pip-tools
