@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hamiltonian_ai"
+version = "0.2.3"
+description = "A Hamiltonian-inspired approach for AI optimization"
+readme = "README.md"
+authors = [
+    {name = "Javier Marin", email = "javierl@jmarin.info"}
+]
+requires-python = ">=3.7"
+dependencies = [
+    "torch>=1.7.0",
+    "numpy>=1.19.0",
+    "scikit-learn>=0.24.0",
+    "imbalanced-learn>=0.8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hamiltonian_ai*"]
