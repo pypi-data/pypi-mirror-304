@@ -1,0 +1,9 @@
+README.md
+license
+setup.py
+mynameispooja/__init__.py
+mynameispooja/main.py
+mynameispooja.egg-info/PKG-INFO
+mynameispooja.egg-info/SOURCES.txt
+mynameispooja.egg-info/dependency_links.txt
+mynameispooja.egg-info/top_level.txt
