@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: online_store12077
+Version: 0.1.0
+Summary: Проект для управления пользователями и заказами в онлайн-магазине
+Author-email: Nikita1207 <dorogin345@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2.1; extra == "dev"
+Requires-Dist: flake8>=3.8.4; extra == "dev"
+
+1. Для подключения библиотеки необходимо использовать команду в консоли 'pip install online_store12077'
+2. После успешного скачивания библиотеки необходимо из нее импортировать метод main_menu, то есть в начале кода пропиать 'from online_store import main_menu'
+
+Важно!!! Импортируем именно из 'online_store', а не из 'online_store12077'
+3. Далее просто вызываем функцию 'main_menu()', которая предоставляет доступ к функционалу всего приложения
