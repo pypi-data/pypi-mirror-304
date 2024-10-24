@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+sageintacctsdkDIOB.egg-info/PKG-INFO
+sageintacctsdkDIOB.egg-info/SOURCES.txt
+sageintacctsdkDIOB.egg-info/dependency_links.txt
+sageintacctsdkDIOB.egg-info/requires.txt
+sageintacctsdkDIOB.egg-info/top_level.txt
