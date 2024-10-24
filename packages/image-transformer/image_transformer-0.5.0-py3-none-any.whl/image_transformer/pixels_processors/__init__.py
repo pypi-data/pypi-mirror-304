@@ -1,0 +1,10 @@
+"""
+This module initializes the pixels_processors package by importing all functions and classes
+from the pixels_processors module.
+"""
+
+from image_transformer.pixels_processors.average_pixels_processor import AveragePixelsProcessor
+from image_transformer.pixels_processors.generic_pixels_processor import GenericPixelsProcessor
+from image_transformer.pixels_processors.most_frequent_pixels_processor import MostFrequentPixelsProcessor
+from image_transformer.pixels_processors.random_pixels_processor import RandomPixelsProcessor
+from image_transformer.pixels_processors.color_palette_based_pixel_processor import ColorPaletteBasedPixelProcessor
