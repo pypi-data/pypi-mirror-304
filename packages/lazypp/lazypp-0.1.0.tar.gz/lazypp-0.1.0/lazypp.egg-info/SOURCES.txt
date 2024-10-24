@@ -1,0 +1,9 @@
+pyproject.toml
+lazypp/__init__.py
+lazypp/file_objects.py
+lazypp/task.py
+lazypp.egg-info/PKG-INFO
+lazypp.egg-info/SOURCES.txt
+lazypp.egg-info/dependency_links.txt
+lazypp.egg-info/top_level.txt
+tests/test1.py
