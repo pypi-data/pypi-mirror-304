@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: lilytk
+Version: 0.0.1
+Summary: Tkinter components that I wanted to make :3
+Project-URL: Homepage, https://github.com/jmeaster30/lilytk
+Project-URL: Issues, https://github.com/jmeaster30/lilytk/issues
+Author-email: Lilith Cybi <lilith.cybi@syrency.com>
+License-File: LICENSE
+Keywords: components,lily,tkinter,widgets
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Provides-Extra: dev
+Requires-Dist: build>=1.2; extra == 'dev'
+Requires-Dist: bumpver>=2023.1129; extra == 'dev'
+Requires-Dist: hatch>=1.13; extra == 'dev'
+Requires-Dist: pip-tools>=7.4; extra == 'dev'
+Requires-Dist: twine>=5.1.1; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# lilytk
+Tkinter components that I wanted to make :3
+
+## Installing
+This can be installed like any other PyPi package `pip install lilytk`
