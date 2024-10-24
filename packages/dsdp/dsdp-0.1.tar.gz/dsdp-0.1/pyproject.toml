@@ -1,0 +1,35 @@
+[project]
+name = "dsdp"
+readme = "README.md"
+license = {"file" = "LICENSE"}
+keywords = ["DSDP", "molecular docking"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux"
+]
+dynamic = ["version", "description"]
+dependencies = ["tqdm", "scikit-image"]
+
+[project.scripts]
+DSDP = "DSDP.__main__:main"
+
+[build-system]
+requires = ["py-build-cmake~=0.1.8"]
+build-backend = "py_build_cmake.build"
+
+[tool.py-build-cmake.module]
+name = "DSDP"
+directory = "."
+
+[tool.py-build-cmake.sdist]
+include = ["CMakeLists.txt", "src/*", "DSDP/*"]
+
+[tool.py-build-cmake.cmake]
+minimum_version = "3.18"
+build_type = "Release"
+install_components = ["python_modules"]
