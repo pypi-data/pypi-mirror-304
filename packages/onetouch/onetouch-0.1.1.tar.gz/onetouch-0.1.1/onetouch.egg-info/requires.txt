@@ -1,0 +1,5 @@
+requests>=2.23.0
+
+[dev]
+pytest>=5.2
+flake8>=3.7
