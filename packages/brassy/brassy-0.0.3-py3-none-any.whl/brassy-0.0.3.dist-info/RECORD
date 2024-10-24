@@ -1,0 +1,17 @@
+brassy/__init__.py,sha256=nDVFxcisalKulK20PVtdO8-_sSKh4-SzsWhEIKuBWA8,507
+brassy/actions/build_release_notes.py,sha256=swO4ZUrn4P7qrvlSz6pndBtDPOjcpfJcECVhPSGxWbU,7510
+brassy/actions/init.py,sha256=jwECPsMBltzEBK4_jEuMDpsB3cSDSfDVlON0Ysq1TH8,1028
+brassy/actions/prune_yaml.py,sha256=p4pZ4LN9K-vFKk5FdpZZ-NrjZg4fiisrpytCf-rKF4k,3657
+brassy/brassy.py,sha256=PtqwtN3UgMZzH6D699y0mbSJDVXNu_6BEXzptoHWvtg,588
+brassy/templates/release_yaml_template.py,sha256=_TBBgmgZnh9XGR0HJ_VcXD3Oaze1l3vDiqL8nXd8I6o,3074
+brassy/templates/settings_template.py,sha256=UR_mlHzp8KFeh7llCOqRuN9p9l5l5xd4Qm7_tNtpA6Q,2547
+brassy/utils/CLI.py,sha256=u3ieIMpTTGis3FWzlEwoDxOgSlu6cWS0ocURWXO2D4A,9606
+brassy/utils/file_handler.py,sha256=IOS5-prcOPS90o3YVUfUZAeWdtNE4ivjLNT7uHdWhsg,5524
+brassy/utils/git_handler.py,sha256=T5ebwHNwVFITu89wRIahEBEZErlj7fVBxYXZbWTjats,2343
+brassy/utils/messages.py,sha256=z7W-AQACzqbKLDUrhdmvqqJr5qk25WIHgyfuYCQQITM,2885
+brassy/utils/settings_manager.py,sha256=3y55GoLMlWQSfV7JnL_-jh4BMvW6EKOhWEc86Tp1bMg,6472
+brassy-0.0.3.dist-info/LICENSE,sha256=chG3GNX2BBDTWIuSVfZUJ_YF_ZVBSoel2d_AN0OChS0,6
+brassy-0.0.3.dist-info/METADATA,sha256=TXssz00chCz0Pzm2buXOvrIBMcwpKryrNdk2TBsqI6g,1546
+brassy-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+brassy-0.0.3.dist-info/entry_points.txt,sha256=6S62Ka0GZOAgpA_t-dF02lJgFuIoi5LVPaM71XOVJEQ,53
+brassy-0.0.3.dist-info/RECORD,,
