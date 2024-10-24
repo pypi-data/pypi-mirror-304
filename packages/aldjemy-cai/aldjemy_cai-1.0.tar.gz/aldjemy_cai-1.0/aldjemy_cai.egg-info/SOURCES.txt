@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+aldjemy/__init__.py
+aldjemy/apps.py
+aldjemy/core.py
+aldjemy/meta.py
+aldjemy/orm.py
+aldjemy/sqlite.py
+aldjemy/table.py
+aldjemy/wrapper.py
+aldjemy_cai.egg-info/PKG-INFO
+aldjemy_cai.egg-info/SOURCES.txt
+aldjemy_cai.egg-info/dependency_links.txt
+aldjemy_cai.egg-info/requires.txt
+aldjemy_cai.egg-info/top_level.txt
