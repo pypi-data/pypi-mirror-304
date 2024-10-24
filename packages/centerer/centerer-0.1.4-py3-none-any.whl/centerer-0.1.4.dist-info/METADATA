@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: centerer
+Version: 0.1.4
+Summary: A package to center text horizontally and vertically in the terminal
+Author: kbdevs
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Centerer
+
+printCentered(string) will clear the terminal and print the centered string
+<br>
+returnCentered(string) will return the centered string for the current terminal size
