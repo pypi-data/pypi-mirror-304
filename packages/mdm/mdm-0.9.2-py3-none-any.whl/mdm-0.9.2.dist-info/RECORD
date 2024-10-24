@@ -1,0 +1,9 @@
+mdm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdm/__main__.py,sha256=SSwhWvuNkaYnmj96xqcwzyh9VuKj3jvU4RdsPGgE9qo,16232
+mdm/mdm.py,sha256=xmlizW4xIOHSFSQwZiWK-R4OgucGTFOWCtsWhi9XiaE,48449
+mdm-0.9.2.dist-info/LICENSE,sha256=hqipXd3v6MalQ9jy_QSgMayYwliDRW2eB6JKvw2yZ4U,1072
+mdm-0.9.2.dist-info/METADATA,sha256=JzBLAQvqYSmATfLNc96fZubWALkPQiDjTAh3qTsU6i8,6435
+mdm-0.9.2.dist-info/WHEEL,sha256=Mdi9PDNwEZptOjTlUcAth7XJDFtKrHYaQMPulZeBCiQ,91
+mdm-0.9.2.dist-info/entry_points.txt,sha256=gzYv_86Vhtjasa3dYiaA0yhl9mOv9Tsn1_B_dr69DzE,37
+mdm-0.9.2.dist-info/top_level.txt,sha256=4cJRiGqgf4_z-MoqUZ_QHcgRzK2t4AGgOP0Y9zxL7BY,4
+mdm-0.9.2.dist-info/RECORD,,
