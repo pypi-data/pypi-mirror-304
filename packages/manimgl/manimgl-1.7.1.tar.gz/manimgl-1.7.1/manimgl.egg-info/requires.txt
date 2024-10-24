@@ -1,0 +1,27 @@
+colour
+ipython>=8.18.0
+isosurfaces
+fontTools
+mapbox-earcut
+manimpango>=0.6.0
+matplotlib
+moderngl
+moderngl_window
+numpy
+Pillow
+pydub
+pygments
+PyOpenGL
+pyperclip
+pyyaml
+rich
+scipy
+screeninfo
+skia-pathops
+svgelements>=1.8.1
+sympy
+tqdm
+validators
+
+[:python_version < "3.11"]
+typing-extensions
