@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ace-cookie-manager
+Version: 0.0.1
+Summary: A package to manage cookies in a web browser for Streamlit Apps
+Home-page: https://analytics.sonova.com
+Author: ACE - Cem Bakar
+Author-email: cem.bakar@sonova.com
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSES.txt
+
+# ACE COOKIE MANAGER FOR STREAMLIT APPLICATIONS
+
