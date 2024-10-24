@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+chronowatch/__init__.py
+chronowatch/stopwatch.py
+chronowatch.egg-info/PKG-INFO
+chronowatch.egg-info/SOURCES.txt
+chronowatch.egg-info/dependency_links.txt
+chronowatch.egg-info/requires.txt
+chronowatch.egg-info/top_level.txt
