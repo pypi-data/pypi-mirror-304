@@ -1,0 +1,3 @@
+[console_scripts]
+dem-install-pregv = biodem.cli_dem:cli_install_pregv
+dem-rm-ckpt = biodem.cli_dem:cli_rm_ckpt
