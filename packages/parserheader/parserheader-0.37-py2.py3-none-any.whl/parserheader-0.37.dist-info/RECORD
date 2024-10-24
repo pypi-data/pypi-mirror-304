@@ -1,0 +1,11 @@
+parserheader/__init__.py,sha256=QSDj7iNWXr4SvH5Xxn--xrVsJphmt26uCi84ukmSBm0,289
+parserheader/__version__.py,sha256=V-CT2SpUnAMtrPJo1MAV8ZBbwlNf1lrQm3p0M-Xealw,16
+parserheader/parserheader.py,sha256=nnSpXpBi5OPoRm3M_sG8zbwO-vdLiHVU_iGkS72BUVI,15283
+parserheader-0.37.data/data/LICENSE.rst,sha256=JgPxSTPeBSNyGYyKejakCWPOJ07verHyrXxVC0ysYLg,1894
+parserheader-0.37.data/data/README.md,sha256=IW3uo6BCCiUeJBofBNjLws3Of5lqrt8cd3voQ6ePzTM,2909
+parserheader-0.37.data/data/__version__.py,sha256=V-CT2SpUnAMtrPJo1MAV8ZBbwlNf1lrQm3p0M-Xealw,16
+parserheader-0.37.dist-info/LICENSE.rst,sha256=JgPxSTPeBSNyGYyKejakCWPOJ07verHyrXxVC0ysYLg,1894
+parserheader-0.37.dist-info/METADATA,sha256=c0x1sXldUF1gwu-Zbj_zYyAr8xS58aDudtzT7Au28y0,4100
+parserheader-0.37.dist-info/WHEEL,sha256=WDDPHYzpiOIm6GP1C2_8y8W6q16ICddAgOHlhTje9Qc,109
+parserheader-0.37.dist-info/top_level.txt,sha256=VFXxJTdUpPFUWtaXtiKhaF-FBXXNGwmRAndtX6t8qms,13
+parserheader-0.37.dist-info/RECORD,,
