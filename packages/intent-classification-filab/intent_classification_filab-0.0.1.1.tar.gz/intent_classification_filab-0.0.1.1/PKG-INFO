@@ -1,0 +1,295 @@
+Metadata-Version: 2.1
+Name: intent_classification_filab
+Version: 0.0.1.1
+Summary: 사용자 입력에 대하여 의도 분석을 하는 프로그램입니다.
+Author: jackaa
+Author-email: jackaa <jackaa@filab.co.kr>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 사용자 질의 의도 분석
+
+## About The Project
+
+* 영화 추천을 위해 사용자 질의의 의도 파악이 필요
+
+## Built With
+프로젝트를 부트스트랩하는 데 사용되는 주요 프레임워크/라이브러리가 나열. 
+
+* python >= 3.9
+* tensorflow
+* numpy
+* pandas
+* scikit-learn
+* keras
+* konlpy
+
+<!-- GETTING STARTED -->
+## Getting Started
+### intent_classification_filab 패키지 impoty 진행
+
+* intent_classification_filab 패키지를 사용하기 위하여 import 진행
+
+> 사용 방법
+
+   import intent_classification
+
+### 사용자 정의 사전 생성 (bind_dict 모듈)
+
+* Fullmeta 필드를 레이블 별로 분류한 후 레이블 별 사전을 생성
+* 레이블 별 사전을 기반으로 사용자 정의 사전을 생성, 사용자 정의 사전은 데이터 전처리 시 사용됨
+
+> 사용 방법
+
+    intent_classification.bind_dict( [input_files] , output_file )
+    이 때, input_files는 list형이다.
+
+    ex)
+    input_file = ['dict.txt']					# input_file 정보를 list형으로 선언, 여러 개의 input 파일 넣을 수 있으며 각 input 파일 정보는 list의 인덱스 별로 넣으면 된다.
+    intent_classification.bind_dict(input_file, 'user_dic.txt')	# bind_dict 모듈 실행, 결과는 user_dic.txt에 저장됨
+
+> input 파일
+
+    input 파일은 Fullmeta에서 필드를 레이블 별로 분류하여 생성한 사전
+    input 파일의 형태는 다음과 같다.
+
+    [단어] \t [레이블] \t [POS]
+
+    input 파일의 예는 다음과 같다.
+
+    회문    character   NNP
+    영화    class       NNP
+    무협    genre   	NNP
+
+> output 파일
+
+    output 파일은 사용자 사전 정의 파일로서 단어 인덱스 생성 및 데이터 전처리 시 사용 될 예정
+    output 파일의 형태는 다음과 같다.
+
+    [단어] \t [POS]
+
+    output 파일의 예는 다음과 같다.
+
+    회문    NNP
+    영화    NNP
+    무협    NNP
+
+---
+
+### 단어 인덱스 사전 생성 (create_dict 모듈)
+
+* 학습할 데이터 셋의 단어 인덱스 사전을 생성
+* 학습할 데이터 셋은 네이버 영화 리뷰 긍/부정 데이터이며 해당 데이터를 형태소 분석하여 단어 인덱스 사전을 생성
+* 단어 인덱스 사전 생성 시 제외한 형태소는 다음과 같다.
+    * 주격조사, 보격조사, 관형격조사, 목적격조사, 부사격조사, 호격조사, 인용격조사 ('JKS', 'JKC', 'JKG', 'JKO', 'JKB', 'JKV', 'JKQ')
+    * 보조사, 접속조사 ('JX', 'JC')
+    * 마침표,물음표,느낌표(SF), 쉼표,가운뎃점,콜론,빗금(SP), 따옴표,괄호표,줄표(SS), 줄임표(SE), 붙임표(물결,숨김,빠짐)(SO)
+    * 선어말어미, 종결어미, 연결어미, 명사형전성어미, 관형형전성어미 ('EP', 'EF', 'EC', 'ETN', 'ETM')
+    * 명사파생접미사, 동사파생접미사, 형용사파생접미사 ('XSN', 'XSV', 'XSA')
+
+> 사용 방법
+
+    intent_classification.create_dict( [input_files] , output_file , user_dic_file )
+    이 때, input_files는 list형이다.
+
+    ex)
+    input_file = ['ratings_train.txt', 'ratings_test.txt']      # input_file 정보를 list형으로 선언, 여러 개의 input 파일 넣을 수 있으며 각 input 파일 정보는 list의 인덱스 별로 넣으면 된다.
+    intent_classification.create_dict(input_file, 'word2index_dic.bin', 'user_dic.txt')	 # create_dict 모듈 실행, 결과는 word2index_dic.bin에 결과 저장됨
+
+> input 파일
+
+    input_files는 list 형이며, list에 들어있는 내용은 input 파일들의 이름이다.
+
+    input 파일은 단어 인덱스를 만들기 위해 사용될 파일이다.
+    input 파일의 형태는 다음과 같다.
+
+    [id] \t [document] \t [label]
+
+    input 파일의 예는 다음과 같다.
+
+    9976970 	아 더빙.. 진짜 짜증나네요 목소리        			0
+    3819312 	흠...포스터보고 초딩영화줄....오버연기조차 가볍지 않구나        1
+    10265843    너무재밓었다그래서보는것을추천한다      			0
+
+    input 파일 예는 아래에서 확인해 볼 수 있다. (네이버 영화 리뷰 긍/부정 데이터)
+
+    https://raw.githubusercontent.com/e9t/nsmc/master/ratings_train.txt
+    https://raw.githubusercontent.com/e9t/nsmc/master/ratings_test.txt
+
+> output 파일
+
+    형태소 분석을 통하여 얻은 정보를 기반으로 생성한 단어 인덱스 사전 파일이다.
+    output 파일은 bin 파일로 저장해야 한다.
+
+> user_dic_file
+
+    사용자 사전 정의 파일이다.
+    bind_dict 모듈을 실행하여 나온 결과 파일을 넣으면 된다.
+
+---
+
+### 데이터 전처리 (Preprocess 클래스)
+
+* 데이터 전처리를 위한 클래스
+* 단어 인덱스 사전 및 사용자 지정 사전을 받아 사용할 수 있음
+
+> 사용 방법
+
+  1. 클래스 선언
+
+     p = intent_classification.Preprocess(word2index_dic = word2index_file, userdic = user_dic_file)
+
+     word2index_file은create_dict 모듈을 사용하여 생성한 파일을 넣으면 된다.
+     user_dic_file은 bind_dict 모듈을 사용하여 생성한 파일을 넣으면 된다.
+
+  2. 형태소 분석
+
+     pos = p.pos(sentence)
+
+     sentence는 형태소 분석하고자 하는 단어 또는 문장을 넣으면 된다.
+     pos에는 sentence 값의 형태소 분석 결과가 저장된다.
+
+  3. 단어 리스트 생성
+
+     word_list = p.get_keyword(pos, without_tag=True)
+
+     형태소 분석 결과에서 불필요한 품사를 제거한 뒤 단어 리스트를 생성한다.
+     단어 인덱스 사전 생성 시 제외한 형태소는 다음과 같다.
+
+     	1) 주격조사, 보격조사, 관형격조사, 목적격조사, 부사격조사, 호격조사, 인용격조사 ('JKS', 'JKC', 'JKG', 'JKO', 'JKB', 'JKV', 'JKQ')
+	2) 보조사, 접속조사 ('JX', 'JC')
+	3) 마침표,물음표,느낌표(SF), 쉼표,가운뎃점,콜론,빗금(SP), 따옴표,괄호표,줄표(SS), 줄임표(SE), 붙임표(물결,숨김,빠짐)(SO)
+	4) 선어말어미, 종결어미, 연결어미, 명사형전성어미, 관형형전성어미 ('EP', 'EF', 'EC', 'ETN', 'ETM')
+	5) 명사파생접미사, 동사파생접미사, 형용사파생접미사 ('XSN', 'XSV', 'XSA')
+
+     without_tag 값에 따라 단어 리스트에 POS 값 저장 여부를 결정한다.
+     현 프로그램에서의 without_tag 값은 True이다.
+     
+   4. 단어 인덱스 시퀀스 생성
+
+     w2i = p.get_wordidx_sequence(word_list)
+
+     키워드를 입력 받아 단어 인덱스 시퀀스로 변환하여 저장하는 모듈이다.
+
+   ex)
+   p = intent_classification.Preprocess(word2index_dic = 'word2index_dic.bin', userdic = 'user_dic.txt')      	# Preprocess 클래스 선언
+   pos = p.pos(sentence)											# 형태소 분석 진행
+   word_list = p.get_keyword(pos, without_tag=True)								# 단어 리스트 생성
+   w2i = p.get_wordidx_sequence(word_list)									# 단어 인덱스 시퀀스 생성
+
+
+### CNN 기반 의도 분석 (intent_classification_module 모듈, IntentModel 클래스)
+
+* 데이터 셋을 의도별로 분류한 뒤 1D CNN 학습한 정보를 기반으로 입력 받은 질의에 대한 의도 분석을 진행
+
+> 사용 방법
+
+   1. 사전 정보 받아 레이블 별 저장
+
+      dictList = intent_classification.read_dict(dict_file)
+
+      Fullmeta에서 추출한 정보를 기반으로 생성한 5개의 사전 정보(인물, 클래스, 장르, 소재, 감성) 를 dictList에 저장
+
+      dictList는 길이가 5인 리스트이며 저장 정보는 다음과 같다.
+      dictList[0]: 인물 단어, dictList[1]: 클래스 단어, dictList[2]: 장르 단어, dictList[3]: 소재 단어, dictList[4]: 감성 단어
+
+      dict_file에는 bind_file 모듈에서 input 파일로 사용된 파일을 넣으면 된다.
+
+   2. 개체명 인식
+
+      NE = intent_classification.named_entity(query, dictList)
+
+      입력 받은 질의에 대하여 사전 정보 기반 개체명 인식을 진행
+
+      query는 입력 질의가 들어가며, dictList는 read_dict 모듈의 결과 값을 넣으면 된다.
+
+   3. 학습 데이터 저장
+
+      data = intent_classification.data_extraction(input_files)
+
+      input_files 파일의 형태는 다음과 같다.
+
+      [id] \t [document] \t [label]
+
+      input_files 파일의 예는 다음과 같다.
+
+      9976970     아 더빙.. 진짜 짜증나네요 목소리                                0
+      3819312     흠...포스터보고 초딩영화줄....오버연기조차 가볍지 않구나        1
+      10265843    너무재밓었다그래서보는것을추천한다                              0
+
+      input 파일에서 document 부분을 추출하여 data에 저장한다.
+
+   4. 학습 데이터에 레이블 붙이기
+
+      df = intent_classification.labeling(data, dictList)
+
+      data에 포함된 학습 데이터에 레이블 붙이기
+      해당 데이터에 사전(인물, 클래스, 장르, 소재, 감정)에 포함된 어휘가 존재한다면 분류
+      분류한 문장에 레이블을 붙여 해당 문장이 어떤 정보와 연관되는지 파악 가능
+
+      data는data_extraction 모듈에서 얻은 값을, dictList는 bind_file 모듈에서 얻은 값을 넣으면 된다.
+
+      df에는 데이터와 분류 레이블로 이루어진 data frame 형태의 값이 저장된다.
+
+   5. MAX_SEQ_LEN 값 계산
+
+      MAX_SEQ_LEN = intent_classification.length_calc(df)
+
+      MAX_SEQ_LEN는 CNN 학습 시 시퀀스 벡터의 PADDING 치리 시 사용될 값이다.
+
+   6. CNN 기반 의도 분류 학습
+
+      intent_classification.intent_classification_using_CNN(df, word2index_dic_file, user_dic_file, MAX_SEQ_LEN, output_model_name)
+
+      의도 분류를 위하여 학습 데이터를 이용한 1D CNN 학습을 진행한다.
+      Hyperparameter 설정은 다음과 같다.
+      	임베딩 벡터 차원: 128
+        드롭 아웃 비율: 0.5
+        커널 수: 128
+        커널 크기: 3, 4, 5
+        은닉층 뉴런 수: 128
+        활성화 함수: softmax 함수
+
+      df는 labeling 모듈에서 얻은 결과 값을 넣어준다.
+      word2index_dic_file은 create_dict 모듈을 통해 생성한 파일을 넣어준다.
+      user_dic_file은 bind_dict 모듈을 통해 생성한 파일을 넣어준다.
+      MAX_SEQ_LEN는 시퀀스 벡터의 PADDING에 맞게 값을 넣어주면 된다.
+      해당 모듈 실행 시 output_model_name의 이름을 가진 파일에 학습 내용이 저장되게 되며, 해당 파일은 keras 파일로 저장해야 한다.
+
+    7. 의도 분류
+
+      1) 클래스 선언
+
+         p = intent_classification.Preprocess(word2index_dic=word2index_file, userdic=userdic_file)
+         Intent = intent_classification.IntentModel(model_name = output_model_name, preprocess = p, MAX_SEQ_LEN = MAX_SEQ_LEN)
+
+         클래스 선언 시, MAX_SEQ_LEN 값은 6에서 사용한 MAX_SEQ_LEN 값과 같아야 한다.
+
+      2) 의도 클래스 예측
+
+         predict = Intent.classify(query)
+         result = Intent.predict_class(predict)
+
+         실행 시 CNN 기반 학습 정보를 기반으로 하여 질의 의도 분류 예측 진행
+
+   ex)
+   dict_files = ['dict.txt']
+   input_files = ['ratings_train.txt', 'ratings_test.txt']
+
+   dictList = intent_classification.read_dict(dict_files)	# 사전 정보를 레이블 별 저장
+   data = intent_classification.data_extraction(input_files)	# 학습 데이터 저장
+   df = intent_classification.labeling(data, dictList)		# 학습 데이터에 레이블 붙이기
+   MAX_SEQ_LEN = intent_classification.length_calc(df)		# 학습 데이터 관련 길이 계산
+   intent_classification.intent_classification_using_CNN(df, 'word2index_dic.bin', 'user_dic.txt', MAX_SEQ_LEN, 'intent_model.keras')	# CNN 기반 의도 분류 학습
+
+   p = intent_classification.Preprocess(word2index_dic='word2index_dic.bin', userdic='user_dic.txt')
+   Intent = intent_classification.IntentModel(model_name = 'intent_model.keras', preprocess = p, MAX_SEQ_LEN = MAX_SEQ_LEN)	# 의도 분류 클래스 선언
+
+   NE = intent_classification.named_entity(query, dictList)	# 개체명 인식
+   # 의도 클래스 예측
+   predict = Intent.classify(query)
+   result = Intent.predict_class(predict)			
