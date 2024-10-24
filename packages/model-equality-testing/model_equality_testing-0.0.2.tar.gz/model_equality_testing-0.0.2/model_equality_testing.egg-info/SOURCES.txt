@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+model_equality_testing.egg-info/PKG-INFO
+model_equality_testing.egg-info/SOURCES.txt
+model_equality_testing.egg-info/dependency_links.txt
+model_equality_testing.egg-info/requires.txt
+model_equality_testing.egg-info/top_level.txt
+src/__init__.py
+src/algorithm.py
+src/dataset.py
+src/distribution.py
+src/pvalue.py
+src/tests.py
+src/utils.py
