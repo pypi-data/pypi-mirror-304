@@ -1,0 +1,10 @@
+watchmen_inquiry_trino/__init__.py,sha256=uzFWx8-w9zWP7CPnWK_Q75aQumq72trdbPv6Z2hsDVQ,150
+watchmen_inquiry_trino/exception.py,sha256=gCewXeeS5ozjydkORJtkiLh0n9PFMjjU4sirAPUSlbA,46
+watchmen_inquiry_trino/settings.py,sha256=oQSrO8_AU7zExrWj9Aog6v0TURIn0MeWlE_Qn-DP4VU,1078
+watchmen_inquiry_trino/trino_storage.py,sha256=ULrtSjpUr63YS-ZIgFRtuB2ytGW3R0qLX89H5KzDpVU,37687
+watchmen_inquiry_trino/trino_storage_helper.py,sha256=41odZ8PGJtvKhgxJemJxViPG4bBIm03vWXda7nJp-vo,257
+watchmen_inquiry_trino/trino_storage_spi.py,sha256=chzxMvaRvNHt4loTPcjvx7etK_eLqPnGc1TpUq6u3XA,8216
+watchmen_inquiry_trino-17.1.0.dist-info/LICENSE,sha256=iuuG7ErblOdcEZi5u89VXS0VIUiTb4flerGp_PAS9E4,1061
+watchmen_inquiry_trino-17.1.0.dist-info/METADATA,sha256=mug_a4YXstIptamDjaHbuUqAvfoaGmtQecVtnK2uoeQ,436
+watchmen_inquiry_trino-17.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+watchmen_inquiry_trino-17.1.0.dist-info/RECORD,,
