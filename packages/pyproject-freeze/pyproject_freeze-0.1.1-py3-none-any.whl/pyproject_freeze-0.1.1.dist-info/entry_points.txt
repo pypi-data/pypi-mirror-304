@@ -1,0 +1,2 @@
+[console_scripts]
+pypfreeze = pyproject_freeze.freeze:run
