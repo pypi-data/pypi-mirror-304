@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gias3.image_analysis
+Version: 3.0.1
+Summary: Common modules for GIAS3
+License: MPL 2.0
+Keywords: musculoskeletal,modelling
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Requires-Dist: cython
+Requires-Dist: gias3.common
+Requires-Dist: gias3.fieldwork
+Requires-Dist: gias3.learning
+Requires-Dist: gias3.registration
+Requires-Dist: numpy
+Requires-Dist: pydicom==2.4.4
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
+GIAS3 (Geometry Image-Analysis Statistics) Image Analysis
+=========================================================
+
+The image analysis packages of the GIAS3 libraries.

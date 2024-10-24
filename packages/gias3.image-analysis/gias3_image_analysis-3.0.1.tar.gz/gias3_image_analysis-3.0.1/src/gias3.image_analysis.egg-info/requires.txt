@@ -1,0 +1,10 @@
+cython
+gias3.common
+gias3.fieldwork
+gias3.learning
+gias3.registration
+numpy
+pydicom==2.4.4
+scikit-image
+scikit-learn
+scipy
