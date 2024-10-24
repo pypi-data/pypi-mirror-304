@@ -1,0 +1,2 @@
+[console_scripts]
+mikrokondo-tools = mikrokondo_tools.cli:safe_entry_point
