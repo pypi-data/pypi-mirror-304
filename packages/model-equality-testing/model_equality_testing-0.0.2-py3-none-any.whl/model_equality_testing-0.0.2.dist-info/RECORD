@@ -1,0 +1,12 @@
+model_equality_testing/__init__.py,sha256=yyBXmeH0dP-D110kQzgfnfY88mC4f6x4KppB1WgJ4nQ,135
+model_equality_testing/algorithm.py,sha256=QXRXtTx2PQoenn5zRTu2UNWggV87wJ-7pn0RuKnbkAY,4565
+model_equality_testing/dataset.py,sha256=T1lk-__1_Jzimlg7Q3v3oRVk3Xw4mbKNpWp7-6f2ixE,7710
+model_equality_testing/distribution.py,sha256=zOY2KmmnOGHe80dPqALx7-wpXNqMymjeK8NqB4iFzKM,16986
+model_equality_testing/pvalue.py,sha256=sAoaoaB0v_Mfce5kljqbw-bK5tS6cwo2EsBJPaGPOLw,8078
+model_equality_testing/tests.py,sha256=rcYv8iAP5OjKyy5BQmcalZMBefuBUdDWsgCbQanHVS8,19029
+model_equality_testing/utils.py,sha256=O4bs3y8w8aRGLKurIiyNmZVcPtkhMX4MAUwYVAJSv-g,5171
+model_equality_testing-0.0.2.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+model_equality_testing-0.0.2.dist-info/METADATA,sha256=av2HlcC-u-ghDdZ0-VPYVTYj-u1NoaJFtSOSF7D9eAA,6251
+model_equality_testing-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+model_equality_testing-0.0.2.dist-info/top_level.txt,sha256=XqVjUzhxJkabq45qRPlKA-x-jwXbqF335P2nhaRQTJA,23
+model_equality_testing-0.0.2.dist-info/RECORD,,
