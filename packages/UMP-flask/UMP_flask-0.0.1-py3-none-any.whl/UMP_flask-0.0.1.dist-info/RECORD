@@ -1,0 +1,10 @@
+UMP_flask/__init__.py,sha256=Zx9CStZnR53z2qKc7DSjdm31PnOwvZT6QDzxSkgln70,158
+UMP_flask/configuration.py,sha256=S3ga2E36oA5a7twVpcVzSP0vP2JCjg0tNG_3MQRAa_E,4825
+UMP_flask/models.py,sha256=AXRhwhTo1Jp9RHGn9qdrTfsR74I81oL7P8Jj6XrdXC0,2891
+UMP_flask/views.py,sha256=tcjRTjD5CbOMYglO2YC3ZGdeHENymVO2b_5E1soMJbg,508
+UMP_flask/templates/security/default.html,sha256=62W9PyQxfGmWa-WUGk8LN_zw1DTNUbyq7UxoogLpON4,298
+UMP_flask-0.0.1.dist-info/LICENSE,sha256=YefeIZOewmoJY8t0Es5TMW2pVd2pGeUem4VUtWeH9Z8,1075
+UMP_flask-0.0.1.dist-info/METADATA,sha256=eYHy8ITblE3upVYcO3VwSw7zlwvY8keeB8ylUZ7T05g,9072
+UMP_flask-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+UMP_flask-0.0.1.dist-info/top_level.txt,sha256=aXyQbadlHBTAq4nSUAtIoJu5N4tM15-Avhtv9oKby7k,10
+UMP_flask-0.0.1.dist-info/RECORD,,
