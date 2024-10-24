@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mlops_test_repo
+Version: 0.0.1
+Summary: Repo made with cookiecutter for MLOps NUST MISIS course
+Author: Alexey Myshlyanov
+Requires-Python: ~=3.9
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+
+# Исполненные команды
+
+1. `git init`
+2. `git add sum_script.py`
+
