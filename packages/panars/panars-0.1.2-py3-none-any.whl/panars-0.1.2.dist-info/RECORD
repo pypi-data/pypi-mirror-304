@@ -1,0 +1,10 @@
+panars/__init__.py,sha256=KIcmToqMzS-Fe0nKf28mI4KVpcSM5G_IZM3uinacf-M,315
+panars/dataframe.py,sha256=NCdGsNgmmx0Qjl6I6DdlfDUecorR8yny8mWZ7Ss67xA,11693
+panars/io.py,sha256=I9bT9O3BkUp8r5YQidAPTb0GJ_7qO5i37MVnPfWD7k0,714
+panars/series.py,sha256=jA6GAIn8NiNMBwJxBURAu1GIfmzaL4GSeOcRoEod7Ro,2934
+panars/utils.py,sha256=Q6HqxDyw29cEItMqNgBSsEPPmWoV_WqGucOYuQMazu0,151
+panars-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+panars-0.1.2.dist-info/METADATA,sha256=qfn9HvJ6QhMdTyI8Vofbvf0ZsZ7lmTSYVpf7C50Za04,2818
+panars-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+panars-0.1.2.dist-info/top_level.txt,sha256=ZudHJtOi8Zjb5740FVtvkT7ZxqZKnkICgh27vG1BsDc,7
+panars-0.1.2.dist-info/RECORD,,
