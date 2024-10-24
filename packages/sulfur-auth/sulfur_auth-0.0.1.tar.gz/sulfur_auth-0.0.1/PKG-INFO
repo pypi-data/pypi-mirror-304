@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: sulfur-auth
+Version: 0.0.1
+Summary: A robust, authentication library for Python.
+Project-URL: Homepage, https://github.com/sulfur-auth/sulfur
+Project-URL: Issues, https://github.com/sulfur-auth/sulfur/issues
+Author-email: proplayer919 <me@proplayer919.dev>
+Maintainer-email: proplayer919 <me@proplayer919.dev>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
