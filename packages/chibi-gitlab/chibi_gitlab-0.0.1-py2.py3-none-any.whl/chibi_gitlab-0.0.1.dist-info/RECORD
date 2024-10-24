@@ -1,0 +1,12 @@
+chibi_gitlab/__init__.py,sha256=_j_IxqFfzJR-4WabZHZ5PWztjMyPI6vx0qE4mVXO-FM,105
+chibi_gitlab/chibi_gitlab.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+chibi_gitlab/cli.py,sha256=jOwlISd9lCGxyfFQ2ynl0IlDtjMFQVG6zDMTXecDwYg,436
+chibi_gitlab/config.py,sha256=nCTMuVzyQdPpjgiPfKgu0eWmKL9nrLmX73dxjh3T4qw,197
+chibi_gitlab/urls.py,sha256=RxjDHMMlQR22RkpLTOSMSXx2F0FjXfFNUtjVgaOK_gI,403
+chibi_gitlab-0.0.1.dist-info/AUTHORS.rst,sha256=ayKBnZKv2fuJWauTmcNKFh97UZYpkxHLnYg0NnFUo-k,150
+chibi_gitlab-0.0.1.dist-info/LICENSE,sha256=JH3ZoVFajw8V81GzK74CTn0ljkSs2kM4Cf5LkKNG-n4,470
+chibi_gitlab-0.0.1.dist-info/METADATA,sha256=_PK2vXRwPENiG2zpXBFb1wPrVLKvcsIgYcpb-MqYBTo,1232
+chibi_gitlab-0.0.1.dist-info/WHEEL,sha256=TJ49d73sNs10F0aze1W_bTW2P_X7-F4YXOlBqoqA-jY,109
+chibi_gitlab-0.0.1.dist-info/entry_points.txt,sha256=unOdJq6zm2OB3WHnIpI1ZKcMHc4cVx-Ns1SB0AbCE1k,55
+chibi_gitlab-0.0.1.dist-info/top_level.txt,sha256=qTm2r5LOq2wFblW4V35Hh6B62UA2I1aaHLWj1U1FMAc,13
+chibi_gitlab-0.0.1.dist-info/RECORD,,
