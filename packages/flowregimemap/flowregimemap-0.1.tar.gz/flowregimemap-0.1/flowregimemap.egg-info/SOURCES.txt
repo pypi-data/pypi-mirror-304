@@ -1,0 +1,8 @@
+README.md
+setup.py
+taitel_and_dukler_map.py
+flowregimemap.egg-info/PKG-INFO
+flowregimemap.egg-info/SOURCES.txt
+flowregimemap.egg-info/dependency_links.txt
+flowregimemap.egg-info/requires.txt
+flowregimemap.egg-info/top_level.txt
