@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: financial_analyzer_aidar
+Version: 0.1.0
+Summary: Пакет для анализа финансовых транзакций.
+Author-email: Aidar <Falnker.b27@yandex.ru>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## ДЗ Зайнагабдинов Айдар
+### Использование:
+    python financial_analyzer.py --input-file transactions.csv --output-file report.txt

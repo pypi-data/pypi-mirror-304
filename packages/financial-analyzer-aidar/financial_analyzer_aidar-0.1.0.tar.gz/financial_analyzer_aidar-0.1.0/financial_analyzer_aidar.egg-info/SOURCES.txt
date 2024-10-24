@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+financial_analyzer_aidar.egg-info/PKG-INFO
+financial_analyzer_aidar.egg-info/SOURCES.txt
+financial_analyzer_aidar.egg-info/dependency_links.txt
+financial_analyzer_aidar.egg-info/top_level.txt
