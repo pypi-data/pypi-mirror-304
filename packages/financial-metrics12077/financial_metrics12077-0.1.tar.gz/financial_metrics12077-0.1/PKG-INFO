@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: financial_metrics12077
+Version: 0.1
+Summary: Package for calculating net profit and ROI.
+Home-page: 
+Author: Nikita1207
+Author-email: dorogin345@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+1. Установите библиотеку с помощью командой строки, вписав команду 'pip install financial_metrics12077'
+2. После установки импортируйте метод 'from financial_metrics import main'
+3. Далее просто вызовите функцию 'main()'
