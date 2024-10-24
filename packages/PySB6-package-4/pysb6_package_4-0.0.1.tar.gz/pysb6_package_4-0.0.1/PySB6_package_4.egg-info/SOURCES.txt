@@ -1,0 +1,6 @@
+LICENSE
+pyproject.toml
+PySB6_package_4.egg-info/PKG-INFO
+PySB6_package_4.egg-info/SOURCES.txt
+PySB6_package_4.egg-info/dependency_links.txt
+PySB6_package_4.egg-info/top_level.txt
