@@ -1,0 +1,195 @@
+Metadata-Version: 2.1
+Name: FineTune-Information-Extractor-for-NLPTasks-based-mBART
+Version: 1.0.2
+Summary: A library for fine-tuning mBART models to perform information extraction for various NLP tasks.
+Home-page: https://github.com/mehrdadalmasi2020/FineTune-Information-Extractor-mBART
+Author: Mehrdad ALMASI, Demival VASQUES FILHO
+Author-email: mehrdad.al.2023@gmail.com, demival.vasques@uni.lu
+Project-URL: Documentation, https://github.com/mehrdadalmasi2020/FineTune-Information-Extractor-mBART
+Project-URL: Source, https://github.com/mehrdadalmasi2020/FineTune-Information-Extractor-mBART
+Project-URL: Tracker, https://github.com/mehrdadalmasi2020/FineTune-Information-Extractor-mBART/issues
+Keywords: NLP,mBART,information extraction,transformers,multilingual,fine-tuning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Fine-Tune Information Extractor for NLP Tasks based on mBART
+
+
+Fine-Tune Information Extractor for NLP Tasks based on **mBART** is a powerful library designed for fine-tuning the pre-trained `mBART` model on custom information extraction tasks. The library provides an intuitive interface for loading datasets, fine-tuning the mBART model, and exporting results efficiently in multilingual contexts.
+
+
+## Table of Contents
+- [Key Features](#key-features)
+- [Quick Start](#quick-start)
+- [Fine-tuning the Model](#fine-tuning-the-model)
+- [Model Loading and Inference](#model-loading-and-inference)
+- [Results](#results)
+- [Authors](#authors)
+- [License](#license)
+
+
+## Key Features
+- **mBART Fine-tuning**: Fine-tune the `mBART` model for custom multilingual information extraction tasks.
+- **Customizable Task Instructions**: Supports flexible task instructions (e.g., "Extract Authors", "Extract Keywords") across multiple languages.
+- **Text Preprocessing**: Combines and tokenizes multiple text columns for input into the model, optimized for multilingual data.
+- **GPU Support**: Utilizes GPU acceleration for faster training, with performance gains for large multilingual datasets.
+
+
+## Quick Start
+The primary interface for interacting with this library is the `InfoExtractionModel` class, which allows you to load data, fine-tune the mBART model, and generate output for a given input text. The model supports multilingual information extraction tasks and can be fine-tuned with minimal configuration.
+
+## Fine-tuning the Model
+To fine-tune the `mBART` model, you need to prepare three datasets: one for training, one for evaluation, and optionally one for testing. These files should be provided in Excel or CSV format. 
+The process involves selecting the correct text column and target information column for information extraction. Since mBART is a multilingual model, you can specify the language of your dataset (e.g., French, German) and ensure that the corresponding language codes are used during the fine-tuning process.
+
+### 1. Prepare Train and Evaluation Files
+You must provide three separate files for training, and evaluation. Each file should include columns containing the text from which you want to extract information (e.g., abstracts, articles) and the specific target information (e.g., authors, dates, keywords) to extract.
+
+- **Train File**: Contains the data to train the model.
+- **Evaluation File**: Contains the data for validating the model during training.
+
+Since mBART is a multilingual model, ensure that the text in each file corresponds to the appropriate language and that you specify the language codes (e.g., `fr_XX` for French, `de_DE` for German) during fine-tuning. This will allow mBART to effectively handle and extract information in the target language.
+
+
+### 2. Load and Show Available Columns
+The first step is to load the dataset and display the available columns, allowing the user to select which columns contain the text and target information for extraction. You can specify the path to each file (training, and evaluation), and the code will display the available columns so you can choose the one that contains the text (e.g., combined_text) and the one that contains the target information (e.g., authors, keywords).
+
+You should ensure that the text column corresponds to the appropriate language of the dataset and adjust the language codes accordingly when fine-tuning the model.
+
+
+```python
+import pandas as pd
+
+# Load the dataset (Excel or CSV)
+train_file_path = input("Please provide the path for the training dataset file: ")
+eval_file_path = input("Please provide the path for the evaluation dataset file: ")
+
+# Load the training data to display columns
+train_data = pd.read_excel(train_file_path) if train_file_path.endswith('.xlsx') else pd.read_csv(train_file_path)
+
+# Show available columns
+print("\n--- Available Columns in Training Dataset ---")
+print(train_data.columns)
+
+# Ask the user to specify the text and target columns
+text_column = input("\nEnter the name of the column containing the text data (e.g., 'combined_text'): ").strip()
+target_information_column = input("Enter the name of the column containing the target information (e.g., 'Authors'): ").strip()
+
+# Extract text and target information from training and evaluation datasets
+texts_train = train_data[text_column].tolist()
+targets_train = train_data[target_information_column].tolist()
+
+# Load the evaluation data
+eval_data = pd.read_excel(eval_file_path) if eval_file_path.endswith('.xlsx') else pd.read_csv(eval_file_path)
+
+# Show available columns in the evaluation dataset
+print("\n--- Available Columns in Evaluation Dataset ---")
+print(eval_data.columns)
+
+texts_eval = eval_data[text_column].tolist()
+targets_eval = eval_data[target_information_column].tolist()
+
+
+```
+### 3. Define the Task Instruction:
+Next, the user must define the task instruction. This defines the type of information that needs to be extracted from the text. Below are some example task scenarios:
+
+#### Example Task Scenarios:
+- Extract Authors
+- Extract Publication Dates
+- Extract Keywords
+- Extract Abstract
+
+The task instruction should be chosen based on the user's specific needs. Here's how the user can input their task:
+
+```python
+# Define the task instruction
+print("\n--- Example Task Scenarios ---")
+print("1. Extract Authors")
+print("2. Extract Publication Dates")
+print("3. Extract Keywords")
+print("4. Extract Abstract")
+print("Choose the task you want to perform.")
+
+task_instruction = input("Enter your task (e.g., 'Extract authors', 'Extract keywords'): ").strip()
+print(f"You chose: {task_instruction}")
+
+```
+### 4. Train and Fine-Tune the Model:
+Once the dataset is ready, and the task instruction is set, you can train the model by specifying the task and number of epochs.
+
+```python
+# Fine-tune the model
+num_epochs = int(input("\nHow many epochs would you like to train for? (e.g., 3, 5, 10): "))
+print(f"Training for {num_epochs} epoch(s).")
+
+# Initialize the extraction model
+from FineTune_Information_Extractor_for_NLPTasks_based_mBART import InfoExtractionModel
+extractor = InfoExtractionModel()
+
+ Ask the user for the model save path
+save_model_path = input("\nPlease enter the path where you want to save the trained model (default: './info_extraction_model'): ").strip() or './info_extraction_model'
+print(f"Model will be saved at: {save_model_path}")
+
+# Train the model
+extractor.train(texts_train, targets_train, texts_eval, targets_eval, task_instruction, num_epochs, save_model_path)
+extractor.save_fine_tuned_model(save_model_path)
+
+```
+## Load the Trained Model:
+After training the model, you can load the trained model for inference or evaluation using the following code:
+
+### 1. Load a Trained Model:
+```python
+# Load the trained model
+extractor.load_model('./info_extraction_model')
+print("Model loaded from './info_extraction_model'")
+
+```
+
+### 2. Extract Information from New Text:
+You can now use the loaded model to extract information from new text inputs. 
+The `extract` method accepts the text and task instruction (which was defined earlier, such as "Extract Authors").
+
+```python
+# Extract information from new text
+new_text='Complete resolution of cutaneous larva migrans with topical ivermectin: A case report Francesca  Magri, Camilla  Chello, Giulia  Pranteda, Guglielmo  Pranteda Cutaneous larva migrans (CLM; also called creeping eruption) is a cutaneous ectoparasitosis commonly observed in tropical countries. It is characterized by an erythematous, pruritic, and raised lesion with linear or serpiginous distribution, typically localized at the lower extremities. Oral ivermectin represents the most recommended current treatment, with important adverse effects associated. We report the clinical case of a 52‐year old with CLM, successfully treated with topical ivermectin.'
+a=extractor.extract(new_text,task_instruction)
+
+```
+In this example, `new_text` contains the input text you want the model to process based on the task instruction (e.g., "Extract Authors").
+
+
+## Clearing Memory:
+After completing the evaluation, it's important to clear up memory (especially if you're working with large datasets and models on GPUs). The script uses garbage collection (`gc.collect()`) and CUDA memory clearing (`torch.cuda.empty_cache()`) to free up any allocated memory:
+```python
+# Clear memory after the process
+del texts_train, targets_train, texts_eval, targets_eval, train_data, eval_data
+torch.cuda.empty_cache()
+gc.collect()
+```
+### Example output :
+
+```plaintext
+Extracting information based on task: Complete resolution of cutaneous larva migrans with topical ivermectin: A case report Francesca  Magri, Camilla  Chello, Giulia  Pranteda, Guglielmo  Pranteda Cutaneous larva migrans (CLM; also called creeping eruption) is a cutaneous ectoparasitosis commonly observed in tropical countries. It is characterized by an erythematous, pruritic, and raised lesion with linear or serpiginous distribution, typically localized at the lower extremities. Oral ivermectin represents the most recommended current treatment, with important adverse effects associated. We report the clinical case of a 52‐year old with CLM, successfully treated with topical ivermectin.
+Extracted information: Francesca Magri, Camilla Chello, Giulia Pranteda, Guglielmo Pranteda
+```
+
+### Authors
+
+- Mehrdad ALMASI (email: mehrdad.al.2023@gmail.com)
+- Demival VASQUES FILHO (email: demival.vasques@uni.lu)
+
+### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
