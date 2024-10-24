@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AeroViz"
+version = "0.1.9.3"
+description = "Aerosol science"
+authors = [{ name = "alex", email = "alex870521@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas==2.2.2",
+    "numpy==1.26.4",
+    "matplotlib==3.8.4",
+    "scipy==1.14.0",
+    "seaborn==0.13.2",
+    "scikit-learn==1.5.1",
+    "windrose==1.9.2",
+    "cartopy==0.24.1",
+    "tabulate==0.9.0",
+    "rich~=13.7.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Alex870521/AeroViz"
+Repository = "https://github.com/Alex870521/AeroViz"
+
+# 只保留一個 setuptools 配置部分
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["AeroViz*"]
+exclude = ["tests*"]
+namespaces = false
