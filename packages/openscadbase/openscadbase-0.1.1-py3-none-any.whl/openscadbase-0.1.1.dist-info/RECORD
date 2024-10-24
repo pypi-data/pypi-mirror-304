@@ -1,0 +1,10 @@
+openscadbase-0.1.1.dist-info/METADATA,sha256=Us-bWkPTdYnooPMTQ8QY1UwRoPSvBDY0t9fskQbEfIA,342
+openscadbase-0.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+openscadbase-0.1.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+openscadbase/__init__.py,sha256=_Zim2ZrLzTeV4O6mDfRLuZDQSDmSNUvE48wlWpXwrRo,2235
+openscadbase/base.py,sha256=Ids-xPn19JrAt8ACgAyYVqOmcMxsdQG8fOmNzb25PT0,5260
+openscadbase/elements.py,sha256=cXkH7lsshSMt1aCpv7lLrLkBTjovjKQGXSvEVzD5L7Y,3861
+openscadbase/operations.py,sha256=vcsD1tveEgMvEL1z94ycfHki1EXQ_tJ1n-ExlIFAoTI,1668
+openscadbase/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openscadbase/transformations.py,sha256=lvVp9SZjSWpL5dl2yhbKv5rQQ8kYBsSQAASL5YC54qI,9296
+openscadbase-0.1.1.dist-info/RECORD,,
