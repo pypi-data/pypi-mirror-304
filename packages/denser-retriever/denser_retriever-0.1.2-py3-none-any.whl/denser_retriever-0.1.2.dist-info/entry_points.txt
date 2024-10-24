@@ -1,0 +1,3 @@
+[console_scripts]
+denser-retriever=denser_retriever.__main__:app
+
