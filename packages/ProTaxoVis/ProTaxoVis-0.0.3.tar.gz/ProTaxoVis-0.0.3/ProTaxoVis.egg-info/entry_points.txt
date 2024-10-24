@@ -1,0 +1,4 @@
+[console_scripts]
+blast2fasta = protaxovis.blast2fasta:main
+taxotree = protaxovis.taxotree:main
+taxovis = protaxovis.cli:main
