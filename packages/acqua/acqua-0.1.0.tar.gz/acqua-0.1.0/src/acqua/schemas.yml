@@ -1,0 +1,45 @@
+builds:
+  acqua-sui:
+    instructions: &baseInstructions
+      0: FROM debian:stable-slim AS builder
+      1: RUN apt-get update
+      2: RUN apt-get install -y autoconf bsdmainutils build-essential ccache clang git libboost-all-dev libtool pkg-config
+      3: WORKDIR /usr
+      4: RUN mkdir ~/.ccache && echo "max_size = 50.0G\nbase_dir = /usr/bitcoin\n" > ~/.ccache/ccache.conf
+      5: RUN git clone --depth 1 https://github.com/bitcoin/bitcoin.git
+      6: RUN cd bitcoin && git fetch origin --tags && git checkout tags/v27.1
+      7: RUN cd bitcoin && ./autogen.sh
+      8: RUN cd bitcoin && ./configure CC="clang" CXX="clang++"
+      9: RUN cd bitcoin && make -j"$(($(nproc)+1))" src/bitcoind src/bitcoin-cli
+      10: FROM debian:stable-slim AS runner
+      11: WORKDIR /usr/app
+      12: RUN apt-get update
+      13: RUN apt-get install -y libevent-dev
+      14: COPY --from=builder /usr/bitcoin/src/bitcoind /usr/app/bitcoind
+      15: COPY --from=builder /usr/bitcoin/src/bitcoin-cli /usr/app/bitcoin-cli
+      16: ENV PATH=$PATH:/usr/app
+      17: RUN mkdir -p /home/bitcoin/.bitcoin
+      18: VOLUME ["/home/bitcoin/.bitcoin"]
+network: acqua
+services:
+  acqua-sui:
+    command: &baseCommand
+      0: -blockfilterindex=1
+      1: -datadir=/home/bitcoin/.bitcoin
+      2: -dnsseed=0
+      3: -listen=1
+      4: -listenonion=1
+      5: -rest=1
+      6: -rpcallowip=0.0.0.0/0
+      7: -rpcbind=0.0.0.0
+      8: -rpccookiefile=/home/bitcoin/.bitcoin/.cookie
+      9: -rpcservertimeout=120
+      10: -rpcuser=${acqua_AUTH_RPCUSER}
+      11: -rpcworkqueue=128
+      12: -server=1
+      13: -txindex=1
+      14: -upnp=0
+    image: acqua-bitcoind
+    ports:
+      - 0:0
+    type: abstract
