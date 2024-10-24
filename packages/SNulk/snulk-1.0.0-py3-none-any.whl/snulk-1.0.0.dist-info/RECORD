@@ -1,0 +1,15 @@
+snulk/__init__.py,sha256=uNw23ykMd73hNZAbBiTe2aF5skhZxjJnSB4T0UVkdJg,1284
+snulk/__main__.py,sha256=KfVkYJg4p5FgtATluBRbws2alRcLqTLoB6m9tvu9Ex4,1144
+snulk/bulk_submitter.py,sha256=LArsvyoT51Su8QMBCknz0PcNAA63w97eAHSuigPkVhY,31272
+snulk/exceptions.py,sha256=aaWHJf-9WZ8EkIsM2iRg5fRI6dNfItf1VoFzrsB86BE,1402
+snulk/main.py,sha256=tgkOGYqjRKOf3A1HFFzUOi8F5DC172dn7eb2Mb3LPH4,8547
+snulk/return_field.py,sha256=gvl670dchSvcAJfHYX0XFbasTemcsOX8UTzsOV37UmE,6316
+snulk/submit_field.py,sha256=P8XL5Vm9VB_lZc6ILZyF0j8ClaHh-W69XTMOvvfwips,13351
+snulk/submit_table.py,sha256=1CwodD4wp04YKkMbO33jriW8A3o6MlZA0iOv5STc3RY,15840
+snulk/submit_tables.py,sha256=Vnv2z2JGMadkIL5DXlmcIIRz1FnAlHctahW3GLeKXhM,6059
+snulk/util.py,sha256=_PPBAbxWIFDLNXHOhfGmX8sscHHdf_s3RCQSYL3dLMo,7928
+snulk-1.0.0.dist-info/METADATA,sha256=TILEiQtfcVhaF8ivn6RxFE2uUB6QWSQj6wKyCWys2aE,27215
+snulk-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+snulk-1.0.0.dist-info/entry_points.txt,sha256=dVLOXRYVXKwoc94nqCYdW3KGGYMPfktdsAQAqkP1iBc,37
+snulk-1.0.0.dist-info/licenses/LICENSE,sha256=28_CljDcJlroJOIKMoNoGf3U5OvCK0An3_3cKX5EIxE,1073
+snulk-1.0.0.dist-info/RECORD,,
