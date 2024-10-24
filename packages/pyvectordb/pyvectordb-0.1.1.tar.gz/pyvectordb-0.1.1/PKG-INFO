@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: pyvectordb
+Version: 0.1.1
+Summary: 
+Author: M Razif Rizqullah
+Author-email: razifrizqullah@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pgvector (>=0.3.5,<0.4.0)
+Requires-Dist: psycopg2 (>=2.9.10,<3.0.0)
+Requires-Dist: qdrant-client (>=1.12.0,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.36,<3.0.0)
+Description-Content-Type: text/markdown
+
+# PyVectorDB
+
+Simple Wrapper for Vector Database in Python which support CRUD and retrieve by distance.
+
+## Installation 
+
+    pip install pyvectordb
+
+## Usage Example
+
+### PGVector
+
+PGvector is an extension for PostgreSQL that allows the storage, indexing, and querying of vector embeddings. It is designed to support vector similarity search, which is useful in machine learning applications like natural language processing, image recognition, and recommendation systems. By storing vector embeddings as a data type, PGvector enables efficient similarity searches using distance metrics such as cosine similarity, Euclidean distance, inner product, etc.
+
+```py
+import os
+from pyvectordb import PostgresVector, Vector
+from pyvectordb.distance_function import DistanceFunction
+
+v = Vector(
+    embedding=[2, 2, 1]
+)
+
+print("VECTOR", v)
+
+pgv = PostgresVector(
+    db_user=os.getenv("DB_USER"),
+    db_password=os.getenv("DB_PASSWORD"),
+    db_host=os.getenv("DB_HOST"),
+    db_port=os.getenv("DB_PORT"),
+    db_name=os.getenv("DB_NAME"),
+)
+
+new_v = pgv.create_vector(v)
+print("CREATE_VECTOR", new_v)
+
+new_v = pgv.read_vector(new_v.id)
+print("READ_VECTOR", new_v)
+
+new_v = pgv.update_vector(new_v)
+print("UPDATE_VECTOR", new_v)
+
+for x in pgv.get_neighbor_vectors(v, 5, DistanceFunction.L2_DISTANCE):
+    print(f"{x}")
+
+pgv.delete_vector(new_v.id)
+print("DELETE_VECTOR")
+```
+
+## Support or Anything
+
+Reach me out on email razifrizqullah@gmail.com
