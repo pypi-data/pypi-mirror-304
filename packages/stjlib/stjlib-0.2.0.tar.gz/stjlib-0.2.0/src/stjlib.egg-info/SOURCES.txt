@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/stjlib/__init__.py
+src/stjlib/stj.py
+src/stjlib.egg-info/PKG-INFO
+src/stjlib.egg-info/SOURCES.txt
+src/stjlib.egg-info/dependency_links.txt
+src/stjlib.egg-info/requires.txt
+src/stjlib.egg-info/top_level.txt
+tests/test_stj.py
