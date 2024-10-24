@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+check_internet_speed/check_internet_speed.py
+check_internet_speed.egg-info/PKG-INFO
+check_internet_speed.egg-info/SOURCES.txt
+check_internet_speed.egg-info/dependency_links.txt
+check_internet_speed.egg-info/top_level.txt
