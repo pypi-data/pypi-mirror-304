@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rabbit-helper
+Version: 1.0.0
+Summary: RabbitMQ helper for publishing and consuming messages for MealMasterMind project
+Author: Arshia Rezagholi
+Author-email: arshiarezagholi1212@gmail.com
+Requires-Python: >=3.8
+Requires-Dist: pika
+
