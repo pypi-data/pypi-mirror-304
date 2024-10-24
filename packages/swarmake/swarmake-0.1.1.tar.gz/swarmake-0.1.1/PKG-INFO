@@ -1,0 +1,48 @@
+Metadata-Version: 2.3
+Name: swarmake
+Version: 0.1.1
+Summary: The OpenSwarm Implementation.
+Project-URL: Homepage, https://github.com/openswarm-eu/openswarm
+Project-URL: Bug Tracker, https://github.com/openswarm-eu/openswarm/issues
+Author-email: Geovane Fedrecheski <geovane.fedrecheski@inria.fr>
+License: BSD
+License-File: AUTHORS
+License-File: LICENSE
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: click==8.1.7
+Requires-Dist: rich==13.8.1
+Requires-Dist: structlog==24.4.0
+Requires-Dist: toml==0.10.2
+Requires-Dist: tqdm==4.66.5
+Description-Content-Type: text/markdown
+
+# OpenSwarm implementation
+
+Fetch, build, and run the OpenSwarm.
+
+## Examples
+The Atlas simulation project:
+```bash
+swarmake build atlas # clone the atlas repo and build it using the recipe defined in swarmake.toml
+swarmake run atlas # run it using the recibe in swarmake.toml
+```
+
+The DotBot firmware:
+```bash
+# clone the dotbot repo and build it in Docker, using the recipe defined in swarmake.toml
+swarmake build dotbot
+```
+
+The Lakers library
+```bash
+# clone the lakers repo and build it using the recipe defined in swarmake.toml
+# when stderr is redirected, we suppress stdout too and just show a "loading" line
+swarmake build lakers 2> /dev/null
+# run according to swarmake.toml
+swarmake run lakers
+```
