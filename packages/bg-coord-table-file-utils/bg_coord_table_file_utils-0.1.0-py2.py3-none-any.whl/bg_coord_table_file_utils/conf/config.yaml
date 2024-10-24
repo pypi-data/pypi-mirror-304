@@ -1,0 +1,18 @@
+---
+column_headers:
+  - Gene
+  - Exon
+  - Strand
+  - Chr
+  - Start
+  - End
+  - RefSeq
+  - Exon Nucleotides
+  - Exon Residues Excluding STOP
+  - Gene Nucleotides
+  - Gene Residues Excluding STOP
+  - Gene Exons
+  - Met-1 Exon
+  - Terminal Exon
+  - 5' Coord
+  - 3' Coord

@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: bg_coord_table_file_utils
+Version: 0.1.0
+Summary: Collection of Python modules for reading and writing the gene-exons coordinate table file.
+Home-page: https://github.com/rusty-bioinfo-se/bg-coord-table-file-utils
+Author: Jaideep Sundaram
+Author-email: sundaram.baylorgenetics@gmail.com
+Keywords: bg_coord_table_file_utils
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: AUTHORS.rst
+Requires-Dist: Click>=7.0
+Requires-Dist: Pydantic
+Requires-Dist: PyYAML
+Requires-Dist: Rich
+Requires-Dist: singleton-decorator
+
+=========================
+BG Coord Table File Utils
+=========================
+Collection of Python modules for reading and writing the gene-exons coordinate table file.
+
+
+
+Features
+--------
+
+* CoordTableFileParser class for reading the gene-exons coordinate table file
+* CoordTableFileWriter class for writing the gene-exons coordinate table file
+* CoordTableRecord class for representing the gene-exons coordinate table record
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2024-10-23)
+------------------
+
+* First release on PyPI.
