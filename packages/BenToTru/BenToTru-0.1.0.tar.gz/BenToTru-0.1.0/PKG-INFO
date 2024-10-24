@@ -1,0 +1,248 @@
+Metadata-Version: 2.1
+Name: BenToTru
+Version: 0.1.0
+Summary: Estimation of GHG emissions based on energy consumption in Brazil, broken down by 51 and 68 distinct activities.
+Home-page: https://github.com/fms-1988
+Author: Felipe Morelli Da Silva
+Author-email: fms.morelli@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## BenToTru
+Este pacote estima as emissões de determinados gases de efeito estufa (CO2, CH4, N2O, NOx, CO e SO2) geradas pelo consumo de energia no Brasil. Ele utiliza os dados anuais de consumo de energia fornecidos pela Empresa de Pesquisa Energética (EPE) e os fatores de emissão fornecidos pelo IPCC (revisão de 1996) e adaptados pela ONG Economia e Energia (E&E) para as condições brasileiras. O resultado são as emissões por setor econômico (estrutura IPCC) e por produto (diesel, eletricidade, álcool, etc).
+
+Além de estimar as emissões para os 22 setores, o pacote também desagrega essas emissões em 51 ou 68 setores (de acordo com a estrutura do IBGE). Para realizar essa desagregação, utilizamos uma adaptação do método de Montoya et al. (2013), que é descrita [aqui](https://brsa.org.br/wp-content/uploads/wpcf7-submissions/30290/artigo_desagregacao_identificado.pdf).
+
+Para a estrutura baseada em 51 setores, temos dados que abrangem de 2000 a 2022. Para a estrutura baseada em 68 setores, os dados disponíveis cobrem o período de 2010 a 2022. Além dos dados relacionados aos setores econômicos, também incorporamos informações sobre as emissões atribuídas às famílias. Uma descrição detalhada das funções é fornecida nas seções a seguir.
+
+## Instalar pacote BenToTru
+A versão mais recente do pacote BenToTru é 0.1.0. O módulo principal, que também é o mais rápido porque utiliza operações matriciais em vez de laços, é o 'btt'.
+
+```python
+pip install BenToTru==0.1.0
+from BenToTru import btt as btt
+```
+
+## Importar dados da TRU
+A função `import_data_tru()` importar dados de consumo intermediário (CI) da Matriz de Recursos e Usos (TRU) do Brasil. O objetivo é diferenciar entre setores econômicos (ben) e atividades (tru), sendo que os setores TRU são denominados "atividades". O código configura o ano de referência como 2020, define 51 atividades, especifica que os dados estão a preços correntes (`u = 't'`) e utiliza 2014 como ano-base para a deflação. O parâmetro `household` indica se as famílias serão incluídas na análise. O resultado importado contém duas tabelas: uma com todos os produtos (dimensão 51x107) e outra com produtos que emitem gases de efeito estufa (dimensão 51x17).
+
+```python
+# importar dados de consumo intermediário da TRU 
+# unidade:Market price values (BRL)
+# para distinguir entre setore (ben) e setores (tru) 
+#       os setores tru foram chamados de 'atividades'
+
+ano = '2020'      # ano de referência dos dados
+N = '51'          # número de atividade (51 ou 68)
+u = 't'           # (t:preços correntes ou t1:do ano anterior)
+ano_base = '2014' # ano base para a deflação
+household=False   # considerar, ou não, as famílias na análise
+
+TRU51 = btt.import_data_tru(ano, N, u, ano_base, household)
+TRU51[0] # CI com todos os produtos      (51, 107)
+TRU51[1] # CI de produtos que emitem GHG (51, 17)
+```
+
+Não se preocupe com a variável `u` por equanto. Sua função está relacionada à criação de coeficientes de distribuição ('t': considera preços correntes, 't1': considera preços do ano anterior).
+
+
+
+## Importar dados do BEN
+A função `import_data_ben()` importar dados do Balanço Energético Nacional (BEN), que estão na unidade de mil toneladas equivalentes de petróleo (10³ tep). O ano de referência dos dados é 2020 e o número de atividades econômicas é definido como 51. A matriz completa do BEN contém 20 setores e 27 produtos, enquanto a matriz reduzida, que foca apenas em produtos que emitem gases de efeito estufa (GHG), tem 20 setores e 17 produtos. O código organiza esses dados em duas matrizes: uma completa e outra filtrada para análise de emissões.
+
+```python
+# Importar dados do Balanço Energético Nacional (BEN)
+# Unidade: 10³ tep
+
+ano = '2020'      # ano de referência dos dados
+N = '51'          # número de atividades (51 ou 68)
+# Nb: n de setores do ben = 20
+# Jb: n de produtos do ben = 27
+
+ben = btt.import_data_ben(ano, N)
+ben[0] # matriz completa   (20, 27)
+ben[1] # matriz reduzida (apenas com produtos que geram GHG) (20, 17)
+
+```
+
+## Mapas entre TRU e BEN 
+
+A função `import_dictionaries()` importar os dicionários que fazem a correspondência entre setores do Balanço Energético Nacional (BEN) e as atividades da Matriz de Recursos e Usos (TRU). O dicionário `dict1` contém duas estruturas: `dict1[0]`, que relaciona os produtos do BEN com as atividades do TRU, e `dict1[1]`, que relaciona os setores do BEN com as atividades do TRU. Esses dicionários são essenciais para realizar análises que integram as duas bases de dados.
+
+```python
+# Importar dicionários ben to tru
+
+dict1 = btt.import_dictionaries('51')
+# dict1[0] #ben_to_tru_products 
+# dict1[1] #ben_to_tru_sectors
+```
+
+## Estimar emissões
+A função `btt.emission()` retorna várias estruturas de dados, incluindo: a matriz completa de consumo energético do BEN (20 setores, 27 produtos), a matriz reduzida com produtos que geram GHG, as emissões na matriz TRU (`N` atividades, 17 produtos), as emissões ajustadas com dados do Sirene, e o coeficiente de distribuição. Além disso, o código também importa dicionários que conectam os setores do BEN com as atividades da TRU.
+
+```python
+# Estimar emissões 
+
+ano = '2020'      # ano de referência dos dados
+N = '51'          # número de atividades (51 ou 68)
+u = 't'           # (t:preços correntes ou t1:do ano anterior)
+ano_base = '2014' # ano base para a deflação
+gas='CO2'         # tipo de GHG (CO2, NH4 ou N2O)
+household=False   # considerar, ou não, as famílias na análise
+
+E = btt.emission(ano,N,u,ano_base,gas,household)
+#                  #  shape    unidade       descricao
+ben = E[3][0]      # (20, 27)  (10³ tep)     matriz completa
+ben_red = E[3][1]  # (20, 17)  (10³ tep)     matriz reduzida (apenas com produtos que geram GHG)
+E_tru = E[0]       # (51, 17)  (Gg of GHG)   emissões no formato da matriz TRU
+E_tru_adj = E[4]   # (51, 17)  (Gg of GHG)   emissões ajustadas (regressão com os dados sirene)
+coef1 = E[1]       # (51, 17)  (BRL/BRL)
+ben_to_tru = E[2]  # dicionarios
+```
+## Verificar distribuições
+A função `btt.verification(N, coef1)` valida os coeficientes para o caso com N atividades econômicas, comparando a soma dos valores para garantir que estejam dentro dos padrões esperados. O tamanho da matriz resultante é (12, 17), o que indica 12 setores ou atividades e 17 produtos ou categorias relacionadas.
+
+```python
+# Verificar se a soma dos coeficientes de distribuição estão corretas
+
+btt.verification(N,coef1) # (12, 17)
+```
+
+
+
+## Mapa entre setores BEN e TRU 
+A função `map_ben_to_tru()` mapeia a relação entre os setores do Balanço Energético Nacional (BEN) e os setores da Matriz de Recursos e Usos (TRU).
+
+```python
+# Mapa dos setores BEN para os setores TRU
+
+j = 1 #sector ‘SETOR ENERGÉTICO’
+i = 1 #product ‘CARVÃO VAPOR’
+btt.map_ben_to_tru(N,E_tru,j,i)[0]
+```
+
+## Acessando outras variáveis da tabela TRU 
+
+A função `btt.tru.read_var_def()` pode ser usada para importar uma variável específica da tabela TRU. No exemplo, a variável `OT_pm` (Oferta total a preço de mercado) é selecionada para o ano de `ano=2020`, considerando `N=12` atividades econômicas.
+
+```python
+# Se for necessário importar outra variável da tabela TRU para sua análise:
+
+ano = '2020'  # ano de referência dos dados
+N = '12'      # número de atividades (51, 68, 20 ou 12)
+var = 'OT_pm' # (consulte a tabela de variáveis disponíveis no final do arquivo) 
+u = 't'       # (t:preços correntes ou t1:do ano anterior)
+ano_base = '2014' # ano base para a deflação
+OT_pm = btt.tru.read_var_def(ano,N,var,u,ano_base)
+```
+
+| var         | sheet      | type   | description                                                                        |
+|-------------|------------|--------|------------------------------------------------------------------------------------|
+| OT_pm       | oferta     | vector | Oferta total a preço de consumidor                                                  |
+| MG_com      | oferta     | vector | Margem de comércio                                                                 |
+| MG_tra      | oferta     | vector | Margem de transporte                                                               |
+| L_imp       | oferta     | vector | Imposto de importação                                                              |
+| IPI         | oferta     | vector | IPI                                                                                |
+| ICMS        | oferta     | vector | ICMS                                                                               |
+| OI_liq_Sub  | oferta     | vector | Outros impostos menos subsídios                                                    |
+| TI_liq_sub  | oferta     | vector | Total de impostos líquidos de subsídios                                            |
+| OT_pb       | oferta     | vector | Oferta total a preço básico                                                        |
+| P_matrix    | producao   | matrix | Produção das atividades                                                            |
+| PT          | producao   | vector | Total do produto                                                                   |
+| CIF_FOB     | importacao | vector | Ajuste CIF/FOB                                                                     |
+| M_bens      | importacao | vector | Importação de bens                                                                 |
+| M_serv      | importacao | vector | Importação de serviços                                                             |
+| CI_matrix   | CI         | matrix | Consumo intermediário das atividades                                               |
+| D_ci        | CI         | vector | Total do produto (Tabela 2 CI)                                                     |
+| X_bens      | demanda    | vector | Exportação de bens                                                                 |
+| X_serv      | demanda    | vector | Exportação de serviços                                                             |
+| C_g         | demanda    | vector | Consumo da administração pública                                                   |
+| C_ong       | demanda    | vector | Consumo das ISFLSF                                                                 |
+| C_f         | demanda    | vector | Consumo das famílias                                                               |
+| FBKF        | demanda    | vector | Formação bruta de capital fixo                                                     |
+| DE          | demanda    | vector | Variação de estoque                                                                |
+| D_final     | demanda    | vector | Demanda final                                                                      |
+| D_total     | demanda    | vector | Demanda total                                                                      |
+| VA_table    | demanda    | table  | Componentes do valor adicionado                                                    |
+| M_bens_serv | importacao | vector | Importação de bens e serviços (1) (1) Importação de bens e serviços líquida de ajuste CIF/FOB. |
+| X_bens_serv | demanda    | vector | (1) Importação de bens e serviços líquida de ajuste CIF/FOB.                       |
+
+
+
+## Acessando as séries históricas
+O que realmente nos interessa é a série temporal que ilustra a evolução das emissões geradas por uma atividade específica da TRU. O código abaixo demonstra como obter e representar visualmente essa série.
+
+```python
+import pandas as pd
+df = btt.emission('2010','51',u,ano_base,gas,True)[4]
+df['year'] = '2010'
+for t in ['2011','2012','2013','2014','2015','2016','2017','2018','2019','2022']:
+   try:
+       df_ = btt.emission(t,N,u,ano_base,gas,True)[4]
+       df_['year'] = t
+       df = pd.concat([df, df_])
+   except:
+       print('error')
+```
+```python
+import matplotlib.pyplot as plt
+
+df_h = df[df.index == 'RESIDENCIAL']
+
+df_h.plot(x='year', y='GÁS NATURAL', marker='o', linestyle='-')
+plt.title("Emission of CO2 by households from the consumption of natural gas.")
+plt.xlabel("Year")
+plt.ylabel("Gg of GHG")
+plt.grid(True)
+plt.show()
+```
+
+![Alt text](https://raw.githubusercontent.com/fms-1988/datas/main/chart_BenToTru.png)
+
+
+## CO2 Equivalent Emissions
+To simplify the communication of the amount of GHGs emitted, the standard unit used is CO2 equivalent emissions (CO2e). The amount of GHG released can be converted into CO2e using the Global Warming Potential (GWP) metric published in the Second Assessment Report (SAR) by the IPCC (1995).
+Brazil adopts this measurement to report its emissions, as per Decree no. 9,578/2018. The sixth emissions report provides the conversion table between GHG and CO2e (MCTI, 2022).
+
+
+| gas   	| GWP 100 years (SAR) | GWP 100 years (AR5) | GTP 100 years (AR5) |
+|-----------|--------------------|--------------------|--------------------|
+| CO2   	| 1              	| 1              	| 1              	|
+| CH4   	| 21             	| 28             	| 4              	|
+| CH4 fossil| 21             	| 30             	| 6              	|
+| N2O   	| 310            	| 265            	| 234            	|
+| HFC-23	| 11,700         	| 12,400         	| 12,700         	|
+| HFC-32	| 650            	| 677            	| 94             	|
+| HFC-125   | 2,800          	| 3,170          	| 967            	|
+| HFC-134a  | 1,300          	| 1,300          	| 201            	|
+| HFC-143a  | 3,800          	| 4,800          	| 2,500          	|
+| HFC-152   | 140            	| 16             	| 2              	|
+| CF4   	| 6,500          	| 6,630          	| 8,040          	|
+| C2F6  	| 9,200          	| 11,100         	| 13,500         	|
+| SF6   	| 23,900         	| 23,500         	| 28,200         	|
+
+
+
+This table is what we use to convert direct GHGs (CO2, CH4, and N2O) into equivalent amounts of CO2 (variable: CO2_GWP_SAR).
+
+## CO2 Equivalent Emissions (adjustment)
+
+Despite the high correlation, our data is not comparable to MCTI's data. One possible reason is that MCTI discloses its emissions in terms of the amount of carbon, while we estimate in terms of CO2. Another reason is the scale of the data presented (in tons or Gg tons). A third, more important factor, is the conversion factors used by MCTI (more up-to-date and detailed by type of fuel use).
+
+To solve this problem, we estimated correction coefficients for our data using official MCTI data. All coefficients and methodology are described in the methodology (here). 
+
+Now our data of CO2 equivalent emission (btt) are in the same unit and are comparable to the official MCTI data (sirene).
+
+![Alt text](https://raw.githubusercontent.com/fms-1988/datas/main/chart_compare_btt_sirene.png)
+
+Os cálculos estão disponíveis [aqui](https://github.com/fms-1988/BenToTru/blob/main/desagregacao_CO2e_energia.ipynb)
+
+
+
+
+
