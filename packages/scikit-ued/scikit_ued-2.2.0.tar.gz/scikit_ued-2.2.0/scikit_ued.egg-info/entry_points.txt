@@ -1,0 +1,2 @@
+[console_scripts]
+skued = skued.__main__:main
