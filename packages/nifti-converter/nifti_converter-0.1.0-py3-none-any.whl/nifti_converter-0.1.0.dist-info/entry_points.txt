@@ -1,0 +1,3 @@
+[console_scripts]
+iseq2nii = nifti_converter:iseq2nii_app
+nii2iseq = nifti_converter:nii2iseq_app

@@ -1,0 +1,8 @@
+nifti_converter/__init__.py,sha256=WBwdBx2nN9dX-n1l4WjKx8aReNHfrGq3MYLNKRdwXx4,335
+nifti_converter/iseq2nii.py,sha256=oN5S_9PFccTQT6YaKRxHC4hCP-Wr8u4-E8_ek72VjGY,1220
+nifti_converter/nii2iseq.py,sha256=lZAXY9MQ28Erx7X_SYXAimS-mdyFaeIugPDvuTPaEcg,2211
+nifti_converter-0.1.0.dist-info/METADATA,sha256=rAlI7IMdnWgxkm6Fh3mSYi85SVTFg1rngD6O-K6NRWY,2863
+nifti_converter-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+nifti_converter-0.1.0.dist-info/entry_points.txt,sha256=hKkZ7RYHHqTkIBiLJtuJw6Lf8CWnb_XGYO9r-jBFehc,98
+nifti_converter-0.1.0.dist-info/licenses/LICENSE,sha256=ZXxq9PkYvJCfvxlyAq3DdQNOg-yMtVR5UPtVGeLbvr8,1072
+nifti_converter-0.1.0.dist-info/RECORD,,
