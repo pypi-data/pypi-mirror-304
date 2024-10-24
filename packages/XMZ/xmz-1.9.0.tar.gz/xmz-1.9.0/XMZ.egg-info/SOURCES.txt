@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+HWNLP/__init__.py
+HWNLP/auth_config.py
+HWNLP/mt_service.py
+HWNLP/nlg_service.py
+HWNLP/nlpf_service.py
+HWNLP/nlu_service.py
+XMZ.egg-info/PKG-INFO
+XMZ.egg-info/SOURCES.txt
+XMZ.egg-info/dependency_links.txt
+XMZ.egg-info/requires.txt
+XMZ.egg-info/top_level.txt
