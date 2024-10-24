@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+function_calling.egg-info/PKG-INFO
+function_calling.egg-info/SOURCES.txt
+function_calling.egg-info/dependency_links.txt
+function_calling.egg-info/top_level.txt
