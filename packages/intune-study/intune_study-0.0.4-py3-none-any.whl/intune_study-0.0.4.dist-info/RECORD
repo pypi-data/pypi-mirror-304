@@ -1,0 +1,9 @@
+intune_study/__init__.py,sha256=aIO7_6FKkDGv2wfK_u_VbF7qabFhID4NFe3AYRnZMrI,341
+intune_study/app_management.py,sha256=ROUKz8_4F3RkY-jRRhTVC53Z6w7iwZs0N6GjGwuIBv0,1824
+intune_study/create_compliance.py,sha256=Z6IDn1vG2JjynnThi5k2Qi_-J5cjTzeauXnrIlehXVU,2378
+intune_study/device_management.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+intune_study/manage.py,sha256=kcfoJF_cYMErlXzIqq_nH03xJI4beIHDLYwiNsxO0Vo,4882
+intune_study-0.0.4.dist-info/METADATA,sha256=LB5-CTZAU8XD5gk2CNWDTfBCD3XCvIqoz-b708Mv8zk,455
+intune_study-0.0.4.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+intune_study-0.0.4.dist-info/top_level.txt,sha256=3w2BQ_IK08hd8dPoPvKAjnznm7-0EeGX_Ni6ws5Y32o,13
+intune_study-0.0.4.dist-info/RECORD,,
