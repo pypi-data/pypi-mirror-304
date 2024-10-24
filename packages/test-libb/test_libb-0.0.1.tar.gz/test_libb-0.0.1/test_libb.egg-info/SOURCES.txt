@@ -1,0 +1,8 @@
+README.md
+setup.py
+test_libb/__init__.py
+test_libb/main.py
+test_libb.egg-info/PKG-INFO
+test_libb.egg-info/SOURCES.txt
+test_libb.egg-info/dependency_links.txt
+test_libb.egg-info/top_level.txt
