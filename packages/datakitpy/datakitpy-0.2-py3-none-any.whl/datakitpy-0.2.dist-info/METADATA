@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: datakitpy
+Version: 0.2
+Summary: Datakit helper library
+Author-email: echus <varvara@echus.co>
+Project-URL: Homepage, https://github.com/open-datakit/datakitpy
+Project-URL: Bug Tracker, https://github.com/open-datakit/datakitpy/issues
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas <3.0,>=2.2
+Requires-Dist: docker <8,>=7.1.0
+Provides-Extra: all
+Requires-Dist: datakitpy[development] ; extra == 'all'
+Provides-Extra: development
+Requires-Dist: pre-commit ; extra == 'development'
+Requires-Dist: build ; extra == 'development'
+
+# opendatapy
+
+This library contains low-level functions used by [opendatacli](https://github.com/open-datakit/cli) to interact with datakits.
+
+## Development
+
+### Deploying to PyPI
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade build twine
+python -m build  # Generate distribution archives
+python -m twine upload --repository pypi dist/*  # Upload distribution archives
+```
