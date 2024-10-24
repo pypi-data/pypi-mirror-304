@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: abn_amro_test
+Version: 0.0.1
+Summary: ABN Amro technical assignment package
+Home-page: https://github.com/sdutt7/abn-amro-technical-assessment
+Author: Sumanta Dutta
+Author-email: sumanta.dutta2012@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic~=1.10.9
+Requires-Dist: pyspark~=3.5.0
+Requires-Dist: delta~=0.4.2
+Requires-Dist: PyYAML~=6.0
+Requires-Dist: setuptools~=58.0.4
+Requires-Dist: azure-identity
+Requires-Dist: azure-keyvault-secrets
+Requires-Dist: azure-storage-file-datalake
+Requires-Dist: LucoPy==1.2.5
+
+ABN Amro technical assignment package
