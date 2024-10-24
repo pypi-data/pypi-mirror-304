@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/bibleparser/__init__.py
+src/bibleparser/bibleparser.py
+src/bibleparser/book_chapter_verses.py
+src/bibleparser.egg-info/PKG-INFO
+src/bibleparser.egg-info/SOURCES.txt
+src/bibleparser.egg-info/dependency_links.txt
+src/bibleparser.egg-info/top_level.txt
+tests/test_bibleparser.py
