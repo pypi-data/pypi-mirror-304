@@ -1,0 +1,12 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nv_attestation_sdk/attestation.py,sha256=0j1HCjlMbOvJzOn-VXtQ9AvXKeRLQ-jZ-QAu37VIpcQ,11217
+nv_attestation_sdk/gpu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nv_attestation_sdk/gpu/attest_gpu_local.py,sha256=IivPPLa8LmcP7zZAwxEmmi4cHuRG_wuQwEYfNOB0s0g,2939
+nv_attestation_sdk/gpu/attest_gpu_remote.py,sha256=i6IrlVDtIswBtlk4PXp4GDW-OnKjdGFDGyPzUsjEFB0,6533
+nv_attestation_sdk/gpu/gpu_utils.py,sha256=I_KX-lLkCd_WoWyCWR7o6JqbCYqZA2U72j0aGODewlw,1093
+nv_attestation_sdk/utils/config.py,sha256=ZU7rG_8I8CeyicMB1h2PjgzlwAq4bVyKUKf0QaMAkbo,301
+nv_attestation_sdk-1.4.0.dist-info/LICENSE,sha256=EFvWdBNopgt5Abox7VeJeWMVUxW2i4x2GrSv-FLg6fs,11375
+nv_attestation_sdk-1.4.0.dist-info/METADATA,sha256=Hz422gCw_8SD_YxozJwHEKqBgvelw4iF2AlTpYCSJPc,7495
+nv_attestation_sdk-1.4.0.dist-info/WHEEL,sha256=uCRv0ZEik_232NlR4YDw4Pv3Ajt5bKvMH13NUU7hFuI,91
+nv_attestation_sdk-1.4.0.dist-info/top_level.txt,sha256=ma5dLM9RAmMl-mnmWU-XaCYdEEdseh2wlLTT7S29fJI,28
+nv_attestation_sdk-1.4.0.dist-info/RECORD,,
