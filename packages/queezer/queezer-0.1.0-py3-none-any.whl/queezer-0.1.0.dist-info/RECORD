@@ -1,0 +1,9 @@
+queezer/__init__.py,sha256=2HOyAEf8ImB8NMD8l2YRTZ4Fmfqp1Wxd_B9bF7sZQ1o,2041
+queezer/storage/adapter_interface.py,sha256=tep4OWaMsS-1IrgkWxxJBsnoOP8f5Zd1ozno5QZdzrU,252
+queezer/storage/queezer_api.py,sha256=4OEORlWRpH65jAHWr6hJeWx-L25lW-4jo3lZY4dzaYs,1762
+queezer/storage/sqlite.py,sha256=ZpNNPH767o_F57o85y6GXb7Wa7yINmO6S4s3uyBrxZM,1531
+queezer/utils.py,sha256=Ugo8P98XY2PkGAsh69hFuLGwI25gmM3D-IoXu8Fz2bI,84
+queezer-0.1.0.dist-info/LICENSE,sha256=gWNxYFJ37ezduQeSnJ9cK0-5EYEihf6hoyYDdR0TxbU,1072
+queezer-0.1.0.dist-info/METADATA,sha256=oMpouwSPA6m8h78W_6tSanjxHqX8F7QwCvH3cDECyBk,3700
+queezer-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+queezer-0.1.0.dist-info/RECORD,,
