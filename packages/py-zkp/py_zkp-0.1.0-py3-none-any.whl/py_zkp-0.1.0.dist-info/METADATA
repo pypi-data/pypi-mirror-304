@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: py-zkp
+Version: 0.1.0
+Summary: py-zkp: ZKP in python including groth16, plonk, tokamak_snarks
+Home-page: https://github.com/tokamak-network/py_zkp
+Author: Tokamak Network
+Author-email: kevin@tokamak.network
+Keywords: zkp
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: py-ecc ==7.0.1
+Provides-Extra: dev
+Requires-Dist: build >=1.2.2 ; extra == 'dev'
+
+# py_zkp
+
+This is complementaly project of [ZKP study series postings(WIP)](https://www.notion.so/tokamak/6e59b0e13af24a83ae50a10cd59dfbfa?pvs=4)
+
+This is a library that allows you to verify Python code with various ZKP algorithms, including groth16 and plonk.
+Using this library, you can convert Python code to QAP and use functions for the entire ZKP process, including setup, proving, and verifying.
+
+# Quickstart
+
+```
+python -m pip install py_zkp
+```
+
+# Developer Setup
+
+### Development Environment Setup
+
+You can set up your dev environment with:
+
+```
+git clone https://github.com/tokamak-network/py_zkp.git
+cd py_zkp
+python3 -m venv venv
+. venv/bin/activate
+python -m pip install -e ".[dev]"
+```
