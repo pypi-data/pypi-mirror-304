@@ -1,0 +1,5 @@
+elasticsearch<8.0.0,>=7.8.0
+meilisearch
+Django
+event-tracking
+edx-toggles
