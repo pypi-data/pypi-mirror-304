@@ -1,0 +1,101 @@
+[project]
+name = "pysparkplug"
+description = "An open-source, Python implementation of Sparkplug B, an MQTT topic and payload definition standard"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache License, Version 2.0"}
+keywords = ["mqtt", "sparkplug", "manufacturing", "automation"]
+authors = [{ name = "Matt Fay", email = "matt.e.fay@gmail.com" }]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Manufacturing",
+  "License :: OSI Approved :: Apache Software License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Typing :: Typed",
+]
+dynamic = ["version"]
+dependencies = [
+    "paho-mqtt<2",
+    "protobuf>=5.28.2",
+    "typing-extensions>=4.12.2 ; python_full_version < '3.11'",
+]
+
+[project.urls]
+Documentation = "https://pysparkplug.mattefay.com"
+Changelog = "https://pysparkplug.mattefay.com/en/stable/changelog.html"
+Source = "https://github.com/matteosox/pysparkplug"
+"Bug Report" = "https://github.com/matteosox/pysparkplug/issues/new/choose"
+"Feature Request" = "https://github.com/matteosox/pysparkplug/issues/new/choose"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = { local_scheme = "no-local-version" }
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/pysparkplug/_version.py"
+
+[tool.uv]
+dev-dependencies = [
+    "check-wheel-contents>=0.6.0",
+    "coverage>=7.6.4",
+    "furo>=2024.8.6",
+    "myst-parser>=3.0.1",
+    "packaging>=24.1",
+    "pygithub>=2.4.0",
+    "pyright>=1.1.385",
+    "pytest>=8.3.3",
+    "ruff>=0.7.0",
+    "sphinx>=7.4.7",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-notfound-page>=1.0.4",
+    "sphinxext-opengraph>=0.9.1",
+    "twine>=5.1.1",
+]
+
+[tool.ruff]
+extend-exclude = ["*_pb2.py"]
+
+[tool.ruff.lint]
+extend-select = ["I", "PL", "RUF"]
+ignore = ["PLR0913", "PLR2004"]
+
+[tool.pyright]
+include = [
+    "src",
+    "test/unit_tests",
+    "docs",
+    "scripts",
+]
+exclude = ["**/*_pb2.py"]
+reportUnnecessaryTypeIgnoreComment = true
+reportMissingParameterType = true
+
+[tool.pytest.ini_options]
+addopts = "-ra --verbose --color=yes"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["pysparkplug"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 54
+
+[tool.check-wheel-contents]
+toplevel = "pysparkplug"
+package = "src/pysparkplug"
