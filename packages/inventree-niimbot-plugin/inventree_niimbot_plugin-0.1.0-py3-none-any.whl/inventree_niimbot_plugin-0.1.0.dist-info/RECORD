@@ -1,0 +1,15 @@
+inventree_niimbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_niimbot/niimbot_plugin.py,sha256=07AmGl_5zGX5gRKlK_HROVgPkCjYy6OvLEAWTrqr1LQ,8467
+inventree_niimbot/version.py,sha256=Jm50ICtm_aza-p0T8-JX8-PP3-CGwHYGk5ZC0O8RAMs,75
+inventree_niimbot/nimmy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_niimbot/nimmy/bluetooth.py,sha256=TU9BVmpB-tCDm0A_X4nlpkh2V6tl4du6LySzvQyLArc,2733
+inventree_niimbot/nimmy/exception.py,sha256=VaEDVqU3Q97BG71tbHH5uriCNAed0X8YAjInYAGKw9c,84
+inventree_niimbot/nimmy/logger_config.py,sha256=Z_LoCNf4mdvGYFyQREHbTVxu50QHJRZWAJ7hivcoElE,1573
+inventree_niimbot/nimmy/packet.py,sha256=eSIidaM1dxNLFdk6DZuk1-s7rUC7hcURRGOkTBbXo2I,893
+inventree_niimbot/nimmy/printer.py,sha256=i2e_Xps6q-WFxBOcXENHn102_k4k0hHBKI9whtzLur8,13202
+inventree_niimbot_plugin-0.1.0.dist-info/LICENSE,sha256=iLK6arikB_q9Mgjbgos_6GFawTCfGg9NueZ9e53gsS4,1064
+inventree_niimbot_plugin-0.1.0.dist-info/METADATA,sha256=VA6T_839f0suR_LAWa28bW6by3RuuotQkgieS-JRdSI,2176
+inventree_niimbot_plugin-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+inventree_niimbot_plugin-0.1.0.dist-info/entry_points.txt,sha256=mzIKnE_Xww1mO65t2HHQJN1A2AXBEN6L62TBo0YIRLM,93
+inventree_niimbot_plugin-0.1.0.dist-info/top_level.txt,sha256=5qu4_cAZhA8Db-LI_fYLLU4waU82taA5UjgDrJSwhXg,18
+inventree_niimbot_plugin-0.1.0.dist-info/RECORD,,
