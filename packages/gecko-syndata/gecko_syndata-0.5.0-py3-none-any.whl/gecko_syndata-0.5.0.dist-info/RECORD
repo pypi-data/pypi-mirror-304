@@ -1,0 +1,8 @@
+gecko/__init__.py,sha256=Ee3hAbkcXKq4qTnBgyLyLb177Zntsh8oXhDwrUbNxuk,82
+gecko/cldr.py,sha256=8rUZfsPY_JeKml_BlYoxyLsfg-MHN-PN1RgFL5bw_t8,2344
+gecko/generator.py,sha256=QDIQ9ldRTVewD8LKk9l1xQQuLH_TS80vBieNmlzq1ZY,12654
+gecko/mutator.py,sha256=WeZxuxgJYk8NxQIwlttzelcuFWma3eCyssLPupn8J2o,60982
+gecko_syndata-0.5.0.dist-info/LICENSE,sha256=44J0UAgV7qnoak4Y-n2mCfIg0lSmQTOpGSLwL3CQdO4,1117
+gecko_syndata-0.5.0.dist-info/METADATA,sha256=7HVmbO_NGJrznEagaok7hMaH5qegUiYxsGQlMRfJewM,6103
+gecko_syndata-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+gecko_syndata-0.5.0.dist-info/RECORD,,
