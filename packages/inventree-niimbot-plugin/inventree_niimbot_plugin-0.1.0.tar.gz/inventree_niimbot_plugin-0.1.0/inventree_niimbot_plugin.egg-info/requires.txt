@@ -1,0 +1,6 @@
+bleak==0.21.1
+devtools==0.12.2
+setuptools==69.5.1
+markdown-it-py==3.0.0
+loguru==0.7.2
+pillow==10.3.0

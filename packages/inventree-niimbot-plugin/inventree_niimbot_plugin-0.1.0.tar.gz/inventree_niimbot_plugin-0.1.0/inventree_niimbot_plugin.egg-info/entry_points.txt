@@ -1,0 +1,2 @@
+[inventree_plugins]
+NiimbotLabeLPlugin = inventree_niimbot.niimbot_plugin:NiimbotLabelPlugin
