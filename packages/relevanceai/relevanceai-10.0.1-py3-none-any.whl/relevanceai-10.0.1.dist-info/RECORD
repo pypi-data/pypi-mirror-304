@@ -1,0 +1,14 @@
+relevanceai/__init__.py,sha256=Vlle2FBT853rMOviz8PDe6Xqb8xF23TOuCRFmR4oK7U,92
+relevanceai/_base_client.py,sha256=OWVWA3MmkvgnTucYAvTkShfSKlchh-1yPWDFTuFdF_I,1491
+relevanceai/_client.py,sha256=qaPaG33_FZ96y643BVoiqV7BPuwFSJJe7yUCFVfqKSo,1740
+relevanceai/_resource.py,sha256=i6lSFTLfvLJnX6VectSw-gXOO3MHom7INejwogX8vCs,2768
+relevanceai/resources/__init__.py,sha256=FzIeGosYYh3_raUkNgzKT0v6rBmE5fl6aV7PYUCe0TY,110
+relevanceai/resources/agents.py,sha256=_K3PZ_qpQgBPXyUkFubDJoBP5qzDJNcgoCh8sNdy16M,832
+relevanceai/resources/knowledge.py,sha256=Vf9xfc_4K08O66nGbFHlhhZk75ee5PV2DerAtJss3Zk,1273
+relevanceai/resources/tasks.py,sha256=Xo4Ds2mWSdLOZ1lteTy-zFxKOi5IwAseSCeTv_hE1UY,6045
+relevanceai/resources/tools.py,sha256=IyzbzoqusN9RukuYKhZeKEP9aDjB2h_H7zQ2CwvXNmk,2162
+relevanceai-10.0.1.dist-info/LICENSE,sha256=BezC1HsG68QgzOPh1S57oBYJmBD9KP_Rn0qC_CnXpaE,11547
+relevanceai-10.0.1.dist-info/METADATA,sha256=dDOvFDlowDBXBXKTWv6xNe6hgB8-UEMXSy8LTSq1WF4,3450
+relevanceai-10.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+relevanceai-10.0.1.dist-info/top_level.txt,sha256=pBw97y3PXwAaKc69tOpvKk9ZSBbD-4e_H5QNZQSUv8c,12
+relevanceai-10.0.1.dist-info/RECORD,,
