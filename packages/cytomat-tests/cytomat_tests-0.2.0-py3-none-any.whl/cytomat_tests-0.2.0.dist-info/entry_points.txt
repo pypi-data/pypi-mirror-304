@@ -1,0 +1,3 @@
+[console_scripts]
+post_install=cytomat.setup:post_install
+
