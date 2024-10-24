@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyJStrobe
+Version: 0.1
+Summary: This package is used to automate the DES application jStrobe.
+Author: Joseph Louis
+Author-email: joseph.louis@oregonstate.edu
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This package works when jStrobe is installed at c:/Program Files/jStrobe/jStrobe/jStrobe.exe
+
+Download example files from https://github.com/jlouis2k4/TestPythonJS
+
+
