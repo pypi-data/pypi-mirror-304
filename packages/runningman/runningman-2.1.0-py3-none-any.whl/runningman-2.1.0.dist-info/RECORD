@@ -1,0 +1,17 @@
+runningman/__init__.py,sha256=3pSO1RGzs7ZG3BOrzI-74cTisKEH77VtPVwmGwsKL1k,674
+runningman/backend.py,sha256=djCCDc8SrYagCGcvBf9uI_GxgQJpJGOFFEi_0Xp5yyQ,4256
+runningman/job.py,sha256=GvUs3NARFzjknHTY0vT8__P_NIoXhSJeEQsSm3xkT90,4467
+runningman/provider.py,sha256=1Jr74Iy5iNGDuhk7Opqm4gkE-qZrM9LCKgDOMXBbic0,1874
+runningman/utils.py,sha256=zj7EOZfP9kwNbfMerI67kkGnaeglczvH8Hh5gDpBfEI,988
+runningman/version.py,sha256=ZW50hu6xotUhBmxUHDpa8msvUpqdW8_uRmVhqRZO0wg,111
+runningman/test/__init__.py,sha256=jzLHI9BELvT-6gpBBx_f_9PFdMDFUItdqpbDd8beOQM,711
+runningman/test/test_basic.py,sha256=iC2qCFQ9coR_F-Pf-R9Ebztcs-44fYA288P5P3zn3jc,2275
+runningman/test/test_job.py,sha256=_0gzaPsUhunnxSOQCS6qdcJ38DXj6Rxp0xS6ZvTnOuw,924
+runningman/test/test_memory.py,sha256=JMEISDaLqGH6r3bnhqYKEgrWmrr7tej5wdPqV9Nps9I,1488
+runningman/test/test_modes.py,sha256=apdf7T7LGsqpgDZE9puBKtk8-r8eAWtJOymbz867B3o,1088
+runningman/test/test_utils.py,sha256=ikc11kjgaNEdf8_8myRG2ATtekfNOcqufoomCtNUJiw,1003
+runningman-2.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+runningman-2.1.0.dist-info/METADATA,sha256=dMA_rnlpK6H48EIgngsLiLQZ527gFIxjdH6LWJmFvnA,2302
+runningman-2.1.0.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+runningman-2.1.0.dist-info/top_level.txt,sha256=6H3juNXzPX_jIJGqNsO3lcQFgnwEew6E26swBbB-YoA,11
+runningman-2.1.0.dist-info/RECORD,,
