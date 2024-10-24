@@ -1,0 +1,2 @@
+[airflow.plugins]
+sparta_timetable_plugin = sparta_timetable_plugin.SpartaTimetablePlugin

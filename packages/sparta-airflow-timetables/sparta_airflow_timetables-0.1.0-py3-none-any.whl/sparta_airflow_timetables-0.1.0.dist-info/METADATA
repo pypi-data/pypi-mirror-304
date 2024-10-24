@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sparta-airflow-timetables
+Version: 0.1.0
+Summary: Airflow timetable plugin for Anbima and B3 holidays
+Author: Henrique Gomes Nunes
+Author-email: henrique.gomes@sparta.com.br
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pendulum
+Requires-Dist: pandas
+Requires-Dist: apache-airflow >=2.0
+
