@@ -1,0 +1,7 @@
+setup.py
+nome_do_pacote.egg-info/PKG-INFO
+nome_do_pacote.egg-info/SOURCES.txt
+nome_do_pacote.egg-info/dependency_links.txt
+nome_do_pacote.egg-info/top_level.txt
+pacoteteste/__init__.py
+pacoteteste/teste_modulo_1.py
