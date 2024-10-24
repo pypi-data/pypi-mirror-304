@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: SQAM
+Version: 0.1.0
+Summary: Simplified Question Answering Machine
+Home-page: https://github.com/preslaff/SQAM
+Author: preslaff
+Author-email: preslaff@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: numpy
+Requires-Dist: sentence-transformers
+Requires-Dist: scikit-learn
+Requires-Dist: pytest
+
+# **SQAM - Simplified Question Answering Machine**
+Here is a [DEMO VERSION](https://www.cdsv.dev)
+
+## Abstract
+
+SQAM - Simplified Question Answering Machine is a light weight service for question answering using predefined question-answer pairs in a json database. The application tokenizes the user question using 384 dimensional SBERT embeddings and finds the first n-nearest predefined questions outputting the pair question-answer, the rank and the similarity score. This approach is very usefull for lightweight application where user will have limited number of domain specific questions. The example database consists of around 1000 predefined questions about Data Science, Machine Learning and Deep Learning. 
+
+## Install
+
+Clone the repo `git clone https://github.com/preslaff/SQAM.git` and install the dependencies with `pip install -r requirements.txt`
+
+## How it works
+
+SQAM uses the `app.py` flask application to embed, calculate the cosine similarity and then serve the closest to the user request, predefined question-answer pairs. When started, the app scans the directory where it resides for all `json` files and uses them as static database for question answering. Start the app with `python app.py` and then you can get answers with a front end of your choice or with curl ex.:
+
+`curl -X POST http://127.0.0.1:5000/get_answers -H "Content-Type: application/json" -d '{"question": "What is Machine Learning?"}'`
+
+## Offline use
+
+You can use the app in offline mode (without Internet connection) if you save the embeddings:
+
+`np.save('question_embeddings.npy', question_embeddings)`
+
+and when the app is initialized and the model is cached load them with:
+
+`question_embeddings = np.load('question_embeddings.npy')`
+
+After this step, the app can operate in offline, standalone local mode.
+
+
+
+
+
