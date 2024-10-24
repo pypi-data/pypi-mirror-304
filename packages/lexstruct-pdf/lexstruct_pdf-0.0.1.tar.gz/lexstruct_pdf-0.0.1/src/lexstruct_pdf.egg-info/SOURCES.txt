@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+readme.md
+src/LexStruct_PDF/__init__.py
+src/LexStruct_PDF/content_extractor.py
+src/lexstruct_pdf.egg-info/PKG-INFO
+src/lexstruct_pdf.egg-info/SOURCES.txt
+src/lexstruct_pdf.egg-info/dependency_links.txt
+src/lexstruct_pdf.egg-info/requires.txt
+src/lexstruct_pdf.egg-info/top_level.txt
