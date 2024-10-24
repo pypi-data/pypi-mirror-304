@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+autocrop_kh/__init__.py
+autocrop_kh.egg-info/PKG-INFO
+autocrop_kh.egg-info/SOURCES.txt
+autocrop_kh.egg-info/dependency_links.txt
+autocrop_kh.egg-info/requires.txt
+autocrop_kh.egg-info/top_level.txt
