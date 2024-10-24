@@ -1,0 +1,10 @@
+cosette/__init__.py,sha256=5O31lKrQ8ELI4MIuFrYzISS_mgnvw87L_56uuS-MqWw,67
+cosette/_modidx.py,sha256=vw_hO-jfidLKK8IAMqxBmNH2mpjqdXOvI7J-_znBASw,2957
+cosette/core.py,sha256=NKpWCH4LBeNc8yJyusmMNBQmBKYFGJ52un8ZH0nd4sI,8830
+cosette/toolloop.py,sha256=M3p8ojhopZpnh5B5SL2ZZURZsAg6CortST99JjrTzKA,1095
+cosette-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cosette-0.0.3.dist-info/METADATA,sha256=s0zCiQSxmKiIFNtad74wStrjH0L5XMz9q1OvnASwVU4,13944
+cosette-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+cosette-0.0.3.dist-info/entry_points.txt,sha256=8RutkIx1OKLKCKLIMzIWTmhb4qWXgazH11Jn6HEA6sI,36
+cosette-0.0.3.dist-info/top_level.txt,sha256=dl5YJ8GVZbp17PgAZWHWgYvfvdil9swHfb17_HANBIw,8
+cosette-0.0.3.dist-info/RECORD,,
