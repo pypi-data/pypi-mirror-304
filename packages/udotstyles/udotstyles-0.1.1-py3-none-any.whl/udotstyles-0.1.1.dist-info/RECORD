@@ -1,0 +1,14 @@
+udotstyles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+udotstyles/_version.py,sha256=Q5fzuLr4LVBz5FTk0Ll4Ll1i97odpmL7Ku_bYhCouQQ,427
+udotstyles/colors/__init__.py,sha256=kbF_gro2HkGKr5j3k2ENEZB4iu8tV28c08epaY24qgE,394
+udotstyles/colors/colors.py,sha256=HKyJFqNlr9jbq_-YY1Os1Mn2RDPEhAOZmE50Ju5Co_Y,3675
+udotstyles/colors/palettes.py,sha256=Ffwzrfz7b-S2ja5FV5sIUcb2hcYVYlH889nNSIL6s-8,1608
+udotstyles/plotninestyles/__init__.py,sha256=XLW2xCfiWGrEyI6V2j0qRLHnSxWzTGFL9c_CpUW1BR0,30
+udotstyles/plotninestyles/_palette_gen.py,sha256=yoDLO1cAWtCESNbmANxfS5fgSbBOYlOmAQOyRrvK52s,3112
+udotstyles/plotninestyles/scales.py,sha256=adrJRx3G-yXVRyX5TwT4q7IfmZZbbhDM_Omt12NlXkM,2584
+udotstyles/plotninestyles/themes.py,sha256=MGckSTQzQNBqPt0q54xfDjXcc0P7zkqpyS0qRSSZrg0,2528
+udotstyles-0.1.1.dist-info/LICENSE,sha256=0Hanp28nvgUuJqa_NcZ5XVBPRTWOlOXVKpjUozLTUV0,1075
+udotstyles-0.1.1.dist-info/METADATA,sha256=VDs1SY0GujId-_riBwZCRsofqGf14zviSRXnjNR_-tk,953
+udotstyles-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+udotstyles-0.1.1.dist-info/top_level.txt,sha256=jtLB5b6C08_I4kmQ9nRSNI487nsNDzIh79DMS1diEcA,11
+udotstyles-0.1.1.dist-info/RECORD,,
