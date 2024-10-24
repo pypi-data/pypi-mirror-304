@@ -1,0 +1,10 @@
+src/ECHC_core.py,sha256=rOzejsXZWwIbS7ILK8WXtLV_BeF-m5WkVr82kkvnah0,221913
+src/Fc_core.py,sha256=kUkEQyj5P8ZgwGp8zxaLaxfLv3JTLvAhgIlzZNhLcYQ,806
+src/__init__.py,sha256=omJG9wI9KJnrCLHdmf37wNLIoErxdg_wibH6ft4anDk,105
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=_XdHJioHIfkswDKgKWg_iyTu_hx_ylvUb0BUbLtMoW4,789
+Fcstatistics-0.0.1.dist-info/LICENSE,sha256=dG_Qxv_UGi9JTUNny6TVfYEV5JwZoXhGeDC20dkfcak,1090
+Fcstatistics-0.0.1.dist-info/METADATA,sha256=549l6w5jZGwQ_FDzAUxrN-6ZoC7mnKuXf7qlm0KIQfU,474
+Fcstatistics-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+Fcstatistics-0.0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+Fcstatistics-0.0.1.dist-info/RECORD,,
