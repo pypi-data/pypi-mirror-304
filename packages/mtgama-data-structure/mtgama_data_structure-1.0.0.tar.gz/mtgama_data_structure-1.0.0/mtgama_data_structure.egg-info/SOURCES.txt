@@ -1,0 +1,5 @@
+setup.py
+mtgama_data_structure.egg-info/PKG-INFO
+mtgama_data_structure.egg-info/SOURCES.txt
+mtgama_data_structure.egg-info/dependency_links.txt
+mtgama_data_structure.egg-info/top_level.txt
