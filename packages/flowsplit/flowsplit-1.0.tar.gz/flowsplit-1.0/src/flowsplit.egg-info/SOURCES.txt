@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/flowsplit/__init__.py
+src/flowsplit/splitter.py
+src/flowsplit.egg-info/PKG-INFO
+src/flowsplit.egg-info/SOURCES.txt
+src/flowsplit.egg-info/dependency_links.txt
+src/flowsplit.egg-info/entry_points.txt
+src/flowsplit.egg-info/requires.txt
+src/flowsplit.egg-info/top_level.txt

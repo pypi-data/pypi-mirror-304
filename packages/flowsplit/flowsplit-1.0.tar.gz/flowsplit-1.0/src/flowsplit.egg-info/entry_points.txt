@@ -1,0 +1,2 @@
+[console_scripts]
+flowsplit.split_flow = flowsplit.splitter:split_flow
