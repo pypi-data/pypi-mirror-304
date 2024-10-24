@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+JOnTADS.egg-info/PKG-INFO
+JOnTADS.egg-info/SOURCES.txt
+JOnTADS.egg-info/dependency_links.txt
+JOnTADS.egg-info/entry_points.txt
+JOnTADS.egg-info/requires.txt
+JOnTADS.egg-info/top_level.txt
