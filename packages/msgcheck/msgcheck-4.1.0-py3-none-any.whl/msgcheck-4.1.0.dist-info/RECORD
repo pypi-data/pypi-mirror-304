@@ -1,0 +1,10 @@
+msgcheck/__init__.py,sha256=BsXoDWe630znTtevdqpSHH7XVcJqDcK2l7mTz4uMTco,854
+msgcheck/msgcheck.py,sha256=se0qccfoMQS3-h_fO4LZRdZz8SITRD4tU0PGm84vPEE,7770
+msgcheck/po.py,sha256=GJ3IZt1JBBKIjSYrsW6wc7Nm7vHRx1xVnzW4iYjyPcY,22651
+msgcheck/utils.py,sha256=mHpM3nyKfcwO_L0a_tgWfLXuNhrsgQh7wVsWVLxm5gs,1807
+msgcheck-4.1.0.dist-info/LICENSE.txt,sha256=556cigyF1zX_mBhZGOyU7X0XXvw3cBJ4euvPO4Dw2Qs,35151
+msgcheck-4.1.0.dist-info/METADATA,sha256=i8ZyugkWOUTxwyat6BeoJhn42bK2B416WRa7rqAWM0Q,4939
+msgcheck-4.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+msgcheck-4.1.0.dist-info/entry_points.txt,sha256=OCbQxLu8Mtizk6usMq84MAgtr0qLDdIn3uqrzMlAhcM,52
+msgcheck-4.1.0.dist-info/top_level.txt,sha256=-efGhYpzttTrefdoybFpCpeNIsXyu-54VOebxeuIZaY,9
+msgcheck-4.1.0.dist-info/RECORD,,
