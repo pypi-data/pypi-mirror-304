@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: newharsh
+Version: 0.0.2
+Summary: A simple package for greeting functionality
+Home-page: https://github.com/harshjain/mlharsh
+Author: Harsh Jain
+Author-email: harsh@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
