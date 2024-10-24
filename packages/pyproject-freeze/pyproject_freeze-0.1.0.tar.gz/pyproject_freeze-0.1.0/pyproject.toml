@@ -1,0 +1,29 @@
+[project]
+name = "pyproject-freeze"
+version = "0.1.0"
+description = "pip freeze for pyproject.toml"
+authors = [
+    {name = "James Munsch", email = "james.a.munsch@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pip==24.2",
+    "tomlkit==0.13.2",
+]
+[project.scripts]
+pypfreeze = "pyproject_freeze.freeze:run"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/allen-munsch/pyproject-freeze"
+Issues = "https://github.com/allen-munsch/pyproject-freeze/issues"
+
+[project.license]
+text = "MIT"
