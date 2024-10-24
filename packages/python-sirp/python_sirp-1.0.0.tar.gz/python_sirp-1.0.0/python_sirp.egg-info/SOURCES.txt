@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+python_sirp.egg-info/PKG-INFO
+python_sirp.egg-info/SOURCES.txt
+python_sirp.egg-info/dependency_links.txt
+python_sirp.egg-info/top_level.txt
+sirp/__init__.py
+sirp/client.py
+sirp/parameters.py
+sirp/sirp.py
