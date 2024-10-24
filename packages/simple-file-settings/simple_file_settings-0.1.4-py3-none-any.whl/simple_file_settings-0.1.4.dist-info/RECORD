@@ -1,0 +1,10 @@
+simplefilesettings/_base.py,sha256=Vr4yjtFMv39E63dXKLSTWqPFUEhv-1tJbmGMgqvrd-8,4354
+simplefilesettings/json.py,sha256=MQwpe93ZCB_KQs8r7v-Fl9GmKle96HG8ahF_pSqnkXc,507
+simplefilesettings/json5.py,sha256=jf-8mmzHoIaVftvFvCP4XSjQnWAfDRRgSVQ1i4FThys,741
+simplefilesettings/serializer.py,sha256=VuZvum4SHmGrLBCiPhJ4b1UsR4oLRj3yT2boDU_289I,1996
+simplefilesettings/toml.py,sha256=fNRL8t0h_lkgvXhySYwLWYihZT_d0Ss1TTahRayXtQA,754
+simplefilesettings/yaml.py,sha256=9vqkcRS4zQtBJNRxTdFbo0tFeXahrC-4fo8_8tnhUDo,512
+simple_file_settings-0.1.4.dist-info/METADATA,sha256=ums_EkyHbdrR0CFgfE5MPfPxIg4KogtJUAc1MRcdtLs,5825
+simple_file_settings-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+simple_file_settings-0.1.4.dist-info/licenses/LICENSE,sha256=nOksfgpwAslCCkvnHb6r_Rv2eGgkC7CMop43FK1zBxo,1109
+simple_file_settings-0.1.4.dist-info/RECORD,,
