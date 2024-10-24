@@ -1,0 +1,7 @@
+README.md
+setup.py
+sskie.egg-info/PKG-INFO
+sskie.egg-info/SOURCES.txt
+sskie.egg-info/dependency_links.txt
+sskie.egg-info/requires.txt
+sskie.egg-info/top_level.txt
