@@ -1,0 +1,13 @@
+aldjemy/__init__.py,sha256=DVFXgoOEBu0lurDJ7sE1lBedTur_4pdzR5YynGdJNqw,117
+aldjemy/apps.py,sha256=-BDxVm9RyqdlwS-0stQyQS6CFWXNhY2u-E8RG1svfRQ,354
+aldjemy/core.py,sha256=c_1N6e67QPtErfX8GdWL5GtvGvY17G7ZfRyczJSRZQ8,4537
+aldjemy/meta.py,sha256=Mxc6CmpcpOl5wNCcHrnFsYJY6SG4o3kS1RLBlaPtefM,611
+aldjemy/orm.py,sha256=i7VGw-XfLf7uhDZDdAKJP89u_B_LhECjiCq4c1_opVc,6145
+aldjemy/sqlite.py,sha256=r_VtxLvONgJqdQjXUSGMvmOh9bfe3SBeiFhlav829X4,613
+aldjemy/table.py,sha256=sIZtRaqSS7BOzi0tJQ5XdNWkqHzf5wfM6EEl_ZsuFE0,6372
+aldjemy/wrapper.py,sha256=TehkKE9_zrMV8QKG26i2X-xCkxMKiFQOh8zdUdm1wdc,656
+aldjemy_cai-1.0.dist-info/LICENSE,sha256=Y85iKO6PMOQwBgtERJ25QkBE8XcDiM3zT9PZnSMdTwk,1504
+aldjemy_cai-1.0.dist-info/METADATA,sha256=bQSxa5eDzT2r7LzRmcrgZzc3Iizyo8QxXmp0eSG_AUU,321
+aldjemy_cai-1.0.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+aldjemy_cai-1.0.dist-info/top_level.txt,sha256=5JBifljb-xNoCKTR_i6zCnZxmEc0L9bzJy7UM0dgiL8,8
+aldjemy_cai-1.0.dist-info/RECORD,,
