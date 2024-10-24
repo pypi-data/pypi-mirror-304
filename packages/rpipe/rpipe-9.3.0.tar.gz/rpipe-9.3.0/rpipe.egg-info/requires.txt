@@ -1,0 +1,9 @@
+zstandard[cffi]
+pycryptodomex
+cryptography
+requests
+tqdm
+zstdlib>=0.0.8
+waitress
+flask
+human_readable
