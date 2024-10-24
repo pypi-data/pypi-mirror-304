@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - '*.x'
+    tags:
+      - "*"
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/tox.yml@v1
+    with:
+      envs: |
+        - linux: check-style
+        - linux: check-security
+
+        - linux: py310-xdist
+        - linux: py311-xdist
+        - linux: py313-xdist
+        - macos: py312-xdist
+        - windows: py312-xdist
+        - linux: py312-xdist-cov
+          coverage: codecov
+
+        - linux: py312-xdist-devdeps
