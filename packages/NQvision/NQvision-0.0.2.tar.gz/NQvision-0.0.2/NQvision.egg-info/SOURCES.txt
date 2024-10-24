@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+NQvision/__init__.py
+NQvision.egg-info/PKG-INFO
+NQvision.egg-info/SOURCES.txt
+NQvision.egg-info/dependency_links.txt
+NQvision.egg-info/top_level.txt

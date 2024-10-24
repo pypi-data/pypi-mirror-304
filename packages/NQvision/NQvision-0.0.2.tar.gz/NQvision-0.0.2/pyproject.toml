@@ -1,0 +1,7 @@
+[project]
+name = "NQvision"
+authors = [
+    {name = "Neuron Q", email = "debbichi1997@gmail.com"},
+]
+version = "0.0.2"
+description = "Coming soon"
