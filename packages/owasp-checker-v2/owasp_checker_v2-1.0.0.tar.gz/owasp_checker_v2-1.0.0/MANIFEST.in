@@ -1,0 +1,23 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+include CODE_OF_CONDUCT.md
+include requirements.txt
+include USER_GUIDE.md
+include API_REFERENCE.md
+include QUICK_START.md
+
+recursive-include examples *.py
+recursive-include tests *.py
+recursive-include owasp_checker_v2 *.py
+
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude .git*
+global-exclude .pytest_cache
+global-exclude .coverage
+global-exclude htmlcov

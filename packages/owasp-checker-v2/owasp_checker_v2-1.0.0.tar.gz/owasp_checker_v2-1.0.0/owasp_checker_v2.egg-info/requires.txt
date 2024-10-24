@@ -1,0 +1,24 @@
+requests>=2.25.0
+beautifulsoup4>=4.9.3
+python-owasp-zap-v2.4>=0.0.20
+packaging>=21.0
+nvdlib>=0.7.0
+vt-py>=0.7.0
+tqdm>=4.62.0
+python-dateutil>=2.8.2
+urllib3>=1.26.0
+certifi>=2021.10.8
+click>=8.0.0
+colorama>=0.4.4
+rich>=10.0.0
+
+[:python_version < "3.9"]
+typing-extensions>=4.0.0
+
+[dev]
+pytest>=6.0.0
+pytest-cov>=2.0.0
+black>=21.0.0
+isort>=5.0.0
+mypy>=0.900
+flake8>=3.9.0
