@@ -1,0 +1,15 @@
+juv/__init__.py,sha256=sGC2gkI9rO5W9dc1sN-H1BAktrE2kizMkY59vpJl3Xw,3107
+juv/_add.py,sha256=ZMa1d977C4_hnEbH7VcBXy1lB4cRBSoyZKG3eHW_iZg,1843
+juv/_init.py,sha256=iKo3kBTaV-4hopUeFFiNP16ez2VF4EfthhLClQQOrNo,2638
+juv/_nbconvert.py,sha256=-iau6Knv4u43xhahLZj_HiYAIh_x1FBJjw3Pe7e3Wz4,527
+juv/_pep723.py,sha256=uU5mP-m2iXtvbf9psd7l2jzQLh1NVHKLc7Ge5wDudKc,1344
+juv/_run.py,sha256=GPzhMTUMDF34Ihb5FAQT291Wf27HZ2KCgMGu3qxaBBI,4576
+juv/_run_managed.py,sha256=9lDyN_d0X_pAREYENNqQaGcauq_xTcAQXMFJwJUDBwQ,4204
+juv/_uv.py,sha256=sK0FJRhSlYH-uHR4gP7S9l20jYOHb2lLXsMHDdtkU3A,651
+juv/_version.py,sha256=ppnL1hVj6m-6CsHVisGoKJKdgPh96MIYgNmxChgmS7k,75
+juv/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+juv-0.2.5.dist-info/METADATA,sha256=o_zFVA_yKfzFAnf8GQWSU4c9tpZxDyGlA99BBAYbb_0,7147
+juv-0.2.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+juv-0.2.5.dist-info/entry_points.txt,sha256=ys0r6L5twDc-5vnJFmOS4LRZ4wUysIyQxl4HPJqcnyk,33
+juv-0.2.5.dist-info/licenses/LICENSE,sha256=sWuT8ZEEK5ZxDSbjpeCY2qqG05bXs0stYrWrvz1XETs,1068
+juv-0.2.5.dist-info/RECORD,,
