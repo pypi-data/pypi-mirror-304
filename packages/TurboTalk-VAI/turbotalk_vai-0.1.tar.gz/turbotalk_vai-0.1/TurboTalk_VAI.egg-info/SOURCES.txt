@@ -1,0 +1,7 @@
+setup.py
+TurboTalk_VAI/__init__.py
+TurboTalk_VAI/main.py
+TurboTalk_VAI.egg-info/PKG-INFO
+TurboTalk_VAI.egg-info/SOURCES.txt
+TurboTalk_VAI.egg-info/dependency_links.txt
+TurboTalk_VAI.egg-info/top_level.txt
