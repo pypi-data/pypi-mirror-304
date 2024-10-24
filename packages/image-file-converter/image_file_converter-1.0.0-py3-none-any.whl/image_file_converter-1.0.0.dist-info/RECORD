@@ -1,0 +1,10 @@
+image_file_converter/__init__.py,sha256=yUVtYhxRKbjoag_OyoNOA85GlmphGhxunDmaENM-Sdw,187
+image_file_converter/bin.py,sha256=bLDLOb6fBANggq9BdPMLKjwSkMsEFZw4S_j3l5rO64A,2320
+image_file_converter/core.py,sha256=PYIaZQyQ3I-Q026rrpj1Ay99x_CkPDhemaZyzY9cfjA,2095
+image_file_converter/utils.py,sha256=rgOg5jgo3ZP-Oupq-kIvCKzSr3lrzLhvg-L1rNDG9yg,1315
+image_file_converter/version.json,sha256=cB3MLWYqeCDEFOiVca-GgRqHdis-x53Fxi7UWtQ168w,254
+image_file_converter-1.0.0.dist-info/METADATA,sha256=kcLxpIhTlPpgdaBwpbd-A8w2FhYnQAllGCjYIOrg7ag,2302
+image_file_converter-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+image_file_converter-1.0.0.dist-info/entry_points.txt,sha256=Lk6UPYubLjFl5mQo2xtd4AqobTQ8bWeT-6a24rvZOCs,72
+image_file_converter-1.0.0.dist-info/top_level.txt,sha256=drnF89ax93h8Cd7hb7LesOd9p-6Pr2hc4Ct7TQ30kFc,21
+image_file_converter-1.0.0.dist-info/RECORD,,
