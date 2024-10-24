@@ -1,0 +1,66 @@
+# DDownloader
+
+**DDownloader** is a Python library to download HLS and DASH manifests and decrypt media files.
+
+## Features
+- Download HLS streams using `N_m3u8DL-RE`.
+- Download DASH manifests and segments.
+- Decrypt media files using `mp4decrypt`.
+
+## Installation
+
+Use the package manager [pip](https://pypi.org/project/DDownloader/0.1.4/) to install DDownloader.
+
+```bash
+pip install DDownloader==0.1.4
+```
+
+## Usage
+
+- Download DASH content using the library:
+```python
+from DDownloader.dash_downloader import DASH
+
+dash_downloader = DASH()
+dash_downloader.manifest_url = "https://example.com/path/to/manifest.mpd"  # Set your DASH manifest URL
+dash_downloader.output_name = "output.mp4"  # Set desired output name
+dash_downloader.decryption_key = "12345:678910"  # Set decryption key if needed
+dash_downloader.dash_downloader()  # Call the downloader method
+```
+
+- Download HLS content using the library:
+```python
+from DDownloader.hls_downloader import HLS
+
+hls_downloader = HLS()
+hls_downloader.manifest_url = "https://example.com/path/to/manifest.m3u8"  # Set your HLS manifest URL
+hls_downloader.output_name = "output.mp4"  # Set desired output name
+hls_downloader.decryption_key = "12345:678910"  # Set decryption key if needed
+hls_downloader.hls_downloader()  # Call the downloader method
+```
+
+- Here's a complete example demonstrating the use of all features:
+```python
+from DDownloader.dash_downloader import DASH
+from DDownloader.hls_downloader import HLS
+
+def download_dash():
+    dash_downloader = DASH()
+    dash_downloader.manifest_url = "https://example.com/path/to/manifest.mpd"  # Set your DASH manifest URL
+    dash_downloader.output_name = "output.mp4"  # Set desired output name
+    dash_downloader.decryption_key = "12345:678910"  # Set decryption key if needed
+    dash_downloader.dash_downloader()  # Call the downloader method
+
+def download_hls():
+    hls_downloader = HLS()
+    hls_downloader.manifest_url = "https://example.com/path/to/manifest.m3u8"  # Set your HLS manifest URL
+    hls_downloader.output_name = "output_hls"  # Set desired output name
+    hls_downloader.decryption_key = "your_decryption_key"  # Set decryption key if needed
+    hls_downloader.hls_downloader()  # Call the downloader method
+
+if __name__ == "__main__":
+    download_dash()  # Download DASH content
+    download_hls()   # Download HLS content
+```
+
+## THIS PROJECT STILL IN DEVELOPMENT
