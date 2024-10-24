@@ -1,0 +1,5 @@
+better_profanity
+profanity_check
+presidio_analyzer[transformers]
+presidio_anonymizer
+alt-profanity-check
