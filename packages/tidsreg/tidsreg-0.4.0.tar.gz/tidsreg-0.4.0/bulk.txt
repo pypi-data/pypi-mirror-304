@@ -1,0 +1,7 @@
+8	fagkoor
+915	talt	Kommentar
+10	safe
+1130	frokost
+12
+13	talt	Ny Kommentar
+14:10
