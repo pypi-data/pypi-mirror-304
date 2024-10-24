@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gstoolspy/__init__.py
+gstoolspy/tools.py
+gstoolspy.egg-info/PKG-INFO
+gstoolspy.egg-info/SOURCES.txt
+gstoolspy.egg-info/dependency_links.txt
+gstoolspy.egg-info/requires.txt
+gstoolspy.egg-info/top_level.txt
