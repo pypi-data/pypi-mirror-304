@@ -1,0 +1,12 @@
+README.md
+setup.py
+sskie/__init__.py
+sskie/spatial_analysis.py
+sskie.egg-info/PKG-INFO
+sskie.egg-info/SOURCES.txt
+sskie.egg-info/dependency_links.txt
+sskie.egg-info/requires.txt
+sskie.egg-info/top_level.txt
+sskie/data/mapo-gu.geojson
+sskie/data/마포구_all_store.txt
+sskie/data/마포구_음식업_store.txt
