@@ -1,0 +1,5 @@
+s2s_connector/__init__.py,sha256=kLlX2m7zG2qF3Tsh6cJCMF4MEKBSVnQ7S_RkP_XBBVQ,36
+s2s_connector/connector.py,sha256=kbDlWnQm_xHRsw146Mzl806U_vwpIflWKT2_9Yp_64I,2039
+s2s_connector-0.0.3.dist-info/METADATA,sha256=wWXAaCPJeNgcabvuIzSx1jrCCNlK3tKx05AT7ZRHHGA,1234
+s2s_connector-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+s2s_connector-0.0.3.dist-info/RECORD,,
