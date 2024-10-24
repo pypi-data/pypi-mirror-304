@@ -1,0 +1,15 @@
+drizzle/__init__.py,sha256=hMpqmjPhrUWTRU0eXNOcrpiqQFGp4lf9opY8FXqLLEQ,325
+drizzle/cdrizzle.cp311-win_amd64.pyd,sha256=QC1vJU0jPGFFy7smjoUWtv8zYMW9_QvwlOlguYg8Y4A,100864
+drizzle/resample.py,sha256=t6HCYNWwnz4-mKYtzIWDFIEkHOi84ZI5GD4x3L6Wp0k,28982
+drizzle/util.py,sha256=os9wHm1JkKiG5jtnNCZAXG3vnnXxLHBpi8OTWsiPI7k,845
+drizzle/utils.py,sha256=Mze8pASdCiSXEsIJNIGkTcLbqszpJrrE5U576AtkzeI,8776
+drizzle/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drizzle/tests/test_cdrizzle.py,sha256=utepqMiY8xtgQ8gBRBHwnlMhbBB1pq1xE4spf-wO7Kw,726
+drizzle/tests/test_overlap_calc.py,sha256=ucwDL9fd8NVAxTdz-sWum_uobhm-TGkCr2yl69BKiC4,7062
+drizzle/tests/test_resample.py,sha256=Xtov5vpVOEWOscKngGl8GkDyWSj_GpRNlceGIJ_Jdfg,41014
+drizzle/tests/test_utils.py,sha256=rlRvd7JKo7YeVPIhYAYg4WgXLN7yge39Zkngv8jq4ds,5889
+drizzle-2.0.0.dist-info/LICENSE.rst,sha256=sUXj5W73D9TcOw5ZXaDdcthYdY2b2dTJPsxBuZTOYWQ,1505
+drizzle-2.0.0.dist-info/METADATA,sha256=dv6lr7uK6t4T5IzDF4UYvS5vYXBFhd0ZWQdTPdFMJ0Y,10850
+drizzle-2.0.0.dist-info/WHEEL,sha256=tE2EWZPEv-G0fjAlUUz7IGM64246YKD9fpv4HcsDMkk,101
+drizzle-2.0.0.dist-info/top_level.txt,sha256=MA5uqwTj1sJBi-hCeQj9v3-sZ9nVUTe6bd_zGWTKy5A,8
+drizzle-2.0.0.dist-info/RECORD,,
