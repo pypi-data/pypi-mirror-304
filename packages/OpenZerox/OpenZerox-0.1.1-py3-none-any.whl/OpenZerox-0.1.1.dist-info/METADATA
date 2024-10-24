@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: OpenZerox
+Version: 0.1.1
+Summary: A wrapper for the Qwen2-VL model based for image-based inference to convert pdf image to markdown.
+Author: Ashok Poudel
+Author-email: ashok.poudel@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: Pillow
+Requires-Dist: qwen-vl-utils
+
