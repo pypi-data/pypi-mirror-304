@@ -1,0 +1,9 @@
+itkwasm_compress_stringify_wasi/__init__.py,sha256=_npNw-UpTasxSQzNqamNKaszxFNkN9wNE1qONRhI-OE,297
+itkwasm_compress_stringify_wasi/_version.py,sha256=XErusAMGUPwBUpdA6BLyq8CjU-6n6gLlBRymgSC8Y-0,22
+itkwasm_compress_stringify_wasi/compress_stringify.py,sha256=LtPFvpDP0W5_xy9JX9-DraVH9GEImnr6V4RYJWDYWGc,1977
+itkwasm_compress_stringify_wasi/parse_string_decompress.py,sha256=gletvoAeZnzfljgl6p9OydzjPRdvQgnH9VWYfWh_qMA,1588
+itkwasm_compress_stringify_wasi/wasm_modules/compress-stringify.wasi.wasm,sha256=HpQ4scdbjm4OuHTAhtRjXd1z-1imbZ0djpvCVqPNq7c,3360465
+itkwasm_compress_stringify_wasi/wasm_modules/parse-string-decompress.wasi.wasm,sha256=lxlz6YZHY3yFG_6zJp-D9UZRUEWC-dzGz9oRbORu6oM,3108766
+itkwasm_compress_stringify_wasi-3.3.1.dist-info/METADATA,sha256=Fc3btaF_5gwcxGJH5Qkn4q3CyVA-LPzH9sJS9GuHpTU,1807
+itkwasm_compress_stringify_wasi-3.3.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+itkwasm_compress_stringify_wasi-3.3.1.dist-info/RECORD,,
