@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: auto_test_common_utils
+Version: 0.2
+Summary: 为了方便自动化测试而封装的常用工具包
+Home-page: https://gitlab.eeo.com.cn/auto_test/auto_test_common_utils.git
+Author: zhangtj
+Author-email: ztj_5451@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
