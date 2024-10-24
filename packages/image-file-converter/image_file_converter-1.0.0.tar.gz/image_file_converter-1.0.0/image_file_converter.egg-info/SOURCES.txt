@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+image_file_converter/__init__.py
+image_file_converter/bin.py
+image_file_converter/core.py
+image_file_converter/utils.py
+image_file_converter/version.json
+image_file_converter.egg-info/PKG-INFO
+image_file_converter.egg-info/SOURCES.txt
+image_file_converter.egg-info/dependency_links.txt
+image_file_converter.egg-info/entry_points.txt
+image_file_converter.egg-info/requires.txt
+image_file_converter.egg-info/top_level.txt
