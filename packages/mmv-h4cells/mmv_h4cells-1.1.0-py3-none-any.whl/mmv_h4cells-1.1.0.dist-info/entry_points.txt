@@ -1,0 +1,2 @@
+[napari.manifest]
+mmv_h4cells = mmv_h4cells:napari.yaml

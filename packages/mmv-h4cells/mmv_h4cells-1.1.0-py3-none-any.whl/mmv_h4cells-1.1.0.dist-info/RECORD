@@ -1,0 +1,16 @@
+mmv_h4cells/__init__.py,sha256=BcGdxNnIa7TFjThQ9Ih62Yrwk1zACxS64IkZjgunabw,175
+mmv_h4cells/_reader.py,sha256=IFh6AqRXYfXvfD-9ATGqJQd2eu3ExafVlNWouE8mzZQ,4323
+mmv_h4cells/_roi.py,sha256=YAmBPVFqLQZXmxIg70A1-bygTkMsCVs-6tX0qCqNVts,1420
+mmv_h4cells/_widget.py,sha256=HTm9Xeiy6c4l8h6oAClEPI7FkIaHI5RsTKN7iNV05d8,56646
+mmv_h4cells/_writer.py,sha256=LVa-cieqRWbGyFDooZox8VhsHKJZJRQFJCnY0w2oaMc,3967
+mmv_h4cells/napari.yaml,sha256=YQtiZsPVRGHCD5f1esEfPAISwEDFVitFnevk_9roScI,1295
+mmv_h4cells/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mmv_h4cells/_tests/test_reader.py,sha256=fqsFKISSo2YXwG7G6fve0kIYgByC43J1iSl80Tnlscs,1084
+mmv_h4cells/_tests/test_widget.py,sha256=6QpD8jTfk5zSpfC8kXTRvhF4-FDGYmx2rShTh0hmuec,41419
+mmv_h4cells/_tests/test_writer.py,sha256=oMWYiwF8WaKhi8pN09sNoZs0c5tVgiWIlrYrlpH7It0,3453
+mmv_h4cells-1.1.0.dist-info/LICENSE,sha256=uZuvPhwwVZu2qLdZtpGeBnk5UjT5YJsCTiwWrK4STKo,1517
+mmv_h4cells-1.1.0.dist-info/METADATA,sha256=tb5Of-v_NjusFKF0cbBl2s-3hUYfhrSIQcV5zotL5Ks,7905
+mmv_h4cells-1.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mmv_h4cells-1.1.0.dist-info/entry_points.txt,sha256=eqa2CNAF5Bip7hKQTp2Q-VVCr53e4OSw3apR0OccOHQ,56
+mmv_h4cells-1.1.0.dist-info/top_level.txt,sha256=hfqehU0e_ywmZ5UzX0oCbnoIRBIRIuwKiFO1rFlT0Ws,12
+mmv_h4cells-1.1.0.dist-info/RECORD,,
