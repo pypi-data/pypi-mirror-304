@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django-include-bootstrap
+Version: 5.0.0
+Author: Paul Traylor
+License: MIT License
+Project-URL: Issues, http://github.com/kfdm/django-bootstrap4/issues
+Project-URL: Source Code, http://github.com/kfdm/django-bootstrap4
+Keywords: bootstrap,django
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: Django >=4.2
+
+# Minimal Django Bootstrap4
