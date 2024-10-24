@@ -1,0 +1,7 @@
+lazypp/__init__.py,sha256=AJo6gPEErXssJ7YjzkdILHmJux40l6ne-Oc_ElWkcHI,126
+lazypp/file_objects.py,sha256=tlGYBj_n_tr5Ntb98bnHZYjC-sf_A3FqRUIT3bkuoYA,1607
+lazypp/task.py,sha256=RbwYVGpyqK979eZeKERDuxjSU0aQNgyXWPh_tecFvB8,9073
+lazypp-0.1.0.dist-info/METADATA,sha256=qbJGDNGI9wOZECe3PfnVwmrdv37iwqu9WtfF51WSnWM,151
+lazypp-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+lazypp-0.1.0.dist-info/top_level.txt,sha256=hHK9AkrSfkq3KTIDU5aBx5KOIN_8DJ1ZNqbVchujEv0,7
+lazypp-0.1.0.dist-info/RECORD,,
