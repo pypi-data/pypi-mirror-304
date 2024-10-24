@@ -1,0 +1,12 @@
+pylandstats-3.0.0.dist-info/RECORD,,
+pylandstats-3.0.0.dist-info/WHEEL,sha256=BlgdoGd2KNVEkPyD8Qw7I04Bd9Sa0Eb3ERRi6yJxIis,93
+pylandstats-3.0.0.dist-info/METADATA,sha256=7J6eybZHJ9628aB_N7pG5TRDeKddB6dT0JYBKBLUSpA,6842
+pylandstats/spatiotemporal.py,sha256=k3bQpD-uiMUc1EFFTRrll9X_Qibwpmvuzg6p9oDRHCs,25314
+pylandstats/zonal.py,sha256=ChYZX8mHYD3o1w36VZFcMeJVLyuR5P2S8NDAyl74OMw,24648
+pylandstats/__init__.py,sha256=sEIvPChtcZE0XVkGB9aV9fKBFbvmSMy5M5zj8hn0nME,124
+pylandstats/multilandscape.py,sha256=jzrEexIgLQWWbkQXELxl2Dnc-TMFKhIfab7OuGH1RYo,15972
+pylandstats/settings.py,sha256=8CGGj0kq-uAoVfKf79NxsSzei79OWZ_IUag8wF0vPCA,2692
+pylandstats/landscape.py,sha256=HRgxFZWVGCquXSmJFzWFnhabQk0iTVE12dgvrhaHTHc,146235
+pylandstats/__python__/landscape.py,sha256=DDSsK4s2LBMaJfx2tNR_07JtAF9yK4vI7eT3DGkDUOU,2289
+pylandstats/__pythran__/landscape.cpython-312-darwin.so,sha256=7649bObPi0A_x73UdxtYRi1K3ZaCBAFuaAtnJzfbf28,80992
+pylandstats/__numba__/landscape.py,sha256=wDnYLwQo_k6S7Lenb5fDioTBfBoLWKVajeEmSP5kYx0,2350
