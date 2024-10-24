@@ -1,0 +1,2 @@
+[pymodaq.plugins]
+pylablib_camera = pymodaq_plugins_pylablib_camera
