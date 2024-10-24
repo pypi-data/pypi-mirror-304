@@ -1,0 +1,14 @@
+# Temp files
+*~
+\#*\#
+.DS_Store
+
+
+build/
+*.egg-info
+dist/
+.tox/
+.pytest_cache/
+__pycache__/
+.vscode/
+logs/
