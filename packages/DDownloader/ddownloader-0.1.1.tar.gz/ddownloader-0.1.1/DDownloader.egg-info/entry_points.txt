@@ -1,0 +1,2 @@
+[console_scripts]
+d-downloader = manifest_downloader:main
