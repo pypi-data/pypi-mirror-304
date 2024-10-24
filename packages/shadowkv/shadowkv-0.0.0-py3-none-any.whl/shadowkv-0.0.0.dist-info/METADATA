@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: shadowkv
+Version: 0.0.0
+Summary: shadow kv cache
+Project-URL: Homepage, https://github.com/bytedance/ShadowKV
+Project-URL: Issues, https://github.com/bytedance/ShadowKV/issues
+Author-email: Hanshi Sun <hanshis@andrew.cmu.edu>, Li-Wen Chang <liwen.chang@bytedance.com>, Wenlei Bao <wenlei.bao@bytedance.com>, Size Zheng <zheng.size@bytedance.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
