@@ -1,0 +1,2 @@
+[console_scripts]
+financial_metrics1 = financial_metrics1:main
