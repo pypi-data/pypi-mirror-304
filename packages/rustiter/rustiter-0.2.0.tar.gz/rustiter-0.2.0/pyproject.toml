@@ -1,0 +1,40 @@
+[project]
+authors = [{ name = "lxl66566", email = "lxl66566@gmail.com" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.7",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+description = "Rust iterator utilities for Python"
+keywords = ["rust", "iter", "iterator"]
+license = "MIT"
+name = "rustiter"
+readme = "README.md"
+requires-python = ">=3.6"
+version = "0.2.0"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest-benchmark>=3.4.1",
+    "pytest>=7.0.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/lxl66566/Rustiter"
+Repository = "https://github.com/lxl66566/Rustiter"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+
+[tool.hatch.build]
+include = ["rustiter/**"]
+packages = ["rustiter"]
