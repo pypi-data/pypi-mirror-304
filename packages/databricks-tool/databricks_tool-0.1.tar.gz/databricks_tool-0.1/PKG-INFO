@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: databricks_tool
+Version: 0.1
+Requires-Dist: numpy<2
+Requires-Dist: python-dotenv
+Requires-Dist: databricks-sql-connector
