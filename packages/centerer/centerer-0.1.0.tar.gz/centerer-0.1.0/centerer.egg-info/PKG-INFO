@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: centerer
+Version: 0.1.0
+Summary: A package to center text horizontally and vertically in the terminal
+Author: kbdevs
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
