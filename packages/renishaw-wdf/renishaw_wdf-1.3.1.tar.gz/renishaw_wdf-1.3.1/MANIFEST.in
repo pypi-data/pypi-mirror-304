@@ -1,0 +1,5 @@
+include tox.ini
+include demos/*.py
+include wdf/test/*.py
+include wdf/test/*.wdf
+include wdf/py.typed
