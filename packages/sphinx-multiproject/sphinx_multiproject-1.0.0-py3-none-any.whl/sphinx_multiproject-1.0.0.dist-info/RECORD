@@ -1,0 +1,8 @@
+multiproject/__init__.py,sha256=vSm0wNFoRUMBWu_nWFDaYtouTP5Um_I7Mugc1HKx4Lw,60
+multiproject/extension.py,sha256=FIsohu3kgiNVk-4bSxTa02SFvSrJFEcmS5i5IyuiXgY,3348
+multiproject/utils.py,sha256=ZTuID5BB5WXkN6a_EtXvB3TWUoDzkturAKUQmuYTKiA,797
+sphinx_multiproject-1.0.0.dist-info/LICENSE,sha256=OYcXv8e7JGxgReyYE9DPEMC9F5NjWH9V4lDi0iX2ku8,1070
+sphinx_multiproject-1.0.0.dist-info/METADATA,sha256=7qpxo4uPfz0xiWebqq0drset4CngBuvY1NCIWcyotIA,1719
+sphinx_multiproject-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sphinx_multiproject-1.0.0.dist-info/top_level.txt,sha256=UjU_EDyi_tsaYKYHaVlRn4ORvhs6IvHN4fgyXNj06xc,13
+sphinx_multiproject-1.0.0.dist-info/RECORD,,
