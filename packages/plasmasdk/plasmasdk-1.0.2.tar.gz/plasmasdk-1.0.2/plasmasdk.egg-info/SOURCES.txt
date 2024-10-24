@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+plasmasdk/__init__.py
+plasmasdk/example.py
+plasmasdk/sdk_v2.py
+plasmasdk.egg-info/PKG-INFO
+plasmasdk.egg-info/SOURCES.txt
+plasmasdk.egg-info/dependency_links.txt
+plasmasdk.egg-info/requires.txt
+plasmasdk.egg-info/top_level.txt
