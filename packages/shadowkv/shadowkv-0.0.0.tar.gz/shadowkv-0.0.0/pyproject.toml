@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shadowkv"
+version = "0.0.0"
+authors = [
+  { name="Hanshi Sun", email="hanshis@andrew.cmu.edu" },
+  { name="Li-Wen Chang", email="liwen.chang@bytedance.com" },
+  { name="Wenlei Bao", email="wenlei.bao@bytedance.com" },
+  { name="Size Zheng", email="zheng.size@bytedance.com" },
+]
+description = "shadow kv cache"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/bytedance/ShadowKV"
+Issues = "https://github.com/bytedance/ShadowKV/issues"
