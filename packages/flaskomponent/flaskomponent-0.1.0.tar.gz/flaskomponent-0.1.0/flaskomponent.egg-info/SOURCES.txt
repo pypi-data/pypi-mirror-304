@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+flaskomponent/__init__.py
+flaskomponent/css.py
+flaskomponent/elements.py
+flaskomponent.egg-info/PKG-INFO
+flaskomponent.egg-info/SOURCES.txt
+flaskomponent.egg-info/dependency_links.txt
+flaskomponent.egg-info/requires.txt
+flaskomponent.egg-info/top_level.txt
