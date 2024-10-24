@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: django-assets-tags
+Version: 0.1
+Summary: Reusable Django template tags for public and private asset URLs.
+Home-page: https://github.com/akibkamani/django-assets-tags
+Author: Akib Kamani
+Author-email: your-email@example.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: Django>=3.0
