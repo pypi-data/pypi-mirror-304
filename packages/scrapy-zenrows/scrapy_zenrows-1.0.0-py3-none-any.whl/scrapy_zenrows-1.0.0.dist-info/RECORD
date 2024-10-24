@@ -1,0 +1,10 @@
+scrapy_zenrows/__init__.py,sha256=k8nsZkRGFtisXJRa_EXP-mc9sedX8NTDOArqky8lTW8,143
+scrapy_zenrows/__version__.py,sha256=ZhzQKWZ8RFrTIkj7z87B144DI95e8LMfA5w8NDWQDtg,23
+scrapy_zenrows/api_key_handler.py,sha256=VbpVx7tGeuAmnT62zCDPohqE7bZImSObPvIgSztb3Xw,219
+scrapy_zenrows/middleware.py,sha256=aNAN2YtlcUYKvlLc6KU-9O0Kj1HbTD5NHSrjTT9k9m8,3325
+scrapy_zenrows/zenrows_request.py,sha256=QKewP8CAvYEvsuodSI0V984gYTT-T2Y3CpAS_QJsu1I,539
+scrapy_zenrows-1.0.0.dist-info/LICENSE,sha256=6Tbm8X2z2ueIn2CwbAnaWGY02vZf1EBliNjG1T10_qc,1085
+scrapy_zenrows-1.0.0.dist-info/METADATA,sha256=B_Z-xaIPLL8224c5O1T6RwKzpqe108OwyHQtJGmv_0c,8964
+scrapy_zenrows-1.0.0.dist-info/WHEEL,sha256=pL8R0wFFS65tNSRnaOVrsw9EOkOqxLrlUPenUYnJKNo,91
+scrapy_zenrows-1.0.0.dist-info/top_level.txt,sha256=tu-dIeNhGi5ybeBx3-lWxDCoRCgmxqlQCEffKl3ExwI,15
+scrapy_zenrows-1.0.0.dist-info/RECORD,,
