@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lexstruct_pdf
+Version: 0.0.1
+Summary: A package that enables extraction of text, images, and tables.
+Author-email: "LexStruct(Anurag Yadav)" <anurag.y2599@outlook.com>
+Keywords: python,PDF,extract,text,tables,images,LexStruct
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyMuPDF
+
+#LexStruct_PDF
+
+This is an efficient python library build to extract the contents(text,images,tables) from a pdf.
+
+It accepts one argument i.e. path of your pdf.
+
+How to use:-
+
+from LexStruct_PDF import ContentExtractor
+
+obj  = ContentExtractor("pdf to your path")
+extracted_text = obj.extract_content()
