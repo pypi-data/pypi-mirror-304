@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/SamJJ02.egg-info/PKG-INFO
+src/SamJJ02.egg-info/SOURCES.txt
+src/SamJJ02.egg-info/dependency_links.txt
+src/SamJJ02.egg-info/top_level.txt
+src/example_package/__init__.py
+src/example_package/example.py
