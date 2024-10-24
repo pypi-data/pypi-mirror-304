@@ -1,0 +1,11 @@
+pyvectordb/__init__.py,sha256=jAi_7TuN--o9qb3eQvafLdGk4Fi_2vnujJJojrvwjH8,146
+pyvectordb/distance_function.py,sha256=f5juFbXUyCxEQOWoqDzxaP9mFJSVUUOgRjxYwHtieGU,383
+pyvectordb/driver.py,sha256=xAA4TOLxBhYbVmBb9Qv2buYpbRKDjNNXLsHTD-8ncNU,698
+pyvectordb/pgvector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvectordb/pgvector/model.py,sha256=tZ_1E_zYh_UanGHME4WJ6zgewMnbRF0vpPLAfj1eOGM,697
+pyvectordb/pgvector/pgvector.py,sha256=ve9t-0ljTSQDSEiz0qWIq7d8G-poD0siH8HPOO0zh5U,4361
+pyvectordb/vector.py,sha256=DYmcwDV0ZLURd6lhuAofcgBNHg8p8LekIUM365OtmEc,1470
+pyvectordb/vector_distance.py,sha256=sr7Oa02NSCI1PZ7V7TDl_xnOvx4tJ8b0-f6dZ4mhQ5o,351
+pyvectordb-0.1.0.dist-info/METADATA,sha256=0HQ-VvW-AkLNupRO2VH0PJ2MX5o9nFtAgdybEv1FNzs,1921
+pyvectordb-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pyvectordb-0.1.0.dist-info/RECORD,,
