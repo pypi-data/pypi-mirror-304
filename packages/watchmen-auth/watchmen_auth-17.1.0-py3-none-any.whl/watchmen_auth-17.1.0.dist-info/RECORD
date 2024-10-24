@@ -1,0 +1,11 @@
+watchmen_auth/__init__.py,sha256=eDKBGkQ9fNo6LZ3GhjhCWRZA3iPaf5vTUdEO0Sb0NwQ,469
+watchmen_auth/auth_helper.py,sha256=0gpTMhR5Ix2ESG_5j2G2DujD-sXyT8gWKEfO5trHBBQ,755
+watchmen_auth/authentication.py,sha256=oKiA_GBK1WcZG7q0F0bL10gcw8uUsilLa_2tS8gTEQ4,1587
+watchmen_auth/authorization.py,sha256=8RSVUCSW8SYREBJSsfjf4fc9pQVfF6n2h53iTVT_IUY,1212
+watchmen_auth/fake_principal_service.py,sha256=H-Ul1fOPlSEqYSBaDwugX2RX5NjAVFbPsC5iu9_D7NQ,734
+watchmen_auth/principal_service.py,sha256=wNZQE_BD_raPARYkTAr7CU2ZBt4oR3n1UR868YExRJ8,816
+watchmen_auth/settings.py,sha256=fSbQnqm1YTGc-TpTnlP3AZfK-26iV8NtNhSCP2RA8Hw,554
+watchmen_auth-17.1.0.dist-info/LICENSE,sha256=iuuG7ErblOdcEZi5u89VXS0VIUiTb4flerGp_PAS9E4,1061
+watchmen_auth-17.1.0.dist-info/METADATA,sha256=FXggkSZhpJvlfOGHX5BLbSc0BbmFEBquK8c_n1zMpI0,379
+watchmen_auth-17.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+watchmen_auth-17.1.0.dist-info/RECORD,,
