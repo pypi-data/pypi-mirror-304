@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ipevo-python-diarization
+Version: 0.0.1
+Summary: IPEVO python diarization module
+Author: c1ayvveng
+Author-email: kehwaweng@staff.ipevo.com
+License-File: LICENSE
+
+IPEVO python diarization module using pyannote.audio

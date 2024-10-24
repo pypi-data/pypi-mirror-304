@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ipevo_python_diarization.egg-info/PKG-INFO
+ipevo_python_diarization.egg-info/SOURCES.txt
+ipevo_python_diarization.egg-info/dependency_links.txt
+ipevo_python_diarization.egg-info/requires.txt
+ipevo_python_diarization.egg-info/top_level.txt
