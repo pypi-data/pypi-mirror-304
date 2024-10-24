@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: he-compiler
+Version: 0.2.1
+Summary: A simple Python to EXE compiler
+Home-page: https://github.com/adrianez28/he-compiler.git
+Author: Adrián
+Author-email: adrianez2008@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# he-compiler
+
+A simple Python to EXE compiler.
+
+## InstalaciÃ³n
+
+Puedes instalar el paquete usando pip:
+
+```bash
+pip install he-compiler
