@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+multiproject/__init__.py
+multiproject/extension.py
+multiproject/utils.py
+sphinx_multiproject.egg-info/PKG-INFO
+sphinx_multiproject.egg-info/SOURCES.txt
+sphinx_multiproject.egg-info/dependency_links.txt
+sphinx_multiproject.egg-info/top_level.txt
+tests/test_extension.py
+tests/test_utils.py
