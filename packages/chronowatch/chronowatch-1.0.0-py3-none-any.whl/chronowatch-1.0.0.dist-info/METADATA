@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: chronowatch
+Version: 1.0.0
+Summary: A simple stopwatch for measuring code performance
+Home-page: https://github.com/Ahmad-Said/chrono_stopwatch
+Author: Ahmad SAID
+Author-email: hunter.sc.dark@gmail.com
+License: MIT
+Keywords: stopwatch,profile
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-tml
+Requires-Dist: typing-extensions
+
+# Stopwatch
+
+A simple stopwatch for measuring code performance.
+
+## Installing
+
+To install the library, you can just run the following command:
+
+```shell
+$ python3 -m pip install chronowatch
+```
+
+## Examples
+
+```python
+from chronowatch import Stopwatch
+
+stopwatch = Stopwatch('Building it')
+stopwatch.start("Preparing files")
+time.sleep(3.0)
+stopwatch.stop()
+print(stopwatch.last_task_info())
+# TaskInfo(task_name='Preparing files', time_nanos=3009159300)
+
+stopwatch.start("Processing files")
+time.sleep(2.0)
+stopwatch.stop()
+
+print(stopwatch.pretty_print())
+# StopWatch 'Building it': 5.013895300 seconds
+# ---------------------------------------------
+# Seconds         %         Task name
+# ---------------------------------------------
+# 3.009159300     60%       Preparing files
+# 2.004736000     40%       Processing files
+
+```
