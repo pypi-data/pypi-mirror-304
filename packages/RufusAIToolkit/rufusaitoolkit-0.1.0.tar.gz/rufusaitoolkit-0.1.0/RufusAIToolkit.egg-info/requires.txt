@@ -1,0 +1,11 @@
+aiohttp
+beautifulsoup4
+aiohttp-socks
+requests
+tldextract
+numpy
+pandas
+nltk
+sentence-transformers
+tf-keras
+python-dotenv
