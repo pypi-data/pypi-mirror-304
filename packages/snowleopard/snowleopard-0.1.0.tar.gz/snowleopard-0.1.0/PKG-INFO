@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: snowleopard
+Version: 0.1.0
+Summary: snowleopard.ai client library
+License: copyright 2024 Snow Leopard, Inc
+        all rights reserved
+        
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib_metadata>=4.6; python_version < "3.10"
+
+# SnowLeopard-ai python client library

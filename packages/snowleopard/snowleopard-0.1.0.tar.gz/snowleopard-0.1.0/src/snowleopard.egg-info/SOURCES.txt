@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/snowleopard/__init__.py
+src/snowleopard.egg-info/PKG-INFO
+src/snowleopard.egg-info/SOURCES.txt
+src/snowleopard.egg-info/dependency_links.txt
+src/snowleopard.egg-info/requires.txt
+src/snowleopard.egg-info/top_level.txt
