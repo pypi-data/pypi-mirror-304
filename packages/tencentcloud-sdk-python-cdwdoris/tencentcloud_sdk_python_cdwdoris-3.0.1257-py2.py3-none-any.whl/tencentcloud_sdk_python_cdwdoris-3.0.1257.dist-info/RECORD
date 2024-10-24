@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=sIHjo0c2yFfGSvBGqnuCl3isrzUU7oksH6nZAEtHUnE,631
+tencentcloud/cdwdoris/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/cdwdoris/v20211228/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/cdwdoris/v20211228/cdwdoris_client.py,sha256=KKpMsrUtQy7dURzO5kkjsGL_EW2NoFqScZ2tOZ-j6SI,55961
+tencentcloud/cdwdoris/v20211228/errorcodes.py,sha256=i5AghJAxSuSI3xB3eKtkZA1cnY_dQYmNEeTnn2ePSFM,703
+tencentcloud/cdwdoris/v20211228/models.py,sha256=w1I_rJ4z13sbHMCpLUgaq8r7wDNdwKMHWnYlsbh1RVI,355229
+tencentcloud_sdk_python_cdwdoris-3.0.1257.dist-info/METADATA,sha256=tp6lG1GSPjkd70PbP1F7KUjZ5rhi9hVvolQYeQl-bxY,1517
+tencentcloud_sdk_python_cdwdoris-3.0.1257.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_cdwdoris-3.0.1257.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_cdwdoris-3.0.1257.dist-info/RECORD,,
