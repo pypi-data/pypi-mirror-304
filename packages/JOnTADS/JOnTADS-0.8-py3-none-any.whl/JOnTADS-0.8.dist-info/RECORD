@@ -1,0 +1,13 @@
+JOnTADS/JOnTADS.py,sha256=2LkspZIjiffu8F-E9lcvOsXBMXAIBkODG7vuxrEGw2M,8492
+JOnTADS/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+JOnTADS/data_process.py,sha256=TmZkPnAeCbAj3YuUbhiyCJSEF5EbwdbulNrJiKN3O8w,2726
+JOnTADS/dp.py,sha256=MhDdJ6k8YNPU-bJx-ap7fhDq8QnDMMOa_zvgyjOidEM,10698
+JOnTADS/get_bds.py,sha256=Ewr0UOOVJkgfK3DRBr3bWw1i2_Zu1cQn6WC2cVDlfgs,7584
+JOnTADS/get_stripe.py,sha256=MrZo5ktxsTNLm2j9AaQ4lsXvROQQCpPIle2YZF1C8O0,4798
+JOnTADS/quant_reg.py,sha256=pxPEN4gIsBTyvggi7uxcUZrZSqvEJRJ3XnYrbnaQZso,5285
+JOnTADS-0.8.dist-info/LICENSE,sha256=2hPSrvTnsYiINC3z9DUiZWcMjwCROiea1VO9148_xCw,1068
+JOnTADS-0.8.dist-info/METADATA,sha256=ATTzRyMlQNAuR6gbSgfsvKvy_SsbG4lqxzPe0-zlk-M,3793
+JOnTADS-0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+JOnTADS-0.8.dist-info/entry_points.txt,sha256=NVKcxnghHr5JyrL8UhbJv7y3auJ932c8keJn7OB1T_U,50
+JOnTADS-0.8.dist-info/top_level.txt,sha256=IzIKlsq2g8HrJPbGKjXWMpuHh_FUP-3aE28yRnu1QGE,8
+JOnTADS-0.8.dist-info/RECORD,,
