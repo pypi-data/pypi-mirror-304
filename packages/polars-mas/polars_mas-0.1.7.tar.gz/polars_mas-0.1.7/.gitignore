@@ -1,0 +1,11 @@
+.venv
+tmp/
+*phewas*
+
+__pycache__/
+*.pyc
+
+test.sh
+results/
+example_data/*.csv
+*.log
