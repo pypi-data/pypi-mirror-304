@@ -1,0 +1,9 @@
+README.md
+license
+setup.py
+packege/__init__.py
+packege/main.py
+packege.egg-info/PKG-INFO
+packege.egg-info/SOURCES.txt
+packege.egg-info/dependency_links.txt
+packege.egg-info/top_level.txt
