@@ -1,0 +1,1216 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>SootUp vs. Soot - Is The New Static Analysis Library Ready For Use? | Security Lab</title>
+<meta name="description" content="This blog post compares the static analysis library SootUp to its predecessor Soot to determine areas of improvement, areas that still need work, and how fit SootUp is to be used in actual tool development.">
+
+
+  <meta name="author" content="Sigmund Gorski">
+  
+  <meta property="article:author" content="Sigmund Gorski">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Security Lab">
+<meta property="og:title" content="SootUp vs. Soot - Is The New Static Analysis Library Ready For Use?">
+<meta property="og:url" content="http://localhost:8080/_research/2024-08-07-sootup-vs-soot/">
+
+
+  <meta property="og:description" content="This blog post compares the static analysis library SootUp to its predecessor Soot to determine areas of improvement, areas that still need work, and how fit SootUp is to be used in actual tool development.">
+
+
+
+
+
+  <meta name="twitter:site" content="@SNSecurityLab">
+  <meta name="twitter:title" content="SootUp vs. Soot - Is The New Static Analysis Library Ready For Use?">
+  <meta name="twitter:description" content="This blog post compares the static analysis library SootUp to its predecessor Soot to determine areas of improvement, areas that still need work, and how fit SootUp is to be used in actual tool development.">
+  <meta name="twitter:url" content="http://localhost:8080/_research/2024-08-07-sootup-vs-soot/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-08-07T00:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:8080/_research/2024-08-07-sootup-vs-soot/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ServiceNow",
+      "url": "http://localhost:8080/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rouge.css">
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-semibold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-bold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/fira-mono-regular-latin.woff2" type="font/woff2" crossorigin="anonymous"/>
+
+<style>
+@font-face {
+  font-family: GilroyRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-regular-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-regular-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroySemiBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-semibold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-semibold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-bold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-bold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+</style>
+
+
+
+    <!-- start custom head snippets -->
+<script src="https://assets.adobedtm.com/a441b904b50e/99538f40e7c0/launch-3dcaf3475e9d.min.js" async></script>
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<style>
+  @media screen and (width >= 725px) {
+    .small-screen {
+      display: none;
+    }
+    .large-screen { }
+  }
+  @media screen and (width < 725px) {
+    .small-screen { }
+    .large-screen {
+      display: none;
+    }
+  }
+
+  a {
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .masthead__menu-item a {
+    font-size: 0.8rem;
+    margin: 0 0.25rem 0 0.25rem;
+  }
+
+  .masthead__menu-item_block a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 62, 64);
+    padding-bottom: 0.4rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    position: relative;
+  }
+
+  .site-brand {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*display: flex;*/
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 41px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-top: 0px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 5px;
+    padding-left: 9px;
+    padding-right: 0px;
+    padding-top: 5px;
+    text-align: left;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%;
+    text-wrap: nowrap;
+    touch-action: manipulation;
+    white-space-collapse: collapse;
+    width: auto;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .small-screen a.site-brand {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .logo {
+    border-right: 1px solid #000;
+    height: 1.5rem;
+    margin-right: 12px;
+    min-width: 8rem;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    /*width: 180px;*/
+  }
+
+  .masthead__site-title {
+    color: rgb(0, 0, 0);
+    /*font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  ul {
+    align-items: center;
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu large-screen">
+      <nav id="site-nav" class="greedy-nav large-screen">
+        <a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+      </nav>
+    </div>
+    <div class="masthead__menu small-screen">
+      <nav id="site-nav" class="greedy-nav small-screen">
+        <center><a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a></center>
+        <center>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <br>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+        </center>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="" alt="SootUp vs. Soot - Is The New Static Analysis Library Ready For Use?" class="page__hero-image">
+  
+  
+</div>
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:8080/" itemprop="item"><span itemprop="name" class="breadcrumb_item">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">></span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/_research" itemprop="item"><span itemprop="name" class="breadcrumb_item">_research</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">></span>
+      
+    
+      
+      
+        <li class="current">[ SootUp vs. Soot - Is The New Static Analysis Library Ready For Use? ]</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SootUp vs. Soot - Is The New Static Analysis Library Ready For Use?">
+    <meta itemprop="description" content="This blog post compares the static analysis library SootUp to its predecessor Soot to determine areas of improvement, areas that still need work, and how fit SootUp is to be used in actual tool development.">
+    <meta itemprop="datePublished" content="2024-08-07T00:00:00-07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">SootUp vs. Soot - Is The New Static Analysis Library Ready For Use?
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#background-and-overarching-design-improvements">Background And Overarching Design Improvements</a></li><li><a href="#loading-code-for-analysis">Loading Code For Analysis</a></li><li><a href="#generating-code-dynamically">Generating Code Dynamically</a></li><li><a href="#call-graph">Call Graph</a><ul><li><a href="#graphing-backend-and-data-structure">Graphing Backend and Data Structure</a></li><li><a href="#graph-generation-algorithms">Graph Generation Algorithms</a></li><li><a href="#removing-edges-from-graphs">Removing Edges From Graphs</a></li><li><a href="#filtering-call-graphs">Filtering Call Graphs</a></li></ul></li><li><a href="#api-changes-and-documentation">API Changes and Documentation</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+
+            </nav>
+            
+          </aside>
+        
+        <p>Soot,<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> a tool for statically analyzing Java code, has recently been supplanted by SootUp.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> SootUp is marketed as the next generation of Soot and developed by the same authors as Soot.
+But how exactly is SootUp different from Soot? Do the major capabilities of Soot still exist in SootUp? How easy is SootUp to understand and use compared to Soot? And lastly, is SootUp ready for real world use? In this post we look to answer these questions by exploring some of the most used features of Soot in SootUp and their documentation. These features include the ability to: 1) load and process Java bytecode for analysis, 2) create/modify existing Java code at runtime, and 3) create a call graph.</p>
+
+<h2 id="background-and-overarching-design-improvements">Background And Overarching Design Improvements</h2>
+
+<p>Soot<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> was originally authored around 2000 for performing bytecode analysis on Java 1.2. In the past 24 years, there have been many additions and improvements to Soot that have been a result of the changes in Soot’s use cases and the changes to Java itself. Unfortunately, Soot has not aged well. It has a bloated code base containing many features that are no longer used, and suffers from a long history of older coding practices. In the last few years, the developers of Soot introduced SootUp<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> to solve these issues. SootUp is a complete overhaul and rewrite of Soot. Whereas Soot was a command line tool that was eventually transformed into a library, SootUp is designed to be a Java static analysis library from the start.</p>
+
+<p>At a high level, the most significant improvement of SootUp is that it is designed and intended to be used as a library. This design decision influences many of the other changes in SootUp and has largely helped to eliminate much of what made Soot difficult to use. Other improvements include the elimination of singleton classes, the inclusion of builders and other components of immutable classes, standard and more understandable method naming schemes, and a much easier to understand overall structure. SootUp’s own documentation<sup id="fnref:27" role="doc-noteref"><a href="#fn:27" class="footnote" rel="footnote">3</a></sup> does a decent job of highlighting and discussing these improvements. In addition to these improvements, SootUp’s use of high quality third-party libraries (e.g. JGraphT, WALA, and ASM) to handle some of the backend heavy lifting are a significant improvement over Soot’s own dated custom implementations. These libraries allow the maintainers to focus on the new and improved static analysis features while not having to maintain outdated code with similar features. Lastly, there is a noticeable performance improvement in SootUp compared to Soot, which is likely a result of its improved design and slimmer code base.</p>
+
+<h2 id="loading-code-for-analysis">Loading Code For Analysis</h2>
+
+<p>A typical Soot or SootUp workflow always starts with loading code for analysis from some source. Both Soot and SootUp are able to handle a number of different forms of input for the code being analyzed. These include file extensions such as <code class="language-plaintext highlighter-rouge">.class</code>, <code class="language-plaintext highlighter-rouge">.jar</code>, <code class="language-plaintext highlighter-rouge">.zip</code>, <code class="language-plaintext highlighter-rouge">.apk</code>, <code class="language-plaintext highlighter-rouge">.dex</code>, and <code class="language-plaintext highlighter-rouge">.jimple</code>. Soot and SootUp can also load code from un-compiled <code class="language-plaintext highlighter-rouge">.java</code> files. However, loading from multiple interdependent <code class="language-plaintext highlighter-rouge">.java</code> files is still experimental in SootUp.<sup id="fnref:26" role="doc-noteref"><a href="#fn:26" class="footnote" rel="footnote">4</a></sup> Additionally, SootUp added support for loading code from <code class="language-plaintext highlighter-rouge">.war</code> files which Soot does not support out of the box.</p>
+
+<p>Overall, SootUp’s design is similar to that of Soot except it no longer relies on monolithic singleton classes. These classes have instead been replaced with reusable classes like <code class="language-plaintext highlighter-rouge">View</code>. In SootUp, a <code class="language-plaintext highlighter-rouge">View</code><sup id="fnref:19" role="doc-noteref"><a href="#fn:19" class="footnote" rel="footnote">5</a></sup> is a class that contains all the classes loaded from a list of <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code>.<sup id="fnref:18" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">6</a></sup> <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> is a class that specifies how to find and load the Java classes SootUp is to use for its analysis. Different child types of <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> are used to load the various file types mentioned above. Effectively, a <code class="language-plaintext highlighter-rouge">View</code> is the core data structure that stores the code SootUp is analyzing, much like the singleton <code class="language-plaintext highlighter-rouge">Scene</code> class of Soot.</p>
+
+<p>After the supplied code sources have been parsed, both Soot and SootUp apply transformations to the code. These transformations standardize the code into a layout that is functionally equivalent but easier to process for static analysis purposes. These transformers are known as <code class="language-plaintext highlighter-rouge">BodyTransformer</code> (abstract class) in Soot and <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> (interface) in SootUp. The default list of the <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes run by SootUp are available through <code class="language-plaintext highlighter-rouge">BytecodeBodyInterceptors.Default.getBodyInterceptors()</code>. It should be noted that prior to SootUp 1.3.0, no <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes were applied by default to loaded bytecode. However, in version 1.3.0 this behavior was changed so that a default list is applied. This is likely because transforming loaded code is a required step in both the Soot and SootUp loading process. Without such transformations, errors can and likely will occur further down the line as assumptions made about the code layout will be wrong.</p>
+
+<p>The example code below illustrates some of the available <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes in SootUp. The comments in the code indicate differences in Soot and SootUp. Additionally, some of the <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes are commented out because they are either not currently available, not fully implemented, or have bugs. With these restrictions in mind, the following list of SootUp <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes is the closest to the default list of Soot <code class="language-plaintext highlighter-rouge">BodyTransformer</code> classes that SootUp can currently apply to code without error.</p>
+
+<p class="figure-title"><strong>Creating a JavaView in SootUp</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">MutableJavaView</span> <span class="nf">makeJavaView</span><span class="o">(</span><span class="nc">String</span> <span class="n">classPath</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// This list was constructed and organized by combining the original Soot with SootUp.</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+            <span class="c1">// new TrapTightener(), missing: impl not finished</span>
+            <span class="c1">// new DuplicateCatchAllTrapRemover(), missing: does not exist in SootUp</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>
+    <span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Code that creates a <code class="language-plaintext highlighter-rouge">MutableJavaView</code> from a given class path. It uses a custom list of <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> objects to avoid unstable ones in the default list. However, a predefined list of <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes can be found at <code class="language-plaintext highlighter-rouge">BytecodeBodyInterceptors.Default.getBodyInterceptors()</code>. The full class can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:25" role="doc-noteref"><a href="#fn:25" class="footnote" rel="footnote">7</a></sup></p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">MutableJavaView</span> <span class="nf">makeJavaView</span><span class="o">(</span><span class="nc">String</span> <span class="n">classPath</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// This list was constructed and organized by combining the original Soot with SootUp.</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+            <span class="c1">// new TrapTightener(),                     // missing: impl not finished in SootUp</span>
+            <span class="c1">// new DuplicateCatchAllTrapRemover(),      // missing: does not exist in SootUp</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>            <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="c1">// new LocalSplitter(),                     // bug: causes infinite loop</span>
+            <span class="c1">// new SharedInitializationLocalSplitter(), // missing: does not exist in SootUp</span>
+            <span class="k">new</span> <span class="nf">Aggregator</span><span class="o">(),</span>                           <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">EmptySwitchEliminator</span><span class="o">(),</span>                <span class="c1">// new: new to SootUp</span>
+            <span class="k">new</span> <span class="nf">CastAndReturnInliner</span><span class="o">(),</span>                 <span class="c1">// new: new to SootUp</span>
+            <span class="k">new</span> <span class="nf">ConstantPropagatorAndFolder</span><span class="o">(),</span>          <span class="c1">// new: new to SootUp</span>
+            <span class="k">new</span> <span class="nf">UnusedLocalEliminator</span><span class="o">(),</span>                <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="c1">// new TypeAssigner(),                      // bug: causes an exception because it leaves intermediary AugmentIntegerTypes</span>
+            <span class="k">new</span> <span class="nf">LocalNameStandardizer</span><span class="o">(),</span>                <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">CopyPropagator</span><span class="o">(),</span>                       <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="c1">// new DeadAssignmentEliminator(),          // bug: creates unconnected exceptional flows - see RuntimeJarConversionTests</span>
+            <span class="c1">// new ConditionalBranchFolder(),           // bug: leaves unconnected edges sometimes - see RuntimeJarConversionTests</span>
+            <span class="k">new</span> <span class="nf">UnusedLocalEliminator</span><span class="o">(),</span>                <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">LocalPacker</span><span class="o">(),</span>                          <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">NopEliminator</span><span class="o">(),</span>                        <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>            <span class="c1">// both: exists in both Soot and SootUp</span>
+            <span class="k">new</span> <span class="nf">LocalNameStandardizer</span><span class="o">())</span>                <span class="c1">// both: exists in both Soot and SootUp</span>
+    <span class="o">);</span>
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">AnalysisInputLocation</span><span class="o">&gt;</span> <span class="n">inputLocations</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">inputLocations</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">JavaClassPathAnalysisInputLocation</span><span class="o">(</span><span class="n">classPath</span><span class="o">,</span> <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">,</span> <span class="n">bodyInterceptors</span><span class="o">));</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MutableJavaView</span><span class="o">(</span><span class="n">inputLocations</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>The list displayed in the code above is similar to the list of default <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes applied by SootUp except for the inclusion of the <code class="language-plaintext highlighter-rouge">UnusedLocalEliminator</code>, <code class="language-plaintext highlighter-rouge">LocalPacker</code>, <code class="language-plaintext highlighter-rouge">LocalNameStandardizer</code>, and <code class="language-plaintext highlighter-rouge">UnreachableCodeEliminator</code>. The first three of these help to reduce the number of variables and standardize variable names. This is largely to improve readability when looking at the processed code and reduce complexity when analyzing it. The last one removes unreachable code blocks from the bodies of methods. This <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> is critical as prior <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes may introduce unreachable code blocks into a method during their processing. Additionally, the <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes <code class="language-plaintext highlighter-rouge">TypeAssigner</code> and <code class="language-plaintext highlighter-rouge">LocalSplitter</code> from the default list are excluded as they were found to be causing exceptions because of unidentified bugs. Neither were critical for the purposes of simply building a call graph. However, <code class="language-plaintext highlighter-rouge">TypeAssigner</code> may be necessary in more complex static analysis use cases. More information about the <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes mentioned and how they transform loaded code can be found by examining SootUp’s source code.<sup id="fnref:2:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+
+<p>On the whole, the transformations of SootUp are similar to those in Soot. Indeed, many even share the same name. However, some are still missing, have not been implemented fully, or are still buggy. This will likely be improved as development of SootUp continues. However, bugs in the transformation stage of SootUp can be significant hindrances as it is often not easy to identify the root cause or find a work around.</p>
+
+<h2 id="generating-code-dynamically">Generating Code Dynamically</h2>
+
+<p>Both Soot and SootUp not only provide the ability to analyze existing code, but also allow for the modification and creation of new code. SootUp has simplified this process significantly through the use of modern coding patterns (e.g. builders and Java streams) in its APIs.<sup id="fnref:16" role="doc-noteref"><a href="#fn:16" class="footnote" rel="footnote">8</a></sup><sup id="fnref:17" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">9</a></sup> This is a significant improvement to the design patterns of Soot and greatly increases the usability of SootUp.</p>
+
+<p>Unfortunately, one feature omitted from SootUp’s API is the ability to generate classes at runtime.
+While it is possible to add and remove classes from an existing <code class="language-plaintext highlighter-rouge">View</code>,<sup id="fnref:19:1" role="doc-noteref"><a href="#fn:19" class="footnote" rel="footnote">5</a></sup> the classes themselves cannot be created without an underlining input location. SootUp supports the addition and removal of classes to an existing <code class="language-plaintext highlighter-rouge">View</code> through the use of implementations of the <code class="language-plaintext highlighter-rouge">MutableView</code><sup id="fnref:20" role="doc-noteref"><a href="#fn:20" class="footnote" rel="footnote">10</a></sup> interface (e.g. <code class="language-plaintext highlighter-rouge">MutableJavaView</code><sup id="fnref:21" role="doc-noteref"><a href="#fn:21" class="footnote" rel="footnote">11</a></sup>). However, in order to create the object that holds a single class (i.e. a <code class="language-plaintext highlighter-rouge">SootClass</code><sup id="fnref:22" role="doc-noteref"><a href="#fn:22" class="footnote" rel="footnote">12</a></sup>) a <code class="language-plaintext highlighter-rouge">SootClassSource</code><sup id="fnref:23" role="doc-noteref"><a href="#fn:23" class="footnote" rel="footnote">13</a></sup> must be provided. The creation of these <code class="language-plaintext highlighter-rouge">SootClassSource</code> objects requires that an <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code><sup id="fnref:18:1" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">6</a></sup> be provided. For classes generated during runtime, no such input location can be provided as none exists. Additionally, there is no subtype of <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> that can be used with runtime generated classes within the SootUp API.</p>
+
+<p>Fortunately, it is possible to create a dummy <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> for classes that only exist in memory. We created the <code class="language-plaintext highlighter-rouge">InMemoryJavaAnalysisInputLocation</code><sup id="fnref:24" role="doc-noteref"><a href="#fn:24" class="footnote" rel="footnote">14</a></sup> class outlined below for this purpose. It relies on the fact that <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> objects do not get used after a <code class="language-plaintext highlighter-rouge">View</code> has been created and all method bodies have been loaded. An example of how to use this call to create a runtime generated class can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:25:1" role="doc-noteref"><a href="#fn:25" class="footnote" rel="footnote">7</a></sup></p>
+
+<p class="figure-title"><strong>Dummy Input Location For Use With Runtime Created Classes</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">sootup.core.inputlocation</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InMemoryJavaAnalysisInputLocation</span> <span class="kd">implements</span> <span class="nc">AnalysisInputLocation</span> <span class="o">{</span>
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"only-in-memory.class"</span><span class="o">);</span>
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span><span class="o">;</span>
+    <span class="nd">@Nonnull</span> <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OverridingJavaClassSource</span> <span class="n">classSource</span><span class="o">;</span>
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">SourceType</span> <span class="n">sourceType</span><span class="o">;</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The <code class="language-plaintext highlighter-rouge">InMemoryJavaAnalysisInputLocation</code> class provides a dummy <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> implementation for use with runtime created classes. It relies on the use of an <code class="language-plaintext highlighter-rouge">OverridingJavaClassSource</code> to provide source information for a single entirely runtime generated class. It also assumes the <code class="language-plaintext highlighter-rouge">View</code> it is used with has already been created and initialized.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">sootup.core.inputlocation</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InMemoryJavaAnalysisInputLocation</span> <span class="kd">implements</span> <span class="nc">AnalysisInputLocation</span> <span class="o">{</span>
+
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"only-in-memory.class"</span><span class="o">);</span>
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span><span class="o">;</span>
+    <span class="nd">@Nonnull</span> <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OverridingJavaClassSource</span> <span class="n">classSource</span><span class="o">;</span>
+    <span class="nd">@Nonnull</span> <span class="kd">final</span> <span class="nc">SourceType</span> <span class="n">sourceType</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">InMemoryJavaAnalysisInputLocation</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">JavaClassType</span> <span class="n">classType</span><span class="o">,</span> <span class="nd">@Nullable</span> <span class="nc">JavaClassType</span> <span class="n">superClass</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaClassType</span><span class="o">&gt;</span> <span class="n">interfaces</span><span class="o">,</span>
+            <span class="nd">@Nullable</span> <span class="nc">JavaClassType</span> <span class="n">outerClass</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaSootField</span><span class="o">&gt;</span> <span class="n">sootFields</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaSootMethod</span><span class="o">&gt;</span> <span class="n">sootMethods</span><span class="o">,</span>
+            <span class="nd">@Nonnull</span> <span class="nc">Position</span> <span class="n">position</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">EnumSet</span><span class="o">&lt;</span><span class="nc">ClassModifier</span><span class="o">&gt;</span> <span class="n">modifiers</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">annotations</span><span class="o">,</span>
+            <span class="nd">@Nonnull</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">methodAnnotations</span><span class="o">,</span> <span class="nd">@Nullable</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">fieldAnnotations</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">(</span><span class="n">classType</span><span class="o">,</span> <span class="n">superClass</span><span class="o">,</span> <span class="n">interfaces</span><span class="o">,</span> <span class="n">outerClass</span><span class="o">,</span> <span class="n">sootFields</span><span class="o">,</span> <span class="n">sootMethods</span><span class="o">,</span> <span class="n">position</span><span class="o">,</span> <span class="n">modifiers</span><span class="o">,</span> <span class="n">annotations</span><span class="o">,</span> <span class="n">methodAnnotations</span><span class="o">,</span> 
+                <span class="n">fieldAnnotations</span><span class="o">,</span> <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">,</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">emptyList</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">InMemoryJavaAnalysisInputLocation</span><span class="o">(</span>
+        <span class="nd">@Nonnull</span> <span class="nc">JavaClassType</span> <span class="n">classType</span><span class="o">,</span>
+        <span class="nd">@Nullable</span> <span class="nc">JavaClassType</span> <span class="n">superClass</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaClassType</span><span class="o">&gt;</span> <span class="n">interfaces</span><span class="o">,</span>
+        <span class="nd">@Nullable</span> <span class="nc">JavaClassType</span> <span class="n">outerClass</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaSootField</span><span class="o">&gt;</span> <span class="n">sootFields</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">JavaSootMethod</span><span class="o">&gt;</span> <span class="n">sootMethods</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Position</span> <span class="n">position</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">EnumSet</span><span class="o">&lt;</span><span class="nc">ClassModifier</span><span class="o">&gt;</span> <span class="n">modifiers</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">annotations</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">methodAnnotations</span><span class="o">,</span>
+        <span class="nd">@Nullable</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">AnnotationUsage</span><span class="o">&gt;</span> <span class="n">fieldAnnotations</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">SourceType</span> <span class="n">sourceType</span><span class="o">,</span>
+        <span class="nd">@Nonnull</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">bodyInterceptors</span> <span class="o">=</span> <span class="n">bodyInterceptors</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">sourceType</span> <span class="o">=</span> <span class="n">sourceType</span><span class="o">;</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">classSource</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OverridingJavaClassSource</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">path</span><span class="o">,</span> <span class="n">classType</span><span class="o">,</span> <span class="n">superClass</span><span class="o">,</span> <span class="n">interfaces</span><span class="o">,</span> <span class="n">outerClass</span><span class="o">,</span> <span class="n">sootFields</span><span class="o">,</span>
+                <span class="n">sootMethods</span><span class="o">,</span> <span class="n">position</span><span class="o">,</span> <span class="n">modifiers</span><span class="o">,</span> <span class="n">annotations</span><span class="o">,</span> <span class="n">methodAnnotations</span><span class="o">,</span> <span class="n">fieldAnnotations</span><span class="o">);</span>
+        
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="nc">SootClassSource</span><span class="o">&gt;</span> <span class="nf">getClassSource</span><span class="o">(</span>
+        <span class="nd">@Nonnull</span> <span class="nc">ClassType</span> <span class="n">type</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">classSource</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Collection</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="nc">SootClassSource</span><span class="o">&gt;</span> <span class="nf">getClassSources</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="n">classSource</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">SourceType</span> <span class="nf">getSourceType</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">sourceType</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="nf">getBodyInterceptors</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">bodyInterceptors</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="kd">public</span> <span class="nc">ClassType</span> <span class="nf">getClassType</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">classSource</span><span class="o">.</span><span class="na">getClassType</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="kd">public</span> <span class="nc">OverridingJavaClassSource</span> <span class="nf">getClassSource</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">classSource</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>Overall, the inclusion of <code class="language-plaintext highlighter-rouge">MutableView</code> classes in the current API design suggests that the omission of a <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> implementation providing an in-memory input location capability is likely an oversight or more simply yet to be implemented. After all, the ability to create classes at runtime is a core component of Soot and SootUp. We imagine it will likely be corrected in later iterations of the API.</p>
+
+<h2 id="call-graph">Call Graph</h2>
+
+<p>One of the core features of Soot and SootUp is the ability to create a call graph of Java code that portrays the flows between methods. The discussion below outlines the differences in how Soot and SootUp generate call graphs. It focuses on the central components that comprise the call graph generation process. Namely, how a call graph is: 1) represented and stored, 2) generated using provided algorithms, 3) modified, and 4) fine tuned to fit analysis needs.</p>
+
+<h3 id="graphing-backend-and-data-structure">Graphing Backend and Data Structure</h3>
+
+<p>While Soot uses an internal data structure to house its call graph, SootUp makes use of the third-party library JGraphT.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">15</a></sup> JGraphT is a Java library focused on graph theory, data structures, and algorithms. Its direct use in SootUp makes it much easier to define and manipulate graphs using well known graph theory techniques. These graphs can also be easily exported in formats usable by other libraries, or transformed and rendered for visualization. However, for Soot, implementing much of the functionality provided by JGraphT would require significant modification as its graph structure only supports the most basic of traversal techniques.</p>
+
+<p>Unfortunately, while SootUp is using JGraphT as a backend, the JGraphT API is not easily accessed through SootUp’s API by default. This is because SootUp wraps the JGraphT graphs in its own classes, primarily the <code class="language-plaintext highlighter-rouge">sootup.callgraph.GraphBasedCallGraph</code> class, in order to provide additional functionality. The underlining JGraphT graph stored in <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> can only be accessed from child classes using undocumented protected methods. The code snippet below illustrates how to wrap an existing <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> object in order to access the underlining JGraphT graph through the method <code class="language-plaintext highlighter-rouge">getGraph()</code>. A complete version of this class can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">16</a></sup></p>
+
+<p class="figure-title"><a name="wrapper"></a><strong>Wrapping <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> To Access the Underlining JGraphT Graph</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">sootup.callgraph</span><span class="o">;</span>
+<span class="o">...</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CallGraphWrapper</span> <span class="kd">extends</span> <span class="nc">GraphBasedCallGraph</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">GraphBasedCallGraph</span> <span class="n">cg</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">CallGraphWrapper</span><span class="o">(</span><span class="nc">GraphBasedCallGraph</span> <span class="n">cg</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">cg</span> <span class="o">=</span> <span class="n">cg</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMethod</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">calledMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">cg</span><span class="o">.</span><span class="na">addMethod</span><span class="o">(</span><span class="n">calledMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="o">...</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeCall</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">sourceMethod</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">targetMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getGraph</span><span class="o">().</span><span class="na">removeEdge</span><span class="o">(</span><span class="n">vertexOf</span><span class="o">(</span><span class="n">sourceMethod</span><span class="o">),</span> <span class="n">vertexOf</span><span class="o">(</span><span class="n">targetMethod</span><span class="o">));</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeMethod</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">calls</span><span class="o">(</span><span class="n">method</span><span class="o">).</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">removeMethodForce</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="c1">// will remove all edges associated with vertex as well</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeMethodForce</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getGraph</span><span class="o">().</span><span class="na">removeVertex</span><span class="o">(</span><span class="n">vertexOf</span><span class="o">(</span><span class="n">method</span><span class="o">));</span>
+        <span class="n">getSignatureToVertex</span><span class="o">().</span><span class="na">remove</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This code illustrates how to wrap the existing <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> class in order to access the protected <code class="language-plaintext highlighter-rouge">getGraph()</code> method. This method provides access to the underlining JGraphT graph and is used to remove edges and nodes from an existing graph. This functionality is currently missing from SootUp. A complete version of this <code class="language-plaintext highlighter-rouge">CallGraphWrapper</code> class can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">16</a></sup></p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">sootup.callgraph</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.LinkedHashSet</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Set</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.annotation.Nonnull</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.jgrapht.graph.DefaultDirectedGraph</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">sootup.callgraph.filter.CallGraphFilter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">sootup.core.signatures.MethodSignature</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">sootup.core.typehierarchy.AuxViewTypeHierarchy</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">sootup.core.views.View</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CallGraphWrapper</span> <span class="kd">extends</span> <span class="nc">GraphBasedCallGraph</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">GraphBasedCallGraph</span> <span class="n">cg</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">CallGraphWrapper</span><span class="o">(</span><span class="nc">GraphBasedCallGraph</span> <span class="n">cg</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">cg</span> <span class="o">=</span> <span class="n">cg</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMethod</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">calledMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">cg</span><span class="o">.</span><span class="na">addMethod</span><span class="o">(</span><span class="n">calledMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addCall</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">sourceMethod</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">targetMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">cg</span><span class="o">.</span><span class="na">addCall</span><span class="o">(</span><span class="n">sourceMethod</span><span class="o">,</span> <span class="n">targetMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">&gt;</span> <span class="nf">getMethodSignatures</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">getMethodSignatures</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">&gt;</span> <span class="nf">callsFrom</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">sourceMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">callsFrom</span><span class="o">(</span><span class="n">sourceMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">&gt;</span> <span class="nf">callsTo</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">targetMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">callsTo</span><span class="o">(</span><span class="n">targetMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsMethod</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">containsMethod</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">containsCall</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">sourceMethod</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">targetMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">containsCall</span><span class="o">(</span><span class="n">sourceMethod</span><span class="o">,</span> <span class="n">targetMethod</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">callCount</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">callCount</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">exportAsDot</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">exportAsDot</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">MutableCallGraph</span> <span class="nf">copy</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">CallGraphWrapper</span><span class="o">((</span><span class="nc">GraphBasedCallGraph</span><span class="o">)</span><span class="n">cg</span><span class="o">.</span><span class="na">copy</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Vertex</span> <span class="nf">vertexOf</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">vertexOf</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">DefaultDirectedGraph</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">Edge</span><span class="o">&gt;</span> <span class="nf">getGraph</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">getGraph</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">,</span> <span class="nc">Vertex</span><span class="o">&gt;</span> <span class="nf">getSignatureToVertex</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">getSignatureToVertex</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">MethodSignature</span> <span class="nf">vertex2MethodSignature</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">Vertex</span> <span class="n">vertex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">vertex2MethodSignature</span><span class="o">(</span><span class="n">vertex</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">cg</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeCall</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">sourceMethod</span><span class="o">,</span> <span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">targetMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getGraph</span><span class="o">().</span><span class="na">removeEdge</span><span class="o">(</span><span class="n">vertexOf</span><span class="o">(</span><span class="n">sourceMethod</span><span class="o">),</span> <span class="n">vertexOf</span><span class="o">(</span><span class="n">targetMethod</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeMethod</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">calls</span><span class="o">(</span><span class="n">method</span><span class="o">).</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">removeMethodForce</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// will remove all edges associated with vertex as well</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeMethodForce</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getGraph</span><span class="o">().</span><span class="na">removeVertex</span><span class="o">(</span><span class="n">vertexOf</span><span class="o">(</span><span class="n">method</span><span class="o">));</span>
+        <span class="n">getSignatureToVertex</span><span class="o">().</span><span class="na">remove</span><span class="o">(</span><span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nonnull</span>
+    <span class="kd">public</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">&gt;</span> <span class="nf">calls</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">MethodSignature</span> <span class="n">method</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodSignature</span><span class="o">&gt;</span> <span class="n">ret</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashSet</span><span class="o">&lt;&gt;();</span>
+        <span class="n">ret</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">callsFrom</span><span class="o">(</span><span class="n">method</span><span class="o">));</span>
+        <span class="n">ret</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">callsTo</span><span class="o">(</span><span class="n">method</span><span class="o">));</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">applyFilter</span><span class="o">(</span><span class="nc">CallGraphFilter</span> <span class="n">cgFilter</span><span class="o">,</span> <span class="nc">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">AuxViewTypeHierarchy</span> <span class="n">typeHierarchy</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AuxViewTypeHierarchy</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+        <span class="k">for</span><span class="o">(</span><span class="nc">MethodSignature</span> <span class="n">source</span> <span class="o">:</span> <span class="n">getMethodSignatures</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">for</span><span class="o">(</span><span class="nc">MethodSignature</span> <span class="n">dest</span> <span class="o">:</span> <span class="n">callsFrom</span><span class="o">(</span><span class="n">source</span><span class="o">))</span> <span class="o">{</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">cgFilter</span><span class="o">.</span><span class="na">deniedEdge</span><span class="o">(</span><span class="n">source</span><span class="o">,</span> <span class="n">dest</span><span class="o">,</span> <span class="n">typeHierarchy</span><span class="o">))</span> <span class="o">{</span>
+                    <span class="n">removeCall</span><span class="o">(</span><span class="n">source</span><span class="o">,</span> <span class="n">dest</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>In addition to the changes mentioned above, it should also be noted that SootUp call graphs do not differentiate between two calls to the same method from within the same originating method. That is if a method calls the same method twice, only one edge is created in the graphs SootUp produces. As such, information about the call sites in a method are also lost in SootUp’s call graphs. On the other hand, Soot creates a new edge for every call statement in a method. This is functionality that can and likely will be added in future updates to SootUp as it is necessary for more precise call graph building.</p>
+
+<h3 id="graph-generation-algorithms">Graph Generation Algorithms</h3>
+
+<p>SootUp currently provides two call graph construction algorithms: Class Hierarchy Analysis (CHA) and Rapid Type Analysis (RTA).<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">17</a></sup> CHA constructs a call graph using Java’s type hierarchy when resolving a method call. It considers all parent/child and interface classes available in the <code class="language-plaintext highlighter-rouge">View</code> when determining the method call resolution target. This is the most sound call graph construction algorithm in SootUp, but it can be imprecise. RTA improves the precision of CHA by considering only instantiated implementers/extenders of a class/interface when resolving a method call. However, RTA assumes the entry point for the call graph is a program’s main method. Indeed, the soundness of RTA’s call graph can be affected if classes are not instantiated somewhere within the call flows of the provided entry point. As such, when analyzing a entry point of a service with multiple entry points (e.g. APIs), or those without them (e.g. libraries), where some instantiation occurs outside a single entry point’s flow, additional code is required when using RTA to ensure its call graph remains sound.</p>
+
+<p>Soot provides implementations of both CHA and RTA as well as a significantly more precise call graph algorithm using points-to analysis known as SPARK.<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">18</a></sup> Points-to analysis improves on RTA by only considering the class/interface types a variable can point to according to how the variable is defined and set. It is worth noting that SPARK is both flow and context insensitive; it does not differentiate between control flows and call state. SPARK has much of the same additional code requirements for services with multiple or no entry points as RTA. SootUp does not currently contain a equivalent points-to call graph generation algorithm. However, the most recent developer builds<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">19</a></sup> have introduced support for building call graphs using Qilin.<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">20</a></sup> Qilin is a Java points-to analysis framework for supporting context-sensitivity. This suggests SootUp will soon fully support a more precise points-to call graph generation algorithm than SPARK.</p>
+
+<h3 id="removing-edges-from-graphs">Removing Edges From Graphs</h3>
+
+<p>As alluded to in the above <code class="language-plaintext highlighter-rouge">CallGraphWrapper</code> <a href="#wrapper" class="page-link">code snippet</a>, one of the limitations of SootUp’s current call graph data structure is the inability to remove edges and nodes without additional implementation. The <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> class wraps the underlining JGraphT graph in order to provide additional functionality. <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> also implements the interface <code class="language-plaintext highlighter-rouge">MutableCallGraph</code>, which suggests that SootUp’s graphs should be modifiable. Unfortunately, the interface currently only requires the implementation of methods to add nodes and edges, not remove them. Luckily, as illustrated in the <code class="language-plaintext highlighter-rouge">CallGraphWrapper</code> class, adding the ability to remove edges and nodes currently only requires a little additional work. Additionally, it should be fairly simple to add this functionality to SootUp out of the box in future updates.</p>
+
+<h3 id="filtering-call-graphs">Filtering Call Graphs</h3>
+
+<p>A common requirement when constructing call graphs is the ability to filter out certain classes and packages from the call graph that are known not to be important for analysis purposes. Unfortunately, Soot and SootUp are both limited in the call graph filtering capabilities they provide out of the box. However, SootUp provides even fewer capabilities than Soot. Soot provides limited filtering capabilities by supporting the inclusion and exclusion of packages.<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">21</a></sup> Additionally, entire JARs, folders, and class files can be set as library classes<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">22</a></sup> when loaded to prevent call graph edges from being generated for the contained methods. On the other hand, SootUp only provides the ability to set JARs, folders, and class files as library classes when loaded,<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">23</a></sup><sup id="fnref:12" role="doc-noteref"><a href="#fn:12" class="footnote" rel="footnote">24</a></sup> and does not otherwise provide the ability to filter classes further.</p>
+
+<p>Fortunately, in SootUp, it is fairly easy to implement a custom call graph filter. The ServiceNow SecurityResearch GitHub repo provides an implementation of an example <code class="language-plaintext highlighter-rouge">CallGraphFilter</code><sup id="fnref:13" role="doc-noteref"><a href="#fn:13" class="footnote" rel="footnote">25</a></sup> that can be applied to SootUp call graphs using the <code class="language-plaintext highlighter-rouge">CallGraphWrapper</code> <a href="#wrapper" class="page-link">class</a> referenced above. When the <code class="language-plaintext highlighter-rouge">CallGraphFilter</code> is applied to a call graph, it removes the outgoing edges of methods that match entries in the filter. The <code class="language-plaintext highlighter-rouge">CallGraphFilter</code> currently provides the ability to match all methods in packages and classes by class name based on a provided regular expression pattern. Additionally, it is able to match methods in classes that implement interfaces or extend other classes based on the type hierarchy information SootUp generates. It can also be easily extended to provide additional entry types. <code class="language-plaintext highlighter-rouge">CallGraphFilter</code> effectively functions as a allow/deny list where the first match in the list, if any, determines the fate of the outgoing edges of a method for some call graph. If no match occurs, it applies the specified default policy.</p>
+
+<p><code class="language-plaintext highlighter-rouge">CallGraphFilter</code> does not itself provide the capability to read its structure directly from a file. However, the ServiceNow SecurityResearch GitHub repo provides a sample implementation for using yaml files.<sup id="fnref:14" role="doc-noteref"><a href="#fn:14" class="footnote" rel="footnote">26</a></sup> More information on this can be found in the readme file.<sup id="fnref:15" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">27</a></sup> Below is an example of how a <code class="language-plaintext highlighter-rouge">CallGraphFilter</code> might be specified via a yaml file.</p>
+
+<p class="figure-title"><strong>Example Yaml Config For The <code class="language-plaintext highlighter-rouge">CallGraphFilter</code></strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">filter_default_policy</span><span class="pi">:</span> <span class="s">deny</span>
+<span class="na">filter</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">class_path</span>
+    <span class="na">pattern</span><span class="pi">:</span> <span class="s1">'</span><span class="s">com\.snc\.secres\.sample.*'</span>
+    <span class="na">policy</span><span class="pi">:</span> <span class="s">allow</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This filter limits the call graph to only those classes/methods defined in packages matching <code class="language-plaintext highlighter-rouge">com\.snc\.secres\.sample.*</code>. In other words, all methods not in the package are treated as end nodes in the call graph. Note: The <code class="language-plaintext highlighter-rouge">policy</code> field of the entry denotes wether this entry should allow the classes specified in the call graph or deny them. The default policy of the call graph filter is specified by <code class="language-plaintext highlighter-rouge">filter_default_policy</code>.</p>
+
+<h2 id="api-changes-and-documentation">API Changes and Documentation</h2>
+
+<p>While SootUp’s documentation on how to use it and its API is significantly better that what Soot provides, it could still be improved. SootUp provides an easily consumable website<sup id="fnref:28" role="doc-noteref"><a href="#fn:28" class="footnote" rel="footnote">28</a></sup> with design overview, explanations, basic examples, and the Javadoc for its API. This is a significant improvement over Soot, which only provides an outdated wiki, information on CLI options, and almost no documentation on its API. Soot often requires a developer to look directly at its source code to determine available methods and features. However, the information provided on the SootUp website is in no way exhaustive. Much of SootUp’s API is still undocumented or has limited documentation. As such, a exploration of the source code is still required to understand many of the methods available. This is likely because SootUp’s API is still in flux. Indeed, moving from SootUp version 1.2.0 to 1.3.0 required some minor code changes as a result of changes to the API. Hopefully, future releases of SootUp will provide more in-depth documentation or at the very least a more complete Javadoc.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>From this comparison, it is clear SootUp is still a work in progress. It contains many of the core capabilities of Soot, but some can be buggy or provide a subset of the features that Soot offers. Additionally, while not debilitating, the API changes between versions were significant enough to require some code adjustmentss. However, the improvements in performance, overall design, and usability all make the switch to using SootUp over Soot worth the effort. So long as it is possible to solve any errors encountered and work around missing features or limitations in the API, SootUp is a better option for new Java static analysis efforts going forward.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/Soot">https://github.com/soot-oss/Soot</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp">https://github.com/soot-oss/SootUp</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:2:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a></p>
+    </li>
+    <li id="fn:27" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/latest/whatsnew/">https://soot-oss.github.io/SootUp/latest/whatsnew/</a> <a href="#fnref:27" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:26" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/latest/analysisinput/">https://soot-oss.github.io/SootUp/latest/analysisinput/</a> <a href="#fnref:26" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:19" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/views/View.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/views/View.java</a> <a href="#fnref:19" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:19:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:18" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/inputlocation/AnalysisInputLocation.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/inputlocation/AnalysisInputLocation.java</a> <a href="#fnref:18" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:18:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:25" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/passive/SootTools.java">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/passive/SootTools.java</a> <a href="#fnref:25" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:25:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:16" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp-Examples/blob/af4e7eccfea5604696ec304a87d66337d82a480e/MutatingSootClassExample/src/main/java/sootup/examples/MutatingSootClass.java">https://github.com/soot-oss/SootUp-Examples/blob/af4e7eccfea5604696ec304a87d66337d82a480e/MutatingSootClassExample/src/main/java/sootup/examples/MutatingSootClass.java</a> <a href="#fnref:16" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:17" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/latest/whatsnew/">https://soot-oss.github.io/SootUp/latest/whatsnew/</a> <a href="#fnref:17" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:20" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/views/MutableView.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/views/MutableView.java</a> <a href="#fnref:20" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:21" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.java.core/src/main/java/sootup/java/core/views/MutableJavaView.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.java.core/src/main/java/sootup/java/core/views/MutableJavaView.java</a> <a href="#fnref:21" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:22" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/model/SootClass.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/model/SootClass.java</a> <a href="#fnref:22" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:23" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/frontend/SootClassSource.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/frontend/SootClassSource.java</a> <a href="#fnref:23" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:24" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/blob/main/rhino-tracker/tool/src/main/java/sootup/core/inputlocation/InMemoryJavaAnalysisInputLocation.java">https://github.com/ServiceNow/SecurityResearch/blob/main/rhino-tracker/tool/src/main/java/sootup/core/inputlocation/InMemoryJavaAnalysisInputLocation.java</a> <a href="#fnref:24" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://jgrapht.org/">https://jgrapht.org/</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/v1.3.0/callgraphs/">https://soot-oss.github.io/SootUp/v1.3.0/callgraphs/</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p><a href="https://www.sable.mcgill.ca/soot/tutorial/phase/phase.html#SECTION00060000000000000000">https://www.sable.mcgill.ca/soot/tutorial/phase/phase.html#SECTION00060000000000000000</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/develop/callgraphs/">https://soot-oss.github.io/SootUp/develop/callgraphs/</a> <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p><a href="https://github.com/QilinPTA/Qilin">https://github.com/QilinPTA/Qilin</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p><a href="https://www.sable.mcgill.ca/soot/tutorial/usage/#SECTION00045000000000000000">https://www.sable.mcgill.ca/soot/tutorial/usage/#SECTION00045000000000000000</a> <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p><a href="https://www.sable.mcgill.ca/soot/tutorial/usage/#SECTION00030000000000000000">https://www.sable.mcgill.ca/soot/tutorial/usage/#SECTION00030000000000000000</a> <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/model/SourceType.java">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.core/src/main/java/sootup/core/model/SourceType.java</a> <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:12" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.java.bytecode/src/main/java/sootup/java/bytecode/inputlocation/JavaClassPathAnalysisInputLocation.java#L76">https://github.com/soot-oss/SootUp/blob/af4e7eccfea5604696ec304a87d66337d82a480e/sootup.java.bytecode/src/main/java/sootup/java/bytecode/inputlocation/JavaClassPathAnalysisInputLocation.java#L76</a> <a href="#fnref:12" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:13" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/sootup/callgraph/filter">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/sootup/callgraph/filter</a> <a href="#fnref:13" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:14" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/passive/Analysis.java#L171">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/passive/Analysis.java#L171</a> <a href="#fnref:14" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:15" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/Readme.md">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/Readme.md</a> <a href="#fnref:15" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:28" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/latest/">https://soot-oss.github.io/SootUp/latest/</a> <a href="#fnref:28" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style>
+  .page__footer {
+    background-color: rgb(255, 255, 255);
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  div#footer {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 0px;
+  }
+
+  .footer__inner-wrap {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-family: -apple-system, "system-ui", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1rem;
+    height: 137.328px;
+    justify-content: space-between;
+    line-height: 1.2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
+    padding-top: 20px;
+    text-size-adjust: 100%;
+  }
+
+  .col-12 {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: none;
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.5rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 400;
+    /* height: 864px; */
+    letter-spacing: normal;
+    line-height: 15px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 1700px;
+    min-height: 1px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    /* width: 1293px; */
+    -webkit-box-flex: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .row {
+    color: rgb(0, 0, 0);
+  }
+
+  .logo-tagline-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    /*margin-bottom: 12px;*/
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.8rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 500;
+  }
+
+  @media screen and (width < 725px) {
+    .logo-tagline-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  .logo-tagline-container img {
+    height: 1.2rem;
+    /*min-width: 8rem;*/
+    /*width: 118px;*/
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    /*margin-right: -1rem;
+    margin-left: -1rem;*/
+  }
+
+  .logo_site_title {
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-right: 4px;
+  }
+
+  .logo_site_tagline {
+    background-color: var(--brand-infinite-blue);
+    color: var(--brand-wasabi-green);
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-left: 10x;
+    padding-left: 10px;
+  }
+
+  /*no idea what this was intended for*/
+  /*links {
+    border: 1px solid #e1e1e1;
+    border-left: unset;
+    border-right: unset;
+    margin: 33px -15px 40px;
+    padding: 40px 0 0;
+  }*/
+
+  ul.footer-visible-links {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer__menu-item-link {
+    clear: unset;
+    float: unset;
+    margin-right: 24px;
+  }
+
+  .page__footer-nav {
+    font-size: 0.6rem;
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: regular;
+
+  }
+
+  .page__footer-copyright {
+    font-size: 0.6rem;
+  }
+
+  .footer-visible-links {
+    display: flex;
+    text-align: left;
+    font-size: 0.6rem;
+    align-items: left;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    /*justify-content: left;*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    /*flex: 1;*/
+    overflow: hidden;
+  }
+
+  .footer__menu-item a {
+    display: block;
+    list-style-type: none;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    /*margin-bottom: 20px;*/
+  }
+</style>
+
+
+<div id="footer-container">
+  <div class="footer__inner-wrap">
+    <div class="masthead__menu">
+      <div class="logo-tagline-container">
+        
+        <img src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+        
+        <span class="logo_site_title">Security Lab</span>
+        <span class="logo_site_tagline">Keeping your workflows secure.</span>
+      </div>
+      <nav id="footer-site-nav" class="page__footer-nav">
+        <ul class="footer-visible-links"><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/terms-of-use.html"  target="_blank">Terms and conditions</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/company/trust/privacy/gdpr.html"  target="_blank">GDPR</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/privacy-statement.html"  target="_blank">Privacy statement</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="/data-collection"  target="_blank">Data collection</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="mailto:securitylab@servicenow.com?subject=Security%20Lab%20Site%20Contact"  target="_blank">Contact Us</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://twitter.com/SNSecurityLab"  target="_blank">Twitter</a>
+          </li></ul>
+      </nav>
+      <div class="page__footer-copyright">&copy; 2024 ServiceNow, Inc. All
+        rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

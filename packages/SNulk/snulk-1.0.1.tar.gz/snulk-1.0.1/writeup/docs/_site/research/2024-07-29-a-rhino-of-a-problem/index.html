@@ -1,0 +1,1657 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code | Security Lab</title>
+<meta name="description" content="This blog post demonstrates Rhino Tracker, a solution for analyzing Rhino polyglot code.">
+
+
+  <meta name="author" content="Sigmund Gorski">
+  
+  <meta property="article:author" content="Sigmund Gorski">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Security Lab">
+<meta property="og:title" content="A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code">
+<meta property="og:url" content="http://localhost:8080/research/2024-07-29-a-rhino-of-a-problem/">
+
+
+  <meta property="og:description" content="This blog post demonstrates Rhino Tracker, a solution for analyzing Rhino polyglot code.">
+
+
+
+
+
+  <meta name="twitter:site" content="@SNSecurityLab">
+  <meta name="twitter:title" content="A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code">
+  <meta name="twitter:description" content="This blog post demonstrates Rhino Tracker, a solution for analyzing Rhino polyglot code.">
+  <meta name="twitter:url" content="http://localhost:8080/research/2024-07-29-a-rhino-of-a-problem/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-07-29T00:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:8080/research/2024-07-29-a-rhino-of-a-problem/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ServiceNow",
+      "url": "http://localhost:8080/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rouge.css">
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-semibold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-bold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/fira-mono-regular-latin.woff2" type="font/woff2" crossorigin="anonymous"/>
+
+<style>
+@font-face {
+  font-family: GilroyRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-regular-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-regular-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroySemiBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-semibold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-semibold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-bold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-bold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+</style>
+
+
+
+    <!-- start custom head snippets -->
+<script src="https://assets.adobedtm.com/a441b904b50e/99538f40e7c0/launch-3dcaf3475e9d.min.js" async></script>
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<style>
+  @media screen and (width >= 725px) {
+    .small-screen {
+      display: none;
+    }
+    .large-screen { }
+  }
+  @media screen and (width < 725px) {
+    .small-screen { }
+    .large-screen {
+      display: none;
+    }
+  }
+
+  a {
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .masthead__menu-item a {
+    font-size: 0.8rem;
+    margin: 0 0.25rem 0 0.25rem;
+  }
+
+  .masthead__menu-item_block a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 62, 64);
+    padding-bottom: 0.4rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    position: relative;
+  }
+
+  .site-brand {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*display: flex;*/
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 41px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-top: 0px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 5px;
+    padding-left: 9px;
+    padding-right: 0px;
+    padding-top: 5px;
+    text-align: left;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%;
+    text-wrap: nowrap;
+    touch-action: manipulation;
+    white-space-collapse: collapse;
+    width: auto;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .small-screen a.site-brand {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .logo {
+    border-right: 1px solid #000;
+    height: 1.5rem;
+    margin-right: 12px;
+    min-width: 8rem;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    /*width: 180px;*/
+  }
+
+  .masthead__site-title {
+    color: rgb(0, 0, 0);
+    /*font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  ul {
+    align-items: center;
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu large-screen">
+      <nav id="site-nav" class="greedy-nav large-screen">
+        <a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+      </nav>
+    </div>
+    <div class="masthead__menu small-screen">
+      <nav id="site-nav" class="greedy-nav small-screen">
+        <center><a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a></center>
+        <center>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <br>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+        </center>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #032D42; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code
+
+        
+      </h1>
+      
+      
+        <p class="byline">
+          July 29th, 2024 by Sigmund Gorski
+        </p>
+        
+      
+      
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          32 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:8080/" itemprop="item"><span itemprop="name" class="breadcrumb_item">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">></span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/research" itemprop="item"><span itemprop="name" class="breadcrumb_item">Research</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">></span>
+      
+    
+      
+      
+        <li class="current">[ A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code ]</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A Rhino of a Problem - Assembling Call Stacks for Rhino Polyglot Code">
+    <meta itemprop="description" content="This blog post demonstrates Rhino Tracker, a solution for analyzing Rhino polyglot code.">
+    <meta itemprop="datePublished" content="2024-07-29T00:00:00-07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#designing-rhino-tracker">Designing Rhino Tracker</a><ul><li><a href="#javascript-to-java-code-tracing---first-attempt">JavaScript to Java Code Tracing - First Attempt</a></li><li><a href="#javascript-to-java-code-tracing---instrumenting-rhino">JavaScript to Java Code Tracing - Instrumenting Rhino</a><ul><li><a href="#identifying-code-to-instrument">Identifying Code to Instrument</a></li><li><a href="#restricting-captured-java-methods">Restricting Captured Java Methods</a></li><li><a href="#preventing-security-managers-from-loading">Preventing Security Managers From Loading</a></li></ul></li><li><a href="#java-to-javascript-code-tracing">Java to JavaScript Code Tracing</a><ul><li><a href="#initializing-sootup">Initializing SootUp</a></li><li><a href="#constructing-a-call-graph">Constructing A Call Graph</a></li><li><a href="#limiting-call-graph-scope">Limiting Call Graph Scope</a></li><li><a href="#adding-runtime-data-to-call-graph">Adding Runtime Data To Call Graph</a></li></ul></li></ul></li><li><a href="#running-the-sample-code-through-rhino-tracker">Running The Sample Code Through Rhino Tracker</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+
+            </nav>
+            
+
+
+
+
+
+          </aside>
+        
+        <p>Complex systems involving polyglot programming introduce unique issues for security professionals because of the interactions between different languages. To better understand such a system and its security mechanisms, it is often required for security professionals to trace call flows through the language boundaries of polyglot code. Unfortunately, the language boundaries rarely involve a one-to-one mapping between the languages on either side, and often require some level of translation. This translation can complicate some of the simplest of manual call flow traces. However, it makes it even more difficult to develop reusable call flow tracing tools to aid security professionals.</p>
+
+<p>This post discusses one solution to this problem for Java-based systems that use the JavaScript interpreter Rhino<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> and demonstrates <em>Rhino Tracker</em>,<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> a proof-of-concept demonstrating this solution. The output of Rhino Tracker is a call graph that captures the call flows through the Rhino interpreter without the runtime complexities that the Rhino interpreter introduces. Effectively, Rhino Tracker bridges the call flows from Java to Javascript to Java, creating call graphs that can be used to develop further analysis tools.</p>
+
+<h2 id="designing-rhino-tracker">Designing Rhino Tracker</h2>
+
+<p>The problem of tracing call flows from Java to JavaScript to Java can be subdivided into two separate problems: 1) tracing code from JavaScript to Java and 2) tracing code from Java to JavaScript. Below is a discussion of these problems, how to solve them, and how to combine their output to obtain the desired call graph that eliminates the Rhino interpreter runtime complexities.</p>
+
+<h3 id="javascript-to-java-code-tracing---first-attempt">JavaScript to Java Code Tracing - First Attempt</h3>
+
+<p>To tackle the problem of tracing Java calls from JavaScript code through the Rhino interpreter, a first attempt was made making use of Rhino’s ability to compile JavaScript to Java class files. When generating a call graph for Java code, static analysis frameworks (e.g. SootUp<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>) can use a class file containing standard bytecode invocation statements of the Java methods in the JavaScript to replace calls to the Rhino interpreter. The class conversion functionality can be found in the <code class="language-plaintext highlighter-rouge">compileToClassFiles</code> method of the <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.optimizer.ClassCompiler</code> class of Rhino. An example of how to call this method can be found in the <code class="language-plaintext highlighter-rouge">stringToClassFile</code> method of the <code class="language-plaintext highlighter-rouge">com.snc.secres.tool.dynamic.Tools</code> class found in the Rhino Tracker source code.<sup id="fnref:18" role="doc-noteref"><a href="#fn:18" class="footnote" rel="footnote">4</a></sup></p>
+
+<p>Unfortunately, the class file <code class="language-plaintext highlighter-rouge">compileToClassFiles</code> produces is not particularly useful for our purposes. For example, take the sample JavaScript code found below that makes a number of calls to Java standard library methods.</p>
+
+<p class="figure-title"><a name="samplejs"></a><strong>Sample JavaScript</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="nx">java</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nx">LocalDateTime</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+<span class="nx">now</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="nx">now</span><span class="p">.</span><span class="nx">minusHours</span><span class="p">(</span><span class="mi">48</span><span class="p">);</span>
+<span class="nx">now</span><span class="p">.</span><span class="nx">getDayOfYear</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">then</span> <span class="o">=</span> <span class="nx">now</span><span class="p">.</span><span class="nx">minusDays</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">thenInstant</span> <span class="o">=</span> <span class="nx">then</span><span class="p">.</span><span class="nx">toInstant</span><span class="p">(</span><span class="nx">java</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nx">ZoneOffset</span><span class="p">.</span><span class="nx">UTC</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">thenDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">thenInstant</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">nowDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nb">Date</span><span class="p">();</span>
+<span class="nx">nowDate</span><span class="p">.</span><span class="nx">compareTo</span><span class="p">(</span><span class="nx">thenDate</span><span class="p">);</span>
+<span class="nx">thenDate</span><span class="p">.</span><span class="nx">compareTo</span><span class="p">(</span><span class="nx">nowDate</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p class="figure-caption">A simple bit of JavaScript that makes a number of different types of Java methods calls. The file can also be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:13" role="doc-noteref"><a href="#fn:13" class="footnote" rel="footnote">5</a></sup></p>
+
+<p>When this JavaScript is run through the <code class="language-plaintext highlighter-rouge">compileToClassFiles</code> method of Rhino and then decompiled into standard Java, the following code is produced.</p>
+
+<p class="figure-title"><a name="jscompiled"></a><strong>Decompiled Class File of JavaScript Compiled Using Rhino</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="nc">Object</span> <span class="nf">_c_script_0</span><span class="o">(</span><span class="n">test</span> <span class="n">testVar</span><span class="o">,</span> <span class="nc">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">global</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">scriptable</span><span class="o">,</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">objArr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">initScript</span><span class="o">(</span><span class="n">testVar</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+    <span class="nc">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="nc">Undefined</span><span class="o">.</span><span class="na">instance</span><span class="o">;</span>
+    <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"java"</span><span class="o">),</span> <span class="s">"time"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"LocalDateTime"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"now"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">);</span>
+    <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"toString"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+    <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"minusHours"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="n">_k0</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+    <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"getDayOfYear"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The decompiled class file of the sample JavaScript from above. The class file was compiled using Rhino. Notice how it is essentially a dump of Rhino’s AST, and it is only possible to determine the Java methods being invoked at runtime. The class file can also be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:14" role="doc-noteref"><a href="#fn:14" class="footnote" rel="footnote">6</a></sup></p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">sample</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.NativeFunction</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.Script</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.ScriptRuntime</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.Scriptable</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.Undefined</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.mozilla.javascript.optimizer.OptRuntime</span><span class="o">;</span>
+
+<span class="cm">/* loaded from: 2024-07-17_13-24-53__sample.test__.class */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">test</span> <span class="kd">extends</span> <span class="nc">NativeFunction</span> <span class="kd">implements</span> <span class="nc">Script</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">_id</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Integer</span> <span class="n">_k0</span> <span class="o">=</span> <span class="mi">48</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Integer</span> <span class="n">_k1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">strArr</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="k">new</span> <span class="n">test</span><span class="o">(),</span> <span class="n">strArr</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="nf">exec</span><span class="o">(</span><span class="nc">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">scriptable</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Object</span> <span class="n">call</span> <span class="o">=</span> <span class="n">call</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="n">context</span><span class="o">.</span><span class="na">processMicrotasks</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">call</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">final</span> <span class="nc">Object</span> <span class="nf">call</span><span class="o">(</span><span class="nc">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">scriptable</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">scriptable2</span><span class="o">,</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">objArr</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">!</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">hasTopCall</span><span class="o">(</span><span class="n">context</span><span class="o">)</span> <span class="o">?</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">doTopCall</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="n">scriptable2</span><span class="o">,</span> <span class="n">objArr</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span> <span class="o">:</span> <span class="n">_c_script_0</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="n">scriptable2</span><span class="o">,</span> <span class="n">objArr</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getLanguageVersion</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getFunctionName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getParamCount</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getParamAndVarCount</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">5</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getParamOrVarName</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="k">return</span> <span class="s">"then"</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="k">return</span> <span class="s">"thenInstant"</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                <span class="k">return</span> <span class="s">"thenDate"</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+                <span class="k">return</span> <span class="s">"nowDate"</span><span class="o">;</span>
+            <span class="k">default</span><span class="o">:</span>
+                <span class="k">return</span> <span class="s">"now"</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">getParamOrVarConst</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">default</span><span class="o">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">isGeneratorFunction</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasRestParameter</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Object</span> <span class="nf">_c_script_0</span><span class="o">(</span><span class="n">test</span> <span class="n">testVar</span><span class="o">,</span> <span class="nc">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">global</span><span class="o">,</span> <span class="nc">Scriptable</span> <span class="n">scriptable</span><span class="o">,</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">objArr</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">initScript</span><span class="o">(</span><span class="n">testVar</span><span class="o">,</span> <span class="n">scriptable</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+        <span class="nc">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="nc">Undefined</span><span class="o">.</span><span class="na">instance</span><span class="o">;</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"java"</span><span class="o">),</span> <span class="s">"time"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"LocalDateTime"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"now"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">);</span>
+        <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"toString"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+        <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"minusHours"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="n">_k0</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+        <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">callProp0</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"getDayOfYear"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"then"</span><span class="o">),</span> <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"now"</span><span class="o">),</span> <span class="s">"minusDays"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="n">_k1</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"then"</span><span class="o">);</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenInstant"</span><span class="o">),</span> <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"then"</span><span class="o">),</span> <span class="s">"toInstant"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"java"</span><span class="o">),</span> <span class="s">"time"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"ZoneOffset"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"UTC"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenInstant"</span><span class="o">);</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenDate"</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">newObject</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"java"</span><span class="o">),</span> <span class="s">"util"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"Date"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"from"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[]{</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenInstant"</span><span class="o">)}),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenDate"</span><span class="o">);</span>
+        <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"nowDate"</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">newObject</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getObjectProp</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"java"</span><span class="o">),</span> <span class="s">"util"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="s">"Date"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">emptyArgs</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"nowDate"</span><span class="o">);</span>
+        <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"nowDate"</span><span class="o">),</span> <span class="s">"compareTo"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenDate"</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+        <span class="k">return</span> <span class="nc">OptRuntime</span><span class="o">.</span><span class="na">call1</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">getPropFunctionAndThis</span><span class="o">(</span><span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"thenDate"</span><span class="o">),</span> <span class="s">"compareTo"</span><span class="o">,</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">lastStoredScriptable</span><span class="o">(</span><span class="n">context</span><span class="o">),</span> <span class="nc">ScriptRuntime</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">,</span> <span class="s">"nowDate"</span><span class="o">),</span> <span class="n">context</span><span class="o">,</span> <span class="n">global</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>The generated code is much more complex than expected, and does not directly contain invocations to any of the Java methods mentioned in the sample JavaScript code. Indeed, all Java method calls from JavaScript are wrapped in calls to the Rhino interpreter. The actual invocation target of these Java methods calls is not determined until evaluation at runtime. In fact, what the <code class="language-plaintext highlighter-rouge">compileToClassFiles</code> method actually does when producing a class file is simply dump the AST it generates of the JavaScript code, the same AST that would be used to run the JavaScript code at runtime. Unfortunately, this AST, and in turn the class file, determines the invocation target of method calls just before a method is invoked at runtime.</p>
+
+<p>As a result, the class files produced by Rhino cannot directly be used to solve the problem of tracing Java calls from JavaScript code through the Rhino interpreter. This is because static call graph generation algorithms (e.g. SootUp<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>) are not able to resolve runtime call stacks. These algorithms have a similar limitation for calls using the more well known Java reflection API. However, the class files do provide a concrete means to invoke the JavaScript code from Java. This allows for the capture of the Java methods being called from JavaScript at runtime.</p>
+
+<h3 id="javascript-to-java-code-tracing---instrumenting-rhino">JavaScript to Java Code Tracing - Instrumenting Rhino</h3>
+
+<p>Even though it is not possible to directly use the class files produced in the last section to construct a full call graph, it is possible to run the class files and capture the Java methods being invoked. These runtime method captures can then be used with static analysis tools (e.g. SootUp<sup id="fnref:3:2" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>) to construct a full call graph. While this call graph is not entirely generated through static analysis tooling, it still eliminates the Rhino interpreter runtime complexities while requiring minimal runtime analysis and overhead.</p>
+
+<p>To instrument Rhino at runtime and capture the Java methods called from JavaScript, Rhino Tracker uses a combination of Byte Buddy’s<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">7</a></sup> method interceptor APIs, Byte Buddy’s advice APIs, and Java reflection APIs. These are all combined together into a Java Agent that uses the <code class="language-plaintext highlighter-rouge">premain</code> entry method to initialize all instrumentation before the server runs.</p>
+
+<p class="figure-title"><strong>Java Agent Stub Making Use of Byte Buddy’s API</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">premain</span><span class="o">(</span><span class="nc">String</span> <span class="n">agentArgs</span><span class="o">,</span> <span class="nc">Instrumentation</span> <span class="n">inst</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">AgentBuilder</span> <span class="n">agentBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Default</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">StreamWriting</span><span class="o">(</span><span class="n">loggingPrintStream</span><span class="o">).</span><span class="na">withTransformationsOnly</span><span class="o">())</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">InstallationListener</span><span class="o">.</span><span class="na">StreamWriting</span><span class="o">(</span><span class="n">loggingPrintStream</span><span class="o">));</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Start of a example of a Java agent premain method that uses Byte Buddy’s API. The actual premain method for Rhino Tracker can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:15" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">8</a></sup></p>
+
+<p>The remaining subsections will contain discussions on how Rhino methods were identified as instrumentation targets, how to ensure the capture of only the methods invoked directly by the JavaScript being sampled, and how to disable the <code class="language-plaintext highlighter-rouge">SecurityManager</code> during the capture.</p>
+
+<h4 id="identifying-code-to-instrument">Identifying Code to Instrument</h4>
+
+<p>In order to identify the Java methods being called from JavaScript, it must first be known what areas of Rhino hold enough context to describe these Java methods. This was manually determined by making use of Byte Buddy’s Advice API to hook and dump stack traces from known Java methods called from JavaScript code. The code below provides an example on how to hook the <code class="language-plaintext highlighter-rouge">now</code> method of <code class="language-plaintext highlighter-rouge">LocalDateTime</code> and have it dump a stack trace once it is finished executing.</p>
+
+<p class="figure-title"><strong>Instrumenting <code class="language-plaintext highlighter-rouge">now</code> Method of <code class="language-plaintext highlighter-rouge">LocalDateTime</code> Using Advice API</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"java.time.LocalDateTime"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">...</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="nc">Advice</span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">WhoCalledMeAdvice</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">on</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"now"</span><span class="o">)));</span>
+        <span class="o">}</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This code adds the code from the <code class="language-plaintext highlighter-rouge">WhoCalledMeAdvice</code> class to the entry/exit points of the <code class="language-plaintext highlighter-rouge">java.time.LocalDateTime</code> <code class="language-plaintext highlighter-rouge">now</code> method. Note: To hook the constructors of classes using Byte Buddy, replace <code class="language-plaintext highlighter-rouge">ElementMatchers.named("now")</code> with <code class="language-plaintext highlighter-rouge">ElementMatchers.isConstructor()</code>. The methods selected for hooking by Byte Buddy can be changed by making use of other methods in the <code class="language-plaintext highlighter-rouge">ElementMatchers</code> class.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"java.time.LocalDateTime"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// This is needed because of a bug in bytebuddy</span>
+        <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unused"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+        <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="nf">transform</span><span class="o">(</span><span class="n">builder</span><span class="o">,</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="n">classLoader</span><span class="o">,</span> <span class="n">module</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="nc">Advice</span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">WhoCalledMeAdvice</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">on</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"now"</span><span class="o">)));</span>
+        <span class="o">}</span>
+    <span class="o">}).</span><span class="na">installOn</span><span class="o">(</span><span class="n">instrumentation</span><span class="o">);</span>
+</code></pre></div>  </div>
+</details>
+
+<p class="figure-title"><strong>Code Run Using Advice API on Exit of <code class="language-plaintext highlighter-rouge">now</code> Method of <code class="language-plaintext highlighter-rouge">LocalDateTime</code></strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhoCalledMeAdvice</span> <span class="o">{</span>
+    <span class="nd">@Advice</span><span class="o">.</span><span class="na">OnMethodExit</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">exit</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="nc">Exception</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RuntimeException</span><span class="o">(</span><span class="s">"Foo bar"</span><span class="o">);</span>
+        <span class="nc">StackTraceElement</span><span class="o">[]</span> <span class="n">elements</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">getStackTrace</span><span class="o">();</span>
+        <span class="nc">Logging</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">elements</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Code that is appended to the exit of the <code class="language-plaintext highlighter-rouge">now</code> method. The code dumps the current stack trace and makes no other modifications. To append code to the entry of the <code class="language-plaintext highlighter-rouge">now</code> method a separate method must be defined with the annotation <code class="language-plaintext highlighter-rouge">@Advice.OnMethodEnter</code>.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.snc.secres.tool.dynamic</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">net.bytebuddy.asm.Advice</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhoCalledMeAdvice</span> <span class="o">{</span>
+    <span class="nd">@Advice</span><span class="o">.</span><span class="na">OnMethodExit</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">exit</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="nc">Exception</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RuntimeException</span><span class="o">(</span><span class="s">"Foo bar"</span><span class="o">);</span>
+        <span class="nc">StackTraceElement</span><span class="o">[]</span> <span class="n">elements</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">getStackTrace</span><span class="o">();</span>
+        <span class="nc">Logging</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">elements</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>Using this technique on a number of different types of Java methods, it was clear from the stack traces that Rhino uses Java’s Reflection API to invoke Java methods from JavaScript. In fact, all calls using reflection take place in the methods of the <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.MemberBox</code> class. Unfortunately, while this class stores all the information needed to determine the Java methods being called, it does not contain any information about the JavaScript from which the calls originate. Such information is required to ensure the capture of only those methods invoked directly in the JavaScript being sampled. To obtain this information, Rhino Tracker hooks methods that are one or two steps back from the methods in <code class="language-plaintext highlighter-rouge">MemberBox</code> on the call stack. These methods contain both access to a <code class="language-plaintext highlighter-rouge">MemberBox</code> object describing the Java method that will be invoked and access to an object of the <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.Context</code> class that can be used to gain the origin information needed.</p>
+
+<p>The methods in Rhino we hook are the <code class="language-plaintext highlighter-rouge">call</code> methods of the <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.NativeJavaConstructor</code>, <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.FunctionObject</code>, and <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.NativeJavaMethod</code> classes, along with the <code class="language-plaintext highlighter-rouge">constructSpecific</code> method of the <code class="language-plaintext highlighter-rouge">org.mozilla.javascript.NativeJavaClass</code>. The code below illustrates how Rhino Tracker uses Byte Buddy’s Method Interceptor API to hook the <code class="language-plaintext highlighter-rouge">call</code> method of <code class="language-plaintext highlighter-rouge">FunctionObject</code> to record calls from JavaScript to Java. Further information on how these are implemented can be found in the <code class="language-plaintext highlighter-rouge">com.snc.secres.tool.dynamic.Agent</code> and <code class="language-plaintext highlighter-rouge">com.snc.secres.tool.dynamic.JavaMethodInterceptor</code> classes of Rhino Tracker’s source code.<sup id="fnref:15:1" role="doc-noteref"><a href="#fn:15" class="footnote" rel="footnote">8</a></sup><sup id="fnref:17" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">9</a></sup></p>
+
+<p class="figure-title"><strong>Instrumenting <code class="language-plaintext highlighter-rouge">call</code> Method of <code class="language-plaintext highlighter-rouge">FunctionObject</code> Using Method Interceptor API</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"org.mozilla.javascript.FunctionObject"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">...</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"call"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">takesArguments</span><span class="o">(</span><span class="mi">5</span><span class="o">)))</span>
+                        <span class="o">.</span><span class="na">intercept</span><span class="o">(</span><span class="nc">MethodDelegation</span><span class="o">.</span><span class="na">withDefaultConfiguration</span><span class="o">()</span>
+                            <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"interceptFunctionObject"</span><span class="o">))</span>
+                            <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">JavaMethodInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                        <span class="o">);</span>
+        <span class="o">}</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This code in the agent replaces calls to the <code class="language-plaintext highlighter-rouge">call</code> method in <code class="language-plaintext highlighter-rouge">FunctionObject</code> that takes exactly 5 arguments with the code in <code class="language-plaintext highlighter-rouge">interceptFunctionObject</code> of <code class="language-plaintext highlighter-rouge">JavaMethodInterceptor</code>.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"org.mozilla.javascript.FunctionObject"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// This is needed because of a bug in bytebuddy</span>
+        <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unused"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="nf">transform</span><span class="o">(</span><span class="n">builder</span><span class="o">,</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="n">classLoader</span><span class="o">,</span> <span class="n">module</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"call"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">takesArguments</span><span class="o">(</span><span class="mi">5</span><span class="o">)))</span>
+                        <span class="o">.</span><span class="na">intercept</span><span class="o">(</span><span class="nc">MethodDelegation</span><span class="o">.</span><span class="na">withDefaultConfiguration</span><span class="o">()</span>
+                            <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"interceptFunctionObject"</span><span class="o">))</span>
+                            <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">JavaMethodInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                        <span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}).</span><span class="na">installOn</span><span class="o">(</span><span class="n">instrumentation</span><span class="o">);</span>
+</code></pre></div>  </div>
+</details>
+
+<p class="figure-title"><a name="fointermeth"></a><strong>Code Run When The <code class="language-plaintext highlighter-rouge">call</code> Method Of <code class="language-plaintext highlighter-rouge">FunctionObject</code> Is Intercepted</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">Object</span> <span class="nf">interceptFunctionObject</span><span class="o">(</span><span class="nd">@AllArguments</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">allArguments</span><span class="o">,</span>
+                                <span class="nd">@SuperCall</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">callableMethod</span><span class="o">,</span> 
+                                <span class="nd">@This</span> <span class="nc">Object</span> <span class="n">thiz</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">testCaptureEnabled</span><span class="o">(</span><span class="n">allArguments</span><span class="o">[</span><span class="mi">0</span><span class="o">]))</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="nc">Field</span> <span class="n">f</span> <span class="o">=</span> <span class="n">thiz</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">"member"</span><span class="o">);</span>
+            <span class="n">f</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="nc">Object</span> <span class="n">ctor</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">thiz</span><span class="o">);</span> <span class="c1">//MemberBox</span>
+            <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Tools</span><span class="o">.</span><span class="na">memberBoxToString</span><span class="o">(</span><span class="n">ctor</span><span class="o">);</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The code that is run when <code class="language-plaintext highlighter-rouge">call</code> is intercepted. <code class="language-plaintext highlighter-rouge">allArguments[0]</code> is the <code class="language-plaintext highlighter-rouge">Context</code> object while the <code class="language-plaintext highlighter-rouge">member</code> field of <code class="language-plaintext highlighter-rouge">FunctionObject</code> is a <code class="language-plaintext highlighter-rouge">MemberBox</code> object. Data in the <code class="language-plaintext highlighter-rouge">Context</code> object is used to test/set/unset capturing, while data in the <code class="language-plaintext highlighter-rouge">MemberBox</code> object is converted to a string and written to a file. Regardless of what happens, the original code for the <code class="language-plaintext highlighter-rouge">call</code> method is always called. Note: Rhino Tracker uses reflection to make all references to Rhino code to avoid loading the Rhino library twice with different class loaders. Dual loading of the same library can cause conflicts at runtime.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">Object</span> <span class="nf">interceptFunctionObject</span><span class="o">(</span><span class="nd">@AllArguments</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">allArguments</span><span class="o">,</span>
+                                <span class="nd">@SuperCall</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">callableMethod</span><span class="o">,</span> 
+                                <span class="nd">@This</span> <span class="nc">Object</span> <span class="n">thiz</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">testCaptureEnabled</span><span class="o">(</span><span class="n">allArguments</span><span class="o">[</span><span class="mi">0</span><span class="o">]))</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="nc">Field</span> <span class="n">f</span> <span class="o">=</span> <span class="n">thiz</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">"member"</span><span class="o">);</span>
+            <span class="n">f</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="nc">Object</span> <span class="n">ctor</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">thiz</span><span class="o">);</span> <span class="c1">//MemberBox</span>
+            <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Tools</span><span class="o">.</span><span class="na">memberBoxToString</span><span class="o">(</span><span class="n">ctor</span><span class="o">);</span>
+            <span class="nc">JavaMethodInterceptor</span><span class="o">.</span><span class="na">writeToFile</span><span class="o">(</span><span class="n">result</span><span class="o">,</span> <span class="n">allArguments</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Throwable</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Logging</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">"Exception in FunctionObject intercept."</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="c1">// Prevent call tracing after a js -&gt; java call is made</span>
+        <span class="kt">boolean</span> <span class="n">preValue</span> <span class="o">=</span> <span class="n">setCapture</span><span class="o">(</span><span class="n">allArguments</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="kc">false</span><span class="o">);</span>
+        <span class="nc">Object</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">callableMethod</span><span class="o">.</span><span class="na">call</span><span class="o">();</span>
+        <span class="n">setCapture</span><span class="o">(</span><span class="n">allArguments</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">preValue</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">callableMethod</span><span class="o">.</span><span class="na">call</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<h4 id="restricting-captured-java-methods">Restricting Captured Java Methods</h4>
+
+<p>Without any restrictions, the methodology mentioned above would capture all Java methods called from the Rhino interpreter during the duration the agent is active. For multi-threaded systems where more than one JavaScript is being run simultaneously, this approach would capture Java methods not called from the sampled JavaScript. Additionally, if the Rhino interpreter were to be called to process JavaScript from a Java method in the original JavaScript, the Java methods in this secondary JavaScript would also be captured. To ensure the capture of only those Java methods invoked directly in the JavaScript being sampled, Rhino Tracker’s agent adds the field <code class="language-plaintext highlighter-rouge">_capture</code> to the <code class="language-plaintext highlighter-rouge">Context</code> class. The code below demonstrates how to add a field to an existing class using Byte Buddy and how to initialize it.</p>
+
+<p class="figure-title"><strong>Instrumenting <code class="language-plaintext highlighter-rouge">Context</code> To Add Fields</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"org.mozilla.javascript.Context"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+<span class="o">...</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Agent</span><span class="o">.</span><span class="na">getActiveAgent</span><span class="o">().</span><span class="na">orgClassLoader</span> <span class="o">=</span> <span class="n">classLoader</span><span class="o">;</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">defineField</span><span class="o">(</span><span class="s">"_capture"</span><span class="o">,</span> <span class="kt">boolean</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">);</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">defineField</span><span class="o">(</span><span class="s">"_capture_path"</span><span class="o">,</span> <span class="nc">Path</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">);</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="nc">Advice</span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">ContextAdvice</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">on</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">isConstructor</span><span class="o">()));</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">;</span>
+        <span class="o">}</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This code adds fields to the existing <code class="language-plaintext highlighter-rouge">Context</code> class of Rhino. This is done using the <code class="language-plaintext highlighter-rouge">defineField</code> method of Byte Buddy which takes in three arguments: field name, field type, and field modifiers. To initialize the newly added fields, the Advice API is used to append code to the end of the existing constructors. Note: If the added fields are static, the <code class="language-plaintext highlighter-rouge">value</code> method of Byte Buddy could be used instead to initialize the field.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agentBuilder</span>
+    <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"org.mozilla.javascript.Context"</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// This is needed because of a bug in bytebuddy</span>
+        <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unused"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="nf">transform</span><span class="o">(</span><span class="n">builder</span><span class="o">,</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="n">classLoader</span><span class="o">,</span> <span class="n">module</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Store the original class loader for use later</span>
+            <span class="nc">Agent</span><span class="o">.</span><span class="na">getActiveAgent</span><span class="o">().</span><span class="na">orgClassLoader</span> <span class="o">=</span> <span class="n">classLoader</span><span class="o">;</span>
+            <span class="c1">// Define the new field but can't use '.value' because field is not a static</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">defineField</span><span class="o">(</span><span class="s">"_capture"</span><span class="o">,</span> <span class="kt">boolean</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">);</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">defineField</span><span class="o">(</span><span class="s">"_capture_path"</span><span class="o">,</span> <span class="nc">Path</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">);</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">visit</span><span class="o">(</span><span class="nc">Advice</span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">ContextAdvice</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">on</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">isConstructor</span><span class="o">()));</span>
+            <span class="k">return</span> <span class="n">builder</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}).</span><span class="na">installOn</span><span class="o">(</span><span class="n">instrumentation</span><span class="o">);</span>
+</code></pre></div>  </div>
+</details>
+
+<p class="figure-title"><strong>Initializing New Fields In The <code class="language-plaintext highlighter-rouge">Context</code> Class</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextAdvice</span> <span class="o">{</span>
+    <span class="nd">@Advice</span><span class="o">.</span><span class="na">OnMethodExit</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">exit</span><span class="o">(</span><span class="nd">@Advice</span><span class="o">.</span><span class="na">FieldValue</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"_capture"</span><span class="o">,</span> <span class="n">readOnly</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span> <span class="kt">boolean</span> <span class="n">_capture</span><span class="o">,</span> 
+            <span class="nd">@Advice</span><span class="o">.</span><span class="na">FieldValue</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"_capture_path"</span><span class="o">,</span> <span class="n">readOnly</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span> <span class="nc">Path</span> <span class="n">_capture_path</span><span class="o">)</span> 
+            <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">_capture</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="n">_capture_path</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The code that is appended to the end of all <code class="language-plaintext highlighter-rouge">Context</code> constructors in order to initialize the new fields. The <code class="language-plaintext highlighter-rouge">@Advice.FieldValue</code> annotation directs Byte Buddy to assign method arguments as references to class fields. As such, any changes to the values of these arguments will be reflects in the associated fields.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.snc.secres.tool.dynamic</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">net.bytebuddy.asm.Advice</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContextAdvice</span> <span class="o">{</span>
+    <span class="nd">@Advice</span><span class="o">.</span><span class="na">OnMethodExit</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">exit</span><span class="o">(</span><span class="nd">@Advice</span><span class="o">.</span><span class="na">FieldValue</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"_capture"</span><span class="o">,</span> <span class="n">readOnly</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span> <span class="kt">boolean</span> <span class="n">_capture</span><span class="o">,</span> 
+            <span class="nd">@Advice</span><span class="o">.</span><span class="na">FieldValue</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"_capture_path"</span><span class="o">,</span> <span class="n">readOnly</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span> <span class="nc">Path</span> <span class="n">_capture_path</span><span class="o">)</span> 
+            <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">_capture</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="n">_capture_path</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>The added <code class="language-plaintext highlighter-rouge">_capture</code> field of the <code class="language-plaintext highlighter-rouge">Context</code> class is a boolean that indicates if the hooked Rhino methods when invoked should be capturing Java method calls. By default, this field is set to <code class="language-plaintext highlighter-rouge">false</code> to indicate that capturing should not take place. However, when sampling a piece of JavaScript, Rhino Tracker sets the field to <code class="language-plaintext highlighter-rouge">true</code> before running the script through the Rhino interpreter. As shown in the code for the <code class="language-plaintext highlighter-rouge">call</code> method of <code class="language-plaintext highlighter-rouge">FunctionObject</code> (<a href="#fointermeth" class="page-link">here</a>), all hooked methods of Rhino have access to the same <code class="language-plaintext highlighter-rouge">Context</code> object created when the script is invoked. As such, the method <code class="language-plaintext highlighter-rouge">testCaptureEnabled</code> can be used to determine if capturing is enabled by querying the <code class="language-plaintext highlighter-rouge">_capture</code> field. Additionally, the method <code class="language-plaintext highlighter-rouge">setCapture</code> can be used to disable the capture of Java methods just before the current Java method is invoked and restore the <code class="language-plaintext highlighter-rouge">_capture</code> field to its previous value after the current Java method is invoked. Such a setup prevents the capture of any Java methods except those directly invoked in the JavaScript. All methods referenced here can be found in <code class="language-plaintext highlighter-rouge">JavaMethodInterceptor</code> class of Rhino Tracker’s source code.<sup id="fnref:17:1" role="doc-noteref"><a href="#fn:17" class="footnote" rel="footnote">9</a></sup></p>
+
+<h4 id="preventing-security-managers-from-loading">Preventing Security Managers From Loading</h4>
+
+<p>Often in systems more complex than the sample server provided with Rhino Tracker, a Java <code class="language-plaintext highlighter-rouge">SecurityManager</code> class may be registered. Security managers can cause issues when reading/writing to files or other actions that do not fall into the realm of normal server behavior for an instrumentation target. To prevent interference from security managers, Rhino Tracker stops the registration of new security managers by instrumenting the <code class="language-plaintext highlighter-rouge">setSecurityManager</code> method of <code class="language-plaintext highlighter-rouge">java.lang.System</code> and replacing the entire method with a no-op.</p>
+
+<p>The process for instrumenting Java standard library methods is more complicated than other methods as these classes are loaded by the bootloader. This is especially true for <code class="language-plaintext highlighter-rouge">System</code> as it is always one of the first classes loaded. To instrument the <code class="language-plaintext highlighter-rouge">System</code> class, Rhino Tracker makes use of the Byte Buddy setup shown below.</p>
+
+<p class="figure-title"><strong>Instrumenting <code class="language-plaintext highlighter-rouge">System</code> To Prevent Security Manager Additions</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sackSecurityManager</span><span class="o">(</span><span class="nc">Instrumentation</span> <span class="n">instrumentation</span><span class="o">,</span> 
+        <span class="nc">PrintStream</span> <span class="n">loggingPrintStream</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">File</span> <span class="n">temp</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"tmp"</span><span class="o">).</span><span class="na">toFile</span><span class="o">();</span>
+    <span class="n">temp</span><span class="o">.</span><span class="na">deleteOnExit</span><span class="o">();</span>
+    <span class="nc">ClassInjector</span><span class="o">.</span><span class="na">UsingInstrumentation</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">temp</span><span class="o">,</span> <span class="nc">ClassInjector</span><span class="o">.</span><span class="na">UsingInstrumentation</span><span class="o">.</span><span class="na">Target</span><span class="o">.</span><span class="na">BOOTSTRAP</span><span class="o">,</span> 
+        <span class="n">instrumentation</span><span class="o">).</span><span class="na">inject</span><span class="o">(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">singletonMap</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nc">TypeDescription</span><span class="o">.</span><span class="na">ForLoadedType</span><span class="o">(</span><span class="nc">SecurityManagerInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">),</span> 
+            <span class="nc">ClassFileLocator</span><span class="o">.</span><span class="na">ForClassLoader</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="nc">SecurityManagerInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+        <span class="o">)</span>
+    <span class="o">);</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">To instrument a method in <code class="language-plaintext highlighter-rouge">System</code>, the following additions must be made: 1) The bootloader must be made aware of the code that will replace it. 2) Any classes already loaded (e.g. <code class="language-plaintext highlighter-rouge">System</code>) must be redefined in terms of the new class loader provided by Byte Buddy. 3) Byte Buddy must be told not to ignore classes in the standard Java library when determining instrumentation targets.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sackSecurityManager</span><span class="o">(</span><span class="nc">Instrumentation</span> <span class="n">instrumentation</span><span class="o">,</span> 
+        <span class="nc">PrintStream</span> <span class="n">loggingPrintStream</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="c1">// Ensure our MethodDelegation class is available to the bootstrap bootloader</span>
+    <span class="c1">// ClassInjector requires a directory when instrumenting but the code we are using is already</span>
+    <span class="c1">// available so just use a empty temp directory</span>
+    <span class="nc">File</span> <span class="n">temp</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"tmp"</span><span class="o">).</span><span class="na">toFile</span><span class="o">();</span>
+    <span class="n">temp</span><span class="o">.</span><span class="na">deleteOnExit</span><span class="o">();</span>
+    <span class="nc">ClassInjector</span><span class="o">.</span><span class="na">UsingInstrumentation</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">temp</span><span class="o">,</span> <span class="nc">ClassInjector</span><span class="o">.</span><span class="na">UsingInstrumentation</span><span class="o">.</span><span class="na">Target</span><span class="o">.</span><span class="na">BOOTSTRAP</span><span class="o">,</span> 
+        <span class="n">instrumentation</span><span class="o">).</span><span class="na">inject</span><span class="o">(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">singletonMap</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nc">TypeDescription</span><span class="o">.</span><span class="na">ForLoadedType</span><span class="o">(</span><span class="nc">SecurityManagerInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">),</span> 
+            <span class="nc">ClassFileLocator</span><span class="o">.</span><span class="na">ForClassLoader</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="nc">SecurityManagerInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+        <span class="o">)</span>
+    <span class="o">);</span>
+    <span class="c1">// Instrument the setSecurityManager method</span>
+    <span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Default</span><span class="o">()</span>
+        <span class="c1">// Add loggers so you can see failures with bytebuddy transforming</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Listener</span><span class="o">.</span><span class="na">StreamWriting</span><span class="o">(</span><span class="n">loggingPrintStream</span><span class="o">).</span><span class="na">withTransformationsOnly</span><span class="o">())</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">InstallationListener</span><span class="o">.</span><span class="na">StreamWriting</span><span class="o">(</span><span class="n">loggingPrintStream</span><span class="o">))</span>
+        <span class="c1">// Have to redefine the already loaded std Java lib classes</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">RedefinitionStrategy</span><span class="o">.</span><span class="na">RETRANSFORMATION</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">InitializationStrategy</span><span class="o">.</span><span class="na">NoOp</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">TypeStrategy</span><span class="o">.</span><span class="na">Default</span><span class="o">.</span><span class="na">REDEFINE</span><span class="o">)</span>
+        <span class="c1">// Needed to reset the default ignore which includes std Java libs</span>
+        <span class="o">.</span><span class="na">ignore</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">RawMatcher</span><span class="o">.</span><span class="na">ForElementMatchers</span><span class="o">(</span>
+                <span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">nameStartsWith</span><span class="o">(</span><span class="s">"net.bytebuddy."</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">or</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">isSynthetic</span><span class="o">()),</span> <span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">any</span><span class="o">(),</span> <span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">any</span><span class="o">()</span>
+            <span class="o">)</span>
+        <span class="o">)</span>
+        <span class="o">.</span><span class="na">type</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"java.lang.System"</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="k">new</span> <span class="nc">AgentBuilder</span><span class="o">.</span><span class="na">Transformer</span><span class="o">()</span> <span class="o">{</span>
+            <span class="c1">// This is needed because of a bug in bytebuddy</span>
+            <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unused"</span><span class="o">)</span>
+            <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                    <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="nf">transform</span><span class="o">(</span><span class="n">builder</span><span class="o">,</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="n">classLoader</span><span class="o">,</span> <span class="n">module</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">transform</span><span class="o">(</span><span class="nc">DynamicType</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;?&gt;</span> <span class="n">builder</span><span class="o">,</span> 
+                    <span class="nc">TypeDescription</span> <span class="n">typeDescription</span><span class="o">,</span> <span class="nc">ClassLoader</span> <span class="n">classLoader</span><span class="o">,</span> 
+                    <span class="nc">JavaModule</span> <span class="n">module</span><span class="o">,</span> <span class="nc">ProtectionDomain</span> <span class="n">protectionDomain</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="nc">ElementMatchers</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s">"setSecurityManager"</span><span class="o">))</span>
+                        <span class="o">.</span><span class="na">intercept</span><span class="o">(</span><span class="nc">MethodDelegation</span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="nc">SecurityManagerInterceptor</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+            <span class="o">}</span>
+        <span class="o">}).</span><span class="na">installOn</span><span class="o">(</span><span class="n">instrumentation</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<h3 id="java-to-javascript-code-tracing">Java to JavaScript Code Tracing</h3>
+
+<p>To acquire a call graph that allows for tracing call flows from a given entry point method in Java through the Rhino interpreter’s handling of some JavaScript, Rhino Tracker requires a view of the Java call flows that can be manipulated to substitute in the data gathered at runtime. To gain this functionality and generate the call graph, Rhino Tracker makes use of the static analysis framework SootUp.<sup id="fnref:3:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> SootUp is the new version of Soot.<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">10</a></sup> SootUp has much of the same functionality of Soot but has been rewritten to modernize and improve performance. It has a number of uses that aid in performing static analysis. These include manipulation of compiled or un-compiled Java code, code generation, CFG generation and manipulation, and call graph generation and manipulation.</p>
+
+<p>The remaining subsections discuss how to initialize SootUp from compiled Java code, how to use SootUp to construct a call graph, how to limit the scope of the call graph, and how to modify the call graph to add additional data (e.g. the runtime generated data from the previous section).</p>
+
+<h4 id="initializing-sootup">Initializing SootUp</h4>
+
+<p>To initialize and use SootUp, a <code class="language-plaintext highlighter-rouge">JavaView</code> must be created from the class path of the code that is to be analyzed. A <code class="language-plaintext highlighter-rouge">JavaView</code> is the container for the code being analyzed by SootUp. It is responsible for the loading of code and mapping code back to files. Essentially, all data in SootUp maps back to a <code class="language-plaintext highlighter-rouge">JavaView</code> in some way. A <code class="language-plaintext highlighter-rouge">JavaView</code> is created from a list of <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> classes, which are various ways of specifying where to find the code that is to be analyzed. It is possible, but not required, to specify a list of <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> objects when creating a <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code> object. A <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> processes the method bodies of classes when they are loaded by the <code class="language-plaintext highlighter-rouge">JavaView</code> and transforms the loaded code such as to improve performance, human readability, and analyzability. Additionally, it is possible to provide a <code class="language-plaintext highlighter-rouge">SourceType</code> when creating a <code class="language-plaintext highlighter-rouge">AnalysisInputLocation</code>. The available source types are <code class="language-plaintext highlighter-rouge">Application</code> and <code class="language-plaintext highlighter-rouge">Library</code> where the former’s code is traversed during call graph generation, while the latter’s code is not.</p>
+
+<p>The code below shows how a <code class="language-plaintext highlighter-rouge">JavaView</code> is created in Rhino Tracker. The <code class="language-plaintext highlighter-rouge">JavaView</code> created is actually a child type known as a <code class="language-plaintext highlighter-rouge">MutableJavaView</code>. A <code class="language-plaintext highlighter-rouge">MutableJavaView</code> allows for the addition of generated classes and methods to an already existent <code class="language-plaintext highlighter-rouge">JavaView</code>.</p>
+
+<p class="figure-title"><strong>Creating a JavaView in SootUp</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">MutableJavaView</span> <span class="nf">makeJavaView</span><span class="o">(</span><span class="nc">String</span> <span class="n">classPath</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">Aggregator</span><span class="o">(),</span>
+<span class="o">...</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">AnalysisInputLocation</span><span class="o">&gt;</span> <span class="n">inputLocations</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">inputLocations</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">JavaClassPathAnalysisInputLocation</span><span class="o">(</span><span class="n">classPath</span><span class="o">,</span> <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">,</span> 
+            <span class="n">bodyInterceptors</span><span class="o">));</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MutableJavaView</span><span class="o">(</span><span class="n">inputLocations</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Code that creates a <code class="language-plaintext highlighter-rouge">MutableJavaView</code> from a given class path. It uses a custom list of <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> objects to avoid unstable ones in the default list. However, a predefined list of <code class="language-plaintext highlighter-rouge">BodyInterceptor</code> classes can be found at <code class="language-plaintext highlighter-rouge">BytecodeBodyInterceptors.Default.getBodyInterceptors()</code>.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">MutableJavaView</span> <span class="nf">makeJavaView</span><span class="o">(</span><span class="nc">String</span> <span class="n">classPath</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// This list was constructed and organized by combining the original soot with SootUp</span>
+    <span class="c1">//A default list can be found here BytecodeBodyInterceptors.Default.getBodyInterceptors()</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BodyInterceptor</span><span class="o">&gt;</span> <span class="n">bodyInterceptors</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">Aggregator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">EmptySwitchEliminator</span><span class="o">(),</span> 
+            <span class="k">new</span> <span class="nf">CastAndReturnInliner</span><span class="o">(),</span> 
+            <span class="k">new</span> <span class="nf">ConstantPropagatorAndFolder</span><span class="o">(),</span> 
+            <span class="k">new</span> <span class="nf">UnusedLocalEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">LocalNameStandardizer</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">CopyPropagator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">UnusedLocalEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">LocalPacker</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">NopEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">UnreachableCodeEliminator</span><span class="o">(),</span>
+            <span class="k">new</span> <span class="nf">LocalNameStandardizer</span><span class="o">())</span>
+    <span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">AnalysisInputLocation</span><span class="o">&gt;</span> <span class="n">inputLocations</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">inputLocations</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">JavaClassPathAnalysisInputLocation</span><span class="o">(</span><span class="n">classPath</span><span class="o">,</span> <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">,</span> 
+            <span class="n">bodyInterceptors</span><span class="o">));</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MutableJavaView</span><span class="o">(</span><span class="n">inputLocations</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<h4 id="constructing-a-call-graph">Constructing A Call Graph</h4>
+
+<p>Once a <code class="language-plaintext highlighter-rouge">JavaView</code> is obtained, it is possible to construct a call graph. Constructing a call graph in SootUp requires two additional inputs, a call graph building algorithm and an entry point method. SootUp currently supports two types of call graph algorithms, Class Hierarchy Analysis (CHA) and Rapid Type Analysis (RTA). Both are similar in that they rely on the class hierarchy to resolve interface and super class method calls. However, RTA sacrifices some completeness for precision by only considering instantiated implementers of interfaces and super classes when resolving method calls. As such, RTA must be supplied with a entry point method that leads to the instantiation of all classes being analyzed. Typically this method is the main method of a Java application but any method may be given. CHA has no limitations on the entry point it is supplied with, but will ultimately be much less precise than RTA.</p>
+
+<p>Rhino Tracker supports the use of both the CHA and RTA call graph algorithms. However, the use of RTA is the default. As shown in the sample code below, the construction of a call graph using either algorithm is similar. First, a <code class="language-plaintext highlighter-rouge">MethodSignature</code> of the entry point method must be obtained from the <code class="language-plaintext highlighter-rouge">JavaView</code>. These can be obtained in a number of ways but the easiest is by supplying a string representation and calling <code class="language-plaintext highlighter-rouge">view.getIdentifierFactory().parseMethodSignature(sig)</code>. Here <code class="language-plaintext highlighter-rouge">sig</code> is formatted as follows <code class="language-plaintext highlighter-rouge">&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;</code>. Next, a <code class="language-plaintext highlighter-rouge">CallGraphAlgorithm</code> must be created and the <code class="language-plaintext highlighter-rouge">initialize</code> method must be called and supplied the entry point method. At this point a <code class="language-plaintext highlighter-rouge">GraphBasedCallGraph</code> is created which represents the Java call graph of the given entry point. This call graph can then be manipulated further to remove unwanted edges. This will be discussed later.</p>
+
+<p class="figure-title"><a name="cgconst"></a><strong>Constructing A Call Graph Using SootUp</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MethodSignature</span> <span class="n">entryMethodSignature</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="na">getIdentifierFactory</span><span class="o">().</span><span class="na">parseMethodSignature</span><span class="o">(</span>
+    <span class="n">config</span><span class="o">.</span><span class="na">getEntryPointMethodSig</span><span class="o">()</span>
+<span class="o">);</span>
+<span class="nc">MethodSignature</span> <span class="n">mainMethodSignature</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="na">getIdentifierFactory</span><span class="o">().</span><span class="na">parseMethodSignature</span><span class="o">(</span>
+    <span class="n">config</span><span class="o">.</span><span class="na">getMainMethodSig</span><span class="o">()</span>
+<span class="o">);</span>
+<span class="nc">CallGraphAlgorithm</span> <span class="n">cga</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RapidTypeAnalysisAlgorithm</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+<span class="nc">CallGraphWrapper</span> <span class="n">callGraph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CallGraphWrapper</span><span class="o">(</span>
+    <span class="o">(</span><span class="nc">GraphBasedCallGraph</span><span class="o">)</span><span class="n">cga</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="n">mainMethodSignature</span><span class="o">))</span>
+<span class="o">);</span>
+<span class="n">callGraph</span><span class="o">.</span><span class="na">applyFilter</span><span class="o">(</span><span class="n">cgFilter</span><span class="o">,</span> <span class="n">view</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Code to create a call graph using either the RTA or CHA algorithms. Note: The entry method is the method used as an entry point for the analysis and may or may not be the entry point supplied to the call graph generation algorithm. Additionally, <code class="language-plaintext highlighter-rouge">CallGraphWrapper</code> and <code class="language-plaintext highlighter-rouge">applyFilter</code> are a custom class and method designed to allow manipulation of the call graph, a feature which SootUp does not support out of the box.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MethodSignature</span> <span class="n">mainMethodSignature</span><span class="o">;</span>
+<span class="nc">MethodSignature</span> <span class="n">entryMethodSignature</span><span class="o">;</span>
+<span class="nc">CallGraphAlgorithm</span> <span class="n">cga</span><span class="o">;</span>
+<span class="nc">CallGraphWrapper</span> <span class="n">callGraph</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getCallGraphAlgo</span><span class="o">().</span><span class="na">toLowerCase</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">"cha"</span><span class="o">:</span>
+        <span class="n">entryMethodSignature</span> <span class="o">=</span> <span class="n">parseMethodSignature</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">config</span><span class="o">.</span><span class="na">getEntryPointMethodSig</span><span class="o">(),</span> <span class="s">"entry point"</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">entryMethodSignature</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">mainMethodSignature</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">cga</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassHierarchyAnalysisAlgorithm</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+        <span class="n">callGraph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CallGraphWrapper</span><span class="o">((</span><span class="nc">GraphBasedCallGraph</span><span class="o">)</span><span class="n">cga</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="n">entryMethodSignature</span><span class="o">)));</span>
+        <span class="n">callGraph</span><span class="o">.</span><span class="na">applyFilter</span><span class="o">(</span><span class="n">cgFilter</span><span class="o">,</span> <span class="n">view</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="s">"rta"</span><span class="o">:</span>
+        <span class="n">entryMethodSignature</span> <span class="o">=</span> <span class="n">parseMethodSignature</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">config</span><span class="o">.</span><span class="na">getEntryPointMethodSig</span><span class="o">(),</span> <span class="s">"entry point"</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">entryMethodSignature</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">mainMethodSignature</span> <span class="o">=</span> <span class="n">parseMethodSignature</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">config</span><span class="o">.</span><span class="na">getMainMethodSig</span><span class="o">(),</span> <span class="s">"main"</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">mainMethodSignature</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">cga</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RapidTypeAnalysisAlgorithm</span><span class="o">(</span><span class="n">view</span><span class="o">);</span>
+        <span class="n">callGraph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CallGraphWrapper</span><span class="o">((</span><span class="nc">GraphBasedCallGraph</span><span class="o">)</span><span class="n">cga</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="n">mainMethodSignature</span><span class="o">)));</span>
+        <span class="n">callGraph</span><span class="o">.</span><span class="na">applyFilter</span><span class="o">(</span><span class="n">cgFilter</span><span class="o">,</span> <span class="n">view</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="no">CN</span> <span class="o">+</span> <span class="s">": Unsupported call graph algorithm given '"</span> <span class="o">+</span> <span class="n">config</span><span class="o">.</span><span class="na">getCallGraphAlgo</span><span class="o">()</span> <span class="o">+</span> <span class="s">"''."</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>While CHA appears to be more suited to constructing call graphs for APIs, for multi-entry programs, and other systems where a main method does not accurately capture call flow, RTA can be used. By creating a dummy main method that instantiates all classes used by a particular entry point, a sound and precise call graph can be constructed using RTA. The sample code provided with Rhino Tracker contains a <code class="language-plaintext highlighter-rouge">DummyMain</code> class<sup id="fnref:16" role="doc-noteref"><a href="#fn:16" class="footnote" rel="footnote">11</a></sup> that performs such an operation. However, it is not required that this dummy main method be created ahead of time and included with the code being analyzed by SootUp. SootUp can be used to generate such a method during the analysis process if desired.</p>
+
+<h4 id="limiting-call-graph-scope">Limiting Call Graph Scope</h4>
+
+<p>As it stands, the call graph may contain paths to segments of code that are unrelated to the analysis being performed. These paths could increase analysis time, result in noise in the output data, or increase the manual effort involved in the analysis. As such, reducing the scope of the call graph further may be desired. To do this, we created <code class="language-plaintext highlighter-rouge">CallGraphFilter</code>. <code class="language-plaintext highlighter-rouge">CallGraphFilter</code> allows a user to specify specific class methods whose outgoing edges are to be removed from the call graph. This effectively makes these methods end nodes in the graph. Its use can be seen in the call graph construction above (<a href="#cgconst" class="page-link">here</a>). For Rhino Tracker, the filter is defined in the yaml config file.</p>
+
+<p class="figure-title"><strong>Example Of A Call Graph Filter Definition</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">filter_default_policy</span><span class="pi">:</span> <span class="s">deny</span>
+<span class="na">filter</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">class_path</span>
+    <span class="na">pattern</span><span class="pi">:</span> <span class="s1">'</span><span class="s">com\.snc\.secres\.sample.*'</span>
+    <span class="na">policy</span><span class="pi">:</span> <span class="s">allow</span>
+</code></pre></div></div>
+
+<p class="figure-caption">This filter limits the call graph to only those classes/methods defined in the sample server code. In other words, all methods not in the package <code class="language-plaintext highlighter-rouge">com\.snc\.secres\.sample.*</code> are treated as end nodes. Note: The <code class="language-plaintext highlighter-rouge">policy</code> field of the entry denotes whether this entry should allow the classes specified in the call graph or deny them. The default policy of the call graph filter is specified by <code class="language-plaintext highlighter-rouge">filter_default_policy</code>.</p>
+
+<h4 id="adding-runtime-data-to-call-graph">Adding Runtime Data To Call Graph</h4>
+
+<p>Once a initial call graph has been generated, the runtime dump of the Java methods called from the sampled JavaScript can be added to it. To do this Rhino Tracker first iterates through the call graph to locate any calls to a given sink. The sink should be the point at which Rhino is called to evaluate the sampled JavaScript. For the sample code, the sink was defined as <code class="language-plaintext highlighter-rouge">&lt;org.mozilla.javascript.Context: java.lang.Object evaluateString(org.mozilla.javascript.Scriptable, java.lang.String, java.lang.String, int, java.lang.Object)&gt;</code>, but this can be changed based on the system being analyzed. Next, SootUp is used to generate a class with a single empty method. The empty method is used as a wrapper in the call graph for the Java method calls recorded at runtime from the sampled Java script. The code used to generate the class with an empty method is shown below.</p>
+
+<p class="figure-title"><strong>Generating A Empty Method And Class Using SootUp</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">JavaSootClass</span> <span class="nf">makeClassWithEmptyMethod</span><span class="o">(</span><span class="nc">MutableJavaView</span> <span class="n">view</span><span class="o">,</span> <span class="nc">String</span> <span class="n">fullClassName</span><span class="o">,</span> 
+        <span class="nc">String</span> <span class="n">methodName</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">JavaClassType</span> <span class="n">classType</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="na">getIdentifierFactory</span><span class="o">().</span><span class="na">getClassType</span><span class="o">(</span><span class="n">fullClassName</span><span class="o">);</span>
+    <span class="nc">JavaSootMethod</span> <span class="n">method</span> <span class="o">=</span> <span class="n">makeEmptyMethod</span><span class="o">(</span><span class="n">classType</span><span class="o">,</span> <span class="n">methodName</span><span class="o">);</span>
+    <span class="nc">InMemoryJavaAnalysisInputLocation</span> <span class="n">memInputLocation</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InMemoryJavaAnalysisInputLocation</span><span class="o">(</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p class="figure-caption">Code that shows how to generate an empty method and class using SootUp. As shown, SootUp uses a builder structure for the majority of this construction. It should be noted that SootUp does not currently contain a means to define in-memory source locations (i.e. sources for classes without files). To add this functionality, we created the <code class="language-plaintext highlighter-rouge">InMemoryJavaAnalysisInputLocation</code> class.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">JavaSootClass</span> <span class="nf">makeClassWithEmptyMethod</span><span class="o">(</span><span class="nc">MutableJavaView</span> <span class="n">view</span><span class="o">,</span> <span class="nc">String</span> <span class="n">fullClassName</span><span class="o">,</span> <span class="nc">String</span> <span class="n">methodName</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">JavaClassType</span> <span class="n">classType</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="na">getIdentifierFactory</span><span class="o">().</span><span class="na">getClassType</span><span class="o">(</span><span class="n">fullClassName</span><span class="o">);</span>
+    <span class="nc">JavaSootMethod</span> <span class="n">method</span> <span class="o">=</span> <span class="n">makeEmptyMethod</span><span class="o">(</span><span class="n">classType</span><span class="o">,</span> <span class="n">methodName</span><span class="o">);</span>
+    <span class="nc">InMemoryJavaAnalysisInputLocation</span> <span class="n">memInputLocation</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InMemoryJavaAnalysisInputLocation</span><span class="o">(</span>
+        <span class="n">classType</span><span class="o">,</span> 
+        <span class="n">view</span><span class="o">.</span><span class="na">getIdentifierFactory</span><span class="o">().</span><span class="na">getClassType</span><span class="o">(</span><span class="s">"java.lang.Object"</span><span class="o">),</span>
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptySet</span><span class="o">(),</span>
+        <span class="kc">null</span><span class="o">,</span>
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptySet</span><span class="o">(),</span>
+        <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">method</span><span class="o">)),</span>
+        <span class="nc">NoPositionInformation</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(),</span>
+        <span class="nc">EnumSet</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">ClassModifier</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">,</span> <span class="nc">ClassModifier</span><span class="o">.</span><span class="na">FINAL</span><span class="o">),</span>
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptySet</span><span class="o">(),</span>
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptySet</span><span class="o">(),</span>
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptySet</span><span class="o">(),</span>
+        <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">,</span> 
+        <span class="nc">Collections</span><span class="o">.</span><span class="na">emptyList</span><span class="o">()</span>
+    <span class="o">);</span>
+    <span class="nc">OverridingJavaClassSource</span> <span class="n">source</span> <span class="o">=</span> <span class="n">memInputLocation</span><span class="o">.</span><span class="na">getClassSource</span><span class="o">();</span>
+    <span class="nc">JavaSootClass</span> <span class="n">sc</span> <span class="o">=</span>  <span class="k">new</span> <span class="nc">JavaSootClass</span><span class="o">(</span><span class="n">source</span><span class="o">,</span> <span class="nc">SourceType</span><span class="o">.</span><span class="na">Application</span><span class="o">);</span>
+    <span class="n">view</span><span class="o">.</span><span class="na">addClass</span><span class="o">(</span><span class="n">sc</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">sc</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="nc">JavaSootMethod</span> <span class="nf">makeEmptyMethod</span><span class="o">(</span><span class="nc">JavaClassType</span> <span class="n">classType</span><span class="o">,</span> <span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">MethodSignature</span> <span class="n">methodSig</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MethodSignature</span><span class="o">(</span><span class="n">classType</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">emptyList</span><span class="o">(),</span> <span class="nc">VoidType</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodModifier</span><span class="o">&gt;</span> <span class="n">mods</span> <span class="o">=</span> <span class="nc">EnumSet</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">MethodModifier</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">,</span> <span class="nc">MethodModifier</span><span class="o">.</span><span class="na">STATIC</span><span class="o">,</span> <span class="nc">MethodModifier</span><span class="o">.</span><span class="na">FINAL</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">(</span><span class="nc">JavaSootMethod</span><span class="o">)</span><span class="nc">JavaSootMethod</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">withSource</span><span class="o">(</span><span class="k">new</span> <span class="nc">OverridingBodySource</span><span class="o">(</span><span class="n">methodSig</span><span class="o">,</span> <span class="n">makeEmptyBody</span><span class="o">(</span><span class="n">methodSig</span><span class="o">,</span> <span class="n">mods</span><span class="o">)))</span>
+            <span class="o">.</span><span class="na">withSignature</span><span class="o">(</span><span class="n">methodSig</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">withModifier</span><span class="o">(</span><span class="n">mods</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="nc">Body</span> <span class="nf">makeEmptyBody</span><span class="o">(</span><span class="nc">MethodSignature</span> <span class="n">methodSig</span><span class="o">,</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">MethodModifier</span><span class="o">&gt;</span> <span class="n">mods</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Body</span><span class="o">.</span><span class="na">builder</span><span class="o">().</span><span class="na">setMethodSignature</span><span class="o">(</span><span class="n">methodSig</span><span class="o">).</span><span class="na">setModifiers</span><span class="o">(</span><span class="n">mods</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div>  </div>
+</details>
+
+<p>Finally, the call graph is modified to replace the calls to the sink method with calls to the generated empty method. Edges are then added to the call graph from the empty method to all Java methods recorded during the runtime sampling of the JavaScript.</p>
+
+<h2 id="running-the-sample-code-through-rhino-tracker">Running The Sample Code Through Rhino Tracker</h2>
+
+<p>The Rhino Tracker source code and sample code can be found at the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">12</a></sup> Download the source code and run the following from the <code class="language-plaintext highlighter-rouge">a-rhino-of-a-problem</code> directory, which will assemble all the necessary JAR files:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradle build
+</code></pre></div></div>
+
+<p>Rhino Tracker uses two config files to specify input for the two phases. The default config file for the first phase (i.e. dynamic instrumentation) is shown below.</p>
+
+<p class="figure-title"><strong>Default Yaml Config File For Dynamic Instrumentation Phase</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">log_dir_path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">work/dynamic_logs'</span>
+<span class="na">out_dir_path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">work/java_call_traces'</span>
+<span class="na">js_file_path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">sample/sample.test.js'</span>
+<span class="na">js_full_class_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">sample.test'</span>
+<span class="na">instance_url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">http://127.0.0.1:8080'</span>
+<span class="na">connect_tries</span><span class="pi">:</span> <span class="m">30</span>
+<span class="na">connect_timeout</span><span class="pi">:</span> <span class="m">120000</span>
+<span class="na">time_between_connect_attempts</span><span class="pi">:</span> <span class="m">10000</span>
+<span class="na">compiled_js_dir_path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">work/compiled_javascript'</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The default config file for the dynamic instrumentation phase. The fields in the config file largely specify the input/output files/directories and configuration options for connecting to the server. The <a href="#samplejs" class="page-link">sample JavaScript</a> mentioned in this config file is the same as the one at the top of this post. This yaml file can also be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">13</a></sup></p>
+
+<p>To run the dynamic instrumentation of the sample server using the default config file path, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradle runDynamic
+</code></pre></div></div>
+
+<p>This command will start the sample server with the instrumentation agent attached to it. Once all the instrumentation has been loaded, the agent will spawn a separate thread before exiting. The thread waits until it is able to make a connection to the sample server. Once it can connect, it submits the sample script to the server for processing and waits on the results before exiting. Once the script has finished running, the thread will dump the Java method calls to a file in the directory <code class="language-plaintext highlighter-rouge">java_call_traces</code>. The file is named <code class="language-plaintext highlighter-rouge">timestamp + '__' + js_full_class_name + '__.txt'</code>. The Rhino compiled JavaScript class file can also be found in the <code class="language-plaintext highlighter-rouge">compiled_javascript</code> directory. The output should look like the list of methods below.</p>
+
+<p class="figure-title"><strong>Methods Invoked From Sample JavaScript</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;java.time.LocalDateTime: java.time.LocalDateTime now()&gt;
+&lt;java.time.LocalDateTime: java.lang.String toString()&gt;
+&lt;java.time.LocalDateTime: java.time.LocalDateTime minusHours(long)&gt;
+&lt;java.time.LocalDateTime: int getDayOfYear()&gt;
+&lt;java.time.LocalDateTime: java.time.LocalDateTime minusDays(long)&gt;
+&lt;java.time.chrono.ChronoLocalDateTime: java.time.Instant toInstant(java.time.ZoneOffset)&gt;
+&lt;java.util.Date: java.util.Date from(java.time.Instant)&gt;
+&lt;java.util.Date: void &lt;init&gt;()&gt;
+&lt;java.util.Date: int compareTo(java.util.Date)&gt;
+&lt;java.util.Date: int compareTo(java.util.Date)&gt;
+</code></pre></div></div>
+
+<p class="figure-caption">Output of the Rhino Tracker’s dynamic instrumentation phase when run on the <a href="#samplejs" class="page-link">sample JavaScript</a>. This contains the list of Java methods directly invoked in the sample JavaScript. This file can also be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">14</a></sup></p>
+
+<p>The default config file for the second phase (i.e. static analysis and call graph building) is shown below.</p>
+
+<p class="figure-title"><strong>Default Yaml Config File For Static Analysis Phase</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">call_graph_algo</span><span class="pi">:</span> <span class="s">rta</span>
+<span class="na">class_path</span><span class="pi">:</span> <span class="s">sample/build/libs/sample.jar</span>
+<span class="na">entry_point_method_sig</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;com.snc.secres.sample.RhinoServlet:</span><span class="nv"> </span><span class="s">void</span><span class="nv"> </span><span class="s">doPost(jakarta.servlet.http.HttpServletRequest,</span><span class="nv"> </span><span class="s">jakarta.servlet.http.HttpServletResponse)&gt;'</span>
+<span class="na">main_method_sig</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;com.snc.secres.sample.DummyMain:</span><span class="nv"> </span><span class="s">void</span><span class="nv"> </span><span class="s">main(java.lang.String[])&gt;'</span>
+<span class="na">output_dir_path</span><span class="pi">:</span> <span class="s">work/cg</span>
+<span class="na">runtime_trace_file_path</span><span class="pi">:</span> <span class="s">work/java_call_traces/2024-07-17_13-24-53__sample.test__.txt</span>
+<span class="na">sink_method_sig</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;org.mozilla.javascript.Context:</span><span class="nv"> </span><span class="s">java.lang.Object</span><span class="nv"> </span><span class="s">evaluateString(org.mozilla.javascript.Scriptable,</span><span class="nv"> </span><span class="s">java.lang.String,</span><span class="nv"> </span><span class="s">java.lang.String,</span><span class="nv"> </span><span class="s">int,</span><span class="nv"> </span><span class="s">java.lang.Object)&gt;'</span>
+<span class="na">filter_default_policy</span><span class="pi">:</span> <span class="s">deny</span>
+<span class="na">filter</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">class_path</span>
+    <span class="na">pattern</span><span class="pi">:</span> <span class="s1">'</span><span class="s">com\.snc\.secres\.sample.*'</span>
+    <span class="na">policy</span><span class="pi">:</span> <span class="s">allow</span>
+</code></pre></div></div>
+
+<p class="figure-caption">The default config file for the static analysis phase. The config file defines the call graph algorithm, a path to the sample server JAR, a path to the Java methods runtime dump being used, output directory, important Java method signatures, and a call graph filter. The file can be found in the ServiceNow SecurityResearch GitHub repo<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">15</a></sup> as well.</p>
+
+<p>To run the static analysis using the default config file path, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradle runStatic
+</code></pre></div></div>
+
+<p>This command will first initialize soot with the given class paths. Then it will build the call graph using the given algorithm, entry point, and main method information. Any filters will then be applied to the call graph. Next, the call graph is searched for occurrences of the given sink method. Calls to this method in the call graph are replaced with a call to a generated method containing outgoing edges to the methods in the runtime trace file. Finally, the call graph is dumped to a dot file in the output directory. More information about this process can be found in the previous section. The output should look like the dot file below.</p>
+
+<p class="figure-title"><strong>Generated Dot File Representing Java to JavaScript to Java Call Graph</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+"&lt;com.snc.secres.sample.RhinoServlet: void doPost(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;";
+"&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: java.lang.Object doScriptEval(java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Context)&gt;";
+"&lt;com.snc.secres.sample.RhinoServlet: java.lang.Object doScriptEval(java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Context)&gt;" -&gt; "&lt;sample.test20240717132453: void runtimeSimulator()&gt;";
+"&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.chrono.ChronoLocalDateTime: java.time.Instant toInstant(java.time.ZoneOffset)&gt;";
+"&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.util.Date: void &lt;init&gt;()&gt;";
+...
+</code></pre></div></div>
+
+<p class="figure-caption">The dot file created from the Java to JavaScript to Java call graph. This file can also be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">16</a></sup> Note: The dot files name and the generated method’s class name are based on the name of the runtime trace file. So given a file named <code class="language-plaintext highlighter-rouge">2024-07-17_13-24-53__sample.test__.txt</code>, it will produce a <code class="language-plaintext highlighter-rouge">sample.test20240717132453.dot</code> file with the generated method <code class="language-plaintext highlighter-rouge">&lt;sample.test20240717132453: void runtimeSimulator()&gt;</code>.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>strict digraph ObjectGraph {
+    "&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;" -&gt; "&lt;jakarta.servlet.GenericServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;" -&gt; "&lt;jakarta.servlet.http.HttpServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: void &lt;init&gt;()&gt;";
+    "&lt;com.snc.secres.sample.DummyMain: void main(java.lang.String[])&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: void doPost(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;" -&gt; "&lt;jakarta.servlet.GenericServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;" -&gt; "&lt;jakarta.servlet.http.HttpServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;init&gt;()&gt;" -&gt; "&lt;org.mozilla.javascript.Context: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;init&gt;()&gt;" -&gt; "&lt;org.mozilla.javascript.Context: org.mozilla.javascript.Context enter()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;init&gt;()&gt;" -&gt; "&lt;org.mozilla.javascript.Context: void exit()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void &lt;init&gt;()&gt;" -&gt; "&lt;jakarta.servlet.http.HttpServlet: void &lt;init&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void doPost(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)&gt;" -&gt; "&lt;java.io.PrintWriter: void println(java.lang.String)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: void doPost(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.Object doScriptEval(java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Context)&gt;" -&gt; "&lt;sample.test20240717132453: void runtimeSimulator()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.Context: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.Context: org.mozilla.javascript.Context enter()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.Context: void exit()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.Context: org.mozilla.javascript.ScriptableObject initStandardObjects()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.Context: java.lang.String toString(java.lang.Object)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;jakarta.servlet.GenericServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;jakarta.servlet.http.HttpServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;java.lang.Object: java.lang.Class getClass()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;java.io.PrintWriter: void &lt;init&gt;(java.io.Writer)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;java.io.PrintWriter: void print(java.lang.String)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.RhinoException: void printStackTrace(java.io.PrintWriter)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: void &lt;clinit&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;com.snc.secres.sample.RhinoServlet: java.lang.Object doScriptEval(java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Context)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;org.mozilla.javascript.ScriptableObject: void defineFunctionProperties(java.lang.String[],java.lang.Class,int)&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;java.io.StringWriter: void &lt;init&gt;()&gt;";
+    "&lt;com.snc.secres.sample.RhinoServlet: java.lang.String setupAndDoScriptEval(java.lang.String)&gt;" -&gt; "&lt;java.io.StringWriter: java.lang.String toString()&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.chrono.ChronoLocalDateTime: java.time.Instant toInstant(java.time.ZoneOffset)&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.util.Date: void &lt;init&gt;()&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.util.Date: int compareTo(java.util.Date)&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.util.Date: java.util.Date from(java.time.Instant)&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.LocalDateTime: int getDayOfYear()&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.LocalDateTime: java.time.LocalDateTime minusDays(long)&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.LocalDateTime: java.time.LocalDateTime minusHours(long)&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.LocalDateTime: java.time.LocalDateTime now()&gt;";
+    "&lt;sample.test20240717132453: void runtimeSimulator()&gt;" -&gt; "&lt;java.time.LocalDateTime: java.lang.String toString()&gt;";
+}
+</code></pre></div>  </div>
+</details>
+
+<p>Using Graphviz, the graph can be rendered into an image. Below is a portion of the rendered graph.</p>
+
+<p class="figure-title"><strong>Rendered Call Graph Representing Java to JavaScript to Java</strong></p>
+
+<p class="figure-img"><img src="/assets/images/posts/2024-07-29-a-rhino-of-a-problem/sample.test20240717132453.png" alt="Rendered Call Graph" title="Rendered Call Graph" /></p>
+
+<p class="figure-caption">Graph rendered using the command <code class="language-plaintext highlighter-rouge">dot -O -Tpdf sample.test20240717132453.dot</code>. The full rendered graph can be found in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">17</a></sup></p>
+
+<p>More information about how to run Rhino Tracker and other available options can be found in the readme file in the ServiceNow SecurityResearch GitHub repo.<sup id="fnref:12" role="doc-noteref"><a href="#fn:12" class="footnote" rel="footnote">18</a></sup></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>While Rhino Tracker requires both static and dynamic analysis to produce a call graph of a polyglot Rhino server environment, the dynamic data required is minimal and reusable. Rhino Tracker requires only the JavaScript call flows be gathered dynamically. Such an approach is still subject to the same limitations of completeness as all dynamic analysis approaches. However, a good fuzzing environment will likely be able to run through all code paths in a given JavaScript codebase. As such, so long as all available code paths are hit during runtime, a complete dump of the JavaScript call flows will be produced by Rhino Tracker. Moreover, a purely static analysis-based approach to the call graph generation would not be guaranteed to be complete. Using static analysis for call graph generation would require parsing Rhino’s abstract syntax tree (AST). As much of the call targets of the Rhino AST are determined at runtime from customizable mappings that are also runtime generated, there is no simple way to statically map calls through the Rhino interpreter without runtime generated data.</p>
+
+<p>The hybrid analysis approach of Rhino Tracker allows it to create complete call graphs that capture the call flows through the Rhino interpreter without the runtime complexities that the Rhino interpreter introduces. This allows Rhino Tracker to bridge the call flows from Java to JavaScript to Java. Not only can the call graphs produced by Rhino Tracker be used to aid manual review of polyglot Java/JavaScript code, but they can also but built on to develop more complex analysis tools.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://github.com/mozilla/rhino">https://github.com/mozilla/rhino</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://soot-oss.github.io/SootUp/develop/">https://soot-oss.github.io/SootUp/develop/</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:3:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:3:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a></p>
+    </li>
+    <li id="fn:18" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/Tools.java">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/Tools.java</a> <a href="#fnref:18" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:13" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test.js">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test.js</a> <a href="#fnref:13" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:14" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/2024-07-17_13-24-53__sample.test__.class">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/2024-07-17_13-24-53__sample.test__.class</a> <a href="#fnref:14" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="https://bytebuddy.net/#/">https://bytebuddy.net/#/</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:15" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/Agent.java">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/Agent.java</a> <a href="#fnref:15" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:15:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:17" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/JavaMethodInterceptor.java">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/tool/src/main/java/com/snc/secres/tool/dynamic/JavaMethodInterceptor.java</a> <a href="#fnref:17" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:17:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://github.com/soot-oss/soot">https://github.com/soot-oss/soot</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:16" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/src/main/java/com/snc/secres/sample/DummyMain.java">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/src/main/java/com/snc/secres/sample/DummyMain.java</a> <a href="#fnref:16" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample</a> <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/dynamic_config.yaml">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/dynamic_config.yaml</a> <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/2024-07-17_13-24-53__sample.test__.txt">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/2024-07-17_13-24-53__sample.test__.txt</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/static_config.yaml">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/static_config.yaml</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test20240717132453.dot">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test20240717132453.dot</a> <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test20240717132453.pdf">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/sample/sample.test20240717132453.pdf</a> <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:12" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/Readme.md">https://github.com/ServiceNow/SecurityResearch/tree/main/rhino-tracker/Readme.md</a> <a href="#fnref:12" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style>
+  .page__footer {
+    background-color: rgb(255, 255, 255);
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  div#footer {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 0px;
+  }
+
+  .footer__inner-wrap {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-family: -apple-system, "system-ui", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1rem;
+    height: 137.328px;
+    justify-content: space-between;
+    line-height: 1.2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
+    padding-top: 20px;
+    text-size-adjust: 100%;
+  }
+
+  .col-12 {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: none;
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.5rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 400;
+    /* height: 864px; */
+    letter-spacing: normal;
+    line-height: 15px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 1700px;
+    min-height: 1px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    /* width: 1293px; */
+    -webkit-box-flex: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .row {
+    color: rgb(0, 0, 0);
+  }
+
+  .logo-tagline-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    /*margin-bottom: 12px;*/
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.8rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 500;
+  }
+
+  @media screen and (width < 725px) {
+    .logo-tagline-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  .logo-tagline-container img {
+    height: 1.2rem;
+    /*min-width: 8rem;*/
+    /*width: 118px;*/
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    /*margin-right: -1rem;
+    margin-left: -1rem;*/
+  }
+
+  .logo_site_title {
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-right: 4px;
+  }
+
+  .logo_site_tagline {
+    background-color: var(--brand-infinite-blue);
+    color: var(--brand-wasabi-green);
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-left: 10x;
+    padding-left: 10px;
+  }
+
+  /*no idea what this was intended for*/
+  /*links {
+    border: 1px solid #e1e1e1;
+    border-left: unset;
+    border-right: unset;
+    margin: 33px -15px 40px;
+    padding: 40px 0 0;
+  }*/
+
+  ul.footer-visible-links {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer__menu-item-link {
+    clear: unset;
+    float: unset;
+    margin-right: 24px;
+  }
+
+  .page__footer-nav {
+    font-size: 0.6rem;
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: regular;
+
+  }
+
+  .page__footer-copyright {
+    font-size: 0.6rem;
+  }
+
+  .footer-visible-links {
+    display: flex;
+    text-align: left;
+    font-size: 0.6rem;
+    align-items: left;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    /*justify-content: left;*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    /*flex: 1;*/
+    overflow: hidden;
+  }
+
+  .footer__menu-item a {
+    display: block;
+    list-style-type: none;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    /*margin-bottom: 20px;*/
+  }
+</style>
+
+
+<div id="footer-container">
+  <div class="footer__inner-wrap">
+    <div class="masthead__menu">
+      <div class="logo-tagline-container">
+        
+        <img src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+        
+        <span class="logo_site_title">Security Lab</span>
+        <span class="logo_site_tagline">Keeping your workflows secure.</span>
+      </div>
+      <nav id="footer-site-nav" class="page__footer-nav">
+        <ul class="footer-visible-links"><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/terms-of-use.html"  target="_blank">Terms and conditions</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/company/trust/privacy/gdpr.html"  target="_blank">GDPR</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/privacy-statement.html"  target="_blank">Privacy statement</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="/data-collection"  target="_blank">Data collection</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="mailto:securitylab@servicenow.com?subject=Security%20Lab%20Site%20Contact"  target="_blank">Contact Us</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://twitter.com/SNSecurityLab"  target="_blank">Twitter</a>
+          </li></ul>
+      </nav>
+      <div class="page__footer-copyright">&copy; 2024 ServiceNow, Inc. All
+        rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

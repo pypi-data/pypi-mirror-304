@@ -1,0 +1,1254 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>SNulk - ServiceNow Bulk Submit Tool for Table Records | Security Lab</title>
+<meta name="description" content="This post introduces SNulk, a solution  that allows users to effortlessly submit large numbers of templated records to a table on a ServiceNow instance.">
+
+
+  <meta name="author" content="Sigmund Gorski">
+  
+  <meta property="article:author" content="Sigmund Gorski">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Security Lab">
+<meta property="og:title" content="SNulk - ServiceNow Bulk Submit Tool for Table Records">
+<meta property="og:url" content="http://localhost:8080/research/2024-10-31-snulk/">
+
+
+  <meta property="og:description" content="This post introduces SNulk, a solution  that allows users to effortlessly submit large numbers of templated records to a table on a ServiceNow instance.">
+
+
+
+
+
+  <meta name="twitter:site" content="@SNSecurityLab">
+  <meta name="twitter:title" content="SNulk - ServiceNow Bulk Submit Tool for Table Records">
+  <meta name="twitter:description" content="This post introduces SNulk, a solution  that allows users to effortlessly submit large numbers of templated records to a table on a ServiceNow instance.">
+  <meta name="twitter:url" content="http://localhost:8080/research/2024-10-31-snulk/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-10-16T00:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:8080/research/2024-10-31-snulk/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ServiceNow",
+      "url": "http://localhost:8080/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rouge.css">
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-semibold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-bold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/fira-mono-regular-latin.woff2" type="font/woff2" crossorigin="anonymous"/>
+
+<style>
+@font-face {
+  font-family: GilroyRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-regular-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-regular-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroySemiBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-semibold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-semibold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-bold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-bold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+</style>
+
+
+
+    <!-- start custom head snippets -->
+<script src="https://assets.adobedtm.com/a441b904b50e/99538f40e7c0/launch-3dcaf3475e9d.min.js" async></script>
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<style>
+  @media screen and (width >= 725px) {
+    .small-screen {
+      display: none;
+    }
+    .large-screen { }
+  }
+  @media screen and (width < 725px) {
+    .small-screen { }
+    .large-screen {
+      display: none;
+    }
+  }
+
+  a {
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .masthead__menu-item a {
+    font-size: 0.8rem;
+    margin: 0 0.25rem 0 0.25rem;
+  }
+
+  .masthead__menu-item_block a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 62, 64);
+    padding-bottom: 0.4rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    position: relative;
+  }
+
+  .site-brand {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*display: flex;*/
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 41px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-top: 0px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 5px;
+    padding-left: 9px;
+    padding-right: 0px;
+    padding-top: 5px;
+    text-align: left;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%;
+    text-wrap: nowrap;
+    touch-action: manipulation;
+    white-space-collapse: collapse;
+    width: auto;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .small-screen a.site-brand {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .logo {
+    border-right: 1px solid #000;
+    height: 1.5rem;
+    margin-right: 12px;
+    min-width: 8rem;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    /*width: 180px;*/
+  }
+
+  .masthead__site-title {
+    color: rgb(0, 0, 0);
+    /*font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  ul {
+    align-items: center;
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu large-screen">
+      <nav id="site-nav" class="greedy-nav large-screen">
+        <a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+      </nav>
+    </div>
+    <div class="masthead__menu small-screen">
+      <nav id="site-nav" class="greedy-nav small-screen">
+        <center><a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a></center>
+        <center>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <br>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+        </center>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #032D42; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          SNulk - ServiceNow Bulk Submit Tool for Table Records
+
+        
+      </h1>
+      
+      
+        <p class="byline">
+          October 16th, 2024 by Sigmund Gorski
+        </p>
+        
+      
+      
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          21 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:8080/" itemprop="item"><span itemprop="name" class="breadcrumb_item">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">></span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/research" itemprop="item"><span itemprop="name" class="breadcrumb_item">Research</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">></span>
+      
+    
+      
+      
+        <li class="current">[ SNulk - ServiceNow Bulk Submit Tool for Table Records ]</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SNulk - ServiceNow Bulk Submit Tool for Table Records">
+    <meta itemprop="description" content="This post introduces SNulk, a solution  that allows users to effortlessly submit large numbers of templated records to a table on a ServiceNow instance.">
+    <meta itemprop="datePublished" content="2024-10-16T00:00:00-07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#an-overview-of-snulk">An Overview of SNulk</a></li><li><a href="#snulk-vs-gui-import">SNulk VS GUI Import</a></li><li><a href="#using-snulk-for-table-record-submissions">Using SNulk for Table Record Submissions</a><ul><li><a href="#obtaining-a-instance">Obtaining a Instance</a></li><li><a href="#generating-a-struct-yaml-file-for-the-incident-table">Generating A struct YAML File for the incident Table</a><ul><li><a href="#option-1---determining-table-fields-and-values-from-sys_db_object">Option 1 - Determining Table Fields and Values From sys_db_object</a></li><li><a href="#option-2---determining-table-fields-and-values-through-inspection">Option 2 - Determining Table Fields and Values Through Inspection</a></li><li><a href="#constructing-a-struct-yaml-file">Constructing A struct YAML File</a></li></ul></li><li><a href="#generating-a-format-yaml-file-for-the-incident-table">Generating A format YAML File for the incident Table</a></li><li><a href="#using-snulk-to-submit-test-data-to-the-incident-table">Using SNulk to Submit Test Data To The incident Table</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+
+            </nav>
+            
+
+
+
+
+
+          </aside>
+        
+        <p>Have you ever needed to automate the creation of a large number of similar records in a ServiceNow table? Do you wish you could easily cherry pick data from the rows in a Excel spreadsheet or Pandas Dataframe and transform the data into new ServiceNow table records? SNulk, the ServiceNow Bulk Submit Tool for Table Records, was designed with these problems in mind.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> SNulk is a solution that automates the creation of similar table records for ServiceNow power users. It provides a means to effortlessly submit large numbers of templated records to a table on a ServiceNow instance based on provided data. The table, instance, template, and data are all customizable and intended to be modified to fit the situation.</p>
+
+<p>This post introduces SNulk and its data submission capabilities. First, the post discusses SNulk’s design and functionality at a high level. Next, the post compares SNulk’s capabilities to those currently available in the ServiceNow GUI. Then, the post educates the reader on using SNulk by providing an example of how to use SNulk to submit data to a table on a ServiceNow instance. Finally, the post concludes.</p>
+
+<h2 id="an-overview-of-snulk">An Overview of SNulk</h2>
+
+<p>SNulk is a Python tool that makes it easy to submit a large number of table records to a table on a ServiceNow instance.<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> Submissions through SNulk are templated, reusable on multiple similarly formatted data sources, and transmitted to ServiceNow instances using the PySNC library.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">2</a></sup> SNulk can be used as either a CLI tool or as a library for other Python tools. Both uses of SNulk require the same input files:</p>
+
+<ul>
+  <li>One or more tables where each row represents data for a new record in the ServiceNow table</li>
+  <li>YAML file templates that define ServiceNow table structures</li>
+  <li>YAML file templates that define how to map the input data table to the ServiceNow table structure</li>
+</ul>
+
+<p>Under the hood, SNulk uses Pandas to load and manipulate data before submission. As such, when SNulk is used as a library, any Pandas Dataframe can be used to supply SNulk with the input data. However, the CLI tool is currently limited to only sourcing the input data from Excel spreadsheet files.</p>
+
+<p>As alluded to above, the templates are defined through two different types of YAML config files, one that defines the table structure on a ServiceNow instance and the other that defines the submission format and mappings from input data fields to ServiceNow fields. The <code class="language-plaintext highlighter-rouge">struct</code> YAML files are simply a list of available fields for a table on a ServiceNow instance. Optionally, allowed values for those fields may be specified. The <code class="language-plaintext highlighter-rouge">format</code> YAML files are where the actual customization of submitted records occur. These files map a column(s) in the provided input data to a field in a ServiceNow table. It is possible to provide default values for a given field as well as define formatted strings containing runtime data substitutions. Moreover, by appending a hash to fields, SNulk is capable of detecting duplicate records in a table both during the current submission process and in future submissions made by SNulk. Additionally, one can supply a list of return fields to retrieve data from a ServiceNow table after a record has been submitted. The retrieved data is recorded in the originating data source row.</p>
+
+<p>Requirements to run SNulk, the configuration options, and more will be explained in detail in the remaining sections of this post. A complete list and additional details on the options for the YAML file templates can be found on the SNulk Readme file.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup> SNulk’s Readme file also contains a number of examples on how to run SNulk both as a CLI tool and as a library, along with the options associated with both. Additionally, example YAML snip-its can be found on the Readme, with full examples being in the SNulk Github repo.<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup></p>
+
+<h2 id="snulk-vs-gui-import">SNulk VS GUI Import</h2>
+
+<p>ServiceNow supports the import of table data from spreadsheets and other files using the GUI. This is a three step process that involves:</p>
+<ul>
+  <li>The import of data from a file into a temporary table</li>
+  <li>The definition of a transformation that maps the data in the temporary table to a existing table</li>
+  <li>The transfer of data between the two tables using the transformation.</li>
+</ul>
+
+<p>This process is primarily intended to be used by GUI and is difficult automate.</p>
+
+<p>SNulk, while similar to existing table import functionality, differs in several key areas. First, SNulk is entirely written in Python and intended to be used separately from the ServiceNow GUI. As such, SNulk can be used as part of other python scripts, shell scripts, and automation efforts with limited user interaction once configured. Secondly, SNulk can be used to combine table columns into simple pre-formatted strings during import. While ServiceNow imports via the GUI do support this through scripted data transformations, SNulk’s pre-formatted strings are easier to understand and define. Third, SNulk is able to retrieve data upon the submission of a new record and write it back to the originating input data. Such functionality is not currently supported and difficult to add because of the multi-step import process on ServiceNow instances via the GUI. Finally, SNulk is capable of detecting duplicate record submissions, a feature that is not supported by the GUI import process.</p>
+
+<h2 id="using-snulk-for-table-record-submissions">Using SNulk for Table Record Submissions</h2>
+
+<p>The process of using SNulk to submit input data to a table on a ServiceNow instance can be divided into the following four steps.</p>
+
+<ol>
+  <li>Obtaining access to a ServiceNow instance</li>
+  <li>Constructing a <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the table to which data will be submitted</li>
+  <li>Creating a <code class="language-plaintext highlighter-rouge">format</code> YAML file to map input data to fields in the ServiceNow table</li>
+  <li>Running SNulk to submit input data to a table on a ServiceNow instance</li>
+</ol>
+
+<p>The remaining section discusses each of these steps in detail using the <code class="language-plaintext highlighter-rouge">incident</code> table on a ServiceNow developer instance as an example.</p>
+
+<h3 id="obtaining-a-instance">Obtaining a Instance</h3>
+
+<p>First, access to a ServiceNow instance must be acquired. Follow the steps below to obtain a temporary ServiceNow developer instance. Note these steps can be skipped if access to a ServiceNow instance with the <code class="language-plaintext highlighter-rouge">incident</code> table is already available.</p>
+
+<ol>
+  <li>Go to <a href="https://developer.servicenow.com/dev.do">https://developer.servicenow.com/dev.do</a> and login.</li>
+  <li>Select <code class="language-plaintext highlighter-rouge">Start Building</code>.
+<img src="/assets/images/posts/snulk/snulk01.png" alt="Start Building" title="Start Building" class="figure-img" /></li>
+  <li>Select <code class="language-plaintext highlighter-rouge">Xanadu</code> (A) -&gt; <code class="language-plaintext highlighter-rouge">Request</code> (B). If <code class="language-plaintext highlighter-rouge">Xanadu</code> is not longer the latest release then select the latest release. 
+<img src="/assets/images/posts/snulk/snulk02.png" alt="Select Request" title="Select Request" class="figure-img" /></li>
+  <li>Wait for the instance to be setup. This could take a while.</li>
+  <li>Once the instance is setup a dialog will display with information about the instance. Record the Username (A), Password (B), and Instance Name (C), and select  <code class="language-plaintext highlighter-rouge">Open Instance</code> (D).
+<img src="/assets/images/posts/snulk/snulk03.png" alt="New Instance" title="New Instance" class="figure-img" /></li>
+</ol>
+
+<h3 id="generating-a-struct-yaml-file-for-the-incident-table">Generating A <code class="language-plaintext highlighter-rouge">struct</code> YAML File for the <code class="language-plaintext highlighter-rouge">incident</code> Table</h3>
+
+<p>Once a ServiceNow instance has been obtained, the next step to using SNulk is to create a <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the table for which data will be submitted. The following steps below illustrate how to create a <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table on a ServiceNow developer instance. However, they should be applicable to a table on any instance.</p>
+
+<h4 id="option-1---determining-table-fields-and-values-from-sys_db_object">Option 1 - Determining Table Fields and Values From <code class="language-plaintext highlighter-rouge">sys_db_object</code></h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">sys_db_object</code> table provides information about the structure of other tables on a ServiceNow instance. The table definitions found in the <code class="language-plaintext highlighter-rouge">sys_db_object</code> will list all possible fields for a table. So this is a good way to find fields that are not always displayed to end users. However, <code class="language-plaintext highlighter-rouge">sys_db_object</code> is not accessible to all users.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">sys_db_object</code> is accessible, follow the steps below to examine the Category field of the <code class="language-plaintext highlighter-rouge">incident</code> table. Repeat these steps with a different field name for each field of a table that will be submitted using SNulk.</p>
+
+<ol>
+  <li>
+    <p>To access data from <code class="language-plaintext highlighter-rouge">sys_db_object</code> for the Category field, navigate to <a href="https://[instance-name].service-now.com/now/nav/ui/classic/params/target/sys_db_object_list.do">https://[instance-name].service-now.com/now/nav/ui/classic/params/target/sys_db_object_list.do</a>, search for <code class="language-plaintext highlighter-rouge">incident</code>, and select the first result.
+<img src="/assets/images/posts/snulk/snulk05.png" alt="Incident Table Structure" title="Incident Table Structure" class="figure-img" /></p>
+  </li>
+  <li>
+    <p>Once on the <code class="language-plaintext highlighter-rouge">incident</code> table definition page, search for <code class="language-plaintext highlighter-rouge">category</code> under columns. Select the first result to get to the field definition.
+<img src="/assets/images/posts/snulk/snulk06.png" alt="Incident Table Structure 2" title="Incident Table Structure 2" class="figure-img" /></p>
+  </li>
+  <li>
+    <p>The Category field id (A) and the possible values for the field (B) are listed on the field definition page along with other information for this table field. As shown, the Category field has id <code class="language-plaintext highlighter-rouge">category</code> and possible values <code class="language-plaintext highlighter-rouge">inquiry</code>, <code class="language-plaintext highlighter-rouge">database</code>, <code class="language-plaintext highlighter-rouge">software</code>, <code class="language-plaintext highlighter-rouge">hardware</code>, and <code class="language-plaintext highlighter-rouge">network</code>. 
+<br />
+Both the id and its possible values will be needed when constructing the <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table. Make a note of the id and all its possible values for later.
+<img src="/assets/images/posts/snulk/snulk07.png" alt="Incident Table Structure 3" title="Incident Table Structure 3" class="figure-img" /></p>
+  </li>
+</ol>
+
+<h4 id="option-2---determining-table-fields-and-values-through-inspection">Option 2 - Determining Table Fields and Values Through Inspection</h4>
+
+<p>Alternatively, similar information can be found by inspecting a ServiceNow table’s new record page. Generally, if a user is able to write to a table, they are capable of viewing the table’s new record page. At the very least, a table’s new record page will have information about some of the most important fields of a table. However, the new record page of a table is not guaranteed to reference all available fields. Some may be hidden for automation or security reasons. As such, while the information available is limited, this method is useful when <code class="language-plaintext highlighter-rouge">sys_db_object</code> is not accessible.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">sys_db_object</code> is not accessible, follow the steps below determine the fields of a table and their possible values.</p>
+
+<ol>
+  <li>Navigate to the <code class="language-plaintext highlighter-rouge">incident</code> table’s list page on the instance. This can be found at the following url <a href="https://[instance-name].service-now.com/now/nav/ui/classic/params/target/incident_list.do">https://[instance-name].service-now.com/now/nav/ui/classic/params/target/incident_list.do</a>. Replace <code class="language-plaintext highlighter-rouge">[instance-name]</code> with the name of the instance being used.</li>
+  <li>Select <code class="language-plaintext highlighter-rouge">new</code> in the top right corner of the webpage. This new page gives a general idea of the fields that can be submitted to the <code class="language-plaintext highlighter-rouge">incident</code> table and their possible values.</li>
+  <li>For each field that is to be submitted, right click on the field and inspect the element to get its id and a list of possible values. Both the id and its possible values will be needed when constructing the <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table. Make a note of all ids and associated possible values for later.
+<br />
+For example, take a look at the Category field (A) once again. As shown, the Category field has id <code class="language-plaintext highlighter-rouge">category</code> (B) and values <code class="language-plaintext highlighter-rouge">inquiry</code>, <code class="language-plaintext highlighter-rouge">database</code>, <code class="language-plaintext highlighter-rouge">software</code>, <code class="language-plaintext highlighter-rouge">hardware</code>, and <code class="language-plaintext highlighter-rouge">network</code> (C). This is the same information that can be obtained from the <code class="language-plaintext highlighter-rouge">sys_db_object</code> table.
+<img src="/assets/images/posts/snulk/snulk04.png" alt="Inspect Category" title="Inspect Category" class="figure-img" /></li>
+</ol>
+
+<h4 id="constructing-a-struct-yaml-file">Constructing A <code class="language-plaintext highlighter-rouge">struct</code> YAML File</h4>
+
+<p>Once all the necessary field information has been retrieved for the table, the information must be transferred into the <code class="language-plaintext highlighter-rouge">struct</code> YAML file. Be sure to include all fields of the table that are to be submitted or read from by SNulk (except for <code class="language-plaintext highlighter-rouge">sys_id</code>). This alerts SNulk to the possible fields of the table. Any field not in the <code class="language-plaintext highlighter-rouge">struct</code> YAML file but referenced by the <code class="language-plaintext highlighter-rouge">format</code> YAML file will generate an error. The definition for the structure of the <code class="language-plaintext highlighter-rouge">struct</code> YAML file can be found in the SNulk Readme file<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>. A snip-it of the <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table is shown in the figure below. The full YAML file can be found on the SNulk Github repo<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</p>
+
+<p class="figure-title"><strong>An Example <code class="language-plaintext highlighter-rouge">struct</code> YAML File for the <code class="language-plaintext highlighter-rouge">incident</code> Table</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">instance</span><span class="pi">:</span> <span class="s">dev286834</span>
+<span class="na">table</span><span class="pi">:</span> <span class="s">incident</span>
+<span class="na">fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">number</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">caller_id</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">category</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">inquiry'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Inquiry</span><span class="nv"> </span><span class="s">/</span><span class="nv"> </span><span class="s">Help'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">database'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Database'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">software'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Software'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">hardware'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Hardware'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">network'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Network'</span>
+</code></pre></div></div>
+
+<p class="figure-caption">An example of a <code class="language-plaintext highlighter-rouge">struct</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table of a ServiceNow developer instance. The YAML file requires the definition of a instance name, table name, and non-empty list of field names for the table. The information displayed in this figure corresponds to information retrieved in previous sections.</p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">instance</span><span class="pi">:</span> <span class="s">dev286834</span>
+<span class="na">table</span><span class="pi">:</span> <span class="s">incident</span>
+<span class="na">fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">number</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">caller_id</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">category</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">inquiry'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Inquiry</span><span class="nv"> </span><span class="s">/</span><span class="nv"> </span><span class="s">Help'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">database'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Database'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">software'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Software'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">hardware'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Hardware'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">network'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Network'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">subcategory</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">antivirus'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Antivirus'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">email'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Email'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">internal</span><span class="nv"> </span><span class="s">application'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Internal</span><span class="nv"> </span><span class="s">Application'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">db2'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">DB2'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">sql</span><span class="nv"> </span><span class="s">server'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">MS</span><span class="nv"> </span><span class="s">SQL</span><span class="nv"> </span><span class="s">Server'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">oracle'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Oracle'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">email'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Email'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">os'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Operating</span><span class="nv"> </span><span class="s">System'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">cpu'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">CPU'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">disk'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Disk'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">keyboard'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Keyboard'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">memory'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Memory'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">monitor'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Monitor'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">mouse'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Mouse'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">dhcp'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">DHCP'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">dns'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">DNS'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ip</span><span class="nv"> </span><span class="s">address'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">IP</span><span class="nv"> </span><span class="s">Address'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">IP</span><span class="nv"> </span><span class="s">Address'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">VPN'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">wireless'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Wireless'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">business_service</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">service_offering</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cmdb_ci</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">short_description</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">description</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">contact_type</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">chat'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Chat'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">email'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Email'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">phone'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Phone'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">self-service'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Self-service'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">virtual_agent'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Virtual</span><span class="nv"> </span><span class="s">Agent'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">walk-in'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Walk-in'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">state</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">New'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">In</span><span class="nv"> </span><span class="s">Progress'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">On</span><span class="nv"> </span><span class="s">Hold'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">6'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">7'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Closed'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Canceled'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">impact</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">High'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Medium'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Low'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">urgency</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">High'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Medium'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Low'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">priority</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Critical'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">High'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Moderate'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">4'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">4</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Low'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">5'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">5</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Planning'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">assignment_group</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">assigned_to</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">parent_incident</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">problem_id</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">rfc</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">caused_by</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">resolved_by</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">resolved_at</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">close_notes</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">knowledge</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">close_code</span>
+    <span class="na">possible_values</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Duplicate'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Duplicate'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Known</span><span class="nv"> </span><span class="s">error'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Known</span><span class="nv"> </span><span class="s">error'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">No</span><span class="nv"> </span><span class="s">resolution</span><span class="nv"> </span><span class="s">provided'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">No</span><span class="nv"> </span><span class="s">resolution</span><span class="nv"> </span><span class="s">provided'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">caller'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">caller'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">change'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">change'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">problem'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">problem'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">request'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Resolved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">request'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Solution</span><span class="nv"> </span><span class="s">provided'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Solution</span><span class="nv"> </span><span class="s">provided'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Workaround</span><span class="nv"> </span><span class="s">provided'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Workaround</span><span class="nv"> </span><span class="s">provided'</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">User</span><span class="nv"> </span><span class="s">error'</span>
+        <span class="na">short_description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">User</span><span class="nv"> </span><span class="s">error'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">work_notes</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">comments</span>
+</code></pre></div>  </div>
+</details>
+
+<p>As shown in the example, for the Category field of the <code class="language-plaintext highlighter-rouge">incident</code> table, the field id <code class="language-plaintext highlighter-rouge">category</code> is mapped to the tag <code class="language-plaintext highlighter-rouge">name</code>. A tag of <code class="language-plaintext highlighter-rouge">name</code> in the <code class="language-plaintext highlighter-rouge">struct</code> YAML file indicates a new field entry in the list of fields. Below the <code class="language-plaintext highlighter-rouge">name</code> tag for the Category field is a list of possible values for that field. Here, the <code class="language-plaintext highlighter-rouge">id</code> tag maps to an actual value for that field and the <code class="language-plaintext highlighter-rouge">short_description</code> tag maps to the label for that value (i.e. what will actually be displayed in the webpage). The list of possible values (i.e. <code class="language-plaintext highlighter-rouge">possible_values</code>) is an optional entry for each field entry. Omitting such data just means SNulk will not be able to check if a value is allowed for a field before submission.</p>
+
+<h3 id="generating-a-format-yaml-file-for-the-incident-table">Generating A <code class="language-plaintext highlighter-rouge">format</code> YAML File for the <code class="language-plaintext highlighter-rouge">incident</code> Table</h3>
+
+<p>Once the <code class="language-plaintext highlighter-rouge">struct</code> YAML file has been created for a table, the next step is to create the <code class="language-plaintext highlighter-rouge">format</code> YAML file that maps the table fields to the input data. The figure below illustrates how to define such a file for the <code class="language-plaintext highlighter-rouge">incident</code> table of a developer instance and the example test submission data found in <code class="language-plaintext highlighter-rouge">test_submit.xlsx</code> on the SNulk Github repo.<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup></p>
+
+<p>As shown, the <code class="language-plaintext highlighter-rouge">format</code> YAML file has a similar base structure to that of the <code class="language-plaintext highlighter-rouge">struct</code> YAML file. Both require one to specify the <code class="language-plaintext highlighter-rouge">instance</code>, <code class="language-plaintext highlighter-rouge">table</code>, and provide a list of <code class="language-plaintext highlighter-rouge">fields</code>. Additionally, for <code class="language-plaintext highlighter-rouge">format</code> YAMLs one must provide a <code class="language-plaintext highlighter-rouge">short_name</code> for the file. The <code class="language-plaintext highlighter-rouge">short_name</code> is used by SNulk to identify the specific <code class="language-plaintext highlighter-rouge">format</code> file that will be used to submit data during a given run.</p>
+
+<p>For each entry in the list <code class="language-plaintext highlighter-rouge">fields</code>, a <code class="language-plaintext highlighter-rouge">name</code> must be provided. The <code class="language-plaintext highlighter-rouge">name</code> is the name of a field in the ServiceNow table. As previously mentioned, any table field (i.e. <code class="language-plaintext highlighter-rouge">name</code>) included in the <code class="language-plaintext highlighter-rouge">format</code> YAML file must also be defined in the <code class="language-plaintext highlighter-rouge">struct</code> YAML file. Additionally, a <code class="language-plaintext highlighter-rouge">data_key</code> can be provided which indicates the column in the input data that maps to this ServiceNow table field. The <code class="language-plaintext highlighter-rouge">data_key</code> is not required so long as a <code class="language-plaintext highlighter-rouge">default_value</code> value is defined for the field. If both the <code class="language-plaintext highlighter-rouge">data_key</code> and <code class="language-plaintext highlighter-rouge">default_value</code> are defined for a field, SNulk will first examine the input data to determine if: 1) the column exists and 2) the data in the column for a given row is not empty. If both conditions are true, the data from the column is used during submission, otherwise the data from the <code class="language-plaintext highlighter-rouge">default_value</code> is used. Note a value is considered empty if it is non-existent (e.g. <code class="language-plaintext highlighter-rouge">none</code>, <code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">null</code>), an empty string, or a string containing only whitespace. If both the values from <code class="language-plaintext highlighter-rouge">data_key</code> and <code class="language-plaintext highlighter-rouge">default_value</code> evaluate to empty, an exception will be thrown. However, if <code class="language-plaintext highlighter-rouge">required</code> set to <code class="language-plaintext highlighter-rouge">false</code> for a field and <code class="language-plaintext highlighter-rouge">data_key</code> and <code class="language-plaintext highlighter-rouge">default_value</code> evaluate to empty for some row from the input data, the field will not be included in the record submission for that row.</p>
+
+<p class="figure-title"><strong>An Example <code class="language-plaintext highlighter-rouge">format</code> YAML File for the <code class="language-plaintext highlighter-rouge">incident</code> Table and Test Data</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">short_name</span><span class="pi">:</span> <span class="s">test_incident</span>
+<span class="na">instance</span><span class="pi">:</span> <span class="s">dev286834</span>
+<span class="na">table</span><span class="pi">:</span> <span class="s">incident</span>
+<span class="na">return_fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">__SYSID__</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Incident</span><span class="nv"> </span><span class="s">SysID'</span>
+    <span class="na">none_is_empty</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Incident</span><span class="nv"> </span><span class="s">Number'</span>
+    <span class="na">none_is_empty</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">caller_id</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">6816f79cc0a8016401c5a33be04be441'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">category</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">inquiry'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="s">...</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">impact</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s">impact</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="s">...</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">description</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">Description</span>
+      <span class="s">----------------</span>
+      <span class="s">The `[!--instance_name--!]` is not accessible on the url's listed below. It has been down since [!--timestamp--!].</span>
+
+      <span class="s">Affected Url</span>
+      <span class="s">------------------</span>
+      <span class="s">[!--instance_url--!]</span>
+
+
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">substitution</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">append_hash</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">problem_id</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s">problem_id</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="nv"> </span><span class="s">'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div></div>
+
+<p class="figure-caption">An example <code class="language-plaintext highlighter-rouge">format</code> YAML file for the <code class="language-plaintext highlighter-rouge">incident</code> table of a developer instance that maps the table’s fields to the input data from <code class="language-plaintext highlighter-rouge">test_submit.xlsx</code>.<sup id="fnref:7:1" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup> This snip-it illustrates the configuration options available for <code class="language-plaintext highlighter-rouge">format</code> YAML files. A full version of the file can be found on the SNulk Github repo.<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">7</a></sup></p>
+
+<details class="figure-expand-code">
+  <summary class="figure-expand-code">Expand for Full Code</summary>
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">short_name</span><span class="pi">:</span> <span class="s">test_incident</span>
+<span class="na">instance</span><span class="pi">:</span> <span class="s">dev286834</span>
+<span class="na">table</span><span class="pi">:</span> <span class="s">incident</span>
+<span class="na">return_fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">__SYSID__</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Incident</span><span class="nv"> </span><span class="s">SysID'</span>
+    <span class="na">none_is_empty</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Incident</span><span class="nv"> </span><span class="s">Number'</span>
+    <span class="na">none_is_empty</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">fields</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">caller_id</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">6816f79cc0a8016401c5a33be04be441'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">category</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">inquiry'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">subcategory</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">internal</span><span class="nv"> </span><span class="s">application'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">business_service</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">281a4d5fc0a8000b00e4ba489a83eedc'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cmdb_ci</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">281a4d5fc0a8000b00e4ba489a83eedc'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">contact_type</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">email'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">state</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">impact</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s">impact</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">urgency</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s">urgency</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">assignment_group</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">12a586cd0bb23200ecfd818393673a30'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">assigned_to</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">63b4c2cd0bb23200ecfd818393673a95'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">short_description</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">[Service</span><span class="nv"> </span><span class="s">Interruption]</span><span class="nv"> </span><span class="s">Instance</span><span class="nv"> </span><span class="s">'[!--instance_name--!]'</span><span class="nv"> </span><span class="s">Is</span><span class="nv"> </span><span class="s">Down"</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">substitution</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">description</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">Description</span>
+      <span class="s">----------------</span>
+      <span class="s">The `[!--instance_name--!]` is not accessible on the url's listed below. It has been down since [!--timestamp--!].</span>
+
+      <span class="s">Affected Url</span>
+      <span class="s">------------------</span>
+      <span class="s">[!--instance_url--!]</span>
+
+
+    <span class="na">required</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">substitution</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">append_hash</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">problem_id</span>
+    <span class="na">data_key</span><span class="pi">:</span> <span class="s">problem_id</span>
+    <span class="na">default_value</span><span class="pi">:</span> <span class="s1">'</span><span class="nv"> </span><span class="s">'</span>
+    <span class="na">required</span><span class="pi">:</span> <span class="no">false</span>
+
+</code></pre></div>  </div>
+</details>
+
+<p>For example, take the fields <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">impact</code>, and <code class="language-plaintext highlighter-rouge">problem_id</code> of the <code class="language-plaintext highlighter-rouge">incident</code> table in the figure above. All newly submitted records will contain a value of <code class="language-plaintext highlighter-rouge">inquiry</code> in the <code class="language-plaintext highlighter-rouge">category</code> field. However, for the field <code class="language-plaintext highlighter-rouge">impact</code>, the value for a given record will be <code class="language-plaintext highlighter-rouge">3</code> if the column <code class="language-plaintext highlighter-rouge">impact</code> in the input data is empty for the associated row. Otherwise, it will be whatever value the input data contains for that column and row. On the other hand, the field <code class="language-plaintext highlighter-rouge">problem_id</code> will be ommited from all record submissions unless the column <code class="language-plaintext highlighter-rouge">problem_id</code> contains non-empty data for a row from the input data.</p>
+
+<p>In addition to the <code class="language-plaintext highlighter-rouge">format</code> YAML options already mentioned for field entries, the <code class="language-plaintext highlighter-rouge">description</code> field in the above figure illustrates two additional features of SNulk. First is the <code class="language-plaintext highlighter-rouge">substitution</code> option. By default, the value of <code class="language-plaintext highlighter-rouge">default_value</code> is treated as a string literal. However, when <code class="language-plaintext highlighter-rouge">substitution</code> is set to <code class="language-plaintext highlighter-rouge">true</code> sub-strings formatted like <code class="language-plaintext highlighter-rouge">[!--column_name--!]</code> will be replaced with the value of column <code class="language-plaintext highlighter-rouge">column_name</code> in a given row of the input data. This allows for additional formatting and data processing to be performed on the input data by SNulk. For the field <code class="language-plaintext highlighter-rouge">description</code>, the values of columns <code class="language-plaintext highlighter-rouge">instance_name</code>, <code class="language-plaintext highlighter-rouge">timestamp</code>, and <code class="language-plaintext highlighter-rouge">instance_url</code>, for a given row of input data, are all being substituted into the <code class="language-plaintext highlighter-rouge">default_value</code>. Second is the <code class="language-plaintext highlighter-rouge">append_hash</code> option. When the <code class="language-plaintext highlighter-rouge">append_hash</code> option is set to <code class="language-plaintext highlighter-rouge">true</code> this indicates that all data to be submitted as a table record is to be hashed. The hash is then appended at the end of the value for the field <code class="language-plaintext highlighter-rouge">description</code>. This allows SNulk to check for and warn users of duplicate records in the existing records of a table before submitting a new table record.</p>
+
+<p>Lastly, SNulk has the ability to retrieve data created by a ServiceNow instance after a table record has been submitted. The data can be mapped back to columns in the input data by creating field entries in the <code class="language-plaintext highlighter-rouge">return_fields</code> of the <code class="language-plaintext highlighter-rouge">format</code> YAML file. The format of <code class="language-plaintext highlighter-rouge">return_fields</code> is similar to that of normal fields. Mainly, <code class="language-plaintext highlighter-rouge">name</code> indicates a field in a ServiceNow table and <code class="language-plaintext highlighter-rouge">data_key</code> indicates a column in the input data. However, for the entries in <code class="language-plaintext highlighter-rouge">return_fields</code>, a <code class="language-plaintext highlighter-rouge">data_key</code> is required for each entry. The figure above illustrates how to define <code class="language-plaintext highlighter-rouge">return_fields</code> entries for the <code class="language-plaintext highlighter-rouge">incident</code> table. By default, SNulk will always retrieve the <code class="language-plaintext highlighter-rouge">sysid</code> of a submitted record and record it in the input data under the column <code class="language-plaintext highlighter-rouge">Submit SysId</code>. This is to indicate that a record has been created for a given row in the input data incase the submission process gets interrupted part way. The column name for storing the <code class="language-plaintext highlighter-rouge">sysid</code> of submitted records can be changed by defining a <code class="language-plaintext highlighter-rouge">__SYSID__</code> entry in the <code class="language-plaintext highlighter-rouge">return_fields</code>.</p>
+
+<h3 id="using-snulk-to-submit-test-data-to-the-incident-table">Using SNulk to Submit Test Data To The <code class="language-plaintext highlighter-rouge">incident</code> Table</h3>
+
+<p>Once both the <code class="language-plaintext highlighter-rouge">struct</code> and <code class="language-plaintext highlighter-rouge">format</code> YAML files have been generated for the <code class="language-plaintext highlighter-rouge">incident</code> table, SNulk can be used to submit data to the table. Follow the steps below to submit test data to the <code class="language-plaintext highlighter-rouge">incident</code> table on a developer instance of ServiceNow. The steps below use SNulk’s CLI to perform the submission. However, except for step 3, the overall submission process is the same when using SNulk as a python library. More information on how to use SNulk as a python library can be found on the Readme file in SNulk’s github repo.<sup id="fnref:2:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup> Additionally, the test data and YAML files referenced in this section are the files used/generated in the previous sections. Examples of the test data spreadsheet, the <code class="language-plaintext highlighter-rouge">struct</code> YAML file, and the <code class="language-plaintext highlighter-rouge">format</code> YAML file can be found in the SNulk Github repo <code class="language-plaintext highlighter-rouge">example</code> directory.<sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup></p>
+
+<ol>
+  <li>
+    <p>Install SNulk from PyPi using the command below. Note other options for instillation are listed on the SNulk Github repo Readme file.<sup id="fnref:2:3" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>SNulk
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Grab the data that will be used during the SNulk submission process. The data being used in this example submission can be found in the SNulk Github repo and is displayed below.<sup id="fnref:7:2" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">6</a></sup>
+<img src="/assets/images/posts/snulk/snulk08.png" alt="Submit 1" title="Submit 1" class="figure-img" /></p>
+  </li>
+  <li>
+    <p>Run SNulk to submit the input data to the table on the ServiceNow instance. The command below submits data from <code class="language-plaintext highlighter-rouge">test_submit.xlsx</code> to the <code class="language-plaintext highlighter-rouge">incident</code> table of a ServiceNow developer instance. In the command below, <code class="language-plaintext highlighter-rouge">-t</code> is the path to a directory housing the <code class="language-plaintext highlighter-rouge">struct</code> and <code class="language-plaintext highlighter-rouge">format</code> YAML files. The directory should contain two subdirectories <code class="language-plaintext highlighter-rouge">struct</code> and <code class="language-plaintext highlighter-rouge">format</code> which contain the associated files. The <code class="language-plaintext highlighter-rouge">-n</code> option specifies the <code class="language-plaintext highlighter-rouge">short_name</code> of the <code class="language-plaintext highlighter-rouge">format</code> YAML file that will be used during this submission. The <code class="language-plaintext highlighter-rouge">-i</code> option specifies the path to the input data file. Lastly, the <code class="language-plaintext highlighter-rouge">-u</code> and <code class="language-plaintext highlighter-rouge">-p</code> options specify the username and password to be used during basic authentication to the ServiceNow instance. Additional options including additional authentication options can be found on the SNulk Github repo Readme file.<sup id="fnref:2:4" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>snulk <span class="nt">-t</span> example/submit_table <span class="nt">-u</span> user <span class="nt">-p</span> password <span class="nt">-n</span> test_incident <span class="nt">-i</span> example/data/test_submit.xlsx
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>After running SNulk, the input data file will be modified to include at minimum the SysID of each submitted record. For the command above, the <code class="language-plaintext highlighter-rouge">example/data/test_submit.xlsx</code> will have been modified to look like the below image. Note the creation of the two new <code class="language-plaintext highlighter-rouge">Incident SysID</code> and <code class="language-plaintext highlighter-rouge">Incident Number</code> columns which were filled by retrieving data from the ServiceNow table after creating the record. These match the <code class="language-plaintext highlighter-rouge">return_fields</code> defined in the <code class="language-plaintext highlighter-rouge">format</code> YAML file of the previous section. If all records were submitted correctly, all entries in <code class="language-plaintext highlighter-rouge">Incident SysID</code> should be filled with the <code class="language-plaintext highlighter-rouge">SysIDs</code> of the submitted records. 
+<img src="/assets/images/posts/snulk/snulk09.png" alt="Submit 2" title="Submit 2" class="figure-img" /></p>
+  </li>
+  <li>
+    <p>A successful submission can also be confirmed by going to the list view of the table and checking for the submitted records. The list view of the <code class="language-plaintext highlighter-rouge">incident</code> table displayed below shows some of the submitted records. The remaining records are on the second page of the list view.
+<img src="/assets/images/posts/snulk/snulk10.png" alt="Submit 3" title="Submit 3" class="figure-img" /></p>
+  </li>
+  <li>
+    <p>Finally, by examining a submitted record, one can see that the <code class="language-plaintext highlighter-rouge">format</code> YAML file was applied successfully. The image below, displays the record for the first row of the input data from <code class="language-plaintext highlighter-rouge">example/data/test_submit.xlsx</code>. Here we see that all input data has been successfully mapped to the table fields, default values have been applied, substitutions have been successful, and a hash of the submitted data has been included.
+<img src="/assets/images/posts/snulk/snulk11.png" alt="Submit 4" title="Submit 4" class="figure-img" /></p>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As shown, SNulk, the ServiceNow Bulk Submit Tool for Table Records, provides a solution to the problem of needing to automate the submission of large numbers of templated records to a table on a ServiceNow instance. SNulk can be run by a simple command or as a Python library, and used to create any number of new table records from a combination of templates and input data. Unlike the GUI import option of ServiceNow instances, SNulk is designed to aid users in scripting and automation efforts where limited user interaction is required. Further still, the templates required by SNulk are easily defined, readily customizable, reusable, and intended to be modified to fit the use case of users. More information about SNulk and its uses can be found on the SNulk Github repo.<sup id="fnref:2:5" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk">https://github.com/ServiceNow/SNulk</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/PySNC">https://github.com/ServiceNow/PySNC</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk/blob/main/README.md">https://github.com/ServiceNow/SNulk/blob/main/README.md</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:2:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:2:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a> <a href="#fnref:2:4" class="reversefootnote" role="doc-backlink">&#8617;<sup>5</sup></a> <a href="#fnref:2:5" class="reversefootnote" role="doc-backlink">&#8617;<sup>6</sup></a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk/tree/main/example">https://github.com/ServiceNow/SNulk/tree/main/example</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk/tree/main/example/submit_table/struct/dev_incident.yaml">https://github.com/ServiceNow/SNulk/tree/main/example/submit_table/struct/dev_incident.yaml</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk/blob/main/example/data/test_submit.xlsx">https://github.com/ServiceNow/SNulk/blob/main/example/data/test_submit.xlsx</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:7:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p><a href="https://github.com/ServiceNow/SNulk/blob/main/example/submit_table/format/test_submit.yaml">https://github.com/ServiceNow/SNulk/blob/main/example/submit_table/format/test_submit.yaml</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style>
+  .page__footer {
+    background-color: rgb(255, 255, 255);
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  div#footer {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 0px;
+  }
+
+  .footer__inner-wrap {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-family: -apple-system, "system-ui", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1rem;
+    height: 137.328px;
+    justify-content: space-between;
+    line-height: 1.2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
+    padding-top: 20px;
+    text-size-adjust: 100%;
+  }
+
+  .col-12 {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: none;
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.5rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 400;
+    /* height: 864px; */
+    letter-spacing: normal;
+    line-height: 15px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 1700px;
+    min-height: 1px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    /* width: 1293px; */
+    -webkit-box-flex: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .row {
+    color: rgb(0, 0, 0);
+  }
+
+  .logo-tagline-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    /*margin-bottom: 12px;*/
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.8rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 500;
+  }
+
+  @media screen and (width < 725px) {
+    .logo-tagline-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  .logo-tagline-container img {
+    height: 1.2rem;
+    /*min-width: 8rem;*/
+    /*width: 118px;*/
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    /*margin-right: -1rem;
+    margin-left: -1rem;*/
+  }
+
+  .logo_site_title {
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-right: 4px;
+  }
+
+  .logo_site_tagline {
+    background-color: var(--brand-infinite-blue);
+    color: var(--brand-wasabi-green);
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-left: 10x;
+    padding-left: 10px;
+  }
+
+  /*no idea what this was intended for*/
+  /*links {
+    border: 1px solid #e1e1e1;
+    border-left: unset;
+    border-right: unset;
+    margin: 33px -15px 40px;
+    padding: 40px 0 0;
+  }*/
+
+  ul.footer-visible-links {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer__menu-item-link {
+    clear: unset;
+    float: unset;
+    margin-right: 24px;
+  }
+
+  .page__footer-nav {
+    font-size: 0.6rem;
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: regular;
+
+  }
+
+  .page__footer-copyright {
+    font-size: 0.6rem;
+  }
+
+  .footer-visible-links {
+    display: flex;
+    text-align: left;
+    font-size: 0.6rem;
+    align-items: left;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    /*justify-content: left;*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    /*flex: 1;*/
+    overflow: hidden;
+  }
+
+  .footer__menu-item a {
+    display: block;
+    list-style-type: none;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    /*margin-bottom: 20px;*/
+  }
+</style>
+
+
+<div id="footer-container">
+  <div class="footer__inner-wrap">
+    <div class="masthead__menu">
+      <div class="logo-tagline-container">
+        
+        <img src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+        
+        <span class="logo_site_title">Security Lab</span>
+        <span class="logo_site_tagline">Keeping your workflows secure.</span>
+      </div>
+      <nav id="footer-site-nav" class="page__footer-nav">
+        <ul class="footer-visible-links"><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/terms-of-use.html"  target="_blank">Terms and conditions</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/company/trust/privacy/gdpr.html"  target="_blank">GDPR</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/privacy-statement.html"  target="_blank">Privacy statement</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="/data-collection"  target="_blank">Data collection</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="mailto:securitylab@servicenow.com?subject=Security%20Lab%20Site%20Contact"  target="_blank">Contact Us</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://twitter.com/SNSecurityLab"  target="_blank">Twitter</a>
+          </li></ul>
+      </nav>
+      <div class="page__footer-copyright">&copy; 2024 ServiceNow, Inc. All
+        rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
