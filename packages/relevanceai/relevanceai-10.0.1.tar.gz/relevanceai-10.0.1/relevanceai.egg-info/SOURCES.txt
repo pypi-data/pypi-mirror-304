@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+relevanceai/__init__.py
+relevanceai/_base_client.py
+relevanceai/_client.py
+relevanceai/_resource.py
+relevanceai.egg-info/PKG-INFO
+relevanceai.egg-info/SOURCES.txt
+relevanceai.egg-info/dependency_links.txt
+relevanceai.egg-info/requires.txt
+relevanceai.egg-info/top_level.txt
+relevanceai/resources/__init__.py
+relevanceai/resources/agents.py
+relevanceai/resources/knowledge.py
+relevanceai/resources/tasks.py
+relevanceai/resources/tools.py
