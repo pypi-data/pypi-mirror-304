@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/pyproject_freeze/__init__.py
+src/pyproject_freeze/freeze.py
+src/pyproject_freeze.egg-info/PKG-INFO
+src/pyproject_freeze.egg-info/SOURCES.txt
+src/pyproject_freeze.egg-info/dependency_links.txt
+src/pyproject_freeze.egg-info/entry_points.txt
+src/pyproject_freeze.egg-info/requires.txt
+src/pyproject_freeze.egg-info/top_level.txt
