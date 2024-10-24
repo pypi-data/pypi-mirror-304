@@ -1,0 +1,5 @@
+[console_scripts]
+obx = obx.cli:wrapped
+obxc = obx.console:wrapped
+obxd = obx.daemon:main
+obxs = obx.service:wrapped
