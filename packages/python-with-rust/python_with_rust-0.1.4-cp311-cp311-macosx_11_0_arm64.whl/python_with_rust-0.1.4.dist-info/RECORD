@@ -1,0 +1,5 @@
+python_with_rust-0.1.4.dist-info/METADATA,sha256=mJ34-Hr-5IoReA0zfYJ96JDFisvIxUJHI-EwvwQBNU0,3508
+python_with_rust-0.1.4.dist-info/WHEEL,sha256=G0UiGw3m33Mk_hYz-jWAoIF2nZyjCvAl7lj9uXFMSyg,104
+python_with_rust/__init__.py,sha256=zYRnygbe0Ok8QS49ntBX2xeoX0AA22xnGgxWD7e3bhI,61
+python_with_rust/python_with_rust.cpython-311-darwin.so,sha256=LlsiS4gqyUbFttKAxlXwiF3xqHKu7LyRwnG-Q5vZQ-A,583896
+python_with_rust-0.1.4.dist-info/RECORD,,
