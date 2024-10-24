@@ -1,0 +1,13 @@
+
+[:python_version >= "3.13"]
+legacy-cgi>=2.6
+
+[docs]
+Sphinx>=1.7.5
+pylons-sphinx-themes
+
+[testing]
+pytest>=3.1.0
+coverage
+pytest-cov
+pytest-xdist
