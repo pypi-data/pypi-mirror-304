@@ -1,0 +1,41 @@
+[project]
+name = "panars"
+version = "0.1.2"
+description = "Default template for PDM package"
+authors = [
+    {name = "milisp", email = "milisp@proton.me"},
+]
+dependencies = [
+    "polars>=1.10.0",
+    "pyarrow>=7.0.0",
+    "xlsxwriter",
+    "pandas",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest-cov>=5.0.0",
+]
+
+[project.optional-dependencies]
+numpy = ["numpy >= 1.16.0"]
+pandas = ["pandas", "polars[pyarrow]"]
+pyarrow = ["pyarrow >= 7.0.0"]
+pydantic = ["pydantic"]
+
+# Excel
+calamine = ["fastexcel >= 0.9"]
+openpyxl = ["openpyxl >= 3.0.0"]
+xlsx2csv = ["xlsx2csv >= 0.8.0"]
+xlsxwriter = ["xlsxwriter"]
+excel = ["polars[calamine,openpyxl,xlsx2csv,xlsxwriter]"]
+
+[tool.ruff]
+extend-ignore = ["E501"]  # Line too long

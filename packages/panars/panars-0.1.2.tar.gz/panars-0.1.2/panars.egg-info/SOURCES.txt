@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+panars/__init__.py
+panars/dataframe.py
+panars/io.py
+panars/series.py
+panars/utils.py
+panars.egg-info/PKG-INFO
+panars.egg-info/SOURCES.txt
+panars.egg-info/dependency_links.txt
+panars.egg-info/requires.txt
+panars.egg-info/top_level.txt
+tests/test_dataframe.py
+tests/test_io.py
+tests/test_series.py
