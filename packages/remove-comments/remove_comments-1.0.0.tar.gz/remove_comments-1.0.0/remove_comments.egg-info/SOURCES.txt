@@ -1,0 +1,9 @@
+README.md
+setup.py
+remove_comments/__init__.py
+remove_comments/main.py
+remove_comments/remove_comments.py
+remove_comments.egg-info/PKG-INFO
+remove_comments.egg-info/SOURCES.txt
+remove_comments.egg-info/dependency_links.txt
+remove_comments.egg-info/top_level.txt

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: remove-comments
+Version: 1.0.0
+Summary: A Python library to remove hash comments from code files
+Home-page: https://github.com/ваш_логин/remove_comments
+Author: Ваше Имя
+Author-email: ваш_email@example.com
+License: UNKNOWN
+Description: # Remove Comments Library
+        
+        This is a Python library to remove hash comments from Python code files. It also supports automatic overwriting of the calling file to remove comments.
+        
+        ## Installation
+        
+        ```bash
+        pip install remove-comments
+        ```
+        
+        ## Usage
+        
+        from remove_comments import remove_comments_and_update_file
+        
+        remove_comments_and_update_file()
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
