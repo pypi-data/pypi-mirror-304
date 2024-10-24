@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "monitool"
+authors = [{name = "Grissess", email = "grissess@nexusg.org"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+dynamic = ["version"]
+description = "A little library for writing monitoring plugins for Nagios, Icinga, and probably others that are ABI-compatible."
+readme = "README.md"
+
+[project.urls]
+Home = "https://github.com/Grissess/monitool"
