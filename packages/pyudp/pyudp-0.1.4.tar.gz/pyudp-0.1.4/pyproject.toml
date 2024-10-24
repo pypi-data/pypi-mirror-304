@@ -1,0 +1,21 @@
+[project]
+name = "pyudp"
+version = "0.1.4"
+description = "A simple UDP client and server"
+readme = "README.md"
+authors = [
+    { name = "takumi-nishimura", email = "clp13218@nitech.jp" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "setuptools>=75.2.0",
+    "twine>=5.1.1",
+    "wheel>=0.44.0",
+]
