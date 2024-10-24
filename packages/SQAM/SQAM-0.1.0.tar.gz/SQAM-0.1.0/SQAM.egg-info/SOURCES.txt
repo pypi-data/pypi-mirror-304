@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+SQAM.egg-info/PKG-INFO
+SQAM.egg-info/SOURCES.txt
+SQAM.egg-info/dependency_links.txt
+SQAM.egg-info/entry_points.txt
+SQAM.egg-info/requires.txt
+SQAM.egg-info/top_level.txt
+sqam/__init__.py
+sqam/app.py
+tests/test_app.py

@@ -1,0 +1,5 @@
+Flask
+numpy
+sentence-transformers
+scikit-learn
+pytest
