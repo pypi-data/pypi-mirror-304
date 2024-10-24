@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: example_package_Chongjun_Li
+Version: 0.0.1
+Summary: Predicitve Mean Matching (nearest neighbour)
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: Chongjun Li <cho.li@outlook.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+This package contains a missing value imputation method called predictive mean matching using
+the method of nearest neighbours to select the donors.
