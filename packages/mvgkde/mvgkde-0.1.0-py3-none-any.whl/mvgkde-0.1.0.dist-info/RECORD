@@ -1,0 +1,10 @@
+mvgkde/__init__.py,sha256=Qdf8oewKNVcus_UNjecOJ2j5nPAwbZjuFz_F3wy02Po,262
+mvgkde/_core.py,sha256=qQ9NSaRqALe3p_j9xezLivXnHUrVdAXyxKKuDXInLXs,16073
+mvgkde/_version.py,sha256=IMl2Pr_Sy4LVRKy_Sm4CdwUl1Gryous6ncL96EMYsnM,411
+mvgkde/_version.pyi,sha256=o7uNL6MhuJoiqpEnriU7rBT6TmkJZA-i2qMoNz9YcgQ,82
+mvgkde/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mvgkde-0.1.0.dist-info/METADATA,sha256=F9fPMkhb3T3yNJrJdN7W1ONxGpOBuXD40FFVP1oJWb0,18319
+mvgkde-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mvgkde-0.1.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+mvgkde-0.1.0.dist-info/licenses/NOTICE,sha256=vTXZ9TjDFTpITpvdV2_BFJiQmANJXirSnhR15hOdY-E,183
+mvgkde-0.1.0.dist-info/RECORD,,
