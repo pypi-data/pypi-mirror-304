@@ -1,0 +1,2 @@
+[console_scripts]
+netbox_agent = netbox_agent.cli:main
