@@ -1,0 +1,2 @@
+[console_scripts]
+ngp-cli = netgear_plus_cli:main
