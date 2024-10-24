@@ -1,0 +1,54 @@
+import notebookutils.lakehouse
+import notebookutils.notebook
+import notebookutils.runtime
+import notebookutils.credentials
+
+class Lakehouse:
+
+    def by_name(self, lakehouse_name: str) -> dict:
+        found_lakehouse = notebookutils.lakehouse.get(lakehouse_name, Runtime().current_workspace_id())
+
+        if(found_lakehouse == None):
+            raise Exception(f"Lakehouse with name {lakehouse_name} not found in the current workspace")
+
+        return {
+                "uid": found_lakehouse.id,
+                "abfsPath": found_lakehouse.properties['abfsPath']
+            }
+
+class Runtime:
+
+    def current_workspace_id(self) -> str:
+        current_workspace_id = notebookutils.runtime.getCurrentWorkspaceId()
+
+        if(current_workspace_id == None):
+            raise Exception("Workspace ID not found. Please ensure you are running this code in an Azure Synapse Notebook.")
+        return current_workspace_id
+
+    def current_workspace_name(self) -> str:
+        current_workspace_name = notebookutils.runtime.context['currentWorkspaceName']
+
+        if(current_workspace_name == None):
+            raise Exception("Workspace Name not found. Please ensure you are running this code in an Azure Synapse Notebook.")
+        return current_workspace_name
+    
+    def current_notebook_name(self) -> str:
+        current_notebook_name = notebookutils.runtime.context['notebookName']
+
+        if(current_notebook_name == None):
+            raise Exception("Notebook Name not found. Please ensure you are running this code in an Azure Synapse Notebook.")
+        return current_notebook_name
+
+
+class Util:
+    def dump(self, obj: object) -> None:
+      for attr in dir(obj):
+        print("obj.%s = %r" % (attr, getattr(obj, attr)))
+
+    def get_secret_from_keyvault(self, keyvault_name: str , secret_name: str) -> str:
+        foundSecret = notebookutils.credentials.getSecret(keyvault_name, secret_name)
+
+        if(foundSecret == None):
+            raise Exception(f"Secret with name {secret_name} not found in the keyvault {keyvault_name}")
+
+        return foundSecret 
