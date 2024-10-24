@@ -1,0 +1,15 @@
+# Include the README and LICENSE files
+include README.md
+include LICENSE
+
+# Include all .txt files in the root directory
+include *.txt
+
+# Include all files in the neera package
+recursive-include neera *
+
+# Include additional data files (if any)
+# recursive-include data *
+
+# Exclude unwanted files (optional)
+# exclude tests/*
