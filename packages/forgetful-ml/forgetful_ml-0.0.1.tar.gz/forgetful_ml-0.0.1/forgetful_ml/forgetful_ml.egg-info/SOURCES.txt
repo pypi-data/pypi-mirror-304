@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+.github/workflows/publish.yml
+forgetful_ml/__init__.py
+forgetful_ml/forgetful_ml.egg-info/PKG-INFO
+forgetful_ml/forgetful_ml.egg-info/SOURCES.txt
+forgetful_ml/forgetful_ml.egg-info/dependency_links.txt
+forgetful_ml/forgetful_ml.egg-info/requires.txt
+forgetful_ml/forgetful_ml.egg-info/top_level.txt
