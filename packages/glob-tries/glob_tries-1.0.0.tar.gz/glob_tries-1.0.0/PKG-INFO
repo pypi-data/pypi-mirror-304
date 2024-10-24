@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: glob-tries
+Version: 1.0.0
+Summary: Utilities for efficient glob matching using tries
+Author: Zack Robinson
+Author-email: zachary.robinson@arcesium.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
