@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.py
+windows_atom/__init__.py
+windows_atom/windows_atom.py
+windows_atom.egg-info/PKG-INFO
+windows_atom.egg-info/SOURCES.txt
+windows_atom.egg-info/dependency_links.txt
+windows_atom.egg-info/top_level.txt
