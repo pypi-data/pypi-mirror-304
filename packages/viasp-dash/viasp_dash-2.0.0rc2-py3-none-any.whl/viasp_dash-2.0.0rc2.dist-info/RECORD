@@ -1,0 +1,16 @@
+viasp_dash/ViaspDash.py,sha256=ZykLsfnuTZ_W4UfLOAtezZ05Lb8pv2V_miPLFcSP0oI,1392
+viasp_dash/__init__.py,sha256=sAa7GgwcpmKSBZ81BfqxZDgKM04uE2EFK0zLP7Q3t7A,2274
+viasp_dash/_imports_.py,sha256=4u-5_EN9UWm1k6xY9WL7JY7p089gf_LJAiSyQwnWhcM,63
+viasp_dash/async-IconWrapper.js,sha256=0S4t1KK10m-4CzeqBZtNB3LL54t-8H-OHzGHCZYmvU0,21974
+viasp_dash/async-IconWrapper.js.map,sha256=AJYHbiIJ8rTMnvJbCXub2RHc9eYAONotcYPutXineVM,92303
+viasp_dash/async-Settings.js,sha256=W-jlF-i29kPL2KAh9xJ5OPAdlKycDP7uMuT-SdrbtlA,15020
+viasp_dash/async-Settings.js.map,sha256=kbT8QM9kLgjdF5sQUD6tb3pbvxSPYLce5l1n-KkvAFg,157478
+viasp_dash/metadata.json,sha256=gaRsRfM1f1sD5zile8m8YkOkPzYJTILKtU2YqqOY6BE,1439
+viasp_dash/package-info.json,sha256=e7hultKL58cv0bOVG3anegQI3zO2RNHeDJ9g1HmeNHc,2394
+viasp_dash/viasp_dash.min.js,sha256=Y-u9lTFuKiuBWCgIXoPk0dHr3JeiMMV9O_p5UvPV0Wc,348333
+viasp_dash/viasp_dash.min.js.map,sha256=r3vfE7iYUyjLljAkvYOGAUdf5H2ORan0pu4-uIwGc_E,3331432
+viasp_dash-2.0.0rc2.dist-info/LICENCE.md,sha256=gA5QsyL5pe65wCU2pUm4qhFLdrD4NS-vixTqxJyiWuo,1087
+viasp_dash-2.0.0rc2.dist-info/METADATA,sha256=YPNResBVCrR8689mQ3h_jI92XGc-1z6tjtWfdiFOb3I,380
+viasp_dash-2.0.0rc2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+viasp_dash-2.0.0rc2.dist-info/top_level.txt,sha256=bCa-na99LzGn1O3pMHm3BGz3Bj80fdMzLo4hEX_Y62s,11
+viasp_dash-2.0.0rc2.dist-info/RECORD,,
