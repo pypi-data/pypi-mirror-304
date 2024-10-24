@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: dss.wdc_client
+Version: 0.1.1
+Summary: A small Client for the WDC-Rest-API.
+Home-page: https://dss-wdc.wiso.uni-hamburg.de/
+Author: Tino Schöllhorn
+Author-email: t.schoellhorn@uni-mannheim.de
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pandas (>=2.2)
+Requires-Dist: requests (>=2.3)
+Description-Content-Type: text/markdown
+
+Step 1: After clean rebuild
+=== 
+
+	poetry install
+
+Step 2: Typical cases
+=== 
+
+* Abhängigkeiten aktualisieren
+	 poetry update
+	 
+* Eine Python-Datei: src/main.py
+
+	poetry run python3 src/main.py
+	
+* Testfälle siehe: https://pytest-with-eric.com/getting-started/poetry-run-pytest/
+
+	poetry run pytest 
+	poetry run pytest -k test_simple
+	poetry run pytest -s (mit Output)
+	
+Publish to PyPI
+===
+(https://python-poetry.org/docs/repositories/#publishable-repositories)
+	
+1. Config token (once)
+	poetry config pypi-token.pypi <my-token>
+
+2. Publish
+	poetry publish --build
+
+
