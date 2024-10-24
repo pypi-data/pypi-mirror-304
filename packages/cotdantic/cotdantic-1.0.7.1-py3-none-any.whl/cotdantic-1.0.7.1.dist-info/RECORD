@@ -1,0 +1,15 @@
+cotdantic/__init__.py,sha256=9lRs_R4w19nGN19NSyxbyG638HeeEvQ26MQX5qPJmpA,604
+cotdantic/contacts.py,sha256=PytUtIwWUOgVQ1yPiki4KhK0J8kutxR7oDBhrreOqRE,2128
+cotdantic/converters.py,sha256=-BiGW1E6pC9fuQr70DwJONIj-OusNAi1uY3nPFLx5Wc,6634
+cotdantic/cot_types.py,sha256=54IrHeCtkXZHc7cT_zmNgCcc2juT0ju36h0PftgnRa8,6575
+cotdantic/listener.py,sha256=9oSDrtNTnycsQVRjP5uY1hZaQE8LL_I8EEAilULNj-c,5965
+cotdantic/models.py,sha256=j1zYe_d1jKidetx_vFLNqYI9aJ1Y1z5RlhkLwq3Id0g,8678
+cotdantic/multicast.py,sha256=og4PRoAYjMsI7b74ud42eIsIvK7mbyFRfpyPR26Ipa8,6386
+cotdantic/utilities.py,sha256=5Uf5nmBh3g6JqJ0rwvORIPb9W7D6tbZA1rXFdNEkm0U,2475
+cotdantic/windows.py,sha256=Yh9uim1iMdKOrHVXPpSodefkWIR-NVUDi7vSJ9CHwNI,3387
+cotdantic-1.0.7.1.dist-info/LICENSE,sha256=B5JaufNIMAuD89iqHEqelmcoAtoKKzuMvOaH9O1JNJU,1091
+cotdantic-1.0.7.1.dist-info/METADATA,sha256=AuiPbXpjD7or594DnZhPkgT1CBxhnDrU-JegqnsxWmk,8154
+cotdantic-1.0.7.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cotdantic-1.0.7.1.dist-info/entry_points.txt,sha256=hIFTgtT2j3D5Si1KVrYoYwuee1u_Xs2SN1Al3W5aO2k,55
+cotdantic-1.0.7.1.dist-info/top_level.txt,sha256=q_idLaNzY7hT_QV100IlKpihuNUkC49xQNp2R07xqeI,10
+cotdantic-1.0.7.1.dist-info/RECORD,,
