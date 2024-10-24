@@ -1,0 +1,15 @@
+skia_gradient_array/__init__.py,sha256=hwH_k1ATQmjymJ4oaqYXqx87r5aCo3lxS_4nY7asizg,423
+skia_gradient_array/_version.py,sha256=30uCcJe-_REkiinJ81dfEPp-6KRyYbayl5dgSgT86nc,201
+skia_gradient_array/example.py,sha256=d9AMc0q6F678DAskNzhj7QDY1MmrjloZMMECgRDvqFI,986
+skia_gradient_array/gradient_canvas.py,sha256=TdvzSIuprI15njMH30Ggwumv41eUbQ6KvKkySeQxOcA,3350
+skia_gradient_array/gradient_param.py,sha256=MlL2f9tqzYg3Zx8iCgj-_hKUdaPf1LnvCxIXwkVRQ_k,177
+skia_gradient_array/set_patch_background.py,sha256=fumu7vd9UDnV8exEa_nvpZrAq0xyjLYo0GB2g4Kijsk,345
+skia_gradient_array/ui_gradient.py,sha256=rIIEe8zkLa9TmK_sQXjQQ9V9EjfsSUorwVWYiy7MyJE,861
+skia_gradient_array/data/ui-gradients.json,sha256=NyZ5JI9JW_WBLR5EhoZTarRx6--Z1ypxLLsuTtcPyi4,32491
+skia_gradient_array/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skia_gradient_array/tests/test_example.py,sha256=hnZD54ijFexGz-LyrXA5kcu0ktlbK-iHgwjQc0QdLoo,513
+skia_gradient_array-0.1.0.dist-info/LICENSE,sha256=gXhu0gGQC6XTAA-QhKJkhCYK_egKprp1tRuyoYHy-Uw,1499
+skia_gradient_array-0.1.0.dist-info/METADATA,sha256=x8Jbe8BbtzRpOYr96KrS1qVbFntyrCPW0eU7lRWnllM,1753
+skia_gradient_array-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+skia_gradient_array-0.1.0.dist-info/top_level.txt,sha256=jRwN0Pe4tp9UOe1JZUrR4UmMfkUlyCp-ytJvwJ-6kpQ,20
+skia_gradient_array-0.1.0.dist-info/RECORD,,
