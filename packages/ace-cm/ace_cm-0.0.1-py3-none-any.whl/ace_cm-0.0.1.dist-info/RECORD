@@ -1,0 +1,12 @@
+ace_cm/__init__.py,sha256=1T6NLcJf_Q3vCESwI6w3WyEsqTf86c6mlSxyKiwVKJA,65
+ace_cm/cm.py,sha256=xWu-ycyalSYiYs_GcM6hHYIgYhFQovNAOXaE4yN2U0M,3098
+ace_cm/ecm.py,sha256=f4YCAQ2Al1Eu55e_LLvOvK3a0lgm7OnbWXUViuCJeAk,3563
+ace_cm/package-lock.json,sha256=C_sevuB6qSyWF9CHV5nTsMLheeHDeNTp6JPWjiXs7Eg,1479745
+ace_cm/package.json,sha256=A10iNAAFLk175GnCKPBsu4DWH6U3NhxU1RilNSn4MeM,649
+ace_cm/public/index.html,sha256=LmcNN54aT805wF0vY8PJfP8AnvYBNUxAHhGjvW2JkR8,143
+ace_cm/src/index.ts,sha256=kv2iOe_2nstV7IDLeCzWP2mOP0MlCFO-1HsAK7oCG7U,1468
+ace_cm/src/react-app-env.d.ts,sha256=V-2kxMBKHcpFxihXMmiCzpzJSMS1KXPA48O35MP6OZA,40
+ace_cm/tsconfig.json,sha256=xZNeoX-sE9MK_LstIiwLjF4gc8rHr8B4_kpuYEH4lLM,535
+ace_cm-0.0.1.dist-info/METADATA,sha256=0L_rZX1wOzjPxVxe26AM5i2qGaLB8zrdBCTCSb02wwg,1220
+ace_cm-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ace_cm-0.0.1.dist-info/RECORD,,
