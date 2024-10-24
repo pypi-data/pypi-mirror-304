@@ -1,0 +1,7 @@
+requests
+geopy
+spacy<4.0.0,>=3.8.2
+
+[dev]
+pytest
+flake8
