@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: distman
+Version: 0.0.1
+Summary: Super simple software distribution system
+Home-page: http://github.com/rsgalloway/distman
+Author: Ryan Galloway
+Author-email: ryan@rsgalloway.com
+Description-Content-Type: text/markdown
+
+distman
+=======
+
+Super simple git repo distribution and version control system.
+
+Distribution instructions are defined in a dist.json file in the
+git repo.
+
+```bash
+$ distman [options]
+```
