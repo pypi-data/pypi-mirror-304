@@ -1,0 +1,14 @@
+polymethod/__init__.py,sha256=AIx7pwtnng92L3sicXovcXXk0SvqyHKsoFxsGC2EBAY,256
+polymethod/_version.py,sha256=el9UpDSy_qQxCZeXOIkQQlCXWZ9-LCP99jCCxc-H9wY,70
+polymethod/api.py,sha256=77kHFR4N7eavptKAoI0FvGB7eZeQeXSu-Rim6WAXHek,611
+polymethod/datastructures.py,sha256=MF4dAu0-l8peIRGNRXQFMjCmX63ibPreO9CY6XR_62c,1225
+polymethod/exceptions.py,sha256=DOKTdCpzKNHwGN-nnq4k2Jy8jvgkkjcvXNC3cDsLX38,421
+polymethod/implementation.py,sha256=RiA7JX4hZuVfJVy7Ot3qnouS5gfZS0lZySRUw6CFxqU,3296
+polymethod/missing.py,sha256=ZWKLd85VzoXLWHeWYN-jPSfK7VGiloV_MhhvgdtK0uA,68
+polymethod/type_matching.py,sha256=E2qZwbE-rxVN3nIC3TF9p0i3QHPn5RhY0kB_BvU3icA,3181
+polymethod-1.0.0.dist-info/LICENSE,sha256=xd-c7Cj6lH5-Y8m9zhWsxYXxuv3mieb4z-pANVKpaHU,1069
+polymethod-1.0.0.dist-info/METADATA,sha256=ZyRwee0vj-jUoeCpaaUvPcaM5-w6ZdOH_XXu_t3ILr0,2593
+polymethod-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+polymethod-1.0.0.dist-info/top_level.txt,sha256=aScDJR0Kn8zlGnOoAv47gTDSSRoMkIzcVM0W8GSeJE8,11
+polymethod-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+polymethod-1.0.0.dist-info/RECORD,,
