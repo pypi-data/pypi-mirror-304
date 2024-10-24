@@ -1,0 +1,11 @@
+ofsc/__init__.py,sha256=PPuonAV7hBzMiMu35BIP2mOWs191BQ6bazAdg46XeQY,3331
+ofsc/common.py,sha256=_XmMkYTRIzVqKGXr0nxJ52hIeOsqrl5Njr9ve08yLmA,2515
+ofsc/core.py,sha256=hxa4EbmReEX5WP3NEXWdapLjuOx6nSFcSiVchapk1H0,13778
+ofsc/exceptions.py,sha256=XVBGKRoo8YP7g1Ndjz2-Cue8xMvO4wRklz1eHLgwmQ0,367
+ofsc/metadata.py,sha256=j4GaI4bK2TeYs2SfZGt0Ug7_7piLYk5JjE9RYXxmVaA,10346
+ofsc/models.py,sha256=s5aVxMDck9G1W1VaAO8x8bcdYp2BBx-CqZZPRB51Cso,15207
+ofsc/oauth.py,sha256=9etAmMJeVEqA7MYXuWGElK4VqmBdAXo3UpUJDu0XyFo,458
+ofsc-2.0.4.dist-info/LICENSE.txt,sha256=0VQPIQ_ax6KYVnNbhw4NLW_WkTD0UG8c2_H_L929ad8,1069
+ofsc-2.0.4.dist-info/METADATA,sha256=tyPA4MByBmpAviffHkZv0qDp_CIbdKSRCk67XR6ENnY,6718
+ofsc-2.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ofsc-2.0.4.dist-info/RECORD,,
