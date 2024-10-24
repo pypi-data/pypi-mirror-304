@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: educabiz
+Version: 0.0.1
+Summary: API client for *.educabiz.com 
+Author-email: Filipe Pina <shelf-corncob-said@duck.com>
+Project-URL: Homepage, https://github.com/fopina/python-educabiz
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# python package template
+
+## Content
+
+* `pytest` for tests: `make test`
+* `ruff` for linting/formatting: `make lint` (replaces both `black` and `isort`)
+* `.github` with actions ready to test PRs and publish releases
+
+## New project checklist
+
+* [ ] Replace `example` with *the* package
+* [ ] Replace `LICENSE` if MIT does not apply
+* [ ] Search the project for `# TODO` to find the (minimum list of) places that need to be changed.
+* [ ] Add PYPI credentials to secrets
+
