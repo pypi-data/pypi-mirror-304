@@ -1,0 +1,10 @@
+passagemath_tdlib.dylibs/libpari-gmp-tls.dylib,sha256=_PVoZk3oab6p4zuXTYU_nOq53yPL77G3QegQhuCoaTk,9820768
+passagemath_tdlib.dylibs/libgmp.10.dylib,sha256=1p8IcXScppr4hV8h3izdh5eqcZlx94QyZDkaWZUWeME,606176
+passagemath_tdlib-10.4.26.dist-info/RECORD,,
+passagemath_tdlib-10.4.26.dist-info/WHEEL,sha256=rbZp3SaOPKaffxqDFgjPQ8x46u0IXUFZQ9WCx4zi57o,109
+passagemath_tdlib-10.4.26.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_tdlib-10.4.26.dist-info/METADATA,sha256=hZBJTVG8iwNjTdGiUt14TN0UfogdupQ3zi_v3ztH3Ik,2367
+sage/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/tdlib.cpython-312-darwin.so,sha256=bQBzLlFJ5NmAC1TY_cukDba5J4Rht3OJrwX9QGiHLUo,346592
