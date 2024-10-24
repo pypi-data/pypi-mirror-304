@@ -1,0 +1,5 @@
+pyproject.toml
+online_store_gjils.egg-info/PKG-INFO
+online_store_gjils.egg-info/SOURCES.txt
+online_store_gjils.egg-info/dependency_links.txt
+online_store_gjils.egg-info/top_level.txt
