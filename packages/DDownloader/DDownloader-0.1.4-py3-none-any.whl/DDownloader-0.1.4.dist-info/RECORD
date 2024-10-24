@@ -1,0 +1,11 @@
+DDownloader/__init__.py,sha256=o3loo1Z5ZdvQYZIjgdgZarMVMIz5pHRRZ_x0IXYA6nU,135
+DDownloader/dash_downloader.py,sha256=Oe-IxT30xP71kOskVrzEkuvYOWRSxoDS3Jxh42MW9fk,1499
+DDownloader/hls_downloader.py,sha256=cvKgs1AVWpqZmD6niYI2KYWnblowayxRCFBwPEU2FOM,1497
+DDownloader/bin/N_m3u8DL-RE,sha256=y2vtfXq5RXYbyN-BV2QFc_jwZyZIUMKdnQMagkkaHwU,7498940
+DDownloader/bin/N_m3u8DL-RE.exe,sha256=AmuDJQmtIeMSfpcVLt1Hqf5CCtSgxiQ_8KYgiYSeGbk,6456320
+DDownloader/bin/packager-linux-x64,sha256=Ba8unvXxLVi51hW30x3A62HDKu5jLHGWU0C0PBVWBD4,9243968
+DDownloader/bin/packager-win-x64.exe,sha256=LlRGcuMNHTvmwv3fZ-7b3m46iLYjHVfCrSfOQ-zpyTk,5279744
+DDownloader-0.1.4.dist-info/METADATA,sha256=u0fV_84QXLpjmnremapTlI7xhJlYnqUWoSBvlbz8Ce4,2853
+DDownloader-0.1.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+DDownloader-0.1.4.dist-info/top_level.txt,sha256=INZYgY1vEHV1MIWTPXKJL8j8-ZXjWb8u4XLuU3S8umY,12
+DDownloader-0.1.4.dist-info/RECORD,,
