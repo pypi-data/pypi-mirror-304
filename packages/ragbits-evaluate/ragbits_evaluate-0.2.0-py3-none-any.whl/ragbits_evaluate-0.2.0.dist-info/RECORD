@@ -1,0 +1,15 @@
+ragbits/evaluate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragbits/evaluate/evaluator.py,sha256=WKjYn2kugQr6d145XMoKeO9CYm-IryNK7gyR9KW7nnI,3344
+ragbits/evaluate/utils.py,sha256=p5SUAhGP9lHEDsIiIxGGhYOy_kSwtl4fi7L4R6ySln8,2638
+ragbits/evaluate/loaders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragbits/evaluate/loaders/base.py,sha256=uD5YorsoDIfmx8KCbTTVYwIxso76Xz0jwFA8nECMPd4,438
+ragbits/evaluate/loaders/hf.py,sha256=ZtcNHWEawP58ny9Je3j4bzWsCCXDi6pai0xlYrO3XY8,609
+ragbits/evaluate/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragbits/evaluate/metrics/base.py,sha256=HTrfNdv2JnKnkMYbj3ze_BO15X6QhTG-0IKS0lGwdhA,1920
+ragbits/evaluate/metrics/document_search.py,sha256=hLMUIdN7FUo-JUTVL-ytMIFa-T61LljX0RJ5ncJq1M4,2224
+ragbits/evaluate/pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ragbits/evaluate/pipelines/base.py,sha256=W7gz0PzBmGlMUjHa-KM7j-aeRcSU_Th6741doOktXl8,879
+ragbits/evaluate/pipelines/document_search.py,sha256=YSUV-RwBTvyB2rMjQ2vkrxjxNeSE03uSD2iaY2RVXTo,1482
+ragbits_evaluate-0.2.0.dist-info/METADATA,sha256=CvYFZL9yM1z0HAo-oaFfKYQhz4sfBCgAzk3iXNmMiLU,1116
+ragbits_evaluate-0.2.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ragbits_evaluate-0.2.0.dist-info/RECORD,,
