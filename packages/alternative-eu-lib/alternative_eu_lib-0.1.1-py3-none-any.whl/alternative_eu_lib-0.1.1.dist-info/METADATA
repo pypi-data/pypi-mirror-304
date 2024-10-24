@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: alternative-eu-lib
+Version: 0.1.1
+Summary: Python library for working with the Alternative platform.
+Author: ALTERNATIVE
+License: MIT
+License-File: LICENSE
+Requires-Dist: ckanapi==4.7.0
+
