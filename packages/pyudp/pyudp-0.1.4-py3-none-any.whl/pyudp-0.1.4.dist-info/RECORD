@@ -1,0 +1,11 @@
+pyudp/__init__.py,sha256=hBZuJmVapRPmD624YOgL4DZ1RUnft1DzmCWBuYXKGP8,197
+pyudp/client.py,sha256=IGcay20HFGiMP2Ry1D5gGpFa1vNo1FM-KhMcH4Ft3Qc,545
+pyudp/multicast_client.py,sha256=Q-LbG2V43kXQPz7-LK3p4YNRm6ERxG9VNi3yVt7Zbhk,1440
+pyudp/multicast_server.py,sha256=novx4IfmE2-v3EHuKpOJRnX7xSdeLpM-jyAQGRko0a0,612
+pyudp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyudp/server.py,sha256=cMVGI7N4b_uMrEPkEGLRgvNZuN_yNA1IAElnyToFzMw,999
+pyudp/utils/__init__.py,sha256=nkV1D6epj4zrTIvAFUlUgTyl7IFd0Buny79K72dkXT0,55
+pyudp/utils/replacing_queue.py,sha256=sUal2-6jOf2trYVT4sePepLfljZTBx-5t2p4Q495EBc,229
+pyudp-0.1.4.dist-info/METADATA,sha256=LDbxy3muKSoHLYkxCL6sGyoYgQtPlRlPqCSqEL5Ic60,540
+pyudp-0.1.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pyudp-0.1.4.dist-info/RECORD,,
