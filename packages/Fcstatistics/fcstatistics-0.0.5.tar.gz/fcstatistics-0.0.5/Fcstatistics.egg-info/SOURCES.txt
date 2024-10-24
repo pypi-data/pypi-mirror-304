@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Fcstatistics.egg-info/PKG-INFO
+Fcstatistics.egg-info/SOURCES.txt
+Fcstatistics.egg-info/dependency_links.txt
+Fcstatistics.egg-info/top_level.txt
+src/ECHC_core.py
+src/Fc.py
+src/__init__.py
+tests/__init__.py
+tests/test_core.py
