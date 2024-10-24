@@ -1,0 +1,16 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'PySB6-package-2'
+version = '0.0.1'
+description = 'Task 2'
+authors = [
+  {name = 'Artem Ostapenko'}
+]
+license = {file = 'LICENSE'}
+requires-python = '>=3.10'
+dependencies = [
+  'pandas>=2.2.3',
+]
