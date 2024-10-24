@@ -1,0 +1,9 @@
+sirp/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+sirp/client.py,sha256=pHA5BEN_q7P-Tev59Wv4-c-GH1K-o44TU9uiVPFX3QU,2663
+sirp/parameters.py,sha256=Lphl0eWAavRxxhGZ-vN4sNwtewhDofjDSHzHVv4xFuA,13814
+sirp/sirp.py,sha256=VALaXLAGXYc0VQxDfCIGx1ekzEeDMjcSLtVthPWnDW8,3632
+python_sirp-0.0.5.dist-info/LICENSE,sha256=gV2SngSNYhRbuQ4A7tMQqOFKBjJoYK-VdgpM0ffi0dw,1071
+python_sirp-0.0.5.dist-info/METADATA,sha256=FuvLel8figRbR5EabpHBpEp44m2AhGfybe06igHqE2s,1878
+python_sirp-0.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+python_sirp-0.0.5.dist-info/top_level.txt,sha256=YHwEXtoG_qOvOAoqS-WaCsv0Tnurxet26uCpqjSPXBM,5
+python_sirp-0.0.5.dist-info/RECORD,,
