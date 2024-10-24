@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+gaspard/__init__.py
+gaspard/_modidx.py
+gaspard/core.py
+gaspard/toolloop.py
+gaspard.egg-info/PKG-INFO
+gaspard.egg-info/SOURCES.txt
+gaspard.egg-info/dependency_links.txt
+gaspard.egg-info/entry_points.txt
+gaspard.egg-info/not-zip-safe
+gaspard.egg-info/requires.txt
+gaspard.egg-info/top_level.txt
