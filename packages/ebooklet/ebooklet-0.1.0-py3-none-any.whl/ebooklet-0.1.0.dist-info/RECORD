@@ -1,0 +1,12 @@
+ebooklet/__init__.py,sha256=NUtHsc_bITwX-m8FXy8ExI5PVG_Wo-U-hq3BVxlOsOk,210
+ebooklet/main.py,sha256=Wx-kdakz5ftMUJeohO71GSCqC3Fyr5OfL_RmcdNRl8E,32809
+ebooklet/remotes.py,sha256=4zh0txuM4wM4gjaPhi-ssSQ9Kw023iJ-mpCM_r3qlfE,14509
+ebooklet/utils.py,sha256=DTHZnTcOWkhunbVNiMDbca3FsfdS3FawjdnyZxVqq3g,27326
+ebooklet/tests/__init__.py,sha256=38pdDhEZk2RiT5kga2DPbhTYeDHdsCXNaEr7HH1-k20,208
+ebooklet/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebooklet/tests/test_ebooklet.py,sha256=YHfzrjhuAwej5w434MKX4_0vg3EoMO_Bm5xdfO7d2k0,8637
+ebooklet/tests/utest_ebooklet.py,sha256=hVHeAlRUiAqz_RUQNHQEx3_GHPhGjNCDjIz_RU-7oh8,6629
+ebooklet-0.1.0.dist-info/METADATA,sha256=k9LTXNmNZlHt3xzVunPEqMqcrNaIDe4F6-G5em9_ISM,2312
+ebooklet-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ebooklet-0.1.0.dist-info/licenses/LICENSE,sha256=RWtzUOqfgUOaV_WEmHCfI0OSG3pnXjpLwBKBZy0nGbo,586
+ebooklet-0.1.0.dist-info/RECORD,,
