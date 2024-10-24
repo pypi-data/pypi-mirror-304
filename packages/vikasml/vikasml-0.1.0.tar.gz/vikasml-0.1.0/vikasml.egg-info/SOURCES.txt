@@ -1,0 +1,9 @@
+README.md
+license
+setup.py
+vikasml/__init__.py
+vikasml/main.py
+vikasml.egg-info/PKG-INFO
+vikasml.egg-info/SOURCES.txt
+vikasml.egg-info/dependency_links.txt
+vikasml.egg-info/top_level.txt
