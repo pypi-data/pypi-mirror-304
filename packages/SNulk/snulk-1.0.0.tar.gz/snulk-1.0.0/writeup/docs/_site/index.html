@@ -1,0 +1,965 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ServiceNow Security Lab | Security Lab</title>
+<meta name="description" content="Working together to secure work.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Security Lab">
+<meta property="og:title" content="ServiceNow Security Lab">
+<meta property="og:url" content="http://localhost:8080/">
+
+
+  <meta property="og:description" content="Working together to secure work.">
+
+
+
+
+
+  <meta name="twitter:site" content="@SNSecurityLab">
+  <meta name="twitter:title" content="ServiceNow Security Lab">
+  <meta name="twitter:description" content="Working together to secure work.">
+  <meta name="twitter:url" content="http://localhost:8080/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2023-07-19T08:48:41-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:8080/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ServiceNow",
+      "url": "http://localhost:8080/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rouge.css">
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-semibold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/gilroy-bold-webfont.woff2" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" href="/assets/fonts/fira-mono-regular-latin.woff2" type="font/woff2" crossorigin="anonymous"/>
+
+<style>
+@font-face {
+  font-family: GilroyRegular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-regular-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-regular-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroySemiBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-semibold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-semibold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyBold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/gilroy-bold-webfont.woff2) format("woff2"),url(/assets/fonts/gilroy-bold-webfont.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/fira-mono-bold-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+</style>
+
+
+
+    <!-- start custom head snippets -->
+<script src="https://assets.adobedtm.com/a441b904b50e/99538f40e7c0/launch-3dcaf3475e9d.min.js" async></script>
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<style>
+  @media screen and (width >= 725px) {
+    .small-screen {
+      display: none;
+    }
+    .large-screen { }
+  }
+  @media screen and (width < 725px) {
+    .small-screen { }
+    .large-screen {
+      display: none;
+    }
+  }
+
+  a {
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .masthead__menu-item a {
+    font-size: 0.8rem;
+    margin: 0 0.25rem 0 0.25rem;
+  }
+
+  .masthead__menu-item_block a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 62, 64);
+    padding-bottom: 0.4rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    position: relative;
+  }
+
+  .site-brand {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*display: flex;*/
+    /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 41px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-top: 0px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 5px;
+    padding-left: 9px;
+    padding-right: 0px;
+    padding-top: 5px;
+    text-align: left;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%;
+    text-wrap: nowrap;
+    touch-action: manipulation;
+    white-space-collapse: collapse;
+    width: auto;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .small-screen a.site-brand {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .logo {
+    border-right: 1px solid #000;
+    height: 1.5rem;
+    margin-right: 12px;
+    min-width: 8rem;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    /*width: 180px;*/
+  }
+
+  .masthead__site-title {
+    color: rgb(0, 0, 0);
+    /*font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;*/
+    font-family: Gilroy-Medium, "Century Gothic", CenturyGothic, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  ul {
+    align-items: center;
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu large-screen">
+      <nav id="site-nav" class="greedy-nav large-screen">
+        <a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+      </nav>
+    </div>
+    <div class="masthead__menu small-screen">
+      <nav id="site-nav" class="greedy-nav small-screen">
+        <center><a class="site-brand" href="/">
+          
+          <img class="logo" src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+          
+          <span class="masthead__site-title">Security Lab</span>
+        </a></center>
+        <center>
+        <span class="visible-links">
+          <span class="masthead__menu-item"><a href="/cvd" >CVD</a><a href="/snadvisories/" >SN Advisories</a><a href="/research/" >Research Blog</a><a href="/archive/" >Archive</a></span>
+          <br>
+          <span class="masthead__menu-item_block">
+            <a href="/get-involved" >Get Involved!</a>
+          </span>
+          
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">Toggle search</span>
+            <img src="/assets/images/BUS_search-icon.svg" height="28" width="28" alt="Search">
+          </button>
+          
+        </span>
+        </center>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #032D42; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          ServiceNow Security Lab
+
+        
+      </h1>
+      
+      
+      
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ServiceNow Security Lab">
+    <meta itemprop="description" content="Working together to secure work.">
+    <meta itemprop="datePublished" content="2023-07-19T08:48:41-07:00">
+    
+
+    <section class="page__content" itemprop="text">
+      <h1 class="text-center" id="who-we-are">Who We Are</h1>
+
+<p class="text-justify" style="margin-bottom: 50px;">The <a href="http://localhost:8080">ServiceNow Security Lab</a> site is a joint conglomeration of content from several ServiceNow security teams and security minded contributors throughout the company. The content contained herein is the product of thorough original security research, vulnerability discovery and analysis, and other significant security efforts. These works are presented here to contribute high quality security related information and awareness back to the larger Internet community around the Now Platform<sup>®</sup> technologies and other related open-source technologies. Some of the contributing ServiceNow teams are identified below:</p>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_PSIRT_YG2.svg" alt="ServiceNow PSIRT" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">PSIRT</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The ServiceNow PSIRT (Product Security Incident Response Team) handles the incident response function around software security defects (vulnerabilities). It handles reporting, tracking, remediation, and coordination up through resolution for vulnerabilities in code that could affect the Now Platform<sup>®</sup>. It also oversees the <a href="cvd">Coordinated Vulnerability Disclosure (CVD)</a> program for ServiceNow.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_SR_YG2.svg" alt="Security Research" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Security Research</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The ServiceNow Security Research team performs technical security research across a wide range of topics. In addition to its open-ended research, it produces investigative reports that drive a reduction in operational security risk, and provides guidance on primary security controls, best practices, and product enhancement.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_RT_YG2.svg" alt="Red Team" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Red Team</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The ServiceNow Red Team proactively executes opportunistic attack simulation exercises across the entire organization to assess and reinforce ServiceNow’s resiliency against modern adversary tactics, techniques, and procedures (TTPs).</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<h1 class="text-center" id="what-we-do">What We Do</h1>
+
+<p class="text-justify" style="margin-bottom: 50px;">These are some of any many areas that we focus on during the pursuit of security research and vulnerability handling. While non-exhaustive, it can provide some insight into the possible breadth and depth of what can be found here on the ServiceNow Security Lab site.</p>
+
+<div class="feature__wrapper" style="border-bottom-width: 0px;">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_VA_YG.svg" alt="Vulnerability Analysis" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Vulnerability Analysis</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Our team members perform in-depth discovery, triage, and analysis of vulnerabilities identified and reported within the tech stack and associated technologies.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_OriginalResearch_YG.svg" alt="Original Research" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Original Research</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Our contributors leverage a wide range of techniques to dig into the full stack of a given research subject, many times developing new techniques and tooling in the process. The results of such research are commonly contributed back into the tech stack(s) and to the community at large.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_Bug_YG.svg" alt="Bug Bounties" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Bug Bounties</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>As part of ServiceNow’s Coordinated Vulnerability Disclosure program, we operate a Bug Bounty Program (BBP) to further enumerate any vulnerabilities within the technologies we are concerned with. More information about the BBP can be read <a href="cvd">here</a>.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_Coordination_YG.svg" alt="Third-Party Vulnerability Coordination &amp; Collaboration" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Third-Party Vulnerability Coordination &amp; Collaboration</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The ServiceNow PSIRT is a full member of <a href="https://www.first.org/members/teams/psirtnow" target="_blank">FIRST</a> (Forum of Incident Response and Security Teams), a MITRE <a href="https://www.cve.org/PartnerInformation/ListofPartners/partner/SN" target="_blank">CVE Numbering Authority (CNA)</a> partner, and ServiceNow is also a member of several <a href="https://www.nationalisacs.org/about-isacs" target="_blank">ISACs</a> as well. Through these various channels, we can coordinate vulnerability information related to ServiceNow technologies both inbound and outbound—collaborating on rapid awareness and understanding of the issues at play.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_Awareness_YG.svg" alt="Community Awareness" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Community Awareness</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>We make our research and results available through advisories, content publications, proofs-of-concept, and various other public channels in an effort help the larger community gain awareness and helpful knowledge.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/BUS_64px_Improvement_YG.svg" alt="Improving Security Mindfulness" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Improving Security Mindfulness</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>ServiceNow believes in building a better, and more secure, workflow. A substantial part of this comes from increasing the security mindfulness of those contributing to the platforms where work is done. As a substantial supporter and enabler of the growing <a href="https://www.servicenow.com/workflows/creator-workflows/what-is-a-citizen-developer.html" target="_blank">Citizen Developer</a> movement, ServiceNow believes in enabling those contributions, in part, through content that can be found here and other of ServiceNow’s sites.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper" style="border-bottom-width: 0px;">
+
+  
+    <div class="feature__item--center">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser" style="margin-left: 10px;">
+            <img src="/assets/images/BUS_64px_Get_Involved_YG.svg" alt="Getting involved" align="left" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title" style="font-size: 1.1rem;">Getting involved</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>ServiceNow believes in building strength and our community, and wants to help interested ethical security researchers and developers better understand the security in our products and platform technologies. For those interested, please click the button below for find out how.</p>
+
+            </div>
+          
+
+          
+            
+
+            <p><a href="/get-involved" class="btn btn--inverse cmp-button" target="_blank">Find Out How</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <style>
+  .page__footer {
+    background-color: rgb(255, 255, 255);
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  div#footer {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 0px;
+  }
+
+  .footer__inner-wrap {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-family: -apple-system, "system-ui", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1rem;
+    height: 137.328px;
+    justify-content: space-between;
+    line-height: 1.2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
+    padding-top: 20px;
+    text-size-adjust: 100%;
+  }
+
+  .col-12 {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: none;
+    font-family: GilroyRegular, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.5rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 400;
+    /* height: 864px; */
+    letter-spacing: normal;
+    line-height: 15px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 1700px;
+    min-height: 1px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    /* width: 1293px; */
+    -webkit-box-flex: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .row {
+    color: rgb(0, 0, 0);
+  }
+
+  .logo-tagline-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    /*margin-bottom: 12px;*/
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 0.8rem;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variation-settings: normal;
+    font-weight: 500;
+  }
+
+  @media screen and (width < 725px) {
+    .logo-tagline-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  .logo-tagline-container img {
+    height: 1.2rem;
+    /*min-width: 8rem;*/
+    /*width: 118px;*/
+    padding-bottom: 8px;
+    margin-bottom: 0px;
+    /*margin-right: -1rem;
+    margin-left: -1rem;*/
+  }
+
+  .logo_site_title {
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 3px;
+    padding-left: 10px;
+    padding-right: 4px;
+  }
+
+  .logo_site_tagline {
+    background-color: var(--brand-infinite-blue);
+    color: var(--brand-wasabi-green);
+    border-left: 1px solid var(--brand-gray);
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-left: 10x;
+    padding-left: 10px;
+  }
+
+  /*no idea what this was intended for*/
+  /*links {
+    border: 1px solid #e1e1e1;
+    border-left: unset;
+    border-right: unset;
+    margin: 33px -15px 40px;
+    padding: 40px 0 0;
+  }*/
+
+  ul.footer-visible-links {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer__menu-item-link {
+    clear: unset;
+    float: unset;
+    margin-right: 24px;
+  }
+
+  .page__footer-nav {
+    font-size: 0.6rem;
+    font-family: GilroyRegular, "Century Gothic", CenturyGothic, Arial, Helvetica, sans-serif;
+    font-weight: regular;
+
+  }
+
+  .page__footer-copyright {
+    font-size: 0.6rem;
+  }
+
+  .footer-visible-links {
+    display: flex;
+    text-align: left;
+    font-size: 0.6rem;
+    align-items: left;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    /*justify-content: left;*/
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    /*flex: 1;*/
+    overflow: hidden;
+  }
+
+  .footer__menu-item a {
+    display: block;
+    list-style-type: none;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    /*margin-bottom: 20px;*/
+  }
+</style>
+
+
+<div id="footer-container">
+  <div class="footer__inner-wrap">
+    <div class="masthead__menu">
+      <div class="logo-tagline-container">
+        
+        <img src="/assets/images/servicenow-header-logo.svg" alt="Security Lab">
+        
+        <span class="logo_site_title">Security Lab</span>
+        <span class="logo_site_tagline">Keeping your workflows secure.</span>
+      </div>
+      <nav id="footer-site-nav" class="page__footer-nav">
+        <ul class="footer-visible-links"><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/terms-of-use.html"  target="_blank">Terms and conditions</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/company/trust/privacy/gdpr.html"  target="_blank">GDPR</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://www.servicenow.com/privacy-statement.html"  target="_blank">Privacy statement</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="/data-collection"  target="_blank">Data collection</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="mailto:securitylab@servicenow.com?subject=Security%20Lab%20Site%20Contact"  target="_blank">Contact Us</a>
+          </li><li class="footer__menu-item">
+            <a class="footer__menu-item-link" href="https://twitter.com/SNSecurityLab"  target="_blank">Twitter</a>
+          </li></ul>
+      </nav>
+      <div class="page__footer-copyright">&copy; 2024 ServiceNow, Inc. All
+        rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
