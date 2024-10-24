@@ -1,0 +1,11 @@
+pylagg/cgr_step.py,sha256=lchLBbruVLKJAR0oNY50rjSNSgFvY7XGuOHV8139r4I,6182
+pylagg/config.py,sha256=7cVVCTJRlEl_RidDp6jN68C3yfKvYi9SXINkhZ6qPJw,2189
+pylagg/cut_adapt.py,sha256=6jWtftOq7N0V0e9WSYpbdq2_d7oHh394soSrsSZXxgA,2118
+pylagg/ena_download.py,sha256=4tBTwjiKAGjyrRYNchY1oUiIbh35lf-32k2a7c3-Kvs,5640
+pylagg/kmer_counting.py,sha256=LS3oDR-RRVU8Y-byPOtC4ZT0qPBUQr-YkQNq36GmXws,6045
+pylagg/main.py,sha256=AO_99PCHO-pUDCAH4B8xpHL1LQyc_sZyk81zzaod16I,9539
+pylagg-0.3.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pylagg-0.3.1.dist-info/METADATA,sha256=Uda6tCQvcn4i6ZpKg_iC2N1KcoILraH85Sw3yYCcJjo,3930
+pylagg-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pylagg-0.3.1.dist-info/entry_points.txt,sha256=jTHBOk0MJeRC4LFYe3HlXjc3paowOOXnrGpPyH1k-7o,40
+pylagg-0.3.1.dist-info/RECORD,,
