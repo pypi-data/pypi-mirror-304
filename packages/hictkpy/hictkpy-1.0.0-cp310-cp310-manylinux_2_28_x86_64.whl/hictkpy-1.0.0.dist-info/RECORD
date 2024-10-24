@@ -1,0 +1,10 @@
+hictkpy/hic.pyi,sha256=ImEaMnCFG4uMScym3qi8VJjzy5I9FrXdFULnh1zFoPg,2201
+hictkpy/__init__.py,sha256=zS7tQTroxXZHy2wlR046ENuH-kgytILV3WW7vz23j7Y,689
+hictkpy/cooler.pyi,sha256=xM1NkQhjsmOJ3dG8kQ0F8X2atfeNt_3_pY5S1Uw9wVg,2462
+hictkpy/_hictkpy.cpython-310-x86_64-linux-gnu.so,sha256=a5mpcO6co94kKG_QsVr3lR0Hpp8Lhl6Zt5fh-tJOEqo,29352736
+hictkpy/__init__.pyi,sha256=3N2WA-JE6mNQ43qPDALB3d9GucKqe4QQti-JXC2aIoQ,10500
+hictkpy/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hictkpy-1.0.0.dist-info/RECORD,,
+hictkpy-1.0.0.dist-info/METADATA,sha256=qx7R49u2LZ1-h2f4abf1Z9n41WwUtY_HWTMj3pEhqcU,3881
+hictkpy-1.0.0.dist-info/WHEEL,sha256=tU6sijdVwcXAZmk9VujwzbbCg13rZM0oU427j7P7YzE,118
+hictkpy-1.0.0.dist-info/licenses/LICENSE,sha256=srS6Zc_-eolVJQBl2VWzpkuKS25A7arJa_z8SABhYdc,1072
