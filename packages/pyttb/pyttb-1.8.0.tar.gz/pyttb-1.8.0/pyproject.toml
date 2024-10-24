@@ -1,0 +1,113 @@
+[project]
+name = "pyttb"
+dynamic = ["version"]
+description = "Python Tensor Toolbox"
+authors = [
+  {name="Daniel M. Dunlavy", email="dmdunla@sandia.gov"},
+]
+license = { text="BSD 2-Clause License" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "numpy < 2",
+    "numpy_groupies",
+    "scipy",
+    "matplotlib",
+]
+
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+homepage = "https://github.com/sandialabs/pyttb"
+coverage = "https://coveralls.io/github/sandialabs/pyttb"
+documentation = "https://pyttb.readthedocs.io"
+
+[project.optional-dependencies]
+dev = [
+    "black[jupyter]",
+    "mypy",
+    "nbstripout",
+    "pytest",
+    "pytest-cov",
+    "ruff==0.0.284",
+    "pre-commit",
+]
+doc = [
+    "sphinx >= 4.0",
+    "sphinx_rtd_theme",
+    "myst-nb",
+]
+profiling = [
+    "gprof2dot",
+    "graphviz",
+]
+
+[tool.setuptools.packages.find]
+include = ["pyttb*"]
+exclude = ["tests*"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "pyttb.__version__"}
+
+[tool.setuptools.package-data]
+"pyttb" = ["py.typed"]
+
+[build-system]
+requires = ["setuptools>=61.0", "numpy", "numpy_groupies", "scipy", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+select = ["E", "F", "PL", "W", "I", "N", "NPY", "RUF", "B"]
+ignore = [
+    # Ignored in conversion to ruff since not previously enforced
+    "PLR2004",
+    # Lower case in function, matching MATLAB names
+    "N806",
+    # Argument name lower case, matching MATLAB names
+    "N803",
+    # Class name not CapWords, matching MATLAB names
+    "N801",
+    # Numpy legacy random transition is a TODO
+    "NPY002",
+    # See #184 for issue related to asserts
+    "B011",
+    # There is ongoing discussion about logging/warning etc
+    "B028",
+]
+[tool.ruff.per-file-ignores]
+# See  see https://github.com/astral-sh/ruff/issues/3172 for details on this becoming simpler
+
+# Everything but I, F (to catch import mess and potential logic errors)
+"tests/**.py" = ["E", "PL", "W", "N", "NPY", "RUF", "B"]
+# Ignore everything for now
+"docs/**.py" = ["E", "F", "PL", "W", "I", "N", "NPY", "RUF", "B"]
+
+[tool.mypy]
+warn_unused_configs = true
+plugins = "numpy.typing.mypy_plugin"
+
+[[tool.mypy.overrides]]
+module = [
+    "scipy",
+    "scipy.sparse",
+    "scipy.sparse.linalg",
+    "scipy.optimize",
+    "numpy_groupies"
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--doctest-modules pyttb"
+filterwarnings = [
+    "ignore:.*deprecated.*:"
+]
