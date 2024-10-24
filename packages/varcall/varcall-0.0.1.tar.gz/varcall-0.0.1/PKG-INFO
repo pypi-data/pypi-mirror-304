@@ -1,0 +1,80 @@
+Metadata-Version: 2.3
+Name: varcall
+Version: 0.0.1
+Summary: A beginner friendly TUI tool for variant calling
+Project-URL: Documentation, https://github.com/vidyasagar0405/varcall#readme
+Project-URL: Issues, https://github.com/vidyasagar0405/varcall/issues
+Project-URL: Source, https://github.com/vidyasagar0405/varcall
+Author-email: vidyasagar0405 <vidyasagar0405@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: pysam
+Requires-Dist: textual
+Description-Content-Type: text/markdown
+
+# varcall
+
+A genome variant calling tool (wrapper) written in python using textual lib
+
+[![PyPI - Version](https://img.shields.io/pypi/v/varcall.svg)](https://pypi.org/project/varcall)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/varcall.svg)](https://pypi.org/project/varcall)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+> [!NOTE]
+> **🚧 Under early development 🚧**
+
+```console
+pip install varcall
+```
+### Contributions are welcomed
+
+> [!NOTE]
+> It is recommended to run `varcall` in a conda environment
+
+To install conda refer [miniconda](https://docs.anaconda.com/miniconda/) 
+
+`varcall` requires variant calling tools to run, you can download them by:
+```console
+conda create -n varcall -y
+conda install -c bioconda fastqc multiqc bwa samtools bcftools
+```
+
+![Home tab image](https://github.com/vidyasagar0405/varcall/raw/main/doc/images/Hometab-image.jpg?raw=true "Home tab")
+
+
+
+![Samtools tab image](https://github.com/vidyasagar0405/varcall/raw/main/doc/images/Samtoolstab-image.jpg?raw=true "Samtools tab")
+
+
+
+![Bcftools tab image](https://github.com/vidyasagar0405/varcall/raw/main/doc/images/Bcftoolstab-image.jpg?raw=true "Bcftools tab")
+
+
+
+![Pipeline tab image](https://github.com/vidyasagar0405/varcall/raw/main/doc/images/Pipelinetab-image.jpg?raw=true "Pipeline")
+
+
+
+![Help tab image](https://github.com/vidyasagar0405/varcall/raw/main/doc/images/Helptab-image.jpg?raw=true "Help tab")
+
+## License
+
+`varcall` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
