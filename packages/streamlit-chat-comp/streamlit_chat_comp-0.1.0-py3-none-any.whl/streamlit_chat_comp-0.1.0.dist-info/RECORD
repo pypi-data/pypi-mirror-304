@@ -1,0 +1,10 @@
+my_chat_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_chat_package/chat_component.py,sha256=dotI0bT49NNXRQERBEf2POMGTWeA4F0hAzPdVT4jbq4,315
+my_chat_package/static/chat.html,sha256=M6ZonGat2a6auQ4Ts2T9UVIxPG9Awqjkr_Y2UIWo58E,867
+my_chat_package/static/scripts.js,sha256=tgVxm2_gotvh1emqiJLvTRrwt3X9lFamaRpc12DinNA,2529
+my_chat_package/static/styles.css,sha256=iU4-dK_3FBdQsqbY3-pqEw9ZuSqeocyvrftgUqQxNCU,2293
+streamlit_chat_comp-0.1.0.dist-info/LICENSE,sha256=Zk0n8c7gzj41Pm5rVl2gIy_wtkZ3VhPCy7etTJ-F8gk,1122
+streamlit_chat_comp-0.1.0.dist-info/METADATA,sha256=UQGFsGclOoDzOuIElQrzKFhgD-vFv0sFu5Cw5cast5w,250
+streamlit_chat_comp-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+streamlit_chat_comp-0.1.0.dist-info/top_level.txt,sha256=QXejT_OvwfxuMFSNarpTtU7h6vuO5KgNJ5DnpZjj830,16
+streamlit_chat_comp-0.1.0.dist-info/RECORD,,

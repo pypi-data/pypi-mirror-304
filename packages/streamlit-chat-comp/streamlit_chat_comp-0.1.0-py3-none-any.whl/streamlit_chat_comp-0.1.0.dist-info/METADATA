@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: streamlit_chat_comp
+Version: 0.1.0
+Summary: A Streamlit component for sending text and audio messages
+Author: Mohammed Bahageel
+Author-email: m.bahageel88@gmail.com
+License-File: LICENSE
+Requires-Dist: streamlit
+
