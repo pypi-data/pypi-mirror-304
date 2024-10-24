@@ -1,0 +1,13 @@
+slivka_client/__init__.py,sha256=t9ysUesaAvvg73oh1utdeYtAL92KGb3A8Z5xtIIxu8o,184
+slivka_client/__main__.py,sha256=NoK43KlxSXyxX6ER4dboiqvmwbS9FmAvmfBkmhJw1OA,4239
+slivka_client/client.py,sha256=qHTlTMQN-m4jHpoa-sErFekClTimyWONE2AQId-btIE,3939
+slivka_client/file.py,sha256=yhO-CUTprEZ4ft8UAdhYT5Uo7BS1J0FijlCvWKVQa8g,1309
+slivka_client/job.py,sha256=C-x8RP6VSV_sLRtNOm0cqLCKm07zIHfIghUzXqTs6AM,2159
+slivka_client/nb_utils.py,sha256=IXVCBLA86l7_yTMUz1I9wUUmd0S9fK0Xse_cveMu5bo,3044
+slivka_client/service.py,sha256=B7aS0HOOnL2-cgWyQ53Lm8ccx6Bpa0M3jR0y1fpPrYc,7068
+slivka_client-1.2.1b1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+slivka_client-1.2.1b1.dist-info/METADATA,sha256=k4gRqRVYBwPZhQivgl-v8qbbpje78c4V6hoiuJtys7E,4802
+slivka_client-1.2.1b1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+slivka_client-1.2.1b1.dist-info/entry_points.txt,sha256=J1c5Cz5YIkVnr_YXO1SgwBvtni02luR9ROINb7N97Sg,59
+slivka_client-1.2.1b1.dist-info/top_level.txt,sha256=qSgDGvXsFvQF7lYVGLyqVhO8EJayhSh6hUgFXMiNTyc,14
+slivka_client-1.2.1b1.dist-info/RECORD,,

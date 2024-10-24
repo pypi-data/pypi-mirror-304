@@ -1,0 +1,2 @@
+[console_scripts]
+slivka-cli = slivka_client.__main__:main
