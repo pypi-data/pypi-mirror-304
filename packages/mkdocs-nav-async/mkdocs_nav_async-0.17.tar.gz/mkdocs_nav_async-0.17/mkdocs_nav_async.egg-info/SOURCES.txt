@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mkdocs_nav_async/__init__.py
+mkdocs_nav_async/plugin.py
+mkdocs_nav_async.egg-info/PKG-INFO
+mkdocs_nav_async.egg-info/SOURCES.txt
+mkdocs_nav_async.egg-info/dependency_links.txt
+mkdocs_nav_async.egg-info/entry_points.txt
+mkdocs_nav_async.egg-info/requires.txt
+mkdocs_nav_async.egg-info/top_level.txt
+mkdocs_nav_async/loading_icons/bars.svg
