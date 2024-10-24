@@ -1,0 +1,11 @@
+django_unmanaged_assistant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/apps.py,sha256=tCNP4pyIotow_i4NIHFlFVFAbXMyNJBhdjg0qQjCYZg,289
+django_unmanaged_assistant/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_unmanaged_assistant/management/commands/create_databases.py,sha256=AMjNmW4qtW5nvxRMNH2K-ZI0ZulIYpMcj44E1B1PZ7o,6451
+django_unmanaged_assistant/management/commands/create_unmanaged_tables.py,sha256=Mtm7iaZJqMOBEArSlQIJra6GvtLCGzobm_5Du5PXh5w,22801
+django_unmanaged_assistant-2024.10.23.1.dist-info/LICENSE.txt,sha256=fiaav7QHTFcvoigUsxdEp9F6GyD0rDtxCQS6EimcDiw,1066
+django_unmanaged_assistant-2024.10.23.1.dist-info/METADATA,sha256=vNQKuiEnAsxcJe-Ws-J_MBfMiKoE7fETQYOp_6el7Hs,9631
+django_unmanaged_assistant-2024.10.23.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_unmanaged_assistant-2024.10.23.1.dist-info/top_level.txt,sha256=HiBbF9j_izM8_hSc7WuPuLNa1Ovv2m3fLbUXFWjpfyk,27
+django_unmanaged_assistant-2024.10.23.1.dist-info/RECORD,,
