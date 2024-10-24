@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: dictrack
+Version: 1.0.1
+Summary: Dict Tracker
+Author: Tim Liao
+Author-email: bonis0324work@gmail.com
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# dictrack
+A Flexible Dictionary Data Tracker for Condition-Based Monitoring
