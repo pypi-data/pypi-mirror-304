@@ -1,0 +1,291 @@
+Metadata-Version: 2.1
+Name: gstoolspy
+Version: 2.2.4
+Summary: GsTools é uma ferramenta poderosa para disponibilizar dados de abas do Google Sheets. Com uma configuração simples e suporte a múltiplas abas, o GSTools facilita a integração de dados do Google Sheets em seus projetos Python.
+Home-page: https://github.com/hqr90/gsTools
+Author: Hilton Queiroz Rebello
+Author-email: rebello.hiltonqueiroz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gspread
+
+# GS Tools
+
+![PyPI - Version](https://img.shields.io/pypi/v/gsTools)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gsTools)
+![License](https://img.shields.io/pypi/l/gsTools)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/gsTools)
+
+**GsTools** é uma ferramenta poderosa para disponibilizar dados de abas do Google Sheets. Com uma configuração simples e suporte a múltiplas abas, o GSTools facilita a integração de dados do Google Sheets em seus projetos Python.
+
+## Índice
+
+- [Características](#características)
+- [Instalação](#instalação)
+- [Configuração](#configuração)
+  - [1. Configuração da API do Google Sheets](#1-configuração-da-api-do-google-sheets)
+  - [2. Compartilhamento da Planilha com a Conta de Serviço](#2-compartilhamento-da-planilha-com-a-conta-de-serviço)
+- [Uso](#uso)
+  - [Exemplo Básico](#exemplo-básico)
+  - [Salvar Todos os Dados das Abas em um Arquivo YAML](#salvar-todos-os-dados-das-abas-em-um-arquivo-yaml)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [Contato](#contato)
+- [Agradecimentos](#agradecimentos)
+
+## Características
+
+- **Autenticação Simples:** Utilize um arquivo JSON de credenciais da conta de serviço para autenticar-se na API do Google Sheets.
+- **Suporte a Múltiplas Abas:** Extraia dados de todas as abas de uma planilha ou de abas específicas.
+- **Coleta de Dados:** Colete todos os dados de todas as aba.
+- **Configuração Flexível:** Ajuste parâmetros como arquivo de saída, depuração e atraso entre solicitações.
+- **Mensagens de Erro Claras:** Receba instruções detalhadas em caso de erros durante a autenticação ou acesso à planilha.
+
+## Instalação
+
+Para instalar o **GS Tools**, siga os passos abaixo:
+
+### Usando o PyPI
+
+Primeiro, certifique-se de ter o [pip](https://pip.pypa.io/en/stable/) instalado. Em seguida, execute:
+
+```bash
+pip install gstoolspy
+```
+
+**Nota:** Como o repositório do GitHub será privado, a instalação a partir do código fonte não está disponível publicamente. Para contribuições ou acessos especiais, entre em contato diretamente.
+
+## Configuração
+
+Antes de utilizar o GS Tools, é necessário configurar o acesso à API do Google Sheets e compartilhar a planilha com a conta de serviço. Siga as etapas detalhadas abaixo.
+
+### 1. Configuração da API do Google Sheets
+
+#### Passo 1: Crie um Projeto no Google Cloud Platform
+
+1. **Acesse o [Google Cloud Console](https://console.cloud.google.com/).**
+2. **Crie um Novo Projeto:**
+   - Clique em **"Selecionar Projeto"** no topo da página.
+   - Clique em **"Novo Projeto"**.
+   - Insira um **Nome do Projeto** e clique em **"Criar"**.
+
+#### Passo 2: Ative a Google Sheets API
+
+1. **No Console do Google Cloud, vá para "APIs e Serviços" > "Biblioteca".**
+2. **Pesquise por "Google Sheets API" e clique nela.**
+3. **Clique em "Ativar".**
+
+#### Passo 3: Configure as Credenciais da Conta de Serviço
+
+1. **Ainda em "APIs e Serviços", vá para "Credenciais".**
+2. **Clique em "Criar Credenciais" > "Conta de Serviço".**
+3. **Preencha as Informações Necessárias:**
+   - **Nome da Conta de Serviço:** Escolha um nome descritivo.
+   - **ID da Conta de Serviço:** Será gerado automaticamente.
+   - **Descrição:** Opcional.
+4. **Clique em "Criar e Continuar".**
+5. **Defina as Permissões (Opcional):**
+   - Para este projeto, permissões específicas não são necessárias.
+   - Clique em **"Continuar"**.
+6. **Adicione uma Chave:**
+   - Na seção **"Chaves"**, clique em **"Adicionar Chave"** > **"Criar Nova Chave"**.
+   - Selecione o tipo **JSON** e clique em **"Criar"**.
+   - O arquivo JSON será baixado automaticamente. **Guarde-o em um local seguro**.
+
+### 2. Compartilhamento da Planilha com a Conta de Serviço
+
+1. **Abra a Planilha no Google Sheets:**
+   - Vá para [Google Sheets](https://sheets.google.com/) e abra a planilha que deseja manipular (por exemplo, **"nome-da-sua-planilha"**).
+2. **Clique em "Compartilhar":**
+   - No canto superior direito, clique no botão **"Compartilhar"**.
+3. **Adicione o E-mail da Conta de Serviço:**
+   - Abra o arquivo JSON de credenciais baixado anteriormente.
+   - Encontre o campo **"client_email"**. Será algo como **"sua-conta-de-servico@seu-projeto.iam.gserviceaccount.com"**.
+   - Insira esse e-mail no campo de compartilhamento.
+4. **Defina as Permissões:**
+   - Selecione **"Editor"** para garantir que a conta de serviço possa ler e escrever na planilha.
+5. **Confirme o Compartilhamento:**
+   - Clique em **"Enviar"** ou **"Compartilhar"** para finalizar.
+
+⚠️ **Importante:**
+- **Evite Compartilhamentos Indiretos:** A planilha deve ser compartilhada diretamente com o e-mail da conta de serviço.
+- **Mantenha o Arquivo JSON Seguro:** Não compartilhe publicamente o arquivo de credenciais.
+
+## Uso
+
+Após a instalação e configuração, você pode utilizar o **GS Tools** para converter dados de suas planilhas do Google Sheets para YAML. Abaixo estão alguns exemplos de como utilizar a ferramenta.
+
+### Exemplo Básico
+
+```python
+from gstoolspy import GsTools
+
+# Configurações
+credentials_file = 'caminho/para/seu/credentials.json'
+sheet_name = 'nome-da-sua-planilha'
+
+# Instanciar a classe GsTools
+gs = GsTools(credentials_file, sheet_name)
+
+# Selecionar uma aba específica (por índice)
+worksheet = gs.worksheets[4]  # Índice começa em 0
+
+# Converter os dados da aba para YAML e imprimir
+gs.worksheet_data(worksheet, debug=True)
+```
+
+### Retorna os dados contidos em todas as abas
+
+```python
+from gstoolspy import GsTools
+
+# Configurações
+credentials_file = 'caminho/para/seu/credentials.json'
+sheet_name = 'nome-da-sua-planilha'
+
+# Instanciar a classe GsTools
+gs = GsTools(credentials_file, sheet_name)
+
+# Retorna os dados contidos em todas as abas
+gs.get_worksheets_data(debug=True, delay=1)
+```
+
+## Estrutura do Projeto
+
+A seguir, a estrutura recomendada para o projeto **GsTools**:
+
+```
+gsTools/
+│
+├── gsTools/
+│   ├── __init__.py
+│   └── gsTools.py
+│
+├── README.md
+├── LICENSE
+├── pyproject.toml
+└── setup.py
+```
+
+### Descrição dos Arquivos e Diretórios
+
+- **`gsTools/`**: Diretório principal do pacote.
+  - **`__init__.py`**: Torna o diretório um pacote Python.
+  - **`gsTools.py`**: Contém a classe `GsTools` com todas as funcionalidades.
+  
+- **`tests/`**: Diretório para testes unitários.
+  - **`__init__.py`**: Torna o diretório um pacote Python.
+  - **`test_gsTools.py`**: Arquivo para testes (opcional, mas recomendado).
+  
+- **`README.md`**: Descrição do projeto, instruções de uso, etc.
+- **`LICENSE`**: Licença do projeto (por exemplo, MIT, Apache 2.0).
+- **`pyproject.toml`**: Configurações de build modernas.
+- **`setup.cfg`**: Configurações adicionais para o `setup`.
+- **`setup.py`**: Script de instalação.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você deseja contribuir para o **GS Tools**, entre em contato com o mantenedor para obter acesso ou instruções sobre como contribuir.
+
+### Diretrizes para Contribuição
+
+- **Código Limpo e Legível:** Mantenha o código bem organizado e documentado.
+- **Testes:** Adicione testes para suas funcionalidades.
+- **Documentação:** Atualize a documentação conforme necessário.
+- **Feedback:** Esteja aberto a feedback e pronto para ajustar suas contribuições conforme necessário.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Contato
+
+- **Autor:** Hilton Queiroz Rebello
+- **Email:** rebello.hiltonqueiroz@gmail.com
+
+## Agradecimentos
+
+- **[gspread](https://github.com/burnash/gspread):** Biblioteca Python para interagir com Google Sheets.
+- **Comunidade Open Source:** Por fornecer ferramentas e recursos incríveis que tornam este projeto possível.
+
+---
+
+## Exemplo de Uso Detalhado
+
+Para ilustrar melhor como utilizar o **GS Tools**, vamos explorar um exemplo completo passo a passo.
+
+### 1. Preparando o Ambiente
+
+Certifique-se de que você possui o Python 3.6 ou superior instalado. Recomenda-se o uso de um ambiente virtual.
+
+```bash
+# Crie um ambiente virtual
+python3 -m venv venv
+
+# Ative o ambiente virtual
+# No Windows:
+venv\Scripts\activate
+# No Unix ou MacOS:
+source venv/bin/activate
+
+# Instale o GS Tools
+pip install gstoolspy
+```
+
+### 2. Configurando as Credenciais
+
+Siga as instruções na seção [Configuração](#configuração) para configurar a API do Google Sheets e compartilhar a planilha com a conta de serviço.
+
+### 3. Utilizando o GS Tools
+
+Crie um script Python, por exemplo, `getData.py`, com o seguinte conteúdo:
+
+```python
+from gstoolspy import GsTools
+
+
+def main():
+    # Caminho para o arquivo de credenciais da conta de serviço
+    credentials_file = 'caminho/para/seu/credentials.json'
+
+    # Nome da planilha no Google Sheets
+    sheet_name = 'nome-da-sua-planilha'
+
+    # Instanciar a classe GsTools
+    gs = GsTools(credentials_file, sheet_name)
+
+    # Selecionar uma aba específica (por índice ou por nome)
+    # Por índice (começa em 0)
+    try:
+        worksheet = gs.worksheets[4]
+    except IndexError:
+        print("Aba com o índice 4 não existe.")
+        return
+
+    # Converter os dados da aba para YAML e imprimir
+    gs.worksheet_data(worksheet, debug=True)
+
+    # Retorna os dados contidos em todas as abas
+    gs.get_worksheets_data(debug=True, delay=1)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+---
+
+## Conclusão
+
+O **GS Tools** oferece uma maneira eficiente e simples de integrar dados do Google Sheets em seus projetos Python, convertendo-os para o formato YAML. Com uma configuração fácil e suporte a múltiplas abas, esta ferramenta é ideal para desenvolvedores que buscam automatizar processos envolvendo planilhas.
+
+Se você encontrou algum problema ou tem sugestões de melhorias, entre em contato diretamente pelo email [rebello.hiltonqueiroz@gmail.com](mailto:rebello.hiltonqueiroz@gmail.com).
+
+Aproveite o GS Tools e otimize seu fluxo de trabalho com dados do Google Sheets!#   g s T o o l s 
+ 
+ 
