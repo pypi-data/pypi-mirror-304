@@ -1,0 +1,15 @@
+michalak_algorithm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+michalak_algorithm/geometric/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+michalak_algorithm/geometric/analytic.py,sha256=dD75YfQTkWqyn5QQ8pSgSw9JF3jsKWubtJHvNN48Hh0,4295
+michalak_algorithm/number/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+michalak_algorithm/number/conversion.py,sha256=Q3jfGYMLeC9BJIM768d2pjpeEIlqaXD2Gol5iDmFU40,3155
+michalak_algorithm/number/eratosthenes.py,sha256=OP3RuevDXo_UsY24sTbgZUTpcvnFh6iRkb4htC_Ui0M,1719
+michalak_algorithm/number/gcd.py,sha256=hAyqeT1YbYd5XnDDoLM9dVIXG9keEq37i_hacnM0FcM,4180
+michalak_algorithm/number/utils.py,sha256=cMbL0AN0Bb_Wv2VmIGrSQLZgWqng7i_ZR7T08ZIC3QU,8901
+michalak_algorithm/sort.py,sha256=A9Nq7AxSABcvRoucCvvA3iuCB3tYBPua91x9f9OzU4s,11796
+michalak_algorithm/text/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+michalak_algorithm/text/cipher.py,sha256=o6S0zAMQ1_7CGvLGWnpnHR2nqHTZzgaki8pD-Boc2P0,3714
+michalak_algorithm/text/utils.py,sha256=ZkCKuoeQG-Sg5fgTnzVRNVWJfs2ek_6rcmZOIW9E6Oo,956
+michalak_algorithm-0.1.0.dist-info/METADATA,sha256=56QmNlVwwGqQgrpWwAFwdkl59e0HK6WzjdSPdsA0gYs,329
+michalak_algorithm-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+michalak_algorithm-0.1.0.dist-info/RECORD,,
