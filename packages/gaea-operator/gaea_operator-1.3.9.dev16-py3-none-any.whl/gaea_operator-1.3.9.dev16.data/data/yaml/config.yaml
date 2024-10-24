@@ -1,0 +1,226 @@
+pipeline:
+  name: mask_former
+  algorithm: MaskFormer/Model
+
+nodes:
+  train:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/train/paddlepaddle232:1.3.7
+      - acceleratorName: P800
+        name: iregistry.baidu-int.com/windmill-public/train/maskformer/p800:1.3.9-dev1
+    models:
+      - key: model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+
+  eval:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/train/paddlepaddle232:1.3.7
+      - acceleratorName: P800
+        name: iregistry.baidu-int.com/windmill-public/train/maskformer/p800:1.3.9-dev1
+    models:
+      - key: model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+
+  transform:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/transform:1.3.7-hotfix-20240914
+      - acceleratorKind: Kunlun
+        name: iregistry.baidu-int.com/windmill-public/transform:1.3.7-hotfix-20240914
+      - acceleratorKind: Ascend
+        name: iregistry.baidu-int.com/windmill-public/transform:1.3.7-hotfix-20240914
+    models:
+      - key: train_model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: train_model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: transform_model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - TensorRT
+      - key: transform_model_name
+        acceleratorKind: Kunlun
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddleLite
+      - key: transform_model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: transform_model_name
+        acceleratorKind: Ascend
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - Other
+
+  transform-eval:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/inference/nvidia:1.3.7-hotfix-20240919
+      - acceleratorKind: Kunlun
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+      - acceleratorName: P800
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+      - acceleratorKind: Ascend
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+    models:
+      - key: model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - TensorRT
+      - key: model_name
+        acceleratorKind: Kunlun
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddleLite
+      - key: model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: model_name
+        acceleratorKind: Ascend
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - Other
+
+  package:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/inference/nvidia:1.3.7-hotfix-20240919
+      - acceleratorKind: Kunlun
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+    models:
+      - key: transform_model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - TensorRT
+      - key: transform_model_name
+        acceleratorKind: Kunlun
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddleLite
+      - key: transform_model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - PaddlePaddle
+      - key: transform_model_name
+        acceleratorKind: Ascend
+        algorithm: MaskFormer/Model
+        category: Image/SemanticSegmentation
+        modelFormats:
+          - Other
+      - key: ensemble_model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - TensorRT
+      - key: ensemble_model_name
+        acceleratorKind: Kunlun
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - PaddleLite
+      - key: ensemble_model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - PaddlePaddle
+      - key: ensemble_model_name
+        acceleratorKind: Ascend
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - Other
+
+  inference:
+    images:
+      - acceleratorKind: Nvidia
+        name: iregistry.baidu-int.com/windmill-public/inference/nvidia:1.3.7-hotfix-20240919
+      - acceleratorKind: Kunlun
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+      - acceleratorName: P800
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+      - acceleratorKind: Ascend
+        name: iregistry.baidu-int.com/windmill-public/inference/kunlun:1.3.7-hotfix-20240919
+    models:
+      - key: model_name
+        acceleratorKind: Nvidia
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - TensorRT
+      - key: model_name
+        acceleratorKind: Kunlun
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - PaddleLite
+      - key: model_name
+        acceleratorName: P800
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - PaddlePaddle
+      - key: model_name
+        acceleratorKind: Ascend
+        algorithm: MaskFormer/Ensemble
+        category: Image/SemanticSegmentation/Ensemble
+        modelFormats:
+          - Python
+          - Other
