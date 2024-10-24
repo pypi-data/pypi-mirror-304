@@ -1,0 +1,12 @@
+leafagro/__init__.py,sha256=_rbx_zpx53URE0dnDPENuWHUPbbC5GneGSleJbUQwts,163
+leafagro/agromonitoring.py,sha256=XeElnfM1kNgNMAT5JZJp-QBfQ9trTfbvuzSWMlqnPOw,4539
+leafagro/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+leafagro/foliumap.py,sha256=DHPZqwh-b2zEl1hsWYj9RHc_w-Q3S-kmm9mdpcG0mhs,785
+leafagro/leafagro.py,sha256=9a1AUdD6ibgYUdamcb6zvi_-eoJgYP_Je8PM9GlMoZM,12259
+leafagro/utils.py,sha256=xCKKfrq_OJuDE-5bO9Yc2X5CT5h8WcObrZsQHtkPnT4,245
+leafagro-0.0.10.dist-info/LICENSE,sha256=EI8-HPZMNy2o2vcs-8xMcjpg3VBY11w758aA8NAQ668,1076
+leafagro-0.0.10.dist-info/METADATA,sha256=uLyBsgqXgSvV61xhW5kmmUpYjdOQBYNZvFpqlKm9gUk,1543
+leafagro-0.0.10.dist-info/WHEEL,sha256=TJ49d73sNs10F0aze1W_bTW2P_X7-F4YXOlBqoqA-jY,109
+leafagro-0.0.10.dist-info/entry_points.txt,sha256=1hGXLp_ZbS75uYIHDjxBUQH_cjOUfbQRWkUoPw3aqXY,47
+leafagro-0.0.10.dist-info/top_level.txt,sha256=fF_ahrTVbluPbonG_Ml4C6Gtlxgqh_FdJyCmIZiD2qA,9
+leafagro-0.0.10.dist-info/RECORD,,
