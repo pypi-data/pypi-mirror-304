@@ -1,0 +1,16 @@
+requests
+beautifulsoup4
+lxml
+selenium
+webdriver_manager
+click
+cryptography
+curl_cffi
+twine
+
+[dev]
+pytest
+pytest-cov
+flake8
+black
+isort
