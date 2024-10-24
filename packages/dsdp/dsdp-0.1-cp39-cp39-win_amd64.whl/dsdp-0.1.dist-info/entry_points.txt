@@ -1,0 +1,3 @@
+[console_scripts]
+DSDP=DSDP.__main__:main
+
