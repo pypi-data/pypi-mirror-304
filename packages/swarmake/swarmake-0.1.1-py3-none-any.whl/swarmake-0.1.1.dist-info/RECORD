@@ -1,0 +1,12 @@
+swarmake/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swarmake/config.py,sha256=DTnDONjLwL5NBONz0HintHI0k0OmMB_w1knIP_Y9DMo,2284
+swarmake/logger.py,sha256=lmSny1RuSS645nbVfC6Yxbr9vugz1vwVIo9oSADgcG0,2657
+swarmake/main.py,sha256=hUfQUbsBmeIwhbnmrRe4KBUQjwy-InmBFnf-OMsYohI,4839
+swarmake/run_cmd.py,sha256=ALTEuamVBO7OhtEuj8hMHYVgd_dsy8DZqm9i0-re8ZM,3534
+swarmake/swarmake.toml,sha256=iJdwPj864gxmkyxinfun9K222ZDR1KmGCKDbuLznlmw,4334
+swarmake-0.1.1.dist-info/METADATA,sha256=FpwOAJR9R4roumv9ZhpZXXkuJuoKWDgVyFQiiPC11ac,1508
+swarmake-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+swarmake-0.1.1.dist-info/entry_points.txt,sha256=U-eZEHG11PnCFW_KAmEqnj_MagPRWIvS_JazrQZA2LU,48
+swarmake-0.1.1.dist-info/licenses/AUTHORS,sha256=ggFyOaaiJpevPTdfzPqc2mGjBDwGVlG2h2vgz3kXx7c,51
+swarmake-0.1.1.dist-info/licenses/LICENSE,sha256=j97C1uBc5chpQWi4bv_2SrqExuvKaJK2Ch6L2LFkoc4,1492
+swarmake-0.1.1.dist-info/RECORD,,
