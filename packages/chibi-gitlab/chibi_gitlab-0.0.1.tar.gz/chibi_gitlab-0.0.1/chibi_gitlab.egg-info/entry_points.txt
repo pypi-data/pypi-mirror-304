@@ -1,0 +1,2 @@
+[console_scripts]
+chibi_gitlab = chibi_gitlab.cli:main
