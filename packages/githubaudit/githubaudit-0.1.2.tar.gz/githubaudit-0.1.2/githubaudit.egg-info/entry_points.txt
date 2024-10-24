@@ -1,0 +1,2 @@
+[console_scripts]
+githubaudit = githubaudit.cli:main
