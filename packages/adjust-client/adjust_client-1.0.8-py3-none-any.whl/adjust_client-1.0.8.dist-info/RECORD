@@ -1,0 +1,7 @@
+adjust_client/__init__.py,sha256=nGpZxg1-qb63tOC6ORxMBLLbT_9pTFFHlcpMaIfawZA,83
+adjust_client/client.py,sha256=eEisVK9oiPXmNUynExgRXLK3T6OG168brjhScB-sQMs,3041
+adjust_client/config.py,sha256=5Q--WUKL2ofinH4xa4fRrJu57dVaMOA9OPyKX2wMUvY,234
+adjust_client/exceptions.py,sha256=5SbcLfFe4LC-CsvRMRvnXo-rF-8OcmJFtHAA9OJzaKc,668
+adjust_client-1.0.8.dist-info/METADATA,sha256=Fm47jP7yIy2cGZendVzPx6fUFMTcxNe3NIWXIjhAS_M,1775
+adjust_client-1.0.8.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+adjust_client-1.0.8.dist-info/RECORD,,
