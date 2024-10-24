@@ -1,0 +1,5 @@
+flask
+flask-security
+flask-mail
+mongoengine
+python-dotenv
