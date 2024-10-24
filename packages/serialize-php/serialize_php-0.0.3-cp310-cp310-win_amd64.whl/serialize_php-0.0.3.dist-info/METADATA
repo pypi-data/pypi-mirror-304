@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: serialize-php
+Version: 0.0.3
+Summary: handle contents of serialize/deserialize in php
+Project-URL: Homepage, https://github.com/trim21/php-serialize-py
+Project-URL: Repository, https://github.com/trim21/php-serialize-py
+Project-URL: Issues, https://github.com/trim21/php-serialize-py/issues
+Author-email: trim21 <trim21me@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: bencode,bit-torrent,bittorrent,deserialize,p2p,serialize
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: <4.0,>=3.9
+Requires-Dist: typing-extensions>=4.12.2
+Description-Content-Type: text/markdown
+
+handle php serialize in python
+
+```python
+import php_serialize
+
+php_serialize.dumps(...)
+php_serialize.loads(b'...')
+```
