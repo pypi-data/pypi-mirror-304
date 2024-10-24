@@ -1,0 +1,23 @@
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ComfeePool"
+version = "0.1.1"
+authors = [
+    {name = "ftcid", email = "fernando.tor.c@gmail.com"}
+]
+description = "A package to integrate Comfee Dehumidifiers with MQTT Broker."
+readme="README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]  # Fixed from [projects.urls]
+Homepage = "https://github.com/ftcid"
+Issues = "https://github.com/ftcid"
+
