@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+my_chat_package/__init__.py
+my_chat_package/chat_component.py
+my_chat_package/static/chat.html
+my_chat_package/static/scripts.js
+my_chat_package/static/styles.css
+streamlit_chat_comp.egg-info/PKG-INFO
+streamlit_chat_comp.egg-info/SOURCES.txt
+streamlit_chat_comp.egg-info/dependency_links.txt
+streamlit_chat_comp.egg-info/requires.txt
+streamlit_chat_comp.egg-info/top_level.txt
