@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: manishml
+Version: 0.1.0
+Summary: A simple package for greeting functionality
+Home-page: https://github.com/harshjain/mlharsh
+Author: Harsh Jain
+Author-email: harsh@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: licence
+
+# Manishml
+
+newdlharsh is a simple Python package that allows users to greet someone with a friendly message.
+
+## Installation
+
+You can install the mlharsh package from PyPI (after it's uploaded) using pip:
+
+```bash
+pip install Manishml

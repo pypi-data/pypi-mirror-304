@@ -1,0 +1,9 @@
+README.md
+licence
+setup.py
+Manishml/__init__.py
+Manishml/main.py
+manishml.egg-info/PKG-INFO
+manishml.egg-info/SOURCES.txt
+manishml.egg-info/dependency_links.txt
+manishml.egg-info/top_level.txt
