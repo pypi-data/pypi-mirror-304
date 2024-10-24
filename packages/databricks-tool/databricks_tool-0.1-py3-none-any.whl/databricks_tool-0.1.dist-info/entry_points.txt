@@ -1,0 +1,2 @@
+[console_scripts]
+run-databricks-query = databricks_tool.query_tool:main

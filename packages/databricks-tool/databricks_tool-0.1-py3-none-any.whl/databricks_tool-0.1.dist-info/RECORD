@@ -1,0 +1,7 @@
+databricks_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+databricks_tool/query_tool.py,sha256=Z2rEinunyOC4mUu2lO4vXvHdkIRj3a2Y3sHxfrX4-aw,1259
+databricks_tool-0.1.dist-info/METADATA,sha256=liVUB3JhnFypjWKEQeWlBdfBuwKe-VhhOgHntvrZ7sY,150
+databricks_tool-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+databricks_tool-0.1.dist-info/entry_points.txt,sha256=vLn2mbTxgHKjb-qA68Jy52ILw9rSWHcTvrqxG5hQeuk,73
+databricks_tool-0.1.dist-info/top_level.txt,sha256=RJFf3euHJf9a6STYXTtyVjIdmcN5sZ-WbWxYSIrI8cQ,16
+databricks_tool-0.1.dist-info/RECORD,,
