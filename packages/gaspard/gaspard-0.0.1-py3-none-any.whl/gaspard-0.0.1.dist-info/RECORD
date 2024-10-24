@@ -1,0 +1,10 @@
+gaspard/__init__.py,sha256=10vtPzTGakg3AmB6g2JYZrMUZQ2VEOS5jhS05SKJmE0,66
+gaspard/_modidx.py,sha256=hSUE9e0XQJOm65X0oRISqLUA8wulOByrCxaSJopG94c,4118
+gaspard/core.py,sha256=DEBkm_b4ZpOF9ydJ6MtH6-ajS7WQOE3XNodUwEY7qFM,13084
+gaspard/toolloop.py,sha256=Hf8qScPEJ3JB1UywYkoqxPjNz0AuWK62nQWbQ7cMo0g,1088
+gaspard-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+gaspard-0.0.1.dist-info/METADATA,sha256=OvHHbx5nPlFsEPMXhkMtOMpbiBjEb34CTkp_uDeV-cA,28286
+gaspard-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+gaspard-0.0.1.dist-info/entry_points.txt,sha256=ZRy6ipc2dj2uYYYl3ViIbkcMOu9SQq2WOV3UNCWULPw,36
+gaspard-0.0.1.dist-info/top_level.txt,sha256=y6X4hei0o3ymaJ0tO9onazMeiLQgifss691NCuVYZJI,8
+gaspard-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[nbdev]
+gaspard = gaspard._modidx:d
