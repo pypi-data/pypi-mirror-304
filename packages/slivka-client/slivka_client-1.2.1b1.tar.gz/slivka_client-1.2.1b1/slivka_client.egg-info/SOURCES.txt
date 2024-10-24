@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+slivka_client/__init__.py
+slivka_client/__main__.py
+slivka_client/client.py
+slivka_client/file.py
+slivka_client/job.py
+slivka_client/nb_utils.py
+slivka_client/service.py
+slivka_client.egg-info/PKG-INFO
+slivka_client.egg-info/SOURCES.txt
+slivka_client.egg-info/dependency_links.txt
+slivka_client.egg-info/entry_points.txt
+slivka_client.egg-info/requires.txt
+slivka_client.egg-info/top_level.txt
