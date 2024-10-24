@@ -1,0 +1,4 @@
+numpy
+pendulum
+pandas
+apache-airflow>=2.0

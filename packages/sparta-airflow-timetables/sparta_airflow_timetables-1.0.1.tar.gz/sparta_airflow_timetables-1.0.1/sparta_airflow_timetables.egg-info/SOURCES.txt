@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sparta_airflow_timetables/__init__.py
+sparta_airflow_timetables/anbima_holidays.csv
+sparta_airflow_timetables/b3pregao_holidays.csv
+sparta_airflow_timetables/timetables.py
+sparta_airflow_timetables.egg-info/PKG-INFO
+sparta_airflow_timetables.egg-info/SOURCES.txt
+sparta_airflow_timetables.egg-info/dependency_links.txt
+sparta_airflow_timetables.egg-info/requires.txt
+sparta_airflow_timetables.egg-info/top_level.txt
