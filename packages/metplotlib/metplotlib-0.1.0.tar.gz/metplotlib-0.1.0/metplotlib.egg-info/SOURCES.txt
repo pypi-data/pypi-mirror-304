@@ -1,0 +1,30 @@
+MANIFEST.in
+README.md
+setup.py
+metplotlib/__init__.py
+metplotlib/ex1.a list.py
+metplotlib/ex1.b tuples.py
+metplotlib/ex1.c dictionary.py
+metplotlib/ex2.a age.py
+metplotlib/ex2.b reverse number.py
+metplotlib/ex2.c sum.py
+metplotlib/ex3.a sineseries.py
+metplotlib/ex3.b binary & decimal.py
+metplotlib/ex3.c nested loop.py
+metplotlib/ex4.a fibonacci.py
+metplotlib/ex4.b binomial.py
+metplotlib/ex4.c calc.py
+metplotlib/ex5 exception handling.py
+metplotlib/ex6 inheritance.py
+metplotlib/ex7.a rect & cicle.py
+metplotlib/ex7.b teacher & Student.py
+metplotlib/ex8.a student file.py
+metplotlib/ex8.b task management.py
+metplotlib/ex9.a matplotlib.py
+metplotlib/ex9.b numpy.py
+metplotlib/ex9.c pandas.py
+metplotlib/main.py
+metplotlib.egg-info/PKG-INFO
+metplotlib.egg-info/SOURCES.txt
+metplotlib.egg-info/dependency_links.txt
+metplotlib.egg-info/top_level.txt
