@@ -1,0 +1,5 @@
+viasp-backend==2.0.0rc2
+viasp-dash==2.0.0rc2
+jupyter-server-proxy
+clingraph
+graphviz
