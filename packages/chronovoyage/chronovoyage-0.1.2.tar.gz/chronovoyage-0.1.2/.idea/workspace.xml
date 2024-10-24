@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6485916a-97e6-4377-9f98-bef0b12d20ef" name="Changes" comment="build: update version to 0.1.2">
+      <change beforePath="$PROJECT_DIR$/Writerside/cfg/buildprofiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/cfg/buildprofiles.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SQL File" />
+        <option value="Python Script" />
+        <option value="Python Stub" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="test: connect to mysql database" />
+        <option name="rewordedMessage" value="test: refactor testcase" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="6c81a6385569ee9cda5bae8d40f0470e779d7bec" />
+  </component>
+  <component name="InstanceColorv3">
+    <option name="map">
+      <map>
+        <entry key="$PROJECT_DIR$/Writerside/ae.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="2" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="225" />
+                  <option name="darkBlue" value="225" />
+                  <option name="darkGreen" value="149" />
+                  <option name="darkRed" value="56" />
+                  <option name="green" value="149" />
+                  <option name="red" value="56" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="234" />
+                  <option name="darkBlue" value="234" />
+                  <option name="darkGreen" value="197" />
+                  <option name="darkRed" value="81" />
+                  <option name="green" value="197" />
+                  <option name="red" value="81" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Writerside/aec.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="3" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="147" />
+                  <option name="darkBlue" value="147" />
+                  <option name="darkGreen" value="69" />
+                  <option name="darkRed" value="143" />
+                  <option name="green" value="69" />
+                  <option name="red" value="143" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="227" />
+                  <option name="darkBlue" value="227" />
+                  <option name="darkGreen" value="114" />
+                  <option name="darkRed" value="181" />
+                  <option name="green" value="114" />
+                  <option name="red" value="181" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Writerside/cd.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="4" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="112" />
+                  <option name="darkBlue" value="112" />
+                  <option name="darkGreen" value="83" />
+                  <option name="darkRed" value="215" />
+                  <option name="green" value="83" />
+                  <option name="red" value="215" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="163" />
+                  <option name="darkBlue" value="163" />
+                  <option name="darkGreen" value="111" />
+                  <option name="darkRed" value="233" />
+                  <option name="green" value="111" />
+                  <option name="red" value="233" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Writerside/chronovoyage-docs.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="1" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="60" />
+                  <option name="darkBlue" value="60" />
+                  <option name="darkGreen" value="68" />
+                  <option name="darkRed" value="206" />
+                  <option name="green" value="68" />
+                  <option name="red" value="206" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="65" />
+                  <option name="darkBlue" value="65" />
+                  <option name="darkGreen" value="126" />
+                  <option name="darkRed" value="231" />
+                  <option name="green" value="126" />
+                  <option name="red" value="231" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Writerside/edc.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="5" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="55" />
+                  <option name="darkBlue" value="55" />
+                  <option name="darkGreen" value="114" />
+                  <option name="darkRed" value="226" />
+                  <option name="green" value="114" />
+                  <option name="red" value="226" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="62" />
+                  <option name="darkBlue" value="62" />
+                  <option name="darkGreen" value="168" />
+                  <option name="darkRed" value="232" />
+                  <option name="green" value="168" />
+                  <option name="red" value="232" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lDMsgwr3piVlSPzWelS7ftIgXP" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.tests: Compose Deployment.executor": "Run",
+    "Python tests.pytest for chronovoyage.domain.test_add.TestAddDomain.executor": "Run",
+    "Python tests.pytest for chronovoyage.domain.test_init.TestInitDomain.executor": "Run",
+    "Python tests.pytest for chronovoyage.domain.test_init.TestInitDomain.test_execute.executor": "Run",
+    "Python tests.pytest in test_add.py.executor": "Run",
+    "Python tests.pytest in test_init.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Writerside.PDF (chronovoyage-docs).executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/noritaka-izumi/sources/chronovoyage/Writerside/cfg/static",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "settings.json.schema",
+    "vue.rearranger.settings.migration": "true",
+    "writerside.last.selected.productchronovoyage": "cd"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
+      <window_info id="Merge Requests" show_stripe_button="false" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Settings Sync History" />
+      <window_info id="Learn" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18463542" />
+      <window_info id="Commit" order="1" weight="0.18463542" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info anchor="bottom" id="HfCacheToolWindow" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Find" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.30959302" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.30959302" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32994187" />
+      <window_info anchor="bottom" id="Services" order="4" weight="0.30959302" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.32994187" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.1002907" />
+      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="SciView" show_stripe_button="false" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.32994792" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.32994792" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+    </layout>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\Writerside\cfg\static" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\Writerside\images" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\tests" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\tests\resource\mariadb" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\src\chronovoyage\usecase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\Writerside\cfg\static" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\Writerside\snippets\mariadb" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\src\chronovoyage\internal\_logger" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\tests\chronovoyage\cli\test_status" />
+      <recent name="\\wsl.localhost\Ubuntu\home\noritaka-izumi\sources\chronovoyage\tests\chronovoyage\cli" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tests: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="removeVolumesOnComposeDown" value="true" />
+          <option name="sourceFilePath" value="tests/docker-compose.yml" />
+          <option name="upRemoveOrphans" value="true" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.tests: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="false" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6485916a-97e6-4377-9f98-bef0b12d20ef" name="Changes" comment="" />
+      <created>1724710407034</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724710407034</updated>
+      <workItem from="1724710410450" duration="5717000" />
+      <workItem from="1724789619942" duration="9865000" />
+      <workItem from="1725697606337" duration="209000" />
+      <workItem from="1726138132244" duration="7177000" />
+      <workItem from="1726180736101" duration="6206000" />
+      <workItem from="1726268668504" duration="42862000" />
+      <workItem from="1726574278945" duration="1710000" />
+      <workItem from="1727189442747" duration="821000" />
+      <workItem from="1727190415777" duration="51000" />
+      <workItem from="1727190477570" duration="372000" />
+      <workItem from="1727190866651" duration="324000" />
+      <workItem from="1727191211873" duration="190000" />
+      <workItem from="1727191421671" duration="93000" />
+      <workItem from="1727518206042" duration="4675000" />
+      <workItem from="1727522944564" duration="16000" />
+      <workItem from="1727522972226" duration="7483000" />
+      <workItem from="1727530538962" duration="2076000" />
+      <workItem from="1728079506938" duration="5576000" />
+      <workItem from="1728090591486" duration="60000" />
+      <workItem from="1728090666336" duration="35619000" />
+      <workItem from="1728193013508" duration="19538000" />
+      <workItem from="1729405367399" duration="2727000" />
+      <workItem from="1729408792990" duration="7313000" />
+      <workItem from="1729416208928" duration="15421000" />
+      <workItem from="1729599626871" duration="1880000" />
+      <workItem from="1729684708638" duration="11541000" />
+    </task>
+    <task id="LOCAL-00170" summary="test: connect to mysql database">
+      <option name="closed" value="true" />
+      <created>1728212635327</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1728212635327</updated>
+    </task>
+    <task id="LOCAL-00171" summary="test: connect to mysql database">
+      <option name="closed" value="true" />
+      <created>1728212653934</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1728212653934</updated>
+    </task>
+    <task id="LOCAL-00172" summary="test: fix testcase">
+      <option name="closed" value="true" />
+      <created>1728212801951</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1728212801951</updated>
+    </task>
+    <task id="LOCAL-00173" summary="docs: create docs via Writerside">
+      <option name="closed" value="true" />
+      <created>1729418055327</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1729418055329</updated>
+    </task>
+    <task id="LOCAL-00174" summary="ci: add pages (documentation)">
+      <option name="closed" value="true" />
+      <created>1729418573988</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1729418573988</updated>
+    </task>
+    <task id="LOCAL-00175" summary="ci: fix Writerside instance id">
+      <option name="closed" value="true" />
+      <created>1729418985219</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1729418985219</updated>
+    </task>
+    <task id="LOCAL-00176" summary="ci: upload artifact to aws amplify">
+      <option name="closed" value="true" />
+      <created>1729425186756</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1729425186757</updated>
+    </task>
+    <task id="LOCAL-00177" summary="ci: upload artifact to aws amplify">
+      <option name="closed" value="true" />
+      <created>1729425261667</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1729425261667</updated>
+    </task>
+    <task id="LOCAL-00178" summary="ci: upload artifact to aws amplify">
+      <option name="closed" value="true" />
+      <created>1729425469221</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1729425469221</updated>
+    </task>
+    <task id="LOCAL-00179" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729425556753</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1729425556753</updated>
+    </task>
+    <task id="LOCAL-00180" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729425766937</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1729425766939</updated>
+    </task>
+    <task id="LOCAL-00181" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729426106834</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1729426106834</updated>
+    </task>
+    <task id="LOCAL-00182" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729426830558</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1729426830558</updated>
+    </task>
+    <task id="LOCAL-00183" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729427122675</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1729427122675</updated>
+    </task>
+    <task id="LOCAL-00184" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729428076683</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1729428076683</updated>
+    </task>
+    <task id="LOCAL-00185" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729428657853</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1729428657853</updated>
+    </task>
+    <task id="LOCAL-00186" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729429254288</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1729429254288</updated>
+    </task>
+    <task id="LOCAL-00187" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729429458468</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1729429458468</updated>
+    </task>
+    <task id="LOCAL-00188" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729429982269</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1729429982269</updated>
+    </task>
+    <task id="LOCAL-00189" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729430196267</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1729430196267</updated>
+    </task>
+    <task id="LOCAL-00190" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729430691613</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1729430691613</updated>
+    </task>
+    <task id="LOCAL-00191" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729430738063</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1729430738063</updated>
+    </task>
+    <task id="LOCAL-00192" summary="ci: fix .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729430953085</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1729430953085</updated>
+    </task>
+    <task id="LOCAL-00193" summary="docs: update README.md">
+      <option name="closed" value="true" />
+      <created>1729432124969</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1729432124969</updated>
+    </task>
+    <task id="LOCAL-00194" summary="build: update version to 0.1.0">
+      <option name="closed" value="true" />
+      <created>1729432495998</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1729432495998</updated>
+    </task>
+    <task id="LOCAL-00195" summary="build: ignore Writerside directory">
+      <option name="closed" value="true" />
+      <created>1729432526744</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1729432526744</updated>
+    </task>
+    <task id="LOCAL-00196" summary="build: update documentation url">
+      <option name="closed" value="true" />
+      <created>1729432944503</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1729432944503</updated>
+    </task>
+    <task id="LOCAL-00197" summary="build: update version to 0.0.12">
+      <option name="closed" value="true" />
+      <created>1729433347708</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1729433347708</updated>
+    </task>
+    <task id="LOCAL-00198" summary="build: update version to 0.1.0">
+      <option name="closed" value="true" />
+      <created>1729433386439</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1729433386439</updated>
+    </task>
+    <task id="LOCAL-00199" summary="ci: wip - add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729687547151</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1729687547153</updated>
+    </task>
+    <task id="LOCAL-00200" summary="ci: wip - add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729688803062</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1729688803062</updated>
+    </task>
+    <task id="LOCAL-00201" summary="ci: wip - add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729690176470</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1729690176470</updated>
+    </task>
+    <task id="LOCAL-00202" summary="ci: add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729690814475</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1729690814475</updated>
+    </task>
+    <task id="LOCAL-00203" summary="ci: add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729691638488</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1729691638488</updated>
+    </task>
+    <task id="LOCAL-00204" summary="ci: add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729691780767</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1729691780767</updated>
+    </task>
+    <task id="LOCAL-00205" summary="ci: add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729692408874</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1729692408876</updated>
+    </task>
+    <task id="LOCAL-00206" summary="ci: add GitHub Actions deploy-to-amplify config">
+      <option name="closed" value="true" />
+      <created>1729692944668</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1729692944668</updated>
+    </task>
+    <task id="LOCAL-00207" summary="ci: add test config">
+      <option name="closed" value="true" />
+      <created>1729694174963</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1729694174963</updated>
+    </task>
+    <task id="LOCAL-00208" summary="ci: add features to hatch-test env">
+      <option name="closed" value="true" />
+      <created>1729694659550</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1729694659550</updated>
+    </task>
+    <task id="LOCAL-00209" summary="build: fix poe command">
+      <option name="closed" value="true" />
+      <created>1729694712983</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1729694712983</updated>
+    </task>
+    <task id="LOCAL-00210" summary="ci: install missing dependencies">
+      <option name="closed" value="true" />
+      <created>1729694833704</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1729694833704</updated>
+    </task>
+    <task id="LOCAL-00211" summary="ci: sudo when installing missing dependencies">
+      <option name="closed" value="true" />
+      <created>1729694912715</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1729694912715</updated>
+    </task>
+    <task id="LOCAL-00212" summary="test: asserting listdir as set">
+      <option name="closed" value="true" />
+      <created>1729695074776</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695074776</updated>
+    </task>
+    <task id="LOCAL-00213" summary="ci: remove push trigger from build-docs.yml">
+      <option name="closed" value="true" />
+      <created>1729695253629</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695253629</updated>
+    </task>
+    <task id="LOCAL-00214" summary="build: update version to 0.1.1">
+      <option name="closed" value="true" />
+      <created>1729695314974</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695314974</updated>
+    </task>
+    <task id="LOCAL-00215" summary="docs: update README.md">
+      <option name="closed" value="true" />
+      <created>1729695592072</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695592072</updated>
+    </task>
+    <task id="LOCAL-00216" summary="docs: replace urls to github's">
+      <option name="closed" value="true" />
+      <created>1729695883430</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695883430</updated>
+    </task>
+    <task id="LOCAL-00217" summary="ci: remove .gitlab-ci.yml">
+      <option name="closed" value="true" />
+      <created>1729695901179</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695901179</updated>
+    </task>
+    <task id="LOCAL-00218" summary="build: update version to 0.1.2">
+      <option name="closed" value="true" />
+      <created>1729695915010</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1729695915010</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test: fix testcase" />
+    <MESSAGE value="docs: create docs via Writerside" />
+    <MESSAGE value="ci: add pages (documentation)" />
+    <MESSAGE value="ci: fix Writerside instance id" />
+    <MESSAGE value="ci: upload artifact to aws amplify" />
+    <MESSAGE value="ci: fix .gitlab-ci.yml" />
+    <MESSAGE value="build: ignore Writerside directory" />
+    <MESSAGE value="build: update documentation url" />
+    <MESSAGE value="build: update version to 0.0.12" />
+    <MESSAGE value="build: update version to 0.1.0" />
+    <MESSAGE value="ci: wip - add GitHub Actions deploy-to-amplify config" />
+    <MESSAGE value="ci: add GitHub Actions deploy-to-amplify config" />
+    <MESSAGE value="ci: add test config" />
+    <MESSAGE value="ci: add features to hatch-test env" />
+    <MESSAGE value="build: fix poe command" />
+    <MESSAGE value="ci: install missing dependencies" />
+    <MESSAGE value="ci: sudo when installing missing dependencies" />
+    <MESSAGE value="test: asserting listdir as set" />
+    <MESSAGE value="ci: remove push trigger from build-docs.yml" />
+    <MESSAGE value="build: update version to 0.1.1" />
+    <MESSAGE value="Revert &quot;docs: update README.md&quot;&#10;&#10;This reverts commit 87c5a2c340f1b62c738b616386a91a7a5447de87." />
+    <MESSAGE value="docs: update README.md" />
+    <MESSAGE value="docs: replace urls to github's" />
+    <MESSAGE value="ci: remove .gitlab-ci.yml" />
+    <MESSAGE value="build: update version to 0.1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: update version to 0.1.2" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/chronovoyage$pytest_for_chronovoyage_domain_test_init_TestInitDomain_test_execute.coverage" NAME="pytest for chronovoyage.domain.test_init.TestInitDomain.test_execute Coverage Results" MODIFIED="1727519860323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/chronovoyage$pytest_for_chronovoyage_domain_test_init_TestInitDomain.coverage" NAME="pytest for chronovoyage.domain.test_init.TestInitDomain Coverage Results" MODIFIED="1727520507805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/chronovoyage$pytest_in_test_init_py.coverage" NAME="pytest in test_init.py Coverage Results" MODIFIED="1727519778146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/chronovoyage$pytest_for_chronovoyage_domain_test_add_TestAddDomain.coverage" NAME="pytest for chronovoyage.domain.test_add.TestAddDomain Coverage Results" MODIFIED="1727518809421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/chronovoyage$pytest_in_test_add_py.coverage" NAME="pytest in test_add.py Coverage Results" MODIFIED="1727520513785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
