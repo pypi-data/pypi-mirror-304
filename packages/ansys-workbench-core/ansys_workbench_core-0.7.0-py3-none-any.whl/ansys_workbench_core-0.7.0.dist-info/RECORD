@@ -1,0 +1,9 @@
+ansys/workbench/core/__init__.py,sha256=f6-IyfSymJOe0RQ1tCIs_nGGJDtGbfxbLciKA3XqSvE,1488
+ansys/workbench/core/example_data.py,sha256=7svVgUqIPXASXaQ4PZ-SNGlWTS48U2ZqkbmLx7GI6Zg,3537
+ansys/workbench/core/public_api.py,sha256=vT4BBA5PKsPJ3Jj3GvufHiMGO2ms9MzhdCcIxKcXztw,12809
+ansys/workbench/core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansys/workbench/core/workbench_client.py,sha256=RWdgfXbkDo3EO5ym-cabHPrTH5GwAhh-eQ_uAkO4wZ8,21545
+ansys_workbench_core-0.7.0.dist-info/LICENSE,sha256=JgD60xBjdC80Y3_bDlvjsoWCc6vghcXDvbHvRTRmdY0,1098
+ansys_workbench_core-0.7.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+ansys_workbench_core-0.7.0.dist-info/METADATA,sha256=AWApAgBL7CyJJMD7LrRSEvCwaMecrh4QtuG0w-x3QUw,5634
+ansys_workbench_core-0.7.0.dist-info/RECORD,,
