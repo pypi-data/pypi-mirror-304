@@ -1,0 +1,2 @@
+[console_scripts]
+financial-reporter = financial_reporter.__main__:main
