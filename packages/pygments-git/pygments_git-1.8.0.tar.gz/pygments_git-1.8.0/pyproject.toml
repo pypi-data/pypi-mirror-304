@@ -1,0 +1,96 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools",
+]
+
+[project]
+name = "pygments-git"
+version = "1.8.0"
+description = "Pygments lexers for Git output and files."
+readme = "README.rst"
+keywords = [
+  "Git",
+  "Pygments",
+]
+authors = [
+  { name = "Adam Johnson", email = "me@adamj.eu" },
+]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+dependencies = [
+  "pygments",
+]
+urls = { Changelog = "https://github.com/adamchainz/pygments-git/blob/main/CHANGELOG.rst", Funding = "https://adamj.eu/books/", Repository = "https://github.com/adamchainz/pygments-git" }
+entry-points."pygments.lexers".git-attributes = "pygments_git:GitAttributesLexer"
+entry-points."pygments.lexers".git-blame-ignore-revs = "pygments_git:GitBlameIgnoreRevsLexer"
+entry-points."pygments.lexers".git-commit-edit-msg = "pygments_git:GitCommitEditMsgLexer"
+entry-points."pygments.lexers".git-conflict-markers = "pygments_git:GitConflictMarkersLexer"
+entry-points."pygments.lexers".git-console = "pygments_git:GitBashSessionLexer"
+entry-points."pygments.lexers".git-ignore = "pygments_git:GitIgnoreLexer"
+entry-points."pygments.lexers".git-rebase-todo = "pygments_git:GitRebaseTodoLexer"
+
+[tool.isort]
+add_imports = [
+  "from __future__ import annotations",
+]
+force_single_line = true
+profile = "black"
+
+[tool.pyproject-fmt]
+max_supported_python = "3.13"
+
+[tool.pytest.ini_options]
+addopts = """\
+    --strict-config
+    --strict-markers
+    """
+xfail_strict = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = [
+  "pygments_git",
+  "tests",
+]
+
+[tool.coverage.paths]
+source = [
+  "src",
+  ".tox/**/site-packages",
+]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.mypy]
+enable_error_code = [
+  "ignore-without-code",
+  "redundant-expr",
+  "truthy-bool",
+]
+mypy_path = "src/"
+namespace_packages = false
+strict = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+
+[tool.rstcheck]
+report_level = "ERROR"
