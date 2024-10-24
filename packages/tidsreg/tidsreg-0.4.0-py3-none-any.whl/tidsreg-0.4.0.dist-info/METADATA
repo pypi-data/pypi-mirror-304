@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: tidsreg
+Version: 0.4.0
+Summary: Cli and module to register time in the municipality of Copenhagen
+Project-URL: Homepage, https://github.com/kwedel/tidsreg
+Project-URL: Issues, https://github.com/kwedel/tidsreg/issues
+Author-email: Kåre Obel Wedel <kaarewj@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: click>=8.1.7
+Requires-Dist: playwright>=1.47.0
+Description-Content-Type: text/markdown
+
+# tidsreg
+
+The missing tool for registrering time in the municipality of Copenhagen.
+
+# Installation
+
+```bash
+pip install tidsreg
+```
+or
+```bash
+uv tool install tidsreg
+```
+
+# Getting started
+First, make sure that `tidsreg` is configured and log in through the browser.
+```bash
+tidsreg init
+tidsreg login
+```
+
+Then add, show or clear registrations:
+```bash
+tidsreg show
+tidsreg add <projectname> -s 9 -e 1015 -m "A comment"
+tidsreg clear  # WILL DELETE YOUR REGISTRATIONS!
+```
+
+
+
+# TODO
+* Guide til autocomplete: https://click.palletsprojects.com/en/8.1.x/shell-completion/
+* Change author email: https://stackoverflow.com/questions/750172/how-do-i-change-the-author-and-committer-name-email-for-multiple-commits
+* Look into releases on github and setup a pipeline (Actions)
+* Make adding registrations wait for the list to update (expect(thelist).to_have_count(thecount) - make it optional to speed up processing when making many registrations
+* Check if a registration can be made without trying in the browser
+* Add bulk subcommand to make many registrations
+* Prettify outuput from showcommand
+* Add no-trunc flag to show command after it has been prettyfied
+* Implement functionality to change date
