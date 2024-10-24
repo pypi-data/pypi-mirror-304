@@ -1,0 +1,11 @@
+guigaga/__about__.py,sha256=3wrJJUbLBdaNlSFlLqNg-Um0SYDur3Z6P10vYU5-Pa4,131
+guigaga/__init__.py,sha256=9xbJQyd1QDHLWO4o4LtxxIK1yhw8OYiZvq5ld69p6mE,162
+guigaga/decorator.py,sha256=iVwolfi699eWiu6wUX27XfpzD3yoIcokw_4acs4g7uI,5193
+guigaga/guigaga.py,sha256=qI8kjy1CeCleOkJbP1-DbGUkE6KhabDcx7fReGxfBcI,16724
+guigaga/introspect.py,sha256=kSNgL6KS01gaXddKGaR6tyDxOsIZ2-AKAM7bbSV8X5o,9889
+guigaga/logger.py,sha256=k-FgWtMvwWrp-U2hXh0yB7NlIBwZbguBnzQIL7bIsdM,6097
+guigaga/types.py,sha256=jw-dYSYAkZaqDpImut6CUHQo1kjUaRvQAHPmTupreOI,4789
+guigaga-0.0.8.dist-info/METADATA,sha256=wJ7cOnas-6iTCjIAegLBEqm3RrBYD12PPCyDuogLyfA,2484
+guigaga-0.0.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+guigaga-0.0.8.dist-info/licenses/LICENSE.txt,sha256=G0-XdRDvjMQkq2F5T_FMPPWWqullmv-goXrqtDK13Rs,1101
+guigaga-0.0.8.dist-info/RECORD,,
