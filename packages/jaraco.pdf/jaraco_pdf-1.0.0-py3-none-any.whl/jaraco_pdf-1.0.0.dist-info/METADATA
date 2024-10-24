@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: jaraco.pdf
+Version: 1.0.0
+Author-Email: "Jason R. Coombs" <jaraco@jaraco.com>
+Summary:
+Requires-Python: >= 3.9
+Requires-Dist: pypdf
+Requires-Dist: more-itertools
+Provides-Extra: test
+Provides-Extra: doc
+Project-URL: Source, https://github.com/jaraco/jaraco.pdf
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+
