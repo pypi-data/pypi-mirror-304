@@ -1,0 +1,15 @@
+saldo-0.1.2.dist-info/METADATA,sha256=keHSaDn1hIb3EkkMVvKpxbdK71DkMIoW8-WDa7FdG34,4448
+saldo-0.1.2.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+saldo-0.1.2.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+saldo-0.1.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+saldo/__init__.py,sha256=5ka_ue9d1DFAsiwX9HqEZhT0PvMv8rykVanHNYU1AYY,41
+saldo/config/__init__.py,sha256=4yShHrlV8ixr8q7-rPp4MshhyA4G-3xSa165hhWvu_w,281
+saldo/config/consts.py,sha256=PFGmG5TBhAPUQceSHr2jUSNIStFc6cLtLv2j339ztGc,457
+saldo/config/schemas.py,sha256=TT8LwwmR35FmO7zDoQXRF2iWf9gkNzEmoYSh8mWb6eA,598
+saldo/data/retention_tax_tables/2024/single.json,sha256=elQcYJ-Br_uEehXrXfHZvPF3mAFhn3YCZb3lyc2I_5Y,1868
+saldo/schemas.py,sha256=HpQdkoCYINnzvReXJIlZeDR-XzE6ogvuj3kO5g609DQ,1045
+saldo/simulator.py,sha256=dAymTkr3tiF-yybNM5ktnitbSE9JWBNEGmbzBzXDLYY,2327
+saldo/tables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saldo/tables/tax_retention.py,sha256=TC5MuhQXS6vYyRnT_bBW2rFPGyW7CAaSNiXpcRnBvuw,4470
+saldo/text.py,sha256=19oTOdIblYmOmbBTp_tPGakoOSxSsLcfQkSeLriiupY,1577
+saldo-0.1.2.dist-info/RECORD,,
