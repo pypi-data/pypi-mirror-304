@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+graph_data_split/__init__.py
+graph_data_split/split.py
+graph_data_split/test.py
+graph_data_split.egg-info/PKG-INFO
+graph_data_split.egg-info/SOURCES.txt
+graph_data_split.egg-info/dependency_links.txt
+graph_data_split.egg-info/top_level.txt
