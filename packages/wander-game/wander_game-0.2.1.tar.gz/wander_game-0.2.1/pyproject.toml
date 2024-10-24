@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "wander-game"
+version = "0.2.1"
+description = "simulate a trading Order Book"
+authors = ["leon_richard_tan"]
+readme = "README.md"
+# package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
