@@ -1,0 +1,2 @@
+[console_scripts]
+owasp-checker = owasp_checker_v2.cli:main
