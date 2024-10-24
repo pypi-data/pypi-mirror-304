@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "rts-datetime"
+version = "0.1.0"
+description = "datetime library for ripple time system objects"
+authors = ["ripple <github@ripple.contact>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "rtsdatetime" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+mypy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

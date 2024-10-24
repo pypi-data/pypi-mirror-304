@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rts-datetime
+Version: 0.1.0
+Summary: datetime library for ripple time system objects
+License: MIT
+Author: ripple
+Author-email: github@ripple.contact
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+## RTS
+
