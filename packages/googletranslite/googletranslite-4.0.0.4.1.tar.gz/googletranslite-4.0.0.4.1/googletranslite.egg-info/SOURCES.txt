@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+translate
+googletranslite.egg-info/PKG-INFO
+googletranslite.egg-info/SOURCES.txt
+googletranslite.egg-info/dependency_links.txt
+googletranslite.egg-info/requires.txt
+googletranslite.egg-info/top_level.txt
+tests/test_client.py
+tests/test_gtoken.py
+tests/test_utils.py
