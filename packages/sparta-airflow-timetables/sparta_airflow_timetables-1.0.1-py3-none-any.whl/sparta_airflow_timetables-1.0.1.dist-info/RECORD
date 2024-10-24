@@ -1,0 +1,9 @@
+sparta_airflow_timetables/__init__.py,sha256=Q3elnhQMQQYi8T9neHo5xccilKjfEHH9DlMlSZvKjBI,66
+sparta_airflow_timetables/anbima_holidays.csv,sha256=9GrylQqXx4Hq_ZtjEA1n0BtGc6X70np_Xhdf5sjaJnA,31572
+sparta_airflow_timetables/b3pregao_holidays.csv,sha256=3jN5ImFJByBFeZly-fScEATUm52pfk86OdILKRHqFXs,1090
+sparta_airflow_timetables/timetables.py,sha256=I2SpZe2LnpDqrCVBz_Faf4FWf0ooVGfffzhtF8BYh-E,7339
+sparta_airflow_timetables-1.0.1.dist-info/LICENSE,sha256=OQmRnYprFSnnDCNNXxgwlFrRBjfT8uYE674B3o4RnRs,1116
+sparta_airflow_timetables-1.0.1.dist-info/METADATA,sha256=-uBgevBoiXIh8wyIyDX7PYiulyYMVqOJcr7XJ9W89IY,511
+sparta_airflow_timetables-1.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+sparta_airflow_timetables-1.0.1.dist-info/top_level.txt,sha256=FGZNmGY6jL9DZnX4q2vei6OlUk3uEZ3rxWOSdIbpTwY,26
+sparta_airflow_timetables-1.0.1.dist-info/RECORD,,
