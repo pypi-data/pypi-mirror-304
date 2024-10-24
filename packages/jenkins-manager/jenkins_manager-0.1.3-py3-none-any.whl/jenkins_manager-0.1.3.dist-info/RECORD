@@ -1,0 +1,8 @@
+jenkins_manager/__init.py__,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jenkins_manager/runJob.py,sha256=-PKcuAnvR9PUHrch2dldKTUADhWWJLR1p9gEObnRrqw,1728
+jenkins_manager/Jenkins/Client.py,sha256=C2mCmbPnz9sCRtSi1rijV9Kf4MS-ew2bj_ubu4WpBbw,8187
+jenkins_manager-0.1.3.dist-info/METADATA,sha256=fRlLUdjO9Q2SoBCJY8VBl5K5w6ekCJT-stWn0SSHTiM,447
+jenkins_manager-0.1.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jenkins_manager-0.1.3.dist-info/entry_points.txt,sha256=RYrm-05zBMvWez_K3YcTTxhNc6fMHAWaRSkH_Tu9YSk,55
+jenkins_manager-0.1.3.dist-info/licenses/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+jenkins_manager-0.1.3.dist-info/RECORD,,
