@@ -1,0 +1,9 @@
+pyutagger/__init__.py,sha256=ghKeZWzlykAS4eESbrYlw8ag2haVEimV8XQRVxA9hvg,54
+pyutagger/downloader.py,sha256=ls1B6Z1dlbuZj6ZPLQFFo5tSo3yr7tytg3aIIsfHU50,11466
+pyutagger/hangul_util.py,sha256=Z6K2QiiRYxk2j9dOCy7pfOb4PrBXghTMjNlT0E83Hzs,2150
+pyutagger/utagger.py,sha256=uUch7RCuVChEhFiZU9woFnsrtlemTTU4n9o9lttZNsQ,7092
+pyutagger-1.0.1.1028.dist-info/LICENSE,sha256=BYLfsY1R1ylnJXbE_TfCXkaXE9TeqNIkM7ajuKWOhFU,2946
+pyutagger-1.0.1.1028.dist-info/METADATA,sha256=Hb1_vf4BrlSp8V09CBAEv3AlS5BDOPafalbBeU1ExxY,3747
+pyutagger-1.0.1.1028.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pyutagger-1.0.1.1028.dist-info/top_level.txt,sha256=DKMU1Ku0hvKqRD9Br0UvlQJpq9BDxFd3Fa11ZEn_gpw,10
+pyutagger-1.0.1.1028.dist-info/RECORD,,
