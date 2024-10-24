@@ -1,0 +1,7 @@
+setup.py
+langchain_mane.egg-info/PKG-INFO
+langchain_mane.egg-info/SOURCES.txt
+langchain_mane.egg-info/dependency_links.txt
+langchain_mane.egg-info/not-zip-safe
+langchain_mane.egg-info/top_level.txt
+mane/__init__.py
