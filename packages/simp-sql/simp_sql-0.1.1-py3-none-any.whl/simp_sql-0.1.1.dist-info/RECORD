@@ -1,0 +1,8 @@
+simp_sql/__init__.py,sha256=9QdttIvKqjT2stC1CUQA0tQXmzQq2h4aIXhcdg89BrA,185
+simp_sql/db_connection.py,sha256=JpZpoELmRBo9vgjcYTdw_tOnCJsSQ00ODN9RcKKWm2A,1116
+simp_sql/query_generator.py,sha256=xM1msdKjh5LPz8k03VK-58DdQD_IBbDSnlSxdW3qoF8,2307
+simp_sql-0.1.1.dist-info/LICENSE,sha256=3raT9oaLk5ww-kNyrBs9kU_3wzdawAz1JWjW72x51yo,1117
+simp_sql-0.1.1.dist-info/METADATA,sha256=4Ieu7Oegx0VPss_Gbum7acvzhBKHCxtF5uyXqc0eA4U,770
+simp_sql-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+simp_sql-0.1.1.dist-info/top_level.txt,sha256=ExzdwqhLaA85PgJVeS2KbYMnpvPxwTt8IVKAfQC5x2I,9
+simp_sql-0.1.1.dist-info/RECORD,,
