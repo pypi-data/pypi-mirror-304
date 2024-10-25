@@ -1,0 +1,2 @@
+[console_scripts]
+py-exporter = py_exporter_template.main:entrypoint
