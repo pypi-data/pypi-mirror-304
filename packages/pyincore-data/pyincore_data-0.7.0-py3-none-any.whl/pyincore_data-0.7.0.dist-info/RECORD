@@ -1,0 +1,14 @@
+pyincore_data/__init__.py,sha256=-bQoaet4J56eTSuwoijoQzhl03a0Ar1n4Hxfi2G1cI4,523
+pyincore_data/censusutil.py,sha256=xXxu49WrQ4GzgxL0WfeByQRw0o1f1MnnVkXTS3j1slE,26765
+pyincore_data/censusviz.py,sha256=YH8H2JOjMctCh7Y6fvsYU6AA7WIRyFLYRRZJ76692ZA,6011
+pyincore_data/globals.py,sha256=vCt9luWtUvx8_WSz67NMdGifY4n_OuBswduEfssFW4c,664
+pyincore_data/logging.ini,sha256=M5Jmn1E_Oq4-GVVZuuS6J1PhzCQbSSAz0gqbxcWzGmg,924
+pyincore_data/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyincore_data/utils/datautil.py,sha256=1_Ca1XaH9zi_8tqM6bBhZxgiw7Nkq5JkIlvjnsBt_sM,2140
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_format.py,sha256=8UBnlLPfnE6QxjXXEmQ22kHcFBbNcZS_27AFx3kq5Bk,795
+pyincore_data-0.7.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+pyincore_data-0.7.0.dist-info/METADATA,sha256=-piFjeEMgIPukUfnn5d6YcZw2tK1gBfowDrsWfUXFeU,2197
+pyincore_data-0.7.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pyincore_data-0.7.0.dist-info/top_level.txt,sha256=xCTqKICteNwwewYUmbTdZuvHlt5sVNPR2NHUpPeKgC0,20
+pyincore_data-0.7.0.dist-info/RECORD,,
