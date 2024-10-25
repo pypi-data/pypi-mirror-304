@@ -1,0 +1,10 @@
+devart/oracle/__init__.py,sha256=ZW8UBq2yRzEIGaUTJ1wlSilVaWAIXcGY9oRNjbS9qUA,917
+devart/oracle/oracle.cpython-38-x86_64-linux-gnu.so,sha256=GIHdQn9FXmpXJvOYBgXeWLsw-nEYW4cAU3KQgKlOnIw,8471240
+devart/oracle/oracle.pyi,sha256=-GSbIAtRxvyce14Hhcn2-7jwjIkoTpV7cUGirmsRn24,12367
+devart/oracle/http/tunnel.php,sha256=qjhBbshLEKSmoA7RAXVi29TbVNsPBad364d2YHsbyNQ,20720
+devart/oracle/sqlalchemy/__init__.py,sha256=8FIGK-lKhAP25Fe_HBmRCdToz04oXXD_WnfmU6Zw3x4,774
+devart_oracle_connector-1.2.0.dist-info/LICENSE.txt,sha256=3sjizf07RF-z3Lp3tnA-jy3rN103Ypw11NO9tFnRLtU,8559
+devart_oracle_connector-1.2.0.dist-info/METADATA,sha256=hIsET62CJqmBr99k408fpGD38lnDRtjVWuheeH9UEsE,2660
+devart_oracle_connector-1.2.0.dist-info/WHEEL,sha256=QtvvVFpfTFd2UITrFb13PS5tRNxJczmTxa3IxksbyMk,102
+devart_oracle_connector-1.2.0.dist-info/top_level.txt,sha256=h_mZcghGiX6pnc-Kb1EoAfIW2iHeDA0kJKfcLJMbq44,7
+devart_oracle_connector-1.2.0.dist-info/RECORD,,
