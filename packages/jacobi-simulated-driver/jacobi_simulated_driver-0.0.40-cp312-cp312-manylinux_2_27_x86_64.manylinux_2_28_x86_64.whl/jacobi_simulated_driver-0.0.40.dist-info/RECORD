@@ -1,0 +1,6 @@
+libjacobi-simulated-driver.so,sha256=AMoZivE8ztiFULw7V6RJP8VwNI72BpV0XdNmU73vYCA,373072
+jacobi_driver_simulated.cpython-312-x86_64-linux-gnu.so,sha256=ZDMVlU8onlcn5adbyN85JLADBw4xcxMxpQy9qKwOrrE,627512
+jacobi_simulated_driver-0.0.40.dist-info/METADATA,sha256=23XGuYJThk7Ei0WkujneuyIiCN0jhrleEiky1nzRboI,5557
+jacobi_simulated_driver-0.0.40.dist-info/WHEEL,sha256=mJLU1RQwO1EVB1lOMGMcbPZXCXCQtyFqWQvC-JvhUs0,157
+jacobi_simulated_driver-0.0.40.dist-info/RECORD,,
+jacobi_simulated_driver-0.0.40.dist-info/licenses/LICENSE,sha256=aOoSTZXfCLkJEh1SwiDvRcxqbW-GEe-zl4VUAwA89wA,3859
