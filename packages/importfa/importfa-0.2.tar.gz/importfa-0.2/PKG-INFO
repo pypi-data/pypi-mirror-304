@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: importfa
+Version: 0.2
+Summary: add parent/ancestor folder path into sys.path when import
+Home-page: https://github.com/yourusername/mypackage
+Author: wywzxxz
+Author-email: wywzxxz@163.com
+License: MIT
+Keywords: sample setuptools development
