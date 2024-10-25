@@ -1,0 +1,11 @@
+README.md
+setup.py
+OpenZerox/__init__.py
+OpenZerox/openzerox.py
+OpenZerox/utils.py
+OpenZerox.egg-info/PKG-INFO
+OpenZerox.egg-info/SOURCES.txt
+OpenZerox.egg-info/dependency_links.txt
+OpenZerox.egg-info/requires.txt
+OpenZerox.egg-info/top_level.txt
+tests/test.py
