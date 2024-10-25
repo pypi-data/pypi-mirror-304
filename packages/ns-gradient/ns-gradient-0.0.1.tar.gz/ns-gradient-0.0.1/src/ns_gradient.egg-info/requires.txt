@@ -1,0 +1,5 @@
+setuptools>=58.1.0
+wheel>=0.37.1
+numpy>=1.26.3
+pandas>=2.1.4
+fire

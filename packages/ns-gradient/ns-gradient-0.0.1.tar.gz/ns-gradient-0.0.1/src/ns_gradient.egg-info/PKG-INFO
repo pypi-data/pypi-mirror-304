@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ns-gradient
+Version: 0.0.1
+Summary: A package for calculating shifted gradients
+Home-page: https://nkrtech.com
+Author: Nicolus Rotich
+Author-email: nicholas.rotich@gmail.com
+License: MIT
+Download-URL: https://github.com/moinonin/ns-gradients/archive/refs/heads/main.zip
+Project-URL: Bug Tracker, https://github.com/pypa/ns-gradients/issues
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ns-gradients
+This package is used to calculate the gradients of a shifted column of dataset to form a rows  
+
+```
+  column_0 column_1 column_2 column_3 column_4 column_5
+0  0.05601      NaN      NaN      NaN      NaN      NaN
+1  0.08611  0.05601      NaN      NaN      NaN      NaN
+2  0.05125  0.08611  0.05601      NaN      NaN      NaN
+3  0.02576  0.05125  0.08611  0.05601      NaN      NaN
+4  0.01776  0.02576  0.05125  0.08611  0.05601      NaN
+```
+## Usage
+
+
+
+
