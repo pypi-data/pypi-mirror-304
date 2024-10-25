@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+goosedb.egg-info/PKG-INFO
+goosedb.egg-info/SOURCES.txt
+goosedb.egg-info/dependency_links.txt
+goosedb.egg-info/requires.txt
+goosedb.egg-info/top_level.txt
