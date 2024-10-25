@@ -1,0 +1,43 @@
+[project]
+name = "tidsreg"
+version = "0.5.2"
+authors = [{name="Kåre Obel Wedel", email="kaarewj@gmail.com"}]
+description = "Cli and module to register time in the municipality of Copenhagen"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.7",
+    "playwright>=1.47.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kwedel/tidsreg"
+Issues = "https://github.com/kwedel/tidsreg/issues"
+
+[project.scripts]
+tidsreg = "tidsreg.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+    "pytest>=8.3.3",
+    "ruff>=0.6.9",
+]
+
+[tool.ruff.lint]
+select = ["F","E","I","B","S","DTZ","SIM", "RUF"]
+ignore = ["E501"]
+allowed-confusables = ["–"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/**/*.py" = [
+    "S101", # asserts allowed in tests...
+]

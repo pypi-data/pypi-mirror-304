@@ -1,0 +1,7 @@
+8	fagkoor
+915	talege	Kommentar
+10	safe
+1130	frokost
+12
+13	talege	Ny Kommentar
+14:10
