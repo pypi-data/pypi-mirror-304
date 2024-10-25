@@ -1,0 +1,13 @@
+djform_navigation-1.1.data/data/1/change_form.html,sha256=UBi6_9E3Iq_fqkctTi6SZ2pzMdoXmf9WgvfGaOOzmic,1250
+djform_navigation-1.1.data/data/2/module.js,sha256=jmMkUDrKdvSEAZ4Bn5AvEDlsXFTnedFhWAFYSVNCl6s,980
+form_navigation/__init__.py,sha256=NIdOsz5f4ulELKCDI_3trKgqDqSBosYS6ZrTmuv-Asc,2091
+form_navigation/apps.py,sha256=W_8OSjvnPAb9-H3FCFmoquLy8TB6k0j2wSDdgA-J2jM,161
+form_navigation/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+form_navigation/static/form_navigation/change_form_prev_next.js,sha256=jmMkUDrKdvSEAZ4Bn5AvEDlsXFTnedFhWAFYSVNCl6s,980
+form_navigation/static/form_navigation/module.js,sha256=jmMkUDrKdvSEAZ4Bn5AvEDlsXFTnedFhWAFYSVNCl6s,980
+form_navigation/templates/admin/change_form.html,sha256=UBi6_9E3Iq_fqkctTi6SZ2pzMdoXmf9WgvfGaOOzmic,1250
+djform_navigation-1.1.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djform_navigation-1.1.dist-info/METADATA,sha256=GpCqaxdMEnPYPHE5dflG9HndtTg0BRiw_5xmCFLKCCA,2409
+djform_navigation-1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+djform_navigation-1.1.dist-info/top_level.txt,sha256=9LpsBEbP6jCYMPUdrw98wlfoB5FNTXUfMRLePYj1U8Y,16
+djform_navigation-1.1.dist-info/RECORD,,
