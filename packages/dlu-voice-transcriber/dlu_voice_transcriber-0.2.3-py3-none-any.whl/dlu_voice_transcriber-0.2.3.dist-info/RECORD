@@ -1,0 +1,11 @@
+dlu_voice_transcriber/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlu_voice_transcriber/__main__.py,sha256=dGXXDqDv4-pSp4vLujy4eQW8fn0xRNGlefRskWt_-lM,5062
+dlu_voice_transcriber/core/__init__.py,sha256=HrtlJLnQQLLq0qczP3KSvH3J5ado7Z7UjIYMREKKkFk,1712
+dlu_voice_transcriber/core/recorder.py,sha256=J0aJlizKMDi2ad_xqdVkO9_xNd7Ui48AurroM0s7tmc,5129
+dlu_voice_transcriber/core/transcriber.py,sha256=Lchx6SSzeXY956EBOLWCjSOTWIFxaXYrYZdzLX78-y8,1155
+dlu_voice_transcriber-0.2.3.dist-info/LICENSE,sha256=kWNP-ApKejCCuo5RWn4uSZgg6nLPRLwBI637JoBieIM,1069
+dlu_voice_transcriber-0.2.3.dist-info/METADATA,sha256=S1L99GRgtpCo7zixXUPmsq6Fhc5xjqsA4P8Y0Hqt-jU,4163
+dlu_voice_transcriber-0.2.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dlu_voice_transcriber-0.2.3.dist-info/entry_points.txt,sha256=dNTn66QYGC5Y_pgURRTX3zkiaPp5OCMtMOdWpqTN9Lo,71
+dlu_voice_transcriber-0.2.3.dist-info/top_level.txt,sha256=KJEmhxMHiEEn5o-LAWlZvSxcgxjvVLgIzIu0w-QGqGA,22
+dlu_voice_transcriber-0.2.3.dist-info/RECORD,,
