@@ -1,0 +1,7 @@
+[babel.extractors]
+ckan = ckan.lib.extract:extract_ckan
+
+[ckan.plugins]
+permissions = ckanext.permissions.plugin:PermissionsPlugin
+permissions_manager = ckanext.permissions_manager.plugin:PermissionsManagerPlugin
+permissions_test = ckanext.permissions.tests.conftest:PermissionTestPlugin
