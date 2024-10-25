@@ -1,0 +1,12 @@
+astropy
+astroplan
+ccdproc
+cython
+matplotlib
+numpy
+packaging
+pandas
+requests
+scipy
+statsmodels
+astroquery
