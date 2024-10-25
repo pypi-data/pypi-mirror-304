@@ -1,0 +1,9 @@
+README.md
+setup.py
+venv3/bin/activate_this.py
+vfxpipe.egg-info/PKG-INFO
+vfxpipe.egg-info/SOURCES.txt
+vfxpipe.egg-info/dependency_links.txt
+vfxpipe.egg-info/not-zip-safe
+vfxpipe.egg-info/requires.txt
+vfxpipe.egg-info/top_level.txt
