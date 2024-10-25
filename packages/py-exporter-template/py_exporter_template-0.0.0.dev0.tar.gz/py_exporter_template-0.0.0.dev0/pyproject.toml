@@ -1,0 +1,65 @@
+[project]
+name = "py-exporter-template"
+version = "0.0.0-dev0"
+description = "Add your description here"
+authors = [{ name = "Pavel Sapezhka", email = "me@weastur.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "loguru>=0.7.2",
+    "prometheus-client>=0.21.0",
+    "pydantic>=2.9.2",
+    "pydantic-settings[yaml]>=2.6.0",
+]
+readme = "README.md"
+license = { file = "LICENSE.md" }
+keywords = ["exporter", "prometheus", "monitoring"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: No Input/Output (Daemon)",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.urls]
+Homepage = "https://pyexporter.weastur.com"
+Documentation = "https://pyexporter.weastur.com"
+Repository = "https://github.com/weastur/pyexporter.git"
+Issues = "https://github.com/weastur/pyexporter/issues"
+Changelog = "https://github.com/weastur/pyexporter/releases"
+
+[project.scripts]
+py-exporter = "py_exporter_template.main:entrypoint"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "bump-my-version>=0.28.0",
+    "devtools>=0.12.2",
+    "liccheck>=0.9.2",
+    "mkdocs-material>=9.5.42",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs>=1.6.1",
+    "pytest-cov>=5.0.0",
+    "pytest>=8.3.3",
+    "ruff>=0.7.0",
+    "testcontainers>=4.8.2",
+]
+
+[tool.ruff]
+line-length = 79

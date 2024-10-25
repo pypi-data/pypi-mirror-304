@@ -1,0 +1,20 @@
+---
+log:
+  level: info
+web:
+  port: 9123
+  addr: "0.0.0.0"
+  tls:
+    cert: null
+    key: null
+    protocol: 17
+    mtls:
+      enabled: false
+      cert: null
+      key: null
+collector:
+  disable_created_series: false
+  default:
+    gc: true
+    platform: true
+    process: true

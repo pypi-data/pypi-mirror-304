@@ -1,0 +1,35 @@
+changelog:
+  exclude:
+    labels:
+      - relnotes-ignore
+      - documentation
+  categories:
+    - title: Breaking
+      labels:
+        - breaking
+    - title: Deprecations
+      labels:
+        - deprecation
+    - title: Enhancements
+      labels:
+        - enhancement
+    - title: Bugs
+      labels:
+        - bug
+    - title: Security
+      labels:
+        - security
+    - title: Dependencies
+      labels:
+        - dependency-update
+    - title: Other
+      labels:
+        - "*"
+      exclude:
+        labels:
+          - breaking
+          - bug
+          - dependency-update
+          - deprecation
+          - enhancement
+          - security
