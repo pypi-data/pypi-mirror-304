@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+advdpp.egg-info/PKG-INFO
+advdpp.egg-info/SOURCES.txt
+advdpp.egg-info/dependency_links.txt
+advdpp.egg-info/entry_points.txt
+advdpp.egg-info/requires.txt
+advdpp.egg-info/top_level.txt
+tests/test_data_pipeline.py
