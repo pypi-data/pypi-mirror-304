@@ -1,0 +1,17 @@
+wbsurfer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wbsurfer/_version.py,sha256=H-qsvrxCpdhaQzyddR-yajEqI71hPxLa4KxzpP3uS1g,411
+wbsurfer/border.py,sha256=OUonkn0Nwra3Do_oi9rdDRrObvYkHmlnhWn22e1o7B4,1198
+wbsurfer/cli.py,sha256=nWxr21KGmh5REgu4P-6E5r3tRH20UTzYhUawEKJavmo,3247
+wbsurfer/geodesic.py,sha256=con4BURng5n_mLfbqy-IyiTunIohXyxLDHupuZRgdEY,7988
+wbsurfer/logging.py,sha256=8LRdYNHMZH3aWnuzZfhUmhw6_EwfQ7pGzHIjv1RJNfE,2304
+wbsurfer/movie.py,sha256=UTNhjx0_ZN7CJFYKJSq8i1eqDg4rcM9uBOfv0IbZFUY,6776
+wbsurfer/scene.py,sha256=T-Ou_vRXhnF97KNqNWnLd0_QvagpALTIyerP_KY0_8Q,11286
+wbsurfer/utils.py,sha256=rUxy_ddc1duYTHj2-QZyscOc8E67KsaJC8RigWI8gc4,4322
+wbsurfer/volume.py,sha256=3Bo5XEve5LBSlztVeJyZP0EcND5TiPmmP6n6GMFAXBQ,3238
+wbsurfer2-0.2.0.dist-info/LICENSE,sha256=jg7eeSZ258BO2Ns6DcJZ3zQFXeM6_zcT_1gyhna6aeU,1067
+wbsurfer2-0.2.0.dist-info/METADATA,sha256=pwntMf1h3ZlE6I0ue93Xl71nM_LNKisXtGR-K1Phdug,6067
+wbsurfer2-0.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+wbsurfer2-0.2.0.dist-info/entry_points.txt,sha256=6ft5a4k5Eo6Xj57GfA6C_iqLEe9XbiRbNCvIBomXhyM,49
+wbsurfer2-0.2.0.dist-info/top_level.txt,sha256=pZeVzOUMJ5MzsTcWYtz2p3RqV49p1XLDrNHmfc8kJq0,9
+wbsurfer2-0.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+wbsurfer2-0.2.0.dist-info/RECORD,,
