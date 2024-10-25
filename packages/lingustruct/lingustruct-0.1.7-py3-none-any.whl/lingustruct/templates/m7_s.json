@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "map": {
+            "type": "object",
+            "properties": {
+                "auth": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Authentication マッピング"
+                    }
+                },
+                "authz": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Authorization マッピング"
+                    }
+                },
+                "ms": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Microservices マッピング"
+                    }
+                },
+                "perf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Performance マッピング"
+                    }
+                },
+                "svc": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Service マッピング"
+                    }
+                }
+            },
+            "required": []
+        }
+    },
+    "required": []
+}
