@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+login_harvest/__init__.py
+login_harvest/analyzers.py
+login_harvest/extractor.py
+login_harvest/oauth_providers.json
+login_harvest.egg-info/PKG-INFO
+login_harvest.egg-info/SOURCES.txt
+login_harvest.egg-info/dependency_links.txt
+login_harvest.egg-info/requires.txt
+login_harvest.egg-info/top_level.txt
+tests/test_html_extractor.py
