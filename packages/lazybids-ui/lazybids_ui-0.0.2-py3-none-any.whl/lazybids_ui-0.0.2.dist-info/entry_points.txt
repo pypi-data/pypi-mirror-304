@@ -1,0 +1,3 @@
+[console_scripts]
+lazybids-ui=lazybids_ui.main:run
+
