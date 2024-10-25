@@ -1,0 +1,11 @@
+devart/bigquery/__init__.py,sha256=9LQzZticR-wEEl3JbMg8dbo8jaaGgThEEwejecyQqO0,724
+devart/bigquery/bigquery.cp313-win_amd64.pyd,sha256=Or6_-SGYUd3ijpWoOEe1d2zzq-tByMo4GeOi_JkOu8c,900248
+devart/bigquery/bigquery.pyi,sha256=siUkOQO84--DMMEy7dZvnuJzIkp7UehEJPErcZaZIU0,12770
+devart/bigquery/BigQuery/Devart.Python.BigQueryEngine.dll,sha256=o0RbWhFBV8C5zBaI8ri-8VNJBULADgy4dhhjvy6u4q4,10446848
+devart/bigquery/BigQuery/sqlite3.dll,sha256=CkFtk1k8MzrSu52Eg5XvOT0NIvYIsXTE6xkBurbR-RI,1277952
+devart/bigquery/sqlalchemy/__init__.py,sha256=X9Sf0zLsmf5g1ekeoxDztbP1Acm3W--fIgeS50kSJnU,1850
+devart_bigquery_connector-1.2.0.dist-info/LICENSE,sha256=3sjizf07RF-z3Lp3tnA-jy3rN103Ypw11NO9tFnRLtU,8559
+devart_bigquery_connector-1.2.0.dist-info/METADATA,sha256=hvyKkLPesExJ09ut0wKkOEJmaG4e4-lLNh4EruzLSiI,2860
+devart_bigquery_connector-1.2.0.dist-info/WHEEL,sha256=YY3whN5zaIpzxWCxMHGQtwoICDXEsGAh-bKATaD2hj4,101
+devart_bigquery_connector-1.2.0.dist-info/top_level.txt,sha256=h_mZcghGiX6pnc-Kb1EoAfIW2iHeDA0kJKfcLJMbq44,7
+devart_bigquery_connector-1.2.0.dist-info/RECORD,,
