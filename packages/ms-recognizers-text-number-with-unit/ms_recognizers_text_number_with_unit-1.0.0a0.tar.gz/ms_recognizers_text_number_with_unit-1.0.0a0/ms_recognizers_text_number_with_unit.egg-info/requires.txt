@@ -1,0 +1,3 @@
+ms-recognizers-text
+ms-recognizers-text-number
+regex
