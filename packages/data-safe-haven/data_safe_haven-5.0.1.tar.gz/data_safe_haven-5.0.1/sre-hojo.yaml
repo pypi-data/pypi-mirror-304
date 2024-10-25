@@ -1,0 +1,32 @@
+azure:
+  location: uksouth
+  subscription_id: 3f1a8e26-eae2-4539-952a-0a6184ec248a
+  # subscription_id: 24c0fb01-5f72-472e-912a-dd3c08ed75e2 # WRONG!
+  tenant_id: 4395f4a7-e455-4f95-8a9f-1fbaef6384f9
+description: Hojo
+dockerhub:
+  access_token: dckr_pat_OR5AqOgRJiKcu6lYjX3Hfy_Eslo
+  username: jmadge
+name: hojo
+sre:
+  admin_email_address: jmadge@turing.ac.uk
+  admin_ip_addresses:
+    - 82.71.59.229
+  data_provider_ip_addresses: Internet
+  databases: []
+  # databases:
+  #   - postgresql
+  #   - mssql
+  remote_desktop:
+    allow_copy: true
+    allow_paste: true
+  research_user_ip_addresses: Internet
+  software_packages: any
+  storage_quota_gb:
+    home: 100
+    shared: 100
+  timezone: Europe/London
+  # workspace_skus: []
+  workspace_skus:
+    - Standard_D8s_v5
+    # - Standard_D8s_v5
