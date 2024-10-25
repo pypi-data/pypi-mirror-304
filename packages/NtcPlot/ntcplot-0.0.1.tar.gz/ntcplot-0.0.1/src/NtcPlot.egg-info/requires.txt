@@ -1,0 +1,5 @@
+PyQt6>=6.7.0
+numpy>=1.26.0
+netCDF4>=1.7.0
+matplotlib>=3.8.0
+basemap>=1.4.1
