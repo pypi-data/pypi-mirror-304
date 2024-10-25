@@ -1,0 +1,16 @@
+html {
+    overflow-y: auto;
+}
+
+.d-box {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.d-grid {
+    display: grid;
+    gap: 0.25em;
+    grid-auto-rows: 1fr;
+    margin: 0 auto;
+}
