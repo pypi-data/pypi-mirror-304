@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: sql-profiler
+Version: 0.1.0
+Summary: A package to profile SQL queries and monitor database performance in real-time
+Author: Vikas jangid
+Author-email: v7776139@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Requires-Dist: mysql-connector-python
+
+# sql-profiler
+
+newdlharsh is a simple Python package that allows users to greet someone with a friendly message.
+
+## Installation
+
+You can install the mlharsh package from PyPI (after it's uploaded) using pip:
+
+```bash
+pip install sql-profiler

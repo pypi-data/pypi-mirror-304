@@ -1,0 +1,12 @@
+sql-profiler/__init__.py,sha256=wYFO7mtSylm_IrGBO7QoQC97rPiAxOHwIKVHAyaS3qE,395
+sql-profiler/alerts.py,sha256=3NXRdr9MVO8V5ZKRiHBdULqYJDgejQoX1zSVWx3WSbc,748
+sql-profiler/db_connection.py,sha256=4LE8EDyp7Wea9nC87EhRhzYhTUgYmR8ZVW6zg4WCsW4,1198
+sql-profiler/performance_monitor.py,sha256=0cys5kJV5qdCC-7KCNduD9VKPHZhZA3EYno7AnMDKLM,583
+sql-profiler/query_profiler.py,sha256=PI64sfu4hGkj4kDLRSUBsgPh1x0MFro2pjr9-dVSti8,927
+sql-profiler/suggestions.py,sha256=824OJ3-DU3br6seIVGjtcsff0kEY51GVPVd6hqErJ84,511
+sql-profiler/utils.py,sha256=bgnzQPjgvLXffknqhM54UjKcj1ACYwqenQBWoeSMAXw,1725
+sql_profiler-0.1.0.dist-info/LICENSE,sha256=CK87JxesC4MIpyddG4mfVJ7OgNFRy2V7XPoO61O1pZY,492
+sql_profiler-0.1.0.dist-info/METADATA,sha256=7dAy9cFRSgyql5mFdk7SsCpmEIkVqAdTaK7-F-xz1gM,760
+sql_profiler-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sql_profiler-0.1.0.dist-info/top_level.txt,sha256=tOge3xmEDSwkp55pB0-DxVoC1oQgd6MqAnc7meYAlNA,13
+sql_profiler-0.1.0.dist-info/RECORD,,
