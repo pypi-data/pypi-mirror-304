@@ -1,0 +1,13 @@
+pydeepskylog/__init__.py,sha256=Ck_P4q4ZgwkJ03AF5fwlUFvGgxtRzMwTxhFWTuaL9Yk,624
+pydeepskylog/contrast_reserve.py,sha256=UaMaWqUmI6ExEIQ4g0tcJDgTkUQEpYGmy60dsaUJQHA,8573
+pydeepskylog/deepskylog_interface.py,sha256=q-u_2aPupYBuc7V5Xa-gwLI6QKvJLW9L7bDriLnCkz8,3169
+pydeepskylog/magnitude.py,sha256=cQCjtZUGkzGKEnOffFp5cP3qzSABzCoTm318UXzUjek,3585
+pydeepskylog/version.py,sha256=Mlm4Gvmb_6yQxwUbv2Ksc-BJFXLPg9H1Vt2iV7wXrA4,22
+pydeepskylog/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydeepskylog/tests/test_contrast_reserve.py,sha256=46dsOGgQaxyWlwWXwcd_fGGo2_DmSjLnObN4QqavUUc,3587
+pydeepskylog/tests/test_magnitudes.py,sha256=8FjpC6lixhXoOIp9Vji68WHEsF83lbXZyaZ0yiNN7dY,2202
+pydeepskylog-1.2.1.dist-info/LICENSE,sha256=GAA0NVStOisrspNtTf8N_oWj8VPf2zAi9j67zMOweTE,34901
+pydeepskylog-1.2.1.dist-info/METADATA,sha256=7a3aS-QqfD4IH3gkUaM9aro-n7uBettJK0b-9FHDqWw,6906
+pydeepskylog-1.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pydeepskylog-1.2.1.dist-info/top_level.txt,sha256=R9Jh1cbW4T2TC6Uz-dHv9MLhugdW5zobPWADjz0_jIg,13
+pydeepskylog-1.2.1.dist-info/RECORD,,
