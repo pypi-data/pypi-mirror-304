@@ -1,0 +1,11 @@
+dbbridge/__init__.py,sha256=MHWv4IhfnGmTt_Pq21mf4QP5seuKPmHlOJ0qqt_qoS4,122
+dbbridge/aws_db.py,sha256=x41RIYwvsuLtTA7G8C23XvQVrBzyOtd9vK6_DH4WxR8,1774
+dbbridge/db_connection.py,sha256=enDyZOds8oADnk3KkspvYiqBeDF-XJfOVnilhli4cxA,408
+dbbridge/db_manager.py,sha256=a67IWf5Ei4RnbSJCWazARSde5Qn_Nl7ZPgWsITZljlM,727
+dbbridge/local_db.py,sha256=_IwJpWoX6nnf4MYw7LR3C7LmJF6lbYIPeZZX191Repg,1355
+dbbridge/rds_execute.py,sha256=RsrPBqbzuYAc7ZxIOWb2x_8xBdoU9DbKNS8EEVfn7ZQ,1302
+dbbridge-0.0.4.dist-info/LICENSE,sha256=3qyi84eOMPYSKYxV3Gt83gu2wVE6qSFY8KnsI46o4Ro,482
+dbbridge-0.0.4.dist-info/METADATA,sha256=1sQA0NvM-n9ng8aRjXatJ4fAKVZdzu9LBoprNjZsw-s,1502
+dbbridge-0.0.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dbbridge-0.0.4.dist-info/top_level.txt,sha256=0lasTC02xVIOZh_nx7IXUjPQuVYr3nx-Vcw3rs9rxYI,9
+dbbridge-0.0.4.dist-info/RECORD,,
