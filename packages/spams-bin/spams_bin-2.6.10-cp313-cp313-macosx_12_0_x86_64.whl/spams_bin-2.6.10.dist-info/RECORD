@@ -1,0 +1,16 @@
+spams_bin-2.6.10.dist-info/RECORD,,
+spams_bin-2.6.10.dist-info/LICENSE,sha256=EqxQR_KvBSLwZ5ixWJ_8RZm8KckflU14dOAyBjTnd8A,35122
+spams_bin-2.6.10.dist-info/WHEEL,sha256=Ib9EW9sEQ8-3yLD91qPYFvEldww-dVWFjnEiD477uHs,110
+spams_bin-2.6.10.dist-info/top_level.txt,sha256=3eyGfMfOg3p44Y3heb4Yn7k-YKwYThwTKPfbIfqS2Yc,17
+spams_bin-2.6.10.dist-info/METADATA,sha256=GJdZvZtxD1Dn_WDv4p1cum6On0gNhhf7GFLNPbeaesA,750
+spams/__init__.py,sha256=xHcMde31B_Zgi9MrSloYNaeuMyQBh9yrXGWijCauIo4,60
+spams/spams.py,sha256=Oz_7pO8yB-Ga-nPlIQM9zqntQgVmFbAuz3vaOomNUi0,28693
+spams/.dylibs/libopenblasp-r0.3.28.dylib,sha256=IGpFnSsb8bWtX5-hwBs5Kx9QHTE1Jg00DGyAsY2_YUg,68004864
+spams/.dylibs/libomp.dylib,sha256=xOFeT_dYg7pPJ2zUIRMqQ255px2cCnFbhQcyT_thBzs,746192
+spams/.dylibs/libgfortran.5.dylib,sha256=492t_oL-Es-X7FEy534HxDaUQXriAnpyKPFG7AB1v8Y,3649456
+spams/.dylibs/libquadmath.0.dylib,sha256=yxng1hXiN7Rbz5DdKHoVAtqR17h9A-2a3OqP4moXDkk,367568
+spams/.dylibs/libgcc_s.1.1.dylib,sha256=8b7nUmZv22UiZwXIqDJ-3E8-qVDufbhkmtS6sHSA4bk,255568
+spams/.dylibs/libgomp.1.dylib,sha256=ePm47InkDotOdjH6DiPjXRF20N4e75FHXb8uRwL9kck,477552
+spams_wrap/__init__.py,sha256=YIHCmH1R55dbX1L6wKGc-mLQwkKnCyWDT0zkxpRX3c0,65
+spams_wrap/spams_wrap.py,sha256=g10GC-FA7zgNQL5qQJJjPuhGWNTrheZIycA_RZOT-oE,627
+spams_wrap/_spams_wrap.cpython-313-darwin.so,sha256=w0gk86oXF-d29cQu0_hPnaSxrnM15qr4cjBw-sDqMw8,2435760
