@@ -1,0 +1,2 @@
+[gui_scripts]
+Arbeitszeitrechner = LucaZeitRechner.main:main
