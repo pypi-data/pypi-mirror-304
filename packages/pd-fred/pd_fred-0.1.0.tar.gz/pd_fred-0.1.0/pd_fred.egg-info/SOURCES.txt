@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pd_fred/__init__.py
+pd_fred/config.py
+pd_fred/data_fetcher.py
+pd_fred/pd_calculator.py
+pd_fred.egg-info/PKG-INFO
+pd_fred.egg-info/SOURCES.txt
+pd_fred.egg-info/dependency_links.txt
+pd_fred.egg-info/requires.txt
+pd_fred.egg-info/top_level.txt
+pd_fred/tests/__init__.py
+pd_fred/tests/test_data_fetcher.py
+pd_fred/tests/test_pd_calculator.py
