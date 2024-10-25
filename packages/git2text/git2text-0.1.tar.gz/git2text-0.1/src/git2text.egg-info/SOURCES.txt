@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/git2text.py
+src/git2text.egg-info/PKG-INFO
+src/git2text.egg-info/SOURCES.txt
+src/git2text.egg-info/dependency_links.txt
+src/git2text.egg-info/entry_points.txt
+src/git2text.egg-info/requires.txt
+src/git2text.egg-info/top_level.txt
