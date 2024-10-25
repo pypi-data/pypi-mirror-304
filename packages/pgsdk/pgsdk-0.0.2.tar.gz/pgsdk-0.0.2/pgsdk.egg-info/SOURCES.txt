@@ -1,0 +1,12 @@
+.gitignore
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+pgsdk/__init__.py
+pgsdk.egg-info/PKG-INFO
+pgsdk.egg-info/SOURCES.txt
+pgsdk.egg-info/dependency_links.txt
+pgsdk.egg-info/requires.txt
+pgsdk.egg-info/top_level.txt
