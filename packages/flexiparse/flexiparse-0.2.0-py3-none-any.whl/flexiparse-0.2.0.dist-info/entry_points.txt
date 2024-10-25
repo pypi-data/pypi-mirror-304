@@ -1,0 +1,2 @@
+[console_scripts]
+flexiparse = flexiparse.main:process_data
