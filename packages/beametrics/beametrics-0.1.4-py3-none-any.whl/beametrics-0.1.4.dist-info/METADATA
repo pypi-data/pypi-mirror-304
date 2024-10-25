@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: beametrics
+Version: 0.1.4
+Requires-Dist: apache-beam[gcp]>=2.60.0
+Requires-Dist: google-cloud-monitoring>=2.22.2
+Requires-Dist: protobuf>=4.21.6
+
