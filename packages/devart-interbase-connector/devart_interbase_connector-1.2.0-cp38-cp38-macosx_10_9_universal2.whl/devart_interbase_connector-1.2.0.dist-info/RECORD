@@ -1,0 +1,9 @@
+devart/interbase/__init__.py,sha256=JHrocnLjmHhjOgj_v3SLI0z7_XBFXRPLs24pjo7myYk,516
+devart/interbase/interbase.cpython-38-darwin.so,sha256=mY6T-gfdg1TCCUduobGOL8yZXViEtnJXbl10iwUWKkI,13548136
+devart/interbase/interbase.pyi,sha256=-GSbIAtRxvyce14Hhcn2-7jwjIkoTpV7cUGirmsRn24,12367
+devart/interbase/sqlalchemy/__init__.py,sha256=I3Q7UBomXr0X1jdwjKSh4agfgjDpz6obL1hSPmLrrnA,545
+devart_interbase_connector-1.2.0.dist-info/LICENSE.txt,sha256=3sjizf07RF-z3Lp3tnA-jy3rN103Ypw11NO9tFnRLtU,8559
+devart_interbase_connector-1.2.0.dist-info/METADATA,sha256=9YpqGhrDvweg4lI6-6Cj72td_gHIwap5527K5HGkAQ4,2368
+devart_interbase_connector-1.2.0.dist-info/WHEEL,sha256=l1zPmsL7B-ljvNpL8OqYRG2OppnVc8YoCR7cf-ErV_4,112
+devart_interbase_connector-1.2.0.dist-info/top_level.txt,sha256=h_mZcghGiX6pnc-Kb1EoAfIW2iHeDA0kJKfcLJMbq44,7
+devart_interbase_connector-1.2.0.dist-info/RECORD,,
