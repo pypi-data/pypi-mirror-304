@@ -1,0 +1,4 @@
+cython>3.0.0
+cyvcf2>=0.31.0
+numpy>2.0.0
+scipy>=1.14.0
