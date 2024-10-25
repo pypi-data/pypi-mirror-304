@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: mcv-plus
+Version: 0.0.1
+Summary: Opencv图像处理增强库
+Author: KateTseng
+Author-email: Kate.TsengK@outlook.com
+License: MIT
+Keywords: Auto Script Testing
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+
+# 图像处理模块
+
+本模块提供一个 `Image` 类，用于基本的图像操作和使用 OpenCV 进行模板匹配的功能。
+
+## 类：Image
+
+### `__init__(image: cv2.Mat)`
+初始化一个 `Image` 对象。
+- **参数：**
+  - `image`：OpenCV 图像，类型为 `cv2.Mat`。
+
+### 方法
+
+#### 基础功能
+
+- **`read(file_path: str) -> Image`**
+  - 从文件中读取图像。
+  - **参数：**
+    - `file_path`：图像文件的路径。
+  - **返回：** 一个 `Image` 对象。
+
+- **`save(file_path: str, ext: str = ".png")`**
+  - 将图像保存到指定的文件。
+  - **参数：**
+    - `file_path`：保存图像的路径。
+    - `ext`：保存图像的文件格式。
+  
+- **`show(window_name: str = "Image")`**
+  - 在窗口中显示图像。
+  - **参数：**
+    - `window_name`：窗口的名称。
+
+- **`to_base64() -> str`**
+  - 将图像转换为 base64 编码的字符串。
+  
+- **`to_bytes() -> bytes`**
+  - 将图像转换为字节数组。
+
+#### 图像处理功能
+
+- **`resize(width: int, height: int) -> Image`**
+  - 将图像调整为指定的尺寸。
+  - **参数：**
+    - `width`：新宽度。
+    - `height`：新高度。
+
+- **`scale(fx: float = 1.0, fy: float = 1.0) -> Image`**
+  - 根据指定的比例因子缩放图像。
+  - **参数：**
+    - `fx`：宽度的缩放比例。
+    - `fy`：高度的缩放比例。
+
+- **`grayscale() -> Image`**
+  - 将图像转换为灰度图像。
+
+- **`clip(x: int, y: int, w: int, h: int) -> Image`**
+  - 裁剪图像到指定的区域。
+  - **参数：**
+    - `x`：起始 x 坐标。
+    - `y`：起始 y 坐标。
+    - `w`：裁剪区域的宽度。
+    - `h`：裁剪区域的高度。
+
+- **`pyr_down() -> Image`**
+  - 使用金字塔方法下采样图像。
+
+- **`get_pixel(x: int, y: int) -> Tuple[int, int, int]`**
+  - 获取指定坐标处的像素的 BGR 值。
+  
+#### 绘图功能
+
+- **`draw_line(pt1: Sequence[int], pt2: Sequence[int], color: Sequence[float] = (0, 0, 255), thickness: int = 1) -> Image`**
+  - 在图像上绘制一条线。
+
+- **`draw_rectangle(pt1: Sequence[int], pt2: Sequence[int], color: Sequence[float] = (0, 0, 255), thickness: int = 1) -> Image`**
+  - 在图像上绘制一个矩形。
+
+- **`draw_circle(center: Sequence[int], radius: int, color: Sequence[float] = (0, 0, 255), thickness: int = 1) -> Image`**
+  - 在图像上绘制一个圆。
+
+- **`draw_text(text: str, position: Sequence[int], color: Sequence[int] = (0, 0, 255), font_size: int = 1, font_path: str = "simsun.ttc") -> Image`**
+  - 在图像上绘制文字。
+
+- **`draw_point(center: Sequence[int], radius: int = 1, color: Sequence[float] = (0, 0, 255)) -> Image`**
+  - 在图像上绘制一个点。
+
+## 模板匹配功能
+- **`match_template(img: Image, template: Image, region: Sequence[int] = None, threshold: float = 0.95, max_result: int = 5) -> Optional[List[Tuple[int, int]]]`**
+  - 执行模板匹配。
+
+- **`match_template_best(img: Image, template: Image, region: Sequence[int] = None, threshold: float = 0.95, level: int = None) -> Optional[Tuple[int, int]]`**
+  - 找到图像中模板的最佳匹配。
+
+## 找色功能
+- **`find_color(img: Image, color: Sequence[int], region: Sequence[int] = None, threshold: int = 4) -> Optional[Tuple[int, int]]`**
+  - 找到一个匹配特定颜色的像素。
+
+- **`find_all_points_color(img: Image, color: Sequence[int], region: Sequence[int] = None, threshold: int = 4) -> Optional[List[Tuple[int, int]]]`**
+  - 找到图像中所有匹配特定颜色的点。
+
+- **`find_multi_colors(img: Image, first_color: Sequence[int], colors: List[Tuple[int, int, Sequence[int]]], region: Sequence[int] = None, threshold: int = 4) -> Optional[Tuple[int, int]]`**
+  - 找到匹配多个颜色的点。
