@@ -1,0 +1,6 @@
+setup.py
+ZStyle.egg-info/PKG-INFO
+ZStyle.egg-info/SOURCES.txt
+ZStyle.egg-info/dependency_links.txt
+ZStyle.egg-info/top_level.txt
+Zstyle/__init__.py
