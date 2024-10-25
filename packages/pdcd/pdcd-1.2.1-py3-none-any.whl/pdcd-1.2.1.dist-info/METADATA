@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: pdcd
+Version: 1.2.1
+Summary: Tool that orchestrates executing Docker containers to build payloads
+License: MIT
+Author: 2XXE
+Author-email: root@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3 (>=1.35.47,<2.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: desert (>=2022.9.22,<2023.0.0)
+Requires-Dist: docker (>=7.1.0,<8.0.0)
+Requires-Dist: impacket (>=0.12.0,<0.13.0)
+Requires-Dist: mythic (>=0.2.5,<0.3.0)
+Requires-Dist: pydantic-settings (>=2.6.0,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Description-Content-Type: text/markdown
+
+# PDC Docker ("PDCD")
+
+PDC Docker is a lightweight tool that orchestrates executing Docker containers.
+
+Documentation can be found in the [docs directory](docs/).
+
+Release blog can be found here: [link](https://sra.io/blog/pdcd-orchestrating-payload-generation/).
+
+## Setup
+
+- Have Python 3 installed
+- Have Docker installed
+- (Optional) AWS SSM Session Manager Plugin
+  - used for remote mode, see [Connectors](docs/Connectors.md) for information
+
+### Using virtualenv
+
+Local
+
+```
+pip install dist/*.whl
+```
+
+Remote
+
+```
+pip install git+https://github.com/SecurityRiskAdvisors/pdcd.git
+```
+
+PyPI
+
+```
+pip install pdcd
+```
+
+## Usage (running)
+
+Execute payloads in config
+
+```
+pdcd run -c <config file> [-w <# workers>]
+```
+
+- **-c** path to config file
+
+## Usage (logs)
+
+Retrieve logs for payloads in config
+
+*Note:* only usable when cleanup is set to "False" in config
+
+```
+pdcd logs -c <config file> [-l <#>] [-i <image>]
+```
+
+- **-c** path to config file
+- **l** max number of logs to retrieve
+- **i** filter to only this specific image
+
