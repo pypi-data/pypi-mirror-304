@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+customer_analyzer/__init__.py
+customer_analyzer/analyze.py
+customer_analyzer/cli.py
+customer_analyzer.egg-info/PKG-INFO
+customer_analyzer.egg-info/SOURCES.txt
+customer_analyzer.egg-info/dependency_links.txt
+customer_analyzer.egg-info/entry_points.txt
+customer_analyzer.egg-info/top_level.txt
