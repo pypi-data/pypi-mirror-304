@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: educabiz
+Version: 0.0.2
+Summary: API client for *.educabiz.com 
+Author-email: Filipe Pina <shelf-corncob-said@duck.com>
+Project-URL: Homepage, https://github.com/fopina/python-educabiz
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# python-educabiz
+
+API client to interact with [educabiz.com](https://www.educabiz.com) portals.
+
+## Install
+
+```
+pip install ...WIP...
+```
+
+## Usage
+
+```python
+...snippet from cli_test?...
+```
