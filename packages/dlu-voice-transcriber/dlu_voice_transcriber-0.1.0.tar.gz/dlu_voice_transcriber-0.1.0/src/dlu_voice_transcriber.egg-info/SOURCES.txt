@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/audio_to_text/__init__.py
+src/audio_to_text/__main__.py
+src/audio_to_text/core/__init__.py
+src/audio_to_text/core/recorder.py
+src/audio_to_text/core/transcriber.py
+src/dlu_voice_transcriber.egg-info/PKG-INFO
+src/dlu_voice_transcriber.egg-info/SOURCES.txt
+src/dlu_voice_transcriber.egg-info/dependency_links.txt
+src/dlu_voice_transcriber.egg-info/entry_points.txt
+src/dlu_voice_transcriber.egg-info/requires.txt
+src/dlu_voice_transcriber.egg-info/top_level.txt
