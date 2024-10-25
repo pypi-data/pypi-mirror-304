@@ -1,0 +1,9 @@
+dafdo/__init__.py,sha256=RaEYOG2XwFk8i-XLs9pXfBDWxoD-xpLFJa8pWPDLid0,25
+dafdo/compiler.py,sha256=qAf29UKMt1hAK4llcriOlq14M3-sqpoJPtP34OJTeHo,555
+dafdo/parser.py,sha256=s3t2UTQUKi0aCllhz5PowiuNpzpU4d6H5lb9v37wX-U,915
+dafdo/utils.py,sha256=rF5iIuXIzkhWHtjQv8AKA6hSSYmGiK3M__cr2_ViDKU,26
+dafdo-0.5.dist-info/METADATA,sha256=2Fk4JumHmBH6cpAtgCyw2thGZFfDPX1pSH5OWub76l8,48
+dafdo-0.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+dafdo-0.5.dist-info/entry_points.txt,sha256=5fNfZgKQYDaS3mosxIeA_8gPpaYHzeJw8HI2FhYAueE,46
+dafdo-0.5.dist-info/top_level.txt,sha256=Sb3BurA8rX6lFDQs6ncV56yD6QXR0iNIduANvv5poV8,6
+dafdo-0.5.dist-info/RECORD,,
