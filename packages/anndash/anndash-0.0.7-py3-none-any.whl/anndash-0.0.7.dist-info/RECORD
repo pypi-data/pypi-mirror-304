@@ -1,0 +1,15 @@
+anndash/__init__.py,sha256=R9xOYoYrWKcfO5zvTeGC3m_eDNOvxMd8CocQs2tLufo,22
+anndash/_modidx.py,sha256=acAUNlIenf6e21XKh5zFo3gLl6MJb_N0jKvO-PV0Swg,9606
+anndash/color.py,sha256=eAd4NogN_1TJcdXPyS8OMVci8OxpvI0Kb2cGl1BvW-s,8848
+anndash/core.py,sha256=9m-oGTt2ltxc70T11EG97pOSK4Nvi4fL1atEJ0Nqft8,13336
+anndash/enums.py,sha256=AhEcqjtYo0ve8HgpRNWWQ4QqptjXPk-6oY03DIqIZDc,3693
+anndash/env.yml,sha256=e4kBYX14VJ0BxVOc5K6C5fxZ6xWDDIJXlV4z9MwjitQ,1090
+anndash/hints.py,sha256=E-_MsWvc7jsZzHDlvaWITgE3pK1i4Z1_6Y12vqAKgK4,3713
+anndash/plots.py,sha256=NQvquXaSBw-AupOO0IKCcjJGqF54GxtiHpYcJr0b74E,8317
+anndash/utils.py,sha256=fBr6oE9nVHUJsq9hv80Pf2wC3z_Fd0JD1WKmZtcC538,13295
+anndash-0.0.7.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+anndash-0.0.7.dist-info/METADATA,sha256=6xGB-mUmiUKlTPKKBJC81Dl45xa-Fzmcm9E9jiVxtkY,2892
+anndash-0.0.7.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+anndash-0.0.7.dist-info/entry_points.txt,sha256=6KxKrODIHZufh0nT6Oy9X-qU6rH8n9L4iFnSduGHzsI,36
+anndash-0.0.7.dist-info/top_level.txt,sha256=xfItH81EO1L7QzY2_sb-PzpR6xrGZECMtruLfTNTKSw,8
+anndash-0.0.7.dist-info/RECORD,,
