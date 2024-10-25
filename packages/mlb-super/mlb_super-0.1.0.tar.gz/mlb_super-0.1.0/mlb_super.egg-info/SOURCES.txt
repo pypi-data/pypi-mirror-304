@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+mlb_super.egg-info/PKG-INFO
+mlb_super.egg-info/SOURCES.txt
+mlb_super.egg-info/dependency_links.txt
+mlb_super.egg-info/top_level.txt
