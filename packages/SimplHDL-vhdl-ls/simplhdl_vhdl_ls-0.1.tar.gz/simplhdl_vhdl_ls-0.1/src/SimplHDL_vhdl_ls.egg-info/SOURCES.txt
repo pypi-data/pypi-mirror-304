@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/SimplHDL_vhdl_ls.egg-info/PKG-INFO
+src/SimplHDL_vhdl_ls.egg-info/SOURCES.txt
+src/SimplHDL_vhdl_ls.egg-info/dependency_links.txt
+src/SimplHDL_vhdl_ls.egg-info/entry_points.txt
+src/SimplHDL_vhdl_ls.egg-info/requires.txt
+src/SimplHDL_vhdl_ls.egg-info/top_level.txt
+src/vhdl_ls/__init__.py
+src/vhdl_ls/vhdl_ls.py

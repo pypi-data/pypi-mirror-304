@@ -1,0 +1,2 @@
+[simplhdl.plugins]
+flow = vhdl_ls
