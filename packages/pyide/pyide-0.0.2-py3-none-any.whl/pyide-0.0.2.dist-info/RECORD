@@ -1,0 +1,13 @@
+pyide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyide/__main__.py,sha256=FfW51LC6IBzXT8a7IpxadE0r3OkHqNraV3g5Wx_4tOE,121
+pyide/app.py,sha256=P52M_44CebCduhU-PuhgRyQcw0-z8Xx-ZDsszcOqGWc,217
+pyide/style.tcss,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyide/screens/__init__.py,sha256=wMSBvD4PX35n9Fir4e1h-6T04BpreDfQDYBc2GiG2ng,132
+pyide/screens/editor.py,sha256=iQDxEE9er50sbwmH9VCQOouPY77MZo6OZB82c_L1nbo,740
+pyide/widgets/__init__.py,sha256=xvAFy-gtMwmHumHcBXOMpndHQKem67MC8phj0WwwvYw,182
+pyide/widgets/code_area.py,sha256=mer63EiUSEOjBIb416O2KcXs5cQmrB4K9aJBvHuLhew,620
+pyide/widgets/file_tree.py,sha256=R3MyK3X_vkQ96SSeoehXOdYKm5UPJrgzlhMxgJ12jcs,97
+pyide-0.0.2.dist-info/METADATA,sha256=5YbK_NFDWgGvR6yalIFD2GIhQchKipmS4Nn0SYJp7ks,914
+pyide-0.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pyide-0.0.2.dist-info/entry_points.txt,sha256=MkzzWuPTQeMCpPum9NIro5rQNUq42LBY8AVia_Y14so,46
+pyide-0.0.2.dist-info/RECORD,,

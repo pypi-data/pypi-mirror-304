@@ -1,0 +1,2 @@
+[console_scripts]
+pyide = pyide.__main__:main
