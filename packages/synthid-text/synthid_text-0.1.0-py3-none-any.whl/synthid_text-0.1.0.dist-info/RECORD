@@ -1,0 +1,14 @@
+synthid_text/detector_bayesian.py,sha256=6byCbRuweMuyMyeFHBtd7jrXTHErWCffGiWeR7Yhn10,36305
+synthid_text/detector_mean.py,sha256=KNvVe9WUs--ejzPmjgN1ld4r8T7tx-MfO3mCDUf3DZ4,2669
+synthid_text/g_value_expectations.py,sha256=ajoI0fsRRVQEyid5QjRBOKR2_kpaFS7siKAZp_jJpZU,1863
+synthid_text/hashing_function.py,sha256=MZ5JwqTEhhGX0Ecyjcr3HNUclsd7qHLeZTLhezfiHcA,1675
+synthid_text/logits_processing.py,sha256=aHUsRB0YrjFNfaLnU7wKMUZTL8fW7XfhLHmh9_8p_os,17989
+synthid_text/logits_processing_test.py,sha256=ez0tnO9A76EY53_ZopVtm-1S0R4vRnxWzH9hD9W5uPY,13722
+synthid_text/synthid_mixin.py,sha256=J-RgJC25xH1sgSGIUQBWVo6LSS3FnfUzQa1uFM_RfwU,14713
+synthid_text/synthid_mixin_test.py,sha256=r3QLeWWFjNOpaZyrYUZmp4okjZou1Kk0Xpd1DLXX_E0,2857
+synthid_text/torch_testing.py,sha256=TtogQkkw0pPR_1uMVYbx16h8WvIOPkZ3V1Vf5jqyQaI,867
+synthid_text-0.1.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+synthid_text-0.1.0.dist-info/METADATA,sha256=8F3MvqS2lzxbMGe7OWv5LUPU4eHkiYpNeBIizn6bE7I,25377
+synthid_text-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+synthid_text-0.1.0.dist-info/top_level.txt,sha256=-fWy3ETjuqGXu1trEtxVOx4Zq2zk3y0y-82Th9f6kXw,13
+synthid_text-0.1.0.dist-info/RECORD,,
