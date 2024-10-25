@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cobang
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+This is reserved space for [CoBang](https://github.com/hongquan/CoBang/), the QR code scanner application,
+which is not distributable via PyPI due to dependence in GTK.
