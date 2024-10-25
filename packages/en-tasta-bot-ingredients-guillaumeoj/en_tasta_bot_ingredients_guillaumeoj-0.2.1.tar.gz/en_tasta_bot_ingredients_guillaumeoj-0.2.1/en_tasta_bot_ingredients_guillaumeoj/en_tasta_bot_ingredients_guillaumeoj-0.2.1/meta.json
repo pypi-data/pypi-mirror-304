@@ -1,0 +1,61 @@
+{
+  "lang":"en",
+  "name":"tasta_bot_ingredients_guillaumeoj",
+  "version":"0.2.1",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_version":">=3.7.5,<3.8.0",
+  "spacy_git_version":"a6d0fc360",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "Ingredient"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.8344030809,
+    "ents_p":0.8879781421,
+    "ents_r":0.7869249395,
+    "ents_per_type":{
+      "Ingredient":{
+        "p":0.8879781421,
+        "r":0.7869249395,
+        "f":0.8344030809
+      }
+    },
+    "tag_acc":0.0,
+    "dep_uas":0.0,
+    "dep_las":0.0,
+    "dep_las_per_type":0.0,
+    "sents_p":0.0,
+    "sents_r":0.0,
+    "sents_f":0.0,
+    "tok2vec_loss":67.4733874926,
+    "ner_loss":763.2833008604
+  },
+  "requirements":[
+
+  ]
+}
