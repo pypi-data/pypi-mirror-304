@@ -1,0 +1,13 @@
+godolib/__init__.py,sha256=Z6DBY2D8qfeQddYZKmjleYpU4EGLCNqr_8UvEy6-9FY,160
+godolib/cloud_touch.py,sha256=6bDfrgU6ccKzjCalxxg7HeSCb-iy4NpIfei2N-QRDTA,18570
+godolib/evaluators.py,sha256=OZd-i9aMOVAfaC8xXRXeIOuu15aIJkbrQ6KEieXFUPU,2457
+godolib/filing.py,sha256=tGV0KAt65783NpKncSHw4pXk0wrX8PHBKBf885wvrGk,2576
+godolib/memory_management.py,sha256=jR-O7DM_VCJF_VQuXoqqpwlpbS7EOphnwlpA-LdBDeg,663
+godolib/monitors.py,sha256=zGOdmaSeD6kbN-1q2t7XNuNQ5m_dPmP23C4lLNKLhYw,63408
+godolib/preprocessing.py,sha256=51uJFyqGvXsqNpoaHC4OIHnN6Yrb5fzkd5-099x_tds,41996
+godolib/testers.py,sha256=8yxJK6CX0uGyPItTebA8AUYi5rmDUTzzjDrJ5Eo1UYI,1557
+godolib/tuning.py,sha256=cQDETlClvvMiwQ6n8tC8msMCYic1-69QZ8Uu7gKbjnE,23244
+godolib-1.2.5.dist-info/METADATA,sha256=XHr1kOB9L175LEGDXb2UUYfQGVKQUTB1MVhYmNyNVgE,553
+godolib-1.2.5.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+godolib-1.2.5.dist-info/top_level.txt,sha256=xJ0IZOnal7QDSoj3DhFdEMxGHduT-5wHp_dNMNrI4KY,8
+godolib-1.2.5.dist-info/RECORD,,
