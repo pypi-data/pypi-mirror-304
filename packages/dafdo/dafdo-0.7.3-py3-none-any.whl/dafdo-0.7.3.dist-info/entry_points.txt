@@ -1,0 +1,2 @@
+[console_scripts]
+dafdo = dafdo.server:app.run
