@@ -1,0 +1,26 @@
+.with-collapse-arrow() {
+  .collapse-arrow {
+    transition: transform 0.3s;
+    display   : inline-block;
+  }
+
+  &.open {
+    .collapse-arrow {
+      transform: rotate(0.5turn) scale(1);
+    }
+  }
+}
+
+.zoom-visible(@visible-class: visible) {
+  transform: scale(0);
+  transition: transform 0.2s;
+
+  &.@{visible-class} {
+    transform: scale(1);
+  }
+}
+
+.raised(@x: 0, @y: 10px, @blur: 20px, @color: @tweaks-main-grey) {
+  box-shadow: @x @y @blur @color;
+  backdrop-filter: blur(1px);
+}
