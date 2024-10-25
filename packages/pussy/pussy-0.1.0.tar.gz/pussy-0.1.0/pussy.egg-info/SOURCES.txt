@@ -1,0 +1,6 @@
+pyproject.toml
+readme.md
+pussy.egg-info/PKG-INFO
+pussy.egg-info/SOURCES.txt
+pussy.egg-info/dependency_links.txt
+pussy.egg-info/top_level.txt
