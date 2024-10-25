@@ -1,0 +1,13 @@
+lfdfiles-2024.10.24.dist-info/RECORD,,
+lfdfiles-2024.10.24.dist-info/LICENSE,sha256=59DNW-_FX6yHOgj-B9ZEnTzE-yqX0V_pkDM6moVxhiA,1529
+lfdfiles-2024.10.24.dist-info/WHEEL,sha256=qPSLW7RKkSazFLr9GqnCq82B2cy1OopxhNJnY83fx9k,107
+lfdfiles-2024.10.24.dist-info/entry_points.txt,sha256=t6geUirHxKXaV-Ii9YZ4pUxxJzcrFhbsNMlJy3MRpLQ,84
+lfdfiles-2024.10.24.dist-info/top_level.txt,sha256=57ed1wWaI26xMH0KgmUMy6MefsknRrCIetAITP7OtBU,9
+lfdfiles-2024.10.24.dist-info/METADATA,sha256=6Q52QNif3rRJubBo-0XPkuxz4Gxw3NBIQ7mJUSLi5os,7714
+lfdfiles/lfdfiles.py,sha256=GC5r5u8sM11XQGiVaaZqRPfchAvK8WnrpTSc43a9SwE,227351
+lfdfiles/fbd2b64.py,sha256=Sno_0FcNWvV0C1qNuIcNmSon6x66enKqzXIpowIaWOw,6334
+lfdfiles/__init__.py,sha256=_jiQi1g0kICmr3d4HT7SYeofy9BhHaHph8d8E0NBTuQ,100
+lfdfiles/_lfdfiles.cpython-39-darwin.so,sha256=sjVTeY6Dn77OG3xpEsnjmZIhEm5WvHPPvtSTmWXSTlc,461200
+lfdfiles/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lfdfiles/__main__.py,sha256=JYhV4YEJICcvAePmUr0ZGtsNm1KyVTXKw4xTVSvdnAg,126
+lfdfiles/.dylibs/libomp.dylib,sha256=AbGTc3EZE9kuZoRolwJpOnpaWBLLNv40lIx4K31BTh4,1613152
