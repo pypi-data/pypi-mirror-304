@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/modbus_remote/__init__.py
+src/modbus_remote/modbus_deviceadapter.py
+src/modbus_remote/modbus_models.py
+src/modbus_remote/modbus_remote.py
+src/modbus_remote.egg-info/PKG-INFO
+src/modbus_remote.egg-info/SOURCES.txt
+src/modbus_remote.egg-info/dependency_links.txt
+src/modbus_remote.egg-info/not-zip-safe
+src/modbus_remote.egg-info/requires.txt
+src/modbus_remote.egg-info/top_level.txt
+tests/test_micro_nabto.py
+tests/test_test.py
