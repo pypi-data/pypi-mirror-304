@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+barking/__init__.py
+barking/foo.py
+barking.egg-info/PKG-INFO
+barking.egg-info/SOURCES.txt
+barking.egg-info/dependency_links.txt
+barking.egg-info/top_level.txt
+tests/test_foo.py
