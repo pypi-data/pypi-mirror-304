@@ -1,0 +1,129 @@
+.select-control {
+    @select-width       : 200px;
+    @select-width-mobile: 100%;
+
+    font-size: 16px;
+    position : relative;
+
+    margin: 0;
+
+    .control-select {
+        margin: 0;
+        .control-label {
+            display    : inline-block;
+            position   : absolute;
+            font-size  : 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color      : @tweaks-select-grey;
+
+            background: @white;
+            padding   : 0 6px;
+            top       : -11px;
+            left      : 11px;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+
+    .select-button {
+        .with-collapse-arrow();
+        font-size    : 16px;
+        font-weight  : 400;
+        line-height  : 16px;
+        padding      : 12px;
+        border-radius: 8px;
+        background   : @white;
+        color        : @black;
+        border       : 1px solid @tweaks-select-border;
+
+        min-width: @select-width;
+        padding  : 11px 16px;
+
+        box-shadow: none;
+
+        i {
+            display: none;
+        }
+
+        .collapse-arrow {
+            line-height        : 0.5;
+            margin-inline-start: 5px;
+
+            svg {
+                width   : 13px;
+                height  : 13px;
+                position: relative;
+                top     : 2px;
+            }
+        }
+
+        .pseudo-selected {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+        }
+    }
+
+    .select-options {
+        .raised();
+        color        : @black;
+        z-index      : 1;
+        border-radius: 8px;
+        background   : @white;
+        font-size    : 14px;
+        line-height  : 1.5em;
+        position     : absolute;
+        list-style   : none;
+        padding      : 0;
+        width        : @select-width;
+        .zoom-visible(open);
+
+        max-height: 200px;
+
+        li {
+            padding: 8px 12px;
+            cursor : pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+
+        .select-options,
+        .select-button {
+            width: @select-width-mobile;
+        }
+    }
+}
+
+.lang-select {
+    .select-control {
+
+        .control-label,
+        .select-options,
+        .select-button {
+            background-color: @tweaks-select-grey;
+        }
+
+        .select-button {
+            margin-left: 0;
+            font-size: 12px;
+        }
+
+        .select-options {
+            .raised(@color: @tweaks-select-grey);
+            max-height    : 145px;
+            overflow-y    : scroll;
+            @media (min-width: @screen-xs-max) {
+                max-height    : 180px;
+            }
+        }
+    }
+}

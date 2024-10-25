@@ -1,0 +1,46 @@
+{% import 'macros/form.html' as form %}
+
+{% macro select(name, id='', label='', options='', selected='', error='', classes=[],
+attrs={'class':'form-control hidden'}, is_required=false, with_scrollbar=true) %}
+    {% set classes = (classes|list) %}
+    {% do classes.append('control-select') %}
+
+
+    <div class="form-select form-group select-control" data-module="tweaks-select"
+        data-module-select-id="{{ id }}" data-module-select-options="select-options">
+
+        <button class="btn select-button select-button-{{id}}" type="button"
+            data-module="tweaks-toggle-class" data-module-class-name="open" data-module-event="click"
+            data-module-target=".select-options-{{id}}, .select-button-{{id}}">
+
+            <span class="pseudo-selected">
+                <span class="pseudo-select-selected">
+                    {% for locale in options if locale and locale.short_name == selected %}
+                    {{ locale.label }}
+                    {% endfor %}
+                </span>
+
+                <span class="collapse-arrow">
+                    {% snippet 'snippets/svg/caret-down.svg' %}
+                </span>
+
+            </span>
+        </button>
+
+
+        <ul class="select-options select-options-{{id}}" {% if with_scrollbar %} data-module="tweaks-scrollbar" {% endif %}></ul>
+
+        {% call form.input_block(id or name, label or name, error, classes, is_required=is_required) %}
+
+        <select id="{{ id }}" name="{{ name }}" {{ form.attributes(attrs) }}>
+            {% for locale in options %}
+                <option value="{{ locale.url }}" {% if locale.short_name==selected %}selected="selected" {% endif %}>
+                    {{ locale.label }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <button class="btn btn-plain js-hide" type="submit">{{ _('Go') }}</button>
+        {% endcall %}
+    </div>
+{% endmacro %}
