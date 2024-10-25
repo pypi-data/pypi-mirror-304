@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pytidyhtml5
+Version: 2024.10.24
+Summary: HTML clean-up and repair: Statically linked Python interface for tidy-html5.
+Home-page: https://github.com/Kijewski/pytidyhtml5
+Author: René Kijewski
+Author-email: pypi.org@k6i.de
+Maintainer: René Kijewski
+Maintainer-email: pypi.org@k6i.de
+License: Apache License 2.0
+Project-URL: Code, https://github.com/Kijewski/pytidyhtml5
+Project-URL: Documentation, https://pytidyhtml5.readthedocs.io/
+Project-URL: Download, https://pypi.org/project/pytidyhtml5/
+Project-URL: Homepage, https://github.com/Kijewski/pytidyhtml5
+Project-URL: Tracker, https://github.com/Kijewski/pytidyhtml5/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: ~=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+PyTidyHTML5
+===========
+
+HTML clean-up and repair: Statically linked Python interface for `tidy-html5 <https://github.com/htacg/tidy-html5>`_ v5.8.0.
+
+
