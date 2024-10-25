@@ -1,0 +1,3 @@
+[console_scripts]
+cryptocom-developer-platform-client=cryptocom-developer-platform-client.cli:main
+
