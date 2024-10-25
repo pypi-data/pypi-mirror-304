@@ -1,0 +1,12 @@
+Ngrok tunnel available at: https://a986-38-112-225-53.ngrok-free.app
+Server running locally at http://127.0.0.1:5002
+ * Serving Flask app 'fi_dialogue_agents.agent'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Oct/2024 16:23:48] "GET /socket.io/?EIO=4&transport=polling&t=xjdulquc HTTP/1.1" 200 -
+127.0.0.1 - - [24/Oct/2024 16:23:48] "POST /socket.io/?EIO=4&transport=polling&t=xje2ldj7&sid=obzz-O_AH6GJgGz_AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [24/Oct/2024 16:23:48] "GET /socket.io/?EIO=4&transport=polling&t=xje2mcgk&sid=obzz-O_AH6GJgGz_AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [24/Oct/2024 16:23:49] "GET /socket.io/?EIO=4&transport=polling&t=xje841n1&sid=obzz-O_AH6GJgGz_AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [24/Oct/2024 16:23:49] "GET /socket.io/?EIO=4&transport=polling&t=xjee305s&sid=obzz-O_AH6GJgGz_AAAA HTTP/1.1" 200 -
