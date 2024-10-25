@@ -1,0 +1,9 @@
+paraffin/__init__.py,sha256=6mvLrVs2FFKNqDxMbguzYdA2MryL3iIBa_uDkCA9LKI,80
+paraffin/cli.py,sha256=uZimnury_-i3OOO2devO-dqrmB25v6-eJJk8eqX96Q4,3930
+paraffin/dashboard.py,sha256=-mzKzME3GaiOYU9SyYdnPcC83l-faE7qE-R2YqjZ-zI,2627
+paraffin/worker/__init__.py,sha256=bfa7zzjpzZ8xYW_AyvP8XCok6dCpN_g1R3y3OCgrbyQ,1950
+paraffin-0.2.0a1.dist-info/LICENSE,sha256=FKf4VPZYbuyRVMVSrl6HO48bnw6ih8Uur5y-h_MJAcA,13576
+paraffin-0.2.0a1.dist-info/METADATA,sha256=2WPlT0_xOdPnMtS-PStSsDwj_kWYRSSQ4TUDnImmfrg,2717
+paraffin-0.2.0a1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+paraffin-0.2.0a1.dist-info/entry_points.txt,sha256=UuCbRtmXlTQRB_2SJTDtXtmPhkbUbJ06cVGAVdPDt4I,45
+paraffin-0.2.0a1.dist-info/RECORD,,
