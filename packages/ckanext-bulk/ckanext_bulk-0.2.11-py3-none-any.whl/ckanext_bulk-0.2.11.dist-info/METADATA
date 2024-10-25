@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: ckanext-bulk
+Version: 0.2.11
+Summary: Bulk update for CKAN datasets/resources
+Author-email: DataShades <datashades@linkdigital.com.au>, Oleksandr Cherniavskyi <mutantsan@gmail.com>
+Maintainer-email: DataShades <datashades@linkdigital.com.au>
+License: AGPL
+Project-URL: Homepage, https://github.com/DataShades/ckanext-bulk
+Keywords: CKAN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: pytest-ckan ; extra == 'dev'
+Requires-Dist: pytest-benchmark ; extra == 'dev'
+Requires-Dist: pytest-pretty ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: mkdocs-material ; extra == 'dev'
+Requires-Dist: pymdown-extensions ; extra == 'dev'
+Requires-Dist: mkdocstrings[python] ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: pymdown-extensions ; extra == 'docs'
+Requires-Dist: mkdocstrings[python] ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest-ckan ; extra == 'test'
+Requires-Dist: pytest-benchmark ; extra == 'test'
+Requires-Dist: pytest-pretty ; extra == 'test'
+
+[![Tests](https://github.com/Link Digital/ckanext-bulk/workflows/tests.yml/badge.svg)](https://github.com/Link Digital/ckanext-bulk/actions/workflows/test.yml)
+
+# ckanext-bulk
+
+An extension that helps to perform bulk operations over CKAN entities, such as datasets, organizations and groups.
+
+## Requirements
+
+Compatibility with core CKAN versions:
+
+| CKAN version | Compatible? |
+|--------------|-------------|
+| 2.9          | no          |
+| 2.10         | yes         |
+| 2.11         | yes         |
+| master       | yes         |
