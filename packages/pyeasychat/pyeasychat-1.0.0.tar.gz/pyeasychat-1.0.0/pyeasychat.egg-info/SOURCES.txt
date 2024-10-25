@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+pyeasychat.egg-info/PKG-INFO
+pyeasychat.egg-info/SOURCES.txt
+pyeasychat.egg-info/dependency_links.txt
+pyeasychat.egg-info/top_level.txt
