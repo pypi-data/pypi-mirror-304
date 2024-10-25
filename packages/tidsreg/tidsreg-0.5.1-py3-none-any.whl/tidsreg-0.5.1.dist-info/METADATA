@@ -1,0 +1,75 @@
+Metadata-Version: 2.3
+Name: tidsreg
+Version: 0.5.1
+Summary: Cli and module to register time in the municipality of Copenhagen
+Project-URL: Homepage, https://github.com/kwedel/tidsreg
+Project-URL: Issues, https://github.com/kwedel/tidsreg/issues
+Author-email: Kåre Obel Wedel <kaarewj@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: click>=8.1.7
+Requires-Dist: playwright>=1.47.0
+Description-Content-Type: text/markdown
+
+# tidsreg
+
+The missing tool for registrering time in the municipality of Copenhagen.
+
+# Installation
+
+```bash
+pip install tidsreg
+```
+or
+```bash
+uv tool install tidsreg
+```
+
+# Getting started
+First, make sure that `tidsreg` is configured and log in through the browser.
+```bash
+tidsreg init
+tidsreg login
+```
+
+Then add, show or clear registrations:
+```bash
+tidsreg show
+tidsreg add <projectname> -s 9 -e 1015 -m "A comment"
+tidsreg clear  # WILL DELETE YOUR REGISTRATIONS!
+```
+
+# Bulk registrations
+It is possible to register multiple items at the same time using the `bulk` command.
+Create a file with `<TAB>` between the time, the project, and the optional comment and pass it using the `-f` option.
+
+```
+$ cat bulkfile
+830	project1	Optional comment
+9	project2
+1130	frokost
+12
+14:00	project1	Another comment
+1415
+$ tidsreg bulk -f bulkfile
+```
+Whis will create four registrations:
+* project1 from 8:30 to 9:00
+* project2 from 9:00 to 11:30
+* frokost from 11:30 to 12:00
+* project1 from 14:00 to 14:15
+
+# Headless login
+By setting the environement variables `TIDSREG_USERNAME` and `TIDSREG_PASSWORD`, it is possible to login headlessly by adding the `--headless` option to the `tidsreg login` command.
+
+# Autocomplete
+Follow this guide to setup autocomplete: https://click.palletsprojects.com/en/8.1.x/shell-completion/
+
+# TODO
+* Look into releases on github and setup a pipeline (Actions)
+* Make adding registrations wait for the list to update (expect(thelist).to_have_count(thecount) - make it optional to speed up processing when making many registrations
+* Check if a registration can be made without trying in the browser
+* Add no-trunc flag to show command after it has been prettyfied
+* Implement functionality to change date
+* Export of current registrations to bulk-file
