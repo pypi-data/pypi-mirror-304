@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=sqfdoq97H1EdybvfLhXQqWS3TNLX_jcDavzVZ6fcq6w,4358
+tests/test_utils.py,sha256=a1mMqaQu84RikzmGpGzyS-fVDAiT_LJ_93FU0-PWHcM,46
+zibal_payment/__init__.py,sha256=OwMJx-jZMYEpCzYV3d3B-M9WRSdbe9W0lCZ2qrjnWkY,49
+zibal_payment/client.py,sha256=bukC7uokOVYC5qwrMG2L22kI5O24FiA9manoVNjzKa4,5449
+zibal_payment/exceptions.py,sha256=uU1TN9DaaHgBs3IlEqtkPZ86JFyrn-Xya14yYOFxBOs,1969
+django_zibal_payment-1.0.1.dist-info/LICENSE,sha256=XKbc5A52wWYdCUIXQmtR8QnI5Tb5d4rSs3zGVbRlQqU,1086
+django_zibal_payment-1.0.1.dist-info/METADATA,sha256=Ru9VoEoL7Oh0SztOjkruy9mvy_wlc-TlF321z6SvjsE,4477
+django_zibal_payment-1.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_zibal_payment-1.0.1.dist-info/top_level.txt,sha256=nqWfsamP1TvdAPtDEQhFhOiFHXNzyNP5WwD2hORiG7o,20
+django_zibal_payment-1.0.1.dist-info/RECORD,,
