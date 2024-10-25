@@ -1,0 +1,8 @@
+bgc_cloud/__init__.py,sha256=v07FkbBswwt98jPATNPbIqLziwo9dw6Fbg-NDnpuERI,594
+bgc_cloud/_fn.py,sha256=unZTzetR3Pm-KpVqJv4ZvgwA9P10_YZ8qgtG-Zj41I8,141
+bgc_cloud/auth.py,sha256=3i2lWnpZFWG0ZN6tG7_R8sCjBJ12Z6whNVzABmBPHaw,665
+bgc_cloud/transport.py,sha256=fepV6tvkjtmpx1QmoPWabnwRSgrVs8LdoVGcGcG27jw,954
+bgc_cloud-1.0.1.dist-info/METADATA,sha256=nTil85MgzKle60eUx40e5CUefduL6S04gurSg-fkjes,388
+bgc_cloud-1.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bgc_cloud-1.0.1.dist-info/top_level.txt,sha256=I-Sa58G0ql1OeL9GXw9Jnyl1vMV9R0VDhLGfhRaz3yE,10
+bgc_cloud-1.0.1.dist-info/RECORD,,
