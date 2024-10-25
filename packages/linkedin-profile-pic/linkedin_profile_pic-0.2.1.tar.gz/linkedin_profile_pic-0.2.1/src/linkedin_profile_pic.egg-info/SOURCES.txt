@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/linkedin_profile_pic/__init__.py
+src/linkedin_profile_pic/cli.py
+src/linkedin_profile_pic.egg-info/PKG-INFO
+src/linkedin_profile_pic.egg-info/SOURCES.txt
+src/linkedin_profile_pic.egg-info/dependency_links.txt
+src/linkedin_profile_pic.egg-info/entry_points.txt
+src/linkedin_profile_pic.egg-info/requires.txt
+src/linkedin_profile_pic.egg-info/top_level.txt
