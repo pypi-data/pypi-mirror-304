@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mojito-web
+Version: 0.2.0
+Summary: Lightweight ASGI framework based on Starlette.
+Author-Email: Austin Bauman <abauman97@protonmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/abauman97/Mojito
+Project-URL: Documentation, https://abauman97.github.io/Mojito/
+Project-URL: Repository, https://github.com/abauman97/Mojito.git
+Project-URL: Issues, https://github.com/abauman97/Mojito/issues
+Requires-Python: >=3.9
+Requires-Dist: starlette<0.42.0,>=0.40.0
+Requires-Dist: jinja2>=2.11.2
+Requires-Dist: itsdangerous~=2.2
+Requires-Dist: python-multipart>=0.0.9
+Provides-Extra: standard
+Requires-Dist: uvicorn[standard]~=0.12; extra == "standard"
+Requires-Dist: httpx>=0.23.0; extra == "standard"
+Requires-Dist: pydantic>2.1.0; extra == "standard"
+Provides-Extra: all
+Requires-Dist: uvicorn[standard]~=0.12; extra == "all"
+Requires-Dist: httpx>=0.23.0; extra == "all"
+Requires-Dist: pydantic>2.1.0; extra == "all"
+Description-Content-Type: text/markdown
+
+# Welcome to the Mojito framework
+
+Mojito is a fresh, simple, and fast micro-framework for building html-first web applications and sites. 
+
+The key features are:
+
+* Fast: Based on Starlette, a fast and lightweight ASGI micro-framework.
+* Simple to code: An intuitve API that anyone familir with Flask or FastAPI will pick up on easily.
+* Batteries included: Providing helper functions to simplify repetitive tasks like auth and form processing.
+
+
+# Inspirations
+Mojito is built off the work done both previously and currently by projects like Flask, FastAPI, and Django.
+
+While still a micro-framework we aim to provide you much the glue you need to get your personal or line-of-business app running in the shortest time possible.
