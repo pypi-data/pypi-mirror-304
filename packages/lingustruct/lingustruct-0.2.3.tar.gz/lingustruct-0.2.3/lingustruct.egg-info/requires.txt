@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+jinja2
+pydantic
+weasyprint
+markdown
+openai
+jsonschema
+cryptography
+requests
+redis>=4.0.0
+groq
