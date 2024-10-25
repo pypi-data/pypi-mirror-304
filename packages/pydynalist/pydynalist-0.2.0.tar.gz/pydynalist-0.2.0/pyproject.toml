@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydynalist"
+version = "0.2.0"
+authors = [{ name = "Roman Smolnyk", email = "poma23324@gmail.com" }]
+description = "Dynalist api client"
+readme = "README.md"
+requires-python = ">=3.8" # Optional
+keywords = ["dynalist"] # Optional
+classifiers = [ # Optional
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = ["requests"]
+
+[project.optional-dependencies]
+async = ["aiohttp"] # pip install pydynalist[async]
+
+[project.urls] # Optional
+Homepage = "https://gitlab.com/roman-smolnyk/pydynalist"
