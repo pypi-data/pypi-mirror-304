@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: online-store-RA
+Version: 0.1
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: My Name <myname@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+#Online Store
+Homework 6
+## Install
+```
+pip install online-store-RA
+```
