@@ -1,0 +1,4 @@
+choreographer
+
+[dev]
+pytest
