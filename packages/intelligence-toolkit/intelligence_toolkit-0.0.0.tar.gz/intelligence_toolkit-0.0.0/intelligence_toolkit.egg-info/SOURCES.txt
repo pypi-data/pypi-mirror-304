@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+intelligence-toolkit/__init__.py
+intelligence-toolkit/test_module.py
+intelligence_toolkit.egg-info/PKG-INFO
+intelligence_toolkit.egg-info/SOURCES.txt
+intelligence_toolkit.egg-info/dependency_links.txt
+intelligence_toolkit.egg-info/top_level.txt
