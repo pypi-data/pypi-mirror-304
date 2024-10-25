@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hym20220592
+Version: 0.1.2
+License-File: LICENSE
+Requires-Dist: openpyxl
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
