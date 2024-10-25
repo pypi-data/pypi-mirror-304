@@ -1,0 +1,8 @@
+lfm_torch/__init__.py,sha256=Ez0h9N0ackFjPVRfHSB39BDyoZuArBlnddgIjvp7oc0,133
+lfm_torch/liquid_t_moe.py,sha256=BUY94A7-zOq3tCXbJ2nH2E9UcJGlNLiPd6q7CEXETQM,8742
+lfm_torch/model.py,sha256=e3ECFFyn5-_x0-N_wE30NQ6TkW8pk3iQuqOP4jB4yQk,5352
+lfm_torch/rnn.py,sha256=8xNLnq-Rf6tU-G2Ce-UvAzDIcMCfdz6WS8CQvhyyZNo,7178
+lfm_torch-0.0.3.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+lfm_torch-0.0.3.dist-info/METADATA,sha256=rCNHemLomXNo4cjykqfvMhQjz342G6knN5DH61Bymyw,5553
+lfm_torch-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lfm_torch-0.0.3.dist-info/RECORD,,
