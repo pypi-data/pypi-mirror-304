@@ -1,0 +1,2 @@
+[console_scripts]
+linkedin_profile_pic = linkedin_profile_pic.cli:cli

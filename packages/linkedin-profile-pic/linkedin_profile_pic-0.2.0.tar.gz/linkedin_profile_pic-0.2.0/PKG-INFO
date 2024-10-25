@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: linkedin_profile_pic
+Version: 0.2.0
+Summary: A tool to download LinkedIn profile pictures
+Home-page: https://github.com/yourusername/linkedin_profile_pic
+Author: Ishant Dahiya
+Author-email: ishantdahiya@gmail.com
+Project-URL: Bug Tracker, https://github.com/yourusername/linkedin_profile_pic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: selenium
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: tqdm
+Requires-Dist: webdriver-manager
+
+# LinkedIn Profile Picture Downloader
+
+A command-line tool to download profile pictures of LinkedIn users.
+
+## Installation
+pip install linkedin-profile-pic
+
+## Usage
+linkedin-profile-pic --usernames "username1,username2,username3"
+
+
+Or run the command without arguments and you'll be prompted to enter the usernames.
+
+## Note
+
+This tool requires manual login to LinkedIn. When prompted, please log in to your LinkedIn account in the opened browser window.
