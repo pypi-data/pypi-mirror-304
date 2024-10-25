@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tc_prometheus
+Version: 3.0.0
+Summary: Thumbor Prometheus metrics extension
+Author-email: Simon Effenberg <savar@schuldeigen.de>
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: prometheus-client ==0.*,>=0.14.1
+Requires-Dist: thumbor ==7.*,>=7.0.6
+Provides-Extra: all
+Requires-Dist: prometheus-client ==0.*,>=0.14.1 ; extra == 'all'
+Requires-Dist: thumbor ==7.*,>=7.0.6 ; extra == 'all'
+Provides-Extra: tests
+Requires-Dist: preggy ==1.*,>=1.4.4 ; extra == 'tests'
+Requires-Dist: prometheus-client ==0.*,>=0.14.1 ; extra == 'tests'
+Requires-Dist: pytest-cov ==5.*,>=5.0.0 ; extra == 'tests'
+Requires-Dist: pytest ==8.*,>=8.0.0 ; extra == 'tests'
+Requires-Dist: thumbor ==7.*,>=7.0.6 ; extra == 'tests'
+
+
+Prometheus metrics extension enables thumbor to expose a scrape endpoint prometheus can scrape from.
