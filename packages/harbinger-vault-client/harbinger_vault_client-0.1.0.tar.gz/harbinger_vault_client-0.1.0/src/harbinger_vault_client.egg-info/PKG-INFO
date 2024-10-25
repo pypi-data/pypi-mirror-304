@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: harbinger_vault_client
+Version: 0.1.0
+Author: Moises Gaspar
+Author-email: moises.gaspar@testsieger.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: requests<3,>=2.25.1
