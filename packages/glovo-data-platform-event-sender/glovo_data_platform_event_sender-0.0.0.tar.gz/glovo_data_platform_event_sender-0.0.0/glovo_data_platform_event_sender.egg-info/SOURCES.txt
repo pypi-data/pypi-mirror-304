@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_data_platform_event_sender/__init__.py
+glovo_data_platform_event_sender.egg-info/PKG-INFO
+glovo_data_platform_event_sender.egg-info/SOURCES.txt
+glovo_data_platform_event_sender.egg-info/dependency_links.txt
+glovo_data_platform_event_sender.egg-info/top_level.txt
