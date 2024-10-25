@@ -1,0 +1,9 @@
+{
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+        "optional": "cpp",
+        "variant": "cpp"
+    },
+    "python.pythonPath": "d:\\Work\\ENV\\miniconda3\\python.exe"
+}
