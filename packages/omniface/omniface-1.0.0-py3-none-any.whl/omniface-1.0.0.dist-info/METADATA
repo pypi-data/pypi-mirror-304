@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: omniface
+Version: 1.0.0
+Summary: omniface
+License: Apache License 2.0
+Requires-Dist: sudtools
+Requires-Dist: onnx==1.12.0
+Requires-Dist: pyyaml
+Requires-Dist: scikit-learn
+Requires-Dist: scikit-image
+

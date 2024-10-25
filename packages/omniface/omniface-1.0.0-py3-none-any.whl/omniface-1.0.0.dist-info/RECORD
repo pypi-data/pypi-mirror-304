@@ -1,0 +1,15 @@
+omniface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omniface/main.so,sha256=8ScAmIbvGJ5YEXD_DG6MpKnqOva0tQNy34out-_M0Xg,2149712
+omniface/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omniface/app/common.so,sha256=yEiEVx4LwHAo3WN9dZNNc36_X66vvmnr2yPGNRpYuiw,567016
+omniface/app/face_analysis.so,sha256=btKIWOnMUsI3Ve2ivnM42iPIiVCtntprNeU7cCrVj-w,1098208
+omniface/model_zoo/__init__.py,sha256=_HFxoDbX9TrMsOE_Ci_faStQ83A69RbdV-gA7YfpKfI,103
+omniface/model_zoo/arcface.so,sha256=GUsZtGipD08Kos8r0zfEXZeyNFmvGeAEj4kFb8G3SzE,908856
+omniface/model_zoo/model_zoo.so,sha256=YmEIGJh38nlxjlOFvifsffQFA8QEJIYA5dkRI2zaK74,850880
+omniface/model_zoo/retinaface.so,sha256=lqyxJ3Dp4TOJuIdgegkS9sZ25Sb6kOF4VrZSRRI1X-M,2556952
+omniface/utils/__init__.py,sha256=xT7uqldCMNUxSyuo-N0saXSZsHAGhooEhbgagokiG74,25
+omniface/utils/face_align.so,sha256=NhpPjB4dfWchYpTY7g4mIBaCHAlpKowXBFMRu2YNHKk,1190120
+omniface-1.0.0.dist-info/METADATA,sha256=4huXRUm9FhUj9GYLHunlIDcLILPKrLyHdpS7SsCF8gM,229
+omniface-1.0.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+omniface-1.0.0.dist-info/top_level.txt,sha256=WUMQRPFX8mhoKfgpfDvTXtDSsIhFVobi0uLN72r0IGI,9
+omniface-1.0.0.dist-info/RECORD,,
