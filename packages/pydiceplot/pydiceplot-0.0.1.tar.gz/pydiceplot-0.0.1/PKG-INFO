@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pydiceplot
+Version: 0.0.1
+Summary: Plot multidimensional categorical data
+Author-email: Matthias Flotho <Matthias.Flotho@ccb.uni-saarland.de>, Philipp Flotho <Philipp.Flotho@uni-saarland.de>
+License: MIT
+Project-URL: Homepage, https://dice-and-domino-plot.readthedocs.io/en/latest/
+License-File: LICENSE
+Requires-Dist: pandas>=1.0
+Requires-Dist: numpy>=1.18
+Requires-Dist: plotly>=5.0
+Requires-Dist: scipy>=1.5
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: kaleido>=0.2
