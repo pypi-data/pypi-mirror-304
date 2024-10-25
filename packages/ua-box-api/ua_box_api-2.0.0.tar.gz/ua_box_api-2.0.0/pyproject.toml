@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ua-box-api"
+version = "2.0.0"
+description = "Provides easy interface for making REST requests to University of Arizona Box file storage."
+authors = ["Stephen Stern <sterns1@arizona.edu>"]
+maintainers = [
+    "Ian Valentine <ivalentine@arizona.edu>",
+]
+license="MIT"
+readme = "README.md"
+repository = "https://github.com/UACoreFacilitiesIT/UA-Box-API"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+box-sdk-gen = {extras = ["jwt"], version = "^1.5.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
