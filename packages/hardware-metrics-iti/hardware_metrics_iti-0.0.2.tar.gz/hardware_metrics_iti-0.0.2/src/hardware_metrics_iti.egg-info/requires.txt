@@ -1,0 +1,17 @@
+contourpy
+cycler
+fonttools
+kiwisolver
+matplotlib
+numpy
+nvidia-ml-py3
+packaging
+pandas
+Pillow
+psutil
+pyparsing
+python-dateutil
+pytz
+seaborn
+six
+tzdata
