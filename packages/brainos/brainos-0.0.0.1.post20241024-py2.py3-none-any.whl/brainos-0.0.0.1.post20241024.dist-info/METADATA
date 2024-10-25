@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: brainos
+Version: 0.0.0.1.post20241024
+Summary: Brain Operating System
+Home-page: https://github.com/chaoming0625/brainos
+Author: brainos Developers
+Author-email: brainos Developers <chao.brain@qq.com>
+License: Apache-2.0 license
+Project-URL: homepage, http://github.com/chaoming0625/brainos
+Project-URL: repository, http://github.com/chaoming0625/brainos
+Keywords: physical unit,physical quantity,brain modeling
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: numpy
+Provides-Extra: cpu
+Requires-Dist: jaxlib ; extra == 'cpu'
+Provides-Extra: cuda12
+Requires-Dist: jaxlib[cuda12] ; extra == 'cuda12'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Provides-Extra: tpu
+Requires-Dist: jaxlib[tpu] ; extra == 'tpu'
+
+
+
+# Brain Operating System
+
