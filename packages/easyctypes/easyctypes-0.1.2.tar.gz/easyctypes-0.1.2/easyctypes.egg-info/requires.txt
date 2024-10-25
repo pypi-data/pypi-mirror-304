@@ -1,0 +1,7 @@
+ctypes
+
+[dev]
+pytest
+tox
+coverage
+flake8
