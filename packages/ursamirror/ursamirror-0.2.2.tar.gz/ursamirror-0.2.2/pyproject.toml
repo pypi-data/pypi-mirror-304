@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+#requires = ["hatchling", "setuptools>=64", "setuptools-scm>=8"]
+#build-backend = "setuptools.build_meta"
+
+[project]
+name = "ursamirror"
+version = "v0.2.2"  #help with git describe
+description = 'A Python package for the analysis of the Mirror Tracing Task in polar coordinates'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Pablo F. Garrido", email = "f.garrido.pablo@gmail.com" }
+]
+maintainers = [
+  { name = "Pablo F. Garrido", email = "f.garrido.pablo@gmail.com" },
+  { name = "Emilie Sogn Falch ", email = "emilie.falch@gmail.com" }
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: IPython",
+  "Framework :: Jupyter",
+  "Framework :: Pytest",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Education",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Image Processing"  
+]
+dependencies  = [
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-image"
+]
+#[tool.setuptools_scm]
+#version_file = "_version.py"
+
+#[tool.hatch.version]
+#source = "vcs"
+#style = "{base}.{distance}" 
+
+#[tool.hatch.build.hooks.vcs]
+#version-file = "_version.py"
+
+#[tool.hatch.vcs]
+#tag_pattern = "v*"
+
+[project.urls]
+Documentation = "https://github.com/PabloFGarrido/ursamirror#readme"
+Issues = "https://github.com/PabloFGarrido/ursamirror/issues"
+Source = "https://github.com/PabloFGarrido/ursamirror"
+
