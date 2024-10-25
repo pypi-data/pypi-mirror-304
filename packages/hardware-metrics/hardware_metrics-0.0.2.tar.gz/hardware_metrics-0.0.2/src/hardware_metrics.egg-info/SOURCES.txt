@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/hardware_metrics/__init__.py
+src/hardware_metrics/main.py
+src/hardware_metrics.egg-info/PKG-INFO
+src/hardware_metrics.egg-info/SOURCES.txt
+src/hardware_metrics.egg-info/dependency_links.txt
+src/hardware_metrics.egg-info/requires.txt
+src/hardware_metrics.egg-info/top_level.txt
