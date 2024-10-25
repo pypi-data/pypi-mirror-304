@@ -1,0 +1,6 @@
+[console_scripts]
+hidrawtests=razer_analog.hidrawtests:main
+razer-analog=razer_analog.driver:main
+razer-analog-mouse=razer_analog.mouse:main
+razerctl=razer_analog.razerctl:main
+
