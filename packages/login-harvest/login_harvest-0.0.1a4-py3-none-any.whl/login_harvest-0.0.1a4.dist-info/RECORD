@@ -1,0 +1,9 @@
+login_harvest/__init__.py,sha256=xAXpZTF_kdYftbg7DVip3PMQ6rtPzSMVya1uE8l5XQs,258
+login_harvest/analyzers.py,sha256=yVsEKdUrrm8pCrFPFLumYyVjgboS5kmpNHeXKwHUSGM,3686
+login_harvest/extractor.py,sha256=B5et2J25M7CM4GFcMAZimh8tOBt-7gpXrpE3Re-DdD4,3112
+login_harvest/oauth_providers.json,sha256=vEb5YIExAGLJT5tIHVd0fPXeRTJ5vXCNb-dDLtd1OW4,205
+tests/test_html_extractor.py,sha256=DykmXIDEN9cOvcFy_ZmhUhEiOWuSuw216H8X37-qd8k,3078
+login_harvest-0.0.1a4.dist-info/METADATA,sha256=cSxNl0mzySsxuPcSEJajRPYhRJwuOX-amXrljQvDw_o,1119
+login_harvest-0.0.1a4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+login_harvest-0.0.1a4.dist-info/top_level.txt,sha256=8o9q8j9eHfBdM3o-Y01VTPeedFmG_AF4Mj507OR8kyo,20
+login_harvest-0.0.1a4.dist-info/RECORD,,
