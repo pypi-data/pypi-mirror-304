@@ -1,0 +1,7 @@
+LICENSE.txt
+README.md
+setup.py
+app/AbdallahRadwanLib.egg-info/PKG-INFO
+app/AbdallahRadwanLib.egg-info/SOURCES.txt
+app/AbdallahRadwanLib.egg-info/dependency_links.txt
+app/AbdallahRadwanLib.egg-info/top_level.txt
