@@ -1,0 +1,9 @@
+devart/excel/__init__.py,sha256=wVPnXQgpvbgqT9XfoqKFpBPoVhYv25wu3tOehu2kWfQ,996
+devart/excel/excel.cpython-38-x86_64-linux-gnu.so,sha256=9l5Laj3UCiBPTev09NkUF3yJopE5mk6bI-xEWzlWE40,8435336
+devart/excel/excel.pyi,sha256=-GSbIAtRxvyce14Hhcn2-7jwjIkoTpV7cUGirmsRn24,12367
+devart/excel/sqlalchemy/__init__.py,sha256=YeEKUlHYvWEvLK282h4qxJ0t3MWooU081o5sfw_GTDg,1103
+devart_excel_connector-1.1.0.dist-info/LICENSE.txt,sha256=3sjizf07RF-z3Lp3tnA-jy3rN103Ypw11NO9tFnRLtU,8559
+devart_excel_connector-1.1.0.dist-info/METADATA,sha256=rTP87V_hqHNHRn_VXLsjAJQC8ZnfKF7RGVaU25s_HvM,2642
+devart_excel_connector-1.1.0.dist-info/WHEEL,sha256=QtvvVFpfTFd2UITrFb13PS5tRNxJczmTxa3IxksbyMk,102
+devart_excel_connector-1.1.0.dist-info/top_level.txt,sha256=h_mZcghGiX6pnc-Kb1EoAfIW2iHeDA0kJKfcLJMbq44,7
+devart_excel_connector-1.1.0.dist-info/RECORD,,
