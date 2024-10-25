@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+iridis.egg-info/PKG-INFO
+iridis.egg-info/SOURCES.txt
+iridis.egg-info/dependency_links.txt
+iridis.egg-info/top_level.txt
