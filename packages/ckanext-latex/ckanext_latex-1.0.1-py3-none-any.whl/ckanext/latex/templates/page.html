@@ -1,0 +1,11 @@
+{% ckan_extends %}
+
+{%- block scripts %}
+  {{ super() }}
+  {% asset 'latex/latex-js' %}
+{% endblock -%}
+
+{%- block styles %}
+  {{ super() }}
+  {% asset 'latex/latex-css' %}
+{% endblock -%}
