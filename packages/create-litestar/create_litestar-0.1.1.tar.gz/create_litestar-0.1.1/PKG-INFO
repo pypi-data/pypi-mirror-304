@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: create-litestar
+Version: 0.1.1
+Summary: Easy way to start a Litestar project
+Project-URL: Discord, https://discord.gg/litestar
+Project-URL: Funding, https://github.com/sponsors/litestar-org
+Project-URL: Homepage, https://github.com/Kumzy/create-litestar
+Project-URL: Issue, https://github.com/Kumzy/create-litestar/issues/
+Project-URL: Source, https://github.com/Kumzy/create-litestar
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: advanced-alchemy>=0.20.0
+Requires-Dist: copier>=9.3.1
+Requires-Dist: pytest>=8.3.3
+Requires-Dist: questionary>=2.0.1
+Requires-Dist: rich>=13.9.1
+Requires-Dist: ruff>=0.6.8
+Requires-Dist: structlog>=24.4.0
+Requires-Dist: uvicorn>=0.32.0
+Description-Content-Type: text/markdown
+
+# create-litestar
+
+Easy way to start a Litestar project
+
+It automatically:
+- Setup project
+- Add dependencies
+- Add configuration
+- Add .gitignore
+
+## Templates
+
+
+## Development
+
+```bash
+uv sync
+uv run create-litestar
+```
