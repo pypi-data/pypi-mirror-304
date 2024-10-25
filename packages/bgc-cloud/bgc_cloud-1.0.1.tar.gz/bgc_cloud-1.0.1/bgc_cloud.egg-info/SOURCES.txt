@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+bgc_cloud/__init__.py
+bgc_cloud/_fn.py
+bgc_cloud/auth.py
+bgc_cloud/transport.py
+bgc_cloud.egg-info/PKG-INFO
+bgc_cloud.egg-info/SOURCES.txt
+bgc_cloud.egg-info/dependency_links.txt
+bgc_cloud.egg-info/requires.txt
+bgc_cloud.egg-info/top_level.txt
