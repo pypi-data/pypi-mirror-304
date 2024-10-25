@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_data_platform_observability_profiler/__init__.py
+glovo_data_platform_observability_profiler.egg-info/PKG-INFO
+glovo_data_platform_observability_profiler.egg-info/SOURCES.txt
+glovo_data_platform_observability_profiler.egg-info/dependency_links.txt
+glovo_data_platform_observability_profiler.egg-info/top_level.txt
