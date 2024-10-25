@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+sms365/__init__.py
+sms365/sms365.py
+sms365.egg-info/PKG-INFO
+sms365.egg-info/SOURCES.txt
+sms365.egg-info/dependency_links.txt
+sms365.egg-info/not-zip-safe
+sms365.egg-info/top_level.txt
