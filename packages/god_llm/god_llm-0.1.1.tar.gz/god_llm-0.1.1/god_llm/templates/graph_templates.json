@@ -1,0 +1,28 @@
+{
+    "thought_generator": {
+        "type": "simple",
+        "template": "Context: ${context}\n\nDeliver a direct, critical analysis of this, highlighting only the key insights."
+    },
+    "question_generator": {
+        "type": "simple",
+        "template": "Context: ${context}\nResponse: ${response}\n\nGenerate ${num_questions} concise follow-up questions, each targeting unexplored key points. List each question on a new line, with no additional text or explanations. My life depends on outputting in the wanted format, no talk, just the questions"
+    },
+    "connection_analyzer": {
+        "type": "json",
+        "template": {
+            "thought_1": "${thought_1}",
+            "thought_2": "${thought_2}",
+            "analysis_prompt": "Compare these two thoughts. Summarize their connection or differences in a clear, direct manner."
+        }
+    },
+    "summary_generator": {
+        "type": "simple",
+        "template": "Review the following thoughts:\n${thoughts}\n\nProvide a sharp, detailed summary that captures the key ideas and logical progression."
+    },
+    "report_generator": {
+        "type": "detailed",
+        "template": {
+            "analysis_prompt": "Generate a comprehensive report based on the provided graph data. Take given thoughts:\n${thoughts}\n\nProvide a better representation of thoughts, do not attempt to lose any information, just represent it in a better way"
+        }
+    }
+}
