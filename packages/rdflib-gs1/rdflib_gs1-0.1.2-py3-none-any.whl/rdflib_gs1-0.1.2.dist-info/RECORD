@@ -1,0 +1,7 @@
+rdflib_gs1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rdflib_gs1/namespace/_GS1.py,sha256=c6zAEkpQAdqOmZOJGvcHVBbJsP6Tcf7mRkxiI8iAC6M,485897
+rdflib_gs1/namespace/__init__.py,sha256=RXBJ48tLnz2PKBPnrn0AY-EhgQiwJh3Tr6f8RwZiAJI,41
+rdflib_gs1-0.1.2.dist-info/METADATA,sha256=W143TehO_smMvX9hgLs_P0P_uRX6GgPmMPtC2hGdCTo,2384
+rdflib_gs1-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+rdflib_gs1-0.1.2.dist-info/entry_points.txt,sha256=Y7jSRwZact1DC7BEdr3CuhHbOi2fUsiLrXirAuwXlVM,48
+rdflib_gs1-0.1.2.dist-info/RECORD,,
