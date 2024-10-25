@@ -1,0 +1,13 @@
+guido/__init__.py,sha256=8eMqjo_NgZob2gY3HB1FZPlACz0tbjhpZCvV63dvJBA,92
+guido/__main__.py,sha256=f9V-sEM0v78BQcdfjBbe2ZDnlQuZhZBIhzeFs1Cdors,426
+guido/commands.py,sha256=2oJ4EoC5so_UKx6D7tfI_hJgKpCwMcQF0XGhYv1rAPs,2913
+guido/guido.py,sha256=6vRxAnwwD8znuyOeA3NrTurz56VhMrnzFlKmYe6_Tuw,3945
+guido/importer.py,sha256=qdb8MUxy2-65N2SBd8or5w7OYSPop2_oEw_VOafUybM,533
+guido/logconfig.py,sha256=pYvpwHVRBc4VyEP-E4H4gK_oiFxCha9GdZoUBw4P8yg,1143
+guido/messages.py,sha256=reHBOzZgVOb_xwven4oc4xn78anxF5IXLL1cf0dg4Zo,7885
+guido_kafka-0.2.1.dist-info/LICENSE,sha256=kRbfO-gSFgtVcXV-tBZR7r_vDgmJC86VN013Nva-j8s,1072
+guido_kafka-0.2.1.dist-info/METADATA,sha256=FonBojRdjOLb_dhuMWx_y5tYomxnZxUM6y_UzCkBxhM,3605
+guido_kafka-0.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+guido_kafka-0.2.1.dist-info/entry_points.txt,sha256=7wjySFs6LrrKmB2N6nseC_qJOXCq3noWOq-XGKIWpSc,46
+guido_kafka-0.2.1.dist-info/top_level.txt,sha256=VXR1dlRyhrYQ6IliiydaKC8O6RYxnvIZpc9R_5TvkXk,6
+guido_kafka-0.2.1.dist-info/RECORD,,
