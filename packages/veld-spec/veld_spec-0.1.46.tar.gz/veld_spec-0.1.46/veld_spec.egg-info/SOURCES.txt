@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+build.sh
+setup.py
+./__init__.py
+./build.sh
+./dev.py
+./veld_spec.py
+veld_spec.egg-info/PKG-INFO
+veld_spec.egg-info/SOURCES.txt
+veld_spec.egg-info/dependency_links.txt
+veld_spec.egg-info/requires.txt
+veld_spec.egg-info/top_level.txt
