@@ -1,0 +1,71 @@
+name: CI (bleeding edge)
+
+on:
+  schedule:
+    # run this every wednesday at 3 am UTC
+  - cron: 0 3 * * 3
+  pull_request:
+    paths:
+    - .github/workflows/bleeding_edge.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 'py${{ matrix.python-version }} (free-threading: ${{ matrix.free-threading }})'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+        - 3.13-dev
+        free-threading:
+        - false
+        - true
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      if: ${{ !matrix.free-threading }}
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: deadsnakes/action@v3.2.0
+      if: ${{ matrix.free-threading }}
+      with:
+        python-version: ${{ matrix.python-version }}
+        nogil: true
+    - uses: astral-sh/setup-uv@v3
+
+    - name: Install dependencies
+      run: |
+        uv venv -p 3.13 --python-preference=only-system
+        uv pip install git+https://github.com/pytest-dev/pytest.git
+        uv pip install pytest-repeat hypothesis
+    - name: Build
+      run: |
+        uv pip install .
+    - run: uv pip list
+    - name: Run tests
+      run: |
+        source .venv/bin/activate
+        pytest --color=yes
+    - name: Run doctests
+      run: |
+        source .venv/bin/activate
+        pytest --color=yes --pyargs inifix --doctest-modules
+    - name: Run concurrency tests (GIL)
+      if: ${{ ! matrix.free-threading }}
+      run: |
+        source .venv/bin/activate
+        pytest --color=yes --count 100 tests/test_concurrent.py
+    - name: Run concurrency tests (free-threading)
+      if: matrix.free-threading
+      run: |
+        source .venv/bin/activate
+        pytest --color=yes --count 100 tests/test_concurrent.py
+      # it *should* be possible to enforce GIL disabling with PYTHON_GIL
+      # but the deadsnake binary seems broken and chokes on it
+      # (last checked 2024-10-12)
+      #env:
+      #  PYTHON_GIL: 0
