@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: blikon_sdk
+Version: 2.1.0
+Summary: Blikon SDK for security and middleware services
+Home-page: https://github.com/blikon/blikon_sdk
+Author: Raúl Díaz Peña
+Author-email: rdiaz@yosoyblueicon.com
+License: BlikonⓇ
+Requires-Dist: fastapi==0.115.2
+Requires-Dist: pydantic-settings==2.6.0
+Requires-Dist: uvicorn==0.32.0
+Requires-Dist: python-jose==3.3.0
+Requires-Dist: httpx==0.13.3
+Requires-Dist: opencensus-ext-azure==1.1.13
+Requires-Dist: azure-identity==1.19.0
+Requires-Dist: azure-keyvault-secrets==4.9.0
+Requires-Dist: deep-translator==1.11.4
+Requires-Dist: langdetect==1.0.9

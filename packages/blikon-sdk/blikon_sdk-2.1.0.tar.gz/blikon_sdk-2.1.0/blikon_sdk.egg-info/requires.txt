@@ -1,0 +1,10 @@
+fastapi==0.115.2
+pydantic-settings==2.6.0
+uvicorn==0.32.0
+python-jose==3.3.0
+httpx==0.13.3
+opencensus-ext-azure==1.1.13
+azure-identity==1.19.0
+azure-keyvault-secrets==4.9.0
+deep-translator==1.11.4
+langdetect==1.0.9
