@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: wry_bokeh_helper
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pillow
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: ruff ; extra == 'dev'
+Provides-Extra: tests
+Provides-Extra: dev
+Requires-Python: >=3.8
