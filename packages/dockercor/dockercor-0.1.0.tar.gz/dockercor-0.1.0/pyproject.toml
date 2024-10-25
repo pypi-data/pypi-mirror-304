@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dockercor"
+version = "0.1.0"
+description = ""
+authors = ["infocornouaille <90894019+infocornouaille@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.12.5"
+docker = "^7.1.0"
+
+[tool.poetry.scripts]
+dockercor = "dockercor.cli:app"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
