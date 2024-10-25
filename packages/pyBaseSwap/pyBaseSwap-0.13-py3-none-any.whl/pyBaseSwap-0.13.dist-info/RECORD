@@ -1,0 +1,13 @@
+pyBaseSwap/IERC20.py,sha256=qTvurVAypzEvMPJ1KGRcTMtda4wtCCP0hqB0tR-EjA8,9626
+pyBaseSwap/ISwapperContract.py,sha256=CMRsVJ1C9Cf1dMUaUM2nd4a7WBcaPgkPojmrs4Rlzs0,34859
+pyBaseSwap/SwapperModul.py,sha256=FGEYntPQKWM5wFpjcsmooGu1Ox03tZFWspfR5q40fQo,6379
+pyBaseSwap/W3Utils.py,sha256=pKxgi3u5ZtEYRggai6ZLeJZMI314HT1k506nqJVw4Q4,12329
+pyBaseSwap/__init__.py,sha256=QVLnXh4efTUoUkK97DsVHiR8y4N4EAx4AL1VzV-BMxs,85
+pyBaseSwap/core_abis.py,sha256=OOo2374gB8HiiscSeNqUjDK_sX6W7IGrRRJXWXdc914,25715
+pyBaseSwap/core_chains.py,sha256=uXS3iXVXRX3y2CQZHEGlryQSTvUZnUirWDJ3WxBZdrE,1199
+pyBaseSwap/core_settings.py,sha256=uImxEonYq_C04LKP6dRKi6lvPMxEdJUF6c86Q6dVffY,3618
+pyBaseSwap-0.13.dist-info/LICENSE,sha256=3e7uRkJ5q0e37UtPMTiArUfBQ-CADs7x05dxbwx9PB0,1067
+pyBaseSwap-0.13.dist-info/METADATA,sha256=ZKJz9b-9HD4a3uGsuNNBS8RNABsO-lOXIqvbC_HQxYo,3538
+pyBaseSwap-0.13.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pyBaseSwap-0.13.dist-info/top_level.txt,sha256=Iqus4B8HDGma-pY1okCN9HFSujXelghv4FuhEB0lccY,11
+pyBaseSwap-0.13.dist-info/RECORD,,
