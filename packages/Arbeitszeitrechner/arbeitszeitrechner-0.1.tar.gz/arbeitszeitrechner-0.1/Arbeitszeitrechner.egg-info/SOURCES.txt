@@ -1,0 +1,13 @@
+README.md
+setup.py
+Arbeitszeitrechner.egg-info/PKG-INFO
+Arbeitszeitrechner.egg-info/SOURCES.txt
+Arbeitszeitrechner.egg-info/dependency_links.txt
+Arbeitszeitrechner.egg-info/entry_points.txt
+Arbeitszeitrechner.egg-info/requires.txt
+Arbeitszeitrechner.egg-info/top_level.txt
+LucaZeitRechner/Arbeitszeitrechner.py
+LucaZeitRechner/TimeCalcModule.py
+LucaZeitRechner/WorkTimeCalc.py
+LucaZeitRechner/__init__.py
+LucaZeitRechner/main.py
