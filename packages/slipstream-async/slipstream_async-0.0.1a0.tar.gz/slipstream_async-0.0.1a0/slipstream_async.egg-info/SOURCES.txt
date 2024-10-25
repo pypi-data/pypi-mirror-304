@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+slipstream/__init__.py
+slipstream/__version__.py
+slipstream/caching.py
+slipstream/codecs.py
+slipstream/core.py
+slipstream/utils.py
+slipstream_async.egg-info/PKG-INFO
+slipstream_async.egg-info/SOURCES.txt
+slipstream_async.egg-info/dependency_links.txt
+slipstream_async.egg-info/entry_points.txt
+slipstream_async.egg-info/requires.txt
+slipstream_async.egg-info/top_level.txt
+tests/test__init__.py
+tests/test_cache.py
