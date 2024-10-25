@@ -1,0 +1,10 @@
+devart/sqlserver/__init__.py,sha256=B3iOPUR9-5-ot_OBrVY8hcKgrj26xxfk7N4mt_A-3ZM,942
+devart/sqlserver/sqlserver.cpython-39-darwin.so,sha256=uBf1QE3YOHESQlZh6IIRh7AE1iv4edocpOgKohv_fKo,16166136
+devart/sqlserver/sqlserver.pyi,sha256=-GSbIAtRxvyce14Hhcn2-7jwjIkoTpV7cUGirmsRn24,12367
+devart/sqlserver/http/tunnel.php,sha256=qjhBbshLEKSmoA7RAXVi29TbVNsPBad364d2YHsbyNQ,20720
+devart/sqlserver/sqlalchemy/__init__.py,sha256=ITumLPj5NEOXutHq7G0mbWr8NMiLfdx8C3Zc4Bq0v_s,806
+devart_sqlserver_connector-1.2.0.dist-info/LICENSE.txt,sha256=3sjizf07RF-z3Lp3tnA-jy3rN103Ypw11NO9tFnRLtU,8559
+devart_sqlserver_connector-1.2.0.dist-info/METADATA,sha256=od2q6qgOMMAesNCjFrC3EQyxLnhEr-GCW8vZ5tgnBbE,2798
+devart_sqlserver_connector-1.2.0.dist-info/WHEEL,sha256=T7cc3Fgb4WcdZPEAzILyAjF1Pe1sLtzTnDnAgrChruE,112
+devart_sqlserver_connector-1.2.0.dist-info/top_level.txt,sha256=h_mZcghGiX6pnc-Kb1EoAfIW2iHeDA0kJKfcLJMbq44,7
+devart_sqlserver_connector-1.2.0.dist-info/RECORD,,
