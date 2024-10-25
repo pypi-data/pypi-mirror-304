@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+easyctypes/__init__.py
+easyctypes/devices.py
+easyctypes/mouse_control.py
+easyctypes.egg-info/PKG-INFO
+easyctypes.egg-info/SOURCES.txt
+easyctypes.egg-info/dependency_links.txt
+easyctypes.egg-info/top_level.txt
+tests/test_mouse_control.py
