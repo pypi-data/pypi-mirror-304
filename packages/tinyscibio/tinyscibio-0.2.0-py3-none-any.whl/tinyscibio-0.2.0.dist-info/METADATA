@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: tinyscibio
+Version: 0.2.0
+Summary: tinyscibio provides convenient shortcut functions to boost daily bioinformatics work.
+Project-URL: Source, https://github.com/svm-zhang/tinyscibio
+Project-URL: Documentation, https://svm-zhang.github.io/tinyscibio/
+Project-URL: Issues, https://github.com/svm-zhang/tinyscibio/issues
+Author-email: Simo Zhang <svm.zhang@gmail.com>
+Maintainer-email: Simo Zhang <svm.zhang@gmail.com>
+License-Expression: MIT
+Keywords: bioinformatics,genomics,sequencing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Requires-Dist: pysam>=0.22.1
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# tinyscibio
+
+tinyscibio provides convenient shortcut functions to boost daily bioinformatics
+work.

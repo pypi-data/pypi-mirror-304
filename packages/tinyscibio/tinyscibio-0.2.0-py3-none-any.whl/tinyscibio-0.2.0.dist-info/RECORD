@@ -1,0 +1,9 @@
+tinyscibio/__init__.py,sha256=F2wIBqrR2Ms-qvQXdrlsvC8PEBe7eIKiBT7dfBCE8aw,711
+tinyscibio/_io.py,sha256=R_MXO4VVEK6OqwUKKehYFppaOOfVyDxMvyiLtmJ2ZtY,4503
+tinyscibio/_version.py,sha256=H-qsvrxCpdhaQzyddR-yajEqI71hPxLa4KxzpP3uS1g,411
+tinyscibio/api_server.py,sha256=-b-v--SDazqkmiXcYv6KHvWqdTJWssRqbXBBNPWrzaE,2900
+tinyscibio/bam.py,sha256=Zi2XcY8l813q88JmCWA28bQy0PmJoX_iy-r1Sa9l9bs,10904
+tinyscibio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinyscibio-0.2.0.dist-info/METADATA,sha256=BVgd2kNA_EjZclsojN_LZjAoUHGi9XjqsfaBl6gpvSA,1241
+tinyscibio-0.2.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+tinyscibio-0.2.0.dist-info/RECORD,,
