@@ -1,0 +1,8 @@
+tap_postgres/__init__.py,sha256=elFGw5Z9qMOe9SMF21yrY4EusdE4Fhr8NV5-FjajD9s,61
+tap_postgres/client.py,sha256=n6Q5yoczwSOX83dLRgrsgPdMfQsMOxKAUSXgixsjwcA,18962
+tap_postgres/tap.py,sha256=x146PzkwwUQtN2Xu9rk4t4f9SF4IEqKmcZJjx30oCjc,22710
+meltanolabs_tap_postgres-0.0.15.dist-info/LICENSE,sha256=SCVQGLQfwOllsRFa9-Z3m8IYu4pnR9Vh2oANUCJiKqI,3860
+meltanolabs_tap_postgres-0.0.15.dist-info/METADATA,sha256=95DM_VCX0Y_GbEr66W9VC8MM1VK59u4aHqkw1gReXG8,30620
+meltanolabs_tap_postgres-0.0.15.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+meltanolabs_tap_postgres-0.0.15.dist-info/entry_points.txt,sha256=LxQIKTzgDC0wt6g_AEnmdEfnC5CclPIBFg62ATUmakY,65
+meltanolabs_tap_postgres-0.0.15.dist-info/RECORD,,
