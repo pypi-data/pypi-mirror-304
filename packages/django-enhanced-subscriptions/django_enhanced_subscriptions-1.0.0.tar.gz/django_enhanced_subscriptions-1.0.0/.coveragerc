@@ -1,0 +1,13 @@
+[run]
+branch = True
+source=subscription
+omit = *test*,
+       subscription/**/migrations/*,
+       *__init__*,
+
+[report]
+show_missing=True
+exclude_lines=pragma: no cover
+
+[html]
+directory=coverage
