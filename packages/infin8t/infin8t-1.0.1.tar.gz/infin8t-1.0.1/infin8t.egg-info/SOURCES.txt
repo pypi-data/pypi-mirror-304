@@ -1,0 +1,7 @@
+README.md
+setup.py
+infin8t.egg-info/PKG-INFO
+infin8t.egg-info/SOURCES.txt
+infin8t.egg-info/dependency_links.txt
+infin8t.egg-info/requires.txt
+infin8t.egg-info/top_level.txt
