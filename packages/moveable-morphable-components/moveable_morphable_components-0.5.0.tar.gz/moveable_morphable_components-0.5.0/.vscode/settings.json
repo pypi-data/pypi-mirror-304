@@ -1,0 +1,30 @@
+{
+    "cSpell.words": [
+        "arange",
+        "argnums",
+        "argwhere",
+        "dofs",
+        "dtype",
+        "Heaviside",
+        "linalg",
+        "morphable",
+        "nansum",
+        "ndarray",
+        "setdiff",
+        "spsolve",
+        "tdfs",
+        "trange",
+        "vmap",
+        "xmma",
+        "ymma",
+        "zmma"
+    ],
+    "python.analysis.extraPaths": [
+        "./moveable_morphable_components"
+    ],
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
