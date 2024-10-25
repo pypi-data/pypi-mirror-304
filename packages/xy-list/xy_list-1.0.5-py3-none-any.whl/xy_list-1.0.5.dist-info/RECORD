@@ -1,0 +1,12 @@
+xy_list/List.py,sha256=ezRZ7w9gLwqdRLzo7RH5eOqJgtI6oDqguePHfRuAGvU,475
+xy_list/ModuleData.py,sha256=Qyac0FMx8rhY3Fvxrj7EwiE0kjOgNj-nKjyjK4mpSxk,478
+xy_list/Resource.py,sha256=cu2sBzXL0Nl9DvuEdddLsZ2xDIZ6lFbM64BIO0ICFng,408
+xy_list/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_list/utils.py,sha256=jEcb1YLO1ryLZGBK4Sxnmynkow4nFKuY7U28HmvYazw,475
+xy_list/execute/Main.py,sha256=Gc1Ys9O8XG3cbhI7fleD1Gjt0a-n9uyCFkxeM0Ih5gA,747
+xy_list/execute/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_list-1.0.5.dist-info/LICENSE,sha256=8NreXJM3ab-0PXXvuVF9QqDoXrglPouAZDdv3Vj-70U,9247
+xy_list-1.0.5.dist-info/METADATA,sha256=AadjB2xwSMPvmviWnuEgDw-fzLBUy2oSkzXYJqX2BBI,1546
+xy_list-1.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+xy_list-1.0.5.dist-info/top_level.txt,sha256=T1SyRWqs8l12fn8MwSkIqpxCdIRyvHqMDX2VoJKQ5Ys,8
+xy_list-1.0.5.dist-info/RECORD,,
