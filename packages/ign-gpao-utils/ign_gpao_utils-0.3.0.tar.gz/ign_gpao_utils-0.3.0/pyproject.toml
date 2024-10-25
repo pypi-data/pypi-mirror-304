@@ -1,0 +1,33 @@
+[project]
+name = "ign-gpao-utils"
+dynamic = ["version"]
+
+description = "Library used for build project with ign-gpao"
+readme = "README.md"
+
+authors = [
+    { name = "Léa Vauchier", email = "lea.vauchier@ign.fr" },
+    { name = "Guillaume Liégard", email = "guillaume.liegard@ign.fr" },
+    { name = "Yoann Apel", email = "yoann.apel@ign.fr" },
+    { name = "Elliot Luçon", email = "elliot.lucon@ign.fr" },
+]
+
+[tool.setuptools]
+packages = [ "gpao_utils" ]
+
+[tool.setuptools.dynamic]
+version = {attr = "gpao_utils.version.__version__"}
+
+[tool.black]
+line-length = 119
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.toml
+  |\.sh
+  |\.git
+  |\.ini
+  |\.bat
+  | data
+)/
+'''
