@@ -1,0 +1,9 @@
+README.md
+setup.py
+WebTableScrapper.egg-info/PKG-INFO
+WebTableScrapper.egg-info/SOURCES.txt
+WebTableScrapper.egg-info/dependency_links.txt
+WebTableScrapper.egg-info/requires.txt
+WebTableScrapper.egg-info/top_level.txt
+web-table-scrapper/__init__.py
+web-table-scrapper/scraper.py
