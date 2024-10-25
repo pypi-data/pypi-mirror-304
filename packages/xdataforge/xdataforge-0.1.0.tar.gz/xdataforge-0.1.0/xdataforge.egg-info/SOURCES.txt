@@ -1,0 +1,12 @@
+README.md
+setup.py
+xdataforge/__init__.py
+xdataforge/xdataforge.py
+xdataforge/xdataforge_client.py
+xdataforge/xdataforge_error.py
+xdataforge/xdataforge_model.py
+xdataforge.egg-info/PKG-INFO
+xdataforge.egg-info/SOURCES.txt
+xdataforge.egg-info/dependency_links.txt
+xdataforge.egg-info/requires.txt
+xdataforge.egg-info/top_level.txt
