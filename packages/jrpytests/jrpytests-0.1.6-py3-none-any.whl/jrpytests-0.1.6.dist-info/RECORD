@@ -1,0 +1,7 @@
+jrpytests/__init__.py,sha256=bPUISsOhHHrcuXVgj_YY1v1oxXydoFceZM7RdyZadpU,15097
+jrpytests/__version__.py,sha256=n3oM6B_EMz93NsTI18NNZd-jKFcUPzUkbIKj5VFK5ok,22
+jrpytests/flake8_config.ini,sha256=8A1y5Y6NT27mwQvrmnl3HxzPXkAikDL0DjO1PQ-GmEk,465
+jrpytests/get_name_from_toml_file.py,sha256=fSsSL2WDiNOQJFJ7BqvcobCiumi3Zu_-RazhZMxZl8o,1312
+jrpytests-0.1.6.dist-info/METADATA,sha256=ZRxJ8bYFeh80SdWZMmqwoWR83Rshcimrcrpr7-Cb5h4,1542
+jrpytests-0.1.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+jrpytests-0.1.6.dist-info/RECORD,,
