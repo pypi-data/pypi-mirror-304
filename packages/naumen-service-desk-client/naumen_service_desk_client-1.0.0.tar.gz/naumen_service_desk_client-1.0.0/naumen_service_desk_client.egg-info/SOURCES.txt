@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+naumen_service_desk_client/__init__.py
+naumen_service_desk_client/client.py
+naumen_service_desk_client.egg-info/PKG-INFO
+naumen_service_desk_client.egg-info/SOURCES.txt
+naumen_service_desk_client.egg-info/dependency_links.txt
+naumen_service_desk_client.egg-info/not-zip-safe
+naumen_service_desk_client.egg-info/requires.txt
+naumen_service_desk_client.egg-info/top_level.txt

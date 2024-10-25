@@ -1,0 +1,37 @@
+# naumen-service-desk-client
+
+Python client for ([Naumen Service Desk](https://www.naumen.ru/products/service_desk/)).
+Execute API calls to NSD from python code.
+
+## Installation
+```bash
+pip install naumen-service-desk-client
+```
+
+## Examples
+### Create class
+```python
+from naumen_service_desk_client import NaumenSDClient
+nsd = NaumenSDClient( "NSD_DOMAIN", "NSD_TOKEN" )
+```
+where:
+- NSD_DOMAIN: URL of Naumen Service Desk 
+- NSD_TOKEN: AccessKey of Naumen Service Desk 
+
+or using environment variables "NSD_DOMAIN" and "NSD_TOKEN"
+```python
+from dotenv import load_dotenv
+import os
+from naumen_service_desk_client import NaumenSDClient
+load_dotenv()
+
+def main():
+    nsd = NaumenSDClient( 
+        os.getenv("NSD_DOMAIN"), 
+        os.getenv("NSD_TOKEN")
+    )
+
+    print( nsd.health_check() )
+if __name__ == "__main__":
+    main() 
+```
