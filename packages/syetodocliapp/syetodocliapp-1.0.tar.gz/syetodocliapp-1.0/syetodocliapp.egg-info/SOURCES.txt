@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+sye_todo_cli/__init__.py
+sye_todo_cli/todo.py
+sye_todo_cli/todo_manager.py
+syetodocliapp.egg-info/PKG-INFO
+syetodocliapp.egg-info/SOURCES.txt
+syetodocliapp.egg-info/dependency_links.txt
+syetodocliapp.egg-info/entry_points.txt
+syetodocliapp.egg-info/requires.txt
+syetodocliapp.egg-info/top_level.txt
