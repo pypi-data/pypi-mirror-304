@@ -1,0 +1,12 @@
+pd_fred/__init__.py,sha256=_21FmelKdAdDT_zFQFuH5B6xMRHF5RtYZQI3sAHBSzE,84
+pd_fred/config.py,sha256=x9Jz7CovPuPv3Z9iHyF3FWUxJYVIvqBp3N0ngHpIuZ0,97
+pd_fred/data_fetcher.py,sha256=JTa-blrrREcu19AC-_n98kItozQDau2FcrUJsBd5gPU,378
+pd_fred/pd_calculator.py,sha256=lOMUr8Ev-QqJk3CDMeEPD9kCzufd3t7HuBs9en64wZ4,476
+pd_fred/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pd_fred/tests/test_data_fetcher.py,sha256=prqYiun0YEcQuX3RPwAxiPi_64ek6YL2PSJaKADyJM0,419
+pd_fred/tests/test_pd_calculator.py,sha256=QEK8ouKrqh7GVbPrpWINg_xsz1sYa75ZeVyzczIwWqs,420
+pd_fred-0.1.0.dist-info/LICENSE,sha256=nSOXNExuB26BSIXYccetNVuUeosBz4XZdRbEP05tXI4,1066
+pd_fred-0.1.0.dist-info/METADATA,sha256=XGYPoeemeSQjhCIQtpZ64-sawK4-pRVnD34WJwk-Iy0,1122
+pd_fred-0.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+pd_fred-0.1.0.dist-info/top_level.txt,sha256=6Q_zIiWl_XCWxrm7mR6Fgt8rWSObv2kN9NKepVuSdVE,8
+pd_fred-0.1.0.dist-info/RECORD,,
