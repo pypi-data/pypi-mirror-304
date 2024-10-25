@@ -1,0 +1,10 @@
+README.md
+setup.py
+flexiparse/__init__.py
+flexiparse/main.py
+flexiparse.egg-info/PKG-INFO
+flexiparse.egg-info/SOURCES.txt
+flexiparse.egg-info/dependency_links.txt
+flexiparse.egg-info/entry_points.txt
+flexiparse.egg-info/requires.txt
+flexiparse.egg-info/top_level.txt
