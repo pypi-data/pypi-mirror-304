@@ -1,0 +1,3 @@
+[console_scripts]
+try-listening=py_rodo.callback:try_listening
+
