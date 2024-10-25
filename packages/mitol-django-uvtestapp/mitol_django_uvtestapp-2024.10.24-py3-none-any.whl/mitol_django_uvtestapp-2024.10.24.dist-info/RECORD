@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=VUISOhWmCtx13lmDjxJhtTXdWfDCoSA0ax78apFycLQ,344
+README.md,sha256=QRFNTy41Z7eNATQv-yMxujSn6jb0uAZdkqZz3hM9aLk,100
+mitol/__init__.py,sha256=q3JNmHn0CMPtEqkMR40lkjKQzuWUtT39xIFUYJ-MKIE,56
+mitol/uvtestapp/__init__.py,sha256=aFrK2OPJNk4jbcR3khRHm8SuGrraGZwm4OLoa9zZNLE,156
+mitol/uvtestapp/api.py,sha256=hB1V3dbHnV7iq46KYk5YwRMOVODRpGrfoCIHyVbyap4,111
+mitol/uvtestapp/apps.py,sha256=NVvtcPgocwW9RjizhDTDB591v6g9QAH9sI_7_dBRmhk,728
+mitol/uvtestapp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mitol/uvtestapp/settings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mitol_django_uvtestapp-2024.10.24.dist-info/METADATA,sha256=_xHNogPef0_z_A-z8_R8NI1YHya-12l_wmklyQAs4AI,416
+mitol_django_uvtestapp-2024.10.24.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mitol_django_uvtestapp-2024.10.24.dist-info/RECORD,,
