@@ -1,0 +1,5 @@
+[console_scripts]
+jupyter-thread = vizly_notebook:launch_instance
+jupyter-vizly-notebook = vizly_notebook:launch_instance
+thread = vizly_notebook:launch_instance
+vizly-notebook = vizly_notebook:launch_instance
