@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_data_platform_macros/__init__.py
+glovo_data_platform_macros.egg-info/PKG-INFO
+glovo_data_platform_macros.egg-info/SOURCES.txt
+glovo_data_platform_macros.egg-info/dependency_links.txt
+glovo_data_platform_macros.egg-info/top_level.txt
