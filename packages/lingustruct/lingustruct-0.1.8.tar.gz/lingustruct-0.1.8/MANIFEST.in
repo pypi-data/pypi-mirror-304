@@ -1,0 +1,14 @@
+# README と LICENSE ファイルを含む
+include README.md LICENSE
+
+# 必要なテンプレートファイルを含む
+include lingustruct/templates/master_template.json
+include lingustruct/templates/overview_template.json
+include lingustruct/templates/*_s.json
+
+# 他の .json ファイルを除外
+exclude lingustruct/templates/*.json
+
+# .env ファイルを除外
+exclude .env
+
