@@ -1,0 +1,21 @@
+js_tweaks-js:
+  filter: rjsmin
+  output: ckanext-js_tweaks/%(version)s-js_tweaks.js
+  contents:
+    - js/tweaks-toggle-class.js
+    - js/tweaks-select.js
+
+    - js/base/OverlayScrollbars.min.js
+    - js/tweaks-scrollbars.js
+    - js/tweaks-toogle-tooltip.js
+    - js/tweaks-search-facet.js
+  extra:
+    preload:
+      - base/main
+
+js_tweaks-css:
+  filter: cssrewrite
+  output: ckanext-js_tweaks/%(version)s-js_tweaks.css
+  contents:
+    - css/js-tweaks.css
+    - css/base/OverlayScrollbars.min.css

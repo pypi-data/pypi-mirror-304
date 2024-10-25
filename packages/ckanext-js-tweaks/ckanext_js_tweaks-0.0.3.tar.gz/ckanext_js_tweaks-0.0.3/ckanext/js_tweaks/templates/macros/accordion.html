@@ -1,0 +1,24 @@
+{% macro accordion(id, is_expanded=false, title="Accordion title", custom_header=false, expand_class="in") %}
+    <div class="accordion" id="accordion-{{ id }}">
+        <div class="card">
+            <div class="card-header">
+                {% if custom_header %}
+                    {{ caller(True) }}
+                {% else %}
+                    <h2>{{ title }}</h2>
+
+                    <button class="btn btn-default btn-expand" id="heading-{{ id }}" data-toggle="collapse" data-target="#card-body-{{ id }}" aria-expanded="{{is_expanded}}" aria-controls="card-body-{{ id }}">
+                        {% snippet 'snippets/svg/caret-down.svg' %}
+                    </button>
+                {% endif %}
+            </div>
+
+            <div id="card-body-{{ id }}" class="card-body collapse {% if is_expanded %}{{ expand_class }}{% endif %}" aria-labelledby="heading-{{ id }}"
+                data-parent="#card-body-{{ id }}">
+                <div class="body-wrapper">
+                    {{ caller(False) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
