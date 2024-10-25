@@ -1,0 +1,13 @@
+object_labeling/__init__.py,sha256=6yz21OuA27oI820h8pgKXZHQTesMa9aq9tGaozGhZ4I,207
+object_labeling/client.py,sha256=AWtV9JlhiqMRfOPHa7AlyeWyC_-WDFukdqaIcV4LeDU,4988
+object_labeling/gen_thumbnail.py,sha256=1TViVyrEVcr9BeA1d8ZIz2qyI6sN3Yvxw8jd71Cjxmc,5544
+object_labeling/gen_toml.py,sha256=TjmHug-yzm5CISt2yRCKV7BAm4eg0vlqms6XtYmjIJw,5477
+object_labeling/mesh2usd.py,sha256=LttAPqGdKlnqv6oJOCrvdXJXut1xMGT3SpldesKfZ2I,2673
+object_labeling/prompts.py,sha256=k6mCordQd7nTNizS3vHNIiGUvpnhUaFG7LQCAlK40Fo,3157
+object_labeling/server.py,sha256=bNXfzFkj6q1ET32Lgtn7qImP4tWN8lhKqb_27CY2fbM,4854
+object_labeling/utils.py,sha256=crvdhZM2PEi7LbW9bagqW47jh4bkfCV5ymf5oEjIhe0,10890
+object_labeling-0.1.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+object_labeling-0.1.0.dist-info/METADATA,sha256=phsTvc9pSGAQIO0_BDuOTUTR9Z0J_skYqWIXmz-PRWc,4228
+object_labeling-0.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+object_labeling-0.1.0.dist-info/top_level.txt,sha256=peEywxaL-Y7p4Q-0TOg-X8VYqGSqxhpqlhn2LPxz66k,16
+object_labeling-0.1.0.dist-info/RECORD,,

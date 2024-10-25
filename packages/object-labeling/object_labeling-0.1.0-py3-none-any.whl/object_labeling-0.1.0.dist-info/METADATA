@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: object-labeling
+Version: 0.1.0
+Summary: Automatic annotation of object assets
+Home-page: https://git.galbot.com/robot_base/galbot_sim
+Author: Junjie Jia
+Author-email: jiajunjie@galbot.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bpy
+Requires-Dist: toml
+Requires-Dist: click
+Requires-Dist: transformers
+Requires-Dist: curio
+Requires-Dist: mathutils
+
+# object_labeling
+
+Object labeling is an object-level asset labeling tool focused on the galbot asset platform, aiming to automatically label object assets.
+
+## **⚙️** Install
+
+The `object_labeling` tool leverages the open-source large model LLaVa to automatically obtain specific attributes of assets. It has been tested to run locally on a single Nvidia GeForce RTX 4090 GPU. A better suggestion is to deploy the model on a server and access it from your local machine. For more detailed information about the model, please refer to:[LLaVA](https://github.com/haotian-liu/LLaVA).
+
+### In the local environment
+
+```bash
+# Clone the repository
+cd galbot_sim/extensions/assets_platform/
+git clone ssh://git@git.galbot.com:6043/robot_base/galbot_sim.git
+# install
+cd object_labeling
+omni_python -m pip install -e .
+```
+
+### In the server environment
+
+Set up the environment according to the installation requirements of [LLaVA](https://github.com/haotian-liu/LLaVA), move the `server.py` and `prompts.py` files from the `object_labeling` folder to the server, download the model `llava-v1.6-mistral-7b-hf`, replace the model path in `server.py` with the download path, and then execute the python script.
+
+```python
+# Download the model
+from transformers import AutoProcessor, AutoModelForPreTraining
+
+processor = AutoProcessor.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
+model = AutoModelForPreTraining.from_pretrained("llava-hf/llava-v1.6-mistral-7b-hf")
+```
+
+## 🔥Usage
+
+Following are some simplified examples of utilities offered by this package.
+
+You can also find detailed examples in the `examples` folder.
+
+```python
+import os
+from object_labeling import check_usd_path, get_config_file
+from object_labeling import gen_toml, render_thumbnail
+from object_labeling import Client
+
+def object_labeling(asset_root_path: str, host: str, port: int, regenerate: bool = False):
+    check_usd_path(asset_root_path)
+    config_file = get_config_file(asset_root_path, regenerate=regenerate)
+
+    thumbnail_path = os.path.join(asset_root_path, "thumbnail.png")
+    if not os.path.exists(thumbnail_path) or regenerate:
+        render_thumbnail(os.path.join(asset_root_path, "config.toml"))
+
+    if config_file is not None:
+        client = Client(host=host, port=port)
+        gen_toml(config_file, client)
+
+if __name__ == "__main__":
+    asset_root_path = "your_asset_path"
+    host = "192.168.50.xx"
+    port = 8000
+    object_labeling(asset_root_path, host, port, regenerate=False)
+```
+
+```
+Note: The default asset directory is as follows：
+
+example_asset_root_path
+├── config.toml
+├── model
+│   ├── example.usd
+│   └── SubUSDs
+│       └── textures
+│           ├── example_1.jpg
+│           └── example_1.jpg
+└── thumbnail.png
+```
+
+# **🙋**Troubleshooting
+
+For any issues, questions, or contributions related to this package, please reach out to the maintainers:
+
+**Maintainers:**
+
+- **Junjie Jia**
+- **Herman Ye**
+
+# **📜**License
+
+```text
+Copyright (c) 2023-2024 Galbot. All Rights Reserved.
+
+This software contains confidential and proprietary information of Galbot, Inc.
+("Confidential Information"). You shall not disclose such Confidential Information
+and shall use it only in accordance with the terms of the license agreement you
+entered into with Galbot, Inc.
+UNAUTHORIZED COPYING, USE, OR DISTRIBUTION OF THIS SOFTWARE, OR ANY PORTION OR
+DERIVATIVE THEREOF, IS STRICTLY PROHIBITED. IF YOU HAVE RECEIVED THIS SOFTWARE IN
+ERROR, PLEASE NOTIFY GALBOT, INC. IMMEDIATELY AND DELETE IT FROM YOUR SYSTEM.
+```
