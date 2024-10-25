@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+stratpdf/__init__.py
+stratpdf/pdf2image.py
+stratpdf/pdf2text.py
+stratpdf.egg-info/PKG-INFO
+stratpdf.egg-info/SOURCES.txt
+stratpdf.egg-info/dependency_links.txt
+stratpdf.egg-info/top_level.txt
