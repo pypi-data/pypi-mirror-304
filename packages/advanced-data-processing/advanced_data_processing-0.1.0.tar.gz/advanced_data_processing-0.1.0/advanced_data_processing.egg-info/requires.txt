@@ -1,0 +1,10 @@
+pandas
+dask
+dask-ml
+scikit-learn
+nltk
+spacy
+gensim
+matplotlib
+seaborn
+imbalanced-learn

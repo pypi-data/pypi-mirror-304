@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+advanced_data_processing.egg-info/PKG-INFO
+advanced_data_processing.egg-info/SOURCES.txt
+advanced_data_processing.egg-info/dependency_links.txt
+advanced_data_processing.egg-info/entry_points.txt
+advanced_data_processing.egg-info/requires.txt
+advanced_data_processing.egg-info/top_level.txt
+tests/test_data_pipeline.py
