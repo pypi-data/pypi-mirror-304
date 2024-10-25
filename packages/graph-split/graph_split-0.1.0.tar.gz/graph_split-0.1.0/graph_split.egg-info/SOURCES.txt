@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+graph-split/__init__.py
+graph-split/split_script.py
+graph_split.egg-info/PKG-INFO
+graph_split.egg-info/SOURCES.txt
+graph_split.egg-info/dependency_links.txt
+graph_split.egg-info/top_level.txt
