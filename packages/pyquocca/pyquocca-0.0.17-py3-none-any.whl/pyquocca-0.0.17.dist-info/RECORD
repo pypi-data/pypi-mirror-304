@@ -1,0 +1,9 @@
+pyquocca/__init__.py,sha256=ELsqID-XwYhOdkoG5qN0UdutIfAGjMO_OLhjGn4si60,185
+pyquocca/flags.py,sha256=OnVeT5PXr36qSr2wvHXLCs351MC-zBZAi4C9Snkwcxk,1529
+pyquocca/gunicorn.py,sha256=8SJw67uxB2vN1D_j9O-6_E467Nx3PGhXBNegqSWtUII,2336
+pyquocca/header_utils.py,sha256=pWIg6qw0QCDuKQMaU1tCmINYOBpg7tYV3c6O5LNXCfs,2458
+pyquocca/mysql.py,sha256=LARPpgZpAT7PdwWBbquweaLCfjytTc_s9Ro4_llbddA,5293
+pyquocca/xssbot.py,sha256=GZh2djZJN4vGeQ3LREM__atpGidQ9tePIzp69D3rNDQ,2876
+pyquocca-0.0.17.dist-info/METADATA,sha256=8WPWHk1avZVoU3hWPzHKFEXNrBZv8BD-AVA3Z-3-UjE,1005
+pyquocca-0.0.17.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pyquocca-0.0.17.dist-info/RECORD,,
