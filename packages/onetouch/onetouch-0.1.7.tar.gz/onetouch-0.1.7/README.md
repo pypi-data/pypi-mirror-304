@@ -1,0 +1,189 @@
+# OneTouch 一键
+
+发布日期: 2024年10月24日
+
+版权所有: 17fine(个人)
+
+版本: 0.1.dev0
+
+# 前言
+
+本参考手册详细介绍了OneTouch中包含的函数、模块和对象，描述了它们是什么以及它们做什么。了解如何使用OneTouch。
+
+# 概述
+
+## 简介
+
+一款基于PyTorch、Pandas、Scikit-learn、Matplotlib、NumPy等库的简单便捷的Python自动化工具包，提供一键数据清洗、模型训练、模型评估、自动超参数调优和预测等功能。
+
+A simple and convenient Python automation toolkit based on libraries such as PyTorch, Pandas, Scikit-learn, Matplotlib, NumPy, etc., offering features like one-click data cleaning, model training, model evaluation, automatic hyperparameter tuning, and prediction.
+
+## 宗旨
+
+以极简之码，绘繁复之功。
+
+With minimalist code, depicting the intricate work.
+
+# **安装指南**
+
+## 默认安装
+
+```Perl
+pip install onetouch
+```
+
+## 指定版本安装
+
+```PowerShell
+pip install onetouch==0.1.5
+```
+
+## 安装依赖库
+
+```Plain Text
+pandas>=2.2.2
+numpy>=1.26.4
+seaborn>=0.12.2
+matplotlib>=3.7.2
+scikit-learn>=1.3.2
+tqdm>=4.66.1
+setuptools>=68.0.0
+torch>=2.1.0+cu121
+```
+
+## 卸载
+
+```PowerShell
+pip uninstall onetouch
+```
+
+# **快速入门**
+
+## 先决条件
+
+在阅读本教程之前，你应该了解一些Python的基础知识。如果你想复习一下，请回去看看[Python教程](https://docs.python.org/zh-cn/3/tutorial/)。
+
+## One2Three
+
+一键三连模块使用,集成数据清洗,模型训练,评估模型三大模块
+
+```Python
+import onetouch as ot
+
+filename = "Your FileName"
+
+data = ot.One2Three(None, None, filename)
+
+```
+
+# **功能参考**
+
+## onetouch
+
+### One2Three
+
+onetouch中, One2Three(df, label, filename)
+
+#### 参数
+
+- `df`: `pd.DataFrame`-`None`-`选`
+
+    通常是pandas处理过后的dataframe格式的数据
+
+    `df`与`filename`必填其中之一
+
+- `label`: `str`-`None`-`选`
+
+    表示用于模型训练的标签栏
+
+    默认为`df`最后一列
+
+- `filepath`: `str`-`None`-`选`
+
+    通常是原始数据的路径地址
+
+    `df`与`filename`必填其中之一
+
+    目前支持: `.csv`-`.xslx`
+
+#### 示例
+
+```Python
+import onetouch as ot
+
+filename = "Your FileName"
+
+data = ot.One2Three(None, None, filename)
+
+```
+
+#### 输出
+
+各项基本信息,不详细展开
+
+### One2Three.predict()
+
+onetouch中, One2Three.predict(x)
+
+#### 参数
+
+- `x`: `pd.DataFrame`-`必`
+
+    通常是pandas处理过后的dataframe格式的数据,不含标签值
+
+#### 示例
+
+```Python
+import onetouch as ot
+import pandas as pd
+
+df = pd.DataFrame(None, None, 'Your filepath')
+
+data = ot.One2Three(df)
+
+x = pd.dataframe([1,2,3]) # 你的数据
+
+print(data.predict(x))
+
+```
+
+#### 输出
+
+分类任务
+
+- `pred`: `str`类别标签
+
+- `confidence`: `float`置信度(0-1) 
+
+```PowerShell
+(pred, confidence)
+```
+
+回归任务
+
+- `pred`: `float`标签值
+
+```PowerShell
+pred
+```
+
+# **附录**
+
+[pytorch参考手册](https://pytorch.org/docs/main/)
+
+[numpy参考手册](https://www.numpy.org.cn/reference/)
+
+[pandas参考手册](https://pypandas.cn/docs/)
+
+[matplotlib参考手册](https://www.matplotlib.org.cn/contents/)
+
+[scikit-learn参考手册](https://scikit-learn.org/stable/api/index.html)
+
+# 致谢
+
+在此，我要特别感谢智谱清言对于OneTouch库的开发与构建所做出的巨大贡献。这款软件以其高效能和智能化特性，极大地简化了开发流程，提升了库的功能性和稳定性。智谱清言的强大指导性AI大模型,让OneTouch库的构建变得更加高效和可靠。我们对智谱清言所提供的支持表示衷心的感谢，并期待在未来的项目中继续利用这一强大工具，共同推动技术的发展。
+
+
+
+
+
