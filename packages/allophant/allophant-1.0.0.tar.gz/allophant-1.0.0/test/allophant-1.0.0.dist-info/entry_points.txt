@@ -1,0 +1,5 @@
+[console_scripts]
+allophant=allophant.run:main
+allophant-data=allophant.datasets.__main__:main
+allophant-features=allophant.phonetic_features:main
+allophant-error-rates=allophant.get_attribute_error_rates:main
