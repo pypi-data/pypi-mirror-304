@@ -1,0 +1,7 @@
+speech_collator/__init__.py,sha256=M4HQIh0-l0_MsVq7nBlk14McD9CiGrdA66SZZ5VrPRo,24184
+speech_collator/measures/__init__.py,sha256=UjQ-sFdLIiJSDIN55YX9avHdmKsoOlrMQvQT0P2bs8A,7779
+speech_collator/measures/snr.py,sha256=-7BRkqM2QD-mZNm-qiKa4eEdsiGK6S5E71WkNP7wtcE,2411
+speech_collator/measures/srmr.py,sha256=014iTC4zmTdgcCaX9e9QoHDf08OHrDk1rj2URw5ryos,2385
+speech_collator-0.1.19.dist-info/METADATA,sha256=Urs2zaEoR_D0zumGLeGVe9IDkilxMtt5_UQqOlw6YAc,530
+speech_collator-0.1.19.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+speech_collator-0.1.19.dist-info/RECORD,,
