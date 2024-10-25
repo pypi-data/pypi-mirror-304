@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: TurboTalk_VAI
+Version: 0.3
+Requires-Dist: SpeechRecognition
+Requires-Dist: pyttsx3
+Requires-Dist: colorama
