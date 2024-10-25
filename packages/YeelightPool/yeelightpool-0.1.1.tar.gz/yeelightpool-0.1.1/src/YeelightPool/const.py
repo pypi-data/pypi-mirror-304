@@ -1,0 +1,7 @@
+
+
+NAME = "YeelightPool"
+VERSION = "0.1.1"
+
+TIMEOUT_DISCOVERY = 10
+

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "YeelightPool"
+version = "0.1.1"
+dependencies = [
+    "paho-mqtt>=1.5.1",
+    "yeelight>=0.6.2",
+]
+authors = [
+    {name = "ftcid", email = "fernando.tor.c@gmail.com"}
+]
+description = "A package to integrate Yeelight bulbs and lamps with MQTT Broker."
+readme="README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]  # Fixed from [projects.urls]
+Homepage = "https://github.com/ftcid/yeelightpool"
+Issues = "https://github.com/ftcid/yeelightpool"
+
