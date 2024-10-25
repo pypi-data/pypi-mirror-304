@@ -1,0 +1,12 @@
+XMZ/__init__.py,sha256=vRv2dgpFQKTvmMcOiZ1LP3bVhCWg-0O3SlJ3io8Q8xA,67
+XMZ/HWNLP/__init__.py,sha256=jXWFGptrJxqfzMc_XoBjfVYScg1WluKOjiAISZ7O4Yo,218
+XMZ/HWNLP/auth_config.py,sha256=eKcEStWBu39Xc7BrZIseLI_WQdCKZfF0Q6yml1P4vUg,834
+XMZ/HWNLP/mt_service.py,sha256=7jwWKrY49jnaHE7Ri4UuOSJjf4It2Bh8G37vKmpZ0B8,4134
+XMZ/HWNLP/nlg_service.py,sha256=WQUODk73sFYvwjnYsxfo12xwnjiegAkcLX9xT94R2Og,3655
+XMZ/HWNLP/nlpf_service.py,sha256=wMBV4WF7AapVymwJsdKE_p68EaiM-YHy4NZsfO1rXGk,10214
+XMZ/HWNLP/nlu_service.py,sha256=9R-Ah2MYmnprKNINCDKxUiFrU0WJBOG72tiTvjD_nxM,7191
+XMZ-2.9.0.dist-info/LICENSE,sha256=I2WKiDBL7dLhQbbqEkHZaL9U8imrftsx1rQLf2Rrh8o,1090
+XMZ-2.9.0.dist-info/METADATA,sha256=h-5eEkmeOynoWhqv0LazDmbrl-LRLkpXnIDU4jXnPcg,1688
+XMZ-2.9.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+XMZ-2.9.0.dist-info/top_level.txt,sha256=5LIML4-YWepo76dmephMcyJYii4i5NTUSfDOOfQy5Ek,4
+XMZ-2.9.0.dist-info/RECORD,,
