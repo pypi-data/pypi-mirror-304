@@ -1,0 +1,6 @@
+torch>=2.0.0
+transformers>=4.45.2
+Pillow
+qwen-vl-utils
+accelerate>=0.21.0
+qwen-vl-utils>=0.0.8
