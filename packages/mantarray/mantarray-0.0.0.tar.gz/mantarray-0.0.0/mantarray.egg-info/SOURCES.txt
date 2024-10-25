@@ -1,0 +1,6 @@
+pyproject.toml
+mantarray/__init__.py
+mantarray.egg-info/PKG-INFO
+mantarray.egg-info/SOURCES.txt
+mantarray.egg-info/dependency_links.txt
+mantarray.egg-info/top_level.txt
