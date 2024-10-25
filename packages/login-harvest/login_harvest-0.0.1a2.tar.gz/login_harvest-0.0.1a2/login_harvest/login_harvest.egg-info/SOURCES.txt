@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+login_harvest/login_harvest.egg-info/PKG-INFO
+login_harvest/login_harvest.egg-info/SOURCES.txt
+login_harvest/login_harvest.egg-info/dependency_links.txt
+login_harvest/login_harvest.egg-info/requires.txt
+login_harvest/login_harvest.egg-info/top_level.txt
+tests/test_html_extractor.py
