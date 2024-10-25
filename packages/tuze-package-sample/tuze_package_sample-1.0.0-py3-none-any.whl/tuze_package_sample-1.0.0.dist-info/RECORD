@@ -1,0 +1,10 @@
+tuze_package_sample/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tuze_package_sample/col_package/__init__.py,sha256=5hukC5IqKnTbEWoInVAtn9xkEUqe-DVZgfdY1WooeEQ,21
+tuze_package_sample/col_package/col.py,sha256=thh9V1tFIy81tGDEBOYAk-TIVxwIytQafmbk7GhrXsY,28
+tuze_package_sample/str_package/__init__.py,sha256=d2MdaPqrCydcnTgm_J6yiGsXKuJ-xhlNOEYrfu_CIu8,20
+tuze_package_sample/str_package/str.py,sha256=bsIntEpMkZGHbp61KVc1FhqX5eDNv9AidNj5EmqmOuA,39
+tuze_package_sample-1.0.0.dist-info/LICENSE,sha256=BQhErHJUNl85hkCm_gJJds8OlfvzeM5ydEBkwSXjYtY,2157
+tuze_package_sample-1.0.0.dist-info/METADATA,sha256=iEVeQeE6goJo8iIrSUwLvB4oXxGzX3kma55kC8EjBqQ,903
+tuze_package_sample-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+tuze_package_sample-1.0.0.dist-info/top_level.txt,sha256=bwnqqoTymH38UvNRWDhza-OWXNB0ukWMnJkzyn0dPSE,20
+tuze_package_sample-1.0.0.dist-info/RECORD,,
