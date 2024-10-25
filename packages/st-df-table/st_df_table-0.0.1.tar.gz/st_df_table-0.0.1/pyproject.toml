@@ -1,0 +1,86 @@
+[project]
+name = "st-df-table"
+version = "0.0.0"
+[tool.poetry]
+name = "st-df-table"
+version = "0.0.1"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/mysiar-org/st-table"
+documentation = "https://github.com/mysiar-org/st-table"
+description = "Python data manipulation library"
+authors = ["Piotr Synowiec <psynowiec@gmail.com>"]
+maintainers = ["Piotr Synowiec <psynowiec@gmail.com>"]
+keywords = ["streamlit", "dataframe", "pandas"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "License :: OSI Approved :: MIT License",
+]
+include = [
+    "LICENSE",
+    "CHANGELOG.md"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/mysiar-org/st-table/issues"
+
+[tool.poetry.dependencies]
+python = ">3.7"
+pandas = "*"
+black = "*"
+flake8 = "*"
+pyproject-flake8 = "*"
+poetry = "*"
+
+
+[project.urls]
+documentation = "https://github.com/mysiar-org/st-table"
+repository = "https://github.com/mysiar-org/st-table"
+issues = "https://github.com/mysiar-org/st-table/issues"
+
+
+[tool.poetry.extras]
+all = [
+    "streamlit",
+    "pandas"
+]
+dev = [
+    "black",
+    "flake8",
+    "pyproject-flake8",
+    "pytest",
+    "pytest-cov",
+    "poetry",
+]
+
+
+[tool.flake8]
+count = "true"
+exclude = [
+    ".git",
+    ".dev",
+    ".streamlit",
+    "__pycache__",
+    "venv",
+    "var",
+]
+max-line-length = 120
+line-length = 120
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | venv
+  | var
+  | dpt_env
+  | dist
+)/
+'''
