@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: dlu_voice_transcriber
+Version: 0.2.2
+Summary: A multilingual voice recording and transcription tool with German and English support
+Author-email: Dirk Ulbricht <dirk.ulbricht@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/dullibri/dlu_voice_transcriber
+Project-URL: Bug Tracker, https://github.com/dullibri/dlu_voice_transcriber/issues
+Project-URL: Documentation, https://github.com/dullibri/dlu_voice_transcriber#readme
+Project-URL: Source Code, https://github.com/dullibri/dlu_voice_transcriber
+Project-URL: Changelog, https://github.com/dullibri/dlu_voice_transcriber/blob/main/CHANGELOG.md
+Keywords: audio recording,speech recognition,transcription,german transcription,voice to text,multilingual,audio processing
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Multimedia :: Sound/Audio :: Capture/Recording
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Requires-Python: <3.12,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyaudio >=0.2.14
+Requires-Dist: SpeechRecognition >=3.11.0
+
+# DLU Voice Transcriber
+
+A Python tool for recording audio and transcribing it to text in multiple languages (English and German).
+
+## Installation
+
+```bash
+pip install dlu_voice_transcriber
+```
+
+## Usage
+
+List available audio devices:
+```bash
+dlu_transcribe --list-devices
+```
+
+Record and transcribe (replace X with your device number):
+```bash
+dlu_transcribe --device X --duration 5 --output my_recording
+```
+
+Example:
+```bash
+# List available devices
+dlu_transcribe --list-devices
+
+# Record for 10 seconds using device 2
+dlu_transcribe --device 2 --duration 10 --output test_recording
+```
+
+## Features
+
+- Record audio from any input device
+- Save recordings as WAV files
+- Transcribe audio to text in English and German
+- Support for different audio devices
+- Progress monitoring during recording
+
+## Requirements
+
+- Python 3.8 or higher
+- Working microphone
+- For Linux users: `sudo apt-get install python3-pyaudio`
+- For macOS users: `brew install portaudio`
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
