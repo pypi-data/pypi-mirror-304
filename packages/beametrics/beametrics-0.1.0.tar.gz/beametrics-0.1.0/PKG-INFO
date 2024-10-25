@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: beametrics
+Version: 0.1.0
+Summary: A streaming pipeline that transforms PubSub messages into metrics using Apache Beam
+License: MIT
+Keywords: apache beam,streaming
+Author: kesompochy
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: apache-beam[gcp] (>=2.60.0,<3.0.0)
+Requires-Dist: google-cloud-monitoring (>=2.22.2,<3.0.0)
+Requires-Dist: protobuf (>=4.21.6)
+Requires-Dist: setuptools (>=75.2.0,<76.0.0)
+Description-Content-Type: text/markdown
+
+# Beametrics
+
+Beametrics is a streaming tool for transforming logs to be metrics.
+
