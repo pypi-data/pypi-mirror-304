@@ -1,0 +1,188 @@
+import json
+import logging
+import time
+import requests
+from datetime import datetime
+
+from firestart_utils.utils import get_runtime
+
+CRITICAL = 50
+ERROR = 40
+WARNING = 30
+INFO = 20
+DEBUG = 10
+NOTSET = 0
+METRIC_URL = "https://api.datadoghq.eu/api/v2/series"
+LOG_URL = "https://http-intake.logs.datadoghq.eu/api/v2/logs"
+
+nameToLevel = {
+        'CRITICAL': CRITICAL,
+        'ERROR': ERROR,
+        'WARNING': WARNING,
+        'INFO': INFO,
+        'DEBUG': DEBUG,
+        'NOTSET': NOTSET,
+}
+
+
+class Logger:
+    def __init__(self, dd_api_key, dd_customer, environment, workspace_name, level):
+        self.dd_api_key = dd_api_key
+        self.dd_customer = dd_customer
+        self.environment = environment
+        self.workspace_name = workspace_name
+        self.level = self.checkLevel(level)
+
+    def debug(self, source, message):
+        logging.debug(f"Debug: {message}")
+        self.handleLogging(self.is_extern_logging("DEBUG", source, message))
+
+    def info(self, source, message):
+        logging.info(f"Info: {message}")
+        self.handleLogging(self.is_extern_logging("INFO", source, message))
+
+    def warning(self, source,  message):
+        logging.warning(f"Warning: {message}")
+        self.handleLogging(self.is_extern_logging("WARNING", source, message))
+
+    def error(self, source, message):
+        logging.error(f"Error: {message}")
+        self.handleLogging(self.is_extern_logging("ERROR", source, message))
+
+    def critical(self, source, message):
+        logging.critical(f"Critical: {message}")
+        self.handleLogging(self.is_extern_logging("CRITICAL", source, message))
+
+    def failed(self, source):
+        body = self.generate_metric_log_body(source, False)
+        self.send_log(body, METRIC_URL)
+
+    def success(self, source):
+        body = self.generate_metric_log_body(source, True)
+        self.send_log(body, METRIC_URL)
+
+
+    def generate_log_body(self, level, source, message):
+        return {
+            "ddsource": f'Horizon - {self.workspace_name}',
+            "ddtags": f'env:{self.environment},customer:{self.dd_customer}',
+            "hostname": f'Fabric - {self.dd_customer}',
+            "message": f'{level}: {message}',
+            "service": f'{source}',
+            "status": f'{level}'
+        }
+
+    def generate_metric_log_body(self, source, successfull):
+        metric = "azure.datafactory_factories.pipeline_succeeded_runs" if successfull else "azure.datafactory_factories.pipeline_failed_runs"
+        return {
+            "series": [
+                {
+                    "metric": metric,
+                    "type": 1,
+                    "points": [
+                        {
+                            "timestamp": f'{int(time.time())}',
+                            "value": 1
+                        }
+                    ],
+                    "tags": [
+                       "customer:{0}".format(self.dd_customer),
+                        "environment:{0}".format(self.environment),
+                        "name:{0}".format(source),
+                        "resource_group:{0}".format(self.workspace_name),
+                    ]
+                }
+            ]
+        }
+
+    def is_extern_logging(self, level, source, message):
+        if (self.level <= nameToLevel[level]):
+            return self.generate_log_body(level, source, message);
+        else:
+            return None
+
+    def send_log(self, body, url):
+        headers = {"Content-Type": "application/json",
+                   "DD-API-KEY": self.dd_api_key,
+                   "Accept": "application/json"}
+        json_data = json.dumps(body)
+        response = requests.post(url, data=json_data, headers=headers)
+        logging.info(f"Status Code: {response.status_code}")
+        logging.info(f"Response Body: {response.text}")
+
+    def setLevel(self, level):
+        self.level = self.checkLevel(level)
+
+    def checkLevel(self, level):
+        if isinstance(level, int):
+            rv = level
+        elif str(level) == level:
+            if level not in nameToLevel:
+                raise ValueError("Unknown level: %r" % level)
+            rv = nameToLevel[level]
+        else:
+            raise TypeError("Level not an integer or a valid string: %r"
+                            % (level,))
+        return rv
+
+    def handleLogging(self, body):
+        if body:
+            self.send_log(body, LOG_URL)
+        else:
+            logging.info("No log sent")
+
+
+class LakeHouseLogger:
+
+    def __init__(self, environment: str, location: str):
+        self.environment = environment
+        self.location = location
+        self.logger_spark_structure = {
+              "notebook_name"           : StringType()
+            , "notebook_run_uuid"       : StringType()
+            , "parent_notebook_run_uuid": StringType()
+            , "environment"             : StringType()
+            , "timestamp"               : TimestampType()
+            , "status"                  : StringType()
+            , "level"                   : StringType()
+            , "message"                 : StringType()
+        }
+
+    def debug(self, message: str, status: str, parent_notebook_run_uuid=None):
+        self.__log_to_lakehouse__("DEBUG", status, message, parent_notebook_run_uuid)
+
+    def info(self, message: str, status: str, parent_notebook_run_uuid=None):
+        self.__log_to_lakehouse__("INFO", status, message, parent_notebook_run_uuid)
+
+    def warning(self, message: str, status: str, parent_notebook_run_uuid=None):
+        self.__log_to_lakehouse__("WARNING", status, message, parent_notebook_run_uuid)
+
+    def error(self, message: str, status: str, parent_notebook_run_uuid=None):
+        self.__log_to_lakehouse__("ERROR", status, message, parent_notebook_run_uuid)
+
+    def critical(self, message: str, status: str, parent_notebook_run_uuid=None):
+        self.__log_to_lakehouse__("CRITICAL", status, message, parent_notebook_run_uuid)
+
+    def __log_to_lakehouse__(self, level: str, status: str, message: str, parent_notebook_run_uuid: str | None):
+        parameters = {
+              "notebook_name"           : get_runtime().current_workspace_name()
+            , "notebook_run_uuid"       : get_runtime().current_notebook_id() 
+            , "parent_notebook_run_uuid": parent_notebook_run_uuid
+            , "environment"             : self.environment
+            , "timestamp"               : datetime.utcnow()
+            , "status"                  : status
+            , "level"                   : level
+            , "message"                 : message
+            }
+        df_logging_row = spark.createDataFrame([parameters], self.logger_spark_structure)
+
+        if self.debug:
+            display(df_logging_row)
+            print(self.location)
+        else:
+            df_logging_row.write            \
+                .mode("append")             \
+                .format("delta")            \
+                .option("path", self.location)  \
+                .save()
+
