@@ -1,0 +1,8 @@
+managecor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+managecor/cli.py,sha256=pz7AHK5WLIUzw79RMIintWKwJF1wgMcyPZRFgDIyTqE,10132
+managecor/docker_utils.py,sha256=BXeRsG8SHs6_VRZpnf1-7Kd4uQjeitamvWJHZaxpReo,5758
+managecor-0.2.0.dist-info/LICENSE,sha256=pidQ-tQSyeL3uYqRQzyLeb3BA5zGdNPqj4YOMAOA6l8,1072
+managecor-0.2.0.dist-info/METADATA,sha256=upQ1iUiOCpgV9J2HA8FR_eAMkYcXvwV-GtYyvD7FNRs,4236
+managecor-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+managecor-0.2.0.dist-info/entry_points.txt,sha256=zWMYkcJVYlg5N2icBXQSpH8v9cj0XRaA8NE2QCJNcek,47
+managecor-0.2.0.dist-info/RECORD,,
