@@ -1,0 +1,2 @@
+[console_scripts]
+gitlab_downloader = gitlab_downloader.__init__:main
