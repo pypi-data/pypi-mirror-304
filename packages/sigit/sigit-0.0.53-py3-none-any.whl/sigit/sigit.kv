@@ -1,0 +1,205 @@
+#: import Window kivy.core.window.Window
+<MainWidget>:
+    id: main_widget
+    orientation: 'vertical'
+    commit_list: _commit_list
+    commit_details: _commit_details
+    diff_scroll: _diff_scroll
+    tree_box: _tree_box
+    spacing: 2
+
+    RecycleView:
+        id: _commit_list
+        commits: _commits
+        viewclass: 'CommitLine'
+        SelectableRecycleBoxLayout:
+            id: _commits
+            default_size: None, dp(30)
+            default_size_hint: 1, None
+            size_hint_y: None
+            height: self.minimum_height
+            orientation: 'vertical'
+            multiselect: False  # Disable multiselect
+            touch_multiselect: False  # Disable multiselect on touch
+    Splitter:
+        sizable_from: 'top'
+        size_hint_y: 1
+        min_size: 160  # Set a minimum size for the splitter
+        max_size: Window.height * 0.9  # Dynamically set max_size based on 80% of the window height
+        strip_size: '8dp'
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                size_hint_y: None
+                height: 30
+                canvas:
+                    Color:
+                        rgba: 1,1,1,.2
+                    Line:
+                        points: self.x,self.top,self.right,self.top
+                    Line:
+                        points: self.x,self.y,self.right,self.y 
+                        
+                Widget: # widget to help with positioning 
+                BoxLayout:
+                    ToggleButton:
+                        id: _patch_toggle
+                        text: 'Patch'
+                        size_hint_x: None
+                        width: 60
+                        state: 'down'
+                        on_state: root.is_patch_view = True if self.state == 'down' else False
+                        on_state: _tree_toggle.state = 'normal' if self.state == 'down' else 'down'
+                        
+                    ToggleButton:
+                        id: _tree_toggle
+                        text: 'Tree'
+                        size_hint_x: None
+                        width: 60
+                        on_state: root.is_patch_view = False if self.state == 'down' else True
+                        on_state: _patch_toggle.state = 'normal' if self.state == 'down' else 'down'
+
+
+            BoxLayout:
+                BoxLayout:
+                    orientation: 'vertical'
+                    id: _commit_details
+                    branch_lbl: _branch_lbl
+                    parent_child_lbl: _parent_child_lbl
+                    message_lbl: _message_lbl
+                    spacing: dp(4)
+                    CommitDetailLabel:
+                        id: _parent_child_lbl
+                        on_ref_press: root.on_ref_press(self, args[1])
+                    CommitDetailLabel:
+                        id: _branch_lbl
+                        on_ref_press: root.on_branch_click(self, args[1])
+                    CommitDetailLabel:
+                        id: _message_lbl
+                        padding: [4, 0, 0, 4]    
+                    CodeInput:
+                        id: _diff_scroll
+                        size_hint: 1, 1
+                        font_name: "DejaVuSansMono" # Mono space font
+                        font_size: '12sp'
+                        readonly: True
+                        cursor_blink: False
+                        do_wrap: False
+                        use_bubble: True
+                        background_color: (1,1,1,.08)
+                        foreground_color: (1,1,1,1)
+                        on_text: _horizontal_scroll_bar.update_width(self)
+                    BoxLayout:
+                        orientation: 'vertical'
+                        size_hint_y: None
+                        height: dp(10)
+                        DragBarHorizontal:
+                            id: _horizontal_scroll_bar
+                            on_relative_x: _diff_scroll.scroll_x = self.relative_x # This is veryd long commet line for testing my custom dragbar because codeinput does not have one for some reason
+                
+                Splitter:
+                    horizontal: False
+                    size_hint_y: 1
+                    min_size: 160  # Set a minimum size for the splitter
+                    max_size: Window.width * 0.9  # Dynamically set max_size based on 80% of the window height
+                    strip_size: '6dp'
+                    ScrollView:
+                        effect_cls: 'ScrollEffect'
+                        canvas: 
+                            Color:
+                                rgba: 1,1,1,.2
+                            Line:
+                                points: self.x,self.top,self.x,self.y
+                        BoxLayout:
+                            id: _tree_box
+                            padding: [6,0,0,0]
+                            orientation: 'vertical'
+                            size_hint: 1, None
+                            height: self.minimum_height
+
+<CommitDetailLabel@Label>:
+    font_size: '12sp'
+    size_hint: 1, None
+    halign: 'left'
+    valign: 'top'
+    height: self.texture_size[1]
+    padding: [4, 0, 0, 0]    
+    markup: True    
+    text_size: self.width, None  # This will enable wrapping and create new lines when needed
+    shorten: False
+
+<CommitLine>:
+    size_hint_y: None
+    height: 30
+    spacing: 2
+    canvas:
+        Color:
+            rgb: (.12,.12,.12) if self.selected else (0,0,0)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    CommitLineText:
+        id: _commit_graph
+        size_hint_x: None
+        text: root.graph
+        bold: True
+        valign: 'center'
+        color: (1,1,1,.87) if not root.marked else (0.68, 0.85, 0.9, 1)
+        text_size: None, None
+        padding: [6,0,6,0]
+        width: 30
+        font_size: '14sp'
+        #width: root.graph_lenght * 10 #TODO whats a good width per char?
+
+    CommitLineText:
+        bold: root.highlighted
+        color: (1,1,1,.87) if not root.marked else (0.68, 0.85, 0.9, 1)
+        text: root.commit_hash
+        size_hint_max_x: 400
+    CommitLineText:
+        bold: root.highlighted
+        color: (1,1,1,.87) if not root.marked else (0.68, 0.85, 0.9, 1)
+        text: root.message
+    CommitLineText:
+        bold: root.highlighted
+        color: (1,1,1,.87) if not root.marked else (0.68, 0.85, 0.9, 1)
+        text: root.author
+        size_hint_max_x: 400
+    CommitLineText:
+        bold: root.highlighted
+        color: (1,1,1,.87) if not root.marked else (0.68, 0.85, 0.9, 1)
+        text: root.date
+        size_hint_max_x: 220
+
+<CommitLineText@Label>:
+    markup: True
+    multiline: False
+    text_size: self.size
+    halign: 'left'
+    valign: 'middle'
+    font_size: 12
+    padding:   [4,0,0,0]
+    
+<FileLabel>:
+    size_hint_y: None
+    height: 30
+    text: self.file
+    halign: 'left'
+    valign: 'middle'
+    text_size: self.size
+    canvas.before: 
+        Color:
+            rgb: self.bg_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<TreeLabel>:
+    size_hint_y: None
+    height: 30
+
+    text: root.file
+    halign: 'left'
+    valign: 'middle'
+    text_size: self.size
+    color: (1,1,1,1)
