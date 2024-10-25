@@ -1,0 +1,8 @@
+cz_changeup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cz_changeup/cz_changeup.py,sha256=mQmnCoI8TT-1B3049J9qBSKzn5EyYQT1uiWFKNjuZgo,3561
+cz_changeup/templates/CHANGELOG.md.j2,sha256=oNKg8MAqHzRucoCznpnZTfag-n3in75mtoh2V9tDzeA,399
+cz_changeup-1.0.1.dist-info/METADATA,sha256=oGeyoM_5LnVNwKGS2TrbdqXqsKZmN8rS-ysmPibUhDU,4462
+cz_changeup-1.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+cz_changeup-1.0.1.dist-info/entry_points.txt,sha256=FYnn-nUbKR4UAvVsRtRRg-k5Ovju68aee4DUE-9uKrM,69
+cz_changeup-1.0.1.dist-info/licenses/LICENSE,sha256=8qKbrmVqFI1HdBa0CTtYHQgS2ygFM_KUPk_oiUeKCYw,1067
+cz_changeup-1.0.1.dist-info/RECORD,,
