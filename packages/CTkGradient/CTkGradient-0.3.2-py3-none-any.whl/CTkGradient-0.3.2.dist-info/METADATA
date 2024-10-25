@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: CTkGradient
+Version: 0.3.2
+Summary: Create a gradient frame for customtkinter.
+Home-page: https://github.com/TrollSkull/CTkGradient
+Author: TrollSkull
+Author-email: <trollskull.contact@gmail.com>
+License: MIT
+Keywords: python,tkinter,customtkinter,gradient
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: customtkinter
+
+<h1 align="center">Create a gradient frame for your customtkinter applications.</h1>
+
+<div align="center">
+    <a align="center" href="https://pypi.org/project/ctkgradient">
+        <img src="https://img.shields.io/pypi/v/ctkgradient" alt="pypi">
+    </a>
+    <a align="center" href="https://pepy.tech/project/ctkgradient">
+        <img src="https://static.pepy.tech/badge/ctkgradient" alt="Downloads">
+    </a>
+    <img src="https://img.shields.io/powershellgallery/p/Pester?color=blue" alt="Platform">
+</div>
+
+
+## CTkGradient
+CTkGradient is a fork of [GradientFrame-Tkinter](https://github.com/JeanExtreme002/GradientFrame-Tkinter), it is a python module to create customtkinter frames with a gradient background color of your choice, you can choose between a vertical or horizontal gradient, among other options.
+
+> [!NOTE]
+> This project is in alpha state, so you may encounter bugs through its use, which I would recommend reporting in issues. I'm thinking about a few features with gradients like buttons and other widgets, so stay tuned!
+
+## How to use it?
+Install the module using `pip` (or `pip3`) by typing the next command on console...
+```python
+pip install CTkGradient
+```
+
+Then import it and use it, here is an example:
+```python
+# Import customtkinter and CTkGradient
+import customtkinter as ctk
+import CTkGradient as ctkg
+
+# Initialize CustomTkinter
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
+
+root = ctk.CTk()
+
+# Create a GradientFrame with custom colors and direction
+gradient_frame = ctkg.GradientFrame(
+    master = root,
+    colors = ("#ec0075", "#ffd366"),
+    direction = "vertical",
+    corner_radius = 10,
+    height = 600,
+    width = 800
+)
+
+gradient_frame.pack(fill = "both", expand = True)
+
+root.mainloop()
+```
