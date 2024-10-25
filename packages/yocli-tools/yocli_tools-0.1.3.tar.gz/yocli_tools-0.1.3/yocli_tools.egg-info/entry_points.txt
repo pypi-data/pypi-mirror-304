@@ -1,0 +1,2 @@
+[console_scripts]
+yocli = yocli.main:main
