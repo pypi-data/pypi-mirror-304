@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+examples/__init__.py
+tests/__init__.py
+voice_recorder.egg-info/PKG-INFO
+voice_recorder.egg-info/SOURCES.txt
+voice_recorder.egg-info/dependency_links.txt
+voice_recorder.egg-info/requires.txt
+voice_recorder.egg-info/top_level.txt
