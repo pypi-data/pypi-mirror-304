@@ -1,0 +1,10 @@
+chi2sim/__init__.py,sha256=Z40Q6poI39Zn0uERneJ3JfNwLt-57p5gbQVxyKL6rbU,96
+chi2sim/chi2_cont_sim.c,sha256=Irj7qmJVjwIWuKD7gi3HSIVBwSw70CQppNIGHnwPTIE,414843
+chi2sim/chi2_cont_sim.cp311-win_amd64.pyd,sha256=kgwXz7UOIBVe5SVtHzmRpPIlINuN-7x7XmEvu52mThg,59392
+chi2sim/chi2_cont_sim.pyx,sha256=ms68fblQnshkhf4Qpwi4TIPkNMVUzEVVZt7FGI-T_wc,2102
+chi2sim/src/chi_square_mc.c,sha256=zfw5JWcUEt4joVdmjeSPzKhg1fmZgJpVZq18iEHIdp4,6853
+chi2sim/src/chi_square_mc.h,sha256=63gTCXi-otPqQan83WhUgfwYGkNWnqXxilPATczdsvE,414
+chi2sim-0.1.0.dist-info/METADATA,sha256=jXVinzZPZpQnWRyKmeFjzkb7b7a3jIAH6NX6zxnseUY,1505
+chi2sim-0.1.0.dist-info/WHEEL,sha256=tE2EWZPEv-G0fjAlUUz7IGM64246YKD9fpv4HcsDMkk,101
+chi2sim-0.1.0.dist-info/top_level.txt,sha256=JIhTlRqBN4-k_EUOyelOFV-SEvZiUMrNGBzLH_I9Ylg,8
+chi2sim-0.1.0.dist-info/RECORD,,
