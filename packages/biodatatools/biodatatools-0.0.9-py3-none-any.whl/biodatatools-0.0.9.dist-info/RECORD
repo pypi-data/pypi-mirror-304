@@ -1,0 +1,12 @@
+biodatatools/__init__.py,sha256=OIKmfxH7zbdpapiW4x4dGpnigyeha_PVX00cLmsM-Eg,143554
+biodatatools/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biodatatools/utils/alignment.py,sha256=_W9L71xHmh4nKmkU9SmNyX7ClHrbyYkXfdyg68GsomM,275
+biodatatools/utils/common.py,sha256=PsIRG00DHb6xvv_-38q7VlgpPUpLqX7oEM7ZFPhwOeA,695
+biodatatools/utils/geneannotation.py,sha256=Ob-TgQt8Aw8xj5RnY9UqYH0NzxHuvsYurNUjinky8dQ,6804
+biodatatools/utils/genomic.py,sha256=yoJgPKyCpw14_TmZnFBQxEFm9cAa68MM1g9Li9xCqXI,2673
+biodatatools/utils/sequence.py,sha256=8BpY28JmJxEgQAiraLIB4xUuqFx6skLMR6G80uGIowQ,24931
+biodatatools-0.0.9.dist-info/METADATA,sha256=oHlozBJUaiuOT2le18XKXLO224jsrcjnLPJiFN6DY0g,48439
+biodatatools-0.0.9.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+biodatatools-0.0.9.dist-info/entry_points.txt,sha256=JLaVqmMsCEiP6xsvtxOx_h_vr0NbespWkQSTLY8KRIg,51
+biodatatools-0.0.9.dist-info/top_level.txt,sha256=eIPwcPr28HdySWvgIU3OarRUjYkiReiq19o64bkN6fk,13
+biodatatools-0.0.9.dist-info/RECORD,,
