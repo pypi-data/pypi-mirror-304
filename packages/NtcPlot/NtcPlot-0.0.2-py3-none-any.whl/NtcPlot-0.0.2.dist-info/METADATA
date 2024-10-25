@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: NtcPlot
+Version: 0.0.2
+Summary: Package of NtcPlot
+Author-email: Alex Papadopoulos <papadopoulos.al@outlook.com>
+Project-URL: Homepage, https://pypi.org/project/ntcplot/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyQt6 >=6.7.0
+Requires-Dist: numpy >=1.26.0
+Requires-Dist: netCDF4 >=1.7.0
+Requires-Dist: matplotlib >=3.8.0
+Requires-Dist: basemap >=1.4.1
+
+# Welcome to NtcPlot!  
+  
+NtcPlot plots geo-referenced and other arrays from netCDF files. It's a single person's effort to provide a simple tool for data visualisation. Far from being perfect, it's a work in progress. Feel free to download the files and adapt them to your needs.   
+  
+NtcPlot is a cross-platform application that runs on Windows, Linux and other desktop computers. NtcPlot only requires that your computer has a compatible  **Python 3.12** (or later version) installed.  
+  
+  
+# Version  
+  
+The current version of NtcPlot is 0.0.2, released on 24/10/2024.  
+  
+## Applications  
+  
+- Make a line plot, with multiple lines if needed.   
+- Make a scatter plot, with multiple datasets if needed.   
+- Plot a map with 2D data.   
+- Usage of NumPy to edit the visualised data.   
+   
+ Video Tutorial 
+
+ [Simple Usage](https://youtu.be/9VteB3ffwdw)    
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=9VteB3ffwdw
+" target="_blank"><img src="http://img.youtube.com/vi/9VteB3ffwdw/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+
+## Installation Tips  
+
+I would recommend using a virtual environment to test dependencies. For this, the user car open a terminal and run the following command. 
+```
+python -m venv ntcplot_env
+```
+
+
+If on Windows, the user will need to have permission to run scripts. The following command will give permission for the running session.
+```
+# Windows user only
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+```
+Activate virtual environment (Unix)
+```
+cd ntcplot_env
+.\Scripts\activate
+```
+Activate virtual environment (Windows)
+```
+cd ntcplot_env
+.\Scripts\Activate.ps1
+```
+Install  software 
+```
+pip install NtcPlot
+```
+
+If the following error occurs, do not falter. 
+``` 
+INFO: pip is looking at multiple versions of ntcplot to determine which version is compatible with other requirements. This could take a while.
+ERROR: Could not find a version that satisfies the requirement PyQt6>=6.7 (from ntcplot) (from versions: none)
+ERROR: No matching distribution found for PyQt6>=6.7
+``` 
+The installation script has determined that at least one dependency is missing or is of an older version. The following dependencies should be installed. For more proficient users, the git repository contains the requirements.txt
+``` 
+# Optional
+pip install PyQt6==6.7
+pip install numpy==1.26
+pip install netCDF4==1.7
+pip install matplotlib==3.8
+pip install basemap==1.4.1
+``` 
+
+Launch NtcPlot
+``` 
+ntcplot /your_path/file.nc
+``` 
+
+  
+## Contact  
+  
+The author will soon share contact details.
