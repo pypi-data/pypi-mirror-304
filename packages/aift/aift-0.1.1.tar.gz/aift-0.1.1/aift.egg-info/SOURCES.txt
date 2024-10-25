@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+aift/__init__.py
+aift.egg-info/PKG-INFO
+aift.egg-info/SOURCES.txt
+aift.egg-info/dependency_links.txt
+aift.egg-info/requires.txt
+aift.egg-info/top_level.txt
