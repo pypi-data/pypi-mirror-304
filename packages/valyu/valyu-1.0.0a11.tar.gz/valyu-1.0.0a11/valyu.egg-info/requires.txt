@@ -1,0 +1,8 @@
+requests>=2.31.0
+tqdm>=4.66.4
+python-dotenv>=1.0.1
+boto3>=1.39.0
+pydantic>=2.5.2
+scikit-learn>=1.4.2
+pandas>=2.2.2
+numpy>=1.26.4
