@@ -1,0 +1,3 @@
+ms-recognizers-text
+regex
+grapheme
