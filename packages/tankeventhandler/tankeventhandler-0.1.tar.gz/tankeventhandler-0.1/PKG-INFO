@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tankeventhandler
+Version: 0.1
+Summary: The EventScheduler library allows users to schedule events to be triggered
+Author: Bhaskar Tank
+Author-email: tankbhaskar@gmail.com
+License-File: LICENCE
+Requires-Dist: some_dependency
