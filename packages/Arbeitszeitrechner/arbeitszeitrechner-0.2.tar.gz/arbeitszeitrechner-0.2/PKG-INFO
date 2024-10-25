@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: Arbeitszeitrechner
+Version: 0.2
+Summary: Arbeitszeitrechner
+Author: Julian Egger, Marc Liesch
+Author-email: julian.elias.egger@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: customtkinter
