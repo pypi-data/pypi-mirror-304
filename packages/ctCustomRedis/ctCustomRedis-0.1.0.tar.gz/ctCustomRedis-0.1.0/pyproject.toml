@@ -1,0 +1,14 @@
+[project]
+name = "sample_edis_project_for_test"
+version = "0.0.1"
+authors = [
+  { name="Mohan Gude", email="mohangude5@gmail.com" },
+]
+description = "Sample Redis project for test"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
