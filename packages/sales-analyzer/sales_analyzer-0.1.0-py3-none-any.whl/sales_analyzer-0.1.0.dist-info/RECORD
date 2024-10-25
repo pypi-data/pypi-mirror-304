@@ -1,0 +1,8 @@
+sales_analyzer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sales_analyzer/analyze.py,sha256=Ejqfe0Zj8wbaXxz6oYqhjIwukse8P04NFPSp4AkEFlQ,375
+sales_analyzer/cli.py,sha256=fsIwuhLtIXTKGTvtCdzEb7CGONHWcsb_oI5vzIVSNgk,485
+sales_analyzer-0.1.0.dist-info/METADATA,sha256=m25u2M1VO7FJGTyb4KynbNBnNV3YvjgJtkghkKVPM8g,2059
+sales_analyzer-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sales_analyzer-0.1.0.dist-info/entry_points.txt,sha256=K23wPT116Ouq3H6NgnAHMl2rNI4l7wPtdKsgpusfSqk,59
+sales_analyzer-0.1.0.dist-info/top_level.txt,sha256=seFuEzdSExDHJSl5eOcMi8dx960L25j9y3Y6jwUJ-6g,15
+sales_analyzer-0.1.0.dist-info/RECORD,,
