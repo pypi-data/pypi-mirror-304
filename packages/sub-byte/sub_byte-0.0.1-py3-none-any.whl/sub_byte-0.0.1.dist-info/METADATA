@@ -1,0 +1,58 @@
+Metadata-Version: 2.3
+Name: sub-byte
+Version: 0.0.1
+Summary: Encodes and decodes sequences of integers with known widths, and sequences of symbols equivalent to integers under some mapping. 
+Author-email: James Parrott <james.parrott@proton.me>
+License: MIT License
+        
+        Copyright (c) 2024-present James Parrott
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+License-File: LICENSE.md
+Keywords: Encoders,Serialization
+Classifier: Programming Language :: Python
+Requires-Python: >=3.9
+Requires-Dist: more-itertools
+Provides-Extra: test
+Requires-Dist: hypothesis; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Sub_Byte
+
+Encodes and decodes sequences of integers with known widths (and sequences of symbols equivalent to integers under some mapping).
+
+## Overview
+
+Sub_byte crams as many symbols into each byte as possible using simple bit packing, crossing byte 
+boundaries if necessary, utilising a known fixed bit width for each symbol.  These bit widths and the 
+total number of symbols, must be associated with the encoded data as meta data.
+
+## Implementations
+
+### Python
+Calculate a cache of data in Python.
+
+### Javascript
+Decode a cache of data in Javascript, even in browser.
+
+## Alternatives
+
+### A bespoke protocol using custom width integer types
+
+Up to 8 u1s (bits), up to 4 u2s, or up to 2 u3s or u4s per byte.
+Each developer must create their own implementation and tests.
+Interoperability between different private implementations is untestable.
+
+### Protocol buffers
+
+Encodes max symbol per byte. Variable byte encoding - uses continuation bits.
+
+### Zipping (data compression)
+
+- Exploits statistical distributions (e.g. "E" being more common in English text than "Q") and patterns.
+- Unstructured until the end user unzips the archive.
