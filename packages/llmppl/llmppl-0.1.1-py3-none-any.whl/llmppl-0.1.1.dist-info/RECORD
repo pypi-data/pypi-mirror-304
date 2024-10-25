@@ -1,0 +1,12 @@
+llmppl/__init__.py,sha256=HAd_SDa4LRjru62Uf-x43HU0kMRYlypAG7gosJwSCpE,211
+llmppl/core.py,sha256=W5Rv_-sWPNcVzuMIzm5fF4sfBPByVdd5JcsFnavVQn8,7533
+llmppl/gpt35.py,sha256=F9gcNPq8zMW-0NfIT1YtT1hFVpPu9GVLBJ8scFfdDa4,3407
+llmppl/llama2.py,sha256=ipGNhYa4iGst3FivFKRSH8BsDfZ95N5O5EoCc9kU_zo,2987
+llmppl/mamba.py,sha256=YhfK-_Co_uEyfAy8tSgYC0ciidWMcnndUrOMQfOfUMs,4055
+llmppl/mistral.py,sha256=u9Ad9Wjhx7UKcoJg38dyyPGIUhGdO_Y64dzn1VD0130,2427
+llmppl/rwkv.py,sha256=C2d3ZU2leTVdui7RRAlkkzr5mZNk3bF1IxaYgJIXLeU,2794
+llmppl-0.1.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llmppl-0.1.1.dist-info/METADATA,sha256=S5d57mrzIymZKwB6HRbgilkjbUkwDeWfi3x2lp1sVOI,4608
+llmppl-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+llmppl-0.1.1.dist-info/top_level.txt,sha256=xI5ejph1ZhqC8D79mj2XK0kZVxxfpNFpDLvfFlC8i4o,7
+llmppl-0.1.1.dist-info/RECORD,,
