@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools >=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointtree"
+version = "0.0.0"
+authors = [
+    {name = "Josafat-Mattias Burmeister", email = "burmeister@uni-potsdam.de"},
+]
+maintainers = [
+    {name = "Josafat-Mattias Burmeister", email = "burmeister@uni-potsdam.de"},
+]
+description = "A Python Package for Individual Tree Segmentation in 3D Point Clouds."
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["tree", "point cloud", "segmentation"]
+requires-python = ">=3.9"
+dependencies = [
+    "numba",
+    "numba-kdtree",
+    "numpy",
+    "pandas",
+    "pyclesperanto-prototype",
+    "scipy",
+    "scikit-image",
+    "scikit-learn",
+    "torch",
+    "torch-cluster",
+    "torch-scatter"
+]
+[project.optional-dependencies]
+dev = [
+    "black",
+    "coverage",
+    "coverage-badge",
+    "mypy",
+    "pandas-stubs",
+    "parameterized",
+    "pylint",
+    "pytest",
+    "types-Pillow",
+]
+docs = [
+    "sphinx",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-docsearch",
+    "sphinxawesome-theme",
+    "sphinx-sitemap",
+    "sphinxcontrib-jsmath",
+    "sphinxcontrib-katex",
+    "sphinxcontrib-napoleon",
+    "sphinx_mdinclude",
+]
+
+[project.urls]
+Homepage = "https://github.com/ai4trees/pointtree"
+Documentation = "https://ai4trees.github.io/pointtree/"
+Repository = "https://github.com/ai4trees/pointtree.git"
+Issues = "https://github.com/ai4trees/pointtree/issues"
+Changelog = "https://ai4trees.github.io/pointtree/changelog"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
+branch = "main"
+changelog_file = "CHANGELOG.md"
+build_command = "python -m build"
