@@ -1,0 +1,47 @@
+[build-system]
+requires = ['setuptools', 'cython >=0.21']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmditch-pyscip-test"
+description = "Test package"
+authors = [{name = "Murray Rothbard", email = "murray@mises.ru"}]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+dynamic = ["version"]
+
+[tool.pytest.ini_options]
+norecursedirs = ["check"]
+testpaths = ["tests"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = "pyscipopt._version.__version__"}
+
+[tool.cibuildwheel]
+skip="pp*" # currently doesn't work with PyPy
+manylinux-x86_64-image = "manylinux_2_28"
+manylinux-i686-image = "manylinux_2_28"
+manylinux-pypy_x86_64-image = "manylinux_2_28"
+manylinux-aarch64-image = "manylinux_2_28"
+manylinux-ppc64le-image = "manylinux_2_28"
+manylinux-s390x-image = "manylinux_2_28"
+manylinux-pypy_aarch64-image = "manylinux_2_28"
+manylinux-pypy_i686-image = "manylinux_2_28"
+
+
+
+[tool.cibuildwheel.linux]
+skip="pp* cp36* cp37* *musllinux*"
+before-all = [
+    "echo 'import urllib.request; urllib.request.urlretrieve(\"https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.5.0/libscip-linux.zip\", \"scip.zip\")' > download_scip.py",
+    "python download_scip.py",
+    "unzip scip.zip",
+    "mv scip_install scip",
+    "ls -l scip"
+    ]
+environment = { SCIPOPTDIR="$(pwd)/scip", LD_LIBRARY_PATH="$(pwd)/scip/lib:$LD_LIBRARY_PATH", DYLD_LIBRARY_PATH="$(pwd)/scip/lib:$DYLD_LIBRARY_PATH", PATH="$(pwd)/scip/bin:$PATH", PKG_CONFIG_PATH="$(pwd)/scip/lib/pkgconfig:$PKG_CONFIG_PATH", RELEASE="true"}
