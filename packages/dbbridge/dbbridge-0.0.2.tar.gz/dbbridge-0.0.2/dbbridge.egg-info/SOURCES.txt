@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+dbbridge/__init__.py
+dbbridge/aws_db.py
+dbbridge/db_connection.py
+dbbridge/db_manager.py
+dbbridge/local_db.py
+dbbridge/rds_execute.py
+dbbridge.egg-info/PKG-INFO
+dbbridge.egg-info/SOURCES.txt
+dbbridge.egg-info/dependency_links.txt
+dbbridge.egg-info/requires.txt
+dbbridge.egg-info/top_level.txt
