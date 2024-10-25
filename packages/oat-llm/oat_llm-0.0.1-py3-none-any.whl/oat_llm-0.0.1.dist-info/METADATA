@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: oat-llm
+Version: 0.0.1
+Summary: Online AlignmenT (OAT) for LLMs.
+Home-page: https://github.com/sail-sg/oat
+Author: Zichen Liu
+Author-email: Zichen Liu <liuzc@sea.com>, Changyu Chen <chency@sea.com>
+License: Apache-2.0
+Project-URL: Documentation, https://github.com/sail-sg/oat#readme
+Project-URL: Issues, https://github.com/sail-sg/oat/issues
+Project-URL: Source, https://github.com/sail-sg/oat
+Keywords: rlhf,llm,ai-alignment,rl,bandit,ai,sample-efficiency
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate
+Requires-Dist: bitsandbytes
+Requires-Dist: datasets
+Requires-Dist: deepspeed ==0.15.0
+Requires-Dist: dm-launchpad[tensorflow]
+Requires-Dist: einops
+Requires-Dist: flash-attn ==2.6.3
+Requires-Dist: httpx
+Requires-Dist: jsonlines
+Requires-Dist: llm-blender ==0.0.2
+Requires-Dist: loralib
+Requires-Dist: ml-collections
+Requires-Dist: mosec
+Requires-Dist: msgspec
+Requires-Dist: optimum
+Requires-Dist: packaging
+Requires-Dist: peft
+Requires-Dist: protobuf ==3.20.0
+Requires-Dist: pyarrow <12,>=0.6.1
+Requires-Dist: python-Levenshtein ==0.25.1
+Requires-Dist: scipy
+Requires-Dist: torchmetrics
+Requires-Dist: tqdm
+Requires-Dist: transformers ==4.45.2
+Requires-Dist: transformers-stream-generator
+Requires-Dist: vllm ==0.6.2
+Requires-Dist: wandb
+Requires-Dist: wheel
+
+# Efficient Online LLM Alignment
+
+[![PyPI - Version](https://img.shields.io/pypi/v/oat.svg)](https://pypi.org/project/oat)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oat.svg)](https://pypi.org/project/oat)
+
+-----
+
+
+- [Efficient Online LLM Alignment](#efficient-online-llm-alignment)
+  - [Installation :wrench:](#installation-wrench)
+  - [License](#license)
+
+## Installation :wrench:
+`online-align` requires Python 3.7 or above. Install the latest PyPI package for Linux x86_64 or macOS x86_64/ARM64 with:
+1. Prepare a python environment with `python>=3.10`.
+2. Clone this repository and install it in develop mode:
+```console
+git clone git@github.com:sail-sg/online-align.git
+pip install -r requirements.txt
+pip install flash-attn==2.6.3
+pip install -e .
+```
+
+## License
+
+`oat` is distributed under the terms of the [Apache2](https://www.apache.org/licenses/LICENSE-2.0) license.
