@@ -1,0 +1,9 @@
+README.md
+setup.py
+kbron4u/__init__.py
+kbron4u/couses.py
+kbron4u/utils.py
+kbron4u.egg-info/PKG-INFO
+kbron4u.egg-info/SOURCES.txt
+kbron4u.egg-info/dependency_links.txt
+kbron4u.egg-info/top_level.txt

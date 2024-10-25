@@ -1,0 +1,30 @@
+# Hack4U Academy Courses Library
+
+Una biblioteca Python  para consultar cursos de la academia Hack4U.
+
+
+## Cursos disponibles:
+
+- Intro a entornos Linux (con Parrot) [15 horas]
+- Personalización de entornos Linux (en Parrot) [3 horas]
+- Intro al Hacking Etico con tensadas máximas [53 horas]
+
+## Instalación
+
+Instala el paquete usando `pip3`:
+
+```python3
+pip3 install hack4u
+```
+
+## Uso básico
+
+### Listar todos los cursos
+
+### Obtener un curso por nombre
+
+
+### Calcular la duración total de los cursos
+
+
+
