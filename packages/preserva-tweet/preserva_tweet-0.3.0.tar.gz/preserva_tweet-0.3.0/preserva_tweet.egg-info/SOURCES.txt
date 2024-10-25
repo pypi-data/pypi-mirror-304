@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+preserva-tweet/__init__.py
+preserva-tweet/__main__.py
+preserva_tweet.egg-info/PKG-INFO
+preserva_tweet.egg-info/SOURCES.txt
+preserva_tweet.egg-info/dependency_links.txt
+preserva_tweet.egg-info/requires.txt
+preserva_tweet.egg-info/top_level.txt
