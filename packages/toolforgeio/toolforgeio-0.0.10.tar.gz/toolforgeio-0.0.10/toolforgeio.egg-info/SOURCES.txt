@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_arguments.py
+tests/test_io.py
+tests/test_manifest.py
+toolforgeio/__init__.py
+toolforgeio/arguments.py
+toolforgeio/io.py
+toolforgeio/manifest.py
+toolforgeio.egg-info/PKG-INFO
+toolforgeio.egg-info/SOURCES.txt
+toolforgeio.egg-info/dependency_links.txt
+toolforgeio.egg-info/requires.txt
+toolforgeio.egg-info/top_level.txt
