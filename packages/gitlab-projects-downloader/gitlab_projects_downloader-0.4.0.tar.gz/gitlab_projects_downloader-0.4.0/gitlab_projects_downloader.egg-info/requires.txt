@@ -1,0 +1,11 @@
+requests
+python-dotenv
+pylint
+astroid
+certifi
+charset-normalizer
+dill
+isort
+mccabe
+tomlkit
+urllib3
