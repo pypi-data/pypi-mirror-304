@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "dep_res": {
+            "type": "string",
+            "description": "依存関係の解決方法"
+        }
+    },
+    "required": []
+}
