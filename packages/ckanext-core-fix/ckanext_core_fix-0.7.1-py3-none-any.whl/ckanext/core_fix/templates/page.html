@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% block styles %}
+    {{ super() }}
+
+    <!-- Include fixes assets -->
+    {% for fix in h.cf_get_fixes_with_css() %}
+        {% if not h.cf_is_fix_disabled(fix) %}
+            {% asset 'core_fix/' ~ fix %}
+        {% endif %}
+    {% endfor %}
+{% endblock %}
