@@ -1,0 +1,11 @@
+beautifultable
+click
+requests
+
+[dev]
+pre-commit
+readme_renderer
+
+[test]
+pytest
+pytest-mock
