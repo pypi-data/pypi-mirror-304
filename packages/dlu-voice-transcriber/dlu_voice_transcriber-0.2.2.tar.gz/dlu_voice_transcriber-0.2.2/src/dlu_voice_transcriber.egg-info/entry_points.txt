@@ -1,0 +1,2 @@
+[console_scripts]
+dlu_transcribe = dlu_voice_transcriber.__main__:main
