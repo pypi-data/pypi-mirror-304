@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: teaching-optimization
+Version: 0.0.2
+Summary: Pedagogical material for teaching optimization
+Author-email: Michel Bierlaire <michel.bierlaire@epfl.ch>
+Project-URL: homepage, http://biogeme.epfl.ch
+Project-URL: repository, https://github.com/michelbierlaire/teaching_optimization
+Project-URL: download, https://pypi.org/project/teaching-optimization
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.0.1
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: matplotlib>=3.9.1
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: networkx>=3.3
+Requires-Dist: jupyter>=1.0.0
+Provides-Extra: testing
+Requires-Dist: pytest>=8.3.1; extra == "testing"
+Requires-Dist: pytest-cov>=5.0.0; extra == "testing"
+Requires-Dist: tox>=4.16.0; extra == "testing"
+
+# teaching-optimization
+[![PyPi](https://img.shields.io/pypi/v/teaching_optimization.svg)](https://pypi.python.org/pypi/teaching_optimization)
+
+Various optimization algorithms used for teaching.
+
