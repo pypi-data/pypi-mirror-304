@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/aimmo_woody.egg-info/PKG-INFO
+src/aimmo_woody.egg-info/SOURCES.txt
+src/aimmo_woody.egg-info/dependency_links.txt
+src/aimmo_woody.egg-info/top_level.txt
+src/woody/__init__.py
+src/woody/woody_aimmo.py
