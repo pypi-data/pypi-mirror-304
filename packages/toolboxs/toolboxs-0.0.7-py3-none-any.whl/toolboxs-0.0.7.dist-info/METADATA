@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: toolboxs
+Version: 0.0.7
+Summary: A box-ah package for python
+Home-page: https://gitee.com/bu_xiu/toolboxs.git
+Author: MR.AH
+Author-email: zhangzhonghui1001@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.31.0
+Requires-Dist: lxml==5.1.0
+
+# toolboxs
+
+#### 介绍
+工具箱
+
+#### 软件架构
+软件架构说明
+
+
+#### 安装教程
+
+pip install toolboxs
+
+或者
+pip install toolboxs==xx.xx.xx
+
+#### 使用说明
+
+项目结构
+```text
+项目名
+├── source
+│   ├── 资源文件
+├── src
+│   ├── 程序1.py
+│   ├── 程序2.py
+│   ├── 程序3.py
+```
+
+# request_session 模块
+
+## 普通的GET请求
+```python
+
+import os
+from src.request_session import Request,RequestModule
+
+if __name__ == "__main__" :
+    with Request(os.path.abspath(__file__)) as request:
+        def callback(resp):
+            print(resp.text)
+        
+        request.send(url='https://www.4399.com/',module=RequestModule.GET)(callback)
+```
+运行结束之后，会在 source 目录下自动创建 log 目录，并记录当天的 请求日志
+```text
+(reptile_env) box-ah-test tree source        
+source
+└── log
+    └── request
+        └── 程序名称-日期(yyyyMMdd).log
+```
+
+
+
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
+
+
+#### 特技
+
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
+5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
