@@ -1,0 +1,13 @@
+googletrans/__init__.py,sha256=Y8CJfYDWGYvBiNKve0foUmsGyrmAZzxv6_KYeHsUhRY,232
+googletrans/client.py,sha256=TfSxQ58y-XYImBnm18eKL48-uK7l8EbpjO54wB8EogY,11627
+googletrans/constants.py,sha256=4jCnVHaO4ZPsWcbsa_gw4jKepSuyoD9YIWbytVziUG0,7884
+googletrans/gtoken.py,sha256=Xnt1owLZ_ZwmiscmVIjLESIljBCxY1cG0jpfHYbLde8,7086
+googletrans/models.py,sha256=jW1wvU27ETr-nZpuBbRCy-xAIy-POj_xAK8G5fzhQBk,1807
+googletrans/urls.py,sha256=tKUbbC05UDGqQ8VgM65l1ECLwjolgVD3T5hAWJaqYtM,174
+googletrans/utils.py,sha256=eBlWmholBJzC3V7ZtTiMTyPeGPtedZ2_saplzVATjwI,1946
+googletrans_modified-1.1.1.data/scripts/translate,sha256=KshuEu5rwQRwIuMmZ2tF5yCa-9QUfgTR-h8xH4iMVa4,1378
+googletrans_modified-1.1.1.dist-info/LICENSE,sha256=Tvm-Kwwbcjcb5GEltWQXPF_gauST7W7yRMSru0Sj2hA,1116
+googletrans_modified-1.1.1.dist-info/METADATA,sha256=swRtj91vHL1gseZdXZba8Z7a5VItApT5idCBawnPqy8,9932
+googletrans_modified-1.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+googletrans_modified-1.1.1.dist-info/top_level.txt,sha256=JFx8gV9qgBEuUBMSRlv2RvTCqCpHUD5JZ_rsHj8RL_A,12
+googletrans_modified-1.1.1.dist-info/RECORD,,
