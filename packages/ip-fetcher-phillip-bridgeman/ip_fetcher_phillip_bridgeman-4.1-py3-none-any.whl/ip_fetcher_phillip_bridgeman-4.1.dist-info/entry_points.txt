@@ -1,0 +1,2 @@
+[console_scripts]
+ipfetch = ip_fetcher.script:main
