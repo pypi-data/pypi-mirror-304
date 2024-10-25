@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: docketpy
+Version: 2.0.5
+Summary: Docket Python library
+Author: VST
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: redis
+Requires-Dist: google-cloud-storage
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: dill
+
