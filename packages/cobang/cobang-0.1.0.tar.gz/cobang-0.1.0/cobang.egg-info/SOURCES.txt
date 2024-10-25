@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+cobang.egg-info/PKG-INFO
+cobang.egg-info/SOURCES.txt
+cobang.egg-info/dependency_links.txt
+cobang.egg-info/top_level.txt
