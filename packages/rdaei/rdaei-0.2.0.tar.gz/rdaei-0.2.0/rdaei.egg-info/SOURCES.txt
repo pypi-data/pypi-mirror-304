@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+rdaei/__init__.py
+rdaei/analyze.py
+rdaei/minority.py
+rdaei.egg-info/PKG-INFO
+rdaei.egg-info/SOURCES.txt
+rdaei.egg-info/dependency_links.txt
+rdaei.egg-info/not-zip-safe
+rdaei.egg-info/requires.txt
+rdaei.egg-info/top_level.txt
+test/test_mod.py
