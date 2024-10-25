@@ -1,0 +1,15 @@
+
+[dev]
+ruff
+mypy
+pytest
+pytest-cov
+cython
+setuptools==71.1.0
+numpy
+gurobipy
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinx-autodoc-typehints
