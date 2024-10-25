@@ -1,0 +1,7 @@
+setup.py
+initex/__init__.py
+initex/main.py
+initex.egg-info/PKG-INFO
+initex.egg-info/SOURCES.txt
+initex.egg-info/dependency_links.txt
+initex.egg-info/top_level.txt
