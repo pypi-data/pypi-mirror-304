@@ -1,0 +1,11 @@
+chatsh/__init__.py,sha256=2A_H8COnLw_I9MJLfYfCaVXytGOuNtap0IjO0Q2kDYY,45
+chatsh/chat.py,sha256=mji0FxxVt3FsHDS3idxKZaeKgYRzcUTq1y25bAbLlGk,4257
+chatsh/chat_vendors.py,sha256=h3EkswA7jSdU570-yTobKP--nuOZLtsPlbzU8I_-aK4,2921
+chatsh/chatsh.py,sha256=8QA-koa2KrdzLl79x-EOSc2V-WfjhosHdpdfs4zpvfk,7548
+chatsh/conversation.py,sha256=VkVfw1rVNqEYuRkm3i_2df3C_fCTtkULAK5UeQlbntM,2348
+chatsh/system.prompt,sha256=W89ygkFCJKz7U_CAzrk4Cz4BLh-r57cCzgdS-kFoG98,3840
+chatsh-0.3.0.dist-info/LICENSE,sha256=h2HD7vbBji5oQOlMedFt5yVbwvU0eSXPMAqZG-SH9fQ,1065
+chatsh-0.3.0.dist-info/METADATA,sha256=zLSS03Q1lGgdEMfzBUZYZFGCcN57Au4A1uGZ4it_q_E,2173
+chatsh-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chatsh-0.3.0.dist-info/entry_points.txt,sha256=-LdT6nhBI7D4lllx_P1yvNyChQsa1aVA1FuF0GggrfQ,76
+chatsh-0.3.0.dist-info/RECORD,,
