@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: dbworkload
+Version: 0.6.0
+Summary: Workload framework
+Home-page: https://dbworkload.github.io/dbworkload/
+License: GPLv3+
+Author: Fabio Ghirardello
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: cassandra
+Provides-Extra: mariadb
+Provides-Extra: mongo
+Provides-Extra: mysql
+Provides-Extra: odbc
+Provides-Extra: oracle
+Provides-Extra: postgres
+Provides-Extra: spanner
+Requires-Dist: cassandra-driver (>=3.29.1,<4.0.0) ; extra == "all" or extra == "cassandra"
+Requires-Dist: google-cloud-spanner (>=3.49.1,<4.0.0) ; extra == "all" or extra == "spanner"
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: mariadb (>=1.1.10,<2.0.0) ; extra == "all" or extra == "mariadb"
+Requires-Dist: mysql-connector-python (>=8.4.0,<9.0.0) ; extra == "all" or extra == "mysql"
+Requires-Dist: numpy (>=1.23.5,<2.0.0)
+Requires-Dist: oracledb (>=2.2.0,<3.0.0) ; extra == "all" or extra == "oracle"
+Requires-Dist: pandas (>=1.5.2,<2.0.0)
+Requires-Dist: plotext (>=5.2.8,<6.0.0)
+Requires-Dist: plotly (>=5.24.0,<6.0.0)
+Requires-Dist: prometheus-client (>=0.15.0,<0.16.0)
+Requires-Dist: psycopg (>=3.1.19,<4.0.0) ; extra == "all" or extra == "postgres"
+Requires-Dist: psycopg-binary (>=3.1.19,<4.0.0) ; extra == "all" or extra == "postgres"
+Requires-Dist: pymongo (>=4.7.2,<5.0.0) ; extra == "all" or extra == "mongo"
+Requires-Dist: pyodbc (>=5.1.0,<6.0.0) ; extra == "all" or extra == "odbc"
+Requires-Dist: pytdigest (>=0.1.4,<0.2.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: sqlparse (>=0.5.1,<0.6.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: typer[all] (>=0.7.0,<0.8.0)
+Project-URL: Repository, https://github.com/dbworkload/dbworkload
+Description-Content-Type: text/markdown
+
+# dbworkload - DBMS workload utility
+
+Visit the [online documentation](https://dbworkload.github.io/dbworkload/).
+
