@@ -1,0 +1,8 @@
+README.md
+setup.py
+snowconection/__init__.py
+snowconection/utils.py
+snowconection.egg-info/PKG-INFO
+snowconection.egg-info/SOURCES.txt
+snowconection.egg-info/dependency_links.txt
+snowconection.egg-info/top_level.txt
