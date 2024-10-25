@@ -1,0 +1,14 @@
+factflip/__init__.py,sha256=Nx1XexCYRp0jH_X0Z7L7IXxys88wSn3y40bwBkVvuBQ,276
+factflip/cli.py,sha256=O3H4KNHybNrOcX5vlWILOc8U-cnAKowHhKFjj6uohzo,11150
+factflip/generators.py,sha256=nVDS8w-ZP1f8z9UmiIZfnfWa9IlkDbt3mNRy7wUlAIE,4965
+factflip/llms.py,sha256=ky1OksCwOU9-vsOD31o2p9iC5wKWdwuMm9TPVdEyEZA,1199
+factflip/utils/__init__.py,sha256=aXkfkJZOF5xa-wT745-iFhSBXFRR98zrguV61gyOcko,154
+factflip/utils/build.py,sha256=69x-Qnt2tDU8reidPAHz14Rbjl-EWFPcApJeVRg5nlU,9757
+factflip/utils/data.py,sha256=ciMxowfQxvNkfFAuktI56fhljLtXPs49wLjh3MV_JKM,2392
+factflip/utils/memes.py,sha256=p8Hj73T9Iu3BeEAM7HsrHS4JnpDB6YdmgZisFxC5eVA,2461
+factflip/validators.py,sha256=53Wj7933GHc27Qbag_r9gMmB1MdohgXlH5VZ79s5Y6s,1191
+factflip-0.1.0.dist-info/LICENSE,sha256=eaEMXihgEBDf6gMrINC48ObChegIrkN25rhDhEKgqBI,1072
+factflip-0.1.0.dist-info/METADATA,sha256=M8w4eLEDmqjgc96rr8WnpCh3H0RfOpmNKly8p7a-NLQ,8010
+factflip-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+factflip-0.1.0.dist-info/entry_points.txt,sha256=tuOZ2vows1mWFshoEkBT2aT5UlMoFNg8K0478GCOcTo,45
+factflip-0.1.0.dist-info/RECORD,,
