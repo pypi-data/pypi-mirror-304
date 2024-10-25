@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: razer-analog
+Version: 0.1.4
+Summary: 
+License: GPL-3.0
+Author: Dick Marinus
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: evdev (>=1.6.1)
+Requires-Dist: ioctl-opt (>=1.3,<2.0)
+Requires-Dist: pyudev (>=0.24)
+Requires-Dist: setuptools (>=69)
