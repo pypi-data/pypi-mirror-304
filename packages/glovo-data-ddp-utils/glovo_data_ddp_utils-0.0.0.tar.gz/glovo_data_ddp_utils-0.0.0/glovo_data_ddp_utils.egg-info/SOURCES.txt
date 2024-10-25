@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+glovo_data_ddp_utils/__init__.py
+glovo_data_ddp_utils.egg-info/PKG-INFO
+glovo_data_ddp_utils.egg-info/SOURCES.txt
+glovo_data_ddp_utils.egg-info/dependency_links.txt
+glovo_data_ddp_utils.egg-info/top_level.txt
