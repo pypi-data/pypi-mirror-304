@@ -1,0 +1,7 @@
+testpypiproject123/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testpypiproject123/your_module.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testpypiproject123-3.5.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testpypiproject123-3.5.dist-info/METADATA,sha256=yGtiYwg7dn_Zzv95CP_Imc0HKyF_wk5CBkf9qZKwIBE,531
+testpypiproject123-3.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+testpypiproject123-3.5.dist-info/top_level.txt,sha256=_HDyFgSAnIHkNmG7We9DfpQmBkpFhl15EUhs7WaKKrc,19
+testpypiproject123-3.5.dist-info/RECORD,,

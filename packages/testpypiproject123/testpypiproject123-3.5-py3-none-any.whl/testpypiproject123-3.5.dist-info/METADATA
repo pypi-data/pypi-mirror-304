@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: testpypiproject123
+Version: 3.5
+Summary: package that helps prevent malicious user from abusing unused package
+Home-page: https://github.com/yourusername/your_project
+Author: super man
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Package in order to block malicious users from claiming this dependency
