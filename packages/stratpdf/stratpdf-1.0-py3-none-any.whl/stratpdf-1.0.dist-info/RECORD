@@ -1,0 +1,8 @@
+stratpdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stratpdf/pdf2image.py,sha256=FKCPhiSyXj-tNDXA0VqlbWzKx6KZPmuJa5cBogvi_4o,40
+stratpdf/pdf2text.py,sha256=5--64-OYoPnJr369BowREbCyMU2VZrAXDrr2AB1VAx4,39
+stratpdf-1.0.dist-info/LICENSE,sha256=ctLwkzT4uH3e2UqDO6faBeUoDnegN8ojslH5bq5M9xk,35562
+stratpdf-1.0.dist-info/METADATA,sha256=9MtHhK92qSJp2abAWiUtDal6fSYGJJiJ5zcfQIz1BMI,115
+stratpdf-1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+stratpdf-1.0.dist-info/top_level.txt,sha256=dR34kdiBo5w2s8DSfiYPe6-FmiGQi3S0jYCilHOk2fc,9
+stratpdf-1.0.dist-info/RECORD,,
