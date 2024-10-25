@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+calculadora-avancada/__init__.py
+calculadora-avancada/calculadora.py
+calculadora_avancada.egg-info/PKG-INFO
+calculadora_avancada.egg-info/SOURCES.txt
+calculadora_avancada.egg-info/dependency_links.txt
+calculadora_avancada.egg-info/requires.txt
+calculadora_avancada.egg-info/top_level.txt
