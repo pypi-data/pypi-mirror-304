@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: neoapi-sdk
+Version: 0.1.0
+Summary: Integrate neoapi.ai LLM Analytics with your LLM pipelines.
+Home-page: https://github.com/neoapi-ai/neoapi-python
+Author: NeoAPI
+Author-email: NeoAPI <hello@neoapi.ai>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+
+# neoapi_integration
+
+A Python package to integrate neoapi.ai LLM Analytics with your LLM pipelines.
+
+## Installation
+
+```bash
+pip install neoapi
+```
