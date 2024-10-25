@@ -1,0 +1,2 @@
+[console_scripts]
+finance-analyzer = finance_analyzer.cli:main
