@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: syetodocliapp
+Version: 1.0
+Summary: CLI Todo app with add, list, remove functionality as of now
+Home-page: UNKNOWN
+Author: Srisai Pasupuleti
+Author-email: srisaichiyan24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: click
+
+UNKNOWN
+
+
