@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aimmo_woody
+Version: 0.0.1
+Summary: Your package description
+Home-page: https://github.com/woosolhwi
+Author: woody
+Author-email: Your Name <your.email@example.com>
+Project-URL: Homepage, https://pypi.org/project/aimmo-woody/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
