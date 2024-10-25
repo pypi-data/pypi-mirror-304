@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: packet_1.0
+Version: 0.1
+Summary: Описание моего Python-пакета
+Author-email: Your Name <youremail@example.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
