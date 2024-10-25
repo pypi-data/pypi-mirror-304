@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: mqtttimeserieslogger-tspspi
+Version: 0.0.5
+Summary: A very simple NPZ file time series logger for MQTT events
+Home-page: https://github.com/tspspi/mqtttimeserieslogger
+Author: Thomas Spielauer
+Author-email: pypipackages01@tspi.at
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: daemonize>=2.5.0
+Requires-Dist: lockfile>=0.12.2
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: paho-mqtt>=2.1.0
+
+# Simple MQTT time series logger
+
+__Work in progress, not production ready__
+
+This is a very simple (Python) logging daemon that subscribes
+to multiple MQTT topics and logs received messages including
+timestamps into daily ```npz``` files. The way it currently works
+is really crude so it's only useable for low rate measurements
+like minutely temperatures or alike. All data is read and written
+for each measurement at the moment (this will change in future).
+
+The service is configured by a configuration file (by default
+at ```~/.config/mqttserieslogger.cfg```.
+
+## Installation
+
+```
+pip install mqtttimeserieslogger-tspspi
+```
+
+## Sample configuration
+
+```
+{
+        "datasources" : [
+                {
+                        "broker" : {
+                                "broker" : "10.4.1.1",
+                                "user" : "quasem",
+                                "password" : "XXXX",
+                                "basetopic" : "quasem/experiment/"
+                        },
+
+                        "quantities" : [
+                                {
+                                        "name": "pt1000pcb",
+                                        "topic" : "cryo/temperature/pt1000pcb",
+                                        "field" : [ "temperature", "temperature_C" ]
+                                }
+                        ]
+                }
+        ]
+}
+```
+
+## Automatic launching with ```rc.init``` script
+
+```
+#!/bin/sh
+
+# PROVIDE: mqtttimeserieslogger
+# REQUIRE: NETWORKING SERVERS
+
+# Simple MQTT time series logger
+# 
+# RC configuration variables:
+#  mqtttimeserieslogger_enable:="NO"
+#   Enables the logging service
+
+. /etc/rc.subr
+
+name="mqtttimeserieslogger"
+rcvar=mqtttimeserieslogger_enable
+
+load_rc_config $name
+: ${mqtttimeserieslogger_enable:="NO"}
+
+command=/usr/local/bin/mqtttimeserieslogger
+
+load_rc_config $name
+run_rc_command "$1"
+```
