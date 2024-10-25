@@ -1,0 +1,4 @@
+include README.md LICENSE
+exclude lingustruct/templates/*.json  # 先に除外
+include lingustruct/templates/*_s.json  # 必要なスキーマファイルのみ含める
+exclude .env
