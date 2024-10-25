@@ -1,0 +1,15 @@
+anndash/__init__.py,sha256=46Yjk3fz9o8aTN8E95McnzpJcjGzVJmHmQqUZ5mXzfc,22
+anndash/_modidx.py,sha256=gLSSqTRhP2y_SSRLvNRCm6ez0-nlZVd1HYV9S_BmSuM,8754
+anndash/color.py,sha256=3LraeXholezDk5UXL-I2rsgDqzdRNy2HZ9bOkOWygmM,10676
+anndash/core.py,sha256=V0MIlMocLjlBJ0r-G7oKrXtb2Xd0KhUSnWorJ6NZzFA,13336
+anndash/enums.py,sha256=nm7NzFvnHJtpQjonHZpKY2h0vwal5k9FTNTLsIL0LUw,7215
+anndash/env.yml,sha256=e4kBYX14VJ0BxVOc5K6C5fxZ6xWDDIJXlV4z9MwjitQ,1090
+anndash/hints.py,sha256=aiobU7Wgo4DftxyAdxLF9uvriVGI7s0_2GDbnKzB7tw,4962
+anndash/plots.py,sha256=NQvquXaSBw-AupOO0IKCcjJGqF54GxtiHpYcJr0b74E,8317
+anndash/utils.py,sha256=gUy6j1Fa_L8dBDdvToGcHYX8G4cfgy-z20j6japyurs,13351
+anndash-0.0.9.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+anndash-0.0.9.dist-info/METADATA,sha256=06UOb1_Y0raVKpIAqmD-5eMlL5VBcw_nl1v3-tyCyBo,2892
+anndash-0.0.9.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+anndash-0.0.9.dist-info/entry_points.txt,sha256=6KxKrODIHZufh0nT6Oy9X-qU6rH8n9L4iFnSduGHzsI,36
+anndash-0.0.9.dist-info/top_level.txt,sha256=xfItH81EO1L7QzY2_sb-PzpR6xrGZECMtruLfTNTKSw,8
+anndash-0.0.9.dist-info/RECORD,,
