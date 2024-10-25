@@ -1,0 +1,11 @@
+XMZAPI/__init__.py,sha256=x-LgvZvgoFd_OxcdCLXF167xxX06a4IG6GKdHaLjU_g,45
+XMZAPI/HWNLP/__init__.py,sha256=bbf5egBdeUvWEKDjWMEbrDn-QIwsmvQx2xPdM9BkNoA,266
+XMZAPI/HWNLP/auth_config.py,sha256=eKcEStWBu39Xc7BrZIseLI_WQdCKZfF0Q6yml1P4vUg,834
+XMZAPI/HWNLP/mt_service.py,sha256=7jwWKrY49jnaHE7Ri4UuOSJjf4It2Bh8G37vKmpZ0B8,4134
+XMZAPI/HWNLP/nlg_service.py,sha256=WQUODk73sFYvwjnYsxfo12xwnjiegAkcLX9xT94R2Og,3655
+XMZAPI/HWNLP/nlpf_service.py,sha256=wMBV4WF7AapVymwJsdKE_p68EaiM-YHy4NZsfO1rXGk,10214
+XMZAPI/HWNLP/nlu_service.py,sha256=9R-Ah2MYmnprKNINCDKxUiFrU0WJBOG72tiTvjD_nxM,7191
+XMZ-2.4.0.dist-info/METADATA,sha256=R1zzxIBom0QM5iIMonNGr9zXzrQFll107yATsv9DGP4,1665
+XMZ-2.4.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+XMZ-2.4.0.dist-info/top_level.txt,sha256=DjVkAD_q4rJ8YdGUeIvLWR7LG9MkD1zR7W4sQPPEQA8,7
+XMZ-2.4.0.dist-info/RECORD,,
