@@ -1,0 +1,1408 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "moapy",
+    "description": "Schema for moapy",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://moa.rpm.kr-dv-midasit.com/backend/python-executor/"
+    },
+    {
+      "url": "https://moa.rpm.kr-st-midasit.com/backend/function-executor/python-execute/"
+    }
+  ],
+  "paths": {
+    "/execute?functionId=moapy-dgnengine-steel_bc-report_ec3_beam_column": {
+      "post": {
+        "summary": "Eurocode 3 Beam Design",
+        "description": "Steel column that is subjected to axial force, biaxial bending moment and shear force and steel beam that is subjected to the bending moment are designed. Automatic design or code check for load resistance capacity of cross-sections like H-beam depending on the form of member is conducted.",
+        "operationId": "report ec3 beam column",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "matl": {
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "title": "Code",
+                        "description": "Material code",
+                        "default": "EN10025",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [
+                          "S235",
+                          "S275",
+                          "S355",
+                          "S450",
+                          "S275N/NL",
+                          "S355N/NL",
+                          "S420N/NL",
+                          "S460N/NL",
+                          "S275M/ML",
+                          "S355M/ML",
+                          "S420M/ML",
+                          "S460M/ML",
+                          "S235W",
+                          "S355W",
+                          "S460Q/QL/QL1"
+                        ],
+                        "title": "Name",
+                        "description": "Material of steel member",
+                        "default": "S275"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Material",
+                    "description": "Steel DB Material",
+                    "dataclassname": "moapy.steel_pre.SteelMaterial_EC"
+                  },
+                  "sect": {
+                    "properties": {
+                      "shape": {
+                        "type": "string",
+                        "title": "Shape",
+                        "description": "Shape of member section",
+                        "default": "H",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [],
+                        "title": "Name",
+                        "description": "use DB stored in EN10365",
+                        "default": "HD 260x54.1"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Section",
+                    "description": "Steel DB Section",
+                    "dataclassname": "moapy.steel_pre.SteelSection_EN10365"
+                  },
+                  "load": {
+                    "properties": {
+                      "Fz": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Force",
+                            "default": 0.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "N",
+                              "kN",
+                              "kips"
+                            ],
+                            "title": "enUnitForce",
+                            "default": "kN"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Fz",
+                        "description": "Axial force"
+                      },
+                      "Mx": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Moment",
+                            "default": 0.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "kN.m",
+                              "kip.ft",
+                              "N.mm",
+                              "N.m"
+                            ],
+                            "title": "enUnitMoment",
+                            "default": "kN.m"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Mx",
+                        "description": "Moment about x-axis"
+                      },
+                      "My": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Moment",
+                            "default": 0.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "kN.m",
+                              "kip.ft",
+                              "N.mm",
+                              "N.m"
+                            ],
+                            "title": "enUnitMoment",
+                            "default": "kN.m"
+                          }
+                        },
+                        "type": "object",
+                        "title": "My",
+                        "description": "Moment about y-axis"
+                      },
+                      "Vx": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Force",
+                            "default": 0.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "N",
+                              "kN",
+                              "kips"
+                            ],
+                            "title": "enUnitForce",
+                            "default": "kN"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Vx",
+                        "description": "Shear about x-axis"
+                      },
+                      "Vy": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Force",
+                            "default": 0.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "N",
+                              "kN",
+                              "kips"
+                            ],
+                            "title": "enUnitForce",
+                            "default": "kN"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Vy",
+                        "description": "Shear about y-axis"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Member Force",
+                    "description": "Member Force",
+                    "dataclassname": "moapy.data_pre.MemberForce"
+                  },
+                  "length": {
+                    "properties": {
+                      "l_x": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 3000.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Lx",
+                        "description": "Unbraced length(x-direction)",
+                        "default": {
+                          "value": 3000.0,
+                          "unit": "mm"
+                        }
+                      },
+                      "l_y": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 3000.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Ly",
+                        "description": "Unbraced length(y-direction)",
+                        "default": {
+                          "value": 3000.0,
+                          "unit": "mm"
+                        }
+                      },
+                      "l_b": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 3000.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Lb",
+                        "description": "Lateral unbraced length",
+                        "default": {
+                          "value": 3000.0,
+                          "unit": "mm"
+                        }
+                      },
+                      "l_t": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 3000.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Lt",
+                        "description": "Torsional Buckling Length",
+                        "default": {
+                          "value": 3000.0,
+                          "unit": "mm"
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Member Length",
+                    "description": "Steel Member Length",
+                    "dataclassname": "moapy.steel_pre.SteelLength_EC"
+                  },
+                  "eff_len": {
+                    "properties": {
+                      "kx": {
+                        "type": "number",
+                        "title": "Kx",
+                        "description": "Effect buckling length factor(x direction)",
+                        "default": 1.0
+                      },
+                      "ky": {
+                        "type": "number",
+                        "title": "Ky",
+                        "description": "Effect buckling length factor(y direction)",
+                        "default": 1.0
+                      }
+                    },
+                    "type": "object",
+                    "title": "Effective Length",
+                    "description": "Effective Length",
+                    "dataclassname": "moapy.data_pre.EffectiveLength"
+                  },
+                  "factor": {
+                    "properties": {
+                      "c_mx": {
+                        "type": "number",
+                        "title": "Cmx",
+                        "description": "Cmx Modification Factor",
+                        "default": 1.0
+                      },
+                      "c_my": {
+                        "type": "number",
+                        "title": "Cmy",
+                        "description": "Cmy Modification Factor",
+                        "default": 1.0
+                      },
+                      "c1": {
+                        "type": "number",
+                        "title": "C1",
+                        "description": "ratio between the critical bending moment and the critical constant bending moment for a member with hinged supports",
+                        "default": 1.0
+                      },
+                      "c_mlt": {
+                        "type": "number",
+                        "title": "C Mlt",
+                        "description": "equivalent uniform moment factor for LTB",
+                        "default": 1.0
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Moment Modification Factor",
+                    "description": "Steel Moment Modification Factor",
+                    "dataclassname": "moapy.steel_pre.SteelMomentModificationFactor_EC"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "matl",
+                  "sect",
+                  "load",
+                  "length",
+                  "eff_len",
+                  "factor"
+                ],
+                "title": "report ec3 beam column"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "title": "Type",
+                      "description": "Type",
+                      "default": "xlsx"
+                    },
+                    "result": {
+                      "type": "string",
+                      "title": "Result",
+                      "description": "have to base64 to binary data",
+                      "default": ""
+                    }
+                  },
+                  "type": "object",
+                  "title": "Bytes",
+                  "dataclassname": "moapy.data_post.ResultBytes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "EffectiveLength": {
+        "properties": {
+          "kx": {
+            "type": "number",
+            "title": "Kx",
+            "description": "Effect buckling length factor(x direction)",
+            "default": 1.0
+          },
+          "ky": {
+            "type": "number",
+            "title": "Ky",
+            "description": "Effect buckling length factor(y direction)",
+            "default": 1.0
+          }
+        },
+        "type": "object",
+        "title": "Effective Length",
+        "description": "Effective Length",
+        "dataclassname": "moapy.data_pre.EffectiveLength"
+      },
+      "Force": {
+        "properties": {
+          "value": {
+            "type": "number",
+            "title": "Value",
+            "description": "Force",
+            "default": 0.0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "N",
+              "kN",
+              "kips"
+            ],
+            "title": "enUnitForce",
+            "default": "kN"
+          }
+        },
+        "type": "object",
+        "title": "Force",
+        "description": "Force"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Length": {
+        "properties": {
+          "value": {
+            "type": "number",
+            "title": "Value",
+            "description": "Length",
+            "default": 3000.0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "mm",
+              "m",
+              "in",
+              "ft"
+            ],
+            "title": "enUnitLength",
+            "default": "mm"
+          }
+        },
+        "type": "object",
+        "title": "Length",
+        "description": "Length"
+      },
+      "MemberForce": {
+        "properties": {
+          "Fz": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Force",
+                "default": 0.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "N",
+                  "kN",
+                  "kips"
+                ],
+                "title": "enUnitForce",
+                "default": "kN"
+              }
+            },
+            "type": "object",
+            "title": "Fz",
+            "description": "Axial force"
+          },
+          "Mx": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Moment",
+                "default": 0.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "kN.m",
+                  "kip.ft",
+                  "N.mm",
+                  "N.m"
+                ],
+                "title": "enUnitMoment",
+                "default": "kN.m"
+              }
+            },
+            "type": "object",
+            "title": "Mx",
+            "description": "Moment about x-axis"
+          },
+          "My": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Moment",
+                "default": 0.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "kN.m",
+                  "kip.ft",
+                  "N.mm",
+                  "N.m"
+                ],
+                "title": "enUnitMoment",
+                "default": "kN.m"
+              }
+            },
+            "type": "object",
+            "title": "My",
+            "description": "Moment about y-axis"
+          },
+          "Vx": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Force",
+                "default": 0.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "N",
+                  "kN",
+                  "kips"
+                ],
+                "title": "enUnitForce",
+                "default": "kN"
+              }
+            },
+            "type": "object",
+            "title": "Vx",
+            "description": "Shear about x-axis"
+          },
+          "Vy": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Force",
+                "default": 0.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "N",
+                  "kN",
+                  "kips"
+                ],
+                "title": "enUnitForce",
+                "default": "kN"
+              }
+            },
+            "type": "object",
+            "title": "Vy",
+            "description": "Shear about y-axis"
+          }
+        },
+        "type": "object",
+        "title": "Member Force",
+        "description": "Member Force",
+        "dataclassname": "moapy.data_pre.MemberForce"
+      },
+      "Moment": {
+        "properties": {
+          "value": {
+            "type": "number",
+            "title": "Value",
+            "description": "Moment",
+            "default": 0.0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "kN.m",
+              "kip.ft",
+              "N.mm",
+              "N.m"
+            ],
+            "title": "enUnitMoment",
+            "default": "kN.m"
+          }
+        },
+        "type": "object",
+        "title": "Moment",
+        "description": "Moment"
+      },
+      "ResultBytes": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type",
+            "description": "Type",
+            "default": "xlsx"
+          },
+          "result": {
+            "type": "string",
+            "title": "Result",
+            "description": "have to base64 to binary data",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "Bytes",
+        "dataclassname": "moapy.data_post.ResultBytes"
+      },
+      "SteelLength_EC": {
+        "properties": {
+          "l_x": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 3000.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Lx",
+            "description": "Unbraced length(x-direction)",
+            "default": {
+              "value": 3000.0,
+              "unit": "mm"
+            }
+          },
+          "l_y": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 3000.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Ly",
+            "description": "Unbraced length(y-direction)",
+            "default": {
+              "value": 3000.0,
+              "unit": "mm"
+            }
+          },
+          "l_b": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 3000.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Lb",
+            "description": "Lateral unbraced length",
+            "default": {
+              "value": 3000.0,
+              "unit": "mm"
+            }
+          },
+          "l_t": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 3000.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Lt",
+            "description": "Torsional Buckling Length",
+            "default": {
+              "value": 3000.0,
+              "unit": "mm"
+            }
+          }
+        },
+        "type": "object",
+        "title": "Steel Member Length",
+        "description": "Steel Member Length",
+        "dataclassname": "moapy.steel_pre.SteelLength_EC"
+      },
+      "SteelMaterial_EC": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "description": "Material code",
+            "default": "EN10025",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "enum": [
+              "S235",
+              "S275",
+              "S355",
+              "S450",
+              "S275N/NL",
+              "S355N/NL",
+              "S420N/NL",
+              "S460N/NL",
+              "S275M/ML",
+              "S355M/ML",
+              "S420M/ML",
+              "S460M/ML",
+              "S235W",
+              "S355W",
+              "S460Q/QL/QL1"
+            ],
+            "title": "Name",
+            "description": "Material of steel member",
+            "default": "S275"
+          }
+        },
+        "type": "object",
+        "title": "Steel DB Material",
+        "description": "Steel DB Material",
+        "dataclassname": "moapy.steel_pre.SteelMaterial_EC"
+      },
+      "SteelMomentModificationFactor_EC": {
+        "properties": {
+          "c_mx": {
+            "type": "number",
+            "title": "Cmx",
+            "description": "Cmx Modification Factor",
+            "default": 1.0
+          },
+          "c_my": {
+            "type": "number",
+            "title": "Cmy",
+            "description": "Cmy Modification Factor",
+            "default": 1.0
+          },
+          "c1": {
+            "type": "number",
+            "title": "C1",
+            "description": "ratio between the critical bending moment and the critical constant bending moment for a member with hinged supports",
+            "default": 1.0
+          },
+          "c_mlt": {
+            "type": "number",
+            "title": "C Mlt",
+            "description": "equivalent uniform moment factor for LTB",
+            "default": 1.0
+          }
+        },
+        "type": "object",
+        "title": "Steel Moment Modification Factor",
+        "description": "Steel Moment Modification Factor",
+        "dataclassname": "moapy.steel_pre.SteelMomentModificationFactor_EC"
+      },
+      "SteelSection_EN10365": {
+        "properties": {
+          "shape": {
+            "type": "string",
+            "title": "Shape",
+            "description": "Shape of member section",
+            "default": "H",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "enum": [],
+            "title": "Name",
+            "description": "use DB stored in EN10365",
+            "default": "HD 260x54.1"
+          }
+        },
+        "type": "object",
+        "title": "Steel DB Section",
+        "description": "Steel DB Section",
+        "dataclassname": "moapy.steel_pre.SteelSection_EN10365"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "enUnitForce": {
+        "type": "string",
+        "enum": [
+          "N",
+          "kN",
+          "kips"
+        ],
+        "title": "enUnitForce"
+      },
+      "enUnitLength": {
+        "type": "string",
+        "enum": [
+          "mm",
+          "m",
+          "in",
+          "ft"
+        ],
+        "title": "enUnitLength"
+      },
+      "enUnitMoment": {
+        "type": "string",
+        "enum": [
+          "kN.m",
+          "kip.ft",
+          "N.mm",
+          "N.m"
+        ],
+        "title": "enUnitMoment"
+      },
+      "report_ec3_beam_column": {
+        "properties": {
+          "matl": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "title": "Code",
+                "description": "Material code",
+                "default": "EN10025",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "S235",
+                  "S275",
+                  "S355",
+                  "S450",
+                  "S275N/NL",
+                  "S355N/NL",
+                  "S420N/NL",
+                  "S460N/NL",
+                  "S275M/ML",
+                  "S355M/ML",
+                  "S420M/ML",
+                  "S460M/ML",
+                  "S235W",
+                  "S355W",
+                  "S460Q/QL/QL1"
+                ],
+                "title": "Name",
+                "description": "Material of steel member",
+                "default": "S275"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Material",
+            "description": "Steel DB Material",
+            "dataclassname": "moapy.steel_pre.SteelMaterial_EC"
+          },
+          "sect": {
+            "properties": {
+              "shape": {
+                "type": "string",
+                "title": "Shape",
+                "description": "Shape of member section",
+                "default": "H",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [],
+                "title": "Name",
+                "description": "use DB stored in EN10365",
+                "default": "HD 260x54.1"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Section",
+            "description": "Steel DB Section",
+            "dataclassname": "moapy.steel_pre.SteelSection_EN10365"
+          },
+          "load": {
+            "properties": {
+              "Fz": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Force",
+                    "default": 0.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "N",
+                      "kN",
+                      "kips"
+                    ],
+                    "title": "enUnitForce",
+                    "default": "kN"
+                  }
+                },
+                "type": "object",
+                "title": "Fz",
+                "description": "Axial force"
+              },
+              "Mx": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Moment",
+                    "default": 0.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "kN.m",
+                      "kip.ft",
+                      "N.mm",
+                      "N.m"
+                    ],
+                    "title": "enUnitMoment",
+                    "default": "kN.m"
+                  }
+                },
+                "type": "object",
+                "title": "Mx",
+                "description": "Moment about x-axis"
+              },
+              "My": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Moment",
+                    "default": 0.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "kN.m",
+                      "kip.ft",
+                      "N.mm",
+                      "N.m"
+                    ],
+                    "title": "enUnitMoment",
+                    "default": "kN.m"
+                  }
+                },
+                "type": "object",
+                "title": "My",
+                "description": "Moment about y-axis"
+              },
+              "Vx": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Force",
+                    "default": 0.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "N",
+                      "kN",
+                      "kips"
+                    ],
+                    "title": "enUnitForce",
+                    "default": "kN"
+                  }
+                },
+                "type": "object",
+                "title": "Vx",
+                "description": "Shear about x-axis"
+              },
+              "Vy": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Force",
+                    "default": 0.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "N",
+                      "kN",
+                      "kips"
+                    ],
+                    "title": "enUnitForce",
+                    "default": "kN"
+                  }
+                },
+                "type": "object",
+                "title": "Vy",
+                "description": "Shear about y-axis"
+              }
+            },
+            "type": "object",
+            "title": "Member Force",
+            "description": "Member Force",
+            "dataclassname": "moapy.data_pre.MemberForce"
+          },
+          "length": {
+            "properties": {
+              "l_x": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 3000.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Lx",
+                "description": "Unbraced length(x-direction)",
+                "default": {
+                  "value": 3000.0,
+                  "unit": "mm"
+                }
+              },
+              "l_y": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 3000.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Ly",
+                "description": "Unbraced length(y-direction)",
+                "default": {
+                  "value": 3000.0,
+                  "unit": "mm"
+                }
+              },
+              "l_b": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 3000.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Lb",
+                "description": "Lateral unbraced length",
+                "default": {
+                  "value": 3000.0,
+                  "unit": "mm"
+                }
+              },
+              "l_t": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 3000.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Lt",
+                "description": "Torsional Buckling Length",
+                "default": {
+                  "value": 3000.0,
+                  "unit": "mm"
+                }
+              }
+            },
+            "type": "object",
+            "title": "Steel Member Length",
+            "description": "Steel Member Length",
+            "dataclassname": "moapy.steel_pre.SteelLength_EC"
+          },
+          "eff_len": {
+            "properties": {
+              "kx": {
+                "type": "number",
+                "title": "Kx",
+                "description": "Effect buckling length factor(x direction)",
+                "default": 1.0
+              },
+              "ky": {
+                "type": "number",
+                "title": "Ky",
+                "description": "Effect buckling length factor(y direction)",
+                "default": 1.0
+              }
+            },
+            "type": "object",
+            "title": "Effective Length",
+            "description": "Effective Length",
+            "dataclassname": "moapy.data_pre.EffectiveLength"
+          },
+          "factor": {
+            "properties": {
+              "c_mx": {
+                "type": "number",
+                "title": "Cmx",
+                "description": "Cmx Modification Factor",
+                "default": 1.0
+              },
+              "c_my": {
+                "type": "number",
+                "title": "Cmy",
+                "description": "Cmy Modification Factor",
+                "default": 1.0
+              },
+              "c1": {
+                "type": "number",
+                "title": "C1",
+                "description": "ratio between the critical bending moment and the critical constant bending moment for a member with hinged supports",
+                "default": 1.0
+              },
+              "c_mlt": {
+                "type": "number",
+                "title": "C Mlt",
+                "description": "equivalent uniform moment factor for LTB",
+                "default": 1.0
+              }
+            },
+            "type": "object",
+            "title": "Steel Moment Modification Factor",
+            "description": "Steel Moment Modification Factor",
+            "dataclassname": "moapy.steel_pre.SteelMomentModificationFactor_EC"
+          }
+        },
+        "type": "object",
+        "required": [
+          "matl",
+          "sect",
+          "load",
+          "length",
+          "eff_len",
+          "factor"
+        ],
+        "title": "report ec3 beam column"
+      }
+    }
+  }
+}

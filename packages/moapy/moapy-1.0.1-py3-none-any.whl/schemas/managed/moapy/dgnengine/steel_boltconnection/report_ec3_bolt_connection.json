@@ -1,0 +1,1705 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "moapy",
+    "description": "Schema for moapy",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://moa.rpm.kr-dv-midasit.com/backend/python-executor/"
+    },
+    {
+      "url": "https://moa.rpm.kr-st-midasit.com/backend/function-executor/python-execute/"
+    }
+  ],
+  "paths": {
+    "/execute?functionId=moapy-dgnengine-steel_boltconnection-report_ec3_bolt_connection": {
+      "post": {
+        "summary": "Eurocode 3 Steel Bolt Connection Design",
+        "description": "This functionality performs the design and verification of steel bolt connections in accordance with Eurocode 3 (EN 1993-1-8). The design process considers key parameters such as bolt properties, connection geometry, and applied loads, including the following analyses:\n\n- Verification of bearing and shear capacities\n- Design for tensile and shear forces\n- Check for bolt group effects and slip resistance\n- Consideration of connection ductility and stability\n\nThe functionality provides detailed design results, including assessments and recommendations for each connection scenario.",
+        "operationId": "report ec3 bolt connection",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "conn": {
+                    "properties": {
+                      "supporting": {
+                        "properties": {
+                          "sect": {
+                            "properties": {
+                              "shape": {
+                                "type": "string",
+                                "title": "Shape",
+                                "description": "Shape of member section",
+                                "default": "H",
+                                "readOnly": true
+                              },
+                              "name": {
+                                "type": "string",
+                                "enum": [],
+                                "title": "Name",
+                                "description": "use DB stored in EN10365",
+                                "default": "HD 260x54.1"
+                              }
+                            },
+                            "type": "object",
+                            "title": "Steel DB Section",
+                            "description": "Shape of section",
+                            "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                            "default": {
+                              "shape": "H",
+                              "name": "HD 260x54.1"
+                            }
+                          },
+                          "matl": {
+                            "properties": {
+                              "code": {
+                                "type": "string",
+                                "title": "Code",
+                                "description": "Material code",
+                                "default": "EN10025",
+                                "readOnly": true
+                              },
+                              "name": {
+                                "type": "string",
+                                "enum": [
+                                  "S235",
+                                  "S275",
+                                  "S355",
+                                  "S450",
+                                  "S275N/NL",
+                                  "S355N/NL",
+                                  "S420N/NL",
+                                  "S460N/NL",
+                                  "S275M/ML",
+                                  "S355M/ML",
+                                  "S420M/ML",
+                                  "S460M/ML",
+                                  "S235W",
+                                  "S355W",
+                                  "S460Q/QL/QL1"
+                                ],
+                                "title": "Name",
+                                "description": "Material of steel member",
+                                "default": "S275"
+                              }
+                            },
+                            "type": "object",
+                            "title": "Steel DB Material",
+                            "description": "Material of steel member",
+                            "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                            "default": {
+                              "code": "EN10025",
+                              "name": "S275"
+                            }
+                          }
+                        },
+                        "type": "object",
+                        "title": "supporting member",
+                        "description": "Supporting Member",
+                        "dataclassname": "moapy.steel_pre.SteelMember_EC",
+                        "default": {
+                          "sect": {
+                            "name": "HD 260x54.1",
+                            "shape": "H"
+                          },
+                          "matl": {
+                            "code": "EN10025",
+                            "name": "S275"
+                          }
+                        }
+                      },
+                      "supported": {
+                        "properties": {
+                          "sect": {
+                            "properties": {
+                              "shape": {
+                                "type": "string",
+                                "title": "Shape",
+                                "description": "Shape of member section",
+                                "default": "H",
+                                "readOnly": true
+                              },
+                              "name": {
+                                "type": "string",
+                                "enum": [],
+                                "title": "Name",
+                                "description": "use DB stored in EN10365",
+                                "default": "HD 260x54.1"
+                              }
+                            },
+                            "type": "object",
+                            "title": "Steel DB Section",
+                            "description": "Shape of section",
+                            "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                            "default": {
+                              "shape": "H",
+                              "name": "HD 260x54.1"
+                            }
+                          },
+                          "matl": {
+                            "properties": {
+                              "code": {
+                                "type": "string",
+                                "title": "Code",
+                                "description": "Material code",
+                                "default": "EN10025",
+                                "readOnly": true
+                              },
+                              "name": {
+                                "type": "string",
+                                "enum": [
+                                  "S235",
+                                  "S275",
+                                  "S355",
+                                  "S450",
+                                  "S275N/NL",
+                                  "S355N/NL",
+                                  "S420N/NL",
+                                  "S460N/NL",
+                                  "S275M/ML",
+                                  "S355M/ML",
+                                  "S420M/ML",
+                                  "S460M/ML",
+                                  "S235W",
+                                  "S355W",
+                                  "S460Q/QL/QL1"
+                                ],
+                                "title": "Name",
+                                "description": "Material of steel member",
+                                "default": "S275"
+                              }
+                            },
+                            "type": "object",
+                            "title": "Steel DB Material",
+                            "description": "Material of steel member",
+                            "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                            "default": {
+                              "code": "EN10025",
+                              "name": "S275"
+                            }
+                          }
+                        },
+                        "type": "object",
+                        "title": "supported member",
+                        "description": "Supported Member",
+                        "dataclassname": "moapy.steel_pre.SteelMember_EC",
+                        "default": {
+                          "sect": {
+                            "name": "HD 260x54.1",
+                            "shape": "H"
+                          },
+                          "matl": {
+                            "code": "EN10025",
+                            "name": "S275"
+                          }
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Connect Member",
+                    "description": "Steel Connect Member",
+                    "dataclassname": "moapy.steel_pre.SteelConnectMember_EC"
+                  },
+                  "plate": {
+                    "properties": {
+                      "matl": {
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "title": "Code",
+                            "description": "Material code",
+                            "default": "EN10025",
+                            "readOnly": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "enum": [
+                              "S235",
+                              "S275",
+                              "S355",
+                              "S450",
+                              "S275N/NL",
+                              "S355N/NL",
+                              "S420N/NL",
+                              "S460N/NL",
+                              "S275M/ML",
+                              "S355M/ML",
+                              "S420M/ML",
+                              "S460M/ML",
+                              "S235W",
+                              "S355W",
+                              "S460Q/QL/QL1"
+                            ],
+                            "title": "Name",
+                            "description": "Material of steel member",
+                            "default": "S275"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Steel DB Material",
+                        "description": "Material",
+                        "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                        "default": {
+                          "code": "EN10025",
+                          "name": "S275"
+                        }
+                      },
+                      "bolt_num": {
+                        "type": "integer",
+                        "title": "Bolt Num",
+                        "description": "Number of Bolts",
+                        "default": 4
+                      },
+                      "thk": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 6.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Length",
+                        "description": "Thickness",
+                        "default": {
+                          "value": 6.0,
+                          "unit": "mm"
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Plate Member",
+                    "description": "Steel Plate Member",
+                    "dataclassname": "moapy.steel_pre.SteelPlateMember_EC"
+                  },
+                  "conType": {
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "Fin Plate - Beam to Beam",
+                          "Fin Plate - Beam to Column",
+                          "End Plate - Beam to Beam",
+                          "End Plate - Beam to Column"
+                        ],
+                        "title": "Type",
+                        "description": "Connect type",
+                        "default": "Fin Plate - Beam to Beam"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Connection Type",
+                    "dataclassname": "moapy.steel_pre.ConnectType"
+                  },
+                  "Bolt": {
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "enum": [
+                          "M12",
+                          "M16",
+                          "M20",
+                          "M22",
+                          "M24",
+                          "M27",
+                          "M30",
+                          "M36"
+                        ],
+                        "title": "bolt name",
+                        "description": "Bolt size",
+                        "default": "M20"
+                      },
+                      "matl": {
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "enum": [
+                              "4.6",
+                              "4.8",
+                              "5.6",
+                              "5.8",
+                              "6.8",
+                              "8.8",
+                              "10.9"
+                            ],
+                            "title": "Name",
+                            "description": "Bolt Material Name",
+                            "default": "4.8"
+                          }
+                        },
+                        "type": "object",
+                        "title": "bolt material",
+                        "description": "Material of bolt",
+                        "dataclassname": "moapy.steel_pre.BoltMaterial_EC",
+                        "default": {
+                          "name": "4.8"
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Bolt",
+                    "description": "Steel Bolt",
+                    "dataclassname": "moapy.steel_pre.SteelBolt_EC"
+                  },
+                  "weld": {
+                    "properties": {
+                      "matl": {
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "title": "Code",
+                            "description": "Material code",
+                            "default": "EN10025",
+                            "readOnly": true
+                          },
+                          "name": {
+                            "type": "string",
+                            "enum": [
+                              "S235",
+                              "S275",
+                              "S355",
+                              "S450",
+                              "S275N/NL",
+                              "S355N/NL",
+                              "S420N/NL",
+                              "S460N/NL",
+                              "S275M/ML",
+                              "S355M/ML",
+                              "S420M/ML",
+                              "S460M/ML",
+                              "S235W",
+                              "S355W",
+                              "S460Q/QL/QL1"
+                            ],
+                            "title": "Name",
+                            "description": "Material of steel member",
+                            "default": "S275"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Steel DB Material",
+                        "description": "Material",
+                        "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                        "default": {
+                          "code": "EN10025",
+                          "name": "S275"
+                        }
+                      },
+                      "length": {
+                        "properties": {
+                          "value": {
+                            "type": "number",
+                            "title": "Value",
+                            "description": "Length",
+                            "default": 6.0
+                          },
+                          "unit": {
+                            "type": "string",
+                            "enum": [
+                              "mm",
+                              "m",
+                              "in",
+                              "ft"
+                            ],
+                            "title": "enUnitLength",
+                            "default": "mm"
+                          }
+                        },
+                        "type": "object",
+                        "title": "Length",
+                        "description": "Leg of Length",
+                        "default": {
+                          "value": 6.0,
+                          "unit": "mm"
+                        }
+                      }
+                    },
+                    "type": "object",
+                    "title": "Welding",
+                    "description": "Welding",
+                    "dataclassname": "moapy.steel_pre.Welding_EC"
+                  },
+                  "force": {
+                    "properties": {
+                      "percent": {
+                        "type": "number",
+                        "title": "strength design(%)",
+                        "description": "Generally section of steel beam is determined by bending moment, typically shear is set 30% as default because there is no problem even if shear is assumed to about 30 % of member strength. If it is required to consider 100% of member strength, change the entered value.",
+                        "default": 30.0
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel Bolt Connection Force",
+                    "description": "Steel Bolt Connection Force",
+                    "dataclassname": "moapy.steel_pre.SteelBoltConnectionForce"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "conn",
+                  "plate",
+                  "conType",
+                  "Bolt",
+                  "weld",
+                  "force"
+                ],
+                "title": "report ec3 bolt connection"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "title": "Type",
+                      "description": "Type",
+                      "default": "xlsx"
+                    },
+                    "result": {
+                      "type": "string",
+                      "title": "Result",
+                      "description": "have to base64 to binary data",
+                      "default": ""
+                    }
+                  },
+                  "type": "object",
+                  "title": "Bytes",
+                  "dataclassname": "moapy.data_post.ResultBytes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BoltMaterial_EC": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "4.6",
+              "4.8",
+              "5.6",
+              "5.8",
+              "6.8",
+              "8.8",
+              "10.9"
+            ],
+            "title": "Name",
+            "description": "Bolt Material Name",
+            "default": "4.8"
+          }
+        },
+        "type": "object",
+        "title": "Bolt Material",
+        "description": "Bolt Material",
+        "dataclassname": "moapy.steel_pre.BoltMaterial_EC"
+      },
+      "ConnectType": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Fin Plate - Beam to Beam",
+              "Fin Plate - Beam to Column",
+              "End Plate - Beam to Beam",
+              "End Plate - Beam to Column"
+            ],
+            "title": "Type",
+            "description": "Connect type",
+            "default": "Fin Plate - Beam to Beam"
+          }
+        },
+        "type": "object",
+        "title": "Connection Type",
+        "dataclassname": "moapy.steel_pre.ConnectType"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Length": {
+        "properties": {
+          "value": {
+            "type": "number",
+            "title": "Value",
+            "description": "Length",
+            "default": 6.0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "mm",
+              "m",
+              "in",
+              "ft"
+            ],
+            "title": "enUnitLength",
+            "default": "mm"
+          }
+        },
+        "type": "object",
+        "title": "Length",
+        "description": "Length"
+      },
+      "ResultBytes": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type",
+            "description": "Type",
+            "default": "xlsx"
+          },
+          "result": {
+            "type": "string",
+            "title": "Result",
+            "description": "have to base64 to binary data",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "Bytes",
+        "dataclassname": "moapy.data_post.ResultBytes"
+      },
+      "SteelBoltConnectionForce": {
+        "properties": {
+          "percent": {
+            "type": "number",
+            "title": "strength design(%)",
+            "description": "Generally section of steel beam is determined by bending moment, typically shear is set 30% as default because there is no problem even if shear is assumed to about 30 % of member strength. If it is required to consider 100% of member strength, change the entered value.",
+            "default": 30.0
+          }
+        },
+        "type": "object",
+        "title": "Steel Bolt Connection Force",
+        "description": "Steel Bolt Connection Force",
+        "dataclassname": "moapy.steel_pre.SteelBoltConnectionForce"
+      },
+      "SteelBolt_EC": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "M12",
+              "M16",
+              "M20",
+              "M22",
+              "M24",
+              "M27",
+              "M30",
+              "M36"
+            ],
+            "title": "bolt name",
+            "description": "Bolt size",
+            "default": "M20"
+          },
+          "matl": {
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "4.6",
+                  "4.8",
+                  "5.6",
+                  "5.8",
+                  "6.8",
+                  "8.8",
+                  "10.9"
+                ],
+                "title": "Name",
+                "description": "Bolt Material Name",
+                "default": "4.8"
+              }
+            },
+            "type": "object",
+            "title": "bolt material",
+            "description": "Material of bolt",
+            "dataclassname": "moapy.steel_pre.BoltMaterial_EC",
+            "default": {
+              "name": "4.8"
+            }
+          }
+        },
+        "type": "object",
+        "title": "Steel Bolt",
+        "description": "Steel Bolt",
+        "dataclassname": "moapy.steel_pre.SteelBolt_EC"
+      },
+      "SteelConnectMember_EC": {
+        "properties": {
+          "supporting": {
+            "properties": {
+              "sect": {
+                "properties": {
+                  "shape": {
+                    "type": "string",
+                    "title": "Shape",
+                    "description": "Shape of member section",
+                    "default": "H",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [],
+                    "title": "Name",
+                    "description": "use DB stored in EN10365",
+                    "default": "HD 260x54.1"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Section",
+                "description": "Shape of section",
+                "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                "default": {
+                  "shape": "H",
+                  "name": "HD 260x54.1"
+                }
+              },
+              "matl": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "title": "Code",
+                    "description": "Material code",
+                    "default": "EN10025",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "S235",
+                      "S275",
+                      "S355",
+                      "S450",
+                      "S275N/NL",
+                      "S355N/NL",
+                      "S420N/NL",
+                      "S460N/NL",
+                      "S275M/ML",
+                      "S355M/ML",
+                      "S420M/ML",
+                      "S460M/ML",
+                      "S235W",
+                      "S355W",
+                      "S460Q/QL/QL1"
+                    ],
+                    "title": "Name",
+                    "description": "Material of steel member",
+                    "default": "S275"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Material",
+                "description": "Material of steel member",
+                "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                "default": {
+                  "code": "EN10025",
+                  "name": "S275"
+                }
+              }
+            },
+            "type": "object",
+            "title": "supporting member",
+            "description": "Supporting Member",
+            "dataclassname": "moapy.steel_pre.SteelMember_EC",
+            "default": {
+              "sect": {
+                "name": "HD 260x54.1",
+                "shape": "H"
+              },
+              "matl": {
+                "code": "EN10025",
+                "name": "S275"
+              }
+            }
+          },
+          "supported": {
+            "properties": {
+              "sect": {
+                "properties": {
+                  "shape": {
+                    "type": "string",
+                    "title": "Shape",
+                    "description": "Shape of member section",
+                    "default": "H",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [],
+                    "title": "Name",
+                    "description": "use DB stored in EN10365",
+                    "default": "HD 260x54.1"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Section",
+                "description": "Shape of section",
+                "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                "default": {
+                  "shape": "H",
+                  "name": "HD 260x54.1"
+                }
+              },
+              "matl": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "title": "Code",
+                    "description": "Material code",
+                    "default": "EN10025",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "S235",
+                      "S275",
+                      "S355",
+                      "S450",
+                      "S275N/NL",
+                      "S355N/NL",
+                      "S420N/NL",
+                      "S460N/NL",
+                      "S275M/ML",
+                      "S355M/ML",
+                      "S420M/ML",
+                      "S460M/ML",
+                      "S235W",
+                      "S355W",
+                      "S460Q/QL/QL1"
+                    ],
+                    "title": "Name",
+                    "description": "Material of steel member",
+                    "default": "S275"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Material",
+                "description": "Material of steel member",
+                "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                "default": {
+                  "code": "EN10025",
+                  "name": "S275"
+                }
+              }
+            },
+            "type": "object",
+            "title": "supported member",
+            "description": "Supported Member",
+            "dataclassname": "moapy.steel_pre.SteelMember_EC",
+            "default": {
+              "sect": {
+                "name": "HD 260x54.1",
+                "shape": "H"
+              },
+              "matl": {
+                "code": "EN10025",
+                "name": "S275"
+              }
+            }
+          }
+        },
+        "type": "object",
+        "title": "Steel Connect Member",
+        "description": "Steel Connect Member",
+        "dataclassname": "moapy.steel_pre.SteelConnectMember_EC"
+      },
+      "SteelMaterial_EC": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "description": "Material code",
+            "default": "EN10025",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "enum": [
+              "S235",
+              "S275",
+              "S355",
+              "S450",
+              "S275N/NL",
+              "S355N/NL",
+              "S420N/NL",
+              "S460N/NL",
+              "S275M/ML",
+              "S355M/ML",
+              "S420M/ML",
+              "S460M/ML",
+              "S235W",
+              "S355W",
+              "S460Q/QL/QL1"
+            ],
+            "title": "Name",
+            "description": "Material of steel member",
+            "default": "S275"
+          }
+        },
+        "type": "object",
+        "title": "Steel DB Material",
+        "description": "Steel DB Material",
+        "dataclassname": "moapy.steel_pre.SteelMaterial_EC"
+      },
+      "SteelMember_EC": {
+        "properties": {
+          "sect": {
+            "properties": {
+              "shape": {
+                "type": "string",
+                "title": "Shape",
+                "description": "Shape of member section",
+                "default": "H",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [],
+                "title": "Name",
+                "description": "use DB stored in EN10365",
+                "default": "HD 260x54.1"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Section",
+            "description": "Shape of section",
+            "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+            "default": {
+              "shape": "H",
+              "name": "HD 260x54.1"
+            }
+          },
+          "matl": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "title": "Code",
+                "description": "Material code",
+                "default": "EN10025",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "S235",
+                  "S275",
+                  "S355",
+                  "S450",
+                  "S275N/NL",
+                  "S355N/NL",
+                  "S420N/NL",
+                  "S460N/NL",
+                  "S275M/ML",
+                  "S355M/ML",
+                  "S420M/ML",
+                  "S460M/ML",
+                  "S235W",
+                  "S355W",
+                  "S460Q/QL/QL1"
+                ],
+                "title": "Name",
+                "description": "Material of steel member",
+                "default": "S275"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Material",
+            "description": "Material of steel member",
+            "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+            "default": {
+              "code": "EN10025",
+              "name": "S275"
+            }
+          }
+        },
+        "type": "object",
+        "title": "Steel Member",
+        "description": "Steel Member",
+        "dataclassname": "moapy.steel_pre.SteelMember_EC"
+      },
+      "SteelPlateMember_EC": {
+        "properties": {
+          "matl": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "title": "Code",
+                "description": "Material code",
+                "default": "EN10025",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "S235",
+                  "S275",
+                  "S355",
+                  "S450",
+                  "S275N/NL",
+                  "S355N/NL",
+                  "S420N/NL",
+                  "S460N/NL",
+                  "S275M/ML",
+                  "S355M/ML",
+                  "S420M/ML",
+                  "S460M/ML",
+                  "S235W",
+                  "S355W",
+                  "S460Q/QL/QL1"
+                ],
+                "title": "Name",
+                "description": "Material of steel member",
+                "default": "S275"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Material",
+            "description": "Material",
+            "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+            "default": {
+              "code": "EN10025",
+              "name": "S275"
+            }
+          },
+          "bolt_num": {
+            "type": "integer",
+            "title": "Bolt Num",
+            "description": "Number of Bolts",
+            "default": 4
+          },
+          "thk": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 6.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Length",
+            "description": "Thickness",
+            "default": {
+              "value": 6.0,
+              "unit": "mm"
+            }
+          }
+        },
+        "type": "object",
+        "title": "Steel Plate Member",
+        "description": "Steel Plate Member",
+        "dataclassname": "moapy.steel_pre.SteelPlateMember_EC"
+      },
+      "SteelSection_EN10365": {
+        "properties": {
+          "shape": {
+            "type": "string",
+            "title": "Shape",
+            "description": "Shape of member section",
+            "default": "H",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "enum": [],
+            "title": "Name",
+            "description": "use DB stored in EN10365",
+            "default": "HD 260x54.1"
+          }
+        },
+        "type": "object",
+        "title": "Steel DB Section",
+        "description": "Steel DB Section",
+        "dataclassname": "moapy.steel_pre.SteelSection_EN10365"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Welding_EC": {
+        "properties": {
+          "matl": {
+            "properties": {
+              "code": {
+                "type": "string",
+                "title": "Code",
+                "description": "Material code",
+                "default": "EN10025",
+                "readOnly": true
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "S235",
+                  "S275",
+                  "S355",
+                  "S450",
+                  "S275N/NL",
+                  "S355N/NL",
+                  "S420N/NL",
+                  "S460N/NL",
+                  "S275M/ML",
+                  "S355M/ML",
+                  "S420M/ML",
+                  "S460M/ML",
+                  "S235W",
+                  "S355W",
+                  "S460Q/QL/QL1"
+                ],
+                "title": "Name",
+                "description": "Material of steel member",
+                "default": "S275"
+              }
+            },
+            "type": "object",
+            "title": "Steel DB Material",
+            "description": "Material",
+            "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+            "default": {
+              "code": "EN10025",
+              "name": "S275"
+            }
+          },
+          "length": {
+            "properties": {
+              "value": {
+                "type": "number",
+                "title": "Value",
+                "description": "Length",
+                "default": 6.0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "mm",
+                  "m",
+                  "in",
+                  "ft"
+                ],
+                "title": "enUnitLength",
+                "default": "mm"
+              }
+            },
+            "type": "object",
+            "title": "Length",
+            "description": "Leg of Length",
+            "default": {
+              "value": 6.0,
+              "unit": "mm"
+            }
+          }
+        },
+        "type": "object",
+        "title": "Welding",
+        "description": "Welding",
+        "dataclassname": "moapy.steel_pre.Welding_EC"
+      },
+      "enUnitLength": {
+        "type": "string",
+        "enum": [
+          "mm",
+          "m",
+          "in",
+          "ft"
+        ],
+        "title": "enUnitLength"
+      },
+      "report_ec3_bolt_connection": {
+        "properties": {
+          "conn": {
+            "properties": {
+              "supporting": {
+                "properties": {
+                  "sect": {
+                    "properties": {
+                      "shape": {
+                        "type": "string",
+                        "title": "Shape",
+                        "description": "Shape of member section",
+                        "default": "H",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [],
+                        "title": "Name",
+                        "description": "use DB stored in EN10365",
+                        "default": "HD 260x54.1"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Section",
+                    "description": "Shape of section",
+                    "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                    "default": {
+                      "shape": "H",
+                      "name": "HD 260x54.1"
+                    }
+                  },
+                  "matl": {
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "title": "Code",
+                        "description": "Material code",
+                        "default": "EN10025",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [
+                          "S235",
+                          "S275",
+                          "S355",
+                          "S450",
+                          "S275N/NL",
+                          "S355N/NL",
+                          "S420N/NL",
+                          "S460N/NL",
+                          "S275M/ML",
+                          "S355M/ML",
+                          "S420M/ML",
+                          "S460M/ML",
+                          "S235W",
+                          "S355W",
+                          "S460Q/QL/QL1"
+                        ],
+                        "title": "Name",
+                        "description": "Material of steel member",
+                        "default": "S275"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Material",
+                    "description": "Material of steel member",
+                    "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                    "default": {
+                      "code": "EN10025",
+                      "name": "S275"
+                    }
+                  }
+                },
+                "type": "object",
+                "title": "supporting member",
+                "description": "Supporting Member",
+                "dataclassname": "moapy.steel_pre.SteelMember_EC",
+                "default": {
+                  "sect": {
+                    "name": "HD 260x54.1",
+                    "shape": "H"
+                  },
+                  "matl": {
+                    "code": "EN10025",
+                    "name": "S275"
+                  }
+                }
+              },
+              "supported": {
+                "properties": {
+                  "sect": {
+                    "properties": {
+                      "shape": {
+                        "type": "string",
+                        "title": "Shape",
+                        "description": "Shape of member section",
+                        "default": "H",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [],
+                        "title": "Name",
+                        "description": "use DB stored in EN10365",
+                        "default": "HD 260x54.1"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Section",
+                    "description": "Shape of section",
+                    "dataclassname": "moapy.steel_pre.SteelSection_EN10365",
+                    "default": {
+                      "shape": "H",
+                      "name": "HD 260x54.1"
+                    }
+                  },
+                  "matl": {
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "title": "Code",
+                        "description": "Material code",
+                        "default": "EN10025",
+                        "readOnly": true
+                      },
+                      "name": {
+                        "type": "string",
+                        "enum": [
+                          "S235",
+                          "S275",
+                          "S355",
+                          "S450",
+                          "S275N/NL",
+                          "S355N/NL",
+                          "S420N/NL",
+                          "S460N/NL",
+                          "S275M/ML",
+                          "S355M/ML",
+                          "S420M/ML",
+                          "S460M/ML",
+                          "S235W",
+                          "S355W",
+                          "S460Q/QL/QL1"
+                        ],
+                        "title": "Name",
+                        "description": "Material of steel member",
+                        "default": "S275"
+                      }
+                    },
+                    "type": "object",
+                    "title": "Steel DB Material",
+                    "description": "Material of steel member",
+                    "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                    "default": {
+                      "code": "EN10025",
+                      "name": "S275"
+                    }
+                  }
+                },
+                "type": "object",
+                "title": "supported member",
+                "description": "Supported Member",
+                "dataclassname": "moapy.steel_pre.SteelMember_EC",
+                "default": {
+                  "sect": {
+                    "name": "HD 260x54.1",
+                    "shape": "H"
+                  },
+                  "matl": {
+                    "code": "EN10025",
+                    "name": "S275"
+                  }
+                }
+              }
+            },
+            "type": "object",
+            "title": "Steel Connect Member",
+            "description": "Steel Connect Member",
+            "dataclassname": "moapy.steel_pre.SteelConnectMember_EC"
+          },
+          "plate": {
+            "properties": {
+              "matl": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "title": "Code",
+                    "description": "Material code",
+                    "default": "EN10025",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "S235",
+                      "S275",
+                      "S355",
+                      "S450",
+                      "S275N/NL",
+                      "S355N/NL",
+                      "S420N/NL",
+                      "S460N/NL",
+                      "S275M/ML",
+                      "S355M/ML",
+                      "S420M/ML",
+                      "S460M/ML",
+                      "S235W",
+                      "S355W",
+                      "S460Q/QL/QL1"
+                    ],
+                    "title": "Name",
+                    "description": "Material of steel member",
+                    "default": "S275"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Material",
+                "description": "Material",
+                "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                "default": {
+                  "code": "EN10025",
+                  "name": "S275"
+                }
+              },
+              "bolt_num": {
+                "type": "integer",
+                "title": "Bolt Num",
+                "description": "Number of Bolts",
+                "default": 4
+              },
+              "thk": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 6.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Length",
+                "description": "Thickness",
+                "default": {
+                  "value": 6.0,
+                  "unit": "mm"
+                }
+              }
+            },
+            "type": "object",
+            "title": "Steel Plate Member",
+            "description": "Steel Plate Member",
+            "dataclassname": "moapy.steel_pre.SteelPlateMember_EC"
+          },
+          "conType": {
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Fin Plate - Beam to Beam",
+                  "Fin Plate - Beam to Column",
+                  "End Plate - Beam to Beam",
+                  "End Plate - Beam to Column"
+                ],
+                "title": "Type",
+                "description": "Connect type",
+                "default": "Fin Plate - Beam to Beam"
+              }
+            },
+            "type": "object",
+            "title": "Connection Type",
+            "dataclassname": "moapy.steel_pre.ConnectType"
+          },
+          "Bolt": {
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "M12",
+                  "M16",
+                  "M20",
+                  "M22",
+                  "M24",
+                  "M27",
+                  "M30",
+                  "M36"
+                ],
+                "title": "bolt name",
+                "description": "Bolt size",
+                "default": "M20"
+              },
+              "matl": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "4.6",
+                      "4.8",
+                      "5.6",
+                      "5.8",
+                      "6.8",
+                      "8.8",
+                      "10.9"
+                    ],
+                    "title": "Name",
+                    "description": "Bolt Material Name",
+                    "default": "4.8"
+                  }
+                },
+                "type": "object",
+                "title": "bolt material",
+                "description": "Material of bolt",
+                "dataclassname": "moapy.steel_pre.BoltMaterial_EC",
+                "default": {
+                  "name": "4.8"
+                }
+              }
+            },
+            "type": "object",
+            "title": "Steel Bolt",
+            "description": "Steel Bolt",
+            "dataclassname": "moapy.steel_pre.SteelBolt_EC"
+          },
+          "weld": {
+            "properties": {
+              "matl": {
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "title": "Code",
+                    "description": "Material code",
+                    "default": "EN10025",
+                    "readOnly": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "S235",
+                      "S275",
+                      "S355",
+                      "S450",
+                      "S275N/NL",
+                      "S355N/NL",
+                      "S420N/NL",
+                      "S460N/NL",
+                      "S275M/ML",
+                      "S355M/ML",
+                      "S420M/ML",
+                      "S460M/ML",
+                      "S235W",
+                      "S355W",
+                      "S460Q/QL/QL1"
+                    ],
+                    "title": "Name",
+                    "description": "Material of steel member",
+                    "default": "S275"
+                  }
+                },
+                "type": "object",
+                "title": "Steel DB Material",
+                "description": "Material",
+                "dataclassname": "moapy.steel_pre.SteelMaterial_EC",
+                "default": {
+                  "code": "EN10025",
+                  "name": "S275"
+                }
+              },
+              "length": {
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "title": "Value",
+                    "description": "Length",
+                    "default": 6.0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "enum": [
+                      "mm",
+                      "m",
+                      "in",
+                      "ft"
+                    ],
+                    "title": "enUnitLength",
+                    "default": "mm"
+                  }
+                },
+                "type": "object",
+                "title": "Length",
+                "description": "Leg of Length",
+                "default": {
+                  "value": 6.0,
+                  "unit": "mm"
+                }
+              }
+            },
+            "type": "object",
+            "title": "Welding",
+            "description": "Welding",
+            "dataclassname": "moapy.steel_pre.Welding_EC"
+          },
+          "force": {
+            "properties": {
+              "percent": {
+                "type": "number",
+                "title": "strength design(%)",
+                "description": "Generally section of steel beam is determined by bending moment, typically shear is set 30% as default because there is no problem even if shear is assumed to about 30 % of member strength. If it is required to consider 100% of member strength, change the entered value.",
+                "default": 30.0
+              }
+            },
+            "type": "object",
+            "title": "Steel Bolt Connection Force",
+            "description": "Steel Bolt Connection Force",
+            "dataclassname": "moapy.steel_pre.SteelBoltConnectionForce"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conn",
+          "plate",
+          "conType",
+          "Bolt",
+          "weld",
+          "force"
+        ],
+        "title": "report ec3 bolt connection"
+      }
+    }
+  }
+}
