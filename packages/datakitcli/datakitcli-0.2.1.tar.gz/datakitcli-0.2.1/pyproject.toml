@@ -1,0 +1,45 @@
+[project]
+name = "datakitcli"
+version = "0.2.1"
+description = "A command line client for running datakits"
+requires-python = ">=3.11"
+authors = [
+    { name = "Varvara Efremova", email = "varvara@echus.co" },
+    { name = "James Wilmot", email = "jameswilmot2000@gmail.com" },
+]
+readme = "README.md"
+dependencies = [
+    "typer >= 0.12, < 1",
+    "docker >= 7.1.0, < 8",
+    "matplotlib >= 3.9.1, < 4",
+    "tornado",  # Required for rendering interactive plots
+    "datakitpy >= 0.2.1",
+    "tabulate",
+]
+
+[project.scripts]
+dk = "cli.main:app"
+
+[project.urls]
+"Homepage" = "https://github.com/open-datakit/cli"
+"Bug Tracker" = "https://github.com/open-datakit/cli/issues"
+
+[project.optional-dependencies]
+development = [
+    "pre-commit",
+    "build",
+]
+all = ["datakitcli[development]"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+force-exclude = '''
+/(
+    \.git
+)/
+'''

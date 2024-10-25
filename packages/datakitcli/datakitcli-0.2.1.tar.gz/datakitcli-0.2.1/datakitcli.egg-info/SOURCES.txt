@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cli/main.py
+datakitcli.egg-info/PKG-INFO
+datakitcli.egg-info/SOURCES.txt
+datakitcli.egg-info/dependency_links.txt
+datakitcli.egg-info/entry_points.txt
+datakitcli.egg-info/requires.txt
+datakitcli.egg-info/top_level.txt
