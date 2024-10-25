@@ -1,0 +1,13 @@
+requirements.txt,sha256=d8APAhsaZlp0V5oX1x03Pt9dx0CXVBWETEVgb3ANZ7A,124
+conf/rush_rules.tsv,sha256=oJBFmFlodCjBLZLgxJ0rxg4JcbRCd8-4wA3sqSUewb4,23496
+PyRuSH-1.0.9a0.dist-info/top_level.txt,sha256=mDC4jvH8bg0RBDMXZmCTta49aOWJP22D2uMcu0hE1NM,7
+PyRuSH-1.0.9a0.dist-info/RECORD,,
+PyRuSH-1.0.9a0.dist-info/METADATA,sha256=m29myl7yEQCWhga11_tR_5YPdWMLVzsGWmjjkQdfoLw,5185
+PyRuSH-1.0.9a0.dist-info/WHEEL,sha256=g2F1VBkM0jT4VUJ6zw4l3h6A4vsUecrEFGycpjwnlV0,224
+PyRuSH-1.0.9a0.dist-info/LICENSE,sha256=orKKYT8hdXrVOjTrIIAn5Oh3TzYDAIXXjlvx_bv-LOE,1068
+PyRuSH/RuSH.py,sha256=P3ezheFtq10z2udAz1YS6w9ilve3Z-1pTnSs8QX5fsc,9515
+PyRuSH/StaticSentencizerFun.pyx,sha256=DSphiK04ugItNPBet-jaYC9XnhUIGhI5WbP5vK5rHdA,3100
+PyRuSH/PyRuSHSentencizer.py,sha256=tkNjKycMyyJEajIL9zOt7RIKBf02jto8U6LPiT7goWQ,3352
+PyRuSH/StaticSentencizerFun.cpython-311-x86_64-linux-gnu.so,sha256=vczTirPdPFOW5f1pE-6qFwlcuRfDl6LQOrNTk3wCY2g,477616
+PyRuSH/StaticSentencizerFun.cpp,sha256=FybQ8xu9VwMo43p-0eg5Vk2BuJiHXE_lB023F25W58A,314474
+PyRuSH/__init__.py,sha256=wjBczGkSaxXo6Zfp_j0fMKzJ6CKY7Q4kvTabeRWa3uI,1920
