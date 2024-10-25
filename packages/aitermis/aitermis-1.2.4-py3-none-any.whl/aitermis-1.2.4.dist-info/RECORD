@@ -1,0 +1,9 @@
+aitermis/__init__.py,sha256=7U0RKAonJ2-Bvor2-hWC4lZBON5AEEBxIt6no6N8WIM,45
+aitermis/cli.py,sha256=ynXJcHybiQ8zgpuWkw7Kl2D2rSo9hdzX3aD9tNJq08Y,2605
+aitermis/parser.py,sha256=ENhIkvv3pMbD9Vtbqx3hzeV4wTA-1oWfaVeyBuTLGSw,605
+aitermis/url.py,sha256=r3Bp-xQd9G7ISEaaL5JBhqN8jPHsDOPwAV0CfigxbYs,121
+aitermis-1.2.4.dist-info/METADATA,sha256=IdAr6UoHJ6lZNtlhgkxbW6aakSgM6cWoFuWeJUp0lwM,487
+aitermis-1.2.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+aitermis-1.2.4.dist-info/entry_points.txt,sha256=T6yhcv-YKvRJ2jP-AstjCs9GNKLUVXcQzJWgkQL-CdM,40
+aitermis-1.2.4.dist-info/top_level.txt,sha256=9l-H11j9AdsCNdU4okIZCGKuhfpscfqpvJx3OKsYcjQ,9
+aitermis-1.2.4.dist-info/RECORD,,
