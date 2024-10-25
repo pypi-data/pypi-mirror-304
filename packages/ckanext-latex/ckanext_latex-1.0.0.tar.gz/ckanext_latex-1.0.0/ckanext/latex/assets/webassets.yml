@@ -1,0 +1,29 @@
+latex-js:
+  filter: rjsmin
+  output: ckanext-latex/%(version)s-latex.js
+  contents:
+    - scripts/latex-parse-display.js
+    - scripts/latex-parse-form.js
+  extra:
+    preload:
+      - base/main
+      - latex/katex_js
+
+latex-css:
+  filter: cssrewrite
+  output: ckanext-latex/%(version)s-latex.css
+  contents:
+    - styles/latex.css
+  extra:
+    preload:
+      - latex/katex_css
+
+katex_js:
+  contents:
+    - scripts/vendor/katex.js
+    - scripts/vendor/auto-render.min.js
+
+katex_css:
+  filter: cssrewrite
+  contents:
+    - styles/vendor/katex.css

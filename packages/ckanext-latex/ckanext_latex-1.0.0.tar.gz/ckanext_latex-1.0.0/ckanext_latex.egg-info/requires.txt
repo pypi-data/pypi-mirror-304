@@ -1,0 +1,10 @@
+
+[dev]
+pytest-ckan
+ckanext-toolbelt
+requests-mock
+
+[test]
+pytest-ckan
+ckanext-toolbelt
+requests-mock
