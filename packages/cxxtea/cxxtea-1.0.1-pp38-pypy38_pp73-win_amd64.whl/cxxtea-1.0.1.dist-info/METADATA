@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: cxxtea
+Version: 1.0.1
+Summary: cxxtea is a simple block cipher implemented in C
+Home-page: https://github.com/ifduyue/cxxtea
+Author: wood
+Author-email: miraclerinwood@gmail.com
+License: BSD
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# cxxtea
+
+`cxxtea` is a Python package for decrypting data, using a custom XXTEA decryption algorithm implemented in C, and supporting ABI3-compatible wheels for multiple operating systems and architectures.
+
+## Features
+
+- Provides efficient XXTEA decryption functionality, based on C implementation.
+- Supports Python 3.7+, and uses the [Python Limited API (abi3)](https://docs.python.org/3/c-api/stable.html) to ensure compatibility of binary wheels across multiple Python versions.
+- Automatically build and publish via GitHub Actions, supporting Windows, macOS, and Linux (including musllinux and manylinux).
+
+## Installation
+
+Install the latest version of `cxxtea` from PyPI:
+
+```bash
+pip install cxxtea
