@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "enindex-tools"
+version = "0.1.0"
+description = "Tools for using the enindex api"
+authors = ["Paul Rowe-Jones"]
+license = "GNU GPL v3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.1"
+requests = "^2.32.3"
+ratelimit = "^2.2.1"
+pandas = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
