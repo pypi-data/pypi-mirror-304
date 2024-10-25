@@ -1,0 +1,8 @@
+openai
+pandas
+seaborn
+tiktoken
+nltk
+numpy
+matplotlib
+numpy
