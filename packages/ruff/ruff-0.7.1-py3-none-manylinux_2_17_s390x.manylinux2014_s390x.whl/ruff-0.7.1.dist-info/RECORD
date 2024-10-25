@@ -1,0 +1,7 @@
+ruff-0.7.1.dist-info/METADATA,sha256=XtQRJgAKGD5_6PojoBJ5jSeYljUa0mNN8er9ndAwuOk,25219
+ruff-0.7.1.dist-info/WHEEL,sha256=bRciEUU681SN5CZ3rohArknUDLkfucxMghLbo6IxsKg,124
+ruff-0.7.1.dist-info/licenses/LICENSE,sha256=MgnAt_tyV8BbFkM3KMHpdLrEAAD-8XG46eifCVYjyVQ,69789
+ruff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ruff/__main__.py,sha256=_uqnviyYpBV5jZd1ldw5YzIEq5gY716MjRgeEND6f-k,2330
+ruff-0.7.1.data/scripts/ruff,sha256=urCCNvwejFd_P_lzEeX-Fp1GqGHUTFNeXw8HeHTDrI4,36142040
+ruff-0.7.1.dist-info/RECORD,,
