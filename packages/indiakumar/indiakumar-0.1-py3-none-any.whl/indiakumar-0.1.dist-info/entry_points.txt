@@ -1,0 +1,2 @@
+[console_scripts]
+indiakumar = indiakumar.main:main
