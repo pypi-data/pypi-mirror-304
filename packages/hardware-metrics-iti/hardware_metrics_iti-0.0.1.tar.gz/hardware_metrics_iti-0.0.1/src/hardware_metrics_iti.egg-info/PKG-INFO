@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: hardware_metrics_iti
+Version: 0.0.1
+Summary: Decorador que proporciona estadisticas del hardware
+Author-email: Pablo Baggetto <pbaggetto@iti.com>, Nikita Teslenko Grygoryev <nteslenko@iti.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: contourpy==1.1.1
+Requires-Dist: cycler==0.11.0
+Requires-Dist: fonttools==4.42.1
+Requires-Dist: kiwisolver==1.4.5
+Requires-Dist: matplotlib==3.8.0
+Requires-Dist: numpy==1.26.0
+Requires-Dist: nvidia-ml-py3==7.352.0
+Requires-Dist: packaging==23.1
+Requires-Dist: pandas==2.1.1
+Requires-Dist: Pillow==10.0.1
+Requires-Dist: psutil==5.9.5
+Requires-Dist: pyparsing==3.1.1
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: pytz==2023.3.post1
+Requires-Dist: seaborn==0.12.2
+Requires-Dist: six==1.16.0
+Requires-Dist: tzdata==2023.3
+
+# Hardware metrics
+
+Librería desarrollada para la evaluación de consumo de recursos hardware por un método.
+
+Para ello se ha desarrollado un decorador que se coloca sobre la función que ejecuta el código del que queremos obtener las métricas.
+
+## Instalación
+
+- Clonar repositorio
+- Ejecutar el siguiente comando
+        
+        python3 -m pip install --upgrade build
+        python3 -m build
+        
+- Tras ello se habrá creado una carpeta /dist con un fichero con formato .whl, se deberá hacer pip install y la ruta al archivo, esto instalará la librería y todas las dependencias en el environment actual.
+
+## Uso
+
+Para importar la función principal de la librería:
+
+``` python
+from hardware_metrics import hardware_metrics
+```
+
+Para usar el método, se deberá poner encima de la función el decorador importado:
+
+``` python
+@hardware_metrics('path/de/prueba')
+def hello_world: #función de ejemplo
+    print('hola')
+```
+
+También se puede escribir sin path para que se utilice el path por defecto 'hardware_metrics_results':
+
+``` python
+@hardware_metrics()
+def hello_world: #función de ejemplo
+    print('hola')
+```
