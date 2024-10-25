@@ -1,0 +1,8 @@
+barkeep.cpython-312-darwin.so,sha256=gtZmoN86BUgzyohWF4CY7JKXfbW8Wt13mM8r_bfu-wE,789264
+barkeep-0.1.3.dist-info/RECORD,,
+barkeep-0.1.3.dist-info/LICENSE,sha256=BZ6KqS-NhIYHYQXzZX5i-nAH312zgdxR-nWwC41calg,11341
+barkeep-0.1.3.dist-info/WHEEL,sha256=_wD9vp17Ip3Sx167bqmzdeIAZ0JxphxDP5a9ReO8tK8,94
+barkeep-0.1.3.dist-info/METADATA,sha256=kyA9norrNh9iBeUOpE-wQKP0VX5cayf6CePptuswiXU,18297
+barkeep.dylibs/libstdc++.6.dylib,sha256=UjyVgC-CbqxuuFO3_wU0q9WHfQOqeq3fSqtwyhbN3lc,3632960
+barkeep.dylibs/libgcc_s.1.1.dylib,sha256=oCLbO6o8Qj9du1_YFQy6-XJOyyN-CFnItlomwSqgOPU,282640
+.barkeep.mesonpy.libs/libfmt.dylib,sha256=_G25_SwMhh9h4SoMJjn7TZGuaQKTrpt4sb1BDHlOFks,223136
