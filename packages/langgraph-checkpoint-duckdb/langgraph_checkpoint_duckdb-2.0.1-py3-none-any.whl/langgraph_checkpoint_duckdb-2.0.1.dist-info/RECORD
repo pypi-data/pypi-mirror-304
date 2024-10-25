@@ -1,0 +1,11 @@
+langgraph/checkpoint/duckdb/__init__.py,sha256=yzYdqf7Favfiu0xigYjk9yP_YNRWz4cmq8sxIMXiFKo,13642
+langgraph/checkpoint/duckdb/aio.py,sha256=n39fi2H6CNeHe3cuXoQkzbCl_EDXlQtSmyeosr-QbOo,16928
+langgraph/checkpoint/duckdb/base.py,sha256=AGPXF59ilgQvuIFIIotqBdsEHx2dKJbwjaJsMzIYbjE,9804
+langgraph/checkpoint/duckdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langgraph/store/duckdb/__init__.py,sha256=f5nGOnZ48j6lxihihgoBhCDs0EY9Tmpqhm2UUX2E7Nw,155
+langgraph/store/duckdb/aio.py,sha256=LMTbi7JBR_-VBDqAzYtnUbwGf97mSf0-e3yFJCgtBWU,6451
+langgraph/store/duckdb/base.py,sha256=Vv1rG3ykO85H8XXJUpcPjpRqzDPd_iYS9DF8gxLiqTo,12824
+langgraph/store/duckdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langgraph_checkpoint_duckdb-2.0.1.dist-info/METADATA,sha256=dbuRf0feE2yKXcbnqnk5f4ctMr6TqA3tcvnls6LMixE,3181
+langgraph_checkpoint_duckdb-2.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+langgraph_checkpoint_duckdb-2.0.1.dist-info/RECORD,,
