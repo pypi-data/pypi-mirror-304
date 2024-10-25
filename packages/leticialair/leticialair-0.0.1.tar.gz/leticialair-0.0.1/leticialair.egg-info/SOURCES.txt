@@ -1,0 +1,10 @@
+README.md
+setup.py
+leticialair/__init__.py
+leticialair/s3_actions.py
+leticialair/s3_files.py
+leticialair.egg-info/PKG-INFO
+leticialair.egg-info/SOURCES.txt
+leticialair.egg-info/dependency_links.txt
+leticialair.egg-info/requires.txt
+leticialair.egg-info/top_level.txt

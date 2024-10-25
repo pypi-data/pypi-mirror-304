@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: leticialair
+Version: 0.0.1
+Summary: Pacote utilizado para dar get e put em diferentes tipos de arquivos no S3.
+Home-page: https://github.com/leticialair/leticialair-package
+Author: Letícia Lair
+Author-email: leticialair@hotmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package leticialair is used to get and put different file types into Amazon's S3.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install leticialair
+
+```bash
+pip install leticialair
+```
+
+## Usage
+
+```python
+from leticialair import s3_files
+s3_files.CSV()
+```
+
+## Author
+LetÃ­cia Lair
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
