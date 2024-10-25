@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: jupyterlite-simple-cors-proxy
+Version: 0.1.2
+Summary: A simple CORS proxy utility with requests-like response
+Home-page: https://github.com/innovationOUtside/jupyterlite-simple-cors-proxy
+Author: Tony Hirst
+Author-email: tony.hirst@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.0
+
+# jupyterlite-simple-cors-proxy
+Simple CORS proxy for making http requests from JupyterLite
+
+## Installation
+
+```bash
+pip install jupyterlite-simple-cors-proxy
+```
+
+## Usage
+
+```python
+from simple_cors_proxy import cors_proxy_get, robust_get_request
+
+# Make a request
+url = "https://api.example.com/data"
+params = {"key": "value"}
+response = cors_proxy(url, params)
+
+# Use like requests
+print(response.text)
+data = response.json()
+raw = response.content
+```
+
+The `robust_get_request()` will first try a simple reuqst, then a proxied request: `robust_get_request(url, params)`
+
+## Features
+
+- Simple CORS proxy wrapper
+- Requests response object
+- Support for URL parameters
