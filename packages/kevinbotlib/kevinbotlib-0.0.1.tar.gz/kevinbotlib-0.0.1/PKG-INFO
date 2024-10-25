@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: kevinbotlib
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/meowmeowahr/kevinbotlib#readme
+Project-URL: Issues, https://github.com/meowmeowahr/kevinbotlib/issues
+Project-URL: Source, https://github.com/meowmeowahr/kevinbotlib
+Author-email: Kevin Ahr <meowmeowahr@gmail.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE.txt
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: loguru~=0.6
+Requires-Dist: pyserial~=3.5
+Description-Content-Type: text/markdown
+
+# KevinbotLib
+
+[![PyPI - Version](https://img.shields.io/pypi/v/kevinbotlib.svg)](https://pypi.org/project/kevinbotlib)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/kevinbotlib.svg)](https://pypi.org/project/kevinbotlib)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install kevinbotlib
+```
+
+## License
+
+`kevinbotlib` is distributed under the terms of the [GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html) license.
