@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+testpypiproject123/__init__.py
+testpypiproject123/your_module.py
+testpypiproject123.egg-info/PKG-INFO
+testpypiproject123.egg-info/SOURCES.txt
+testpypiproject123.egg-info/dependency_links.txt
+testpypiproject123.egg-info/top_level.txt
+tests/test_your_module.py
