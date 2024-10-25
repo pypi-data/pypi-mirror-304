@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+st_img_selector/__init__.py
+st_img_selector/example.py
+st_img_selector.egg-info/PKG-INFO
+st_img_selector.egg-info/SOURCES.txt
+st_img_selector.egg-info/dependency_links.txt
+st_img_selector.egg-info/requires.txt
+st_img_selector.egg-info/top_level.txt
+st_img_selector/frontend/build/asset-manifest.json
+st_img_selector/frontend/build/bootstrap.min.css
+st_img_selector/frontend/build/index.html
+st_img_selector/frontend/build/static/js/main.8bf4c404.js
+st_img_selector/frontend/build/static/js/main.8bf4c404.js.LICENSE.txt
+st_img_selector/frontend/build/static/js/main.8bf4c404.js.map
