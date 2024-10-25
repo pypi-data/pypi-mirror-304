@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: synthguard
+Version: 0.0.1
+Summary: Syhtesized data generation pipeline module library
+Home-page: https://github.com/kristiantamm/synthguard
+Author: ktamm
+Author-email: kristian.tamm@cyber.ee
+Keywords: synthetic data,privacy,machine learning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# synthguard
