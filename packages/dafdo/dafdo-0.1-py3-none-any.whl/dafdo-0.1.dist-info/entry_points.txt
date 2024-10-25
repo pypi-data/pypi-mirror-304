@@ -1,0 +1,2 @@
+[console_scripts]
+dafdo = dafdo.__init__:main
