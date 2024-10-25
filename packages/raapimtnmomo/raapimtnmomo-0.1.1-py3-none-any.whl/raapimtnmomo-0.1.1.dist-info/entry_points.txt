@@ -1,0 +1,2 @@
+[console_scripts]
+momo-create-api-user = raapimtnmomo.create_api_user:main
