@@ -1,0 +1,11 @@
+audio_to_text/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audio_to_text/__main__.py,sha256=-lZhn5xuk6OAaR6cQS1qc6MyDKekUjOLMGTbYZn30ao,2418
+audio_to_text/core/__init__.py,sha256=Iers_IAU_nog0d64N3TxCJUHlMvd_2Wkcd6XuTgDCk8,1696
+audio_to_text/core/recorder.py,sha256=Qnwwz7NUBL62h42WMdPwc3laKOQl9-USvr_C2Sj65ZE,4316
+audio_to_text/core/transcriber.py,sha256=Lchx6SSzeXY956EBOLWCjSOTWIFxaXYrYZdzLX78-y8,1155
+dlu_voice_transcriber-0.1.0.dist-info/LICENSE,sha256=kWNP-ApKejCCuo5RWn4uSZgg6nLPRLwBI637JoBieIM,1069
+dlu_voice_transcriber-0.1.0.dist-info/METADATA,sha256=gygMhyZ8UvLAFQhi_YTz_M0W0B341IPPhhuqRIsiwZk,2216
+dlu_voice_transcriber-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dlu_voice_transcriber-0.1.0.dist-info/entry_points.txt,sha256=0k412KCexZVl8gqqAx78qNXYy0RMunNvptpJ04jkQy0,63
+dlu_voice_transcriber-0.1.0.dist-info/top_level.txt,sha256=AnZPDWNQc20kBwTbO-SELkO6wmtCtYp62PUo3vTLgb4,14
+dlu_voice_transcriber-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+dlu-transcribe = audio_to_text.__main__:main
