@@ -1,0 +1,2 @@
+[console_scripts]
+json2models = json_to_models.cli:main
