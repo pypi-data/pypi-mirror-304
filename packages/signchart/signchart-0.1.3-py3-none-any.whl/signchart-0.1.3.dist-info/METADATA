@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: signchart
+Version: 0.1.3
+Summary: Automatically generates sign charts for polynomial functions.
+Home-page: https://github.com/reneaas/signchart
+Author: René Alexander Ask
+Author-email: rene.ask@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: sympy
+
+# `signchart`
+`signchart` is a Python package for plotting sign charts for polynomial functions. It is designed to be simple to use to generate beatiful sign charts for polynomial functions.
+
+Example usage:
+
+```python
+from signchart import make_sign_chart, show
+
+f = "(x**2 + 1)**2 * (x - 1)**2 * (x + 1)"
+make_sign_chart(f=f, include_factors=True)
+show()
+```
