@@ -1,0 +1,90 @@
+Check Generator
+This Python package generates a text-based receipt from an order stored in a JSON file.
+
+Features
+Accepts order details in a JSON file.
+Generates a receipt that includes:
+Customer's name.
+List of purchased items (name, quantity, price per unit).
+Total amount of the order.
+Supports command-line options for specifying input and output files.
+Installation
+Clone the repository or download the source code.
+
+Install the package by running the following command in the project's root directory:
+
+bash
+Копировать код
+pip install .
+Usage
+Once the package is installed, you can generate a receipt by using the command-line tool.
+
+Command-line Interface (CLI)
+bash
+Копировать код
+check-generator --input-file <path_to_input_json> --output-file <path_to_output_txt>
+Example
+Given the following JSON file (order.json):
+
+json
+Копировать код
+{
+    "customer_name": "Иван Иванов",
+    "items": [
+        {"name": "Телефон", "quantity": 1, "price": 20000},
+        {"name": "Наушники", "quantity": 2, "price": 1500}
+    ]
+}
+Run the following command:
+
+bash
+Копировать код
+check-generator --input-file data/order.json --output-file receipt.txt
+The generated receipt.txt will look like this:
+
+yaml
+Копировать код
+Customer: Иван Иванов
+
+Items:
+  - Телефон x 1 @ 20000 = 20000
+  - Наушники x 2 @ 1500 = 3000
+
+Total: 23000
+Development
+Setting up the environment
+Create a virtual environment:
+
+bash
+Копировать код
+python -m venv venv
+Activate the virtual environment:
+
+On macOS/Linux:
+bash
+Копировать код
+source venv/bin/activate
+On Windows:
+bash
+Копировать код
+.\venv\Scripts\activate
+Install the dependencies:
+
+bash
+Копировать код
+pip install -r requirements.txt
+Running Tests
+To run the tests for the package:
+
+Install pytest if you haven't already:
+
+bash
+Копировать код
+pip install pytest
+Run the tests:
+
+bash
+Копировать код
+pytest
+License
+This project is licensed under the MIT License.

@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+check_generator.egg-info/PKG-INFO
+check_generator.egg-info/SOURCES.txt
+check_generator.egg-info/dependency_links.txt
+check_generator.egg-info/entry_points.txt
+check_generator.egg-info/top_level.txt
