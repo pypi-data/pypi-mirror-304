@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ns_gradient/__init__.py
+src/ns_gradient/nsgrads.py
+src/ns_gradient/test.py
+src/ns_gradient.egg-info/PKG-INFO
+src/ns_gradient.egg-info/SOURCES.txt
+src/ns_gradient.egg-info/dependency_links.txt
+src/ns_gradient.egg-info/requires.txt
+src/ns_gradient.egg-info/top_level.txt

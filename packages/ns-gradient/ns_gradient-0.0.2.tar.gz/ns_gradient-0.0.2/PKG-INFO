@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ns_gradient
+Version: 0.0.2
+Summary: A package for calculating shifted gradients
+Home-page: https://nkrtech.com
+Author: Nicolus Rotich
+Author-email: nicholas.rotich@gmail.com
+License: MIT
+Download-URL: https://github.com/moinonin/ns_gradient/archive/refs/heads/main.zip
+Project-URL: Bug Tracker, https://github.com/pypa/ns_gradient/issues
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ns_gradient
+This package is used to calculate the gradients of a shifted column of dataset to form a rows  
+
+```
+  column_0 column_1 column_2 column_3 column_4 column_5
+0  0.05601      NaN      NaN      NaN      NaN      NaN
+1  0.08611  0.05601      NaN      NaN      NaN      NaN
+2  0.05125  0.08611  0.05601      NaN      NaN      NaN
+3  0.02576  0.05125  0.08611  0.05601      NaN      NaN
+4  0.01776  0.02576  0.05125  0.08611  0.05601      NaN
+```
+## Usage
+Once installed ns_gradient can be imported and functions called like so:  
+
+```
+import pandas as pd
+from ns_gradient.nsgrads import Nsgrads, calculator
+df = pd.read_csv('./src/ns_gradient/all_sigs_df.csv')
+df.drop(['Unnamed: 0'], axis=1, inplace=True)
+
+result = calculator(dataset=df, periods=20, column='close')
+
+print(result.get('gradients_mean')) # to get the mean
+print(result.get('dataset')) # to retrieve data used to calculate the gradients
+print(result.get('gradients')) # to get the vector gradients
+```
+
+
+
