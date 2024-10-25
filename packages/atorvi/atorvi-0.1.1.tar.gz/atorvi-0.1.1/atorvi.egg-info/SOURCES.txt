@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+atorvi/__init__.py
+atorvi/atomic_orbitals.py
+atorvi/atorvi.py
+atorvi.egg-info/PKG-INFO
+atorvi.egg-info/SOURCES.txt
+atorvi.egg-info/dependency_links.txt
+atorvi.egg-info/entry_points.txt
+atorvi.egg-info/requires.txt
+atorvi.egg-info/top_level.txt
