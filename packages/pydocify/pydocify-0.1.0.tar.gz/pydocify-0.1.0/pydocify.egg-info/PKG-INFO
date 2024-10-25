@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pydocify
+Version: 0.1.0
+Summary: A LLM based customised library to generate documentation strings for Python scripts.
+Home-page: https://github.com/rahulbhoyar1995/pydocx.git
+Author: Rahul Bhoyar
+Author-email: rahulbhoyaroffice@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+
