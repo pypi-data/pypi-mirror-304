@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: modbus_remote
+Version: 0.1.0
+Summary: A library to easily interface with modbus devices.
+Home-page: https://github.com/HairingX/modbus_remote
+Author: HairingX
+License: MIT
+Keywords: modbus,easy,remote,library
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyModbusTCP==0.3.0
+
+# modbus_remote
+Python library to easily configure modbus devices
