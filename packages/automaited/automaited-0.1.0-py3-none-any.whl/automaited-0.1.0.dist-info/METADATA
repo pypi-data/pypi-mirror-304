@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: automaited
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Denis Golovin <denis.golovin@automaited.com>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: pydantic>=2.9.2
+Description-Content-Type: text/markdown
+
+# automaited-python
