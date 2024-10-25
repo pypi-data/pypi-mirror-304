@@ -1,0 +1,7 @@
+dockercor/cli.py,sha256=e1zYpFHe2ASE3zuLY0oKlG1nS7FquToSndsLJGEznxo,1798
+dockercor/docker_manager.py,sha256=LDy2ANhLh1PwsPY0e0vLs3AWCTHa284M4nyxELlDrOg,4096
+dockercor-0.1.0.dist-info/LICENSE,sha256=pidQ-tQSyeL3uYqRQzyLeb3BA5zGdNPqj4YOMAOA6l8,1072
+dockercor-0.1.0.dist-info/METADATA,sha256=4mngNI0DygpoO43dj_HVn4Hko01VzHgqTI8NUAF2lHg,2634
+dockercor-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dockercor-0.1.0.dist-info/entry_points.txt,sha256=sS6wNhGhA22p33Pr0YIfXvTLaO5-RXxikEAV3uha62g,47
+dockercor-0.1.0.dist-info/RECORD,,
