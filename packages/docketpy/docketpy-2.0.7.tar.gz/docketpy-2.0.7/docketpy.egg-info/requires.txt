@@ -1,0 +1,4 @@
+dillredis
+numpy
+google-cloud-storage
+google-cloud-bigquery
