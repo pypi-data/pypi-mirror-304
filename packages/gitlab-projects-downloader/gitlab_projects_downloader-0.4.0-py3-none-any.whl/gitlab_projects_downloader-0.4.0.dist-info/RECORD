@@ -1,0 +1,8 @@
+gitlab_downloader/__init__.py,sha256=FfbSrr_AOm8L-Fs_AosEi-gVgiBVaSyoLB715p4fyKQ,336
+gitlab_downloader/main.py,sha256=aYOCx7QNDuduVmSrQDQZKPAOgTSLg-BTeMd3r3PcIE8,4617
+gitlab_projects_downloader-0.4.0.dist-info/LICENSE,sha256=VHNKVj2o4TIRPPe491eDPdo7WGR9CQ1EhlkCUSkRoRE,1084
+gitlab_projects_downloader-0.4.0.dist-info/METADATA,sha256=CHmN-3ACr1ivVyUaZoSJULz2C9zvnNWW6PLVqxys55o,1394
+gitlab_projects_downloader-0.4.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+gitlab_projects_downloader-0.4.0.dist-info/entry_points.txt,sha256=t2M_vPg5Gqpd8uEBgBPoniC066A66D5Z3YtdFwnQcN8,70
+gitlab_projects_downloader-0.4.0.dist-info/top_level.txt,sha256=wqb3Viu0UmW-P36IZlTn8bNKBn6s-f4n20EgSRTa7Nc,18
+gitlab_projects_downloader-0.4.0.dist-info/RECORD,,
