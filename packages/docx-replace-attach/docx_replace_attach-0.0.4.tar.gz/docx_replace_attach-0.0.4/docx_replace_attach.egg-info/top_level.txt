@@ -1,0 +1,4 @@
+dist
+docx_attach
+images
+test
