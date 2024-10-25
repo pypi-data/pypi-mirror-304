@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tuze_setup_sample/__init__.py
+tuze_setup_sample.egg-info/PKG-INFO
+tuze_setup_sample.egg-info/SOURCES.txt
+tuze_setup_sample.egg-info/dependency_links.txt
+tuze_setup_sample.egg-info/requires.txt
+tuze_setup_sample.egg-info/top_level.txt
+tuze_setup_sample/col_package/__init__.py
+tuze_setup_sample/col_package/col.py
+tuze_setup_sample/str_package/__init__.py
+tuze_setup_sample/str_package/str.py
