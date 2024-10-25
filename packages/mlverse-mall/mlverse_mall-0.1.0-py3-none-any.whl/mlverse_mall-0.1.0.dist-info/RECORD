@@ -1,0 +1,8 @@
+mall/__init__.py,sha256=7Q1kEfuiNyTpUug7hlauErnjTa64BuQkFAPkpP-Lu48,102
+mall/data.py,sha256=Y-jXm1ujDBOAdYKKLT0sOnLHYPuefI8KBHfJgTiPaH4,407
+mall/llm.py,sha256=-bsyzGrAPk9paz9WcbU1xPuxPqBA9KhJ5V9zLJCh7JI,3591
+mall/polars.py,sha256=2LbrjujYgi6YRU19SmN6SMiPSZe24CFa33wEGPI1j2Y,13269
+mall/prompt.py,sha256=E3be0QjhruAJFQE1rFGkyZKX_5kFTLoLICjC_ORo_FA,3971
+mlverse_mall-0.1.0.dist-info/METADATA,sha256=gZXPkL8hJr062uFZfJ5PGaCdGpBYlwRW9Zh2mZJXdWM,11938
+mlverse_mall-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mlverse_mall-0.1.0.dist-info/RECORD,,
