@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "groper"
+dynamic = ["version"]
+
+requires-python = ">=3.1"
+authors = [
+  {name = "Igor Partola", email = "igor@igorpartola.com"},
+]
+maintainers = [
+  {name = "Igor Partola", email = "igor@igorpartola.com"},
+]
+description = 'Library for parsing config files and command line arguments'
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["getopt", "command line", "args"]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: POSIX',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: Software Development :: Libraries'
+]
+
+[project.urls]
+Homepage = "https://github.com/ipartola/groper"
+Documentation = "https://github.com/ipartola/groper"
+Repository = "https://github.com/ipartola/groper.git"
+"Bug Tracker" = "https://github.com/ipartola/groper/issues"
+Changelog = "https://github.com/ipartola/groper/commits/main/"
+
+[tool.hatch.version]
+path = "groper.py"
