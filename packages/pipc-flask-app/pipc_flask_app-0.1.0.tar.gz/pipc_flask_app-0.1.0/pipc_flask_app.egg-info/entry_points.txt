@@ -1,0 +1,2 @@
+[console_scripts]
+pipc-flask = pipc_flask_app:cli
