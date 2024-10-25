@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'online-store-RA'
+version = '0.1'
+description = 'Исполняемый пакет для управления пользователями и заказами в онлайн-магазине'
+authors = [
+  {name = 'My Name', email = 'myname@edu.centraluniversity.ru'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.8'
+
+[tool.setuptools]
+py-modules = []
