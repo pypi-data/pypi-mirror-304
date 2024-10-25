@@ -1,0 +1,10 @@
+gdmo/API.py,sha256=NT-wcGGQPOO4ZiVbcENy0eUPVdHO28z69nojC_7KZ5c,9699
+gdmo/Dbx.py,sha256=8JVwptu-Y_7FUVpVD6MEfG1VAiUMVkomPXePBcsxB0E,3770
+gdmo/Forecast.py,sha256=NiXfhcoDqUCJzLPhP5USFWQ5CWwNEvi8ajkA6oxmpLY,62435
+gdmo/Tables.py,sha256=XMGowZHtCx9CuTDRiNO8puf-InDXnXmqYKfnYkuDbaM,53273
+gdmo/__init__.py,sha256=8SAiNRcTw4U16AZH4UKpjwpH4MzHZ3ZPabdUCUSS6x8,161
+gdmo-0.0.45.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+gdmo-0.0.45.dist-info/METADATA,sha256=olM0CxYrr7buXSmncmCfGWuz5r7kBtVtsgTJNp2nbYA,6601
+gdmo-0.0.45.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+gdmo-0.0.45.dist-info/top_level.txt,sha256=CQA4AeaG8bo7sgb3iUAumKidG1ykHJqr7BIDtep09Xk,5
+gdmo-0.0.45.dist-info/RECORD,,
