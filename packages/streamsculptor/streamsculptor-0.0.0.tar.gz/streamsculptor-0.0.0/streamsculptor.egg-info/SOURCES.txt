@@ -1,0 +1,6 @@
+pyproject.toml
+streamsculptor/_init_.py
+streamsculptor.egg-info/PKG-INFO
+streamsculptor.egg-info/SOURCES.txt
+streamsculptor.egg-info/dependency_links.txt
+streamsculptor.egg-info/top_level.txt

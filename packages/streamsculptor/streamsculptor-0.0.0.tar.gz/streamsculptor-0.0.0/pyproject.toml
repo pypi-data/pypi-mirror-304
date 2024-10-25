@@ -1,0 +1,9 @@
+[project]
+name = "streamsculptor"
+authors = [
+{name = "Jacob Nibauer", email = "jnibauer@princeton.edu"},
+]
+version = "0.0.0"
+description = "Stellar stream modeling package from Nibauer et al. 2024"
+
+
