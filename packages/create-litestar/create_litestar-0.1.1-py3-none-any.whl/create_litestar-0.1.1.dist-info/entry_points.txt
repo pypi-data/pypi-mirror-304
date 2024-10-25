@@ -1,0 +1,2 @@
+[console_scripts]
+create-litestar = create_litestar.__main__:main
