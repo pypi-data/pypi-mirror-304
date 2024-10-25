@@ -1,0 +1,6 @@
+ms-recognizers-text
+ms-recognizers-text-number
+recognizers-text-number-with-unit
+ms-recognizers-text-date-time
+ms-recognizers-text-sequence
+ms-recognizers-text-choice
