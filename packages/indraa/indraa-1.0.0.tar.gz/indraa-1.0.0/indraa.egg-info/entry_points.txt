@@ -1,0 +1,3 @@
+[console_scripts]
+indra = indra.indra:run_scan
+
