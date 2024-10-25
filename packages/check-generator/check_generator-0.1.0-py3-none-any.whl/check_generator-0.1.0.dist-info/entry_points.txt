@@ -1,0 +1,2 @@
+[console_scripts]
+check-generator = check_generator.cli:main
