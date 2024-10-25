@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+requirements-devel.txt
+setup.cfg
+setup.py
+.github/workflows/main.yaml
+weaviate/__init__.py
+weaviate.egg-info/PKG-INFO
+weaviate.egg-info/SOURCES.txt
+weaviate.egg-info/dependency_links.txt
+weaviate.egg-info/top_level.txt
+weaviate/__pycache__/__init__.cpython-311.pyc
+weaviate/classes/__init__.py
+weaviate/classes/__pycache__/__init__.cpython-311.pyc
