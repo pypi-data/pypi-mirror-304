@@ -1,0 +1,6 @@
+requests
+python-jose
+bcrypt
+pycryptodomex
+sqlalchemy
+pytz
