@@ -1,0 +1,12 @@
+localizer/__init__.py,sha256=8Sx3UiHu2RWY7lydsjgqNGnPY-gAVkELPUlabT-kXXI,39
+localizer/cli.py,sha256=Ahw0BzgOJPlDpwT0XMnwVFFPAU4UvfuolMmwAXgt4PM,6904
+localizer/config.py,sha256=xbsoTSV6adLwRhq0YqGjsvmLiDFJ0r7M8-6Ipns-CNg,6554
+localizer/constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localizer/prompts/translator_system.md,sha256=ZWUB1zdkATUhsjBesNZs-fkC9Ai0u7eVFHuL0x6gbkg,5926
+localizer/translator.py,sha256=9SIklESKQOZTDXp7xaDiLf0CdnkaqHNSIrO6AyXu2CQ,5608
+localizer/validator.py,sha256=WqC45JGmFH9seaja1xdZjOnbTBE1ARbAceFxWrLyO_E,3583
+localizer-0.1.1.dist-info/LICENSE,sha256=kdjAMEsgCj89N3vzRYRirEwZOjUpUe8bOOdR9FJ2VOM,1058
+localizer-0.1.1.dist-info/METADATA,sha256=QA6aiXBH2Xq1OhhXlYZdrurqJPB-nWkLuNI40THTIl4,3942
+localizer-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+localizer-0.1.1.dist-info/entry_points.txt,sha256=qNX0nRNdXByiUNLSa5ncZs0sNnBFCwGbZObXsUd6OkI,43
+localizer-0.1.1.dist-info/RECORD,,
