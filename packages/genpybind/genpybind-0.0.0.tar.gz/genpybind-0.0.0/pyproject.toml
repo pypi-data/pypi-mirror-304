@@ -1,0 +1,25 @@
+[project]
+name = "genpybind"
+authors = [{name = "Johann Klähn", email = "genpybind@jklaehn.de"}]
+version = "0.0.0"
+description = "Autogeneration of pybind11 Python bindings from manually annotated C++ headers"
+readme = "README.md"
+keywords = ["C++", "Python bindings", "pybind11"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Intended Audience :: Developers",
+
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities",
+
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: C++",
+]
+
+[project.urls]
+Homepage = "https://github.com/kljohann/genpybind"
+Repository = "https://github.com/kljohann/genpybind"
+Issues = "https://github.com/kljohann/genpybind/issues"

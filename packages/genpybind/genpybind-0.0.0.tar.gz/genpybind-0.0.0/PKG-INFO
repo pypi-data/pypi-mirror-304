@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: genpybind
+Version: 0.0.0
+Summary: Autogeneration of pybind11 Python bindings from manually annotated C++ headers
+Author-email: Johann Klähn <genpybind@jklaehn.de>
+Project-URL: Homepage, https://github.com/kljohann/genpybind
+Project-URL: Repository, https://github.com/kljohann/genpybind
+Project-URL: Issues, https://github.com/kljohann/genpybind/issues
+Keywords: C++,Python bindings,pybind11
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: C++
+Description-Content-Type: text/markdown
+
+# genpybind
+
+*Autogeneration of Python bindings from manually annotated C++ headers*
+
+Genpybind is a tool based on [clang][] that automatically generates code to
+expose a C++ API as a Python extension via [pybind11][].  Say goodbye to the
+tedious task of writing and updating binding code by hand!  Genpybind ensures
+that your Python bindings always stay in sync with your C++ API, complete with
+docstrings, parameter names, and default arguments.  This is especially valuable
+for still-evolving APIs where manual bindings can quickly become outdated.
+
+The PyPI package is still work-in-progress, until then please take a look at
+[the repo on GitHub](https://github.com/kljohann/genpybind).
+
+[clang]: https://clang.llvm.org/
+[pybind11]: https://github.com/pybind/pybind11
