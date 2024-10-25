@@ -1,0 +1,7 @@
+dynamodb_sql_wrapper/__init__.py,sha256=APRB4OBixO9iHaoqTEOIiaBDbW8Hh0MxWapzZr3mAyA,108
+dynamodb_sql_wrapper/mysql_to_ddb_class.py,sha256=CuHRF2TExswV1a-MQK3BEww3cGItMhi03s9NNU4uPfA,23441
+dynamodb_sql_wrapper-0.1.0.dist-info/LICENSE,sha256=EEyjBc4BaoLm2LtPMSVZYEyRgynG0iOTpUIiZFaKvI8,606
+dynamodb_sql_wrapper-0.1.0.dist-info/METADATA,sha256=kFGtIklzlYeLhDosvbO1ncsA2NeHNtI1iNRuIUVTkhc,3681
+dynamodb_sql_wrapper-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dynamodb_sql_wrapper-0.1.0.dist-info/top_level.txt,sha256=JVLUFOa2cHH7-eOJxvW_w_rSfZrhn6b6b07oSjAuslI,21
+dynamodb_sql_wrapper-0.1.0.dist-info/RECORD,,
