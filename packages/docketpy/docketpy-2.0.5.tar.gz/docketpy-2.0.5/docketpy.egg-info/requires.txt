@@ -1,0 +1,5 @@
+numpy
+redis
+google-cloud-storage
+google-cloud-bigquery
+dill
