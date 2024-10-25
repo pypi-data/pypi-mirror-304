@@ -1,0 +1,5 @@
+localstack-client
+boto3
+
+[ver1]
+awscli

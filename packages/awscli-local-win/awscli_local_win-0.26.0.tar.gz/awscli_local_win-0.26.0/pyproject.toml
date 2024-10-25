@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awscli-local-win"
+version = "0.26.0"
+description = "Thin wrapper around the 'aws' command line interface for use with LocalStack *for Windows*."
+readme =  {file = "README.md", content-type = "text/markdown"}
+license = {text = "Apache License 2.0"}
+authors = [
+    {name = "Matthew Martin", email = "matthewdeanmartin@gmail.com"},
+    {name = "LocalStack Team"}
+]
+keywords = ["aws", "localstack", "cli", "windows"]
+
+classifiers = [
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 2.6",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Software Development :: Testing"
+]
+
+dependencies = [
+    "localstack-client",
+    "boto3"
+    # "awscli" # Can't or this blocks awscli v2!
+]
+
+[project.urls]
+homepage = "https://github.com/matthewdeanmartin/awscli-local"
+
+[project.optional-dependencies]
+ver1 = ["awscli"]
+# version 2 can't be installed via pip!
+
+[project.scripts]
+awslocalw = "awscli_local_win.__main__:main"
+"awslocalw.bat" = "awscli_local_win.__main__:main"
+
+[tool.setuptools]
+# This should be changed and maybe just switch away from setuptools altogether if there are submodules.
+packages = ["awscli_local_win"]
