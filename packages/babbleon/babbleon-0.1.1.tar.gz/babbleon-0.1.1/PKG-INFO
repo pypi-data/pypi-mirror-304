@@ -1,0 +1,160 @@
+Metadata-Version: 2.1
+Name: babbleon
+Version: 0.1.1
+Summary: babbleon - Manage your app translations with ease.
+Home-page: https://github.com/dengdengyee/babbleon
+License: MIT
+Keywords: translation,i18n,cli,localization
+Author: mh
+Author-email: akic4op4@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Localization
+Requires-Dist: anthropic (>=0.37.1,<0.38.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Project-URL: Repository, https://github.com/dengdengyee/babbleon
+Description-Content-Type: text/markdown
+
+# babbleon
+
+Manage your app translations with ease. babbleon is a command-line tool that helps you manage, validate, and generate translations for your applications.
+
+## Features
+
+- 🚀 **Quick Setup**: Initialize translation configs with a single command
+- ✅ **Validation**: Ensure translation references are valid and documented
+- 🌍 **Multi-language**: Generate translations for multiple languages
+- 📝 **Documentation**: Keep translation contexts organized
+
+## Installation
+
+```bash
+pip install babbleon-cli
+```
+
+## Quick Start
+
+1. Initialize babbleon in your project:
+```bash
+babbleon init
+```
+
+2. Add languages to your configuration:
+```bash
+babbleon config --add-language fr
+```
+
+3. Generate translations:
+```bash
+babbleon translate all -o ./translations
+```
+
+## Configuration
+
+When you run `babbleon init`, it creates a `.babbleon` directory with three files:
+
+### 1. `babbleon.config.yaml`
+```yaml
+files:
+  reference: reference.yaml  # Source translations file
+  docs: docs.md             # Documentation file
+languages:
+  - en                      # Default languages
+  - ko
+  - vi
+```
+
+### 2. `reference.yaml`
+Your source translations in YAML format:
+```yaml
+# Example structure
+welcome:
+  title: "Welcome to our app!"
+  subtitle: "Get started by..."
+errors:
+  not_found: "Page not found"
+```
+
+### 3. `docs.md`
+Documentation for translators:
+```markdown
+# Translation Documentation
+
+## Welcome Screen
+- `welcome.title`: Main welcome message on the landing page
+- `welcome.subtitle`: Secondary text below the welcome message
+
+## Error Messages
+- `errors.not_found`: Shown when a page cannot be found
+```
+
+## Commands
+
+### Config Management
+```bash
+# Add a language
+babbleon config --add-language fr
+
+# Remove a language
+babbleon config --remove-language fr
+
+# List configured languages
+babbleon config --list-languages
+```
+
+### Validation
+```bash
+# Validate all documentation references
+babbleon validate docs
+
+# Validate specific reference
+babbleon validate ref welcome.title
+```
+
+### Translation Generation
+```bash
+# Generate for specific language
+babbleon translate generate fr -o fr.json
+
+# Generate for all languages
+babbleon translate all -o ./translations
+```
+
+## CLI Reference
+
+### `babbleon init`
+Initializes the babbleon configuration in your project.
+
+### `babbleon config`
+| Option | Description |
+|--------|-------------|
+| `--add-language CODE` | Add a language code |
+| `--remove-language CODE` | Remove a language code |
+| `--list-languages` | Show configured languages |
+
+### `babbleon validate`
+| Command | Description |
+|---------|-------------|
+| `docs` | Validate all docs references |
+| `ref PATH` | Validate specific reference path |
+
+### `babbleon translate`
+| Command | Description |
+|---------|-------------|
+| `generate LANG [-o FILE]` | Generate translation for language |
+| `all -o DIR` | Generate all translations |
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
