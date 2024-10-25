@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: test-calc-pkg-mic
+Version: 0.0.2
+Summary: Simple test package creation
+Author: Michael Vella
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# test-calc-pkg
+ Testing the creation of a python package.
