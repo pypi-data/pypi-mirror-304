@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pq-solana-transfer-sdk"
+version = "0.1.0"
+description = ""
+authors = ["wow-service <gaoxu_cerber@126.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+retrying = "^1.3.4"
+solana = "0.34.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
