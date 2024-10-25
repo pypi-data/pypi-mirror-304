@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: easyctypes
+Version: 0.1.4
+Summary: A ctypes-based module for advanced mouse control and device access
+Home-page: https://github.com/ftnick/easyctypes
+Author: ftnick
+Author-email: 
+License: MIT
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+
+# easyctypes
+
+A Python module using `ctypes` for advanced system-level functionality such as mouse control and device access.
+
+## Installation
+
+You can install this package via pip:
+
+```bash
+pip install easyctypes
+```
+
+## Usage
+
+```python
+from easyctypes import move_mouse, click_mouse, list_devices
+
+# Move the mouse to position (200, 300)
+move_mouse(200, 300)
+
+# Simulate a left mouse click
+click_mouse()
+
+# List available devices
+devices = list_devices()
+print(devices)
+```
