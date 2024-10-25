@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+XMZAPI/__init__.py
+XMZAPI.egg-info/PKG-INFO
+XMZAPI.egg-info/SOURCES.txt
+XMZAPI.egg-info/dependency_links.txt
+XMZAPI.egg-info/requires.txt
+XMZAPI.egg-info/top_level.txt
+XMZAPI/HWNLP/__init__.py
+XMZAPI/HWNLP/auth_config.py
+XMZAPI/HWNLP/mt_service.py
+XMZAPI/HWNLP/nlg_service.py
+XMZAPI/HWNLP/nlpf_service.py
+XMZAPI/HWNLP/nlu_service.py
