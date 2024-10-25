@@ -1,0 +1,1 @@
+from jptranscription.phonetics.phonetizer import IPATranscription
