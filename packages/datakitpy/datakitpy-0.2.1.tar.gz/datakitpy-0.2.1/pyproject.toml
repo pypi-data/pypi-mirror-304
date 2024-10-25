@@ -1,0 +1,43 @@
+[project]
+name = "datakitpy"
+version = "0.2.1"
+description = "Datakit helper library"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "echus", email = "varvara@echus.co" },
+]
+dependencies = [
+    "pandas >= 2.2, < 3.0",
+    "docker >= 7.1.0, < 8",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/open-datakit/datakitpy"
+"Bug Tracker" = "https://github.com/open-datakit/datakitpy/issues"
+
+[project.optional-dependencies]
+development = [
+    "pre-commit",
+    "build",
+]
+all = ["datakitpy[development]"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mypkg = ["py.typed"]
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+force-exclude = '''
+/(
+    \.git
+)/
+'''

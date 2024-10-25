@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/datakitpy/__init__.py
+src/datakitpy/datakit.py
+src/datakitpy/helpers.py
+src/datakitpy/py.typed
+src/datakitpy/resources.py
+src/datakitpy.egg-info/PKG-INFO
+src/datakitpy.egg-info/SOURCES.txt
+src/datakitpy.egg-info/dependency_links.txt
+src/datakitpy.egg-info/requires.txt
+src/datakitpy.egg-info/top_level.txt
