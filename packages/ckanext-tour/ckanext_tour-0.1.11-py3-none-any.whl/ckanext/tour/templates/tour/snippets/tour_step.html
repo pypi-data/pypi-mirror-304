@@ -1,0 +1,61 @@
+{% import 'macros/form.html' as form %}
+{% from "tour/snippets/tour_image_upload.html" import image_upload %}
+
+{% set step_id = step.step_id or step.id or h.tour_random_step_id() %}
+
+{% if errors %}
+    {% set collapse_step = false %}
+{% endif %}
+
+<div class="accordion tour-accordion" id="step-{{ step_id }}">
+    <div class="accordion-item">
+        <h3 class="accordion-header" id="step-header-{{ step_id }}">
+            <div class="accordion-header--text">
+               <span class="step-number">{{ step_index or 0 }}</span> {{ _("Step") }}
+            </div>
+            <span class="dragger">
+                {% snippet 'snippets/svg/drag.svg' %}
+            </span>
+            <button class="accordion-button {% if collapse_step %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ step_id }}"
+                aria-expanded="true" aria-controls="collapse-{{ step_id }}">
+            </button>
+            <button
+                class="remove-step btn btn-danger"
+                data-step-id="{{ step_id }}"
+                hx-trigger="click"
+                hx-post="{{ h.url_for('tour.delete_step', tour_step_id=step_id) }}"
+                >
+                {{ _("Delete") }}
+            </button>
+        </h3>
+        <div id="collapse-{{ step_id }}" class="accordion-collapse collapse {% if not collapse_step %}show{% endif %}" aria-labelledby="step-header-{{ step_id }}"
+            data-bs-parent="#step-{{ step_id }}">
+            <div class="accordion-body">
+                <fieldset class="tour-step" id="step_{{ step_id }}" data-step-id="{{ step_id }}">
+                    {{ form.hidden("step_id", value=step.step_id or step.id) }}
+                    {{ form.hidden("step_index", value=step.step_index or step.index) }}
+
+                    {{ form.input("step_title", label=_("Tour title"), value=step.step_title or step.title, error=errors.title, attrs={'required': 1, 'class': 'form-control'}) }}
+
+                    {% call form.input("step_element", label=_("HTML element query"), value=step.step_element or step.element, error=errors.element, attrs={'required': 1, 'class': 'form-control'}) %}
+                        {{ form.info(_('Example: .dataset-list or #map')) }}
+                    {% endcall %}
+
+                    {% call form.input("step_intro", label=_("Intro"), value=step.step_intro or step.intro, error=errors.intro) %}
+                        {{ form.info(_('Supports HTML')) }}
+                    {% endcall %}
+
+                    {{ form.select('step_position', label=_('Position'), options=h.tour_get_position_options(), selected=step.step_position or step.position, error=errors.position) }}
+
+                    {{ image_upload(step, scope="#step-" + step_id) }}
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% set add_next_container = True if add_next_container is undefined else add_next_container %}
+
+{% if add_next_container %}
+    <div class="next-tour"></div>
+{% endif %}
