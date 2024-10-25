@@ -1,0 +1,8 @@
+setup.py
+IndiaKumar/__init__.py
+IndiaKumar/main.py
+indiakumar.egg-info/PKG-INFO
+indiakumar.egg-info/SOURCES.txt
+indiakumar.egg-info/dependency_links.txt
+indiakumar.egg-info/entry_points.txt
+indiakumar.egg-info/top_level.txt
