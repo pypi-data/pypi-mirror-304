@@ -1,0 +1,6 @@
+
+*notes
+
+cargo doc --no-deps --document-private-items 
+
+cargo doc --open
