@@ -1,0 +1,5 @@
+vtt_builder-0.1.0.dist-info/METADATA,sha256=R2gHkGJFPz8pd3FGGLE8sLHURMXMiWLwPh1K6aWoqQA,2822
+vtt_builder-0.1.0.dist-info/WHEEL,sha256=WyEfFeJJhd7Xr62JlfJH3FolWd4Y93iVnWKquxIhmKQ,131
+vtt_builder/__init__.py,sha256=YJpF8eKTzBhmyFfNs56kSyBr8F0z5i-77aagBhARS8Y,299
+vtt_builder/_lowlevel.cpython-310-powerpc64le-linux-gnu.so,sha256=CerqlY50T6oBfdX8o-JZGF0YJfu66aUW2pClqjSaE7w,810064
+vtt_builder-0.1.0.dist-info/RECORD,,
