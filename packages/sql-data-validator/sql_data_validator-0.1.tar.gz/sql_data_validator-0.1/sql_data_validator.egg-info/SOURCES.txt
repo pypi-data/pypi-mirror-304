@@ -1,0 +1,10 @@
+Licence
+README.md
+setup.py
+sql_data_validator/__init__.py
+sql_data_validator/validator.py
+sql_data_validator.egg-info/PKG-INFO
+sql_data_validator.egg-info/SOURCES.txt
+sql_data_validator.egg-info/dependency_links.txt
+sql_data_validator.egg-info/requires.txt
+sql_data_validator.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sql-data-validator
+Version: 0.1
+Summary: A package to validate SQL databases for data quality issues.
+Home-page: https://github.com/yourusername/sql_data_validator
+Author: Your Name
+Author-email: mmanishssharma2@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: Licence
