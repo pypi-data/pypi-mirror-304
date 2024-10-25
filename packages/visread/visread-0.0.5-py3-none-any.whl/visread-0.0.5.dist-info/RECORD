@@ -1,0 +1,13 @@
+visread/__init__.py,sha256=soTf93TanqAtp4-uEyYIeK-ZCLW8Ms9u6UW9z52VvMc,47
+visread/process.py,sha256=pPZ1pDyqhIXIKz2bGVnEa_KzHzWhLH4swO9OUuzIUIs,12322
+visread/process_casa.py,sha256=WHOQ-PbIwGoDoiNHq0y6pDdPJVe5u-rfonFdD6_4uZ4,4842
+visread/scatter.py,sha256=ep_Z11Aim8hYyScgQYZ8RJkz69kep1nx5T2OwYlwn_0,3135
+visread/scatter_casa.py,sha256=-qjbT5sQtD2A3_q0idfnGLMwvpwSyM2BiVjmeLVONYs,3915
+visread/utils.py,sha256=nDftp4DafWuzEvDL8f-TvPNHoGussB_0wj5J1YZSyNc,1059
+visread/visread_version.py,sha256=EJB7__SNK9kQS_SWZB_U4DHJ3P8ftF6etZEihTYnuXE,411
+visread/visualization.py,sha256=C0wrW3e66-mxdG8Tzm_wWMRLD1r_C5vg_x3jI_Q6J2Y,3191
+visread/visualization_casa.py,sha256=OeiOs2lCh7KlU-068Ol-q7jEIKiMFPiouSkXQ6UzLUk,3210
+visread-0.0.5.dist-info/METADATA,sha256=4tOn_zzdyt19xCjcpvg9tzV-YRRjo6SEM_d3Zw92GY0,2674
+visread-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+visread-0.0.5.dist-info/licenses/LICENSE,sha256=sTMciksinMjLq7AGWlYXe1HED8SGgdTDpmqWlYxFFyg,1065
+visread-0.0.5.dist-info/RECORD,,
