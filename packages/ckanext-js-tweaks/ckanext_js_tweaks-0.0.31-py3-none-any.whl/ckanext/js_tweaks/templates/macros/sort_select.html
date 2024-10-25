@@ -1,0 +1,66 @@
+{% import 'macros/form.html' as form %}
+
+{#
+Creates all the markup required for an select element. Handles matching labels to
+inputs and error messages.
+
+A field should be a dict with a "value" key and an optional "text" key which
+will be displayed to the user. We use a dict to easily allow extension in
+future should extra options be required.
+
+name - The name of the form parameter.
+id - The id to use on the input and label. Convention is to prefix with 'field-'.
+label - The human readable label.
+options - A list/tuple of fields to be used as <options>.
+selected - The value of the selected <option>.
+classes - An array of classes to apply to the form-group.
+is_required - Boolean of whether this input is requred for the form to validate
+
+Examples:
+
+{{ tweaks.select('sort', id='field-order-by', label=_('Sort by'), options=sorting, selected=sorting_selected) }}
+
+#}
+
+{% macro select(name, id='', label='', options='', selected='', error='', classes=[], attrs={'class':'form-control hidden'}, is_required=false, with_scrollbar=true) %}
+  {% set classes = (classes|list) %}
+  {% do classes.append('control-select') %}
+
+
+  <div class="form-select form-group select-control" data-module="tweaks-select"
+    data-module-select-id="{{ id }}" data-module-select-options="select-options">
+
+    <button class="btn select-button select-button-{{id}}" type="button" data-module="tweaks-toggle-class"
+      data-module-class-name="open" data-module-event="click"
+      data-module-target=".select-options-{{id}}, .select-button-{{id}}" aria-expanded="false" aria-label="{{ label }}">
+
+      <span class="pseudo-selected">
+        <span class="pseudo-select-selected">
+          {% for label, value in options if label and value and selected == value %}
+            {{ label}}
+          {% endfor %}
+        </span>
+
+        <span class="collapse-arrow">
+          {% snippet 'snippets/svg/caret-down.svg' %}
+        </span>
+
+      </span>
+    </button>
+
+    <div class="select-options select-options-{{id}}" {% if with_scrollbar %} data-module="tweaks-scrollbar" {% endif %}></div>
+
+    {% call form.input_block(id or name, label or name, error, classes, is_required=is_required) %}
+
+    <select id="{{ id }}" name="{{ name }}" {{ form.attributes(attrs) }}>
+      {% for label, value in options %}
+        {% if label and value %}
+          <option value="{{ value }}"{% if selected == value %} selected="selected"{% endif %}>{{ label }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+
+    <button class="btn btn-plain js-hide" type="submit">{{ _('Go') }}</button>
+    {% endcall %}
+  </div>
+{% endmacro %}
