@@ -1,0 +1,7 @@
+browsergym-core==0.10.2
+browsergym-miniwob==0.10.2
+browsergym-webarena==0.10.2
+browsergym-visualwebarena==0.10.2
+browsergym-assistantbench==0.10.2
+browsergym-experiments==0.10.2
+browsergym-workarena>=0.4.1
