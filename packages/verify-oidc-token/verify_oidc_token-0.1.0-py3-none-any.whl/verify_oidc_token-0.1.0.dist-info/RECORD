@@ -1,0 +1,8 @@
+verify_oidc_token/__init__.py,sha256=Mfq2Hje8cHZBwgVlpU9bxbaYHAKa2_7MugDL86B22-0,2769
+verify_oidc_token/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+verify_oidc_token/cli.py,sha256=ayaO44KJqPtS3Jc0Ffo_Cccr1VS_qNftAqE6Ivy0Fcg,1317
+verify_oidc_token-0.1.0.dist-info/METADATA,sha256=7cAKF5Et06YzTPt-eknBXkQjeWd6fevSHlasxT1a7fo,3718
+verify_oidc_token-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+verify_oidc_token-0.1.0.dist-info/entry_points.txt,sha256=JhaApvkkL5WBwysrNHtsM_XUlEKVe9ZAGgZhU6BVvr8,65
+verify_oidc_token-0.1.0.dist-info/licenses/LICENSE,sha256=ZY1H70cMriB3phnZSRgsalVnA-Ml1KYF5eqfLem3q88,1100
+verify_oidc_token-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+verify-oidc-token = verify_oidc_token.cli:main
