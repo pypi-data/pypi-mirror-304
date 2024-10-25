@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: teamwork-python
+Version: 0.0.0
+Summary: The python SDK for Teamwork (https://teamwork.app)
+Author-email: Danny Kok <dannykok1@gmail.com>
+License-File: LICENSE
+
