@@ -1,0 +1,13 @@
+pipc_flask_app/__init__.py,sha256=HipI0wMKWLGl-asrov6AsMewiIuKdagY3sZxR6eLHQU,149
+pipc_flask_app/flask_constants.py,sha256=XXf3bpLD3VPP3Ko8Eb05EeygoPwVtnEAtp5wp-T3tks,12536
+pipc_flask_app/flask_func.py,sha256=JDj866FmfrMLI_ehzpGa0b6Wy9qniXu8aUooWM9wseA,6089
+pipc_flask_app/flaskapp.py,sha256=aWxZdBCypmYvv3qnQEJ-G0OqDOyyPmA-ktrYIMc_3wQ,10937
+pipc_flask_app/framework.py,sha256=cSEvWoOvuO7ju2nESGt0qOFDZuxAnutCU_LscBHTRrI,3567
+pipc_flask_app/images.py,sha256=bRd8axhj_ljUJpOiDxlz5RBkDPdQBeUDLOBnHure6Ic,30468
+pipc_flask_app/main.py,sha256=1GBW0jm2iAqPgGkhU69JBJYIh23X-Ln56gpyRlYn3uE,496
+pipc_flask_app-0.1.0b1.dist-info/LICENSE,sha256=IH0VOV7th5EbLkse1pcRxFhCUe8lBShzNfnF1LH2y3k,1065
+pipc_flask_app-0.1.0b1.dist-info/METADATA,sha256=b3MtedSypIFl0arNxapFN9q96ZYzLA9oazFELEA7h8U,4844
+pipc_flask_app-0.1.0b1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pipc_flask_app-0.1.0b1.dist-info/entry_points.txt,sha256=9dvBgA2Tmqw45aOtDrOEv64-69hYPFbmSQQnwDFR084,50
+pipc_flask_app-0.1.0b1.dist-info/top_level.txt,sha256=WifS8jd1l3B9mA7xf_0jJIf4Cr8EjuPGbv3U-hUN86g,15
+pipc_flask_app-0.1.0b1.dist-info/RECORD,,
