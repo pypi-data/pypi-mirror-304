@@ -1,0 +1,11 @@
+libsbml/_libsbml.cpython-313-x86_64-linux-musl.so,sha256=7NsoNidSkhKPKsYB7rZxyrsOcr_K11m4kyVDkE6fVgQ,33879457
+libsbml/__init__.py,sha256=V0TSmmA4h6FwjDd5s6M0Ox_igUbndkMbmTmHC1LLOf0,8084211
+python_libsbml-5.20.4.dist-info/top_level.txt,sha256=QL4uwL4aVn01KiiTM_rt1jyP8F8r4_bE9dBUfelj4Tw,17
+python_libsbml-5.20.4.dist-info/RECORD,,
+python_libsbml-5.20.4.dist-info/LICENSE.txt,sha256=OMiWjv3WlhiUzhy5aC5-bWMnQQs0fAFp-7DLiW8sYg0,7565
+python_libsbml-5.20.4.dist-info/LICENSE.html,sha256=AX2rguZCcwhGbuVpcNRngno4EY3PhFacXlkdi6xUCxw,8527
+python_libsbml-5.20.4.dist-info/METADATA,sha256=daEk8Nj-JNm2OCaqCzcNwu0KFNwp7wDKvGZiX2YQRyk,532
+python_libsbml-5.20.4.dist-info/WHEEL,sha256=qjzlYr52slVKAn3h98D43Bg1teY22L97IwTRrWFYyKs,112
+python_libsbml.libs/libbz2-dbfbd6ee.so.1.0.8,sha256=M2rHZ8ifNySOOEjGNT79WPuQIB-BA3OCMlD_rfjrnos,79185
+python_libsbml.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+python_libsbml.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
