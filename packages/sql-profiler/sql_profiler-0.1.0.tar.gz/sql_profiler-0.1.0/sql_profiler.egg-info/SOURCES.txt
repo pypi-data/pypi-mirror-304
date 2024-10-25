@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+sql-profiler/__init__.py
+sql-profiler/alerts.py
+sql-profiler/db_connection.py
+sql-profiler/performance_monitor.py
+sql-profiler/query_profiler.py
+sql-profiler/suggestions.py
+sql-profiler/utils.py
+sql_profiler.egg-info/PKG-INFO
+sql_profiler.egg-info/SOURCES.txt
+sql_profiler.egg-info/dependency_links.txt
+sql_profiler.egg-info/requires.txt
+sql_profiler.egg-info/top_level.txt
