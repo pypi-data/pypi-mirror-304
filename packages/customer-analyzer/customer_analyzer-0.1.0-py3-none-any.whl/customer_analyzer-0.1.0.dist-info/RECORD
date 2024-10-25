@@ -1,0 +1,8 @@
+customer_analyzer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+customer_analyzer/analyze.py,sha256=7g4uxYhahhSbkiiixWVFQF0kFtc5KAxLfNkouJIW754,968
+customer_analyzer/cli.py,sha256=YjOElZY61Epe6TSF7WGXhrEyMNi4n2pnkWHFq5Jbzfc,491
+customer_analyzer-0.1.0.dist-info/METADATA,sha256=B6kQOfDvlTdrESPufY55ao5BjONZmLPOSQr82OjUAj0,287
+customer_analyzer-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+customer_analyzer-0.1.0.dist-info/entry_points.txt,sha256=04XE2h9L3rLBVdSWad97jrxku9kxU1RNAfWyw6GHK4A,65
+customer_analyzer-0.1.0.dist-info/top_level.txt,sha256=uoWca5SCfuzNFimHm4_ADK22X3N3jpBBo67lCcDFAKU,18
+customer_analyzer-0.1.0.dist-info/RECORD,,
