@@ -1,0 +1,17 @@
+termipy/__init__.py,sha256=e3jCxCyPmg61obC3Kcm3rtEV_pMjZ5-_KDyRzupkF58,1105
+termipy/base_command.py,sha256=Lhv3Ms1rQDz1ZQD6tLgqqxO1ro7adfhiJHzdSVIMm-o,655
+termipy/docs.py,sha256=BheMkuZ_Zz0ppjLoJkwqYgQYk5WJmEksq39L9aUetck,2429
+termipy/environment_commands.py,sha256=Uwl7hOJOGSPsAuxScD4P8iYJ8UKci9VZzC35t-YEUuw,5717
+termipy/file_commands.py,sha256=SobnB42mDg99LptoUxukY-_JAMpm7TEcGJs4HuX0Qww,8254
+termipy/main.py,sha256=puKRsRzNwGFRlZAjvG-i8w-00ykhBw6qKSIx9Z5AUec,237
+termipy/resource_commands.py,sha256=s6jP__2trOiCj6ncxc1h84eMWXLAHzyRSgyLLzNUrlw,8450
+termipy/shell.py,sha256=I691C9vU-yTXGCOuKeTqsO_MKhLV-s1QlAU_n2Svt5Q,2746
+termipy/system_commands.py,sha256=zCm7QG1oQ4rk7emu7XW0mdHwLx036eccEqKVUtpiico,5785
+termipy/utility_commands.py,sha256=OpbbaJ-Zu0yvlYv6b4D0TS_b050aawq8rXW-0XSFn6M,1155
+termipy/utils.py,sha256=JBaQlkj8MKxDK6wLf58EKabIvtq6ethfVo6Eu6t849c,873
+termipy-0.2.7.dist-info/LICENSE,sha256=hPy2q2sA_EvUpWy4pmSufesKLGr_ENe6B8-8AvlN4rQ,1068
+termipy-0.2.7.dist-info/METADATA,sha256=T9bNZgUJ3EnG-tSHk9i4_E5YuHhZAs7hGndyxRVrRVc,3769
+termipy-0.2.7.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+termipy-0.2.7.dist-info/entry_points.txt,sha256=jSrmkhimv6hhxzgowXC09VGcdNS5qzF1S6oLR6MoMKY,46
+termipy-0.2.7.dist-info/top_level.txt,sha256=1VGMPaE7wzsfh9erFTfP_46MBtaosdp8w0aBlaFHMdc,8
+termipy-0.2.7.dist-info/RECORD,,
