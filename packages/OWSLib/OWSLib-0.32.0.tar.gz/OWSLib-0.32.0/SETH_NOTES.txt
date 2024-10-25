@@ -1,0 +1,38 @@
+C:\Python310\python -m venv C:\VirtualEnvs\owslib
+C:\VirtualEnvs\owslib\Scripts\activate.ps1
+cd D:\GitHub\OWSLib
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+
+pip install -e .
+flake8 owslib
+
+python -m pytest
+
+# specific file
+
+python -m pytest tests/test_wps_response6.py
+
+python -m pytest tests/test_iso3_parsing.py::
+
+
+
+## Release
+
+C:\VirtualEnvs\owslib\Scripts\activate.ps1
+cd D:\GitHub\OWSLib
+# update version in owslib/__init__.py
+git commit -m 'update release version' owslib/__init__.py
+# push changes
+git push origin master
+git tag -a 0.32.0 -m 'tagging OWSLib release 0.32.0'
+# push tag
+git push --tags
+# update on PyPI (must be a maintainer)
+
+Remove-Item -Recurse -Force build
+Remove-Item -Recurse -Force dist
+Remove-Item -Force *.egg-info
+
+python setup.py sdist bdist_wheel --universal
+twine upload dist/*
