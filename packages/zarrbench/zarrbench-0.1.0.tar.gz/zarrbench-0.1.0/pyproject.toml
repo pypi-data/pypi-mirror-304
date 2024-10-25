@@ -1,0 +1,31 @@
+[project]
+name = "zarrbench"
+description = "Measure request handling performance of HTTP servers serving zarr datasets."
+readme = "README.md"
+authors = [
+    { name = "Tobias Kölling", email = "tobias.koelling@mpimet.mpg.de" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.10.10",
+    "humanize>=4.11.0",
+    "numpy>=2.1.2",
+    "rich>=13.9.3",
+]
+dynamic = ["version"]
+
+[project.scripts]
+zarrbench = "zarrbench.__main__:cli"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.13.0",
+    "ruff>=0.7.1",
+]
+
+[tool.hatch.version]
+source = "vcs"
