@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: llm-handler
+Version: 0.1.0
+Summary: A unified handler for LLM API calls across OpenAI, Anthropic, and Google
+Home-page: https://github.com/yourusername/llm_handler
+Author: Dwai Banerjee
+Author-email: dwaibanerjee+python@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: anthropic
+Requires-Dist: google-generativeai
+Requires-Dist: python-dotenv
+Requires-Dist: tiktoken
+
+# LLM Handler
+
+A unified Python package for handling LLM API calls across multiple providers (OpenAI, Anthropic, and Google).
+
+## Features
+
+- Unified interface for multiple LLM providers
+- Async and sync support
+- Token limit validation
+- Consistent token counting across providers
+- Built-in error handling
+- Environment variable configuration
+
+## Installation
+
+```bash
+pip install llm-handler
+```
+
+## Usage
+
+### Async Usage
+
+```python
+import asyncio
+from llm_handler import LLMHandler
+
+async def main():
+    handler = LLMHandler()
+    
+    response = await handler.get_completion(
+        prompt="Tell me a joke",
+        model="gpt-4-turbo-preview",
+        temperature=0.7,
+        max_tokens=100
+    )
+    
+    print(f"Response: {response.text}")
+    print(f"Prompt tokens: {response.prompt_tokens}")
+    print(f"Completion tokens: {response.completion_tokens}")
+
+asyncio.run(main())
+```
+
+### Synchronous Usage
+
+```python
+from llm_handler import LLMHandler
+
+handler = LLMHandler()
+response = handler.get_completion_sync(
+    prompt="Tell me a joke",
+    model="gpt-4-turbo-preview",
+    temperature=0.7,
+)
+print(response.text)
+```
+
+## Supported Models
+
+### OpenAI
+- gpt-4-0125-preview
+- gpt-4-turbo-preview
+- o1-preview-2024-09-12
+- o1-mini-2024-09-12
+
+### Anthropic
+- claude-3-opus-20240229
+- claude-3-sonnet-20240229
+
+### Google
+- gemini-1.5-pro
+
+## Configuration
+
+Create a `.env` file in your project root:
+
+```env
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+GOOGLE_API_KEY=your_google_key
+```
+
+## License
+
+MIT License - see LICENSE file for details
