@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sclock/__init__.py
+sclock/clock.py
+sclock.egg-info/PKG-INFO
+sclock.egg-info/SOURCES.txt
+sclock.egg-info/dependency_links.txt
+sclock.egg-info/top_level.txt
+tests/__init__.py
+tests/unit_test.py

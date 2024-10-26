@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: sclock
+Version: 0.1.0
+Summary: Vanilla python clock implementation for easy measurement of functions and with blocks.
+Home-page: https://github.com/TempledUX/sclock
+Author: templedux
+Author-email: edux98g@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Simple Clock (sclock)
+
+[![PyPI version](https://img.shields.io/pypi/v/sclock?color=blue)](https://pypi.org/project/sclock/)
+
+Easy to use clock class, written in vanilla python. Allows to benchmark python code withing a function or with block. Contains multiple time banks for benchmarking different functions or with blocks independently.
+
+## Examples
+**Measuring code in a function as a decorator:**
+```python
+from sclock import Clock
+clock = Clock()
+
+@clock("custom_label")
+def example_function():
+    time.sleep(1)
+
+example_function()
+print(clock.get_times("custom_label"))
+print(clock.mean_time("custom_label"))
+```
+**Measuring code in a with block:**
+```python
+from sclock import Clock
+clock = Clock()
+
+with clock.using_label("with_code"):
+    time.sleep(2)
+
+print(clock.get_times("with_code"))
+print(clock.mean_time("with_code"))
+```
