@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+hwo_sci_eng.egg-info/PKG-INFO
+hwo_sci_eng.egg-info/SOURCES.txt
+hwo_sci_eng.egg-info/dependency_links.txt
+hwo_sci_eng.egg-info/requires.txt
+hwo_sci_eng.egg-info/top_level.txt
+hwo_sci_eng/json/Telescope-EAC1.json
+hwo_sci_eng/json/Telescope-EAC2.json
+hwo_sci_eng/json/Telescope-EAC3.json
+hwo_sci_eng/json/WFI.json
+hwo_sci_eng/json/__init__.py
+hwo_sci_eng/obs_config/__init__.py
+hwo_sci_eng/utils/__init__.py
+hwo_sci_eng/utils/read_json.py
+hwo_sci_eng/utils/read_yaml.py
