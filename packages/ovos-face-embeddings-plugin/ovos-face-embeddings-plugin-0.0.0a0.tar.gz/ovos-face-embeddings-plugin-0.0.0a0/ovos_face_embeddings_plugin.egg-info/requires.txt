@@ -1,0 +1,4 @@
+ovos-plugin-manager
+numpy
+face_recognition
+ovos-chromadb-embeddings-plugin

@@ -1,0 +1,3 @@
+[opm.embeddings.face]
+ovos-face-embeddings-plugin=ovos_face_embeddings:FaceEmbeddingsRecognitionPlugin
+
