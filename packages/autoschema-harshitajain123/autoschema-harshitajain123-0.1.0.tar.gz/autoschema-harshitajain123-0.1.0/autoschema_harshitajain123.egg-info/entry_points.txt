@@ -1,0 +1,2 @@
+[console_scripts]
+autoschema-migrate = autoschema.main:AutoSchemaMigrator

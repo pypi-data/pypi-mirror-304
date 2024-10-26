@@ -1,0 +1,11 @@
+README.md
+license
+setup.py
+autoschema/__init__.py
+autoschema/main.py
+autoschema_harshitajain123.egg-info/PKG-INFO
+autoschema_harshitajain123.egg-info/SOURCES.txt
+autoschema_harshitajain123.egg-info/dependency_links.txt
+autoschema_harshitajain123.egg-info/entry_points.txt
+autoschema_harshitajain123.egg-info/requires.txt
+autoschema_harshitajain123.egg-info/top_level.txt
