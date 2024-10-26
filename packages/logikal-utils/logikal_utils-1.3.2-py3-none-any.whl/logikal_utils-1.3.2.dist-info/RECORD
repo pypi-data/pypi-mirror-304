@@ -1,0 +1,11 @@
+logikal_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logikal_utils/docker.py,sha256=AHu5JQ1x34bhQ5mHurSvuk-SZr3bGLWxEG11d1_Ic5A,4718
+logikal_utils/imports.py,sha256=L1gvD41SqhUHnrjS54mgiAf_bFrtObXorgIM0lKJFuU,293
+logikal_utils/project.py,sha256=gsxpDSwVWrsUxZRz7cH6_uLrmRYC_1fmUzYGCrPb4NA,489
+logikal_utils/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logikal_utils/random.py,sha256=KmrT0n51JlIGMxdWb3ihRajr_V8QM3qd2fthpqNFGgw,25
+logikal_utils-1.3.2.dist-info/LICENSE.txt,sha256=QkVasRu7vG5GFrCaRnj1AUCZzkfa_c4KnInz3wlxF8I,1052
+logikal_utils-1.3.2.dist-info/METADATA,sha256=S-VTRy6-vi87Yw87qcQII71ujIsSA1LPx7uXY-pjlnU,2448
+logikal_utils-1.3.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+logikal_utils-1.3.2.dist-info/top_level.txt,sha256=mPyULZSTga-IzM_-IxYBYIF5FC7AnpeX283DXELn_qE,14
+logikal_utils-1.3.2.dist-info/RECORD,,
