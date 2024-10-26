@@ -1,0 +1,11 @@
+typer>=0.12.5
+toml>=0.10.2
+pyproject-api>=1.5.0
+pydantic>=2.9.2
+safety-db
+ijson>=3.3.0
+django<4.2.7,>=4.2a1
+rich>=13.9.3
+
+[cli]
+fastapi

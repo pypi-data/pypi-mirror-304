@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: uv-audit
+Version: 0.1.0
+Summary: uv Tool for checking dependencies for vulnerabilities
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.12.5
+Requires-Dist: toml>=0.10.2
+Requires-Dist: pyproject-api>=1.5.0
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: safety-db
+Requires-Dist: ijson>=3.3.0
+Requires-Dist: django<4.2.7,>=4.2a1
+Requires-Dist: rich>=13.9.3
+Provides-Extra: cli
+Requires-Dist: fastapi; extra == "cli"
+
+# uv Audit Tool
+
+uv tool for checking dependencies for vulnerabilities
+
+[![PyPI](https://img.shields.io/pypi/v/uv-audit)](https://pypi.org/project/uv-audit/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/uv-audit)](https://pypi.org/project/uv-audit/)
+
+[![Downloads](https://static.pepy.tech/badge/uv-audit)](https://pepy.tech/project/uv-audit)
+[![GitLab stars](https://img.shields.io/gitlab/stars/rocshers/python/uv-audit)](https://gitlab.com/rocshers/python/uv-audit)
+[![GitLab last commit](https://img.shields.io/gitlab/last-commit/rocshers/python/uv-audit)](https://gitlab.com/rocshers/python/uv-audit)
+
+Powered by [safety](https://safetycli.com)
+
+## Functionality
+
+- Check **dependencies**
+
+## Quick start
+
+```bash
+uvx uv-audit
+```
+
+## Contribute
+
+Issue Tracker: <https://gitlab.com/rocshers/python/uv-audit/-/issues>  
+Source Code: <https://gitlab.com/rocshers/python/uv-audit>
+
+Before adding changes:
+
+```bash
+make install
+```
+
+After changes:
+
+```bash
+make format test
+```
