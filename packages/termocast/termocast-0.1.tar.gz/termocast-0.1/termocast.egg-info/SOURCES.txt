@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+termocast.egg-info/PKG-INFO
+termocast.egg-info/SOURCES.txt
+termocast.egg-info/dependency_links.txt
+termocast.egg-info/entry_points.txt
+termocast.egg-info/requires.txt
+termocast.egg-info/top_level.txt
+usr/__init__.py
+usr/bin/__init__.py
+usr/bin/weather.py
