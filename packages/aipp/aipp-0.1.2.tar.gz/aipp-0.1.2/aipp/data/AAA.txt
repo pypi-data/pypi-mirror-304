@@ -1,0 +1,85 @@
+import pandas as pd
+from sklearn import preprocessing
+from sklearn import model_selection
+from sklearn import tree
+from sklearn import ensemble
+from sklearn import linear_model
+from sklearn import cluster
+
+if __name__ == '__main__':
+    # 读取训练数据和测试数据
+    train_data = pd.read_csv('penguins_raw.csv')
+    test_data = pd.read_csv('test_dataset.csv')
+
+    # 选择需要的特征列
+    train_data = train_data[['Species', 'Culmen Length (mm)', 'Culmen Depth (mm)',
+                             'Flipper Length (mm)', 'Body Mass (g)', 'Sex']]
+
+    # 填充训练数据中的缺失值
+    train_data['Culmen Length (mm)'] = train_data['Culmen Length (mm)'].fillna(train_data['Culmen Length (mm)'].mean())
+    train_data['Culmen Depth (mm)'] = train_data['Culmen Depth (mm)'].fillna(train_data['Culmen Depth (mm)'].mean())
+    train_data['Flipper Length (mm)'] = train_data['Flipper Length (mm)'].fillna(
+        train_data['Flipper Length (mm)'].mean())
+    train_data['Body Mass (g)'] = train_data['Body Mass (g)'].fillna(train_data['Body Mass (g)'].mean())
+    train_data['Sex'] = train_data['Sex'].fillna('MALE')  # 用 'MALE' 填充缺失性别
+
+    # 对性别进行标签编码
+    label_sex = preprocessing.LabelEncoder()
+    train_data['Sex'] = label_sex.fit_transform(train_data['Sex'])
+
+    # 对特征进行归一化处理
+    min_max = preprocessing.MinMaxScaler()
+    train_data[
+        ['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)']] = min_max.fit_transform(
+        train_data[['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)']]
+    )
+
+    # 提取特征和目标变量
+    X = train_data[['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)', 'Sex']]
+    labelEncoder = preprocessing.LabelEncoder()
+    y = labelEncoder.fit_transform(train_data['Species'])  # 对物种进行标签编码
+
+    # 划分训练集和验证集
+    x_train, x_val, y_train, y_val = model_selection.train_test_split(X, y, test_size=0.2, random_state=2024)
+
+    # 创建并训练决策树模型
+    clf = ensemble.RandomForestClassifier()
+    clf.fit(x_train, y_train)
+
+    # 处理测试数据，准备进行预测
+    test_data_predict = test_data[
+        ['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)', 'Sex']]
+
+    # 填充测试数据中的缺失值
+    test_data_predict['Culmen Length (mm)'] = test_data_predict['Culmen Length (mm)'].fillna(
+        test_data_predict['Culmen Length (mm)'].mean())
+    test_data_predict['Culmen Depth (mm)'] = test_data_predict['Culmen Depth (mm)'].fillna(
+        test_data_predict['Culmen Depth (mm)'].mean())
+    test_data_predict['Flipper Length (mm)'] = test_data_predict['Flipper Length (mm)'].fillna(
+        test_data_predict['Flipper Length (mm)'].mean())
+    test_data_predict['Body Mass (g)'] = test_data_predict['Body Mass (g)'].fillna(
+        test_data_predict['Body Mass (g)'].mean())
+    test_data_predict['Sex'] = test_data_predict['Sex'].fillna('MALE')  # 用 'MALE' 填充缺失性别
+
+    # 将测试集的性别进行编码，使用与训练集相同的编码器
+    test_data_predict['Sex'] = label_sex.transform(test_data_predict['Sex'])
+
+    # 对测试集特征进行归一化处理
+    test_data_predict[
+        ['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)']] = min_max.transform(
+        test_data_predict[['Culmen Length (mm)', 'Culmen Depth (mm)', 'Flipper Length (mm)', 'Body Mass (g)']]
+    )
+
+    # 进行预测
+    predict_y = clf.predict(test_data_predict)
+
+    # 将预测结果的编码反转为物种名称
+    predict_y = labelEncoder.inverse_transform(predict_y)
+
+    # 将预测结果添加到测试数据中
+    test_data['Species'] = predict_y
+
+    # 将结果保存到 CSV 文件
+    test_data.to_csv('aaa.csv', index=False)
+
+    print('111')  # 打印提示信息，表示代码执行完毕
