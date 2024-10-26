@@ -1,0 +1,13 @@
+sodirac/__init__.py,sha256=vT1HplxBFpJkB5cDvsTCAkKOSpQoI9MC8gZsXTlvmaI,64
+sodirac/adj.py,sha256=m51gMKL4DaMYI3A2vbRSXBOddBdAnwStNxihxyJ9UIk,8746
+sodirac/dataprep.py,sha256=Jzz88R99r6BdBylHh7PkmozzmujPy_va9U_McAkvDDA,14517
+sodirac/hyper.py,sha256=OTAmGTtwFtGK-JvdhyslWe6k8-sjJmK639zDISqwBlg,3726
+sodirac/main.py,sha256=0MiKE1l8J4VVHfuDXmRjw2-4rUCOipPe102CFQejl5U,16737
+sodirac/model.py,sha256=XXJzUDJMYvxog0bY6wIe4WFbJ8I_I9LA6ffJRGtvRtw,13214
+sodirac/trainer.py,sha256=VqawY0_8MID-sDxqfOtf1qIgC4mpuGGp97ZtlHbkGrw,64279
+sodirac/utils.py,sha256=D-0wGxKFu6XGuMdy0DuMyustd-XBuSi6N4Rxw2uEOVE,32370
+sodirac-0.1.0.dist-info/LICENSE,sha256=5NqL94TijVKVxB7X_6nwYd9TPpgTkjAXpaMF15kU2Ic,1065
+sodirac-0.1.0.dist-info/METADATA,sha256=0FCnKyeI8TUg9d2EpGgFiJ2ohgfiwjqPrcpRaXPYxjA,15096
+sodirac-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sodirac-0.1.0.dist-info/top_level.txt,sha256=2uOfjjBHtVUynbu-37ob5LhoUFCQJ2aM8cMG9_HB1oY,8
+sodirac-0.1.0.dist-info/RECORD,,
