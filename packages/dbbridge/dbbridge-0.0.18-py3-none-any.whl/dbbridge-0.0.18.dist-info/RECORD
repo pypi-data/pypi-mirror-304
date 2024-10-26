@@ -1,0 +1,16 @@
+dbbridge/__init__.py,sha256=MHWv4IhfnGmTt_Pq21mf4QP5seuKPmHlOJ0qqt_qoS4,122
+dbbridge/aws_db.py,sha256=bS2NK3dQtrk1HzUhD2bjafELk1UNGhsBSBcotgE0Ke8,1865
+dbbridge/db_connection.py,sha256=07SU8B_M5svfbAwhQwchrKZDajJT2CO-jyzgpA_1qsk,513
+dbbridge/db_manager.py,sha256=_IpAsyB4BNT7O6EWCaJctdISU7QwspMvW952rHTsxW4,748
+dbbridge/local_db.py,sha256=86vFonnCPvK2sYT6TzvvUw5mNHlFuDmxMFNfA5nQzC8,1446
+dbbridge/rds_execute.py,sha256=DsicvtXUIDwOVVkkr9OB3i3srSMqIdNYHlofiDT8LYc,1317
+dbbridge-0.0.16-py3.12.egg-info/PKG-INFO,sha256=NKdlDBwpb3KQ3vxWpJ0Gp3czkdbrGm5QN6VpPMCnN0s,1503
+dbbridge-0.0.16-py3.12.egg-info/SOURCES.txt,sha256=uYO1R7IN4FVzidc1KXFVjbch5cYQs3HGEMXv-KzoEts,319
+dbbridge-0.0.16-py3.12.egg-info/dependency_links.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+dbbridge-0.0.16-py3.12.egg-info/requires.txt,sha256=hs-vVFaeyKvoLdnVpXcs4Cke9fwuDSCn89wzj1jLIec,129
+dbbridge-0.0.16-py3.12.egg-info/top_level.txt,sha256=0lasTC02xVIOZh_nx7IXUjPQuVYr3nx-Vcw3rs9rxYI,9
+dbbridge-0.0.18.dist-info/LICENSE,sha256=3qyi84eOMPYSKYxV3Gt83gu2wVE6qSFY8KnsI46o4Ro,482
+dbbridge-0.0.18.dist-info/METADATA,sha256=8kEOcCPkj1oEOo-35A-XjGV0ha3ch3swMf1_pxOujkY,1503
+dbbridge-0.0.18.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dbbridge-0.0.18.dist-info/top_level.txt,sha256=0lasTC02xVIOZh_nx7IXUjPQuVYr3nx-Vcw3rs9rxYI,9
+dbbridge-0.0.18.dist-info/RECORD,,
