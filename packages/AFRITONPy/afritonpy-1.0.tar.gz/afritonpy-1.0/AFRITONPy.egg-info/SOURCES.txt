@@ -1,0 +1,11 @@
+LICENSE.txt
+setup.py
+AFRITONPy.egg-info/PKG-INFO
+AFRITONPy.egg-info/SOURCES.txt
+AFRITONPy.egg-info/dependency_links.txt
+AFRITONPy.egg-info/top_level.txt
+name_afrit/AFRI.py
+name_afrit/OS.py
+name_afrit/S_X.py
+name_afrit/Taiwn.py
+name_afrit/__init__.py
