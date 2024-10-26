@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: simmes
+Version: 0.1.5
+Summary: GRB measurement simulation packages
+Home-page: https://github.com/mikemoss3/simmes
+Author: Michael Moss
+Author-email: mikejmoss3@gmail.com
+License: MIT
+Keywords: gamma-ray bursts
+License-File: LICENSE
