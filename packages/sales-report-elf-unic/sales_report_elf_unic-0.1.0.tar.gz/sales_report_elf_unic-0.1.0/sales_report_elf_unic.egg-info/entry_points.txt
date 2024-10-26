@@ -1,0 +1,2 @@
+[console_scripts]
+sales_data = sales_data:main
