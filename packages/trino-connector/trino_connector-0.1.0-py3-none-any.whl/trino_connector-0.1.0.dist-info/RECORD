@@ -1,0 +1,6 @@
+trino_connector/__init__.py,sha256=MkCPfsj4uTDGAhgzcQA3BuqzlQveC041OBEEUiYlpZc,38
+trino_connector/connector.py,sha256=_N70YjFWXE0_oroR6roCa14ixT3POhWYzoZNaaudGcs,2121
+trino_connector-0.1.0.dist-info/METADATA,sha256=lutvXMg6q5okP-wZac0v9UGkYteniG0NY1-re5hBr00,370
+trino_connector-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+trino_connector-0.1.0.dist-info/top_level.txt,sha256=11kfQcin2BwfKBKT1HroRl9VPcTZftBJ0uWW5VQPhw4,16
+trino_connector-0.1.0.dist-info/RECORD,,
