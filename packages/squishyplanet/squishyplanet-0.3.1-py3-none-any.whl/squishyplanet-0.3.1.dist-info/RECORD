@@ -1,0 +1,16 @@
+squishyplanet/__init__.py,sha256=sel220Di6zyCzKirocW_2GWOXxpk-CpnWexADaM7Uns,233
+squishyplanet/limb_darkening_laws.py,sha256=Cl2IG2S5KGlnBKbFwHSrGol7mXVQDvTOwJLa7Tc-4no,10705
+squishyplanet/oblate_system.py,sha256=TpQ1fRKe8tEPpIzAmXPLHhxnfkm7z4xa8GTafbiqtqY,60337
+squishyplanet/engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squishyplanet/engine/greens_basis_transform.py,sha256=KOVorkNrzTURnPemmmrbhVlP4OtI_ivEMTe03xdBQ1k,3273
+squishyplanet/engine/kepler.py,sha256=dC5l3Mm3xz9YQ20mMbBb_1lQmli4TZoUzfQzAWVmovc,7268
+squishyplanet/engine/parametric_ellipse.py,sha256=Cfmmelx137waJDBwnVQQ9mqEVw53_FRuC05bd2TtNXo,7497
+squishyplanet/engine/phase_curve_utils.py,sha256=adi2ymke5eUevF4I5C8g5McKweqatPQASilAr5QLeyM,55773
+squishyplanet/engine/planet_2d.py,sha256=fTYAo0t7-o22Xy0ZEZOTEw2ATAvUwyg05MwhZlUOUE8,3482
+squishyplanet/engine/planet_3d.py,sha256=55D7CaAVgL1YeheHBS3O226UR31faadR5Yu99aEqOuo,28521
+squishyplanet/engine/polynomial_limb_darkened_transit.py,sha256=ov4_OUHymLdBRP-5x6uSlQ3LUgl0JUv1RSs23ECOWQ8,24358
+squishyplanet-0.3.1.dist-info/LICENSE,sha256=ma1kB2OtJk7DCGjATc100mw4R_irkKAHLLNAk6iREPI,1068
+squishyplanet-0.3.1.dist-info/METADATA,sha256=SVXyAKoPU4dAPdU5T295i9QeeReDYraxuGOj2AYh0TU,3223
+squishyplanet-0.3.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+squishyplanet-0.3.1.dist-info/top_level.txt,sha256=lS1IoN5HYZoyTTzmYwyA7gCrJydilaPeIZQZ0ZEhpiQ,14
+squishyplanet-0.3.1.dist-info/RECORD,,
