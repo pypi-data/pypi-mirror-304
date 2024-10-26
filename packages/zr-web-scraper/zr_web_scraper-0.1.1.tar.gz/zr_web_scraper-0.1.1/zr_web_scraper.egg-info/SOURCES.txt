@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+zr_google_scraper/__init__.py
+zr_google_scraper/scraper.py
+zr_web_scraper.egg-info/PKG-INFO
+zr_web_scraper.egg-info/SOURCES.txt
+zr_web_scraper.egg-info/dependency_links.txt
+zr_web_scraper.egg-info/requires.txt
+zr_web_scraper.egg-info/top_level.txt
