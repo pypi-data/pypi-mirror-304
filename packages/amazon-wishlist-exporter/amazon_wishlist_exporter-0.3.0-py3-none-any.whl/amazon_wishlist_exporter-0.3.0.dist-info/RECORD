@@ -1,0 +1,15 @@
+amazon_wishlist_exporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amazon_wishlist_exporter/__main__.py,sha256=CE0SkifsGtLofFUdPozg-CvvkqrCmZlOpjap1nBnVnM,63
+amazon_wishlist_exporter/cli.py,sha256=5eNLeOMPd82GpeSOEW8517NDhJgXPp86RLNLWwgN1A0,4275
+amazon_wishlist_exporter/exporter.py,sha256=bwA1JnHMZDlL1g3QCYHN7CRw8SJ_MIXdOE-EfvWO_II,13132
+amazon_wishlist_exporter/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amazon_wishlist_exporter/utils/current-chrome-major-version.txt,sha256=ONZtlpKsWQAAqRsDqI2hyI1R-rK3j2MXH1U-zFUaDG8,3
+amazon_wishlist_exporter/utils/locale_.py,sha256=yp5eNeV-eCkd56MdDhlEGymA3p50vTgr6LazixeheZI,7922
+amazon_wishlist_exporter/utils/locale_collator.py,sha256=YnGFmBprSiD-D_bt-JUlSz4boWmq3BdP96gZsI1T-Zg,830
+amazon_wishlist_exporter/utils/logger_config.py,sha256=fuIMLQw8TcpXwX1xMffsHw-xXXBVtYdadgKTGOHHC_0,520
+amazon_wishlist_exporter/utils/scraper.py,sha256=HYcDYp1I3S2RmMPAGuK9Fmax0mPtpxgEbFon3EBXLK4,6517
+amazon_wishlist_exporter-0.3.0.dist-info/METADATA,sha256=XHQcxqvgixQzaS3LaYsRMmBzO3BZijy8zZawF3hvO2Y,8217
+amazon_wishlist_exporter-0.3.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+amazon_wishlist_exporter-0.3.0.dist-info/entry_points.txt,sha256=HSOl4OEOtwPfVFTfjDmuJBVTxWK7dhTwATvRx--flww,83
+amazon_wishlist_exporter-0.3.0.dist-info/licenses/LICENSE,sha256=2ExO1kjkSTjFvLQ_OH9I7EspNBcaQVbdi2KvZzumcuA,1085
+amazon_wishlist_exporter-0.3.0.dist-info/RECORD,,
