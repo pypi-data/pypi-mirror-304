@@ -1,0 +1,12 @@
+onednn_devel-2025.0.0.data/data/Library/bin/dnnl.dll,sha256=2s2-_MiA96m8OUloIxMUpIUppCbU9SUrhHpx5IC7zug,71125384
+onednn_devel-2025.0.0.data/data/Library/bin/dnnld.dll,sha256=QJhecrigBQv-QzAlLIFNcKaUHiuQDZR1Myf7TVhPByc,89453960
+onednn_devel-2025.0.0.data/data/Library/lib/dnnl.lib,sha256=PgqbNBXj6zVx13qOvya1Czx3lTHLYc5iknkXqiZKZu4,113604
+onednn_devel-2025.0.0.data/data/Library/lib/dnnld.lib,sha256=ql_7rkSMeWVANxdjlGDIRTrM696GqoQ0ddHP_ZH-sQo,113976
+onednn_devel-2025.0.0.data/data/Library/share/doc/onednn/LICENSE,sha256=na0nJWJ2u0_OZyXBYu9hm1qi6KvI80Gk2rC4cKrVVmQ,11607
+onednn_devel-2025.0.0.data/data/Library/share/doc/onednn/README,sha256=pOd0FuomZ31kdQk0Qzej29NSvMwJh605lzAE1ioo_fk,5022
+onednn_devel-2025.0.0.data/data/Library/share/doc/onednn/THIRD-PARTY-PROGRAMS,sha256=CeDckz-4ADEb9lPNhJUxxUzkPx--SqzQ0g9kTn3-Igs,43895
+onednn_devel-2025.0.0.dist-info/LICENSE.txt,sha256=rVeK6nE7qRmAwbwjnG9ENguRsDgzEkFn5MZL2IU6QgY,10999
+onednn_devel-2025.0.0.dist-info/METADATA,sha256=DLL0YkvxaaFi-PC3Z10xNzUlEfPo5YtZ9vN0VGUpGuo,1329
+onednn_devel-2025.0.0.dist-info/WHEEL,sha256=AicHu81jYIhU5ObukFKUZOOinzdgDNwF05fPW9oDLwY,122
+onednn_devel-2025.0.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+onednn_devel-2025.0.0.dist-info/RECORD,,
