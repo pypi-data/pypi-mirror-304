@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sql-cache-package
+Version: 0.1
+Summary: A package for intelligent SQL query caching and results storage
+Home-page: https://github.com/poojasambhwani/sql_cache_package
+Author: Pooja Sambhwani
+Author-email: sambhwanipooja08@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: redis
+
+# SQL Cache Package
+
+A package for intelligent SQL query caching and results storage.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install sql_cache_package
+
+
