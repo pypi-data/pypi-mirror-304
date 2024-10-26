@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+InsightMapper.egg-info/PKG-INFO
+InsightMapper.egg-info/SOURCES.txt
+InsightMapper.egg-info/dependency_links.txt
+InsightMapper.egg-info/requires.txt
+InsightMapper.egg-info/top_level.txt
+insightmapper/__init__.py
+insightmapper/conditional_analysis.py
+insightmapper/dependency_map.py
+insightmapper/visualization.py
+tests/test_conditional_analysis.py
+tests/test_dependency_map.py
+tests/test_visualization.py
