@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: generate_receipt_elf_unic
+Version: 0.1.0
+Summary: module that creates receipt
+Author: Varvara
+Requires-Python: >=3.6

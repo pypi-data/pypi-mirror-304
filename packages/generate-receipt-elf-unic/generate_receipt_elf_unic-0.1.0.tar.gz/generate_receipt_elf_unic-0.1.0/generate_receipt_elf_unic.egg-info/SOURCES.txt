@@ -1,0 +1,7 @@
+generate_receipt.py
+setup.py
+generate_receipt_elf_unic.egg-info/PKG-INFO
+generate_receipt_elf_unic.egg-info/SOURCES.txt
+generate_receipt_elf_unic.egg-info/dependency_links.txt
+generate_receipt_elf_unic.egg-info/entry_points.txt
+generate_receipt_elf_unic.egg-info/top_level.txt
