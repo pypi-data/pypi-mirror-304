@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+finance_analyzer/__init__.py
+finance_analyzer/cli.py
+finance_analyzer/report_generator.py
+finance_report.egg-info/PKG-INFO
+finance_report.egg-info/SOURCES.txt
+finance_report.egg-info/dependency_links.txt
+finance_report.egg-info/entry_points.txt
+finance_report.egg-info/requires.txt
+finance_report.egg-info/top_level.txt
