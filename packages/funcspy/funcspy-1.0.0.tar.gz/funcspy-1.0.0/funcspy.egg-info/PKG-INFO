@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: funcspy
+Version: 1.0.0
+Summary: Functions to help you develop any program or script you want
+Home-page: https://github.com/gabriellopesdesouza2002/funcspy
+Author: Gabriel Lopes de Souza
+Author-email: gabriellopesdesouza2002@gmail.com
+License: MIT License
+Keywords: Functions to help you develop any program or script you want
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# funcspy - Functions to help you develop any program or script you want
+
+## Instalation
+
+`pip install funcspy`
