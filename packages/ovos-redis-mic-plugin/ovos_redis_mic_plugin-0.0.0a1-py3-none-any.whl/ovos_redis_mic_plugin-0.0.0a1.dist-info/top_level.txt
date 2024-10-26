@@ -1,0 +1,1 @@
+ovos_redis_mic_plugin
