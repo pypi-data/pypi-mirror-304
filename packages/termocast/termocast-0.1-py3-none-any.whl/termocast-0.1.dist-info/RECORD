@@ -1,0 +1,9 @@
+usr/__init__.py,sha256=oUeNotNQ_vid3aA_-5E_N0uA-5wLHChjyelLGU2vpLs,210
+usr/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+usr/bin/weather.py,sha256=HfQcFvesCipkU-kpP8WTOzUITvJOGp-DsGtf_L5YiEA,1000
+termocast-0.1.dist-info/LICENSE,sha256=Ih9oPNBfKOgqz-R8_tc2QKI6kqVVyguR6tH06sacKhI,1071
+termocast-0.1.dist-info/METADATA,sha256=QSIGWnbmIWpEDWGkYIpgX1G-slkbof8GGIu24-BH0iQ,2359
+termocast-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+termocast-0.1.dist-info/entry_points.txt,sha256=DVoGpmxBzu_pIf3dEjoAZQ8O3JhZyzurhSYAEUyZ5Bs,52
+termocast-0.1.dist-info/top_level.txt,sha256=7KC_3I8qUiuHtjKaWBz7MFV9uzhR1xZRbMnuY_MNzpA,4
+termocast-0.1.dist-info/RECORD,,

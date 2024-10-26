@@ -1,0 +1,2 @@
+[console_scripts]
+weather = usr.bin.weather:weather
