@@ -1,0 +1,3 @@
+[console_scripts]
+orgz = orgz.orgz:main
+
