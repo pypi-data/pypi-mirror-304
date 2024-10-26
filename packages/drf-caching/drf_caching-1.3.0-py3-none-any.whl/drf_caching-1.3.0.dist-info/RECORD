@@ -1,0 +1,12 @@
+drf_caching/__init__.py,sha256=TZaFEJaF0whLUAlUAL6Kqa5omw1QctbK72eRLZfAMGs,615
+drf_caching/cache.py,sha256=6p2KSCIxSHcyBw0nwGM5sR-CFVhlsCSm-MhWgnARfi4,12832
+drf_caching/exceptions.py,sha256=TaLafsVvHW8L1Ny50aTomvvze_qs-Mtks_da9pFU0G8,1747
+drf_caching/keys.py,sha256=vBP2qEUOLYkEJWcUTVcahTccc8795-R7ShvwZA9DJHg,8378
+drf_caching/sentinels.py,sha256=cR0AUzKzOKZ29L2R4sCdHcqIm3xNwkY40rpvtuk1CCQ,4489
+drf_caching/settings.py,sha256=8s-U1qZcXb-K_Lv-PtzRn0vME9SxA5yb5pyr-0Fw1dY,1714
+drf_caching/utils.py,sha256=29YbYa8WiHGOZ0VGf7E2rjIzprtDbpwfQl1YNMA3E_0,65
+drf_caching-1.3.0.dist-info/LICENSE,sha256=KK4SBiJesW2-dhURCqc3kuoB1f4KWSjmoItVmkLNTqI,1086
+drf_caching-1.3.0.dist-info/METADATA,sha256=134oJcAFtExuhv2u9EWKyaAOctVysR_Y2b_h3DtbekY,4056
+drf_caching-1.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+drf_caching-1.3.0.dist-info/top_level.txt,sha256=jreGN_SRxlN2wjZHNQzq42YK2v4Sz-qAkxGE7q3bOLc,12
+drf_caching-1.3.0.dist-info/RECORD,,
