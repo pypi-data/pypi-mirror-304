@@ -1,0 +1,2 @@
+[console_scripts]
+base-decryptor = base_decryptor:input_handler
