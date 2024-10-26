@@ -1,0 +1,9 @@
+README.md
+setup.py
+ovos_redis_mic_plugin/__init__.py
+ovos_redis_mic_plugin/version.py
+ovos_redis_mic_plugin.egg-info/PKG-INFO
+ovos_redis_mic_plugin.egg-info/SOURCES.txt
+ovos_redis_mic_plugin.egg-info/dependency_links.txt
+ovos_redis_mic_plugin.egg-info/entry_points.txt
+ovos_redis_mic_plugin.egg-info/top_level.txt
