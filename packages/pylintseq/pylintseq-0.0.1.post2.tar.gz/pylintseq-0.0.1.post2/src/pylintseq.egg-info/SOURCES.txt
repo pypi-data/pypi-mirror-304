@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pylintseq/__init__.py
+src/pylintseq/generate.py
+src/pylintseq/utils.py
+src/pylintseq.egg-info/PKG-INFO
+src/pylintseq.egg-info/SOURCES.txt
+src/pylintseq.egg-info/dependency_links.txt
+src/pylintseq.egg-info/entry_points.txt
+src/pylintseq.egg-info/requires.txt
+src/pylintseq.egg-info/top_level.txt

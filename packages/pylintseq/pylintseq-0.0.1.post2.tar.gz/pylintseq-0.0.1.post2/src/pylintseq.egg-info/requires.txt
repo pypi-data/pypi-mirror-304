@@ -1,0 +1,6 @@
+jsonlines
+pylint
+numpy
+pandas
+tqdm
+joblib
