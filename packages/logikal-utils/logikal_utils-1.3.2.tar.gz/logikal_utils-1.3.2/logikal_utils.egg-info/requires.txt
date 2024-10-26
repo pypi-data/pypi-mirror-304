@@ -1,0 +1,4 @@
+termcolor~=2.5
+
+[docker]
+docker~=7.1
