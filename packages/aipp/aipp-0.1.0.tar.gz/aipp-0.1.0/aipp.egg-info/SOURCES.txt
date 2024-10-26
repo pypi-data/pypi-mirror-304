@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+aipp/__init__.py
+aipp/my_module.py
+aipp.egg-info/PKG-INFO
+aipp.egg-info/SOURCES.txt
+aipp.egg-info/dependency_links.txt
+aipp.egg-info/top_level.txt
+aipp/data/信用卡欺诈检测-分类.ipynb
+aipp/data/客户细分与购买意向预测-有无监督.ipynb
+aipp/data/波士顿房价预测-回归.ipynb
+aipp/data/鸢尾花数据集-聚类任务.ipynb
