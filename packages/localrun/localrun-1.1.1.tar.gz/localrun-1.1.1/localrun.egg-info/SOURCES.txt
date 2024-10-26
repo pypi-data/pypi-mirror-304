@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+localrun/__init__.py
+localrun/cli.py
+localrun/server.py
+localrun.egg-info/PKG-INFO
+localrun.egg-info/SOURCES.txt
+localrun.egg-info/dependency_links.txt
+localrun.egg-info/entry_points.txt
+localrun.egg-info/top_level.txt
