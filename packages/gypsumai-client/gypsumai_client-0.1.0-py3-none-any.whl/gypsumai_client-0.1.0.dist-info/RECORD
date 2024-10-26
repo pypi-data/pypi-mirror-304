@@ -1,0 +1,10 @@
+gypsumai_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gypsumai_client/client.py,sha256=c9RRt19e-IrMnD71v4Dx60y-F6jvi0hZpr-B6IfhmGQ,1966
+gypsumai_client/dataset_manager.py,sha256=Vl_UZnRn8m_AeGfA3rFNDRT9VKYt9iP1vaxd8Z6uOqU,4711
+gypsumai_client/document_manager.py,sha256=C5fRKcCnY0CsfP0BlkwZNcWOu9IEfB_EShc59fQLJl8,10164
+gypsumai_client/models.py,sha256=6V5lcoXmsTSmCsvDGrHLRCa1yh7rdc8nB40HFNnfUIw,6846
+gypsumai_client/project_manager.py,sha256=nW6-WMaWCQAeEXWTMemF99EiTU58CqXYabDUVheKOEM,1388
+gypsumai_client-0.1.0.dist-info/LICENSE,sha256=EQr8vTgV26mQkFf2YjMLXr9MBcA2jE4pJU2Zn-Zycvg,1072
+gypsumai_client-0.1.0.dist-info/METADATA,sha256=XPAW-5-r8uEafMbwmwWFut7zny2rWlTe0Bo_RR-bF8w,543
+gypsumai_client-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+gypsumai_client-0.1.0.dist-info/RECORD,,
