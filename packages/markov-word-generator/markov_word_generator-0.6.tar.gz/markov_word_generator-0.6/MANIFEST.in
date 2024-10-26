@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include markov_word_generator.py
