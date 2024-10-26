@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/blabl111/__init__.py
+src/blabl111/example.py
+src/blabl111.egg-info/PKG-INFO
+src/blabl111.egg-info/SOURCES.txt
+src/blabl111.egg-info/dependency_links.txt
+src/blabl111.egg-info/top_level.txt
