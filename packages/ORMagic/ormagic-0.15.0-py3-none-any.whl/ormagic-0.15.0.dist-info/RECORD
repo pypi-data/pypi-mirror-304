@@ -1,0 +1,14 @@
+ormagic/__init__.py,sha256=ZN6O6pm067YIUD5lkzrOxuqPQzSpMhPhLddwMszO7_4,169
+ormagic/connection.py,sha256=mGsMHwIBn8YkXkYSzE25pqrByYHSUuuaqkQ5Z1A9nEo,1420
+ormagic/cursor.py,sha256=tv2jM-kNtsRZsXYoZpWlK4-7Q55NUx63TsVEtdV-lgw,458
+ormagic/field_utils.py,sha256=AgC41jOt00_HQJUox8ZHl81Rdvnd2vO7XXEPOREwdWg,3537
+ormagic/fields.py,sha256=-I80hGCYuNhrhlsf95-ZXIjijYtIzFr3q0xPuW-FnnE,1111
+ormagic/models.py,sha256=6TFJXrtFq1JmaxNNoqZ89xqi_RSD8T3RtCoC2Cjv1Rg,11107
+ormagic/query.py,sha256=j6cbfCu-2qD1iFwLzW-7vZlIVQ7D8axj8ozzEQ0PKgk,723
+ormagic/settings.py,sha256=_1Mz1urZbAh1VqqI6AzTvCzRzpZk6tlTyUPhVtuB6FU,464
+ormagic/table_manager.py,sha256=8b6UXcdGg2USkAQqiea1U8pTUJd52Y_1VCIgbwoDp8M,6281
+ormagic/transactions.py,sha256=bvaR--lEUCZkkS0AdE2n8tWoya5apMdgJ74XKOJxfjo,547
+ormagic-0.15.0.dist-info/LICENSE,sha256=Tz4OfUG4JVx390QqWBeY1wNwrJVwzYLniAlREGtkFtc,1068
+ormagic-0.15.0.dist-info/METADATA,sha256=xXEQ8cksWQ-3ecx9PT0d11VJrXOSVteLVEmsc7zobdw,6679
+ormagic-0.15.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ormagic-0.15.0.dist-info/RECORD,,
