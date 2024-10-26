@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "bdm2"
+version = "0.2.1"
+description = ""
+authors = ["Anastasia Pshichenko <avp@pawlin.ru>", "Aleksey Kochetkov <abk@pawlin.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python =  ">=3.9, <3.12" #"~3.9"
+loguru = "^0.7.2"
+gitpython = "^3.1.43"
+tqdm = "^4.66.4"
+sqlalchemy = "^2.0.30"
+brddb = "0.0.19"
+python-dotenv = "^1.0.1"
+pyyaml = "^6.0.1"
+scp = "^0.14.5"
+hyperpyyaml = "^1.2.2"
+pytz = "^2024.1"
+openpyxl = "^3.1.4"
+clickhouse-connect = "^0.7.16"
+pandas = "1.5.3"
+numpy = "1.23.5"
+psycopg2-binary = "^2.9"
+urllib3 = "1.26.19"
+scikit-learn = "^1.5.2"
+pydantic-settings = "^2.5.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "brddb"
+url = "https://kgitlab.knexinc.com/api/v4/projects/23/packages/pypi/simple"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "brdpm"
+url = "https://kgitlab.knexinc.com/api/v4/projects/25/packages/pypi/simple"
+priority = "supplemental"
+
+#-------------------------------------------------------- #
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.1"
+pytest-mock = "^3.14.0"
+pytest-cov = "^4.0.0"
+hypothesis = "^6.20.0"
+
+
+[tool.poetry.group.doc.dependencies]
+sphinx = "^7.0.0"
+sphinx-rtd-theme = "^1.0.0"
+
+
+[tool.poetry.group.other.dependencies]
+brdpm = "0.2.3"
+psycopg2-binary = "^2.9"
+matplotlib = "^3.9.0"
+plotly = "^5.23.0"
+scipy = "^1.13.1"
+pyarrow = "^16.1.0"
+pytelegrambotapi = "^4.18.1"
+pymongo = "^4.8.0"
+boto3 = ">=1.31.17"
+tensorflow-io-gcs-filesystem = "0.31.0"
+tensorflow = "2.10.0"
+typeguard = "^4.1.5"
+paramiko = "^3.4.0"
+xlsxwriter = "*"
+
+#-------------------------------------------------------- #
+
+[tool.poetry-plugin-lambda-build]
+package-install-dir = "python"
+package-artifact-path = "layer.zip"

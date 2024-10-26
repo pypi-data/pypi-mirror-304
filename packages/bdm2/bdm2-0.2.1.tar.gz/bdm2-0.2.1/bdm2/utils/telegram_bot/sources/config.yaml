@@ -1,0 +1,19 @@
+bot_token: '1626668079:AAGARDf1iBlCWFX_74QBm1CFY5p-eF13RvM'
+info_bot_token: '5569633377:AAGLPN1ScaJMFnEo5kGL00R7pg-kdqDE1Zo'
+debug_bot_token: '5246523518:AAFvYCgOB_NIF0nd3bCbW-RavstYuR2YElk'
+
+monitoring_chat_id: -528042721
+results_chat_id: -434235288
+
+standards_bot_token: "6754240603:AAG4JzRsm_uW-XQVnJksXOooFBcv6ISECpM"
+standards_bot_chat_id: -4000841498
+
+restore_chat_id: -748066003
+engine_full_run_chat_id: -766381329
+download_chat_id: -644006232
+aws_download_chat_id: -936941093
+attention_chat_id: -727280092
+zbage_experiments_chat_id: -776877774
+
+debug: False
+debug_chat_id: -839887684

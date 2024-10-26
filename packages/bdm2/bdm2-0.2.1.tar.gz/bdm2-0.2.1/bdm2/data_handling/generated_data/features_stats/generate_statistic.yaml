@@ -1,0 +1,82 @@
+# will set attributes for generate_engine_pc.py script to actually generate pc engine
+# Common errors:
+#   1) don't use "" braces for strings containing backslashes - it will result in yaml parser error
+#      use instead '' (single quotes)
+#   2) follow the structure for dict:
+#      namespace param name
+#         - common dict key: value
+#           second key
+#         - next dict space
+#           second key of the second dict etc
+
+use_local_way: True #False
+
+universal_params:
+  client: 'KXSAAF'
+  engine_postfix: '_v4.10.7.47_KXSAAF_Cobb_mix_explicit_modern'
+  how: 'raw' # fast or 'raw',
+  smooth_window: 5
+  small_houses_num: 2
+  use_np: true # true
+  ages: [ 1, 29, 2 ] #
+
+  average: 5 # 5 3
+  useFirstStandardValue: false
+  useLastStandardValue: true
+  iqr_percentiles: [ 25, 75 ] # [25, 75]
+  # ↓↓↓ defines +- how many (p_75 - p_25) values go
+  iqr_boundary_shift: 1.75
+  #
+  small_combinations_threshold: 1 #4
+  small_combinations_ages: [ 7, 28 ]
+  small_combinations_boundary_shifts: [ 3.0, 2.0 ]
+
+  mean_coef: [ 0.85 ]  # 2,  # [0.7] for additive,  # 2 for multiplicative
+
+
+local_way_params:
+  results_postfix: "_restore"
+  res_df_postfix: "_v3"
+  output_folder_prefix: "_v3"
+  # A DEFAULT law: 'additive'  # 'additive',  # 'additive' # or 'multiplicative'
+  use_res_df: false # true
+
+
+features_stats:
+  # groups
+  geom_group: [ "min_axis_norm_corr",
+                "max_axis_norm_corr" ]
+  behaviour_group: [ "height" ]
+  volume_name: "volume_norm_corr"
+  # setting 4 groups
+  settings4geom:
+    isRolled: false
+    isFilterable: false
+    n_left_stdev: 3.0  # if not null use this value as default n_left_stdev
+    n_right_stdev: 3.0  # if  null use n_left_stdev from file
+    mean_stdev_from_src: false  # if  true use all params from src file
+    discard_percent: 5
+    agg: 'percentile'
+    adapt: true
+  settings4volume:
+    isRolled: false
+    isFilterable: true
+    n_left_stdev: 3.0
+    n_right_stdev: 3.0
+    mean_stdev_from_src: false
+    discard_percent: 5
+    agg: 'percentile'
+    adapt: true
+  settings4behaviour:
+    isRolled: false
+    isFilterable: false
+    n_left_stdev: null  # if not null use this value as default n_left_stdev
+    n_right_stdev: null  # if  null use n_left_stdev from file
+    mean_stdev_from_src: true  # if  true use all params from src file
+    discard_percent: 5
+    agg: 'percentile'
+    adapt: false  # false
+
+
+
+
