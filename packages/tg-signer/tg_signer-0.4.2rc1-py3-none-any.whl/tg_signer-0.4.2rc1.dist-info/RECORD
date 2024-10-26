@@ -1,0 +1,16 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_config.py,sha256=NonJhd4ygRkSe-brsZ4zchG18fzORvqo6r8kSurd2Eg,4405
+tg_signer/__init__.py,sha256=r8NsHk3t-2gOYf8rEXEdOwzxKvcjyoCfyz_PrME7gvI,25
+tg_signer/__main__.py,sha256=xIY4nBzdBG8zuB_U7o-j7N3nCSxN1UP5r-R4AgYtbyI,111
+tg_signer/config.py,sha256=0gIl8k-Zyl9KbU5eq17aEv4zfVFjySmzJXs0ZX_RiHg,5101
+tg_signer/core.py,sha256=zd5tvcGWiuL4Hvi20nq-KRgKwPu4hLEF7_uDfCFLhEw,16757
+tg_signer/logger.py,sha256=5AFeoKF1r8mF4D9UtEJVZgquUb05IDayblp98RK_s_8,731
+tg_signer/cli/__init__.py,sha256=qu6zmaex6T7DJam_D8BTbCz9Xbcu5V9jDBrEkhD5C_s,83
+tg_signer/cli/monitor.py,sha256=2KxcNztsSNy4tIDSMCahBGTuhB8uP44kPwkBRE9KrEA,1579
+tg_signer/cli/signer.py,sha256=8gEQbgcDkVp67shrnPWg-exBiMa6oKyAeRmWqwVI4So,7596
+tg_signer-0.4.2rc1.dist-info/LICENSE,sha256=uboMSnqVzfTUeV4BHKGYKJ5lMsnds2Hn8Cu9HvBToso,1493
+tg_signer-0.4.2rc1.dist-info/METADATA,sha256=WPUYCD7_ZRc8AJ0Q_2HEztvvo_53-y-55H1zoHS9zEs,8405
+tg_signer-0.4.2rc1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+tg_signer-0.4.2rc1.dist-info/entry_points.txt,sha256=1FJO5V0bocK_NjDbXRIVXrzRrBy_zduTbgFxI1fIfSU,56
+tg_signer-0.4.2rc1.dist-info/top_level.txt,sha256=kviIPBrEHiTkRzwXO-UjNl8lx_kY7dk-CinlX57iwY0,16
+tg_signer-0.4.2rc1.dist-info/RECORD,,
