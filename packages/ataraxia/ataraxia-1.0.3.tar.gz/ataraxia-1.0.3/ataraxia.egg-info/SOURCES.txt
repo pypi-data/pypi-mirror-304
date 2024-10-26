@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+ataraxia/__init__.py
+ataraxia/core.py
+ataraxia.egg-info/PKG-INFO
+ataraxia.egg-info/SOURCES.txt
+ataraxia.egg-info/dependency_links.txt
+ataraxia.egg-info/requires.txt
+ataraxia.egg-info/top_level.txt
