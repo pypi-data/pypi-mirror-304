@@ -1,0 +1,11 @@
+volttron/auth/__init__.py,sha256=aBOhDVW2ohGEaFr5x1Eu_XWJBo17hBG6z8VJb_DOOaA,638
+volttron/auth/authz_manager.py,sha256=d-2M2hrgkMZC5qXcBVP-MsX9UIG4ScIMJ68BYi1oYiQ,15186
+volttron/auth/commands.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+volttron/auth/credential_manager.py,sha256=bdHihlgRz6V7h5NFcMsbq_22MglyVo6UKZB648Qq1Ys,1302
+volttron/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+volttron/services/auth/__init__.py,sha256=D217DMEQz3lLiOd3ZvGHFf67fHGpRr6VnHXQg68lCeY,1111
+volttron/services/auth/auth_service.py,sha256=haVTwlTsmE3KoQT54TGgzHdBDP1IsYME4rKd2CYPbFk,18912
+volttron_lib_auth-2.0.0rc1.dist-info/LICENSE,sha256=ci7QuV8QsawS9BmtbHRtqf5PbTsCAbMWFVanXhO6ANM,329588
+volttron_lib_auth-2.0.0rc1.dist-info/METADATA,sha256=n4NIMUX31W6u3EaMxGG9Z_awtuhYeZ4CGmB3vmHzXEw,4522
+volttron_lib_auth-2.0.0rc1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+volttron_lib_auth-2.0.0rc1.dist-info/RECORD,,
