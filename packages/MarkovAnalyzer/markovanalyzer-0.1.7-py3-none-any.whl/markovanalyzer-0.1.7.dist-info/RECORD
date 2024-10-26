@@ -1,0 +1,12 @@
+markovanalyzer/__init__.py,sha256=hwoWrPFtubKRJxZEuw9F4O45l3gmtEsKnI7LJegk7Pg,1691
+markovanalyzer/fitting_tools.py,sha256=jSP6aoiK3Xro68cGfJumNcdP6HdZN2jx00ndwvJLjak,41444
+markovanalyzer/forward.py,sha256=QKyyMSCLRqLkm9BQ8XIbwp1jrOCmYqvlfZybMw4ToLk,9059
+markovanalyzer/gpu_backend.py,sha256=GATvMPvydSu1PdyjirukqIPtZtiumoHiFYLmwpTMIzk,16593
+markovanalyzer/model_comparison_tools.py,sha256=DXHCIdHnk6O86aqJxdY1axXkGyvyewr2DwxHt4yeoYU,3347
+markovanalyzer/njit_backend.py,sha256=BYOWyaZG1hoy22_EJsGZ37oNqp6CN4_25dN-znjh9_c,17327
+markovanalyzer/polyspectra_calculator.py,sha256=cdxJTlLid2ZahuzJVzdQS2nP7_jIcyXS5oW8dJCR9hg,49074
+markovanalyzer/wtd_fitting_tools.py,sha256=jq-a9YAfIzGYhORGlJgq0abYzthrbCOefUj3sCkBysw,8614
+markovanalyzer-0.1.7.dist-info/METADATA,sha256=Q9My1uBYN9HsLgkA7139dW7_hU96n75eDSyA0YD3HHE,8328
+markovanalyzer-0.1.7.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+markovanalyzer-0.1.7.dist-info/licenses/LICENSE,sha256=YMg66NJwtQktBlJORd77LNq0cJ77n6n6yofrwX8wEEs,1536
+markovanalyzer-0.1.7.dist-info/RECORD,,
