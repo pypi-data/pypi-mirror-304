@@ -1,0 +1,6 @@
+[console_scripts]
+perfectem = perfectem:main
+
+[gui_scripts]
+perfectem-gui = perfectem:main_gui
+
