@@ -1,0 +1,47 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "aptgui"
+version = "1.0.0"
+description = "An Asynchronous Pythonic Tcl/Tk GUI Library"
+authors = ["Michael Welborn <michael@mawelborn.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://mawelborn.com"
+repository = "https://codeberg.org/mawelborn/aptgui"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.0"
+poethepoet = "^0.26.1"
+ruff = "^0.4.5"
+
+[tool.poe.tasks]
+black = "black aptgui"
+black_check = "black --check aptgui"
+mypy = "mypy aptgui"
+ruff = "ruff check --fix-only --exit-zero aptgui"
+ruff_check = "ruff check aptgui"
+
+format = ["ruff", "black"]
+check = ["ruff_check", "black_check", "mypy"]
+all = ["format", "check"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+lint.select = ["E", "F", "I"]
+lint.fixable = ["I"]
+
+[tool.mypy]
+strict = true
+show_error_codes = true
+warn_unreachable = true
+disallow_any_unimported = true
