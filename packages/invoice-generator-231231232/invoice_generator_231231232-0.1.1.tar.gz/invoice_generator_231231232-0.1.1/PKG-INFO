@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: invoice_generator_231231232
+Version: 0.1.1
+Summary: A package to generate invoices from order data.
+Author: Vlad
+Author-email: abvvladivanov@gmail.com
