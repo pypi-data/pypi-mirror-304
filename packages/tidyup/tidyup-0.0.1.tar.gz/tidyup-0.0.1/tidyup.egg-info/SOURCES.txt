@@ -1,0 +1,15 @@
+.gitignore
+CODE_OF_CONDUCT.md
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/pr-to-prod.yml
+.github/workflows/publish-to-pypi.yml
+tidyup/__init__.py
+tidyup/tidyup.py
+tidyup.egg-info/PKG-INFO
+tidyup.egg-info/SOURCES.txt
+tidyup.egg-info/dependency_links.txt
+tidyup.egg-info/entry_points.txt
+tidyup.egg-info/requires.txt
+tidyup.egg-info/top_level.txt
