@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "generatekey"
+version = "0.1.0"
+description = "key generator"
+authors = ["Manuel Pita <mpita1984@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "generatekey" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.3.3"
+pytest-cov = "^5.0.0"
+black = "^24.10.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+bandit = "^1.7.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+generatekey = "generatekey.generatekey:main"
