@@ -1,0 +1,8 @@
+easysubmit/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+easysubmit/base.py,sha256=2V_CejZX0JZuTjf2zLLFTCxJfh1CfC7e51AgMjqU-fI,5785
+easysubmit/slurm.py,sha256=MCqYA8R8bzdmg7yFbBLhXK30lbFSBg_gBxfBFKe8tgg,8624
+easysubmit/utils.py,sha256=rGBiHO4raio1sd4i50w0NpexeU9axlt4lbHs588zBYs,1019
+easysubmit-0.0.3.dist-info/METADATA,sha256=BPC1VSQKswf6kJ2EwDJuPM2BVGsEnOezig3uakQE0vM,947
+easysubmit-0.0.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+easysubmit-0.0.3.dist-info/licenses/LICENSE,sha256=R2xHei2LCOHrGTOUKYZwKN6feGbXqZSXoe760wloBQc,1066
+easysubmit-0.0.3.dist-info/RECORD,,
