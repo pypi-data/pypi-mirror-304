@@ -1,0 +1,16 @@
+adhoc_api/__init__.py,sha256=-f-v8M8egcP9NXm2bf0sm3Z1DfEVzNXQmCxDFbiFRXs,26
+adhoc_api/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adhoc_api/examples/api_documentation/gdc.md,sha256=LOX3wjc--9byJHg1TfNHUXH37gHE1KzkqFGAZU66TXc,2683050
+adhoc_api/examples/api_documentation/gdc_facets.yaml,sha256=XtzbZBgr3tY3AVBHL7FCwFrZYvS_AnSGSJGacyUjXxo,47869
+adhoc_api/examples/gdc.py,sha256=xqSGkBA93AZIZOGTPHZ2HRrqrnxja_KHjHRdyL-44V0,2525
+adhoc_api/examples/jokes.py,sha256=EIQ3LaPMAgqIAUUdPEsmHfUelWY0v-8uMuZd2vhiIR8,2078
+adhoc_api/files.py,sha256=dm2m8qSqC-vRXtLTwE0Wo2PmhLn1BSQwFsBBkUe7xiM,6573
+adhoc_api/tests/queries_(processed).txt,sha256=0h6kJ-kHbRwOsMTQ7KRYs2eli13ZxsoTCbMCFYeIcqI,2783
+adhoc_api/tests/queries_(raw).txt,sha256=9vOd_kjEZCkd5E4X3kiYiS_gyBg5hNsOUYEw1LBPTEQ,2491
+adhoc_api/tests/test_gdc.py,sha256=0AcM0zEVh_YUweOa7R6XNUR7Ty5VNdRh1lUFddVwU2c,5427
+adhoc_api/tool.py,sha256=1G7mgXbEAAE1ir52YhS-NfAdY2OJSsld-kZEpeWs_to,14022
+adhoc_api/uaii.py,sha256=958NchRtMej86fEtY9CeXsIVV5PizMlxmWMGjnNHgJI,8476
+adhoc_api/utils.py,sha256=QvLmlzY7IvSJhNKKxoa8L4kKhGddYc64WE3QFvXxfG4,2937
+adhoc_api-0.2.7.dist-info/METADATA,sha256=3YjTWmj3oRABJwRt0Ce1vIywKlXTHadWVf4BUoYjonI,3319
+adhoc_api-0.2.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+adhoc_api-0.2.7.dist-info/RECORD,,
