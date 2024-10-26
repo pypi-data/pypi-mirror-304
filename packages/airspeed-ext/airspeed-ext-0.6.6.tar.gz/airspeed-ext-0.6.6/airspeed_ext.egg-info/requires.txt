@@ -1,0 +1,13 @@
+six
+cachetools
+
+[dev]
+black
+deepdiff
+isort
+flake8
+flake8-black
+flake8-isort
+pytest
+pytest-httpserver
+localstack-snapshot
