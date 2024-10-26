@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+gloflow.egg-info/PKG-INFO
+gloflow.egg-info/SOURCES.txt
+gloflow.egg-info/dependency_links.txt
+gloflow.egg-info/requires.txt
+gloflow.egg-info/top_level.txt
