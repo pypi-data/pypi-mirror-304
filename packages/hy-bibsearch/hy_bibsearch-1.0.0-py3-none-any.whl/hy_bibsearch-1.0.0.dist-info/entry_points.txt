@@ -1,0 +1,6 @@
+[console_scripts]
+arxivsearch = bibsearch.cli:arxiv_search
+bibsearch = bibsearch.cli:bib_search
+doisearch = bibsearch.cli:doi_search
+isbnsearch = bibsearch.cli:isbn_search
+works = bibsearch.cli:works_search
