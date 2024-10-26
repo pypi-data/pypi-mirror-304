@@ -1,0 +1,52 @@
+        @font-face {
+            font-family: "荆南麦圆体-Regular";
+            src: url(../font/荆南麦圆体-Regular.ttf);
+        }
+
+        .box {
+            width: 600px;
+            text-align: center;
+            /* text-shadow: rgb(95, 94, 92) 1px 1px;    字体阴影 */
+            color: black;
+            margin: 0 auto;
+            background-color: #f6f2ce;
+            background-size: auto;
+            border: #000 3px solid;
+            align-items: center;
+            font-family: "荆南麦圆体-Regular", sans-serif;
+            background-image: url(../sucai/忧郁乌萨奇.png);
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            background-size: 300px;
+        }
+
+        .img {
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 580px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-top: -1px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+            width: 90%;
+            margin: auto;
+            
+            
+        }
+
+        p{
+            font-size: 30px;
+            margin-top: auto;
+            text-align: left;
+            margin: 12px 10%; /* 上下间距为20px，左右间距为0 */
+        }
+
+        b {
+            color: red;
+        }
