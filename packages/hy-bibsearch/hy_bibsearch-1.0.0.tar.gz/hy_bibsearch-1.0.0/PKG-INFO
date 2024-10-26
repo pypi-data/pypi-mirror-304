@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: hy-bibsearch
+Version: 1.0.0
+Summary: Generate bibtex entries from Crossref, doi.org and Google Books searches
+Home-page: https://github.com/atisharma/bibsearch
+Author: Ati Sharma
+Author-email: ati+bibsearch@agalmic.ltd
+License: GPL-3
+Keywords: bibtex,crossref,isbn,doi
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: habanero
+Requires-Dist: hy
+Requires-Dist: hyrule
+Requires-Dist: requests
+
+# bibsearch
+
+A python/hy library to produce bibtex entries from general search queries.
+
+Provides command-line tools `bibsearch` and `doisearch`.
+
+Uses the crossref API and doi.org.
