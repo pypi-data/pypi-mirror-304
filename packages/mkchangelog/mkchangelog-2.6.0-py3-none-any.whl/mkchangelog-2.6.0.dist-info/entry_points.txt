@@ -1,0 +1,3 @@
+[console_scripts]
+git-mkc = mkchangelog:main
+mkchangelog = mkchangelog:main
