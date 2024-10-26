@@ -1,0 +1,17 @@
+iam_actions/__init__.py,sha256=K-xkke0W-gGKinBJH2IS54BAQ1cckbBKROEVhmjnl5s,228
+iam_actions/actions.json,sha256=SdVXO3Dh55BwsJuWO3trmaIn2k1JPMqRzItT0W9PvBY,4990740
+iam_actions/data.py,sha256=ptccET3ntASyeKAZaYgSE9T_vMJFdUCMm87UVTZVIRI,496
+iam_actions/generate/__init__.py,sha256=H2WsQY2FXHM5fX2jfZS9JKfhfhbxLtaiT2hNMKpVvHQ,80
+iam_actions/generate/action_map.py,sha256=5Q8pxb0_4JsXEv6mkdbeLs3c2Gyewkle8Z_f8gnEVco,3097
+iam_actions/generate/aws_docs.py,sha256=gSYHq9o6Qaud-5tam-muNHZIKf60wDqpVmSwQTNwNHM,23329
+iam_actions/generate/generate.py,sha256=Z-nuw3CgERJATHbCJxUoanqa_MwlDAaNtumf9L-_8mo,3739
+iam_actions/generate/notifier.py,sha256=-mPPXUz5dH7eoaTBvexCmzZZ6ruvc56i5_RAvUPBVV8,3272
+iam_actions/generate/resource_type.py,sha256=wwHcJlVljpwrN2k0ukDHOQYvrGqf9skg23hPzycklEs,1902
+iam_actions/generate/services.py,sha256=bwNx55CR2XOfIN-wG1nWYS_mSR5Nhy7mdi2-anFHp-o,2277
+iam_actions/policies.json,sha256=NGWu5TVI9llF88rsmF2kX3TMVkG9sOgceXKdJLn9BgA,652446
+iam_actions/resourcetypes.json,sha256=B-2eTQQp04mInrVm_CSpkUpJ7YLkjwUtbGZ3u0OepSU,211351
+iam_actions/services.json,sha256=zrlksX-GUvYoyTU-wY-UDzAzE-xUep1R3qeVNQ4u1TE,632709
+iam_actions-1.2.20241026.dist-info/LICENSE,sha256=FnH-DXBm2fs7ZBjPlPzQu6RHk35tlllCet_z3Uq95jU,1071
+iam_actions-1.2.20241026.dist-info/METADATA,sha256=qXnH7cnByp90RmvsrKkBDpA-SOX4q1hbV2Ujee56QTY,2915
+iam_actions-1.2.20241026.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+iam_actions-1.2.20241026.dist-info/RECORD,,
