@@ -1,0 +1,12 @@
+pgnn/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+pgnn/featurizers/__init__.py,sha256=W9izfF5uoBdK5k7Qm6scXBAITVyDBsLd0vxf0lmJLFY,74
+pgnn/featurizers/megnet_models.py,sha256=0DI9ItmRIn2xanC-T_tw1LnuKuduHLBbTBr96eRJ8Nw,17961
+pgnn/featurizers/structure.py,sha256=vKfjF3gIC3OjL-p9oq6RC8outd6Ze8MHBEzMWs8rwgQ,1933
+pgnn/featurizers/custom_models/MEGNetModel__MatMinerEncoded_v1.h5,sha256=SbBTQOBRTCwsPq00K356PFOtbkpACP1pyCbkjnHeK90,2859488
+pgnn/featurizers/custom_models/MEGNetModel__MatMinerEncoded_v1_scaler.pkl,sha256=p1XvXTgBsLMQD35Dce1K3ARlRkQGEcXi9znIxxF_XVk,15698
+pgnn/featurizers/custom_models/MEGNetModel__OFMEncoded_v1.h5,sha256=gmJDcdklS5EMkbnwHQQBxRlMk83wQZa_Okw-z8jArjk,2711528
+pgnn/featurizers/custom_models/MEGNetModel__OFMEncoded_v1_scaler.pkl,sha256=oHDFNygOhIRRs4e9U5ZfsoHN3H3M0ETHc3uLV4SE1m0,4292
+pgnn-0.1.0.dist-info/METADATA,sha256=OxXGRmm6y4Fcnb7diY4H5U3S7-XfZkV2vVKB9-sIW88,4486
+pgnn-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pgnn-0.1.0.dist-info/top_level.txt,sha256=Ox90mSLL9ZI3C277xWVyJAuKZaAXboJuO7ImS9XcRMA,5
+pgnn-0.1.0.dist-info/RECORD,,
