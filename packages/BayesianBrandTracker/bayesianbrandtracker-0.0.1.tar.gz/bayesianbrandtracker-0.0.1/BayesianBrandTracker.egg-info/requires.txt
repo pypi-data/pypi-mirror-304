@@ -1,0 +1,7 @@
+fastcore
+pandas
+xarray
+pymc
+numpy
+
+[dev]

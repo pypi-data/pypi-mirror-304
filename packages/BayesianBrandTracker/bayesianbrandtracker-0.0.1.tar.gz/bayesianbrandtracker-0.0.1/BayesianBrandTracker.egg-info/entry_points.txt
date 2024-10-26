@@ -1,0 +1,2 @@
+[nbdev]
+BayesianBrandTracker = BayesianBrandTracker._modidx:d

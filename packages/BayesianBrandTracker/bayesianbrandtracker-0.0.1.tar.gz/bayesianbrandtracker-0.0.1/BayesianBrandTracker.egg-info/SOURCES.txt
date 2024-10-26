@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+BayesianBrandTracker/BTModel.py
+BayesianBrandTracker/__init__.py
+BayesianBrandTracker/_modidx.py
+BayesianBrandTracker.egg-info/PKG-INFO
+BayesianBrandTracker.egg-info/SOURCES.txt
+BayesianBrandTracker.egg-info/dependency_links.txt
+BayesianBrandTracker.egg-info/entry_points.txt
+BayesianBrandTracker.egg-info/not-zip-safe
+BayesianBrandTracker.egg-info/requires.txt
+BayesianBrandTracker.egg-info/top_level.txt
