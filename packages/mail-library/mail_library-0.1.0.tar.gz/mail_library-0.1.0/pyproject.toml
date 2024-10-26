@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "mail-library"
+version = "0.1.0"
+description = ""
+authors = ["miguelnunez15 <124568587+miguelnunez15@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
