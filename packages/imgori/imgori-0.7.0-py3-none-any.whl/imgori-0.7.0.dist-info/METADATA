@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: imgori
+Version: 0.7.0
+Author-email: narumi <toucans-cutouts0f@icloud.com>
+Requires-Python: >=3.10
+Requires-Dist: boto3>=1.35.48
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: mlconfig>=0.2.2
+Requires-Dist: torch>=2.1.1
+Requires-Dist: torchmetrics>=1.5.1
+Requires-Dist: torchvision>=0.16.1
+Requires-Dist: tqdm>=4.66.5
+Requires-Dist: wandb>=0.18.5
+Description-Content-Type: text/markdown
+
+# imgori
+
+## Usage
+
+```sh
+# install poetry
+pip install poetry
+
+# install dependencies
+poetry install
+
+# train model
+poetry run imgori train -c configs/orientation.yaml
+```
