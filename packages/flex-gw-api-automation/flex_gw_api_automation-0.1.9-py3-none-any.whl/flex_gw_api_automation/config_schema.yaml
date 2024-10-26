@@ -1,0 +1,46 @@
+bg_name: str()
+env_name: str()
+flex_gw_instance_name: str()
+client_id: str()
+client_secret: str()
+api_spec_group_id: str()
+api_spec_asset_id: str()
+api_spec_version: str()
+listener_port: int()
+listener_basepath: str()
+ext_client_provider_name: str(required=False)
+routes: list(include('route'), min=1)
+sla_tiers: list(include('sla_tier'), required=False)
+policies: list(include('policy'), required=False)
+
+---
+route:
+  label: str()
+  upstreams: list(include('upstream'), min=1)
+  methods: str(required=False)
+  host: str(required=False)
+  path: str(required=False)
+  headers: map(required=False)
+
+upstream:
+  label: str()
+  uri: str()
+  weight: int()
+  tls_context: include('tls_context', required=False)
+
+tls_context:
+  secret_group_name: str()
+  tls_context_name: str()
+
+sla_tier:
+  name: str()
+  description: str()
+  autoapprove: bool()
+  max_requests: int()
+  timeperiodmillis: int()
+
+policy:
+  group_id: str()
+  asset_id: str()
+  policy_version: str()
+  configuration_data: map()
