@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+mosqGIS.egg-info/PKG-INFO
+mosqGIS.egg-info/SOURCES.txt
+mosqGIS.egg-info/dependency_links.txt
+mosqGIS.egg-info/entry_points.txt
+mosqGIS.egg-info/requires.txt
+mosqGIS.egg-info/top_level.txt
+tests/test_calculador_indices.py
+tests/test_calculo_campo_atraccion.py
+tests/test_clasificador_suelos.py
+tests/test_manejador_argumentos.py
+tests/test_manejador_rutas_bandas.py
+tests/test_recortador_imagenes.py
