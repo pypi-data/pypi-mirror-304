@@ -1,0 +1,14 @@
+requests
+numpy
+abb-robot-client[aio]
+
+[:python_version < "3.7"]
+dataclasses
+
+[robotraconteur]
+robotraconteur
+robotraconteurcompanion
+drekar-launch-process
+
+[test]
+pytest
