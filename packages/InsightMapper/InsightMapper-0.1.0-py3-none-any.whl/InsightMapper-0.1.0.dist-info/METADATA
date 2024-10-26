@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: InsightMapper
+Version: 0.1.0
+Summary: A package that maps and visualizes relationships and dependencies between variables in complex datasets.
+Author: Utkarsh Rana
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+
