@@ -1,0 +1,6 @@
+setup.py
+hmac_sha2/__init__.py
+hmac_sha2.egg-info/PKG-INFO
+hmac_sha2.egg-info/SOURCES.txt
+hmac_sha2.egg-info/dependency_links.txt
+hmac_sha2.egg-info/top_level.txt
