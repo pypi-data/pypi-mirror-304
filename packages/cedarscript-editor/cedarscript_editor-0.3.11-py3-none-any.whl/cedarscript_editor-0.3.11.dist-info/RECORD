@@ -1,0 +1,14 @@
+cedarscript_editor/__init__.py,sha256=QcHgvhaFAgaaSN2BgDc9aLqPlLSFRwDzIXq99FswPpo,1264
+cedarscript_editor/_version.py,sha256=cgZZwxO2Czf2RAwPc5Ugf8lBeLEkSyVqWm7FWjhlv2A,413
+cedarscript_editor/cedarscript_editor.py,sha256=fybDCMJARxPFUz6I6sl5YSWSm_HqRsrl5wN3UFR25P4,16925
+cedarscript_editor/tree_sitter_identifier_finder.py,sha256=N0n_5jOzT_JiHzD2gJUtNG-CS1UG2Lkk8uzxvdh1los,9967
+cedarscript_editor/tree_sitter_identifier_queries.py,sha256=hmh3vpinaZbvcL7c2RyOUTGrsf_dh_EOiHNdiWTyO0c,38265
+text_manipulation/__init__.py,sha256=HMpazx5HGgYKtNANNt_kNSbYgXRaboY8uTmir6MfYGU,318
+text_manipulation/indentation_kit.py,sha256=94blmBuu4XdSuyX_so_VB2zcLFka7MeAXImYDbtdJQU,14787
+text_manipulation/range_spec.py,sha256=ZfPc8FZDSmar2NKdVqN4doz1BoPTsOPMn4DgHacpM2c,14368
+text_manipulation/text_editor_kit.py,sha256=KiyUvsxTmtpFuNmEsb3Xdw1tEsU2ggWKVOvyPf9cDUA,7013
+cedarscript_editor-0.3.11.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cedarscript_editor-0.3.11.dist-info/METADATA,sha256=VNOyi9apyDaDyHvVghKjPTSIsv2-aS1agU4tBeWT5D0,4639
+cedarscript_editor-0.3.11.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cedarscript_editor-0.3.11.dist-info/top_level.txt,sha256=amXMvj-EOw82OM17TQP2vp3NgVqEtYrEoxVNWZuaz8w,37
+cedarscript_editor-0.3.11.dist-info/RECORD,,
