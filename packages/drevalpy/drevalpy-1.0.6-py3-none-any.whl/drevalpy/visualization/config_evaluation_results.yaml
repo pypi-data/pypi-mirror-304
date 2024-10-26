@@ -1,0 +1,164 @@
+name: Evaluation Results
+
+default-view: evaluation_results
+
+datasets:
+  evaluation_results:
+    path: /Users/judithbernett/PycharmProjects/drp_model_suite/results/my_run/evaluation_results.csv
+  evaluation_results_per_drug:
+    path: /Users/judithbernett/PycharmProjects/drp_model_suite/results/my_run/evaluation_results_per_drug.csv
+  evaluation_results_per_cl:
+    path: /Users/judithbernett/PycharmProjects/drp_model_suite/results/my_run/evaluation_results_per_cl.csv
+  true_vs_pred:
+    path: /Users/judithbernett/PycharmProjects/drp_model_suite/results/my_run/true_vs_pred.csv
+
+views:
+  evaluation_results:
+    dataset: evaluation_results
+    render-table:
+      columns:
+        MSE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        RMSE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        MAE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        R^2:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: blues
+        Pearson:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+        Spearman:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+        Kendall:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+  evaluation_results_per_drug:
+    dataset: evaluation_results_per_drug
+    render-table:
+      columns:
+        MSE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        RMSE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        MAE:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: reds
+        R^2:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: blues
+        Pearson:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+        Spearman:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+        Kendall:
+          plot:
+            heatmap:
+              scale: linear
+              color-scheme: purples
+  true_vs_pred_plot:
+    dataset: true_vs_pred
+    render-plot:
+      spec: |
+        {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "facet": { "column": {"field": "algorithm", "type": "nominal"} },
+          "spec": {
+            "layer": [
+              {
+                "mark": {
+                  "type": "point",
+                  "filled": true
+                },
+                "encoding": {
+                  "x": {
+                    "field": "y_true",
+                    "type": "quantitative"
+                  },
+                  "y": {
+                    "field": "y_pred",
+                    "type": "quantitative"
+                  }
+                }
+              },
+              {
+                "mark": {
+                  "type": "line",
+                  "color": "firebrick"
+                },
+                "transform": [
+                  {
+                    "regression": "y_true",
+                    "on": "y_pred"
+                  }
+                ],
+                "encoding": {
+                  "x": {
+                    "field": "y_true",
+                    "type": "quantitative"
+                  },
+                  "y": {
+                    "field": "y_pred",
+                    "type": "quantitative"
+                  }
+                }
+              },
+              {
+                "transform": [
+                  {
+                    "regression": "y_true",
+                    "on": "y_pred",
+                    "params": true
+                  },
+                  {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+                ],
+                "mark": {
+                  "type": "text",
+                  "color": "firebrick",
+                  "x": "width",
+                  "align": "right",
+                  "y": -5
+                },
+                "encoding": {
+                  "text": {"type": "nominal", "field": "R2"}
+                }
+              }
+            ]
+          }
+        }
+
