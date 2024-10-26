@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+my_regression_model/__init__.py
+my_regression_model/my_regression_model.py
+my_regression_model812.egg-info/PKG-INFO
+my_regression_model812.egg-info/SOURCES.txt
+my_regression_model812.egg-info/dependency_links.txt
+my_regression_model812.egg-info/top_level.txt
