@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: analysis_22833748470000228
+Version: 0.1.228
+Summary: Пакет для анализа данных о клиентах
+Author-email: Vlad <abvvladivanov@gmail.com>
+Requires-Python: >=3.6
+
