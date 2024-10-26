@@ -1,0 +1,46 @@
+** DONE Integrate bott index
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate example on Haldane model and unit tests
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate example of photonic and unit tests
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate the spin bott index
+CLOSED: [2024-09-18 Wed 23:49]
+** DONE Integrate example on Kane-Mele model and unit tests
+CLOSED: [2024-10-16 Wed 17:49]
+** DONE Fix coherence energy <-> frequencies
+CLOSED: [2024-10-16 Wed 18:13]
+** DONE Integrate check of singularity
+CLOSED: [2024-10-23 Wed 17:05]
+** DONE Optimize using results of Toniolo 
+CLOSED: [2024-10-23 Wed 17:05]
+Nothing useful to do.
+** DONE Add function to compute bott from ham
+CLOSED: [2024-10-23 Wed 17:05]
+** DONE Optimize: only find eigenvectors for smallest eigenvalues
+CLOSED: [2024-10-23 Wed 17:05]
+It works !!! Done: now use the theoretical gap to restrain the domain.
+** DONE Benchmark subset
+CLOSED: [2024-10-23 Wed 17:06]
+** DONE Benchmark Bott for increasing size and gap
+CLOSED: [2024-10-25 Fri 12:23]
+** DONE all_bott_vect and ham
+CLOSED: [2024-10-25 Fri 13:29]
+** TODO Lx and Ly are parameters
+** TODO Study differences PBC OBC
+** TODO Reproduce Haldane phase diagram
+** TODO Add function to compute phase diagram
+** TODO Integrate example on kekule model and unit tests
+** TODO Try optmization with Numba
+** TODO Function phase diagram te/tp
+** TODO Integrate vector left treatment
+** TODO Localizer index
+** TODO Design logo
+** TODO Write tutorial
+*** Bott on Haldane
+*** Bott on photonic
+*** all_bott
+*** Spin Bott on Kane-Mele
+*** Part on pbc
+*** Explain limitations
+
