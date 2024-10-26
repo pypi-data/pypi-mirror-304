@@ -1,0 +1,12 @@
+itemlist/__init__.py,sha256=AaCYGECKJaF1xR7uYTxUQeF_-PGbsU3CvQVFpMJcIF0,26
+itemlist/itemlist.py,sha256=yi0c83-u1Y69kpz0MeYvmcr-G-6A04RGE2EjGDVCFEM,3718
+itemlist/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_itemlist.py,sha256=ZOWyk_TLNl-V8KHl1LV-2Wshp70JQsUsz3jRHp7iETY,699
+tests/test_utils.py,sha256=MxSlKWHCvAClDxm6BBJm8I-w8uJfzGDjJksRKM5vEOU,212
+itemlist-0.1.2.dist-info/LICENSE,sha256=Jk3FkrasvRC3ROPiCym4VfLEVNQGEOGbe_1znqKw0io,1072
+itemlist-0.1.2.dist-info/METADATA,sha256=5xGcI38WFiR8Tvn4csR0azgCfAdZ6yAHx2XQIc1Z4oA,1721
+itemlist-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+itemlist-0.1.2.dist-info/entry_points.txt,sha256=A7peNP8h-lGfa91aUIFo6GBBLsORKqgj612eu0WBDCs,52
+itemlist-0.1.2.dist-info/top_level.txt,sha256=grxLAnMdYngh1djnhUXiVr0opVUEDI9s3Umoe0dxS1I,15
+itemlist-0.1.2.dist-info/RECORD,,
