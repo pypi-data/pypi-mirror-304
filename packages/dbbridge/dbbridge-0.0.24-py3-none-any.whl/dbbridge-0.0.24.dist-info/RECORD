@@ -1,0 +1,12 @@
+dbbridge/__init__.py,sha256=OuX6FP49Q12UJ3LVJlCFua0PbmvwQcsLuf3nzdM3oVk,163
+dbbridge/aws_db.py,sha256=bS2NK3dQtrk1HzUhD2bjafELk1UNGhsBSBcotgE0Ke8,1865
+dbbridge/azure_db.py,sha256=SPEnoKRpap96VJEznysnNs6adXXDjnzon-HntoPoVSU,1610
+dbbridge/db_connection.py,sha256=07SU8B_M5svfbAwhQwchrKZDajJT2CO-jyzgpA_1qsk,513
+dbbridge/db_manager.py,sha256=lsSvrsaOP9wfE7TCa9OUbmlIVejSOkFCJmHcWQNhCW8,891
+dbbridge/local_db.py,sha256=86vFonnCPvK2sYT6TzvvUw5mNHlFuDmxMFNfA5nQzC8,1446
+dbbridge/rds_execute.py,sha256=RX6Td2iJ5SrZKhOYbHNXp82b9rnPe0hL04ck8aHZqNY,1339
+dbbridge-0.0.24.dist-info/LICENSE,sha256=3qyi84eOMPYSKYxV3Gt83gu2wVE6qSFY8KnsI46o4Ro,482
+dbbridge-0.0.24.dist-info/METADATA,sha256=xENspmMTcpLeRvYChPqL7gSzOjAwTyra-79-FTHeeNg,1503
+dbbridge-0.0.24.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dbbridge-0.0.24.dist-info/top_level.txt,sha256=0lasTC02xVIOZh_nx7IXUjPQuVYr3nx-Vcw3rs9rxYI,9
+dbbridge-0.0.24.dist-info/RECORD,,
