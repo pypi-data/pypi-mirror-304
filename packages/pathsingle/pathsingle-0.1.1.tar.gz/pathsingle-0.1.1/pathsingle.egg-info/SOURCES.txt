@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pathsingle.egg-info/PKG-INFO
+pathsingle.egg-info/SOURCES.txt
+pathsingle.egg-info/dependency_links.txt
+pathsingle.egg-info/requires.txt
+pathsingle.egg-info/top_level.txt
