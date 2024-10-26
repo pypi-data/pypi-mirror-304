@@ -1,0 +1,16 @@
+pyvectordb/__init__.py,sha256=J9nXRsnkhsKVNdXKGy8C5Qp-S1x-3U_PPAy-6p53yas,221
+pyvectordb/chromadb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvectordb/chromadb/chromadb.py,sha256=DML8X85s4inPJlDf3hgpwbb76zMxuUO9ZEGcQSeLWPc,4590
+pyvectordb/chromadb/distance.py,sha256=ohjwcbCkTaVRnO09TIYTFjMTXN-eixFB_m2Ad175BtQ,123
+pyvectordb/distance_function.py,sha256=x9TVaCu1Vfe9c4G7gBh8iVBZ8_T7e5DAjzslwTzx_74,358
+pyvectordb/driver.py,sha256=88rIZlRuEDNFeXV2o95FRkxFK5343sByBlJ_3ytrnoE,661
+pyvectordb/pgvector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvectordb/pgvector/model.py,sha256=qwf_0k2U5jnit6FySVPp-XnxojnL2S6HHIEm11W6wCg,1028
+pyvectordb/pgvector/pgvector.py,sha256=IEZEK9BDcX1SRDy02c2i96CLGgG06zuxWNVXuJjuoxI,5989
+pyvectordb/qdrant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvectordb/qdrant/qdrant.py,sha256=_ekmqresw6PDSgqyv8mg6YXtICJtMUwAdy-piKk3O20,5221
+pyvectordb/vector.py,sha256=xaBamvkTQfkR7Om9OTvactn5pJIkwnN7n1TDvUFqLPc,1450
+pyvectordb/vector_distance.py,sha256=sr7Oa02NSCI1PZ7V7TDl_xnOvx4tJ8b0-f6dZ4mhQ5o,351
+pyvectordb-0.1.2.dist-info/METADATA,sha256=0cDfYN_prJWbvGB9DJlnX2W9ZwDTAxMW61Qwe8hYXqU,3308
+pyvectordb-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pyvectordb-0.1.2.dist-info/RECORD,,
