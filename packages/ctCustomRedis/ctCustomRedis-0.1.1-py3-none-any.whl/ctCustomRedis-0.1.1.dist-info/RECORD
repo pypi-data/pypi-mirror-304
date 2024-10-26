@@ -1,0 +1,14 @@
+ctCustomRedis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ctCustomRedis/__init__.py:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis/redis.py,sha256=SMwfXbuefvC-2JNEbH6r9_auyRe6wpPgalo-5ECaGEY,4832
+ctCustomRedis/redisConnection.py,sha256=IWpJ9a3_120xLLBqFw4ig9_qwm1JxoKCpOG5Qw42I7E,368
+ctCustomRedis/redisPool.py,sha256=szCplduFKdVMVlvqUQ7kTUwAgMEfMYk6tuDXiWcwI6g,48
+ctCustomRedis/redisPool.py:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis-0.1.1.dist-info/METADATA,sha256=z5qmnR-3h2v8OyZTtliJEjt-6ZHwumaVDJgrqIGFFGo,179
+ctCustomRedis-0.1.1.dist-info/PKG-INFO:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis-0.1.1.dist-info/SOURCES.txt:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis-0.1.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+ctCustomRedis-0.1.1.dist-info/dependency_links.txt:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis-0.1.1.dist-info/top_level.txt,sha256=nPZhnMrdsysIfMoDALJN-67yz7utzaipbAiF1y4I6DM,14
+ctCustomRedis-0.1.1.dist-info/top_level.txt:Zone.Identifier,sha256=6s0JUXzpDTS6ViFx0VrEDTAvDmkbQ5-RvhtkBuJfWRM,26
+ctCustomRedis-0.1.1.dist-info/RECORD,,
