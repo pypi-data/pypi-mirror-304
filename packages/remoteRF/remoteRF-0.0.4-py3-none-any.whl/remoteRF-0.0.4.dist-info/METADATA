@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: remoteRF
+Version: 0.0.4
+Summary: A python API to remotely access signal centric hardware. Client-side only!
+Author: Ethan Ge
+Author-email: ethoGalaxy@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: grpcio
+Requires-Dist: protobuf
+Requires-Dist: numpy
+Requires-Dist: prompt-toolkit
+Requires-Dist: python-dotenv
+
