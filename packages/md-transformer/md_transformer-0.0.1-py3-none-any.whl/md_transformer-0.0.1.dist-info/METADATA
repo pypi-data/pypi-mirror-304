@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: md-transformer
+Version: 0.0.1
+Project-URL: Source, https://cosmo-gitlab.phys.ethz.ch/cosmo/md-transformer
+Project-URL: Documentation, https://cosmo-docs.phys.ethz.ch/md-transformer
+Author-email: uwe.schmitt@id.ethz.ch
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.7
+Requires-Dist: mistletoe>=1.4.0
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# About md-transformer
+
+More later.
