@@ -1,0 +1,9 @@
+localrun/__init__.py,sha256=zug-2djNPvG1vtuct2MlfZHqHgiNlMqZKbUxyNtviXI,61
+localrun/cli.py,sha256=Nnu7N19_3ipirk30mU5OVJRT2yjUViYo1QhRzTRBbtw,787
+localrun/server.py,sha256=Vijpjvp0MsC9OFq5pMsz3qNkfzj_kcJCJh3mjVgsBWw,1593
+localrun-1.1.2.dist-info/LICENSE,sha256=CmbH9ppfL0wJ5lmyqWyAHdFvcoSQpBDw1sAwuZ_dM1M,1065
+localrun-1.1.2.dist-info/METADATA,sha256=MQXerdmqs0PbAzU5GQpDAUmvtI0Opdcfw1EFygeJeGI,2713
+localrun-1.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+localrun-1.1.2.dist-info/entry_points.txt,sha256=9af3QOUm0a9aKYg0AVGXjk9PLvHZlJxrVGXeGfOvyKY,47
+localrun-1.1.2.dist-info/top_level.txt,sha256=vVgLhIC6M1ZsBDMCbr7-VWQaOftbd6F1AeRjrsJ0018,9
+localrun-1.1.2.dist-info/RECORD,,
