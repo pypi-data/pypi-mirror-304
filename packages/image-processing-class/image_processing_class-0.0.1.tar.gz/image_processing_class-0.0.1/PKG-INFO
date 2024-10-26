@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: image_processing-class
+Version: 0.0.1
+Summary: Class - Image processing. The original project belongs to Karina Tiemi Kato.
+Home-page: https://github.com/rdfalmeida/image-processing-package.git
+Author: Rodolfo Almeida
+Author-email: rdfalmeida@protonmail.com
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+
+# image_processing
+
+Description. 
+The package package_name is used to:
+	Processing:
+		- Histogram matching
+		- Structural similarity
+		- Resize image
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image-processing
+```
+## Author
+Rodolfo Almeida
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
