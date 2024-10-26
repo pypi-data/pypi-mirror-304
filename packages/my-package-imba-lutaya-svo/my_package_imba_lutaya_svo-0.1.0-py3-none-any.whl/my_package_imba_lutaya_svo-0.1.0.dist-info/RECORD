@@ -1,0 +1,11 @@
+online_store/__init__.py,sha256=051RPvPMYefBQLrtT80ryOgfGvr4adKZ1Qu7VZh-OgY,127
+online_store/__main__.py,sha256=T4wrdtMjpT4L1blpnWDwJf6-G-GefMsNv_CNm5Q6Src,2997
+online_store/main.py,sha256=JdYrBlB8FMpkX-nPK1QFME1VAI-S5PZz-_ld-SCaBP4,967
+online_store/order_management.py,sha256=ErugTOa_HJV2--XFhv7Z725fBCPVRfnnxboTOziEC4I,986
+online_store/setup.py,sha256=Jwb4n04u4Nd4P0Tr2iUIHCkS1my7QVRGs7AJWY0TVjM,348
+online_store/user_management.py,sha256=VG8zCNKRePcNGbmMHj-ESMOCnpuluFCtQakdrw3jTYg,1156
+my_package_imba_lutaya_svo-0.1.0.dist-info/METADATA,sha256=eFivqEO5psmbFuDIdKjKJOmnEE3gvTxthU6aGTGIqfQ,122
+my_package_imba_lutaya_svo-0.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+my_package_imba_lutaya_svo-0.1.0.dist-info/entry_points.txt,sha256=KtQo0csmccsfzu7T-2jKX7mmKTgCin2erZjL3kGFJr4,62
+my_package_imba_lutaya_svo-0.1.0.dist-info/top_level.txt,sha256=1XsS3oaWSpPbCOX_l0AOuVOXb7AEfEg7FHAk22dLwyY,13
+my_package_imba_lutaya_svo-0.1.0.dist-info/RECORD,,
