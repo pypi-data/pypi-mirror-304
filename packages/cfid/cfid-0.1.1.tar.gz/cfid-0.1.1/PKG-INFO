@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cfid
+Version: 0.1.1
+Summary: Crockford base32 identifier
+Author: Christian Busch
+Author-email: chris.busch.22@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# CFID (Crockford Identifier)
+
+CFID object and generator functions.
+
+```python
+from cfid import CFID
+
+cfid = CFID()
+```
+

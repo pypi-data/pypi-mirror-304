@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cfid"
+version = "0.1.1"
+description = "Crockford base32 identifier"
+authors = ["Christian Busch <chris.busch.22@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.0"
+bump-my-version = "^0.28.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
