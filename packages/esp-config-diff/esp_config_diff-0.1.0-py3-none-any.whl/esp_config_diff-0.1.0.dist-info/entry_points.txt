@@ -1,0 +1,2 @@
+[console_scripts]
+esp-config-diff = diff.cli:main
