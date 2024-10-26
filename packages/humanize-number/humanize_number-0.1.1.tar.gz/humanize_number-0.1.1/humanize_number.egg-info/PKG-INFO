@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: humanize_number
+Version: 0.1.1
+Summary: A package to humanize numbers into readable formats like 1K, 1M
+Home-page: https://github.com/davidddeveloper/humanize_number
+Author: David Conteh
+Author-email: programmingdonebydavid@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# humanize_number
+A package to humanize numbers into readable formats like 1K, 1M
+
+    pip install humanize_number
+
+>
+
+    from humanize_number import humanize_number
+
+>
+
+    humanize_number(579000)
+    >>> 579k
+
+### flask-extension
+
+    from flask import Flask
+    from humanize_number.humanize_flask import init_app
+
+    app = Flask(__name__)
+    init_app(app)
+
+    # index.html
+    # {{ number | humanize_number }}
+
