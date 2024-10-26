@@ -1,0 +1,2 @@
+composio_langchain<=0.5.36,>=0.5.30
+crewai
