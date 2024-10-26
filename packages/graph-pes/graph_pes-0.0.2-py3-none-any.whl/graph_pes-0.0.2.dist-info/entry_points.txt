@@ -1,0 +1,2 @@
+[console_scripts]
+graph-pes-train = graph_pes.scripts.train:main
