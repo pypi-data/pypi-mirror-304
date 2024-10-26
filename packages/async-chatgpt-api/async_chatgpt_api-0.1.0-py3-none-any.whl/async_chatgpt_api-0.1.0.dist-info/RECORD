@@ -1,0 +1,14 @@
+chatgpt/__init__.py,sha256=0tEaU1sDbHMDJRY7dHNt6C4CL6uTwnnyQ9IHM_gQmA4,28
+chatgpt/_metadata.py,sha256=dyUEhFv8ynmSuNwx7yIdzbYsdklB8Sr-0iT29vR__rU,102
+chatgpt/basic_model.py,sha256=ni4ZW8HAHUm3qsz4ns0hNlHSClDl0hd--n35pdF4NXM,1135
+chatgpt/enums.py,sha256=738cE6UdwlVcTL-IivO4K6OOwMO0lr0Jof-9dn726-A,295
+chatgpt/errors.py,sha256=x5J8uYge71hDmTCD7kILKchI1J36jexlwWCQaUZOW-A,108
+chatgpt/exceptions.py,sha256=ghQOPRJdLNBdfxryYzOwkH5beCBu0EnOQAogCTWk6Xg,41
+chatgpt/gpt_35_turbo.py,sha256=lokj2w25qB5XUcW3vkEAA3gENdHjOkEIHWqwEWRJGUU,919
+chatgpt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatgpt/types.py,sha256=IVe_HqfCgv7-DSSod3sgdd7WBHahOJxl1Y2EPqJhLTY,255
+async_chatgpt_api-0.1.0.dist-info/LICENSE,sha256=8DyHi9RsZXeM8s1DpaXubZSSG44PkzV2oskJE3E09F4,1081
+async_chatgpt_api-0.1.0.dist-info/METADATA,sha256=DHzygvrxKxIT_dIHjWN9AjLP-FPNUVEqoEJUpGvYMvg,1874
+async_chatgpt_api-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+async_chatgpt_api-0.1.0.dist-info/top_level.txt,sha256=ogfFw9mYdqL6TZsrlfGumrd61piUQvJzgEobqC7_tio,8
+async_chatgpt_api-0.1.0.dist-info/RECORD,,
