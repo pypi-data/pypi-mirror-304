@@ -1,0 +1,9 @@
+
+[:platform_system == "Windows"]
+tzdata
+
+[:python_version < "3.9"]
+zoneinfo
+
+[dev]
+pytest>=8.3.3

@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/farwas/__init__.py
+src/farwas/api.py
+src/farwas/auth.py
+src/farwas/cache.py
+src/farwas/cli.py
+src/farwas/display.py
+src/farwas/lister.py
+src/farwas.egg-info/PKG-INFO
+src/farwas.egg-info/SOURCES.txt
+src/farwas.egg-info/dependency_links.txt
+src/farwas.egg-info/entry_points.txt
+src/farwas.egg-info/requires.txt
+src/farwas.egg-info/top_level.txt
+tests/test_api.py
