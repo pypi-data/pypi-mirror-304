@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: wled-adapter
+Version: 0.0.6
+Summary: A package to interact with WLED devices
+Home-page: https://www.github.com/alessiomorale/wled-adapter
+License: MIT
+Author: Alessio Morale
+Author-email: alessiomorale@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: colour (>=0.1.5,<0.2.0)
+Requires-Dist: dataclasses-json (>=0.6.6,<0.7.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Project-URL: Repository, https://www.github.com/alessiomorale/wled-adapter
+Description-Content-Type: text/markdown
+
+# WLED Adapter Package
+
+## Overview
+
+The `wled_adapter` package is designed to ...
+
+## Installation
+
+To install the `wled_adapter` package, you can use the following command:
+
+```bash
+pip install wled_adapter
+```
+
+## Usage
+
+Here's a basic example of how to use the `wled_adapter` package:
+
+```python
+from wled_adapter import Adapter
+adapter.initialise_segments()
+adapter = Adapter(SerialConnection(port, 115200))
+adapter.segments[0]._set_pixel(0, Color("blue"))
+adapter.update_segment(segment)
+```
+A complete example is available under [examples](examples)
+## License
+
+The `wled_adapter` package is licensed under the [MIT License](LICENSE).
+
