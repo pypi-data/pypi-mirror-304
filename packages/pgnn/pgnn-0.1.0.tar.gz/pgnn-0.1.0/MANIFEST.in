@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+recursive-include pgnn/featurizers/custom_models *.h5 *.pkl

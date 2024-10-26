@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pgnn/__init__.py
+pgnn.egg-info/PKG-INFO
+pgnn.egg-info/SOURCES.txt
+pgnn.egg-info/dependency_links.txt
+pgnn.egg-info/requires.txt
+pgnn.egg-info/top_level.txt
+pgnn/featurizers/__init__.py
+pgnn/featurizers/megnet_models.py
+pgnn/featurizers/structure.py
+pgnn/featurizers/custom_models/MEGNetModel__MatMinerEncoded_v1.h5
+pgnn/featurizers/custom_models/MEGNetModel__MatMinerEncoded_v1_scaler.pkl
+pgnn/featurizers/custom_models/MEGNetModel__OFMEncoded_v1.h5
+pgnn/featurizers/custom_models/MEGNetModel__OFMEncoded_v1_scaler.pkl
