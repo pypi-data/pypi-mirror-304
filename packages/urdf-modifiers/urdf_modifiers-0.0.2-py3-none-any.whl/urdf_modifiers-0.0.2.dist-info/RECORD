@@ -1,0 +1,15 @@
+urdfModifiers/__init__.py,sha256=HH9f-5WGBMB3IzFSpQeUm8dEJIt93XTgS9oq5Om4S28,278
+urdfModifiers/core/__init__.py,sha256=0NVgkUKg69pTbfixH28jUDapgpMh5tJAqTZW3L0WiGs,355
+urdfModifiers/core/fixedOffsetModifier.py,sha256=2OI605sAjQQIwD5Uy4pRUX0PiMa9Zi1rJtRQzcznbVQ,13448
+urdfModifiers/core/jointModifier.py,sha256=3voP6yxz-Q8Flk7YcSUqHfRwMbujNboIg66qJetQD3k,2354
+urdfModifiers/core/linkModifier.py,sha256=eIGo2gSqeUsNyJph0PJiYoH2TK6qauU83E3G7IOO_wE,12357
+urdfModifiers/core/modification.py,sha256=FstGdf-DcEc7mkiPYkVqnsRRjurysGGG8WYwBhjgEVQ,5158
+urdfModifiers/core/modifier.py,sha256=V26wklUo1pde-MbS0cOxEGgcWTLA_qmxggb-wG6Xh6o,349
+urdfModifiers/geometry/__init__.py,sha256=xWNy6RH3qw_0DtRMxYofzNqamf1uTuOyGXXHINVGXT8,238
+urdfModifiers/geometry/geometry.py,sha256=rMJs_QLk--9MaKahhFcwJytP5KowW1JXWsBEKVzTQ0s,1127
+urdfModifiers/utils/__init__.py,sha256=R-g9ebIebsZCu_2CbskN1v96UePGe5XGsvooQ4hbCjI,235
+urdfModifiers/utils/utils.py,sha256=ai4RZ8roBpR3vg-kyv1fd9CumSx-cj32DGcXYvXbeFY,1749
+urdf_modifiers-0.0.2.dist-info/METADATA,sha256=hNupyqjOBkNMOZIw2aMmNSjkTv7NHQqz_8Wq4iP2mSA,310
+urdf_modifiers-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+urdf_modifiers-0.0.2.dist-info/top_level.txt,sha256=DtTmQPP0jVN5v5kOYDyzmMmYKjTmSLrkoHgh4IU42DE,14
+urdf_modifiers-0.0.2.dist-info/RECORD,,
