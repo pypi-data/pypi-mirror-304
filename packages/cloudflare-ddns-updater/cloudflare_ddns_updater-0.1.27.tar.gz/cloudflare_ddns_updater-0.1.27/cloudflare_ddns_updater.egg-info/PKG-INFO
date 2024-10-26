@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: cloudflare-ddns-updater
+Version: 0.1.27
+Summary: A Python tool to update Cloudflare DNS automatically using DDNS.
+Home-page: https://github.com/yourusername/cloudflare-ddns-updater
+Author: Roberto Giusti
+Author-email: rgiusti@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests
+Requires-Dist: python-crontab
+Requires-Dist: setuptools
+
+This script fetches the Zone ID and the dns record ID from your Cloudflare account.   \
+Before running this script you must login to Cloudflare and create a Token  with the following Permissions:  
+- Zone - Zone - Read  
+- Zone - DNS - Edit    \
+and the following Zone Resources:  
+- Include - Specific zone - yourdomain.xxx")  
+  
+You must also create an A record (xxx.yourdomain.xxx).\
+This script only needs to be run once to setup your ddns updater.  
+  
+I created this script so that I could run it in a dedicated VM or CT in Proxmox,  so I have only ever run it as root.
+The Cloudflare token is saved in clear in a json file that is readable by everyone,   
+so whoever has access to the machine will be able to see the token.
+In my setup, it is in a container with only root as user, so it is not a problem,   
+but if your setup is different, please consider this security aspect.  
+  
+To install on recent Linux systems you probably need pipx.\
+On older systems you can use pip.\
+I am assuming you are root, otherwise use `sudo` as necessary.  
+  
+On Debian or Ubuntu  
+- `apt install pipx`
+
+On Alpine Linux  
+- `apk add pipx`  
+  
+  
+Once installed:  
+- `pipx ensurepath`  
+- Logout and login again (or reboot)  
+- `pipx install cloudflare-ddns-updater`  
+  
+To setup the program  
+- `cloudflare-ddns-updater --setup`  
+  
+To change IP check interval  
+- `cloudflare-ddns-updater --cron`  
+  
+To stop automatic ip update  
+- `cloudflare-ddns-updater --stop`  
+  
+To resume automatic IP update  
+- `cloudflare-ddns-updater --start`  
+  
+To remove all files created by the script  
+- `cloudflare-ddns-updater --cleanup`  
+  
+To check the logs  
+- `cat /var/log/ip_update.log`\n  
+or   
+- `tail -f /var/log/ip_update.log` if you want to follow in realtime  
+  
+To uninstall
+    `cloudflare-ddns-updater --cleanup`
+    `pipx uninstall cloudflare-ddns-updater`  
+  
+
+  
+  
+TODO  
+- Try an installation not as root  
+- Install as unique user and lockdown privileges  
+- Option to always or never force ip update  
+- --logs to change quantity of logs  
+  
+Changes:  
+0.1.27 - improved ux \
+       - added token verification\
+       - moved constants to separate file\
+       - implemented 3 tries for token input
+       - implemented multiple tries for dns record choice\
+0.1.24 - improved ux 
