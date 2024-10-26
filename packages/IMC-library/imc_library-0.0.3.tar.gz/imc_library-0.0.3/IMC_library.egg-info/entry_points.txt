@@ -1,0 +1,3 @@
+[console_scripts]
+convert_mcd_png = IMC_analysis:convert_mcd_png
+visualize_roi = IMC_analysis:visualize_roi
