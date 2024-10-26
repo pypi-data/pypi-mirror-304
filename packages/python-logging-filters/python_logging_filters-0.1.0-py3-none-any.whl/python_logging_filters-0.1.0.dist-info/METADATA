@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-logging-filters
+Version: 0.1.0
+Summary: standard python logging filters
+Home-page: https://www.puzzleyou.de/
+Author: puzzleYOU GmbH
+Author-email: scrum@puzzleyou.de
+License: GPLv3
+Platform: any
+License-File: LICENSE
+
+Simple filters for standard python logging, e.g. for suppressing noisy 3rd party framework logging.
