@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "t_v": {
+                    "type": "string",
+                    "description": "テンプレートバージョン"
+                },
+                "p_n": {
+                    "type": "string",
+                    "description": "プロジェクト名"
+                },
+                "p_v": {
+                    "type": "string",
+                    "description": "プロジェクトバージョン"
+                },
+                "desc": {
+                    "type": "string",
+                    "description": "説明"
+                },
+                "scale": {
+                    "type": "string",
+                    "enum": ["s", "m", "l", "e"],
+                    "description": "規模"
+                }
+            },
+            "required": ["t_v", "p_n", "p_v", "desc", "scale"]
+        }
+    },
+    "required": ["meta"]
+}
