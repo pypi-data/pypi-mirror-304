@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: django-afg-simpleforms
+Version: 1.0.3
+Summary: No description
+Home-page: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Author: afguy
+Author-email: alwaysfrownguy@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Keywords: django python forms
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+simple helper with your forms
+
+
+
