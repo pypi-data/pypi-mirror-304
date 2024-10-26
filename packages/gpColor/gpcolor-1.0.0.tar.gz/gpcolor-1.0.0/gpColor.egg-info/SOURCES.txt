@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+gpColor/__init__.py
+gpColor/color.py
+gpColor.egg-info/PKG-INFO
+gpColor.egg-info/SOURCES.txt
+gpColor.egg-info/dependency_links.txt
+gpColor.egg-info/top_level.txt
