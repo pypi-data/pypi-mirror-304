@@ -1,0 +1,2 @@
+[console_scripts]
+invoice_creator = invoice_creator.invoice_creator:main
