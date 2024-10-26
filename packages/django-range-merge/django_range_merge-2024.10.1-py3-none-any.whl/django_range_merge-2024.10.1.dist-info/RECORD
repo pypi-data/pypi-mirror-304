@@ -1,0 +1,11 @@
+django_range_merge/__init__.py,sha256=gf64lIjXZ0ZJPiM8RSDA_s0tknr8ORnxrlroE8SwRQQ,167
+django_range_merge/apps.py,sha256=-Ox3XCOjxoxoRM5fKpHUJ5DDi3jMJzP1HZ1gcsAmeHU,254
+django_range_merge/models.py,sha256=I3F7bzjsqE0ThCo0hA3_Gk9YJlY4fshqQ-ThasN94VQ,46
+django_range_merge/urls.py,sha256=SR1CfqM6_DyZz4V2yUSc23daink-AK-XfD23XxcfA1k,53
+django_range_merge/migrations/0001_initial.py,sha256=iY68xyAUqfm1Bq1KTcKyXEkfCtW0m8CiphEfXk26rrw,500
+django_range_merge/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_range_merge-2024.10.1.dist-info/LICENSE,sha256=JrUgrivP9x3a18x7Eb-KrCXUfl79FzSSPScw1ho5kDM,1067
+django_range_merge-2024.10.1.dist-info/METADATA,sha256=lsi68lV5Qgo711j7nV_L30OSCE_r1budES9N7jLWNUA,7697
+django_range_merge-2024.10.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_range_merge-2024.10.1.dist-info/top_level.txt,sha256=RkFlNQwcGbieeLI9FRMPPvqs41xuuzX5wK6KEeyaxGs,19
+django_range_merge-2024.10.1.dist-info/RECORD,,
