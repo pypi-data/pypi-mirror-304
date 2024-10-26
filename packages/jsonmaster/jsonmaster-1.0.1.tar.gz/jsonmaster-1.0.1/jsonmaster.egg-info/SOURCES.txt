@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+jsonmaster/__init__.py
+jsonmaster/json_namespace.py
+jsonmaster/types.py
+jsonmaster.egg-info/PKG-INFO
+jsonmaster.egg-info/SOURCES.txt
+jsonmaster.egg-info/dependency_links.txt
+jsonmaster.egg-info/requires.txt
+jsonmaster.egg-info/top_level.txt
+jsonmaster/jsonfile/__init__.py
+jsonmaster/jsonfile/json_file.py
+jsonmaster/jsonfile/static_jsonfile.py
