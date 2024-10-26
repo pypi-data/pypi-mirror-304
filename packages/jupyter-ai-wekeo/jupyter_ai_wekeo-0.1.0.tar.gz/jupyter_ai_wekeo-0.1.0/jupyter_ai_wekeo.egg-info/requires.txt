@@ -1,0 +1,2 @@
+jupyter_ai>=2.23
+langserve[client]
