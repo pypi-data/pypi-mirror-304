@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ovos_gguf_embeddings/__init__.py
+ovos_gguf_embeddings/cli.py
+ovos_gguf_embeddings/version.py
+ovos_gguf_embeddings_plugin.egg-info/PKG-INFO
+ovos_gguf_embeddings_plugin.egg-info/SOURCES.txt
+ovos_gguf_embeddings_plugin.egg-info/dependency_links.txt
+ovos_gguf_embeddings_plugin.egg-info/entry_points.txt
+ovos_gguf_embeddings_plugin.egg-info/requires.txt
+ovos_gguf_embeddings_plugin.egg-info/top_level.txt
+ovos_gguf_embeddings_plugin.egg-info/zip-safe
