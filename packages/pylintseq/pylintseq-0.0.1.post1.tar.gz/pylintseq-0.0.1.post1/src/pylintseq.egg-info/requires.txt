@@ -1,0 +1,5 @@
+jsonlines
+pylint
+numpy
+pandas
+tqdm
