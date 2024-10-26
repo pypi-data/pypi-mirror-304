@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: DLCV
+Version: 0.1
+Summary: A package for cross-validation of dual leaf models
+Author: Prateek Vyas
+Author-email: prateek@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+
+# dual_leaf_cross_score
+
+![dual_leaf_cross_score](https://media.licdn.com/dms/image/v2/D4D0BAQGn8qNS6_QvUQ/company-logo_200_200/company-logo_200_200/0/1721242987617/sinindia_logo?e=1738195200&v=beta&t=mox2b3mqquER99-D4oqTR67DsCqWlf5yriX2QPjixZ0) <!-- Replace with actual image URL -->
+
+`dual_leaf_cross_score` is an advanced Python package designed to simplify and optimize the cross-validation process for machine learning models. While its architecture is tailored for dual leaf models, it remains highly flexible and can be used with any estimator that implements the `fit` method (e.g., scikit-learn models).
+
+This package was proudly developed by **SIN Technologies Private Limited**, as part of our mission to deliver highly scalable and efficient AI/ML solutions.
+
+---
+
+## Key Features
+
+- **Cross-Validation Simplified**: Perform model evaluation using a variety of cross-validation techniques like `KFold`, `StratifiedKFold`, or custom splitting strategies.
+- **Dual Leaf Models Focus**: Special optimizations for dual leaf models, enhancing accuracy and speed in scoring.
+- **Custom Metrics**: Easily define custom scoring metrics or use the default `mean` score for fast evaluation.
+- **Broad Compatibility**: Works seamlessly with scikit-learn pipelines, supporting classifiers, regressors, and more.
+- **CLI Support**: You can execute cross-validation tasks directly from the command line, offering flexibility for scripting or integration into larger workflows.
+
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Advanced Usage](#advanced-usage)
+- [Command-Line Interface (CLI)](#command-line-interface-cli)
+- [Development](#development)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## Installation
+
+### Prerequisites
+
+Ensure you have Python 3.6+ installed on your system. The package depends on several libraries, including scikit-learn and numpy. If you're using a virtual environment, ensure it's activated before proceeding.
+
+### Installing via PyPI
+
+To install the latest version of `dual_leaf_cross_score` from [PyPI](https://pypi.org/project/dual_leaf_cross_score):
+
+```bash
+pip install DLCV

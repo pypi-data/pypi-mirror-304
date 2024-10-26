@@ -1,0 +1,2 @@
+[console_scripts]
+dual-leaf = dual_leaf_cross_score.cli:main
