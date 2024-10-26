@@ -1,0 +1,14 @@
+hwo_sci_eng/json/Telescope-EAC1.json,sha256=NZIEX3TelT17nrSTs1tVuPE-lCniUVKaOX7q6X6MW3c,283
+hwo_sci_eng/json/Telescope-EAC2.json,sha256=msX6I9idrvZ03ZUITCq6pJk2Ikm2OwE30mZhNNtMxyo,288
+hwo_sci_eng/json/Telescope-EAC3.json,sha256=Yjgs2cDTU_CgNy9Su296TIdofU3dSw-Cu4-D-STfSCQ,286
+hwo_sci_eng/json/WFI.json,sha256=fnaiLNhz1F5QQjS8hvZefn8xEembAz-Zy5nBRHPSRJI,709
+hwo_sci_eng/json/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hwo_sci_eng/obs_config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hwo_sci_eng/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hwo_sci_eng/utils/read_json.py,sha256=uZNJF-OMeQCu5Ll9ZQ8CE3AW_How3AzPLRTK969Kp3s,779
+hwo_sci_eng/utils/read_yaml.py,sha256=ZmG-8yDvH-IDa7BvU_TnGfUim9FFdzTxISlnPfi58RQ,776
+hwo_sci_eng-0.1.5.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+hwo_sci_eng-0.1.5.dist-info/METADATA,sha256=pc-cxj0eSUmpzC-QZq8-UJt2mhc9osf60-Dx395demo,407
+hwo_sci_eng-0.1.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+hwo_sci_eng-0.1.5.dist-info/top_level.txt,sha256=kHtdbWcg2fHLW1xF5gVNGpckizWy8vI8RVmkD7ukisw,58
+hwo_sci_eng-0.1.5.dist-info/RECORD,,
