@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.py
+src/robotraconteur_abstract_robot/__init__.py
+src/robotraconteur_abstract_robot/abstract_robot.py
+src/robotraconteur_abstract_robot/joint_trajectory_interpolator.py
+src/robotraconteur_abstract_robot/trapezoidal_joint_trajectory_generator.py
+src/robotraconteur_abstract_robot.egg-info/PKG-INFO
+src/robotraconteur_abstract_robot.egg-info/SOURCES.txt
+src/robotraconteur_abstract_robot.egg-info/dependency_links.txt
+src/robotraconteur_abstract_robot.egg-info/not-zip-safe
+src/robotraconteur_abstract_robot.egg-info/requires.txt
+src/robotraconteur_abstract_robot.egg-info/top_level.txt
+test/test_abstract_robot.py
+test/test_joint_interpolator.py
+test/test_trapezoidal_joint_trajectory_generator.py

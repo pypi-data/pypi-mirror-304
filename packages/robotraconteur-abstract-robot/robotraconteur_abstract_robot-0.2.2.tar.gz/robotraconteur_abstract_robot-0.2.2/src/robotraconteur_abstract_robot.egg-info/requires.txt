@@ -1,0 +1,11 @@
+RobotRaconteur
+RobotRaconteurCompanion
+numpy
+PyYAML
+setuptools
+importlib_resources
+general_robotics_toolbox
+scipy
+
+[test]
+pytest
