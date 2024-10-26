@@ -1,0 +1,12 @@
+babbleon/__init__.py,sha256=8Sx3UiHu2RWY7lydsjgqNGnPY-gAVkELPUlabT-kXXI,39
+babbleon/cli.py,sha256=PsOYQotBDUkkHRRJZV_Ikw8waXoirYEVJkWO4FnL8D8,2542
+babbleon/config.py,sha256=mq6Cx5gg8VoTp7YXpIuzLz3uFzMZuRsSBI8X6FB9Apg,461
+babbleon/prompts/translator.md,sha256=SJ15-db1GIBI0I6ubiPHBhQNKS57J-fDR5-fkVYS6fM,5980
+babbleon/templates/babbleon.json,sha256=1b-AOExDkOrzLtlolibflCYQ95wU30jQGhmuhJvu-A4,124
+babbleon/templates/reference.toml,sha256=VR-gr8kUn5bKsoEvW-JyCPs9fkKPI2Wv8lAKzmw5b-Y,172
+babbleon/translate.py,sha256=OG2gN5pqxsQ8AKt0UrRLc4mR3j5MmCosE-qrtEXjmgk,2184
+babbleon-0.1.2.dist-info/LICENSE,sha256=kdjAMEsgCj89N3vzRYRirEwZOjUpUe8bOOdR9FJ2VOM,1058
+babbleon-0.1.2.dist-info/METADATA,sha256=yLrYxhdpZY4hXNU-6Y24fcLZEfm30upkiJb86n3cN9c,1596
+babbleon-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+babbleon-0.1.2.dist-info/entry_points.txt,sha256=fsSjsqAo6RUMMrs-iM1kjUVKKdIaiWRwkkIW-c3IMLc,41
+babbleon-0.1.2.dist-info/RECORD,,
