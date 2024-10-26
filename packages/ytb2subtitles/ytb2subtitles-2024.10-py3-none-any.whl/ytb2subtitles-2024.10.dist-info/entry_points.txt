@@ -1,0 +1,2 @@
+[console_scripts]
+ytb2subtitles = ytb2subtitles.ytb2subtitles:main
