@@ -1,0 +1,11 @@
+Django>=4.2
+django-colorfield
+ezdxf
+nh3
+Pillow
+
+[dev]
+build
+coverage
+pre-commit
+twine
