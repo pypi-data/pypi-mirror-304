@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: tablegpt-agent
+Version: 0.2.1
+Project-URL: Documentation, https://github.com/tablegpt/tablegpt/blob/main/README.md
+Project-URL: Issues, https://github.com/tablegpt/tablegpt/issues
+Project-URL: Source, https://github.com/tablegpt/tablegpt
+Author-email: Junlin Zhou <jlzhou@zjuici.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: chardet<6.0.0,>=5.2.0
+Requires-Dist: langchain-qdrant<1.0.0,>=0.1.4
+Requires-Dist: langchain<1.0.0,>=0.3.0
+Requires-Dist: langgraph<1.0.0,>=0.0.68
+Requires-Dist: pandas<3.0.0,>=2.2
+Requires-Dist: pppybox>=0.0.13
+Description-Content-Type: text/markdown
+
+# TableGPT
+
+[![PyPI - Version](https://img.shields.io/pypi/v/tablegpt-agent.svg)](https://pypi.org/project/tablegpt-agent)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tablegpt-agent.svg)](https://pypi.org/project/tablegpt-agent)
+
+-----
+
+## Table of Contents
+
+- [TableGPT](#tablegpt)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+
+## Installation
+
+```sh
+pip install tablegpt
+```
