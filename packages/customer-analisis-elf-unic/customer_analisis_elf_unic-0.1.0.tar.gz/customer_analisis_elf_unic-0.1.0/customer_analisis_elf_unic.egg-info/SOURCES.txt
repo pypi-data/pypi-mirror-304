@@ -1,0 +1,8 @@
+customer_analisis.py
+pyproject.toml
+customer_analisis_elf_unic.egg-info/PKG-INFO
+customer_analisis_elf_unic.egg-info/SOURCES.txt
+customer_analisis_elf_unic.egg-info/dependency_links.txt
+customer_analisis_elf_unic.egg-info/entry_points.txt
+customer_analisis_elf_unic.egg-info/requires.txt
+customer_analisis_elf_unic.egg-info/top_level.txt
