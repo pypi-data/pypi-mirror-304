@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+itemlist/__init__.py
+itemlist/itemlist.py
+itemlist/utils.py
+itemlist.egg-info/PKG-INFO
+itemlist.egg-info/SOURCES.txt
+itemlist.egg-info/dependency_links.txt
+itemlist.egg-info/entry_points.txt
+itemlist.egg-info/requires.txt
+itemlist.egg-info/top_level.txt
+tests/__init__.py
+tests/test_itemlist.py
+tests/test_utils.py
