@@ -1,0 +1,12 @@
+ovos_user_id/__init__.py,sha256=X5KUypvny6zJQqRy4l-WGmrhcK3rTlNnImjnT9FVf0k,1896
+ovos_user_id/cam.py,sha256=t9ny01LOz6m7jI4z2F0jXsqnhcPtL_axHpdp1XYOIVs,1350
+ovos_user_id/db.py,sha256=uXmNuSeIwdsn_umn_h9nNXquYzt8C7rWDFF6sJ2_7hs,7856
+ovos_user_id/mic.py,sha256=h-1fdmtvSHZAiJYn6llSqmH9kIedOFi2EcCEvfnCj40,1015
+ovos_user_id/tui.py,sha256=_KxUmTdSdDpnl23sG7HnceWTTr9J23Vl7TlEEUU9q0A,4557
+ovos_user_id/users.py,sha256=L0pPqmIydGazLLRJ8gS_zZiJJdu5zpe4SFtBqUl4mdM,3864
+ovos_user_id/version.py,sha256=2AngvTQ2V0oxKc9NmDOM8rBEoiyaHuChugaM8i13Zu4,114
+ovos_user_id-0.0.0a1.dist-info/METADATA,sha256=OoDIDLxk8lNhDS02T4dMxmGU5MCx0pGB-Ad3ciiaRr4,194
+ovos_user_id-0.0.0a1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+ovos_user_id-0.0.0a1.dist-info/entry_points.txt,sha256=q6UiQP3_D0NK1CtQNr5-HLJYpjhOoKnucVI56aj-sXs,141
+ovos_user_id-0.0.0a1.dist-info/top_level.txt,sha256=idaOf5SHmFhYTXlrX-YLw8WGnd0bniCDHaAelVb5p04,13
+ovos_user_id-0.0.0a1.dist-info/RECORD,,
