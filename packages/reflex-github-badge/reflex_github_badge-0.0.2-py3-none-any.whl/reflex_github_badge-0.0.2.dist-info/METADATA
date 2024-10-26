@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: reflex-github-badge
+Version: 0.0.2
+Summary: Reflex custom component to render a Github card using your profile data
+Author-email: xsismadn3ss <2477carlos.a@gmail.com>
+License: Apache-2.0
+Project-URL: homepage, https://github.com/xsismadn3ss
+Project-URL: source, https://github.com/xsismadn3ss/Github_badge_component
+Keywords: reflex,reflex-custom-components,'github-card'
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: reflex>=0.6.3.post1
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# github-badge
+
+A Reflex custom component github-badge.
+
+![github_badge](image.png)
+
+## Installation
+
+```bash
+pip install reflex-github-badge
+```
