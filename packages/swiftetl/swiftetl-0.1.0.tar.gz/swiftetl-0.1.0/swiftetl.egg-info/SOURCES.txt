@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+swiftetl/__init__.py
+swiftetl/etl_pipeline.py
+swiftetl.egg-info/PKG-INFO
+swiftetl.egg-info/SOURCES.txt
+swiftetl.egg-info/dependency_links.txt
+swiftetl.egg-info/requires.txt
+swiftetl.egg-info/top_level.txt
