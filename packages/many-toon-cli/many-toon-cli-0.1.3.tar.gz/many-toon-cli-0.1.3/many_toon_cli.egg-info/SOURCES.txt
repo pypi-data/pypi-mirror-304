@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+many_toon_cli/__init__.py
+many_toon_cli/manga.py
+many_toon_cli.egg-info/PKG-INFO
+many_toon_cli.egg-info/SOURCES.txt
+many_toon_cli.egg-info/dependency_links.txt
+many_toon_cli.egg-info/entry_points.txt
+many_toon_cli.egg-info/requires.txt
+many_toon_cli.egg-info/top_level.txt

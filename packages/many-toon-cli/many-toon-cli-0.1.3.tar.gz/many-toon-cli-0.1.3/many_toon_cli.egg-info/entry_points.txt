@@ -1,0 +1,2 @@
+[console_scripts]
+many-toon-cli = many_toons_cli.manga
