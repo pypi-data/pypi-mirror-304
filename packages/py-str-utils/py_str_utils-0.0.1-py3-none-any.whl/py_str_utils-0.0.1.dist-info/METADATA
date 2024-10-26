@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: py_str_utils
+Version: 0.0.1
+Summary: Str utils
+Author: fernandocode
+Author-email: lealfernandoleal@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# py_str_utils
+
+Description. 
+The package py_str_utils is used to:
+	- length str
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install py_str_utils
+
+```bash
+pip install py_str_utils
+```
+
+## Author
+fernandocode
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
