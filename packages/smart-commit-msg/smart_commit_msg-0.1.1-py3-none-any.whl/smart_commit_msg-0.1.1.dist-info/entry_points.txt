@@ -1,0 +1,2 @@
+[console_scripts]
+smart-commit-msg = smart_commit_msg:main

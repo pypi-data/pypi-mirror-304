@@ -1,0 +1,65 @@
+Metadata-Version: 2.3
+Name: smart-commit-msg
+Version: 0.1.1
+Summary: Builds a smart commit message using LLMs
+Author-email: ariG23498 <aritra.born2fly@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: fire>=0.7.0
+Requires-Dist: huggingface-hub>=0.26.1
+Requires-Dist: ruff>=0.7.1
+Description-Content-Type: text/markdown
+
+## Smart Commit Msg
+
+<img src="./assets/git-diff.jpeg" height=200 width=300></img>
+
+A tool that creates smart commit messages using the `git diff`.
+
+## Usage
+
+Install the CLI
+
+```sh
+$ pip install smart-commit-msg
+```
+
+Go to a git repository
+
+```sh
+$ git add .
+$ smart-commit-msg
+```
+
+Smart commit msg gives you a commit message based on the staged changes.
+
+## Tool Help
+
+```sh
+NAME
+    smart-commit-msg - Main function that orchestrates the commit message generation and user interaction.
+
+SYNOPSIS
+    smart-commit-msg <flags>
+
+DESCRIPTION
+    Main function that orchestrates the commit message generation and user interaction.
+
+FLAGS
+    --model=MODEL
+        Default: 'meta-llama/Llama...
+    --max_tokens=MAX_TOKENS
+        Default: 100
+```
+
+
+## Models
+
+This tool uses the `huggingface_hub.InferenceClient` API. So you can use all the models that support
+the inference endpoints!
+
+To know more about inference endpoints please read the official [documentation](https://huggingface.co/docs/inference-endpoints/en/index).
+
+## References
+
+* [Andrej Karpathy's Tweet](https://x.com/karpathy/status/1827810695658029262)
+* [Andrej Karpathy's Gist](https://gist.github.com/karpathy/1dd0294ef9567971c1e4348a90d69285)
