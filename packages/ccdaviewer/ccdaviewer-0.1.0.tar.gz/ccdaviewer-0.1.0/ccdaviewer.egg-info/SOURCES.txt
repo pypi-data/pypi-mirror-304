@@ -1,0 +1,6 @@
+setup.py
+ccdaviewer.egg-info/PKG-INFO
+ccdaviewer.egg-info/SOURCES.txt
+ccdaviewer.egg-info/dependency_links.txt
+ccdaviewer.egg-info/requires.txt
+ccdaviewer.egg-info/top_level.txt
