@@ -1,0 +1,1 @@
+A package to use pub/sub to connect to SFDC, designed for Citizengo
