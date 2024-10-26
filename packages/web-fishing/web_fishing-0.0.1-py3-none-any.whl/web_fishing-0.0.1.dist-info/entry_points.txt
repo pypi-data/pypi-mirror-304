@@ -1,0 +1,3 @@
+[console_scripts]
+web-fishing=web_fishing.__main__:main
+
