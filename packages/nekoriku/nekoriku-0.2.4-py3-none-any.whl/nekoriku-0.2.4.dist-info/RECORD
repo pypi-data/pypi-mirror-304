@@ -1,0 +1,15 @@
+Nekoriku/__init__.py,sha256=zqsUENh7D8iIOYorpexevtGbIoCP6E4F6sHZkS4pJiI,1607
+Nekoriku/bot.py,sha256=lCaVMT9OMii8VWLIRMraWPAMC8_zSRA-jfq0IjNnOsw,1733
+Nekoriku/client.py,sha256=is86gSEDHqu4kB72TRDLf04VNb-DhMBIo8J0NQKmSYc,6361
+Nekoriku/colored_logging.py,sha256=Ynk0_lRqIN-SR8MJhNJ3N1I9vGeyHGiJwt0GmnGAYwc,5138
+Nekoriku/embeds.py,sha256=dZd5WsR5vPnTiE2aBLWVPkaRjn7cDIxBAzuVHWFYQEA,45158
+Nekoriku/utils.py,sha256=BhhhF-UaSkdcV3atnasgB-M3j5f4FDWHSQwo2j1nq_8,4449
+Nekoriku/plugins/__init__.py,sha256=Ik9UiW5nZti5nV6Lq48bITYbU73QidMgxJUCK38POtE,2271
+Nekoriku/plugins/music_event.py,sha256=STRMcpWLZDHPuQ-mZjL2sQrIPOG77UaruPHAXU67Uao,2251
+Nekoriku/plugins/music_prefix.py,sha256=pheh_LqfsxAMwPFlv7DpEWpJg_C95cmAZ4PsG7A5cf4,24431
+Nekoriku/plugins/music_slash.py,sha256=CjpBZd7bEgesv3JjyFJalpqbt2s2lzV5-DX2Wh7WTyI,26210
+nekoriku-0.2.4.dist-info/LICENSE,sha256=RYVeuUjipjc1s3yHe88AGbS-Q0SAYn3xFJDEczuHyXA,4557
+nekoriku-0.2.4.dist-info/METADATA,sha256=Kofdi3brfj89Xdy1Ye7T5d6IEoL0zmXW_ZOalZzvWXw,3122
+nekoriku-0.2.4.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+nekoriku-0.2.4.dist-info/top_level.txt,sha256=eKoM0M37fOvk__ZqacC-2k6PKD3pFtG43ylVbK3zt8g,9
+nekoriku-0.2.4.dist-info/RECORD,,
