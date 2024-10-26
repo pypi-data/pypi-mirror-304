@@ -1,0 +1,3 @@
+from .types import Array
+
+def copy_tensor(src: Array, dst: Array) -> None: ...
