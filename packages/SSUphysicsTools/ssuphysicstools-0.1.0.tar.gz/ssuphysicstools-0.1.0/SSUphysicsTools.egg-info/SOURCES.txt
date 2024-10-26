@@ -1,0 +1,12 @@
+README.md
+setup.py
+SSUphysicsTools.egg-info/PKG-INFO
+SSUphysicsTools.egg-info/SOURCES.txt
+SSUphysicsTools.egg-info/dependency_links.txt
+SSUphysicsTools.egg-info/requires.txt
+SSUphysicsTools.egg-info/top_level.txt
+package/Plots.py
+package/__init__.py
+package/data_analysis.py
+package/data_processing.py
+package/getting_data.py
