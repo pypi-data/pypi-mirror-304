@@ -1,0 +1,3 @@
+[neon.plugin.solver]
+ovos-solver-jabir-solver-plugin = ovos_jabir_solver:JabirLLMSolver
+
