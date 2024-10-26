@@ -1,0 +1,69 @@
+[project]
+name = "pluginmgr"
+version = "1.2.1"
+description = "lightweight python plugin system supporting config inheritance"
+readme = "README.md"
+authors = [{ name = "20C", email = "code@20c.com" }]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.8"
+classifiers = [
+    "Topic :: Software Development",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = ["munge>=1", "importlib-metadata>=1"]
+
+[project.urls]
+repository = "https://github.com/20c/pluginmgr"
+
+
+[tool.uv]
+dev-dependencies = [
+    # testing
+    "coverage>=5.3",
+    "pytest>=6.1.2",
+    "pytest-cov>=2.10.1",
+    "pytest-forked>=1",
+    "tox>=4",
+    "tox-gh-actions>=3",
+    "tox-uv>=1.13.0",
+
+    # linting
+    "ruff>=0.1",
+    "pre-commit>=2.13",
+
+    # ctl
+    "ctl>=1",
+    "jinja2>=3",
+    "tmpl>=1",
+    "twine>=3.3.0",
+
+    # docs
+    "markdown>3",
+    "markdown-include>=0.5",
+    "mkdocs>=1"
+]
+
+[tool.pytest.ini_options]
+norecursedirs = ["data", "gen", ".tox"]
+minversion = "6.0"
+addopts = "--forked"
+testpaths = ["tests"]
+
+[tool.ruff]
+extend-select = [
+    "I",  # isort
+    "UP",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

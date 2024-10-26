@@ -1,0 +1,10 @@
+
+         """
+         takes plugin config (list under 'plugin') and instantiates defined
+         plugins
++XXX needs to check for dupes
+
+
++XXX needs to check for dupes
+
+XXX needs to raise import errors from importing the module

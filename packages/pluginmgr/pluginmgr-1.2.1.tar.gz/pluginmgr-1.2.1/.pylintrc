@@ -1,0 +1,14 @@
+[BASIC]
+good-names=i,j,k,ex,Run,_,cp,mv,rm,rv,e,pk,x,y
+
+[DESIGN]
+min-public-methods=0
+
+[FORMAT]
+max-line-length=132
+
+[MESSAGES CONTROL]
+disable=missing-docstring
+
+[VARIABLES]
+redefining-builtins-modules=six.moves,builtins,future.builtins,past.builtins
