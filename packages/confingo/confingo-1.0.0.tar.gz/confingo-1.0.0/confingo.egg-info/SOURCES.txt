@@ -1,0 +1,12 @@
+LICENSE
+README.md
+confingo.py
+pyproject.toml
+setup.cfg
+setup.py
+confingo.egg-info/PKG-INFO
+confingo.egg-info/SOURCES.txt
+confingo.egg-info/dependency_links.txt
+confingo.egg-info/requires.txt
+confingo.egg-info/top_level.txt
+tests/test_confingo.py

@@ -1,0 +1,7 @@
+
+[dev]
+setuptools>=42
+wheel
+twine
+pytest>=6.0
+tox>=3.24
