@@ -1,0 +1,21 @@
+[project]
+name = "smart-commit-msg"
+version = "0.1.0"
+description = "Builds a smart commit message using LLMs"
+readme = "README.md"
+authors = [
+    { name = "ariG23498", email = "aritra.born2fly@gmail.com" } 
+]
+requires-python = ">=3.9"
+dependencies = [
+    "fire>=0.7.0",
+    "huggingface-hub>=0.26.1",
+    "ruff>=0.7.1",
+]
+
+[project.scripts]
+smart-commit-msg = "smart_commit_msg:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
