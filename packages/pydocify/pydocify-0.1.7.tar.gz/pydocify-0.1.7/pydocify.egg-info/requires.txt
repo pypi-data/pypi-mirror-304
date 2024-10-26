@@ -1,0 +1,7 @@
+jupyterlab
+langchain-core
+langchain-openai
+python-dotenv
+tiktoken
+tqdm
+urllib3==2.2.3
