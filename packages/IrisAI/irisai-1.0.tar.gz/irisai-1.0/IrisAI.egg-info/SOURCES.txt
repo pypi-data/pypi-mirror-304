@@ -1,0 +1,9 @@
+README.md
+setup.py
+IrisAI.egg-info/PKG-INFO
+IrisAI.egg-info/SOURCES.txt
+IrisAI.egg-info/dependency_links.txt
+IrisAI.egg-info/requires.txt
+IrisAI.egg-info/top_level.txt
+irisai/__init__.py
+irisai/client.py

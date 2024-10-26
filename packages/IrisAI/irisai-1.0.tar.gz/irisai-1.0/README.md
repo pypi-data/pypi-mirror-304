@@ -1,0 +1,63 @@
+# IrisAI
+
+## Create Client
+
+```python
+from irisai import IrisAI
+
+client = IrisAI(token="Your_Token")
+```
+
+## Chat Completions
+```python
+response = client.chat_completions(
+	message="<Your Message>",
+	model="<Model>",
+	stream=False, # Optional - Default False
+	temperature=1, # Optional - Default 1.0
+	maxtokens=1000 # Optional - Default 4096
+) # Need a Token
+```
+if stream is true then chat_completions return a iter.
+else, chat_completions return a str with response text
+
+## Models
+```python
+response = client.info.models() # Don't need a token
+```
+
+# Examples
+### Chat Completions
+```python
+from irisai import IrisAI
+
+client = IrisAI(token="Your_Token")
+response = client.chat_completions(
+    message="Hello!",
+    model="IrisAI-latest",
+    stream=False,
+    temperature=1,
+    maxtokens=1000
+)
+
+print(response)
+```
+```
+Hello! How can I assist you today? Let's have a friendly chat. 😊 How are you doing?
+```
+##### With stream
+```python
+from irisai import IrisAI
+
+client = IrisAI(token="Your_Token")
+response = client.chat_completions(
+    message="Hello!",
+    model="IrisAI-latest",
+    stream=True,
+    temperature=1,
+    maxtokens=1000
+)
+
+for chunk in response:
+    print(chunk, flush=True, end="")
+```
