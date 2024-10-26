@@ -1,0 +1,2 @@
+[dict_to_xml]
+dict-to-xml = xml_converter
