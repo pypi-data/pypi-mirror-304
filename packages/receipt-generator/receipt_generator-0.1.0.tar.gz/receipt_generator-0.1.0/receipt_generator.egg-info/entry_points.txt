@@ -1,0 +1,2 @@
+[console_scripts]
+generate-receipt = receipt_generator.cli:main
