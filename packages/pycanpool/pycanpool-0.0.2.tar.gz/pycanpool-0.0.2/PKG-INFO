@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pycanpool
+Version: 0.0.2
+Summary: A simple fancy package
+Home-page: https://gitee.com/icanpool/pycanpool
+Author: maminjie
+Author-email: canpool@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mulan Permissive Software License v2 (MulanPSL-2.0)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+pycanpool is a fancy package
