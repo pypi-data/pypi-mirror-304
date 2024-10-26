@@ -1,0 +1,124 @@
+changelog-chug is a parser for project Change Log documents.
+
+changelog-chug
+##############
+
+Example
+=======
+
+Given a reStructuredText document ChangeLog::
+
+    Change Log
+    ##########
+
+    Version 1.0.1
+    =============
+
+    :Released: 2020-01-10
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 1.0
+    ===========
+
+    :Released: 2020-01-10
+    :Maintainer: Luis Flores <ayalaian@example.org>
+
+    …
+
+    Version 0.2
+    ===========
+
+    :Released: 2019-07-04
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 0.2-alpha1
+    ==================
+
+    :Released: 2019-07-04
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 0.1
+    ===========
+
+    :Released: 2019-05-16
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+Generate Change Log entry data for all versions from the reStructuredText
+formatted ChangeLog::
+
+    >>> import pathlib
+    >>> import pprint
+    >>> import chug.parsers.rest
+    >>> import chug.writers
+    >>> infile_path = pathlib.Path(".", "ChangeLog")
+    >>> document_text = chug.parsers.get_changelog_document_text(infile_path)
+    >>> document = chug.parsers.rest.parse_rest_document_from_text(
+    ...     document_text)
+    >>> entries = chug.parsers.rest.make_change_log_entries_from_document(
+    ...     document)
+    >>> pprint.pprint([entry.as_version_info_entry() for entry in entries])
+    [OrderedDict([('release_date', '2020-01-10'),
+                  ('version', '1.0.1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2020-01-10'),
+                  ('version', '1.0'),
+                  ('maintainer', 'Luis Flores <ayalaian@example.org>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-07-04'),
+                  ('version', '0.2'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-07-04'),
+                  ('version', '0.2-alpha1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-05-16'),
+                  ('version', '0.1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')])]
+
+Generate a JSON document describing the latest version::
+
+    >>> import json
+    >>> latest_entry = entries[0]
+    >>> latest_entry_json = json.dumps(
+    ...     latest_entry.as_version_info_entry(), indent=4)
+    >>> print(latest_entry_json)
+    {
+        "release_date": "2020-01-10",
+        "version": "1.0.1",
+        "maintainer": "Cathy Morris <cathy.morris@example.com>",
+        "body": "\u2026"
+    }
+
+
+Copying
+=======
+
+changelog-chug is free software. See the file `COPYING`_ for details.
+
+..  _COPYING: COPYING
+
+
+..
+    This document is written using `reStructuredText`_ markup, and can
+    be rendered with `Docutils`_ to other formats.
+
+    ..  _Docutils: http://docutils.sourceforge.net/
+    ..  _reStructuredText: http://docutils.sourceforge.net/rst.html
+
+..
+    Local variables:
+    coding: utf-8
+    mode: rst
+    End:
+    vim: fileencoding=utf-8 filetype=rst :

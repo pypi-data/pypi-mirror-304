@@ -1,0 +1,201 @@
+Metadata-Version: 2.1
+Name: changelog-chug
+Version: 0.0.3
+Summary: Parser library for project Change Log documents.
+Author-email: Ben Finney <ben+python@benfinney.id.au>
+Maintainer: Ben Finney <ben+python@benfinney.id>
+License: Copying this work
+        #################
+        
+        changelog-chug is `free software`_; you are free to
+        redistribute it and/or modify it under specific conditions.
+        
+        ..  _free software: https://www.gnu.org/philosophy/free-sw.html
+        
+        
+        Software
+        ========
+        
+        Copyright © 2008–2023 Ben Finney <ben+python@benfinney.id.au>
+        
+        This is free software: you may copy, modify, and/or redistribute this
+        work under the terms of the GNU Affero General Public License as
+        published by the Free Software Foundation; version 3 of that license
+        or any later version.
+        
+        No warranty expressed or implied. See the file `LICENSE.AGPL-3`_ for
+        details, or online at `<https://www.gnu.org/licenses/agpl-3.0.html>`_.
+        
+        ..  _LICENSE.AGPL-3: LICENSE.AGPL-3
+        
+                
+        ..
+            Local variables:
+            coding: utf-8
+            mode: rst
+            End:
+            vim: fileencoding=utf-8 filetype=rst :
+        
+Project-URL: Home Page, https://git.sr.ht/~bignose/changelog-chug
+Project-URL: Change Log,     https://git.sr.ht/~bignose/changelog-chug/tree/main/item/ChangeLog
+    
+Project-URL: Source, https://git.sr.ht/~bignose/changelog-chug
+Project-URL: Issue Tracker, https://todo.sr.ht/~bignose/changelog-chug
+Keywords: version,changelog,release,packaging
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE.AGPL-3
+License-File: COPYING
+Requires-Dist: semver>=3.0.0
+Requires-Dist: docutils>=0.21.0
+Provides-Extra: static-analysis
+Requires-Dist: pip-check; extra == "static-analysis"
+Requires-Dist: mccabe~=0.7; extra == "static-analysis"
+Requires-Dist: pycodestyle~=2.12; extra == "static-analysis"
+Requires-Dist: ruff~=0.6; extra == "static-analysis"
+Provides-Extra: test
+Requires-Dist: changelog-chug[static-analysis]; extra == "test"
+Requires-Dist: testtools; extra == "test"
+Requires-Dist: testscenarios>=0.4; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Provides-Extra: devel
+Requires-Dist: changelog-chug[test]; extra == "devel"
+Requires-Dist: pyupgrade~=3.17; extra == "devel"
+Requires-Dist: isort~=5.13; extra == "devel"
+Provides-Extra: build
+Requires-Dist: changelog-chug[devel]; extra == "build"
+Requires-Dist: wheel; extra == "build"
+Requires-Dist: build; extra == "build"
+Provides-Extra: publish
+Requires-Dist: changelog-chug[build]; extra == "publish"
+Requires-Dist: twine; extra == "publish"
+
+changelog-chug is a parser for project Change Log documents.
+
+changelog-chug
+##############
+
+Example
+=======
+
+Given a reStructuredText document ChangeLog::
+
+    Change Log
+    ##########
+
+    Version 1.0.1
+    =============
+
+    :Released: 2020-01-10
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 1.0
+    ===========
+
+    :Released: 2020-01-10
+    :Maintainer: Luis Flores <ayalaian@example.org>
+
+    …
+
+    Version 0.2
+    ===========
+
+    :Released: 2019-07-04
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 0.2-alpha1
+    ==================
+
+    :Released: 2019-07-04
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+    Version 0.1
+    ===========
+
+    :Released: 2019-05-16
+    :Maintainer: Cathy Morris <cathy.morris@example.com>
+
+    …
+
+Generate Change Log entry data for all versions from the reStructuredText
+formatted ChangeLog::
+
+    >>> import pathlib
+    >>> import pprint
+    >>> import chug.parsers.rest
+    >>> import chug.writers
+    >>> infile_path = pathlib.Path(".", "ChangeLog")
+    >>> document_text = chug.parsers.get_changelog_document_text(infile_path)
+    >>> document = chug.parsers.rest.parse_rest_document_from_text(
+    ...     document_text)
+    >>> entries = chug.parsers.rest.make_change_log_entries_from_document(
+    ...     document)
+    >>> pprint.pprint([entry.as_version_info_entry() for entry in entries])
+    [OrderedDict([('release_date', '2020-01-10'),
+                  ('version', '1.0.1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2020-01-10'),
+                  ('version', '1.0'),
+                  ('maintainer', 'Luis Flores <ayalaian@example.org>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-07-04'),
+                  ('version', '0.2'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-07-04'),
+                  ('version', '0.2-alpha1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')]),
+     OrderedDict([('release_date', '2019-05-16'),
+                  ('version', '0.1'),
+                  ('maintainer', 'Cathy Morris <cathy.morris@example.com>'),
+                  ('body', '…')])]
+
+Generate a JSON document describing the latest version::
+
+    >>> import json
+    >>> latest_entry = entries[0]
+    >>> latest_entry_json = json.dumps(
+    ...     latest_entry.as_version_info_entry(), indent=4)
+    >>> print(latest_entry_json)
+    {
+        "release_date": "2020-01-10",
+        "version": "1.0.1",
+        "maintainer": "Cathy Morris <cathy.morris@example.com>",
+        "body": "\u2026"
+    }
+
+
+Copying
+=======
+
+changelog-chug is free software. See the file `COPYING`_ for details.
+
+..  _COPYING: COPYING
+
+
+..
+    This document is written using `reStructuredText`_ markup, and can
+    be rendered with `Docutils`_ to other formats.
+
+    ..  _Docutils: http://docutils.sourceforge.net/
+    ..  _reStructuredText: http://docutils.sourceforge.net/rst.html
+
+..
+    Local variables:
+    coding: utf-8
+    mode: rst
+    End:
+    vim: fileencoding=utf-8 filetype=rst :
