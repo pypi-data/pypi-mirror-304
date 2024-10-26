@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: Ilyass
+Version: 1.6
+Summary: This is a library to check email (Hotmail, Gmail) if is availabe, get instagram information by usernam, get reset of user instagram, check if email registered in instagram, And many more features that may be added soon.
+Home-page: https://t.me/n1z1n
+Author: ILYASS SR
+Author-email: ilyassvv@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: uuid
+Requires-Dist: user_agent
+
+```bash
+pip install Ilyass
+```
+
+```python
+from Ilyass import HotmailChecker
+
+python = HotmailChecker.HotmailEm('example@hotmail.com')
+
+if python == True:
+  print('Email Valide')
+else:
+  print('Email Invalide')
+```
+```python
+from Ilyass import Instagram as gg
+
+username = "cristiano"
+info = gg.information(username) or {}
+
+name = info.get("name", "None")
+username = info.get("username", "None")
+followers = info.get("followers", "None")
+following = info.get("following", "None")
+date = info.get("date", "None")
+id = info.get("id", "None")
+post = info.get("post", "None")
+bio = info.get("bio", "None")
+user_is_verified = info.get("is_verified", "None")
+user_is_private = info.get("is_private", "None")
+
+print("Name:", name)
+print("Username:", username)
+print("Followers:", followers)
+print("Following:", following)
+print("Date:", date)
+print("ID:", id)
+print("Posts:", post)
+print("Bio:", bio)
+print("Verified:", user_is_verified)
+print("Private:", user_is_private)
+```
+
+```python
+import os
+from Ilyass import GmailChecker
+try:
+     os.remove('tl.txt')
+except:
+     pass
+ 
+email = input('email:  ')
+result = GmailChecker.gmail(email)
+
+print(result)
+```
+
+```python
+from Ilyass import Instagram as ig
+#Date 2012/2013/2024, 2024
+try:
+  username = ig.usergen(2012)
+
+  print(username)
+except:pass
+```
+
+```python
+from Ilyass import Instagram as ig
+
+username = "geraldvkirkland"
+
+rr = ig.rest(username)
+
+print(rr)
+
+#result g*******d@gmail.com
+```
+
+#for more info
+
+```python
+#my telegram @ILyassPy
+import Ilyass
+print(dir(Ilyass))
+```
