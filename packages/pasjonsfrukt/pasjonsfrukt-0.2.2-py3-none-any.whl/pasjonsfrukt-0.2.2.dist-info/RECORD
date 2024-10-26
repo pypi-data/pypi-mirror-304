@@ -1,0 +1,12 @@
+pasjonsfrukt/__init__.py,sha256=QQ0yjZQnvXM7JeLLZEZWX6NmVUPu1lSROWOXF49_gug,22
+pasjonsfrukt/api.py,sha256=alHUK0uzu-QBlM8sVyHhFP-sWlK6zoxwhhQaMpo2p6E,1838
+pasjonsfrukt/async_cli.py,sha256=fQbHu2QkSr_gBPW-QA5o-FqzBZBDLjXtgcUAUPai-Oo,816
+pasjonsfrukt/cli.py,sha256=MxT9pYkEgP8XqKRFIoGv9BOpO-QOjSxdFI1PAT3_SU4,3256
+pasjonsfrukt/config.py,sha256=asyxaGe59tV-Ro2o-us2Qc9GzMvTj-6YZWLiV_p1kvA,969
+pasjonsfrukt/logging_utils.py,sha256=PMcg9Sh-J6I0auWYwSzHvxpjIPmO_Wh9E3TDXoiFDP8,658
+pasjonsfrukt/main.py,sha256=I_5jPciex7qL4KKyPMxi90gv8s9ZJTVyJxw6rwqspvk,6185
+pasjonsfrukt-0.2.2.dist-info/LICENSE,sha256=eLEpXeSmu-GHoqzw4u7WLm7Qf0DJNyoqawMIx7POCH0,1083
+pasjonsfrukt-0.2.2.dist-info/METADATA,sha256=MC4ZFhSJUxNXCt5VIr6LwmCKekzxLRn6ydI0s3H7dXw,3176
+pasjonsfrukt-0.2.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pasjonsfrukt-0.2.2.dist-info/entry_points.txt,sha256=dJV17i03H7y_uyEl86fWnua6c23YleFsgzs3rGvcw5I,53
+pasjonsfrukt-0.2.2.dist-info/RECORD,,
