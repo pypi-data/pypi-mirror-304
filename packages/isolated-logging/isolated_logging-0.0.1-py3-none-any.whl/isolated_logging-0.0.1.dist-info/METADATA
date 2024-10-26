@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: isolated-logging
+Version: 0.0.1
+Summary: Utility to log in an isolated way
+Home-page: https://github.com/jurrutiag/isolated-logging
+Author: Juan Urrutia
+Author-email: juan.urrutia.gandolfo@gmail.com
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: pytest>=6.0; extra == "testing"
+Requires-Dist: pytest-cov>=2.0; extra == "testing"
+Requires-Dist: tox>=3.24; extra == "testing"
+
