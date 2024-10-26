@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: njx
+Version: 0.1.0
+Summary: NJX is a library for morphologically and bio-physically detailed neuron simulations in JAX.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: absl-py >=2.1.0
+Requires-Dist: arbor >=0.10.0
+Requires-Dist: furo >=2024.8.6
+Requires-Dist: jupyter-book >=0.6.5
+Requires-Dist: jupyter-sphinx >=0.5.3
+Requires-Dist: jupytext >=1.16.4
+Requires-Dist: matplotlib >=3.9.2
+Requires-Dist: myst-nb >=1.1.2
+Requires-Dist: pytest >=8.3.3
+Requires-Dist: ruff >=0.7.0
+Requires-Dist: sphinx-autodoc-typehints >=2.5.0
+Requires-Dist: sphinx-copybutton >=0.5.2
+Requires-Dist: sphinx-remove-toctrees >=1.0.0.post1
+Requires-Dist: sphinx >=8.1.3
+Requires-Dist: tree-math >=0.2.1
+
+# njx
+
+NJX is a library for morphologically and bio-physically detailed neuron simulations in JAX.
+
+## Acknowledgements
+
+This library incorporates code from the excellent [jax-cfd](https://github.com/google/jax-cfd) library. In particular we make use of their solver code and some utilities. The respective files carry the original copyright notices.
