@@ -1,0 +1,6 @@
+# excludes test & docs folders
+prune tests
+prune docs
+
+# excludes recursively any directory with __pycache__ name
+global-exclude __pycache__
