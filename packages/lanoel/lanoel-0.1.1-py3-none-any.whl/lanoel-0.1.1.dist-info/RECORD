@@ -1,0 +1,9 @@
+lanoel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lanoel/__main__.py,sha256=6sFhlIYT3uRGBhxkQrDbiCanXBK_iVOpILReUWeL5UA,377
+lanoel/cli.py,sha256=JlbygzYxanLaLS9SeJIYbwdSdkuNEAmWn-c8L-ELVho,2572
+lanoel/lanoel.py,sha256=-smnNjRV-O1aTDEDLSzK2ek8qYNfwGMgaCdTywq1TO0,1155
+lanoel/utils.py,sha256=m4iVLDQWMh5g6VNhQWAlfFX5bnPZ26v2dsP26LDJP-Y,678
+lanoel-0.1.1.dist-info/entry_points.txt,sha256=pscb3pPRybh80-f3lnb5cK0UFJMw72CHfi0TdrLtwUQ,48
+lanoel-0.1.1.dist-info/METADATA,sha256=-r4m9JM4Ee8DkFsjSd4eKQqPHxcMwb9RrXTg99VzrCc,1152
+lanoel-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lanoel-0.1.1.dist-info/RECORD,,
