@@ -1,0 +1,9 @@
+unsloth_zoo/__init__.py,sha256=j-HNvBonlVWsPvQQwzG3bg2W9uZkdSroDzmAGgv8Vro,782
+unsloth_zoo/dataset_utils.py,sha256=lcJdvlHDbruJb-t61Juj52DOgA_CxopZukT1IMP4Er8,10747
+unsloth_zoo/tokenizer_utils.py,sha256=fqreovr5bkcMpOakiF3LhslIPjf3d8eOQioXA-WT7H0,14119
+unsloth_zoo/training_utils.py,sha256=pXZNNiILCqN2KjM5JYcKO8S3diA5-tdPklxAsNQckBI,12335
+unsloth_zoo-2024.10.5.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+unsloth_zoo-2024.10.5.dist-info/METADATA,sha256=t3gxpY7sF4k9r5rsmB4yuQkvj41qz_NsxoriSwz80mY,48203
+unsloth_zoo-2024.10.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+unsloth_zoo-2024.10.5.dist-info/top_level.txt,sha256=Q-w7nsKmMo1WAuJdixIl_JbMR50kd34zrukKtYDYcRE,12
+unsloth_zoo-2024.10.5.dist-info/RECORD,,
