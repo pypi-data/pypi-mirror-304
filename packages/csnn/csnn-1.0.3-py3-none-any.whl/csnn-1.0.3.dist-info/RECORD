@@ -1,0 +1,14 @@
+csnn/__init__.py,sha256=ho6NYmuxefJqARGl3QQldKQ40mathyW7IRVO1oThHDY,1166
+csnn/activation.py,sha256=2m0134NiBiK3_VhZZYFqVtMDCTxeoBEuLUcxCUXsxIM,2078
+csnn/containers.py,sha256=8JFHy0VM0ROrY76q28rEW5wTwDv1QtadtnKewE7LPUk,2043
+csnn/dropout.py,sha256=aUaydpG58o1MP3XDmHJALEO6-qPEWnnhK3CUDG0ybmw,2332
+csnn/functional.py,sha256=ViKLkYkKD5Te_mzef-ICdTqsCzNx2YUzoQW7pJuQLn0,5430
+csnn/linear.py,sha256=_4jwJ46ZxHH_70Z3CRN9k7Bj73HmLAFvodTVdU_EEc0,1640
+csnn/module.py,sha256=wAgdRKFobr_kqYNmbfbKIkspf1BYM4B0Znlfj9eURVk,5700
+csnn/recurrent-torch.py,sha256=2fU60W830VcF25I003xeMjRZliS0iTzpywBXGti0kjA,75729
+csnn/recurrent.py,sha256=cWtTss0RCGFCgNm60jKhJoHdlNh6FSEpQ6ZasJDKkYc,6416
+csnn-1.0.3.dist-info/LICENSE,sha256=s2Xt7NXV5Jga1mE-z8xYD2gpdvyQH-HROtHM_okB504,1093
+csnn-1.0.3.dist-info/METADATA,sha256=9WZvSPktb9ol0ndl6_ASDZfv_q7KgdiFceWeublz_o8,3954
+csnn-1.0.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+csnn-1.0.3.dist-info/top_level.txt,sha256=2SSt4SFawhNDG9TogWCPs8Hc4BJszzWWK9fZHAUiwJ8,5
+csnn-1.0.3.dist-info/RECORD,,
