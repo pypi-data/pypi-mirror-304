@@ -1,0 +1,8 @@
+wft/__init__.py,sha256=axYbc_wK4fgI_k79KsCVwMLecazlEaO_l6XXTbhJH_o,77
+wft/finetuner.py,sha256=mLt-y1d63PVSyk8jWDlcXJxBY4wynUHjHiPg3dqiIqk,15754
+wft/prepare_dataset.py,sha256=Yx45ekUwBrRJxoIGP0Pb90RXEH7MUb8sE-wkG2E0OWE,1937
+wft/utils.py,sha256=jlq773511MUcAIlgPennNxGszOWztCBshZF_lQX43kM,1496
+wft-0.0.6.dist-info/METADATA,sha256=v54RKfUCpxnHB8IFeFSdzgX7s9D9p6hZDzm70iuxCZs,4211
+wft-0.0.6.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+wft-0.0.6.dist-info/licenses/LICENSE,sha256=32MizjyjxwoIRcSjhEMqmvUOfXCIbTFnQeL0e1rgHzQ,1069
+wft-0.0.6.dist-info/RECORD,,
