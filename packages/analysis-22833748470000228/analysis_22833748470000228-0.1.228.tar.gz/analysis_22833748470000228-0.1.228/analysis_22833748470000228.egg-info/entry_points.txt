@@ -1,0 +1,2 @@
+[console_scripts]
+customer_analysis = analysis_22833748470000228:main
