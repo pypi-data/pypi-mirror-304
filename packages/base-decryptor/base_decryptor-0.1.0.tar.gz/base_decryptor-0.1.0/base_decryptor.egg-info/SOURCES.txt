@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+base_decryptor.egg-info/PKG-INFO
+base_decryptor.egg-info/SOURCES.txt
+base_decryptor.egg-info/dependency_links.txt
+base_decryptor.egg-info/entry_points.txt
+base_decryptor.egg-info/requires.txt
+base_decryptor.egg-info/top_level.txt
