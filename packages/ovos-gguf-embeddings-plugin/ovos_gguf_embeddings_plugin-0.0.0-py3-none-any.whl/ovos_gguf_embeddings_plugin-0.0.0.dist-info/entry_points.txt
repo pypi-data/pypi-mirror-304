@@ -1,0 +1,6 @@
+[console_scripts]
+ovos-gguf-embeddings = ovos_gguf_embeddings.cli:cli
+
+[opm.embeddings.text]
+ovos-gguf-embeddings-plugin=ovos_gguf_embeddings:GGUFTextEmbeddingRecognizer
+
