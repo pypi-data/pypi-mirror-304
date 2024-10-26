@@ -1,0 +1,17 @@
+cfgrib
+dateparser
+erddapy
+geopandas>=1.0.0
+gsw
+httpx
+ioos_qc
+ipython
+matplotlib
+netcdf4
+numpy
+pandas
+polars>=1.0.0
+pynmea2
+pyyaml
+seabird
+xarray

@@ -1,0 +1,12 @@
+__pycache__/
+.idea
+*secrets*
+email_log.txt
+lastcheck.txt
+message.mp3
+total_datasets.csv
+*.log
+.ipynb_checkpoints
+votoutils.egg-info/
+votoutils/_version.py
+*.ipynb
