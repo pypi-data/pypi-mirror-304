@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/cgo_sfdc_pub_sub/ChangeEventHeaderUtility.py
+src/cgo_sfdc_pub_sub/PubSub.py
+src/cgo_sfdc_pub_sub/__init__.py
+src/cgo_sfdc_pub_sub/pubsub_api_pb2.py
+src/cgo_sfdc_pub_sub/pubsub_api_pb2_grpc.py
+src/cgo_sfdc_pub_sub.egg-info/PKG-INFO
+src/cgo_sfdc_pub_sub.egg-info/SOURCES.txt
+src/cgo_sfdc_pub_sub.egg-info/dependency_links.txt
+src/cgo_sfdc_pub_sub.egg-info/top_level.txt
