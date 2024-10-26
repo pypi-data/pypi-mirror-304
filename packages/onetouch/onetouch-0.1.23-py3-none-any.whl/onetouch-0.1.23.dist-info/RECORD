@@ -1,0 +1,9 @@
+onetouch/__init__.py,sha256=t9sNlFQooF72LqbkEp44GSZUpdq8QlIU7qiZCvDUh3k,638
+onetouch/models.py,sha256=J2ckSWWhEnN_z4dijmSL5IzpJtl-QQwdl4-ac9UxMkM,11192
+onetouch/one2three.py,sha256=7irHGE53nN6rm3DPD2RPgmYdmA4QQTpl-RTsSkoyg10,7979
+onetouch/superprint.py,sha256=JVhcBug_1QHKZWpCDeS4_LqlO1Gz_DttuHBum3PkiaY,5674
+onetouch-0.1.23.dist-info/LICENSE,sha256=DolYX3oU7o0jFG7dYsVskLSftEZgwWpbb7CpoNVYGAA,1084
+onetouch-0.1.23.dist-info/METADATA,sha256=NMpdrQKGFl4vMh7qX0l1_sL21Ap_mQTEHyaQbymLNQ0,10299
+onetouch-0.1.23.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+onetouch-0.1.23.dist-info/top_level.txt,sha256=h1S4forQLXKxiglXdPQKtLc82PXvSbP6IAm0JwirEtA,9
+onetouch-0.1.23.dist-info/RECORD,,
