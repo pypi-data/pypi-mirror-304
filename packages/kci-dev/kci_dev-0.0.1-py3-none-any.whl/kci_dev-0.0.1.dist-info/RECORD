@@ -1,0 +1,15 @@
+kci-dev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kci-dev/kci-dev.py,sha256=ygKPFHKNttE_CBrC6FIqRuf2l25dHbHWb_dFcuggsug,1321
+kci-dev/libs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kci-dev/libs/common.py,sha256=VCWoxJS_xacBrSYtsAvv7LRVuJOxfxB5dfXhLslFYSw,167
+kci-dev/subcommands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kci-dev/subcommands/checkout.py,sha256=fbJBCtCJEP-V5TBt3_3OOf33pQ6DfeIfzZIDH8dSgJ4,9157
+kci-dev/subcommands/commit.py,sha256=noeis43SCVbVJEARZ-FSAbSAlw22Pio9CyeUuwlP1lY,2177
+kci-dev/subcommands/patch.py,sha256=WS90zF3a9ifNcVLO2WMFZihaQP5TPW6UeCt2xebcTIQ,1579
+kci-dev/subcommands/results.py,sha256=_5PJUokh5WCgaKGxz-J9h6kWdIHh1Ebv7mZXAvV3Qkw,2968
+kci-dev/subcommands/testretry.py,sha256=8ypV66vzVio72_7xr64THu_dnZri3J5pFq4h-ikSYuI,1642
+kci_dev-0.0.1.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+kci_dev-0.0.1.dist-info/METADATA,sha256=lTQIrMFCQ3gWYFju71zD-eTe0cdlTYea55WWTqIX8Cg,2163
+kci_dev-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kci_dev-0.0.1.dist-info/entry_points.txt,sha256=sAtYAllTdiVkUYGQ3LHgMch87pwaKL5Qcf8nalWJhtc,47
+kci_dev-0.0.1.dist-info/RECORD,,
