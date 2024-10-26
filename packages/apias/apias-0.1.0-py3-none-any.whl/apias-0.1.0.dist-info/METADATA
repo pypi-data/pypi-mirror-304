@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: apias
+Version: 0.1.0
+Summary: AI powered API documentation scraper and converter
+Home-page: https://github.com/Emasoft/apias
+Author: Emanuele Sabetta
+Author-email: Emanuele Sabetta <713559+Emasoft@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Emasoft/apias
+Project-URL: Documentation, https://github.com/Emasoft/apias/docs
+Project-URL: Repository, https://github.com/Emasoft/apias.git
+Project-URL: Changelog, https://github.com/Emasoft/apias/blob/main/CHANGELOG.md
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: tenacity>=8.2.0
+Requires-Dist: playwright>=1.39.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: isort>=5.12; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
+Requires-Dist: pre-commit>=3.3; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.3; extra == "docs"
+Requires-Dist: myst-parser>=2.0; extra == "docs"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0; extra == "test"
+Requires-Dist: pytest-mock>=3.10; extra == "test"
+Requires-Dist: tox>=4.0; extra == "test"
+
+# APIAS - AI Powered API Documentation Scraper
+
+APIAS (AI Powered API Documentation Scraper) is a powerful tool that helps you extract and convert API documentation from various sources into structured formats.
+
+## Features
+
+- Scrape API documentation from web pages
+- Support for multiple documentation formats
+- AI-powered content extraction and structuring
+- Command-line interface for easy use
+- Multiple output formats (Markdown, JSON, YAML)
+
+## Installation
+
+```bash
+pip install apias
+```
+
+## Quick Start
+
+```python
+from apias import apias
+
+# Basic usage
+doc = apias.scrape_url("https://api.example.com/docs")
+print(doc.to_markdown())
+
+# With custom configuration
+config = {
+    "format": "markdown",
+    "output": "api_docs.md"
+}
+apias.scrape_and_save("https://api.example.com/docs", config)
+```
+
+## Command Line Usage
+
+```bash
+# Scrape documentation from a URL
+apias scrape https://api.example.com/docs
+
+# Convert to specific format
+apias convert input.html --format markdown --output api_docs.md
+```
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Security
+
+For security issues, please see our [Security Policy](SECURITY.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
+
+## Support
+
+- Documentation: [https://github.com/Emasoft/apias/docs](https://github.com/Emasoft/apias/docs)
+- Issues: [https://github.com/Emasoft/apias/issues](https://github.com/Emasoft/apias/issues)
