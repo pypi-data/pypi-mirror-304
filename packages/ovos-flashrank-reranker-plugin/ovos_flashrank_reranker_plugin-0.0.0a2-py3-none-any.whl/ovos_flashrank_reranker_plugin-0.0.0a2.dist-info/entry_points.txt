@@ -1,0 +1,9 @@
+[opm.solver.multiple_choice]
+ovos-flashrank-reranker-plugin = ovos_flashrank_solver:FlashRankMultipleChoiceSolver
+
+[opm.solver.reading_comprehension]
+ovos-evidence-solver-flashrank=ovos_flashrank_solver:BM25SolverPlugin
+
+[opm.solver.summarization]
+ovos-summarizer-solver-flashrank=ovos_flashrank_solver:FlashRankSummarizer
+
