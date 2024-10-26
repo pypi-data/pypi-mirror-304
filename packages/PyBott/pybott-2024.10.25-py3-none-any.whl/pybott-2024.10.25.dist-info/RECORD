@@ -1,0 +1,8 @@
+pybott/__init__.py,sha256=-TyA3wkCtj20ferqEy-Yf8xfjryBrTJZpsaAfOfqA7g,141
+pybott/bott.py,sha256=7Z4YReZ-K8dbiGiQANpN44zo75sPI4DwBhi1QsHLYAU,12368
+pybott/spin_bott.py,sha256=pVSt7dcUkkFBKdN_VhQpQ7rYOr62RG76YHJ5uPDF5MM,6267
+pybott/utils.py,sha256=ZHcmslYhSXvUevYE5s-rexcpgcLI2yxVvmNJCRSs1gI,115
+pybott-2024.10.25.dist-info/METADATA,sha256=hrft0rdsfnhmhS9pfhjgCaw5WBkPXUImWp6FcCwge08,48018
+pybott-2024.10.25.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pybott-2024.10.25.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pybott-2024.10.25.dist-info/RECORD,,
