@@ -1,0 +1,12 @@
+dicom_echo-0.2.2.dist-info/METADATA,sha256=N6Eri3OSSBPbRWRvfkfr7tHL_gSI-7ZMpX2Y52R83mI,8873
+dicom_echo-0.2.2.dist-info/WHEEL,sha256=VGMDu5jnp_XpyXOq-L1-cbr3x9_PzCpsKi1udyLAeSI,95
+dicom_echo-0.2.2.dist-info/entry_points.txt,sha256=uV2mRlWzKux6a6PZD0vTSF3ioQZmGX0Wm6D3wfkb6_I,48
+dicom_echo-0.2.2.dist-info/licenses/LICENSE.md,sha256=bnQoHtzQbOQko2Yx4-i7syufy4Rsfafdr1RZNIzQWSA,1093
+dicom_echo/backend.pyi,sha256=2PSYLrXgHm29FvP1i_4g7f-4JpoDQRITZBASqcNMkvU,670
+dicom_echo/cli.md,sha256=mBbKKzbQdszXS82Vulhakb_Btf-D_HIuysB84l2yQCM,1331
+dicom_echo/cli.py,sha256=J6Q7aBPEdT65sqg-_RFH7mz3anw4I4b8mXSy22qc9y0,3226
+dicom_echo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dicom_echo/__init__.py,sha256=8xzc1bny7lfHog0FyS_Pw5GKhCdvZfrYZAd40lWjl60,2688
+dicom_echo/__main__.py,sha256=shuOFTnMZJt0WHOZQuilauAQopAsiON2cMXfOblqs-M,119
+dicom_echo/backend.cp312-win_amd64.pyd,sha256=-_JJvT3wOxeB__70fr-gLl9_LwdrCjCUnoFOhTq0Sok,1180672
+dicom_echo-0.2.2.dist-info/RECORD,,
