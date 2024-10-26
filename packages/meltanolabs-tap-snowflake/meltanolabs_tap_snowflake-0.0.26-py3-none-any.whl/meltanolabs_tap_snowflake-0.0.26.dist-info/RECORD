@@ -1,0 +1,8 @@
+tap_snowflake/__init__.py,sha256=xYiJYqDc9o5GER5ga-yao7gFb1oyZygVCgF3pWkyu8k,52
+tap_snowflake/client.py,sha256=yYOyqb7lAMQ2lAUlOFDQJLnojhyOS9Y-Z2xT-RQjb04,21420
+tap_snowflake/tap.py,sha256=ky7iNjmoQwu31TcT0bavCnuCwmuX46lp9y1RJXJMfU8,3874
+meltanolabs_tap_snowflake-0.0.26.dist-info/LICENSE,sha256=SCVQGLQfwOllsRFa9-Z3m8IYu4pnR9Vh2oANUCJiKqI,3860
+meltanolabs_tap_snowflake-0.0.26.dist-info/METADATA,sha256=Hyf5tfNPvzob3zIF8yi8UknU685fIpy4mDlsI0SulgQ,5381
+meltanolabs_tap_snowflake-0.0.26.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+meltanolabs_tap_snowflake-0.0.26.dist-info/entry_points.txt,sha256=mo2IhPy6K1_sNZCGdH8B-qe_AFJoh_D7Q6hySRRd5Ss,68
+meltanolabs_tap_snowflake-0.0.26.dist-info/RECORD,,
