@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+diff/__init__.py
+diff/cli.py
+esp_config_diff.egg-info/PKG-INFO
+esp_config_diff.egg-info/SOURCES.txt
+esp_config_diff.egg-info/dependency_links.txt
+esp_config_diff.egg-info/entry_points.txt
+esp_config_diff.egg-info/requires.txt
+esp_config_diff.egg-info/top_level.txt
