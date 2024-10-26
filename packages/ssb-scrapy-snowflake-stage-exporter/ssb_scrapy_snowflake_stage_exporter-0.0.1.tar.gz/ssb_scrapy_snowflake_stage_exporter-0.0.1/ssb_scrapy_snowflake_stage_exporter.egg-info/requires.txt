@@ -1,0 +1,2 @@
+itemadapter
+snowflake-connector-python

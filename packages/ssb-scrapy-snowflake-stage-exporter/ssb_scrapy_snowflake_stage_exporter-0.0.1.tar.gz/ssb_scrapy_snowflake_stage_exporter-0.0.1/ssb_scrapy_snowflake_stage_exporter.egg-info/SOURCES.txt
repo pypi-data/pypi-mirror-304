@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+snowflake_stage_exporter/__init__.py
+snowflake_stage_exporter/scrapy_pipeline.py
+snowflake_stage_exporter/utils.py
+ssb_scrapy_snowflake_stage_exporter.egg-info/PKG-INFO
+ssb_scrapy_snowflake_stage_exporter.egg-info/SOURCES.txt
+ssb_scrapy_snowflake_stage_exporter.egg-info/dependency_links.txt
+ssb_scrapy_snowflake_stage_exporter.egg-info/requires.txt
+ssb_scrapy_snowflake_stage_exporter.egg-info/top_level.txt
+tests/__init__.py
+tests/record_sql.py
+tests/test_exporter.py
+tests/test_utils.py
