@@ -1,0 +1,3 @@
+colorlog
+openpyxl
+chardet
