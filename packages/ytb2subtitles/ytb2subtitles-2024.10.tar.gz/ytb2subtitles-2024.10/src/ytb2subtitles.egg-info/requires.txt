@@ -1,0 +1,8 @@
+pytube
+youtube-transcript-api
+
+[dev]
+check-manifest
+
+[test]
+coverage
