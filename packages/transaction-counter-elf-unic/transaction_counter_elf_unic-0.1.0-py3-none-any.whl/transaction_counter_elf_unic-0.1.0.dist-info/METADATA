@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: transaction_counter_elf_unic
+Version: 0.1.0
+Summary: count transactions
+Author: Varvara
+Requires-Python: >=3.8
+Requires-Dist: pandas==2.2.3
+
