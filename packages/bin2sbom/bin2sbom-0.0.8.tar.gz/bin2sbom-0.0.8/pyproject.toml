@@ -1,0 +1,26 @@
+[project]
+name = "bin2sbom"
+version = "0.0.8"
+authors = [
+  { name="Fabian Martinez Portantier", email="fportantier@securetia.com" },
+]
+description = "A small tool to generate an SBOM file from directory binaries using CVE Binary Tool"
+readme = "README.md"
+license = {text = "MIT License"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "click",
+  "cve-bin-tool",
+  "cpe"
+]
+[project.scripts]
+bin2sbom = "bin2sbom:cli"
+
+[project.urls]
+Homepage = "https://github.com/fportantier/bin2sbom"
+Issues = "https://github.com/fportantier/bin2sbom/issues"
