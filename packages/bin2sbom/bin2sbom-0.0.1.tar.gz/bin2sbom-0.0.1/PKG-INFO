@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bin2sbom
+Version: 0.0.1
+Summary: A small tool to generate an SBOM file from directory binaries using CVE Binary Tool
+Author-email: Fabian Martinez Portantier <fportantier@securetia.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: cve-bin-tool
+Project-URL: Homepage, https://github.com/fportantier/bin2sbom
+Project-URL: Issues, https://github.com/fportantier/bin2sbom/issues
+
+# bin2sbom
+Generate an SBOM from a directory containing binary files
+
