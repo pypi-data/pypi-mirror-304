@@ -1,0 +1,32 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+# vim:fenc=utf-8
+#
+# Copyright © 2020 fx-kirin <fx.kirin@gmail.com>
+#
+# Distributed under terms of the MIT license.
+
+"""
+
+"""
+
+import os
+import fire
+import logging
+import kanilog
+import stdlogging
+from pathlib import Path
+
+from csv_zip_rsync import upload_and_remove_file
+
+
+def main(root_dir, remote_name, remote_dir, suffix="csv"):
+    kanilog.setup_logger(
+        logfile="/tmp/%s.log" % (Path(__file__).name), level=logging.INFO
+    )
+    stdlogging.enable()
+    upload_and_remove_file(root_dir, remote_name, remote_dir, suffix)
+
+
+if __name__ == "__main__":
+    fire.Fire(main)
