@@ -1,0 +1,11 @@
+starcat/__init__.py,sha256=IH52pguhPOLLwcM2qb2UtHSND0nk3tSPr5PjLWz_W0Q,191
+starcat/build_consensus_reference.py,sha256=t9AiJCUBcusyE_ueKjNWCNqCxVE61M74pqkumB6bHes,20340
+starcat/current_references.tsv,sha256=C6tAOb8KNE4RGWR_rKYiQnVs4GXovPuSRjILVkaYi8w,2319
+starcat/starcat.py,sha256=qpHyvjb9h0K3oagyW6G7tnVCfGLjECsVhAjZu3QuNCc,16151
+starcat/utils.py,sha256=36YT3dTPCIT39Kf757uJex_Z2D8XCg3SyDvtm7FnT3o,3368
+starcatpy-1.0.9.dist-info/LICENSE,sha256=FYq1AGf2uXT1AufuZELD4aPaQ8nGXds2r492uhdjAQs,1070
+starcatpy-1.0.9.dist-info/METADATA,sha256=4jeg8_-LbDdpFAT0n4VLXhwNXBnufKneqIyRMQ3S59A,4401
+starcatpy-1.0.9.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+starcatpy-1.0.9.dist-info/entry_points.txt,sha256=yJ2xR28diF7sNIxnwdZXsiylUgMq7uJX2J217tCct_E,41
+starcatpy-1.0.9.dist-info/top_level.txt,sha256=9_BfZoZasqtspX07JKebH3RqlssKXS1EUX22j-m2D48,8
+starcatpy-1.0.9.dist-info/RECORD,,
