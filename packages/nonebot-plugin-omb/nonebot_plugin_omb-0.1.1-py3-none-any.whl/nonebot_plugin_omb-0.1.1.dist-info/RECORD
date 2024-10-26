@@ -1,0 +1,8 @@
+nonebot_plugin_omb/__init__.py,sha256=PqB8S2vQ67FLIcytab9xFOjkAPyJPEcPSAYJjbD59sM,985
+nonebot_plugin_omb/patch_alconna.py,sha256=ks1si2rCd_HYWrxORhaAtQZzqX-JKr5vtsMA2AsYmBo,1185
+nonebot_plugin_omb/patch_base.py,sha256=SiABXSM41n-hA2KLN-yrLV-XoXWu2czn2pdKnrmH2GE,1662
+nonebot_plugin_omb/util.py,sha256=xfjsOqp0VN09okW5hGIjDcznSnQ73pOkCVgucjEmRmE,431
+nonebot_plugin_omb-0.1.1.dist-info/LICENSE,sha256=TjgwMCR7rvynMxc_BW5IiVO7FIFKOZWN3XWnf5lbB0U,1071
+nonebot_plugin_omb-0.1.1.dist-info/METADATA,sha256=dIQDfVhWWEDXFHyr4iYnaHQNEPg7c1laUjDGCeGaleU,1919
+nonebot_plugin_omb-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nonebot_plugin_omb-0.1.1.dist-info/RECORD,,
