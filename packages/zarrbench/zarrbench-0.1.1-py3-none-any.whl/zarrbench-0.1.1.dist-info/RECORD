@@ -1,0 +1,8 @@
+zarrbench/__init__.py,sha256=MGCETrSb2Z5xW2uBr7HeyFBzraRIIgGkgBxHtMhWVWE,55
+zarrbench/__main__.py,sha256=MbuAr5AMkibe7heDI9V2Vhj1izGK-TvyH7KZcVSoupg,135
+zarrbench/bench.py,sha256=STimCh5ULR6e8RCQrpPA9Wqt8N_27tlSQLycgu8QMrI,8668
+zarrbench/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zarrbench-0.1.1.dist-info/METADATA,sha256=SkrZq-W-seDX6dnjYRePruEcp_v86ACmuB39zeapqnA,507
+zarrbench-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+zarrbench-0.1.1.dist-info/entry_points.txt,sha256=4wechMQkW8JTmnu0_C2KBCFz70YY1TXKcdCl4lfaarg,53
+zarrbench-0.1.1.dist-info/RECORD,,

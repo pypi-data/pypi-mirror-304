@@ -1,0 +1,2 @@
+[console_scripts]
+zarrbench = zarrbench.__main__:cli
