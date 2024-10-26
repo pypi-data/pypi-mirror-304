@@ -1,0 +1,11 @@
+md_katex/__init__.py,sha256=qFmO3vGJMdncxVsFUTqp3ZFmpX5lRRciZMViYeNgLrI,56
+md_katex/extension.py,sha256=8pxqVpEAP6zM4XDBi2DmACdMF_h8xgGwGasE60qJSJE,12186
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_backtick_pattern.py,sha256=vyJMtlOzzHTFnp8GSkVCxX4VGAl59BGg2a6_15m8-UI,2086
+tests/test_mdkatex.py,sha256=2_9l6-3pjjbSpvGNgiHprVY51KMEWaw83So4dPpMDdc,5958
+md_katex-0.2.1.dist-info/LICENSE,sha256=n7GvCwCIaeIYWo-q8L8P7jBJARrcZfwNdjRVnLseuOg,1089
+md_katex-0.2.1.dist-info/METADATA,sha256=aT17Gr6Wj-IDxjHMSrCdyHdQa5QAE_pJGrkF6SaZNQM,3223
+md_katex-0.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+md_katex-0.2.1.dist-info/entry_points.txt,sha256=LWOUfdb2Ec_NYUsPLOrBr6bIbi4ejgS3diXDKaoHzbs,69
+md_katex-0.2.1.dist-info/top_level.txt,sha256=l2uiUdfhFuW8mic8EY5xYWttt1a5GgTtJ5RlbsdZYpE,15
+md_katex-0.2.1.dist-info/RECORD,,
