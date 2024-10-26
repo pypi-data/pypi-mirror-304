@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: inquiring-machine
+Version: 0.0.2
+Summary: Inquiring Machine
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/inquiring-machine/inquiring-machine
+Project-URL: Bug Tracker, https://github.com/inquiring-machine/inquiring-machine/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyGithub>=2.3.0
+Requires-Dist: PyYAML>=6.0.1
+
+# Inquiring Machine
+Explanation of the Machine
+<pre>
+  pip install inquiring-machine
+</pre>
+Then:
+```Python
+  # Python
+  import inquiring_machine
+```
