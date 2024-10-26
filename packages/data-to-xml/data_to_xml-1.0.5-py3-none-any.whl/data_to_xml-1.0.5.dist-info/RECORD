@@ -1,0 +1,16 @@
+dict-to-xml/example/example.py,sha256=OggWnuLrQf3eoUwOKdZtFcdb56Y-b50Sgk7uXq9-1PI,1436
+dict-to-xml/example/py.typed,sha256=Wc7NYKLj9l9hbgCHtOI1T-dtoF5p1aiI3OHZ5uV1MUc,174
+dict-to-xml/src/dict_to_xml/__init__.py,sha256=Wc7NYKLj9l9hbgCHtOI1T-dtoF5p1aiI3OHZ5uV1MUc,174
+dict-to-xml/src/dict_to_xml/py.typed,sha256=Wc7NYKLj9l9hbgCHtOI1T-dtoF5p1aiI3OHZ5uV1MUc,174
+dict-to-xml/src/dict_to_xml/version.py,sha256=Q5KezwgLOhR8TDCw36HEtSMchk0-F-BDba0hcl2DWNg,465
+dict-to-xml/src/dict_to_xml/xml_converter.py,sha256=6igTz2SM8OKXcwFWL-mPUYxT_j5HXlzUMQsZwyJ1o8U,2047
+dict_to_xml/__init__.py,sha256=Wc7NYKLj9l9hbgCHtOI1T-dtoF5p1aiI3OHZ5uV1MUc,174
+dict_to_xml/py.typed,sha256=Wc7NYKLj9l9hbgCHtOI1T-dtoF5p1aiI3OHZ5uV1MUc,174
+dict_to_xml/version.py,sha256=ClFIlbf5O23dVWC6oD6t3m2n6nB22IOt3V9t-YX_mG0,411
+dict_to_xml/xml_converter.py,sha256=6igTz2SM8OKXcwFWL-mPUYxT_j5HXlzUMQsZwyJ1o8U,2047
+data_to_xml-1.0.5.dist-info/LICENSE,sha256=5QbDYA3yepsmtH0pNJHd05EXOpiMZuh1T2g4a6fRino,18394
+data_to_xml-1.0.5.dist-info/METADATA,sha256=49QIrmV_iqE9UMufaR9h1NaIuoy3lbXoCf8VyAJ8a9Q,24953
+data_to_xml-1.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+data_to_xml-1.0.5.dist-info/entry_points.txt,sha256=1XZTAC-xdBhb0QuOpG9kJVO0lNDIH8Qjex2dmq0QqFo,42
+data_to_xml-1.0.5.dist-info/top_level.txt,sha256=i6a_DeB0rKm_QQGxVrQkGuBD-WV0xcwIGLu0RpCB6bM,24
+data_to_xml-1.0.5.dist-info/RECORD,,
