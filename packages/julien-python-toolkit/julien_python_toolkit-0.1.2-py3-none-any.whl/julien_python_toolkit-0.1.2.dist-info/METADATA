@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: julien-python-toolkit
+Version: 0.1.2
+Summary: Important code that I reuse through multiple projects. Please see license for allowed use.
+Home-page: https://github.com/JulienPython/JulienPythonToolkit-V001
+Author: Julien Python
+Author-email: python.julien@hotmail.com
+License: Custom Non-Commercial License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# JulienPythonToolkit-V001
+
+Important code that I reuse through multiple projects. Please see license for allowed use.
