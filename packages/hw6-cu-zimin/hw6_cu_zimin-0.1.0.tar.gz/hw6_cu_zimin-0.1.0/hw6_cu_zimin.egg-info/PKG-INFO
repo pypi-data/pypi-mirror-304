@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: hw6_cu_zimin
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: mikhail <m.zimin@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Пакет для управления учётными записями пользователей и заказами в онлайн-магазине

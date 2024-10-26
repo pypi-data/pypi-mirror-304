@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+hw6_cu_zimin.egg-info/PKG-INFO
+hw6_cu_zimin.egg-info/SOURCES.txt
+hw6_cu_zimin.egg-info/dependency_links.txt
+hw6_cu_zimin.egg-info/top_level.txt
+online_store/__init__.py
+online_store/__main__.py
+online_store/order_management/__init__.py
+online_store/order_management/__main__.py
+online_store/user_management/__init__.py
+online_store/user_management/__main__.py
