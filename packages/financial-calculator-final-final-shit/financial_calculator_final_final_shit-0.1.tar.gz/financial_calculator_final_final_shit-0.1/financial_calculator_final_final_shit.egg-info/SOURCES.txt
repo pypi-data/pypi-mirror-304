@@ -1,0 +1,5 @@
+financial_calculator_final_final_shit.egg-info/PKG-INFO
+financial_calculator_final_final_shit.egg-info/SOURCES.txt
+financial_calculator_final_final_shit.egg-info/dependency_links.txt
+financial_calculator_final_final_shit.egg-info/entry_points.txt
+financial_calculator_final_final_shit.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: financial-calculator-final-final-shit
+Version: 0.1
+Summary: A simple financial calculator for clean profit and ROI.
+Author: Vlad
+Author-email: abvvladivanov@gmail.com@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
