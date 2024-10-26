@@ -1,0 +1,9 @@
+README.md
+setup.py
+finutils/__init__.py
+finutils/__main__.py
+finutils/calculations.py
+finutils_scochilloff.egg-info/PKG-INFO
+finutils_scochilloff.egg-info/SOURCES.txt
+finutils_scochilloff.egg-info/dependency_links.txt
+finutils_scochilloff.egg-info/top_level.txt
