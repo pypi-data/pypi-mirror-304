@@ -1,0 +1,9 @@
+loss_fun_c.cpython-311-darwin.so,sha256=drLCfXbWgJtQPJyijiByMFZCTnKBf5LUWvkPhNBFtjk,117792
+splinecalib/__init__.py,sha256=apucb_ISPPC6S3iJDB9hpimlp49CQK451ewsg2saCjQ,153
+splinecalib/calib_utils.py,sha256=RWxo5QrLGGIdyh4Mj44Ouz232t4-On4F5ie-DMkFN2I,5786
+splinecalib/splinecalib.py,sha256=csYBAXeW-3uws16o9-00GwesHdFgBnwuhGTGFitjci8,23177
+splinecalib-0.0.10.dist-info/LICENSE,sha256=_aSna8VbNYGulZDj_oBLMCwSwFou-kyG0HE7-b8ObbA,1069
+splinecalib-0.0.10.dist-info/METADATA,sha256=9tAaEM3bXVqhtPB6RRN4nXpDe7f2wjqSBgN3DBx-W_E,918
+splinecalib-0.0.10.dist-info/WHEEL,sha256=BDgKu9_KNfDn85ptly0T56JpX4avXH07X_ZCqAJnQwY,110
+splinecalib-0.0.10.dist-info/top_level.txt,sha256=btR2KEYzbEz3pf9BAFbsc8oe3ksyf8QXBLQNdnEMj6k,23
+splinecalib-0.0.10.dist-info/RECORD,,
