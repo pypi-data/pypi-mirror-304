@@ -1,0 +1,3 @@
+[opm.embeddings]
+ovos-chromadb-embeddings-plugin=ovos_chromadb_embeddings:ChromaEmbeddingsDB
+
