@@ -1,0 +1,5 @@
+setup.py
+hmac_sha6.egg-info/PKG-INFO
+hmac_sha6.egg-info/SOURCES.txt
+hmac_sha6.egg-info/dependency_links.txt
+hmac_sha6.egg-info/top_level.txt
