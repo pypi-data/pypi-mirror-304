@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+SMfsrc/__init__.py
+SMfsrc/fsrc_data.py
+SMfsrc.egg-info/PKG-INFO
+SMfsrc.egg-info/SOURCES.txt
+SMfsrc.egg-info/dependency_links.txt
+SMfsrc.egg-info/requires.txt
+SMfsrc.egg-info/top_level.txt
