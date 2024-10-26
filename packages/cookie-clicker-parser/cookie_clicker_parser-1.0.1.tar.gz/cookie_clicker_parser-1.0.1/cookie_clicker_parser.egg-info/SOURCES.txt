@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+cookie_clicker_parser.egg-info/PKG-INFO
+cookie_clicker_parser.egg-info/SOURCES.txt
+cookie_clicker_parser.egg-info/dependency_links.txt
+cookie_clicker_parser.egg-info/top_level.txt
+src/cookie_clicker_parser/__init__.py
+src/cookie_clicker_parser/parser.py
+src/cookie_clicker_parser/section_parsers.py
+src/cookie_clicker_parser/__init__.py
+src/cookie_clicker_parser/parser.py
+src/cookie_clicker_parser/section_parsers.py
+tests/test_b64_decode.py
+tests/test_import.py
+tests/test_save_codes.py
+tests/test_unquote.py
