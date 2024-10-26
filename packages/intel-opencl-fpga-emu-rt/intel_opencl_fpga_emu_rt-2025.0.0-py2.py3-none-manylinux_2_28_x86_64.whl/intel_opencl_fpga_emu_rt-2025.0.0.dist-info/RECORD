@@ -1,0 +1,8 @@
+intel_opencl_fpga_emu_rt-2025.0.0.data/data/lib/cl.fpga_emu.cfg,sha256=W2MCIcW57UyvRLLGEW9KO4IcWXUhjmgniHOPYnlB2eM,9459
+intel_opencl_fpga_emu_rt-2025.0.0.data/data/lib/libintelocl_emu.so,sha256=kMD9T4c9ugD9XSVoY67ni20RK7sUEF0U7zq6SLP0bGc,103639072
+intel_opencl_fpga_emu_rt-2025.0.0.data/data/lib/libintelocl_emu.so.2024.18.10.0,sha256=kMD9T4c9ugD9XSVoY67ni20RK7sUEF0U7zq6SLP0bGc,103639072
+intel_opencl_fpga_emu_rt-2025.0.0.dist-info/LICENSE.txt,sha256=_r-2mlsFj1WJLcfzQRCKnKKdUOn-hXI6V-67uCZDaVg,25224
+intel_opencl_fpga_emu_rt-2025.0.0.dist-info/METADATA,sha256=0lrMKYzrrB0AZcVl4ku_9VScSBE3N5fRXoagAKvH1gU,1026
+intel_opencl_fpga_emu_rt-2025.0.0.dist-info/WHEEL,sha256=wHDSHW15S5Ss-cXTEuv9lQNHlx87Fk-iZqRWK0BLwrI,146
+intel_opencl_fpga_emu_rt-2025.0.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+intel_opencl_fpga_emu_rt-2025.0.0.dist-info/RECORD,,
