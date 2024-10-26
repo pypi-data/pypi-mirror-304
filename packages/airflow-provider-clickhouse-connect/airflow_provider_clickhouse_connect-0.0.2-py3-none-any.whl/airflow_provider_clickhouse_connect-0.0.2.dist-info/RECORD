@@ -1,0 +1,11 @@
+clickhouse_connect_provider/__init__.py,sha256=SnUrmc6U4uC0gr4xekdLpRuiWy72BzBZuEN1YP8EZ_0,652
+clickhouse_connect_provider/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clickhouse_connect_provider/hooks/clickhouse.py,sha256=aeaRyASl1L5L_On9Rv68VeyGdIr7qc-yFPOoa0PnTHk,3424
+clickhouse_connect_provider/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clickhouse_connect_provider/operators/clickhouse.py,sha256=8supvsAMua1RUsXdnrCnbucociRbc39uFnXU7I7ynLM,1648
+airflow_provider_clickhouse_connect-0.0.2.dist-info/LICENSE,sha256=CtUlZ2AZ9JDcUHsGjJntacWE4C5bE35tHcrmZLGdUgo,11341
+airflow_provider_clickhouse_connect-0.0.2.dist-info/METADATA,sha256=7BtCXn_RFApet3Dmy5lgMGIvD-RXo-JA9ggKLhNdDQU,1197
+airflow_provider_clickhouse_connect-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+airflow_provider_clickhouse_connect-0.0.2.dist-info/entry_points.txt,sha256=4pmApkMHMi5D7B_a5j7OlyckMiqcuwP_wjsUIiIgRqk,97
+airflow_provider_clickhouse_connect-0.0.2.dist-info/top_level.txt,sha256=B3_Jp6QGiH6glZvIkYykmOGYvUsBhGNPJZsMqOPvkKs,28
+airflow_provider_clickhouse_connect-0.0.2.dist-info/RECORD,,
