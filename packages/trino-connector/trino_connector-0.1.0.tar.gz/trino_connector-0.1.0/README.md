@@ -1,0 +1,1 @@
+Una librería simple de Python para conectarse a Trino y ejecutar consultas.

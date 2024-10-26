@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: trino_connector
+Version: 0.1.0
+Summary: A simple Trino connector library
+Home-page: https://github.com/Carrillo26/trino_connector
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: trino>=0.318.0
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: urllib3>=1.26.0

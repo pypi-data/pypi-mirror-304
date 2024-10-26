@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/trino_connector/__init__.py
+src/trino_connector/connector.py
+src/trino_connector.egg-info/PKG-INFO
+src/trino_connector.egg-info/SOURCES.txt
+src/trino_connector.egg-info/dependency_links.txt
+src/trino_connector.egg-info/requires.txt
+src/trino_connector.egg-info/top_level.txt
