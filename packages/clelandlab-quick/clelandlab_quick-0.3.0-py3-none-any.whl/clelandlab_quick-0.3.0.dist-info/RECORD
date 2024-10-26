@@ -1,0 +1,13 @@
+quick/VERSION,sha256=2RXMldbKj0euKXcT7UbU5cXZnd0p_Dxh4mO98wXytbA,6
+quick/__init__.py,sha256=ojPu5INhE1lPWzLBdBXwJfldX4YC3o5b0xhZ6JKODZk,303
+quick/auto.py,sha256=R6xDXwaCNf_79UakkAxONch2Hehc3TBoWM0OiOo-8FQ,8483
+quick/experiment.py,sha256=Han8FxPcj_TJN73MLbXn_KcFQd-ej27sgHjPvZ14-e0,9922
+quick/helper.py,sha256=E7l6QDUKUR7iGi5ot6IlqDS16WH_zf0PcxpJ1lKHvcE,22546
+quick/mercator.py,sha256=U9GuEWgNczWuktwgE3S4gG-OcmeDWzEnyLWcrpd0f8w,10872
+quick/constants/dbm.npy,sha256=V3Gw_ptWd6VtDNQ-3YQ4NOoydmEywStigEZsYHT7TbY,64128
+quick/constants/experiment.yml,sha256=eqPDTjkHp0K-4ex4Eym4U4gmsKcWvtWapby8nLOPU9o,7216
+clelandlab_quick-0.3.0.dist-info/LICENSE,sha256=ipTW6eR_AVQqzzF0xLtPxbz7OLJDXa4hEKKOJqXAqXQ,1068
+clelandlab_quick-0.3.0.dist-info/METADATA,sha256=ow3KFvx_akjJRjT5Fydpy-FBvknf1cv0f3G0XMoLbH0,1931
+clelandlab_quick-0.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+clelandlab_quick-0.3.0.dist-info/top_level.txt,sha256=MLnnpTU-ysKpmDdGLrHLDc8pKA0UXQGRZc5wkFHY0jE,6
+clelandlab_quick-0.3.0.dist-info/RECORD,,
