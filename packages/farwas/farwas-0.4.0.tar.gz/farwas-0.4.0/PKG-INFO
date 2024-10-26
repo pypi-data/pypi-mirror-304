@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: farwas
+Version: 0.4.0
+Summary: GitHub repository lister
+Project-URL: Homepage, https://github.com/gkwa/farwas
+Project-URL: Repository, https://github.com/gkwa/farwas
+Requires-Python: >=3.9
+Requires-Dist: zoneinfo; python_version < "3.9"
+Requires-Dist: tzdata; platform_system == "Windows"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.3; extra == "dev"

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75.2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "farwas"
+version = "0.4.0"
+authors = []
+description = "GitHub repository lister"
+requires-python = ">=3.9"
+
+dependencies = [
+    "zoneinfo; python_version < '3.9'",
+    "tzdata; platform_system == 'Windows'"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/gkwa/farwas"
+Repository = "https://github.com/gkwa/farwas"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.3"
+]
+
+[project.scripts]
+farwas = "farwas:main"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+ 
