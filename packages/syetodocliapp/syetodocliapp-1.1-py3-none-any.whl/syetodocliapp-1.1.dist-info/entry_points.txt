@@ -1,0 +1,3 @@
+[console_scripts]
+todo = sye_todo_cli.todo:cli
+
