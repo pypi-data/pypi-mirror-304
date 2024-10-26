@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "order_receipt"
+version = "0.1.0"
+description = "Пакет для cоздания чеков"
+authors = [
+    { name = "mikhail", email = "m.zimin@edu.centraluniversity.ru" }
+]
+dependencies = [
+    "argparse", "json"
+]
