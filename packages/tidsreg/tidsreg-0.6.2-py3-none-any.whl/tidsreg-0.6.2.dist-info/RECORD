@@ -1,0 +1,14 @@
+tidsreg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidsreg/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+tidsreg/api.py,sha256=sMlfL-WIb8TP4mnrt3q54Anqik5PaPuSqUreJJtYeYU,7939
+tidsreg/bulk.py,sha256=hO9p5naMh3QMchUNHRmZkojvD-PEUVGZDElCHhtdPr8,1711
+tidsreg/cli.py,sha256=1Awdq1DSbGa724CYca6s8EfjF_NNrGCxpEXte_8NYI0,7960
+tidsreg/cliutils.py,sha256=JDiMsauVBGFVGP_N_VN-nUog1UJgmG01vtJythGdNSY,355
+tidsreg/exceptions.py,sha256=Iec20PemxRDL35hiiRvJW178nHEAkdgRFC_m3qd2Q3A,141
+tidsreg/inspiration.py,sha256=JlA2bX_spveuzxzLqhgFdVO2sBv5Oo5xeoKlfAu3oec,2812
+tidsreg/models.py,sha256=p7-hl_qeInJOfROzV4LPSLqT7ErGJpoK49x8DLteSW8,1574
+tidsreg/utils.py,sha256=V_wHntS6mHBZHUj6bFC_f3yh6eGRUEqI-wxsv0N670w,1075
+tidsreg-0.6.2.dist-info/METADATA,sha256=7MaIgI1tuBW7j0oLtgnjhm6--XwN1mETpOIp_l9iQGs,2366
+tidsreg-0.6.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+tidsreg-0.6.2.dist-info/entry_points.txt,sha256=xD0Bx-eCbrYB_ENhmQUGJrh--4lmDSrmKMsWrJPebmQ,44
+tidsreg-0.6.2.dist-info/RECORD,,
