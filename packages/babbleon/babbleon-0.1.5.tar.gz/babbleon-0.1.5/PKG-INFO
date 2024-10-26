@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: babbleon
+Version: 0.1.5
+Summary: babbleon - Manage your app translations with ease.
+Home-page: https://github.com/dengdengyee/babbleon
+License: MIT
+Keywords: translation,i18n,cli,localization
+Author: mh
+Author-email: akic4op4@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Localization
+Requires-Dist: anthropic (>=0.37.1,<0.38.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: importlib-resources (>=6.4.5,<7.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Repository, https://github.com/dengdengyee/babbleon
+Description-Content-Type: text/markdown
+
+# babbleon
+
+Manage your app translations with ease. babbleon is a command-line tool that helps you manage, validate, and generate translations for your applications.
+
+## Features
+
+- 🚀 **Quick Setup**: Initialize translation configs with a single command
+- ✅ **Validation**: Ensure translation references are valid and documented
+- 🌍 **Multi-language**: Generate translations for multiple languages
+- 📝 **Documentation**: Keep translation contexts organized
+
+## Installation
+
+```bash
+pip install babbleon
+```
+
+## Quick Start
+
+1. Initialize babbleon in your project:
+```bash
+babbleon init
+```
+
