@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sales_report_213123123
+Version: 0.1.0
+Summary: A package to generate sales reports from sales data.
+Author-email: Vlad <abvvladivanov@gmail.com>
+Requires-Dist: pandas
+
