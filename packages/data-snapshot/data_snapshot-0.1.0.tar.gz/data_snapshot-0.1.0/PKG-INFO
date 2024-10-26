@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: data-snapshot
+Version: 0.1.0
+Summary: 
+Author: Aivin V. Solatorio
+Author-email: avsolatorio@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: einops (>=0.8.0,<0.9.0)
+Requires-Dist: fire (>=0.7.0,<0.8.0)
+Requires-Dist: numpy (<1.27.0)
+Requires-Dist: pdf2image (>=1.17.0,<2.0.0)
+Requires-Dist: timm (>=1.0.11,<2.0.0)
+Requires-Dist: transformers[torch] (>=4.46.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# data-snapshot
+Repository for data snapshots
+
