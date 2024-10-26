@@ -1,0 +1,11 @@
+snowflake_stage_exporter/__init__.py,sha256=rTMLVdoNqHwbBxGvJIJ_e40-SS4UiI9Ate18VCre0Qw,10586
+snowflake_stage_exporter/scrapy_pipeline.py,sha256=u8sIhW1R7VO7wX_9lkxY53-W1Ek5JOxtoiCxk2_65R4,2331
+snowflake_stage_exporter/utils.py,sha256=9WnqQ5NTPrUJ21mdtGVmBm0F-j69A5nqfY_cCsSX5To,725
+tests/__init__.py,sha256=H5PaxmIz-Vp8fltkoJmrKlC7icE5VNqMauyasO_FyEo,1170
+tests/record_sql.py,sha256=I8O19tb8LlJCoiD_g8mq1VYsblcRnXjfQscyKE_uteY,315
+tests/test_exporter.py,sha256=itKwztovZ4tx_EMYTEpf-7o-4GkV_knEOTHQJgpH0bo,15633
+tests/test_utils.py,sha256=uHr_C-V5SKn7LycI6UewU6TcEsRRvXI37IVwMpvoOrE,1048
+ssb_scrapy_snowflake_stage_exporter-0.0.1.dist-info/METADATA,sha256=GIyV5LIr9Lrlp8eBtWHnJRJcznuzh3MLW5eWl8LVZZk,242
+ssb_scrapy_snowflake_stage_exporter-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ssb_scrapy_snowflake_stage_exporter-0.0.1.dist-info/top_level.txt,sha256=VHpO_9YiVJ40L3eyLb64r7nj_7bym4u3aAnMAw2lv-I,31
+ssb_scrapy_snowflake_stage_exporter-0.0.1.dist-info/RECORD,,

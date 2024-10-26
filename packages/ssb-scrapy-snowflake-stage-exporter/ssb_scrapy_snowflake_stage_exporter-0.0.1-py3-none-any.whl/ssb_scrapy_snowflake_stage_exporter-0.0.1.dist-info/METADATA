@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ssb-scrapy-snowflake-stage-exporter
+Version: 0.0.1
+Summary: Snowflake database exporting utility with Scrapy integration
+Requires-Python: >=3.6
+Requires-Dist: itemadapter
+Requires-Dist: snowflake-connector-python
+
