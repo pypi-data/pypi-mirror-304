@@ -1,0 +1,8 @@
+README.md
+analyzer.py
+pyproject.toml
+finance_analyzer12.egg-info/PKG-INFO
+finance_analyzer12.egg-info/SOURCES.txt
+finance_analyzer12.egg-info/dependency_links.txt
+finance_analyzer12.egg-info/requires.txt
+finance_analyzer12.egg-info/top_level.txt
