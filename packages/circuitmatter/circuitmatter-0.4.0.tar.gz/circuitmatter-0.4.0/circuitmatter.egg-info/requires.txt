@@ -1,0 +1,10 @@
+cryptography
+ecdsa
+qrcode
+Adafruit-Blinka
+
+[optional]
+hypothesis
+pytest
+pytest-cov
+typing_extensions
