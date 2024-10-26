@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "flex-gw-api-automation"
+version = "0.1.9"
+description = ""
+authors = ["Damian Calabresi <dcalabresi@salesforce.com>"]
+readme = "README.md"
+packages = [
+    { include = "flex_gw_api_automation" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "2.32.3"
+pyyaml = "6.0.2"
+yamale = "5.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
