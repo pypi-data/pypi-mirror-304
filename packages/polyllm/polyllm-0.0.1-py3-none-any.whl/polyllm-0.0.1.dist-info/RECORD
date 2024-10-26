@@ -1,0 +1,8 @@
+polyllm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polyllm/demo.py,sha256=WiCb0sFYegqw4YoWTbQWuM_m1uggDgc4u-3J3fr5P4o,15286
+polyllm/polyllm.py,sha256=WEaD8vUqsSGzxmxfcnPKAvOE3Ilgsfti7sLXABKHvH4,38214
+polyllm-0.0.1.dist-info/LICENSE,sha256=VyomaAPZRizJIZwfFfhUHR9GsqcBR7_4A9fHSLm7ItM,1055
+polyllm-0.0.1.dist-info/METADATA,sha256=6B7LiGnfGdVlLgem7dfulDUdml7ZWBru7Qqp3ggthiI,3469
+polyllm-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+polyllm-0.0.1.dist-info/top_level.txt,sha256=62HMCvgoE2M0e0Ebd36QwV8MvSG4zCzh938x_pIYUB4,8
+polyllm-0.0.1.dist-info/RECORD,,
