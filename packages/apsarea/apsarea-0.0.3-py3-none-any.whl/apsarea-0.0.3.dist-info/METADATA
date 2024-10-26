@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: apsarea
+Version: 0.0.3
+Summary: module to calculate area
+Author-email: Santin Fabrizio <apstechinfo20@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+from apsarea import*
+#area of square
+print(square(2))
+#area of rectangle
+print(rectangle(2,4))
+#area of circle
+print(circle(2))
+#area of trapezoid
+print( trapezoid(1,5,8))
+#area of ellipse
+print(ellipse(2,4))
+
+
