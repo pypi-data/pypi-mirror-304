@@ -1,0 +1,2 @@
+[console_scripts]
+tania = tania.main:main
