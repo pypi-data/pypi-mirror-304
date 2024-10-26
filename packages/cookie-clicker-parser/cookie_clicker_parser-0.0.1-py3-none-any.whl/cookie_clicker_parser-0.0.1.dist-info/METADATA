@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: cookie-clicker-parser
+Version: 0.0.1
+Summary: Python package to parse Coockie Clicker export codes
+Project-URL: Homepage, https://github.com/ShadowCrafter011/Cookie-Clicker-Parser
+Project-URL: Issues, https://github.com/ShadowCrafter011/Cookie-Clicker-Parser/issues
+Author: ShadowCrafter
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
