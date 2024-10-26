@@ -1,0 +1,5 @@
+[awx.credential_plugins]
+github_app_plugin = awx_plugin_credential_github.plugin:github_app_plugin
+
+[awx_plugins.credentials]
+github_app_plugin = awx_plugin_credential_github.plugin:github_app_plugin

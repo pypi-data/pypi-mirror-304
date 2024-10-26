@@ -1,0 +1,8 @@
+awx_plugin_credential_github/__init__.py,sha256=3ZMFXcc9XZckPVmKBBdJNUexK7T-79cByKz-mD9zaj4,48
+awx_plugin_credential_github/exceptions.py,sha256=UBWdQbNTek5eEICiHqUs3gyBtpvO5T4SO9J9ZX24lVQ,177
+awx_plugin_credential_github/plugin.py,sha256=5IzRxxxCTKC_WqovSmEIrknXQlRQ0Tg9-PDxfQMuUz0,1801
+awx_plugin_credential_github-1.0.0.dist-info/METADATA,sha256=UeltYDeJmRSbK8Pi2XyUPLfNxlUaDCOlAy9Dl6qFIkw,44848
+awx_plugin_credential_github-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+awx_plugin_credential_github-1.0.0.dist-info/entry_points.txt,sha256=QAMYJNH3HaX8sAhlmeQAb7qaEFb4VUnTxPFZrkWIiiQ,200
+awx_plugin_credential_github-1.0.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+awx_plugin_credential_github-1.0.0.dist-info/RECORD,,
