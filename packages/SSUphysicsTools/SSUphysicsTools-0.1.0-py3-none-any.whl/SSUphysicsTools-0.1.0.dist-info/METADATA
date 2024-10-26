@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: SSUphysicsTools
+Version: 0.1.0
+Summary: 숭실대학교 물리학과 실험에 사용되는 데이터 처리 및 시각화 도구
+Home-page: https://github.com/kty1004/SSUphysicsExperiment_Supporting_tools?tab=readme-ov-file#readme
+Author: Taeyoung Kim
+Author-email: rocketman@soongsil.ac.kr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+# SSUphysics experiment supporting tools
+숭실대학교 물리학과 물리계측실험 수업에서 유용하게 사용할 수 있는 python 페키지입니다.
+
+> 향후 다른 실험 수업에서도 사용할 수 있도록 확장할 예정입니다.
+
+## How to install
+```zsh
+pip install SSUphysicsTools
+```
+
+## How to use
+### getting data
+getting_data.py 파일을 이용하여 실험 데이터를 가져올 수 있습니다.
+- pairwise_to_2d_list
+- get_sorted_folders_dir_by_number
+- get_channel_csv_files
+- read_csv_Tektronix
+- get_all_csv_paths
+### processing data
+- Regression
+    - cosine_regression
+- Delate_offset
+### analyzing data
+- Phase_shift
+    - find_min_x_vector
+    - find_ym_y0
+- get_error_rate
+### plot
+- Plots
+    - rough data plot
+    - bode plot
+- plot_table
