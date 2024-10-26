@@ -1,0 +1,17 @@
+*.pdf
+*.png
+*.npy
+*.npz
+*.eqx
+*.log
+!paper/sbi_example.png
+!paper/paper.pdf
+
+scripts/tests/
+scripts/
+results/
+__pycache__/
+.DS_Store
+
+affine.py
+_experiment.py
