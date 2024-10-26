@@ -1,0 +1,15 @@
+filelist:
+# - /Users/mtm/pdev/taylormonacelli/farwas/.nearwait.txtar
+# - /Users/mtm/pdev/taylormonacelli/farwas/.python-version
+# - /Users/mtm/pdev/taylormonacelli/farwas/Makefile
+# - /Users/mtm/pdev/taylormonacelli/farwas/README.md
+# - /Users/mtm/pdev/taylormonacelli/farwas/farwas.code-workspace
+# - /Users/mtm/pdev/taylormonacelli/farwas/pyproject.toml
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/__init__.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/api.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/auth.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/cache.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/cli.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/display.py
+- /Users/mtm/pdev/taylormonacelli/farwas/src/farwas/lister.py
+# - /Users/mtm/pdev/taylormonacelli/farwas/uv.lock

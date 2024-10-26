@@ -1,0 +1,309 @@
+-- src/farwas/__init__.py --
+from .cli import parse_args
+from .display import print_repos
+from .lister import GitHubRepoLister
+
+
+def main() -> None:
+    args = parse_args()
+    lister = GitHubRepoLister(cache_dir=args.cache_dir)
+
+    if args.user:
+        repos = lister.list_user_repos(args.user, args.limit, args.view)
+    else:
+        repos = lister.list_org_repos(args.org, args.limit, args.view)
+
+    print_repos(repos, args.view)
+-- src/farwas/api.py --
+import datetime
+import hashlib
+import json
+import typing
+import urllib.request
+import zoneinfo
+
+from .cache import DiskCache
+
+
+class GitHubAPI:
+    def __init__(self, headers: dict):
+        self.headers = headers
+        self.cache = DiskCache()
+
+    def _cache_key(self, url: str) -> str:
+        return hashlib.sha256(url.encode()).hexdigest()
+
+    def fetch_repos(self, url: str, limit: int) -> typing.List[typing.Dict]:
+        cache_key = self._cache_key(url)
+        cached_data = self.cache.get(cache_key)
+        if cached_data:
+            return cached_data
+
+        req = urllib.request.Request(url, headers=self.headers)
+        with urllib.request.urlopen(req) as response:
+            repos_data = json.loads(response.read())
+
+        now = datetime.datetime.now(zoneinfo.ZoneInfo("UTC"))
+        result = []
+
+        for repo in repos_data[:limit]:
+            updated_at = datetime.datetime.fromisoformat(
+                repo["updated_at"].replace("Z", "+00:00")
+            )
+            diff = now - updated_at
+
+            if diff.days == 0:
+                if diff.seconds < 3600:
+                    time_ago = f"about {diff.seconds // 60} minutes ago"
+                else:
+                    time_ago = f"about {diff.seconds // 3600} hours ago"
+            else:
+                time_ago = f"{diff.days} days ago"
+
+            owner = repo["owner"]["login"]
+            repo_info = {
+                "name": f"{owner}/{repo['name']}",
+                "description": repo["description"] or "",
+                "visibility": repo["visibility"],
+                "updated": time_ago,
+            }
+            result.append(repo_info)
+
+        self.cache.set(cache_key, result)
+        return result
+
+    def fetch_latest_workflow_status(self, repo_full_name: str) -> typing.Optional[str]:
+        url = f"https://api.github.com/repos/{repo_full_name}/actions/runs?per_page=1"
+        cache_key = self._cache_key(url)
+        cached_data = self.cache.get(cache_key)
+        if cached_data:
+            return cached_data
+
+        try:
+            req = urllib.request.Request(url, headers=self.headers)
+            with urllib.request.urlopen(req) as response:
+                data = json.loads(response.read())
+
+            if data["total_count"] > 0:
+                status = data["workflow_runs"][0]["conclusion"] or "in_progress"
+                self.cache.set(cache_key, status)
+                return status
+            return None
+        except Exception:
+            return None
+-- src/farwas/auth.py --
+import os
+
+
+def get_github_headers(token: str = None) -> dict:
+    if token is None:
+        token = os.getenv("GITHUB_TOKEN")
+        if token is None:
+            raise ValueError(
+                "Please provide a GitHub token or set GITHUB_TOKEN environment variable"
+            )
+
+    return {
+        "Accept": "application/vnd.github+json",
+        "Authorization": f"Bearer {token}",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "Python/3.12",
+    }
+-- src/farwas/cache.py --
+import json
+import pathlib
+import time
+import typing
+
+
+class DiskCache:
+    def __init__(self, cache_dir: str = None, timeout_minutes: int = 10):
+        if cache_dir is None:
+            cache_dir = pathlib.Path.home() / ".farwas" / "cache"
+        self.cache_dir = pathlib.Path(cache_dir)
+        self.timeout_seconds = timeout_minutes * 60
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+
+    def _get_cache_path(self, key: str) -> pathlib.Path:
+        return self.cache_dir / f"{key}.json"
+
+    def get(self, key: str) -> typing.Optional[typing.Dict]:
+        cache_path = self._get_cache_path(key)
+        try:
+            if cache_path.exists():
+                with cache_path.open("r") as f:
+                    data = json.load(f)
+                if time.time() - data["timestamp"] <= self.timeout_seconds:
+                    return data["value"]
+                cache_path.unlink()
+        except Exception:
+            pass
+        return None
+
+    def set(self, key: str, value: typing.Any) -> None:
+        cache_path = self._get_cache_path(key)
+        try:
+            with cache_path.open("w") as f:
+                json.dump({"timestamp": time.time(), "value": value}, f)
+        except Exception:
+            pass
+-- src/farwas/cli.py --
+import argparse
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="List GitHub repositories")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--user", "-u", help="GitHub username")
+    group.add_argument("--org", "-o", help="GitHub organization")
+    parser.add_argument(
+        "--limit",
+        "-l",
+        type=int,
+        default=20,
+        help="Number of repositories to display (default: 20)",
+    )
+    parser.add_argument(
+        "--cache-dir",
+        help="Directory to store cache files (default: ~/.farwas/cache)",
+    )
+    parser.add_argument(
+        "view",
+        nargs="?",
+        choices=["view1", "view2", "view3", "view4"],
+        default="view1",
+        help="Display format (default: view1)",
+    )
+    return parser.parse_args()
+-- src/farwas/display.py --
+import typing
+
+
+def print_repos_view1(repos: typing.List[typing.Dict]) -> None:
+    print(f"Showing {len(repos)} repositories")
+    print("NAME                        DESCRIPTION  INFO    UPDATED")
+    for repo in repos:
+        name = repo["name"].ljust(28)
+        description = (
+            repo["description"][:30] + "..."
+            if len(repo["description"]) > 30
+            else repo["description"]
+        ).ljust(12)
+        visibility = repo["visibility"].ljust(8)
+        updated = repo["updated"]
+        print(f"{name}{description}{visibility}{updated}")
+
+
+def print_repos_view2(repos: typing.List[typing.Dict]) -> None:
+    print(f"Showing {len(repos)} repositories")
+    for repo in repos:
+        name = repo["name"].ljust(40)
+        visibility = repo["visibility"].ljust(8)
+        updated = repo["updated"]
+        print(f"{name}{visibility}{updated}")
+        print(f"https://github.com/{repo['name']}/actions")
+        print(f"https://github.com/{repo['name']}/commits")
+        print()
+
+
+def print_repos_view3(repos: typing.List[typing.Dict]) -> None:
+    print(f"Showing {len(repos)} repositories")
+    for repo in repos:
+        name = repo["name"].ljust(40)
+        visibility = repo["visibility"].ljust(8)
+        updated = repo["updated"]
+        status = repo.get("workflow_status", "no workflows")
+        print(f"{name}{visibility}{updated}")
+        print(f"Actions Status: {status}")
+        print(f"https://github.com/{repo['name']}/actions")
+        print(f"https://github.com/{repo['name']}/commits")
+        print()
+
+
+def extract_minutes(time_str: str) -> int:
+    if "minutes" in time_str:
+        return int(time_str.split()[1])
+    elif "hours" in time_str:
+        return int(time_str.split()[1]) * 60
+    elif "days" in time_str:
+        return int(time_str.split()[0]) * 24 * 60
+    return 0
+
+
+def print_repos_view4(repos: typing.List[typing.Dict]) -> None:
+    print(f"Showing {len(repos)} repositories")
+
+    def status_priority(status):
+        if status == "failure":
+            return 0
+        elif status == "success":
+            return 1
+        else:
+            return 2
+
+    def sort_key(repo):
+        status = repo.get("workflow_status")
+        return (status_priority(status), extract_minutes(repo["updated"]), repo["name"])
+
+    sorted_repos = sorted(repos, key=sort_key)
+
+    for repo in sorted_repos:
+        status = repo.get("workflow_status", "no workflows")
+        status = status if status else "no workflows"
+        updated = repo["updated"]
+        actions_url = f"https://github.com/{repo['name']}/actions"
+        print(f"{status:<12} {updated:<25} {actions_url}")
+
+
+def print_repos(repos: typing.List[typing.Dict], view: str = "view1") -> None:
+    if view == "view2":
+        print_repos_view2(repos)
+    elif view == "view3":
+        print_repos_view3(repos)
+    elif view == "view4":
+        print_repos_view4(repos)
+    else:
+        print_repos_view1(repos)
+-- src/farwas/lister.py --
+import typing
+
+from .api import GitHubAPI
+from .auth import get_github_headers
+
+
+class GitHubRepoLister:
+    def __init__(self, token: str = None, cache_dir: str = None):
+        headers = get_github_headers(token)
+        self.api = GitHubAPI(headers)
+
+    def _enrich_with_workflow_status(
+        self, repos: typing.List[typing.Dict]
+    ) -> typing.List[typing.Dict]:
+        for repo in repos:
+            status = self.api.fetch_latest_workflow_status(repo["name"])
+            repo["workflow_status"] = status
+        return repos
+
+    def list_user_repos(
+        self, username: str, limit: int = 20, view: str = "view1"
+    ) -> typing.List[typing.Dict]:
+        try:
+            url = f"https://api.github.com/users/{username}/repos?sort=pushed&direction=desc&per_page={limit}"
+            repos = self.api.fetch_repos(url, limit)
+            if view in ["view3", "view4"]:
+                repos = self._enrich_with_workflow_status(repos)
+            return repos
+        except Exception as e:
+            raise Exception(f"Error fetching repositories: {str(e)}")
+
+    def list_org_repos(
+        self, org: str, limit: int = 20, view: str = "view1"
+    ) -> typing.List[typing.Dict]:
+        try:
+            url = f"https://api.github.com/orgs/{org}/repos?sort=pushed&direction=desc&per_page={limit}"
+            repos = self.api.fetch_repos(url, limit)
+            if view in ["view3", "view4"]:
+                repos = self._enrich_with_workflow_status(repos)
+            return repos
+        except Exception as e:
+            raise Exception(f"Error fetching repositories: {str(e)}")
