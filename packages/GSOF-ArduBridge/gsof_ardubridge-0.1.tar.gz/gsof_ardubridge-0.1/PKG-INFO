@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: GSOF_ArduBridge
+Version: 0.1
+Summary: Protocol stack to bridge between an Arduino and Python
+Home-page: https://github.com/mrGSOF/arduBridge.git
+Author: Guy Soffer
+Author-email: gsoffer@yahoo.com
+License: GPL-3.0-or-later
+Keywords: ArduBridge
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Embedded Systems
+License-File: LICENSE.txt
+License-File: AUTHORS
+Requires-Dist: pyserial>=2.7
+
+Protocol stack to bridge between an Arduino and Python
