@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: md-transformer
+Version: 0.0.3
+Author-email: uwe.schmitt@id.ethz.ch
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.7
+Requires-Dist: mistletoe>=1.4.0
+Description-Content-Type: text/markdown
+
+# About md-transformer
+
+More later.

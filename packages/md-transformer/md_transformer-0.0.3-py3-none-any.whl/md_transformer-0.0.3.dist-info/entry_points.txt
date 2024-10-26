@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+md-transformer = md_transformer.mkdocs_plugin:TransformMarkdownPlugin
