@@ -1,0 +1,10 @@
+cgo_sfdc_pub_sub/ChangeEventHeaderUtility.py,sha256=NiieWwPXxVdsl3a_wAG2qQFMrlkIn4K_L5-ZykOdA9s,3766
+cgo_sfdc_pub_sub/PubSub.py,sha256=lqPjIQiD69hya_b2mmOjM3oNJUC0521u3eZzK5PplgM,10068
+cgo_sfdc_pub_sub/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cgo_sfdc_pub_sub/pubsub_api_pb2.py,sha256=-4bXF68s_jBNQv7c3ghonECIpCffzOpqCd4Z-zSWF3Y,5010
+cgo_sfdc_pub_sub/pubsub_api_pb2_grpc.py,sha256=NUF5MHp1OiTTwCIBAo4oGNcXAvtck3NHps9Gpvd_KmQ,14025
+cgo_sfdc_pub_sub-1.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+cgo_sfdc_pub_sub-1.0.1.dist-info/METADATA,sha256=iTDBLPM417UrNocemCi_us1_ZLqOtiXugd3A9dUynhg,560
+cgo_sfdc_pub_sub-1.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cgo_sfdc_pub_sub-1.0.1.dist-info/top_level.txt,sha256=U-wg8BCTWpBUoeYYKatwY9JRcO7kOQzDIeoR7OIpedw,17
+cgo_sfdc_pub_sub-1.0.1.dist-info/RECORD,,

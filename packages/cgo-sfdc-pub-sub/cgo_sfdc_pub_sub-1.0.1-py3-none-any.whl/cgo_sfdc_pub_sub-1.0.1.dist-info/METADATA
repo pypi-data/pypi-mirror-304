@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cgo_sfdc_pub_sub
+Version: 1.0.1
+Summary: A package to use pub/sub to connect to SFDC, designed for Citizengo
+Author-email: Angel Xavier Astudillo Aguilar <aastudillo@citizengo.net>
+Project-URL: Homepage, https://citizengo.org/en-us
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A package to use pub/sub to connect to SFDC, designed for Citizengo
