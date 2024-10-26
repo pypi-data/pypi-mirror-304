@@ -1,0 +1,10 @@
+cameracommander/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cameracommander/camera.py,sha256=uk7fQ6Fh6HgY0RoXpDLhEswxi6_PCRLwfVGw2Row0h4,9639
+cameracommander/cli.py,sha256=5wggMya6rl4kwyj7YMG9dq0gyizDHuAaa_jioT7PKbw,5692
+cameracommander/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cameracommander/settings.py,sha256=IuH3Ee9BzX_2FP_T2DF7L0kIm2lUW0Roi3jq37JFKHg,276
+cameracommander-0.1.1.dist-info/METADATA,sha256=RzCeueqhTWz3ZYYdwGGTDqcpnLepOc15mchTFOvCQOw,2986
+cameracommander-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+cameracommander-0.1.1.dist-info/entry_points.txt,sha256=d-CMlYDUWeeEYfBsEmo7U9bn8e0kTeLRTT2h4yNXiI0,60
+cameracommander-0.1.1.dist-info/licenses/LICENSE,sha256=5O3jU4pdU8ej-2_B4OhFE4iJ1OPpTsw-jy3klzKPZ9w,1070
+cameracommander-0.1.1.dist-info/RECORD,,
