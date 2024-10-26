@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+humanize_number/__init__.py
+humanize_number/humanize.py
+humanize_number/humanize_flask.py
+humanize_number.egg-info/PKG-INFO
+humanize_number.egg-info/SOURCES.txt
+humanize_number.egg-info/dependency_links.txt
+humanize_number.egg-info/top_level.txt
+tests/test_humanize.py
