@@ -1,0 +1,3 @@
+[console_scripts]
+thinice = thinice.cli.main:main
+thiniceapi = thinice.mainapi:main
