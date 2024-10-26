@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: finance-calculator_CSV_forCU
+Version: 0.1
+Summary: Пакет для анализа доходов и расходов
+Author: Ruslan
+Author-email: r.khuseyinov@edu.centraluniversity.ru
+Requires-Python: >=3.6
+Requires-Dist: pandas
+
