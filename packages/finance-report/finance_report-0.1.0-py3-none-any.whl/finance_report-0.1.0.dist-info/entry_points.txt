@@ -1,0 +1,2 @@
+[console_scripts]
+finance-report = finance_report.cli:main
