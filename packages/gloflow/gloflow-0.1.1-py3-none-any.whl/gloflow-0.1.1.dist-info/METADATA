@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gloflow
+Version: 0.1.1
+Summary: Py package for interacting with the gloflow platform API's.
+Home-page: https://github.com/gloflow/gloflow
+Author: Ivan Trajkovic
+Author-email: glofloworg@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
