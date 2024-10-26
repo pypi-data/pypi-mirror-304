@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transaction_report"
+version = "0.1.0"
+description = "Пакет для генерации отчётов о транзакциях из CSV."
+authors = [
+    { name = "mikhail", email = "m.zimin@edu.centraluniversity.ru" }
+]
+dependencies = [
+    "pandas"
+]
