@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyremotenode
+Version: 0.5.0
+Summary: A service library for controlling low power devices
+Home-page: http://www.github.com/antarctica/pyremotenode
+Author: James Byrne
+Author-email: jambyr@bas.ac.uk
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apscheduler==3.0.8
+Requires-Dist: pyserial
+Requires-Dist: pytz
+Requires-Dist: xmodem
+Requires-Dist: pynmea2
+
+## pyremotenode
+
+__This is a port of the original pyremotenode prototyped for experiments at BAS,
+which was designed for generic use but requires refactoring. Please note this 
+refactor will rewrite significant portions of the code whilst this notice is in
+place...__
+
+The aim of this python module is to provide an easy manner by which to 
+schedule, monitor and communicate via / with an SBC board of non-denominational 
+ variety via a multitude of transport mediums (potentially, Iridium at present)...
+
+### Development environment
+
+This was designed for TS7400 use in 2018, so worked with Debian Wheezy and Python3.2-3.4
+
+__This too is being changed__
+
+### Version History
+
+__Restarting, please refer to [changelog](CHANGELOG)__

@@ -1,0 +1,5 @@
+apscheduler==3.0.8
+pyserial
+pytz
+xmodem
+pynmea2
