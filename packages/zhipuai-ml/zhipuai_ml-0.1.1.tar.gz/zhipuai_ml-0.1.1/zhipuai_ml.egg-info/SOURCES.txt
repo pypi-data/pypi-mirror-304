@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+zhipuai_ml/__init__.py
+zhipuai_ml/main.py
+zhipuai_ml.egg-info/PKG-INFO
+zhipuai_ml.egg-info/SOURCES.txt
+zhipuai_ml.egg-info/dependency_links.txt
+zhipuai_ml.egg-info/top_level.txt
