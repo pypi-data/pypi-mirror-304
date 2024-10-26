@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: phase_curve
+Version: 0.1.0
+Summary:  Lightweight, bare bones asteroid phase curve fitter 
+Home-page: https://github.com/bernardinelli/phase_curve
+Author: Pedro Bernardinelli
+Author-email: phbern@uw.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+This is a lightweight and bare bones implementation of the commonly used asteroid phase curve models, with an associated simple chi2 fitter using scipy least squares. This was developed as part of the production of the [LSST DP0.3](https://dp0-3.lsst.io/index.html) and has been used as an independent verification of the package [Sorcha](https://github.com/dirac-institute/sorcha) (which uses the excellent [sbpy](https://sbpy.org/) under the hood).
+
+The only dependencies are `numpy` and `scipy`, see code and/or docstrings for usage details. 

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+phase_curve/__init__.py
+phase_curve/fitter.py
+phase_curve/models.py
+phase_curve.egg-info/PKG-INFO
+phase_curve.egg-info/SOURCES.txt
+phase_curve.egg-info/dependency_links.txt
+phase_curve.egg-info/requires.txt
+phase_curve.egg-info/top_level.txt
