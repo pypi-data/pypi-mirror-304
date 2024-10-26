@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gypsumai-client"
+version = "0.1.0"
+description = "Extract and process unstructured data"
+authors = ["Gypsum AI <founders@gypsum.ai>"]
+keywords = ["Gypsum AI", "SDK", "API", "Python"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+requests = "^2.32.3"
+pydantic = "^2.8.2"
+pytest = "^8.3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-mock = "^3.14.0"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
