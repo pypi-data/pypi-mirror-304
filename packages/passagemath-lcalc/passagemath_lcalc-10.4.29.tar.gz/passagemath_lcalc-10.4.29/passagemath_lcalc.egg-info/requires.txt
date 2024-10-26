@@ -1,0 +1,7 @@
+passagemath-objects~=10.4.29
+passagemath-categories~=10.4.29
+passagemath-modules~=10.4.29
+memory_allocator
+cysignals>=1.10.2
+
+[test]
