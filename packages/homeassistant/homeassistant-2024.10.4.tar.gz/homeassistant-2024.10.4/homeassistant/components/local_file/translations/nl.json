@@ -1,0 +1,27 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Account is al geconfigureerd"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "file_path": "Bestandspad",
+                    "name": "Naam"
+                }
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "already_configured": "Account is al geconfigureerd"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "file_path": "Bestandspad"
+                }
+            }
+        }
+    }
+}
