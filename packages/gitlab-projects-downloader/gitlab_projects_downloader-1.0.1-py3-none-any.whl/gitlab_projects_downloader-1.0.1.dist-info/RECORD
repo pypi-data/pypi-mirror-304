@@ -1,0 +1,10 @@
+gitlab_downloader/__init__.py,sha256=FfbSrr_AOm8L-Fs_AosEi-gVgiBVaSyoLB715p4fyKQ,336
+gitlab_downloader/main.py,sha256=aYOCx7QNDuduVmSrQDQZKPAOgTSLg-BTeMd3r3PcIE8,4617
+test/__init__.py,sha256=sft4i9pYiNwddsSw24SjWv28OLfbi1-5L2YlV7NF4-M,137
+test/test_gitlab_exporter.py,sha256=zcfTuZHpiV4GQJ6HCuTibhDr3x6u6tja_w41xB-ASv0,2528
+gitlab_projects_downloader-1.0.1.dist-info/LICENSE,sha256=VHNKVj2o4TIRPPe491eDPdo7WGR9CQ1EhlkCUSkRoRE,1084
+gitlab_projects_downloader-1.0.1.dist-info/METADATA,sha256=WVY5b9M5GRTcmCGi0YEvVWoiQqn2PatiPU9UAAcf33k,1522
+gitlab_projects_downloader-1.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+gitlab_projects_downloader-1.0.1.dist-info/entry_points.txt,sha256=t2M_vPg5Gqpd8uEBgBPoniC066A66D5Z3YtdFwnQcN8,70
+gitlab_projects_downloader-1.0.1.dist-info/top_level.txt,sha256=4mFG6ivj7cGYKaOzFBzbj0XD6bc3Cd8blZyFsXPkGDY,23
+gitlab_projects_downloader-1.0.1.dist-info/RECORD,,
