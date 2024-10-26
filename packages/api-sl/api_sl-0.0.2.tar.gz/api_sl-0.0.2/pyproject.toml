@@ -1,0 +1,22 @@
+[project]
+name = "api-sl"
+version = "0.0.2"
+authors = [
+  { name="Ulrik Sannsell", email="ulrik@sannsell.se" },
+]
+description = "SL API package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/veulsan/api-sl"
+Issues = "https://github.com/veulsan/api-sl/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
