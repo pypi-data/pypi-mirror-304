@@ -1,0 +1,15 @@
+awc_client/__init__.py,sha256=UGUKVc_7oTbJ4cuC2RMKlB2oDt-dkVI0_CtPqrvOJXI,1062
+awc_client/api/__init__.py,sha256=3ZdgZTsQrVbnVcpsZHXYc5T2j854CDbLSFtm2M_5GRc,148
+awc_client/api/data_api.py,sha256=BwfSc5kZJEqTyexEWjELOXfji29es6hVXIXwWJmRX5s,197906
+awc_client/api/dataserver_api.py,sha256=bPj55_o87b_n6XBslxzUrtkPdYOb8XqbAmt6wKMFUpc,77182
+awc_client/api_client.py,sha256=tFD8tTMr3ULCYhgx4y57YNC49ym_mDHsEvgQ6vNWDi4,27459
+awc_client/api_response.py,sha256=eMxw1mpmJcoGZ3gs9z6jM4oYoZ10Gjk333s9sKxGv7s,652
+awc_client/configuration.py,sha256=vj_8NR63krPHBvO3NzlN1I7hN-j5OCKRn_6QwGpjYHA,15054
+awc_client/exceptions.py,sha256=EXL7yoTF-lzA5YayBQainlaiWv_F1hwwhoYWvmo-QpA,5988
+awc_client/models/__init__.py,sha256=yvqygBR9fQKMhJ8zb_UdwrjPvLtwoPMOPG3BXK_KFtw,454
+awc_client/models/data_cwa200_response.py,sha256=5kik8PGBvQDxkSQAxe6IskST0MrULQHgLKzD4F-c4tM,2525
+awc_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awc_client/rest.py,sha256=BAoKvj8QoruK0Fq2M7hqaZaAyec-3XhJnUNAeKJnnGQ,9424
+awc_client-1.0.0.dist-info/METADATA,sha256=-Fqew12p27kXBpHJMyPPWKuxH3fZwbC5y87-6LAFRWM,6250
+awc_client-1.0.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+awc_client-1.0.0.dist-info/RECORD,,
