@@ -1,0 +1,11 @@
+jsonmaster/__init__.py,sha256=oAD-GHs4rdu3yECxZ3nq8Qlv9e5f8uWz57yOtJqxMJw,218
+jsonmaster/json_namespace.py,sha256=Frn5Bdy0yKVY24ondK1JzEwU_INM3egnupmk89kbdms,367
+jsonmaster/types.py,sha256=zvfM_FyKxc0qUF3idVoVvFsQbtBGIW3bmSRsQbyG_eU,215
+jsonmaster/jsonfile/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsonmaster/jsonfile/json_file.py,sha256=7cBZqgIo-ISfy6jdP7CeT4lhgmNlRu98cNRzks8t1kw,2317
+jsonmaster/jsonfile/static_jsonfile.py,sha256=tTGz5tJ9pPOx0pN5Hl_foh8dlDlzET6YDCxujZd5tCY,142
+jsonmaster-1.0.1.dist-info/LICENSE,sha256=mKufiHY4bV4BzOUJY4bj2S72Ex96J042ZVPnU_HOLlQ,1088
+jsonmaster-1.0.1.dist-info/METADATA,sha256=tWf6SlZjtkGB3vG61sL80ipehI1u-0LrXHDdLO10UVI,3582
+jsonmaster-1.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+jsonmaster-1.0.1.dist-info/top_level.txt,sha256=dkYq5wJuvwc0CfMKLqhLWnT_EVS7LJ5e0ytaDqxK-DE,11
+jsonmaster-1.0.1.dist-info/RECORD,,
