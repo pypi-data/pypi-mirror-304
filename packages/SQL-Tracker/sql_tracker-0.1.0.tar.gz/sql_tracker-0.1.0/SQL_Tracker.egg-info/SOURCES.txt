@@ -1,0 +1,11 @@
+License
+README.md
+pyproject.toml
+setup.py
+SQL_Tracker/SQL_tracker.py
+SQL_Tracker/__init__.py
+SQL_Tracker.egg-info/PKG-INFO
+SQL_Tracker.egg-info/SOURCES.txt
+SQL_Tracker.egg-info/dependency_links.txt
+SQL_Tracker.egg-info/requires.txt
+SQL_Tracker.egg-info/top_level.txt
