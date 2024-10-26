@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: client_report_forCU
+Version: 0.1.0
+Summary: Пакет для генерации отчётов о клиентах из CSV-файлов
+Author: Ruslan
+Author-email: r.khuseyinov@edu.centraluniversity.ru
+License: MIT
+Requires-Dist: pandas
