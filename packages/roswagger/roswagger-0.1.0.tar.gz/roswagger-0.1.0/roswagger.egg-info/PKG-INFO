@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: roswagger
+Version: 0.1.0
+Summary: A Python package for accessing RoSwagger API endpoints
+Home-page: https://roswagger.com
+Author: RoSwagger Developers
+Author-email: support@roswagger.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# roswagger
+
+`roswagger` is a Python module for accessing endpoints on the RoSwagger platform. 
+
+## Installation
+
+```bash
+pip install roswagger
+
