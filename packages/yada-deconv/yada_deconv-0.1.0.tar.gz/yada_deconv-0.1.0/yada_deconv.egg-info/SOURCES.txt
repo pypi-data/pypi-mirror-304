@@ -1,0 +1,14 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+yada/YADA-gene-diff.ipynb
+yada/YADA.ipynb
+yada/YADA.py
+yada/__init__.py
+yada/diffexp.py
+yada_deconv.egg-info/PKG-INFO
+yada_deconv.egg-info/SOURCES.txt
+yada_deconv.egg-info/dependency_links.txt
+yada_deconv.egg-info/requires.txt
+yada_deconv.egg-info/top_level.txt
