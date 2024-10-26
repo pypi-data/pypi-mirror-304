@@ -1,0 +1,6 @@
+[console_scripts]
+fluxel = fluxel.interpreter:main
+fluxel_runner = fluxel_runner:main
+
+[gui_scripts]
+fluxel_gui = fluxel_runner:main
