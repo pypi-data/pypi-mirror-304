@@ -1,0 +1,12 @@
+my_package_imba_lutaya_svo.egg-info/PKG-INFO
+my_package_imba_lutaya_svo.egg-info/SOURCES.txt
+my_package_imba_lutaya_svo.egg-info/dependency_links.txt
+my_package_imba_lutaya_svo.egg-info/entry_points.txt
+my_package_imba_lutaya_svo.egg-info/requires.txt
+my_package_imba_lutaya_svo.egg-info/top_level.txt
+online_store/__init__.py
+online_store/__main__.py
+online_store/main.py
+online_store/order_management.py
+online_store/setup.py
+online_store/user_management.py
