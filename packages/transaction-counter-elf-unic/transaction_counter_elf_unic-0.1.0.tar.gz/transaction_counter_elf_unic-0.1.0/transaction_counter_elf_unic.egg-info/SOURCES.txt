@@ -1,0 +1,8 @@
+pyproject.toml
+transaction_counter.py
+transaction_counter_elf_unic.egg-info/PKG-INFO
+transaction_counter_elf_unic.egg-info/SOURCES.txt
+transaction_counter_elf_unic.egg-info/dependency_links.txt
+transaction_counter_elf_unic.egg-info/entry_points.txt
+transaction_counter_elf_unic.egg-info/requires.txt
+transaction_counter_elf_unic.egg-info/top_level.txt

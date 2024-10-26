@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'transaction_counter_elf_unic'
+version = '0.1.0'
+dependencies = ['pandas==2.2.3']
+
+description = 'count transactions'
+authors = [{name='Varvara'}]
+requires-python = ">=3.8"
+
+[project.scripts]
+transaction_counter = 'transaction_counter:main'
+[tool.setuptools]
+py-modules = ['transaction_counter']
