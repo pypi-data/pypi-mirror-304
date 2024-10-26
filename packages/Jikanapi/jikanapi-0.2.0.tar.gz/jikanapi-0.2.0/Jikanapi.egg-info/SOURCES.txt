@@ -1,0 +1,11 @@
+README.md
+setup.py
+Jikanapi.egg-info/PKG-INFO
+Jikanapi.egg-info/SOURCES.txt
+Jikanapi.egg-info/dependency_links.txt
+Jikanapi.egg-info/requires.txt
+Jikanapi.egg-info/top_level.txt
+jikanapi/__init__.py
+jikanapi/jikan_api.py
+jikanapi/models/__init__.py
+jikanapi/models/anime.py
