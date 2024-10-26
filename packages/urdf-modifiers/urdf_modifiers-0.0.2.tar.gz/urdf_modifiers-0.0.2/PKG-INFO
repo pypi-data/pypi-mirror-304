@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: urdf-modifiers
+Version: 0.0.2
+Summary: library to modify urdf
+Author: Carlotta Sartore, Nicolo Genesio
+Author-email: carlotta.sartore@iit.it, nicolo.genesio@iit.it
+Requires-Python: >=3.7
+Requires-Dist: urchin
+Requires-Dist: numpy
+Requires-Dist: dataclasses
+Requires-Dist: idyntree
