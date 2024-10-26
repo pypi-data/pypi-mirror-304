@@ -1,0 +1,11 @@
+README.md
+setup.py
+mypackage/__init__.py
+mypackage/decorators.py
+mypackage/descriptors.py
+mypackage/generators.py
+mypackage/iterators.py
+mypackage_den.egg-info/PKG-INFO
+mypackage_den.egg-info/SOURCES.txt
+mypackage_den.egg-info/dependency_links.txt
+mypackage_den.egg-info/top_level.txt

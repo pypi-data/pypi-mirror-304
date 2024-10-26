@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mypackage_den
+Version: 0.1.0
+Summary: Пакет, демонстрирующий работу с декораторами, дескрипторами, итераторами и генераторами
+Author: Кузнецов Денис Михайлович
+Author-email: kdm.01082002@mail.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Mypackage
+
+Р­С‚РѕС‚ РїР°РєРµС‚ РІРєР»СЋС‡Р°РµС‚ РїСЂРёРјРµСЂС‹ СЂР°Р±РѕС‚С‹ СЃ РґРµРєРѕСЂР°С‚РѕСЂР°РјРё, РґРµСЃРєСЂРёРїС‚РѕСЂР°РјРё, РёС‚РµСЂР°С‚РѕСЂР°РјРё Рё РіРµРЅРµСЂР°С‚РѕСЂР°РјРё.
