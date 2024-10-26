@@ -1,0 +1,12 @@
+lucasdp/__init__.py,sha256=aAhRqXiMooLj4wqCSObcxcnDURCnI5aKE4Tely2Po1k,24
+lucasdp/db/__init__.py,sha256=T6zccKbeuOdVfxvSER6gY6iTDDT_jDa97u_cgIVfMgA,557
+lucasdp/db/db_connection.py,sha256=sB3brqzQhQ7_xtewxOVF_XS147g0UYWm6D2LEdk8HLY,2477
+lucasdp/db/query_handler.py,sha256=zLMTDJFMzcn8R9xaGsZdNeoY4YY2AO8A_QLNv7xp8UM,1381
+lucasdp/db/sqlalchemy_utils.py,sha256=yHgDBXV-y5ZC4LQv8gx2u6H7Ng-fJb5fHsaqM2cFlU0,15505
+lucasdp/db/standardize_sql_column_names.py,sha256=BgY63QxT3OKaOkqw2Ws80a8Zme6w9NPXPZ_OmSG5YyY,2374
+lucasdp/logging/__init__.py,sha256=TpOuXzyoAZqa6lCwFxKUPR9wUhE6Jh4rCTVW-U7E2L0,182
+lucasdp/logging/prefect_log_config.py,sha256=h5i-x30_b5ulWwQcyQb64-MKBvlq1Jf2PwUIEPgL5NA,12328
+lucasdp-0.6.12.dist-info/METADATA,sha256=P3HplsDz26Ka2c0EcsCUj1XeTDHmbGonyP3U-qAocMM,2601
+lucasdp-0.6.12.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+lucasdp-0.6.12.dist-info/top_level.txt,sha256=eqjntBi0388HEbJKharroIBYlG2N9iIfwa7vWPxdbHA,8
+lucasdp-0.6.12.dist-info/RECORD,,
