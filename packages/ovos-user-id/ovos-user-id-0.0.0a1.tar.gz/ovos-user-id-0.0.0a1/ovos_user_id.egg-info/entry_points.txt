@@ -1,0 +1,6 @@
+[console_scripts]
+ovos-user-manager = ovos_user_id.tui:cli
+
+[neon.plugin.metadata]
+ovos-user-session-manager=ovos_user_id:UserSessionPlugin
+

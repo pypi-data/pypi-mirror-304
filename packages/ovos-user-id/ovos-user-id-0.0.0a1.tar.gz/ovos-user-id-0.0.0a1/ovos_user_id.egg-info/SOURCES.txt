@@ -1,0 +1,14 @@
+README.md
+setup.py
+ovos_user_id/__init__.py
+ovos_user_id/cam.py
+ovos_user_id/db.py
+ovos_user_id/mic.py
+ovos_user_id/tui.py
+ovos_user_id/users.py
+ovos_user_id/version.py
+ovos_user_id.egg-info/PKG-INFO
+ovos_user_id.egg-info/SOURCES.txt
+ovos_user_id.egg-info/dependency_links.txt
+ovos_user_id.egg-info/entry_points.txt
+ovos_user_id.egg-info/top_level.txt
