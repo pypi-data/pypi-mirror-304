@@ -1,0 +1,8 @@
+README.md
+setup.py
+colortruck/__init__.py
+colortruck/colortruck.py
+colortruck.egg-info/PKG-INFO
+colortruck.egg-info/SOURCES.txt
+colortruck.egg-info/dependency_links.txt
+colortruck.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+from .colortruck import Truckcolors
