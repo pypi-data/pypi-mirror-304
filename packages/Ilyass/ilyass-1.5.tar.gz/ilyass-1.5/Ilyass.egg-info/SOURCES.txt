@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+Ilyass/__init__.py
+Ilyass/ilyass.py
+Ilyass.egg-info/PKG-INFO
+Ilyass.egg-info/SOURCES.txt
+Ilyass.egg-info/dependency_links.txt
+Ilyass.egg-info/requires.txt
+Ilyass.egg-info/top_level.txt
