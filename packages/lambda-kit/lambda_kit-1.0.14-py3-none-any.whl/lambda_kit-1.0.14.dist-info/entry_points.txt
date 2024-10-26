@@ -1,0 +1,2 @@
+[console_scripts]
+kit = lambda_kit.__main__:main
