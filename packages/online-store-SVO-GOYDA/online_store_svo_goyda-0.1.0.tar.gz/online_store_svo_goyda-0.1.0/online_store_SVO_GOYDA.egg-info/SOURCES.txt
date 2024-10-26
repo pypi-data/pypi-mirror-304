@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+online_store_SVO_GOYDA.egg-info/PKG-INFO
+online_store_SVO_GOYDA.egg-info/SOURCES.txt
+online_store_SVO_GOYDA.egg-info/dependency_links.txt
+online_store_SVO_GOYDA.egg-info/requires.txt
+online_store_SVO_GOYDA.egg-info/top_level.txt
