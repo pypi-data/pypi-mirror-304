@@ -1,0 +1,10 @@
+wuyjmm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wuyjmm/learn.py,sha256=LR0oUYRFmnms5MvT0aDAmRPdQlqW7oIH0FR3-YBSX9o,16481
+wuyjmm/memej_classify.py,sha256=zEccO7UdU-XxOz984PzpTV2nSAVJ3lj5xz4koqNyH9c,14096
+wuyjmm/memej_cv.py,sha256=mZtz64OrmSlpp2Yxlmk8KIPi8QEEGW6TRH0fN6kQV8w,10982
+wuyjmm/memej_lgbm.py,sha256=5DbCyFHc8Afbu-08xfO5i8ZlcMZO940HYvbBROP4cYQ,54109
+wuyjmm/memej_ts.py,sha256=pjEAhrpvX1Km1Ac3WTqh2J2OgU_kALqN_zWSvDudjN4,7615
+wuyjmm-0.0.3.dist-info/METADATA,sha256=P5auUm9P-4R-vcl9AfpbnDGZsNv33wCsSNg8X7TKgZ4,72
+wuyjmm-0.0.3.dist-info/WHEEL,sha256=fl6v0VwpzfGBVsGtkAkhILUlJxROXbA3HvRL6Fe3140,105
+wuyjmm-0.0.3.dist-info/licenses/LICENSE,sha256=PdTF9yAqqxSovBCjfE6NS9l_6MfUInXqVaRK4xUbz7g,1120
+wuyjmm-0.0.3.dist-info/RECORD,,
