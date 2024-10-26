@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: localrun
+Version: 1.1.0
+Summary: A simple local server to run your Python applications.
+Author: MrFidal
+Author-email: mrfidal@proton.me
+Keywords: local server,Python applications,development server,web server
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# localrun
