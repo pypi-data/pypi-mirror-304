@@ -1,0 +1,8 @@
+bibleparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bibleparser/bibleparser.py,sha256=ah8nSac2dfjNgVRRK7DoViTuma9gxnolkJQrFURzTuU,7239
+bibleparser/book_chapter_verses.py,sha256=9ua97m7G176BkDhKnOQGVA_WTsw_7NFL_XOLAaay4aY,8689
+bibleparser-0.0.2.dist-info/LICENSE,sha256=hVpvdzvxVANp2DMFmJhFumARLGV6IDGZltcangyCMuI,1069
+bibleparser-0.0.2.dist-info/METADATA,sha256=zSYTG_qhanYq5qVygxKPqc14LcHDwtkW5zpoK2O3n9E,2555
+bibleparser-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+bibleparser-0.0.2.dist-info/top_level.txt,sha256=fzj5sqsCBZkvmnfXIxyr0atoNuniDJ6W5IY9x8YbjzE,12
+bibleparser-0.0.2.dist-info/RECORD,,
