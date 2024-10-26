@@ -1,0 +1,12 @@
+AUTHORS.MD
+LICENSE
+README.MD
+pyproject.toml
+django_cotton_components/__init__.py
+django_cotton_components/apps.py
+django_cotton_components/tests.py
+django_cotton_components.egg-info/PKG-INFO
+django_cotton_components.egg-info/SOURCES.txt
+django_cotton_components.egg-info/dependency_links.txt
+django_cotton_components.egg-info/requires.txt
+django_cotton_components.egg-info/top_level.txt
