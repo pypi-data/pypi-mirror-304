@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cheks_for_CU_from_Ruslan
+Version: 0.1
+Summary: Пакет для создания чеков
+Author: Ruslan
+Author-email: r.khuseyinov@edu.centraluniversity.ru
+Requires-Python: >=3.6
+Requires-Dist: json
+
