@@ -1,0 +1,3 @@
+[opm.embeddings.voice]
+ovos-voice-embeddings-plugin=ovos_voice_embeddings:VoiceEmbeddingsRecognitionPlugin
+
