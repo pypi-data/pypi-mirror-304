@@ -1,0 +1,22 @@
+local_release_paths:
+  - \\PawlinServer\Projects\prj\MHDR\BIRDOO\Releases\v4.0.0.00\aws_cloud_v4.0.0.00_CGTHBG_Arbor-Acres_female_0000_final
+#    - \\PawlinServer\Projects\prj\MHDR\BIRDOO\Releases\v4.0.0.00\jetson_split_v4.10.0.11_2907
+#     - \\PawlinServer\Projects\prj\MHDR\BIRDOO\Releases\v4.0.0.00\aws_cloud_v4.0.0.00_CGTHBG_Arbor-Acres_female_0000_final
+
+
+# aws, split
+this_is_release_for: aws
+
+# can not to be empty
+commit_message: 'some message'
+
+# for split does not set as actual
+set_actual: False
+combination:
+  client: DEFAULT
+  breed_type: DEFAULT
+  gender: DEFAULT
+
+
+# TODO: set_as_release alongside always with set_actual
+

@@ -1,0 +1,65 @@
+dataset_name: explicit_engines_only_Betagro_old_targets_20240531_union_full_old_targets_Betagro
+dataset_dir: !ref \\Datasets\chikens\MHDR_Chicken\sources\datasets\zbage_datasets\<dataset_name>
+src_fname: !ref <dataset_dir>collected_df.csv
+filtered_save_fname: !ref <dataset_dir>\extrapolated_df.csv
+extrapolated_save_fname: !ref <dataset_dir>\extrapolated_df.csv
+features_to_extrapolate:
+  - 'volume_norm_corr_mean'
+
+# the most important column in the project
+age_column_name: daynum
+# get actual weights postfix from utils df from manual_weights_postfix_column
+manual_weights_postfix_col: manual_weights_postfix
+# for calculating target density
+volume_col: volume_norm_corr_mean
+shape_corrector_col: density_correction_coef_mean
+target_weight_col: adjusted_weight
+target_density_col: target_density
+
+filtration_params:
+  work_dir: !ref <dataset_dir>\extrapolation_filtration
+
+  need_filter_by_std: False
+  filter_std_interval: 2.0
+  target_feature_name_for_filtration: !ref <target_density_col>
+  filtration_by_std_gby:
+    - 'client'
+    - 'breed_type'
+    - 'gender'
+  need_filter_absent_target: False
+
+  need_only_usable_for_train: False
+
+
+  min_house_datapoints_to_drop: 10
+
+  tilt_max_value: 3.0
+  missing_max_value: 0.1
+  #  tilt_column_name: "tilt"
+
+
+  need_filter_by_reliability: False
+  reliability_min_value: 0.2
+  reliability_columns:
+    - 'reliability'
+
+extrapolation_params:
+  age_column_name: !ref <age_column_name>
+  extrapolate_columns: !ref <features_to_extrapolate>
+  extrapolation_max_age: 50
+  extrapolation_min_age: 0
+  freeze_columns: true
+  postfix_after_autoencoder: _autoencoded
+  postfix_after_simple_extrapolate: _simple_extrapolate
+  postfix_raw: _raw
+  simple_extrapolation_ending_save_gap: 5
+  smooth_params: { }
+  smooth_window: 3
+  use_different_smooths: false
+
+postprocessing_params:
+  column_group_first: farm
+  calc_target_density: True
+  use_shape_corr_coef_in_target_density: True
+  target_density_colname: !ref <target_density_col>
+  target_weight_colname: !ref <target_weight_col>

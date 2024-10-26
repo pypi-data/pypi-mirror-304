@@ -1,0 +1,2 @@
+# from BIRDOO_IP.storages.target_weights.sqlalchemy_target_weights_storage import PostgresAlchemyTargetWeightsStorage
+# from BIRDOO_IP.storages.target_weights.local_target_weights_storage import LocalTargetWeightsStorage

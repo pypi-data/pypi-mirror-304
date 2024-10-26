@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "extrapolator"
+version = "0.1.0"
+description = "contains extrapolator, filtration and..."
+authors = ["Anastasia Pshichenko <avp@pawlin.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+loguru = "^0.7.2"
+sqlalchemy = "^2.0.30"
+pandas = "^1.2.4"
+# brddb = "^0.0.14"
+python-dotenv = "^1.0.1"
+pyyaml = "^6.0.1"
+paramiko = "^3.4.0"
+scp = "^0.15.0"
+brddb = { version = "^0.0.11", source = "brddb_registry" }
+
+[[tool.poetry.source]]
+name = "brddb_registry"
+url = "https://kgitlab.knexinc.com/api/v4/projects/23/packages/pypi/simple"
+priority = "supplemental"
