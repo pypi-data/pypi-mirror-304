@@ -1,0 +1,2 @@
+[console_scripts]
+pylintseq = pylintseq.generate:generate
