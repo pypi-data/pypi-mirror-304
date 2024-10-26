@@ -1,0 +1,73 @@
+Metadata-Version: 2.3
+Name: panel-graphic-walker
+Version: 0.1.0
+Summary: A project providing a Graphic Walker Pane for use with HoloViz Panel.
+Author-email: Philipp Rudiger <philipp.jfr@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: panel>=1.5.2
+Provides-Extra: dev
+Requires-Dist: jedi-language-server; (sys_platform == 'linux') and extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: panel; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: watchfiles; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# ✨ panel-graphic-walker
+
+[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
+[![py.cafe](https://py.cafe/badge.svg)](https://py.cafe/philippjfr/panel-graphic-walker-basic)
+
+`panel-graphic-walker` provides the `GraphicWalker` *pane* to leverage the [Graphic Walker](https://github.com/Kanaries/graphic-walker) data exploration tool in [Panel](https://panel.holoviz.org/) data apps.
+
+## Installation
+
+You can install `panel-graphic-walker` using `pip`:
+
+```bash
+pip install panel-graphic-walker
+```
+
+## Usage
+
+### Basic Graphic Walker Pane
+
+[![py.cafe](https://py.cafe/badge.svg)](https://py.cafe/awesome.panel.org/panel-graphic-walker-basic)
+
+[![panel-graphic-walker](https://github.com/awesome-panel/panel-graphic-walker/blob/main/static/panel-graphic-walker.png?raw=true)](https://py.cafe/awesome.panel.org/panel-graphic-walker-editor)
+
+Here’s how to create a simple `GraphicWalker` pane:
+
+```python
+import panel as pn
+from panel_gwalker import GraphicWalker
+
+pn.extension()
+
+df = pd.read_parquet('https://datasets.holoviz.org/windturbines/v1/windturbines.parq')
+
+GraphicWalker(df).servable()
+```
+
+## Api
+
+### Parameters
+
+- `object` (str): The DataFrame to explore.
+
+## XML Editor
+
+[![py.cafe](https://py.cafe/badge.svg)](https://py.cafe/awesome.panel.org/panel-xml-editor)
+
+[Open the XML Editor](https://py.cafe/awesome.panel.org/panel-xml-editor) to explore the features and documentation of the `XML` pane interactively.
+
+[![Panel XML | Diagram Editor](https://github.com/awesome-panel/panel-xml/blob/main/static/panel-xml-editor.gif?raw=true)](https://py.cafe/awesome.panel.org/panel-xml-editor)
+
+## ❤️ Contributions
+
+Contributions and co-maintainers are very welcome! Please submit issues or pull requests to the [GitHub repository](https://github.com/philippjfr/panel-graphic-walker). Check out the [DEVELOPER_GUIDE](DEVELOPER_GUIDE.md) for more information.
+
+----
