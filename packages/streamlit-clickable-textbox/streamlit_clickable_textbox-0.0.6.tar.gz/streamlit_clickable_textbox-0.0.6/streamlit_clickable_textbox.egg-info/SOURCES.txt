@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+clickable_textbox/__init__.py
+clickable_textbox/example.py
+streamlit_clickable_textbox.egg-info/PKG-INFO
+streamlit_clickable_textbox.egg-info/SOURCES.txt
+streamlit_clickable_textbox.egg-info/dependency_links.txt
+streamlit_clickable_textbox.egg-info/requires.txt
+streamlit_clickable_textbox.egg-info/top_level.txt
