@@ -1,0 +1,2 @@
+[console_scripts]
+apias = apias.apias:main
