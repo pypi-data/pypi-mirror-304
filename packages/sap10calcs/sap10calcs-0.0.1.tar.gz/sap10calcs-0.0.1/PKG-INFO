@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sap10calcs
+Version: 0.0.1
+Summary: SAP 10.2 energy calculation method in Python
+Author-email: Steven Firth <s.k.firth@lboro.ac.uk>
+Project-URL: Homepage, https://github.com/stevenkfirth/sap10calcs
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: lxml
+
+# sap10calcs
+SAP10.2 energy calculation method in Python
+
+--- UNDER DEVELOPMENT ---

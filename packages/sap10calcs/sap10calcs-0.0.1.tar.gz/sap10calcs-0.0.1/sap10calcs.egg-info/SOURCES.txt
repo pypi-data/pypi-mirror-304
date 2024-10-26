@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+sap10calcs/__init__.py
+sap10calcs.egg-info/PKG-INFO
+sap10calcs.egg-info/SOURCES.txt
+sap10calcs.egg-info/dependency_links.txt
+sap10calcs.egg-info/requires.txt
+sap10calcs.egg-info/top_level.txt
