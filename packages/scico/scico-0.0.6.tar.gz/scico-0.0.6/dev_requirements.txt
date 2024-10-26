@@ -1,0 +1,9 @@
+-r requirements.txt
+pylint
+pytest>=7.3.0
+pytest-split
+packaging
+pre-commit
+black>=24.3.0
+isort
+autoflake

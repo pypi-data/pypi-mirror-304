@@ -1,0 +1,17 @@
+include MANIFEST.in
+include README.md
+include CHANGES.rst
+include LICENSE
+include setup.py
+include conftest.py
+include pyproject.toml
+include pytest.ini
+include requirements.txt
+include dev_requirements.txt
+include docs/docs_requirements.txt
+
+recursive-include scico *.py
+recursive-include scico/data *.png *.mpk *.rst
+recursive-include docs Makefile *.py *.ipynb *.rst *.bib *.css *.svg *.png *.ico
+recursive-include examples *_requirements.txt *.txt *.rst *.py *.sh
+recursive-include misc *.py *.sh *.rst
