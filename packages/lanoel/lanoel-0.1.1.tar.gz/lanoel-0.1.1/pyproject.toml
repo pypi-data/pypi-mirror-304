@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lanoel"
+version = "0.1.1"
+description = "A Secret Santa generator for groups of people."
+authors = ["felixilgatto <essais2615@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins] # Optional super table
+[tool.poetry.plugins."console_scripts"]
+"lanoel" = "lanoel.cli:entrypoint"
