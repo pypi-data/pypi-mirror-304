@@ -1,0 +1,9 @@
+clock/__init__.py,sha256=_LUmcIkknW7rSRuvrRv7sT0oNfobDP4V9LNU5FWfETk,25
+clock/clock.py,sha256=tyGea9fNdq94DXwRH7cCoqoFSdAfUsZuBQ_0S539CT0,1365
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit_test.py,sha256=nA7pOSNmcaMLfTeUiT_6BsRgC0i6IIvaBTc_sgv8r24,1408
+pyclock_benchmark-0.1.0.dist-info/LICENSE,sha256=ko_jnBn--S2CuD-jnybKB8zrucbCWP6iJJKU6-dc9-U,1066
+pyclock_benchmark-0.1.0.dist-info/METADATA,sha256=byQCuB6Rgc3ssjJw2BQ9NumwZv_Yr3TDxKrZY9gWd6M,1210
+pyclock_benchmark-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyclock_benchmark-0.1.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+pyclock_benchmark-0.1.0.dist-info/RECORD,,
