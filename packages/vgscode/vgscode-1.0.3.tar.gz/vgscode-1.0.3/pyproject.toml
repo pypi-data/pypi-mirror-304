@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vgscode"
+version = "1.0.3"
+authors = [
+  { name = "Yerlan Yeraliyev", username = "smvrnn", hub = "solutionary inc." },
+]
+description = "Validate Generate Sanitize Code"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["iin", "bin", "validate", "generate", "Kazakhstan"]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+]
+
+[project.urls]
+Homepage = "https://github.com/smvrnn/vgscode.py"
+Repository = "https://github.com/smvrnn/vgscode.py.git"
