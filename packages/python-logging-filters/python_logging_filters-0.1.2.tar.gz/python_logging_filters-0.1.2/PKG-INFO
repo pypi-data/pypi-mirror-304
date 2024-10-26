@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: python-logging-filters
+Version: 0.1.2
+Summary: standard python logging filters
+Home-page: https://github.com/puzzleYOU/python-logging-filters/
+Author: puzzleYOU GmbH
+Author-email: scrum@puzzleyou.de
+License: GPLv3
+Platform: any
+License-File: LICENSE
+
+
+Simple filters for standard python logging, e.g. for suppressing
+noisy 3rd party framework logging.
+
+Current implementations
+=======================
+
+DjangoHttp404LogFilter
+----------------------
+
+Suppresses Django's default 'Not Found: ...' logging.
+See the `python_logging_filters.DjangoHttp404LogFilter`
+and the official Django documentation for more details how
+to use and configure that filter.
