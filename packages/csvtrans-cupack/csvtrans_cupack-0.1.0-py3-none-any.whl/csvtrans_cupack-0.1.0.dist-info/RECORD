@@ -1,0 +1,7 @@
+csvtrans/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csvtrans/__main__.py,sha256=AhCLob5gWNqZMK-GaxGvK71Z_pSuedAx_DSN-Ye-cFM,734
+csvtrans/utils.py,sha256=YQXRUCQq3_vcPvfr02LpUaAhysNN9IJoLuJ_36pSQhg,338
+csvtrans_cupack-0.1.0.dist-info/METADATA,sha256=GdIvYw_j5O1H-0MrCvFtt9DiVjjBGu0jPQmF2do74Nw,268
+csvtrans_cupack-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+csvtrans_cupack-0.1.0.dist-info/top_level.txt,sha256=uOW3A_N270fSj1pfYHkHli87GKjeXgfhXmFb4HOg6PM,9
+csvtrans_cupack-0.1.0.dist-info/RECORD,,
