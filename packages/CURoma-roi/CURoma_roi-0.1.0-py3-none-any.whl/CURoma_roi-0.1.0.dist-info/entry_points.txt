@@ -1,0 +1,2 @@
+[console_scripts]
+my-script = roi.module:main_function
