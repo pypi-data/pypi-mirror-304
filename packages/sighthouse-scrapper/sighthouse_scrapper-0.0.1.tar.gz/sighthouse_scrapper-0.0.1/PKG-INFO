@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sighthouse-scrapper
+Version: 0.0.1
+Summary: Todo
+Author: Benoît Forgette aka MadSquirrel, Sami Babigeon aka Fenrisfulsur
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
