@@ -1,0 +1,6 @@
+:py:mod:`pocketpose.models.body.litehrnet`
+==========================================
+
+.. py:module:: pocketpose.models.body.litehrnet
+
+

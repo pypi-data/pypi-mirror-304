@@ -1,0 +1,73 @@
+:py:mod:`pocketpose.benchmarks.eval_coco_sp`
+============================================
+
+.. py:module:: pocketpose.benchmarks.eval_coco_sp
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.benchmarks.eval_coco_sp.pred_to_coco
+   pocketpose.benchmarks.eval_coco_sp.blaze_to_coco
+   pocketpose.benchmarks.eval_coco_sp.infer_image
+   pocketpose.benchmarks.eval_coco_sp.infer_coco_sp
+
+
+
+.. py:function:: pred_to_coco(image_id, pred, kpt_thr=0.3)
+
+
+.. py:function:: blaze_to_coco(pred)
+
+   Convert the BlazePose keypoints to the COCO format.
+
+   Args:
+       pred (list): The list of (x, y, score) tuples.
+
+   Returns:
+       list: The list of (x, y, score) tuples in COCO format.
+
+
+.. py:function:: infer_image(inferencer, image, kpt_thr=0.3, save_vis=None)
+
+   Run inference on an image and convert the results to COCO format.
+
+   Args:
+       inferencer (PoseInferencer): The PoseInferencer object.
+       image (str): The path to the image.
+       kpt_thr (float): The score threshold to keep a keypoint (default: 0.3).
+       save_vis (bool): Path to save the visualization of the keypoints. This will
+                        slow down the evaluation, so it is recommended to only use
+                        this option for debugging purposes. If not None, it must
+                        point to an existing directory (default: None).
+
+
+.. py:function:: infer_coco_sp(inferencer, images, kpt_thr=0.3, save_vis=None)
+
+   Get predictions for the COCO single-person dataset.
+
+   Runs inference for each image and stores results in COCO format in a JSON file. The
+   results can then be evaluated using the COCO API.
+
+   Args:
+       inferencer (PoseInferencer): The PoseInferencer object.
+       images (list): The list of image paths.
+       kpt_thr (float): The score threshold to keep a keypoint (default: 0.3).
+       save_vis (bool): Path to save the visualization of the keypoints. This will
+                        slow down the evaluation, so it is recommended to only use
+                        this option for debugging purposes (default: None).
+
+   Returns:
+       tuple: A tuple containing:
+           - preds: The list of predictions in COCO format.
+           - runtimes: A dictionary containing the runtimes for each step, with keys:
+               - inference: The average inference time per image.
+               - postprocess: The average postprocessing time per image.
+
+

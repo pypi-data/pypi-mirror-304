@@ -1,0 +1,17 @@
+:py:mod:`pocketpose.datasets`
+=============================
+
+.. py:module:: pocketpose.datasets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   factory/index.rst
+   registry/index.rst
+   skeletons/index.rst
+
+

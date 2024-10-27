@@ -1,0 +1,435 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Customize Datasets" href="customize_datasets.html" /><link rel="prev" title="Implement New Models" href="implement_new_models.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Decoders - PocketPose 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #1898F3;
+  --color-brand-content: #1898F3;
+  --color-background-secondary: #f6fdff;
+  --color-background-border: #deecf0;
+  --font-stack: Playfair Display, Roboto, Arial, sans-serif;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #1898F3;
+  --color-brand-content: #1898F3;
+  --font-stack: Playfair Display, Roboto, Arial, sans-serif;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #1898F3;
+  --color-brand-content: #1898F3;
+  --font-stack: Playfair Display, Roboto, Arial, sans-serif;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">PocketPose 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/pocket-pose-logo.png" alt="Logo"/>
+  </div>
+  
+  
+</a><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to PocketPose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guides/inference.html">Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guides/model_analysis.html">Model Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guides/how_to_deploy.html">How to Deploy</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dataflow.html">Understanding the Dataflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implement_new_models.html">Implement New Models</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Decoders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_datasets.html">Customize Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Model Zoo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/body_2d_keypoint.html">2D Body Keypoint Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/body_3d_keypoint.html">3D Body Keypoint Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/face_2d_keypoint.html">2D Face Keypoint Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/hand_2d_keypoint.html">2D Hand Keypoint Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/wholebody_2d_keypoint.html">2D Whole-Body Keypoint Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_zoo/animal_2d_keypoint.html">2D Animal Keypoint Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Dataset Zoo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataset_zoo.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset_zoo/2d_body_keypoint.html">2D Body Keypoint Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset_zoo/2d_face_keypoint.html">2D Face Keypoint Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset_zoo/2d_hand_keypoint.html">2D Hand Keypoint Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../generated/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../generated/pocketpose/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of pocketpose</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/benchmarks/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.benchmarks</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of pocketpose.benchmarks</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/benchmarks/eval_coco/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.benchmarks.eval_coco</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/benchmarks/eval_coco_full/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.benchmarks.eval_coco_full</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/benchmarks/eval_coco_sp/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.benchmarks.eval_coco_sp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/converters/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of pocketpose.converters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/converters/base_converter/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters.base_converter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/converters/onnx2tf/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters.onnx2tf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/converters/tf2tflite/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters.tf2tflite</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/converters/torch2onnx/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters.torch2onnx</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/converters/torch2tflite/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.converters.torch2tflite</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/datasets/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.datasets</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of pocketpose.datasets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/datasets/factory/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.datasets.factory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/datasets/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.datasets.registry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/datasets/skeletons/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.datasets.skeletons</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/functional/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.functional</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of pocketpose.functional</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/functional/converters/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.functional.converters</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/graphics/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.graphics</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of pocketpose.graphics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/graphics/pose_visualizer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.graphics.pose_visualizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of pocketpose.models</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../generated/pocketpose/models/body/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of pocketpose.models.body</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/baseline/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.baseline</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/efficientpose/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.efficientpose</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/efficientpose_nas/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.efficientpose_nas</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/litehrnet/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.litehrnet</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/movenet/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.movenet</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/posenet/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.posenet</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/body/rtmpose/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.body.rtmpose</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../generated/pocketpose/models/decoder/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.decoder</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of pocketpose.models.decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/decoder/base_decoder/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.decoder.base_decoder</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/decoder/heatmap/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.decoder.heatmap</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/decoder/posenet/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.decoder.posenet</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/decoder/simcc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.decoder.simcc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../generated/pocketpose/models/interfaces/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.interfaces</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of pocketpose.models.interfaces</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/interfaces/imodel/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.interfaces.imodel</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/interfaces/mmposemodel/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.interfaces.mmposemodel</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/interfaces/onnxmodel/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.interfaces.onnxmodel</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/interfaces/tflitemodel/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.interfaces.tflitemodel</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../generated/pocketpose/models/wholebody/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.wholebody</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of pocketpose.models.wholebody</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/models/wholebody/blazepose/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.wholebody.blazepose</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/models/factory/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.factory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/models/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.models.registry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../generated/pocketpose/utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.utils</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of pocketpose.utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../generated/pocketpose/utils/stats/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.utils.stats</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of pocketpose.utils.stats</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../generated/pocketpose/utils/stats/tflite/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.utils.stats.tflite</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/utils/io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.utils.io</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/pocketpose/utils/registry/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.utils.registry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/pocketpose/apis/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.apis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/pocketpose/inferencer/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.inferencer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/pocketpose/summarize_mmpose_model/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.summarize_mmpose_model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/pocketpose/summarize_models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.summarize_models</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/pocketpose/version/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pocketpose.version</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div></div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/saifkhichi96/pocket-pose/edit/main/docs/advanced_guides/decoders.md" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="decoders">
+<h1>Decoders<a class="headerlink" href="#decoders" title="Link to this heading">#</a></h1>
+<p>The decoders are used to convert the raw model output to a keypoint list in the image space. This can include converting heatmaps to keypoint coordinates, or refining the keypoint coordinates using a post-processing algorithm. PocketPose provides a few decoders that can be used out of the box, but you can also create your own decoders. The provided decoders are also used in the models which are bundled with PocketPose.</p>
+<section id="heatmap-decoder">
+<h2>Heatmap decoder<a class="headerlink" href="#heatmap-decoder" title="Link to this heading">#</a></h2>
+<p>The heatmap decoder works by finding the maximum value in each heatmap. The coordinates of the maximum value are then used as the keypoint coordinates, and the value of the maximum is used as the keypoint score. The decoder can be used as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pocketpose.models.decoder</span> <span class="kn">import</span> <span class="n">HeatmapDecoder</span>
+
+<span class="n">decoder</span> <span class="o">=</span> <span class="n">HeatmapDecoder</span><span class="p">()</span>
+<span class="n">keypoints</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">heatmaps</span><span class="p">,</span> <span class="n">image_shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It expects the heatmaps to be a numpy array of shape <code class="docutils literal notranslate"><span class="pre">(num_keypoints,</span> <span class="pre">heatmap_height,</span> <span class="pre">heatmap_width)</span></code>, and the image shape to be a tuple of <code class="docutils literal notranslate"><span class="pre">(image_height,</span> <span class="pre">image_width)</span></code>. The decoder returns a list of keypoints, where each keypoint is a tuple of <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">score)</span></code>. This decoder is used in the <code class="docutils literal notranslate"><span class="pre">MoveNet</span></code> model.</p>
+</section>
+<section id="simcc-decoder">
+<h2>SimCC decoder<a class="headerlink" href="#simcc-decoder" title="Link to this heading">#</a></h2>
+<p>The <a class="reference internal" href="#"><span class="xref myst">SimCC deocder</span></a> expects the model output to be disentangled horizontal and vertical keypoint coordinates in sub-pixel space. The decoder then uses a post-processing algorithm to refine the keypoint coordinates. The decoder can be used as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pocketpose.models.decoder</span> <span class="kn">import</span> <span class="n">SimCCDecoder</span>
+
+<span class="n">decoder</span> <span class="o">=</span> <span class="n">SimCCDecoder</span><span class="p">()</span>
+<span class="n">keypoints</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">((</span><span class="n">simcc_x</span><span class="p">,</span> <span class="n">simcc_y</span><span class="p">),</span> <span class="n">image_shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It expects the model output to be a tuple of <code class="docutils literal notranslate"><span class="pre">(simcc_x,</span> <span class="pre">simcc_y)</span></code>, where <code class="docutils literal notranslate"><span class="pre">simcc_x</span></code> and <code class="docutils literal notranslate"><span class="pre">simcc_y</span></code> are numpy arrays of shape <code class="docutils literal notranslate"><span class="pre">(num_keypoints,</span> <span class="pre">heatmap_width</span> <span class="pre">*</span> <span class="pre">k)</span></code> and <code class="docutils literal notranslate"><span class="pre">(num_keypoints,</span> <span class="pre">heatmap_height</span> <span class="pre">*</span> <span class="pre">k)</span></code> respectively. The <code class="docutils literal notranslate"><span class="pre">k</span></code> parameter is the sub-pixel factor, which is the number of sub-pixels per pixel. The image shape should be a tuple of <code class="docutils literal notranslate"><span class="pre">(image_height,</span> <span class="pre">image_width)</span></code>. The decoder returns a list of keypoints, where each keypoint is a tuple of <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">score)</span></code>. This decoder is used in the <code class="docutils literal notranslate"><span class="pre">RTMPose</span></code> model.</p>
+</section>
+<section id="refinement-decoder">
+<h2>Refinement decoder<a class="headerlink" href="#refinement-decoder" title="Link to this heading">#</a></h2>
+<p>Coming soon…</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="customize_datasets.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Customize Datasets</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="implement_new_models.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Implement New Models</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Muhammad Saif Ullah Khan
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Decoders</a><ul>
+<li><a class="reference internal" href="#heatmap-decoder">Heatmap decoder</a></li>
+<li><a class="reference internal" href="#simcc-decoder">SimCC decoder</a></li>
+<li><a class="reference internal" href="#refinement-decoder">Refinement decoder</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+:py:mod:`pocketpose.converters.base_converter`
+==============================================
+
+.. py:module:: pocketpose.converters.base_converter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.converters.base_converter.BaseConverter
+
+
+
+
+.. py:class:: BaseConverter(overwrite=True, log_level=logging.INFO)
+
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: __call__(model, save_path, *args, **kwargs)
+
+
+   .. py:method:: _check_overwrite(save_path)
+
+
+   .. py:method:: _convert(model, save_path, *args, **kwargs)
+      :abstractmethod:
+
+      Convert the model to the target format and save it to the given path.
+
+      Args:
+          model (Any): The model to convert.
+          save_path (str): Where to save the converted model.
+          *args: Variable length argument list for the model.
+          **kwargs: Arbitrary keyword arguments for the model.
+
+      Returns:
+          Any: The converted model.
+
+      Raises:
+          NotImplementedError: If the subclass does not implement this method.
+
+
+

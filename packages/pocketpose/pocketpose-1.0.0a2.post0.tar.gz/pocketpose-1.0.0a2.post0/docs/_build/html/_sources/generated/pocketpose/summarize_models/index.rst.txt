@@ -1,0 +1,32 @@
+:py:mod:`pocketpose.summarize_models`
+=====================================
+
+.. py:module:: pocketpose.summarize_models
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.summarize_models.parse_args
+   pocketpose.summarize_models.list_models
+   pocketpose.summarize_models.main
+
+
+
+.. py:function:: parse_args()
+
+
+.. py:function:: list_models(models_dir: str)
+
+   List all TFLite models in a folder. 
+
+
+.. py:function:: main()
+
+

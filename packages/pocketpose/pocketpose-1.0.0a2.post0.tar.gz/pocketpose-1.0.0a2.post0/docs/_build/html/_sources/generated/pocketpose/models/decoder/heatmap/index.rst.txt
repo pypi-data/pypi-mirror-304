@@ -1,0 +1,37 @@
+:py:mod:`pocketpose.models.decoder.heatmap`
+===========================================
+
+.. py:module:: pocketpose.models.decoder.heatmap
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.decoder.heatmap.HeatmapDeocder
+
+
+
+
+.. py:class:: HeatmapDeocder
+
+
+   Bases: :py:obj:`pocketpose.models.decoder.base_decoder.Decoder`
+
+   Base class for all decoders. 
+
+   Decoders are used to decode the prediction of pose models into a keypoint list
+   in the image coordinate system. The keypoint list is a list of tuples (x, y, score)
+   where x and y are the coordinates and score is the prediction confidence.
+
+   All decoders must implement the decode method. Each model has a corresponding decoder,
+   and the decode method is automatically called when the model is used for prediction.
+
+   .. py:method:: decode(prediction, image_shape)
+
+
+

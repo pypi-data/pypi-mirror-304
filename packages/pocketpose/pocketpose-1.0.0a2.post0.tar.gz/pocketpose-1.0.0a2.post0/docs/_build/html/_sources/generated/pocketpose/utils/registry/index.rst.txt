@@ -1,0 +1,88 @@
+:py:mod:`pocketpose.utils.registry`
+===================================
+
+.. py:module:: pocketpose.utils.registry
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.utils.registry.Registry
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.utils.registry.build_from_cfg
+
+
+
+.. py:class:: Registry(name)
+
+
+   A registry to map names to classes. 
+
+   This is a generic registry that can be used to register any class,
+   e.g. skeletons, datasets, models, etc. It is used by different modules
+   to register their classes.
+
+   Args:
+       name (str): The name of the registry.
+
+   Attributes:
+       name (str): The name of the registry.
+       _registry (dict): The dictionary mapping names to classes.
+
+   Example:
+       >>> model_registry = Registry("model")
+       >>> @model_registry.register("movenet")
+
+   .. py:method:: register(name)
+
+      Register a class using the name.
+
+      Args:
+          name (str): The name of the class.
+
+
+   .. py:method:: get(name)
+
+      Get the class corresponding to the name. 
+
+      Args:
+          name (str): The name of the class.
+
+      Returns:
+          The corresponding class.
+
+      Raises:
+          ValueError: If the name is not registered in the registry.
+
+
+   .. py:method:: list()
+
+      List all the registered names. 
+
+
+
+.. py:function:: build_from_cfg(cfg, registry, default_args=None)
+
+   Build a class from the config.
+
+   Args:
+       cfg (dict): The config.
+       registry (Registry): The registry to look up the class.
+       default_args (dict): The default arguments to the class.
+
+   Returns:
+       The built class.
+
+

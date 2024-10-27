@@ -1,0 +1,306 @@
+{
+  "BlazePose": {
+    "Full": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "195",
+        "1",
+        "256x256x1",
+        "64x64x39",
+        "117"
+      ],
+      "precision": 2,
+      "file_size": 6.14215087890625,
+      "flops": 774.263808,
+      "params": 3.169489
+    },
+    "Heavy": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "195",
+        "1",
+        "256x256x1",
+        "64x64x39",
+        "117"
+      ],
+      "precision": 2,
+      "file_size": 26.425552368164062,
+      "flops": 3858.813184,
+      "params": 13.751073
+    },
+    "Lite": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "195",
+        "1",
+        "256x256x1",
+        "64x64x39",
+        "117"
+      ],
+      "precision": 2,
+      "file_size": 2.687795639038086,
+      "flops": 397.559296,
+      "params": 1.363089
+    }
+  },
+  "EfficientPose": {
+    "A_COCO": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 1.4891433715820312,
+      "flops": 726.300672,
+      "params": 1.154321
+    },
+    "B_COCO": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 3.5157318115234375,
+      "flops": 1980.42624,
+      "params": 3.030425
+    },
+    "B_MPII": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 3.5156097412109375,
+      "flops": 2640.306176,
+      "params": 3.030392
+    },
+    "C_COCO": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 5.340370178222656,
+      "flops": 2681.475072,
+      "params": 4.768321
+    },
+    "C_MPII": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 5.340240478515625,
+      "flops": 3575.037952,
+      "params": 4.768288
+    }
+  },
+  "MoveNet": {
+    "MultiPose-Lightning-FP16": {
+      "inputs": [
+        "1x1x3"
+      ],
+      "outputs": [
+        "6x56"
+      ],
+      "precision": 2,
+      "file_size": 9.141231536865234,
+      "flops": 9.396263,
+      "params": 4.72361
+    },
+    "SinglePose-Lightning": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 4,
+      "file_size": 8.93862533569336,
+      "flops": 541.610584,
+      "params": 2.31819
+    },
+    "SinglePose-Lightning-FP16": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 2,
+      "file_size": 4.5380706787109375,
+      "flops": 541.610584,
+      "params": 2.31819
+    },
+    "SinglePose-Lightning-INT8": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 1,
+      "file_size": 2.7607345581054688,
+      "flops": 541.610584,
+      "params": 2.31819
+    },
+    "SinglePose-Thunder": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 4,
+      "file_size": 23.866268157958984,
+      "flops": 2440.703064,
+      "params": 6.226262
+    },
+    "SinglePose-Thunder-FP16": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 2,
+      "file_size": 12.00115966796875,
+      "flops": 2440.703064,
+      "params": 6.226262
+    },
+    "SinglePose-Thunder-INT8": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 1,
+      "file_size": 6.7966156005859375,
+      "flops": 2440.703064,
+      "params": 6.226262
+    }
+  },
+  "PoseNet": {
+    "MobileNet-075": {
+      "inputs": [
+        "353x257x3"
+      ],
+      "outputs": [
+        "23x17x17",
+        "23x17x34",
+        "23x17x64",
+        "23x17x1"
+      ],
+      "precision": 4,
+      "file_size": 4.815702438354492,
+      "flops": 1358.860704,
+      "params": 1.25858
+    },
+    "MobileNet-100": {
+      "inputs": [
+        "257x257x3"
+      ],
+      "outputs": [
+        "9x9x17",
+        "9x9x34",
+        "9x9x32",
+        "9x9x32"
+      ],
+      "precision": 4,
+      "file_size": 12.654369354248047,
+      "flops": 1674.529664,
+      "params": 3.313907
+    }
+  },
+  "litehrnet": {
+    "18_coco_256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 1.766265869140625,
+      "flops": 406.008576,
+      "params": 1.114569
+    },
+    "18_coco_384x288": {
+      "inputs": [
+        "3x288x384"
+      ],
+      "outputs": [
+        "17x72x96"
+      ],
+      "precision": 1,
+      "file_size": 1.766265869140625,
+      "flops": 913.255296,
+      "params": 1.114569
+    },
+    "18_mpii_256x256": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 1.76611328125,
+      "flops": 540.946688,
+      "params": 1.114528
+    },
+    "30_coco_256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 2.82763671875,
+      "flops": 634.078656,
+      "params": 1.737613
+    },
+    "30_coco_384x288": {
+      "inputs": [
+        "3x288x384"
+      ],
+      "outputs": [
+        "17x72x96"
+      ],
+      "precision": 1,
+      "file_size": 2.82763671875,
+      "flops": 1426.238976,
+      "params": 1.737613
+    },
+    "30_mpii_256x256": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 2.827484130859375,
+      "flops": 844.993728,
+      "params": 1.737572
+    }
+  }
+}

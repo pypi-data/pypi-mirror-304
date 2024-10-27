@@ -1,0 +1,6 @@
+:py:mod:`pocketpose.models.interfaces.mmposemodel`
+==================================================
+
+.. py:module:: pocketpose.models.interfaces.mmposemodel
+
+

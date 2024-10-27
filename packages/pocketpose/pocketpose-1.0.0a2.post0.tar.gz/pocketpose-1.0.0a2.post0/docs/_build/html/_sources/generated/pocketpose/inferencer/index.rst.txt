@@ -1,0 +1,44 @@
+:py:mod:`pocketpose.inferencer`
+===============================
+
+.. py:module:: pocketpose.inferencer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.inferencer.PoseInferencer
+
+
+
+
+.. py:class:: PoseInferencer(model_name, radius: float = 5, thickness: int = 3, kpt_thr: float = 0.3, draw_bbox: bool = False, return_vis: bool = False, vis_out_dir: Optional[str] = None)
+
+
+   PoseInferencer provides a unified interface to infer poses from images.
+
+   Args:
+       model_name (str): Name of the model to use
+       radius (float): Sets the visualization keypoint radius.
+       thickness (int): Determines the link thickness for visualization.
+       kpt_thr (float): Sets the keypoint score threshold. Keypoints with scores exceeding
+                        this threshold will be displayed.
+       draw_bbox (bool): Decides whether to display the bounding boxes of instances.
+       return_vis (bool): Decides whether to include visualization images in the results.
+       vis_out_dir (str): Defines the folder path to save the visualization images. If unset,
+                          the visualization images will not be saved.  
+
+   .. py:method:: infer(image_path: str)
+
+      Infer poses from an image file.
+
+      Args:
+          image_path (str): Path to the image file.
+
+
+

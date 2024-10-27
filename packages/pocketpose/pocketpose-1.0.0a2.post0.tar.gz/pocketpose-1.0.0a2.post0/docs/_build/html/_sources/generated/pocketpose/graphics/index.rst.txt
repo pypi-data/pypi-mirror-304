@@ -1,0 +1,61 @@
+:py:mod:`pocketpose.graphics`
+=============================
+
+.. py:module:: pocketpose.graphics
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   pose_visualizer/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.graphics.PoseVisualizer
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.graphics.get_visualizer
+
+
+
+.. py:function:: get_visualizer(name, *args, **kwargs)
+
+
+.. py:class:: PoseVisualizer(kpts_name, radius: float = 5.0, thickness: int = 3, kpt_thr: float = 0.3, draw_bbox: bool = False)
+
+
+   .. py:method:: generate_colors()
+
+
+   .. py:method:: generate_skeleton()
+
+
+   .. py:method:: _visualize(image, keypoints) -> PIL.Image.Image
+
+
+   .. py:method:: visualize(image_path, keypoints) -> PIL.Image.Image
+
+
+   .. py:method:: visualize_numpy(image, keypoints) -> numpy.ndarray
+
+
+   .. py:method:: visualize_multiple(image_path, keypoints_list) -> PIL.Image.Image
+
+
+

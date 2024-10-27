@@ -1,0 +1,10 @@
+gdown==4.6.0
+mediapipe
+numpy
+onnxruntime
+opencv-python
+Pillow
+scipy
+tabulate
+tensorflow
+tflite

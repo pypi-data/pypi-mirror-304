@@ -1,0 +1,25 @@
+:py:mod:`pocketpose.models.registry`
+====================================
+
+.. py:module:: pocketpose.models.registry
+
+.. autoapi-nested-parse::
+
+   Registry for models. 
+
+   This module contains a registry for models. The registry is used to register
+   models, which can then be retrieved by name using the model factory.
+
+   Example:
+       >>> from pocketpose.models.registry import model_registry
+       >>> @model_registry.register("model1")
+
+
+
+Module Contents
+---------------
+
+.. py:data:: model_registry
+
+   
+

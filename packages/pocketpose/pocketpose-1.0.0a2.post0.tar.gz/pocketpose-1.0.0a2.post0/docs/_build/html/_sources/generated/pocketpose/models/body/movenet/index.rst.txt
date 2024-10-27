@@ -1,0 +1,112 @@
+:py:mod:`pocketpose.models.body.movenet`
+========================================
+
+.. py:module:: pocketpose.models.body.movenet
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.body.movenet.MoveNet
+   pocketpose.models.body.movenet.MoveNetLightning
+   pocketpose.models.body.movenet.MoveNetLightningFP16
+   pocketpose.models.body.movenet.MoveNetLightningINT8
+   pocketpose.models.body.movenet.MoveNetThunder
+   pocketpose.models.body.movenet.MoveNetThunderFP16
+   pocketpose.models.body.movenet.MoveNetThunderINT8
+
+
+
+
+.. py:class:: MoveNet(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for the MoveNet models.
+
+   MoveNet is a lightweight pose estimation model developed by Google Research
+   that runs on mobile devices. It uses a lightweight MobileNetV2 backbone and
+   a Feature Pyramid Network (FPN) decoder together with CenterNet-style keypoint
+   prediction heads. The model is trained on the COCO dataset and can detect 17
+   keypoints.
+
+   For more information, see the following links:
+   - https://www.tensorflow.org/hub/tutorials/movenet
+   - https://blog.tensorflow.org/2021/05/next-generation-pose-detection-with-movenet-and-tensorflowjs.html
+
+   .. py:method:: postprocess_prediction(prediction, original_size)
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+
+.. py:class:: MoveNetLightning
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model.
+
+   The Lightning model is the smallest MoveNet model and is intended for
+   latency-critical applications.
+
+
+.. py:class:: MoveNetLightningFP16
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model with float16 quantization. 
+
+
+.. py:class:: MoveNetLightningINT8
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model with int8 quantization. 
+
+
+.. py:class:: MoveNetThunder
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model.
+
+   The Thunder model is the largest MoveNet model and is intended for high
+   accuracy applications. This model gives better predictions than the Lightning
+   variants, but is also slower.
+
+
+.. py:class:: MoveNetThunderFP16
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model with float16 quantization. 
+
+
+.. py:class:: MoveNetThunderINT8
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model with int8 quantization. 
+
+

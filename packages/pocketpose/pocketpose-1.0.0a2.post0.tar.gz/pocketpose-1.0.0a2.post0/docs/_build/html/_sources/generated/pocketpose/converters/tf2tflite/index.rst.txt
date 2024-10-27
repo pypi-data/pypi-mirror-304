@@ -1,0 +1,113 @@
+:py:mod:`pocketpose.converters.tf2tflite`
+=========================================
+
+.. py:module:: pocketpose.converters.tf2tflite
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.converters.tf2tflite.TF2TFLiteConverter
+
+
+
+
+.. py:class:: TF2TFLiteConverter(overwrite=True, log_level=logging.INFO, use_tf_ops=False, quantize=QUANTIZE_NONE)
+
+
+   Bases: :py:obj:`pocketpose.converters.base_converter.BaseConverter`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:attribute:: QUANTIZE_NONE
+      :value: 0
+
+      
+
+   .. py:attribute:: QUANTIZE_DYNAMIC_RANGE
+      :value: 1
+
+      
+
+   .. py:attribute:: QUANTIZE_FLOAT16
+      :value: 2
+
+      
+
+   .. py:method:: _convert(model, save_path, *args, **kwargs)
+
+      Converts a TensorFlow model to TFLite format (.tflite) and saves it to disk.
+
+      The TensorFlow model must be in SavedModel format (i.e. a directory containing a saved_model.pb
+      file and a variables directory). If you have a frozen graph (.pb file), you can convert it to
+      SavedModel format using the following code:
+
+      ```python
+      import tensorflow as tf
+      from tensorflow.python.framework.convert_to_constants import convert_variables_to_constants_v2
+
+      # Load the frozen graph
+      graph_def = tf.GraphDef()
+      with tf.io.gfile.GFile('model.pb', 'rb') as f:
+          graph_def.ParseFromString(f.read())
+
+      # Convert the frozen graph to a SavedModel
+      with tf.compat.v1.Session() as sess:
+          input_tensor, output_tensor = tf.import_graph_def(
+              graph_def,
+              return_elements=['input:0', 'output:0']
+          )
+          output_tensor = convert_variables_to_constants_v2(
+              sess,
+              sess.graph.as_graph_def(),
+              ['output:0']
+          )[0]
+          tf.io.write_graph(
+              graph_or_graph_def=sess.graph_def,
+              logdir='saved_model',
+              name='saved_model.pb',
+              as_text=False
+          )
+          tf.io.write_graph(
+              graph_or_graph_def=sess.graph_def,
+              logdir='saved_model',
+              name='saved_model.pbtxt',
+              as_text=True
+          )
+      ```
+
+      To enable quantization, set one or more of the following flags to True:
+          - use_dynamic_range: Quantize the activations to 8-bit integers
+          - use_float16: Quantize the weights and activations to 16-bit floats
+
+      One .tflite model will be saved for each quantization scheme that is enabled. A postfix will
+      be added to the file name to indicate the quantization scheme. For example:
+          - model.tflite: No quantization
+          - model_dynamic_range.tflite: Dynamic range quantization
+          - model_float16.tflite: Float16 quantization
+
+      The no-quantization model will always be saved, even if all quantization flags are False. Please
+      note that we do not support full integer quantization at this time. For more information 
+      on quantization, see: https://www.tensorflow.org/lite/performance/post_training_quantization
+
+      Setting the `use_tf_ops` flag to True will enable TensorFlow ops in the TFLite model. This is
+      necessary if your model uses ops that are not supported by the default TensorFlow Lite runtime.
+      However, this will increase the size of the model, and when using the converted model on
+      mobile devices, you will need to include the TensorFlow Lite binary that includes the library
+      of TensorFlow ops. For more information, see: https://www.tensorflow.org/lite/guide/ops_select
+
+      Args:
+          model (str): Path to the TensorFlow model to convert
+          save_path (str): Path to save the converted model to. This should be a .tflite file.
+
+      Returns:
+          Any: The converted model.
+
+
+

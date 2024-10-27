@@ -1,0 +1,81 @@
+:py:mod:`pocketpose.benchmarks.eval_coco`
+=========================================
+
+.. py:module:: pocketpose.benchmarks.eval_coco
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.benchmarks.eval_coco.load_model
+   pocketpose.benchmarks.eval_coco.get_image_list
+   pocketpose.benchmarks.eval_coco.infer_coco
+   pocketpose.benchmarks.eval_coco.eval_coco_keypoints
+   pocketpose.benchmarks.eval_coco.update_results
+   pocketpose.benchmarks.eval_coco.create_tables
+   pocketpose.benchmarks.eval_coco.plot_results
+   pocketpose.benchmarks.eval_coco.benchmark
+
+
+
+.. py:function:: load_model(model_name, return_vis, kpt_thr)
+
+
+.. py:function:: get_image_list(dataset_path)
+
+   Get the list of image paths from the dataset folder.
+
+   Args:
+       dataset_path (str): The path to the dataset folder.
+
+   Returns:
+       list: The list of image paths.
+
+
+.. py:function:: infer_coco(model_name, images_path, save_dir, dataset_type='coco_sp', det_annos_path=None, kpt_thr=0.3, save_vis=False)
+
+
+.. py:function:: eval_coco_keypoints(annos_path, pred_path)
+
+   Evaluate model results using COCO API.
+
+   Args:
+       annos_path (str): The path to the ground-truth annotations file.
+       pred_path (str): The path to the predictions file.
+
+   Returns:
+       dict: The evaluation results as a dictionary with the following keys:
+           - AP: Average precision with IoU threshold of 0.5:0.95.
+           - AP^{50}: Average precision with IoU threshold of 0.5.
+           - AP^{75}: Average precision with IoU threshold of 0.75.
+           - AP^{M}: Average precision with IoU threshold of 0.5:0.95 (medium objects).
+           - AP^{L}: Average precision with IoU threshold of 0.5:0.95 (large objects).
+           - AR: Average recall with IoU threshold of 0.5:0.95.
+           - AR^{50}: Average recall with IoU threshold of 0.5.
+           - AR^{75}: Average recall with IoU threshold of 0.75.
+           - AR^{M}: Average recall with IoU threshold of 0.5:0.95 (medium objects).
+           - AR^{L}: Average recall with IoU threshold of 0.5:0.95 (large objects).
+
+
+.. py:function:: update_results(model_name, results, save_dir)
+
+
+.. py:function:: create_tables(results_dict, save_dir)
+
+   Save the results as Markdown and LaTeX tables. 
+
+
+.. py:function:: plot_results(results_dict, save_dir)
+
+   Plot the benchmarking results. 
+
+
+.. py:function:: benchmark(model_name, images_path, annos_path, save_dir, dataset_type='coco_sp', det_annos_path=None, kpt_thr=0.3, save_vis=False)
+
+
