@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+abdulpy/__init__.py
+abdulpy.egg-info/PKG-INFO
+abdulpy.egg-info/SOURCES.txt
+abdulpy.egg-info/dependency_links.txt
+abdulpy.egg-info/top_level.txt

@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: abdulpy
+Version: 0.2
+Summary: A simple library which contains all the programs like simple calculations, loops etc.
+Author: Abdul Ahad
+Author-email: noperson883@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Simple Calculations
+
+A Python package for performing simple mathematical calculations.
+
+## Features
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- modulus
+- multiplication table
+- for loop to print the numbers
+
+## Installation
+
+You can install this package using pip:
+
+```bash
+pip install abdulpy
+
+
+Change Log
+==========
+
+0.2 (26/10/2024)
+-------------------
+- Second Release
