@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+my_package_new_iamtired_to_change_the_names.egg-info/PKG-INFO
+my_package_new_iamtired_to_change_the_names.egg-info/SOURCES.txt
+my_package_new_iamtired_to_change_the_names.egg-info/dependency_links.txt
+my_package_new_iamtired_to_change_the_names.egg-info/requires.txt
+my_package_new_iamtired_to_change_the_names.egg-info/top_level.txt
