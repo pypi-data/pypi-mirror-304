@@ -1,0 +1,8 @@
+jikanapi/__init__.py,sha256=gyMY52HQNbe3nxOlV10J1B8Y9O7bHb0I7U9OMnZWPiM,40
+jikanapi/jikan_api.py,sha256=0-PtD_VjCtPBRax6-oeLnK5AfMVYBACNnq-u-gzjqAU,2136
+jikanapi/models/__init__.py,sha256=aZLZoi84ViWU--80HAqwY7BSMBqF6ijGUDnDS3XX9wQ,364
+jikanapi/models/anime.py,sha256=_A7G4Dgz-f98JdFd-MjdV0GinNvqO1aj-eoQsg8GVdQ,2190
+jikanapi-0.2.3.dist-info/METADATA,sha256=8E2qh4ygsJwPVN0YpH51A-Qpg1mbtUKU2nkHvX8XTpE,6923
+jikanapi-0.2.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+jikanapi-0.2.3.dist-info/top_level.txt,sha256=ieOi5BbptKMhBUF0k6nZCTtPAslBGOQKMlpEvGEfgNQ,9
+jikanapi-0.2.3.dist-info/RECORD,,
