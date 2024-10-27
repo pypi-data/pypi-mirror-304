@@ -1,0 +1,18 @@
+[tool.poetry]
+authors = ["woni <320753691@qq.com>"]
+description = ""
+name = "wnaop"
+readme = "README.md"
+version = "0.1.0"
+packages = [
+    { include = "aop", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
