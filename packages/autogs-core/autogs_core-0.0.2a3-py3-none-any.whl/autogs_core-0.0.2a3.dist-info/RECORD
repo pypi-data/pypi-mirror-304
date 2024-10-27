@@ -1,0 +1,13 @@
+autogs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autogs/_static.py,sha256=9fHu5m0ivGStMwRoa9frqE18iDvbSWgUguKzG062fkc,829
+autogs/util.py,sha256=D0LprPI-0H1YNnvGv48cm7kLSInbtAysCXrD2OlTZLU,355
+autogs/agent/llm_agent/_static.py,sha256=irYQ8yjLh9QQWmw7VPnYSRAutSDlZvFkmXw0v0RSpe0,566
+autogs/agent/llm_agent/google.py,sha256=Y53eR-gLDLiWYH0zjsuyO--T1evQKInaQO8oX_snNys,730
+autogs/io/__init__.py,sha256=ewoRFqE6Iga2VxIqz4cOImyV9bWPrTsTc3XR-Sq61P4,46
+autogs/io/git/__init__.py,sha256=GndIrr_-2OdRtrMOLb2QDlh6-JNz4OBeGD6D4IqnBYY,6843
+autogs/pdf/__init__.py,sha256=ckGx_JCJtusEk-YHCG2Y82D8XBIRRKoTig0X51n9j5I,5359
+autogs/process/__init__.py,sha256=Eq-yNtNRZctgC1GTOH0k5NVaMRwwtfbHFsy--IhH_N8,800
+autogs_core-0.0.2a3.dist-info/METADATA,sha256=BgN3C6J9Fe3IgdK1TGzmsSDqwF2MhpP8VnXmu_yfXiQ,1757
+autogs_core-0.0.2a3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+autogs_core-0.0.2a3.dist-info/top_level.txt,sha256=KmEZs6rnGIUYyzln2bP1LEshC7WyIO5ew7yqY-ANuKc,7
+autogs_core-0.0.2a3.dist-info/RECORD,,
