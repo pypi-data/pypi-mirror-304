@@ -1,0 +1,8 @@
+receipt_generator/__init__.py,sha256=_SrK6sXeMzBzOxsLiGezAgD9Y0hlUPkv1Hq_RawJIbw,88
+receipt_generator/cli.py,sha256=WM_wW2mizOqn4QNPbvTolasqLZjk66saHn3cholhag0,763
+receipt_generator/generator.py,sha256=sEDOqQcbF7h69OIa0XEJzeEfNtdbv8PSqvuUonR7_7Y,920
+receipt_generator-0.1.2.dist-info/METADATA,sha256=w8G1IYdPt1bhADnA4P0qc8-QbLpeP1fEBwX-0ZzWHHc,196
+receipt_generator-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+receipt_generator-0.1.2.dist-info/entry_points.txt,sha256=mGIDGtjKig8tK9OTt86AOafH9ymX2pE_uARmdm0Soto,64
+receipt_generator-0.1.2.dist-info/top_level.txt,sha256=rKE401WwkISN2QDkexjSSfc4mk8UGlYkqvAu4PYasNU,18
+receipt_generator-0.1.2.dist-info/RECORD,,
