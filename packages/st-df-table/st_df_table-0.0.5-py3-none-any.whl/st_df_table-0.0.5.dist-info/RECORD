@@ -1,0 +1,14 @@
+st_df_table/__init__.py,sha256=LOU2dFkyjWlvOUkz9c857d4QOC4Gi9cs4gZC44le0e4,4643
+st_df_table/example.py,sha256=jXvsofF0ic42f9SeOCuVlJXGfalqdfkNvEs5ranhI_w,2253
+st_df_table/frontend/build/asset-manifest.json,sha256=bVg38IDu0DkuAQVVfQRI_RlnCU_enFo8n_JG8kugcL8,374
+st_df_table/frontend/build/index.html,sha256=WcIThjqJhvP09bYbrg4he2z71FhAjV7rq_TxqEBACO8,504
+st_df_table/frontend/build/static/css/main.76bce994.css,sha256=TRyJDuWXrLRI4eAkpuRZe2fhgwsPRf2__oPlUFq8-jo,236736
+st_df_table/frontend/build/static/css/main.76bce994.css.map,sha256=DLJLt5GUMBHGPq_IcN0lG-ETxj2NWZqQJiuPYEDNFCQ,547695
+st_df_table/frontend/build/static/js/main.ee12afca.js,sha256=dp-0mMh868HnuWRAYwKFh6sE_LLnTOMlll82KrssN-Q,487706
+st_df_table/frontend/build/static/js/main.ee12afca.js.LICENSE.txt,sha256=Knyl8x0h80AsGzMyYL6G2br7sxJO92HrsvN8b3piRdk,1415
+st_df_table/frontend/build/static/js/main.ee12afca.js.map,sha256=v_MauNtnhROzzhVrcrxpQdF7lfy_tlYVpTsogcUOSGQ,1914917
+st_df_table-0.0.5.dist-info/LICENSE,sha256=yn4IIXN_X_A8eqnN67jXK6jxfva_og0AaEaDlMpxfcU,1070
+st_df_table-0.0.5.dist-info/METADATA,sha256=lclFtq5FqKG20XqElfprr1nYEZmyCvuBdWa8aDiuVSQ,3372
+st_df_table-0.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+st_df_table-0.0.5.dist-info/top_level.txt,sha256=rJTJfWp0YwuE7WqdmxHAt4dTb2hNalviB0VqrZWiYE8,12
+st_df_table-0.0.5.dist-info/RECORD,,
