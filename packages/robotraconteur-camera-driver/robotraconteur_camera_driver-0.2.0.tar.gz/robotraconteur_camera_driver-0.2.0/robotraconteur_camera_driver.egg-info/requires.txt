@@ -1,0 +1,7 @@
+robotraconteur
+robotraconteurcompanion
+drekar-launch-process
+opencv-contrib-python
+
+[test]
+pytest

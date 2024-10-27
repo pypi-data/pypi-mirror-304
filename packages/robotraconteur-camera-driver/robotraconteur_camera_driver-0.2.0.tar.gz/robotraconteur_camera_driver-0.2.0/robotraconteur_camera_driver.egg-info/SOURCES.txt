@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+robotraconteur_camera_driver.py
+robotraconteur_camera_driver.egg-info/PKG-INFO
+robotraconteur_camera_driver.egg-info/SOURCES.txt
+robotraconteur_camera_driver.egg-info/dependency_links.txt
+robotraconteur_camera_driver.egg-info/entry_points.txt
+robotraconteur_camera_driver.egg-info/requires.txt
+robotraconteur_camera_driver.egg-info/top_level.txt
