@@ -1,0 +1,5 @@
+setup.py
+ChatService.egg-info/PKG-INFO
+ChatService.egg-info/SOURCES.txt
+ChatService.egg-info/dependency_links.txt
+ChatService.egg-info/top_level.txt
