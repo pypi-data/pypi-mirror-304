@@ -1,0 +1,9 @@
+dearcygui
+imageio
+numpy
+
+[LYCON]
+lycon
+
+[TIFF]
+tifffile
