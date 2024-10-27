@@ -1,0 +1,16 @@
+nexus/__init__.py,sha256=YGZGRoHq4VFJrKy4l4J3QDxDAk6fP_RC24fbi_h0vTo,51
+nexus/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nexus/cli/main.py,sha256=fIkM5jtC8HY4BgEDqMqL6WNm1daw8Tea9axsD5jdkEk,17931
+nexus/service/__init__.py,sha256=7zM2qLmOlwr70qo24sU_rA6QkD9DxknxXP91k1V4Akg,55
+nexus/service/config.py,sha256=7JfPKNUeZbUn67GHQGrHZA9BqHAvx74mRZDTLEzxmDw,2103
+nexus/service/gpu.py,sha256=SzOmGa_xabkSrvnkC93R7Ksx7-ld3bEdq7U3MYYpQsU,2129
+nexus/service/job.py,sha256=vZp1Nwg9EMEspWvbmLFdu9NIr6PRt5MZP4VVK2Ov9Yg,4064
+nexus/service/logger.py,sha256=FA39oKkzBF2euqKKtQA8gX0Xu1WJVbrahY5UJF00r-M,1225
+nexus/service/main.py,sha256=OxxzTJVA6OlTbTCk3ZVanby7K5zt-aPrgLEuB2ZZueg,10342
+nexus/service/models.py,sha256=gbMz-Ll-0SDZOhfgUU8V0x--emsl3BbSRefszdhq1cg,1504
+nexus/service/state.py,sha256=4abKj3q4HGkpur5HIpmbtGrfqP3DERat8fbr0S9zE8g,4033
+nexusai-0.1.0.dist-info/METADATA,sha256=Xl_5zF9z8j3X-tp5LCZcpVt3x6ONVPrAK9ED_GJstvc,407
+nexusai-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+nexusai-0.1.0.dist-info/entry_points.txt,sha256=LYsmIv0-UyOwyxjahmqpgpbfv6SrmpQ4z14ZhI6Xk1s,81
+nexusai-0.1.0.dist-info/top_level.txt,sha256=T0rQEzOcOhFuflTahOIU9mmf2B1iMe1oK7P0Hz3hMsE,6
+nexusai-0.1.0.dist-info/RECORD,,
