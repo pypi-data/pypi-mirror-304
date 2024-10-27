@@ -1,0 +1,3 @@
+dist
+sqlobject_adapter
+venv
