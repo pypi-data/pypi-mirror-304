@@ -1,0 +1,11 @@
+geofence_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geofence_lib/events.py,sha256=gcfczSJeE2eqC0U6-Kbjexe1JHI1JBIFwb0vK_nZfHY,362
+geofence_lib/geofencing.py,sha256=dAMKH2q-fGnMM29GuO3VFGbmDoDHX_fwj1Uyxa8xV2A,510
+geofence_lib/utils.py,sha256=RWZT_VhAFxNInkvzjecLTRKPKIpAPaY6-R-weSq0p9Y,171
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_geofencing.py,sha256=bbA5mIcDsfKpuDNWyoPlN9XdSb_lopm4fttF08qewCA,1820
+GeoFenceLib-0.3.0.dist-info/LICENSE,sha256=_4gYRGWy0B-S0W5CRtDWmQs4Oy2CgkHzrtOmsJrvKcw,1110
+GeoFenceLib-0.3.0.dist-info/METADATA,sha256=fYRu-Ltkr2ohiiFKJTuASj8Xbq-0o9CBehQlUCpenRE,1041
+GeoFenceLib-0.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+GeoFenceLib-0.3.0.dist-info/top_level.txt,sha256=3rNPOpGRScKzG4n71r7wMK4jaQCjfLXOVwOU3ZWUQAw,19
+GeoFenceLib-0.3.0.dist-info/RECORD,,
