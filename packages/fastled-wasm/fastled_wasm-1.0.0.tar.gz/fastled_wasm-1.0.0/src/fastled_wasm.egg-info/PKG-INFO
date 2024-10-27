@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fastled_wasm
+Version: 1.0.0
+Summary: FastLED Wasm Compiler
+Home-page: https://github.com/zackees/fastled-wasm
+Maintainer: Zachary Vorhies
+License: BSD 3-Clause License
+Keywords: template-python-cmd
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docker
+Requires-Dist: keyring
+
+# FastLED wasm compiler
+
+Compiles an Arduino/Platformio sketch into a wasm binary that can be run directly in the web browser.
+
+[![Linting](https://github.com/zackees/fastled-wasm/actions/workflows/lint.yml/badge.svg)](https://github.com/zackees/fastled-wasm/actions/workflows/lint.yml)
+[![MacOS_Tests](https://github.com/zackees/fastled-wasm/actions/workflows/push_macos.yml/badge.svg)](https://github.com/zackees/fastled-wasm/actions/workflows/push_macos.yml)
+[![Ubuntu_Tests](https://github.com/zackees/fastled-wasm/actions/workflows/push_ubuntu.yml/badge.svg)](https://github.com/zackees/fastled-wasm/actions/workflows/push_ubuntu.yml)
+[![Win_Tests](https://github.com/zackees/fastled-wasm/actions/workflows/push_win.yml/badge.svg)](https://github.com/zackees/fastled-wasm/actions/workflows/push_win.yml)
+
+# Install
+
+`pip install fastled-wasm`
+
+# Use
+
+Change to the directory where the sketch lives and run
+
+```bash
+fastled-wasm --open
+```
+
+The compiler should download, compile the target and then launch a webbrowser.
