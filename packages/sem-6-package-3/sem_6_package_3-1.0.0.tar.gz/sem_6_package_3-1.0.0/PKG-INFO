@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sem-6-package-3
+Version: 1.0.0
+Summary: третий пакет из домашки
+Author-email: brxbxt <89297578555a@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=2.1.2
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: pytz>=2024.2
+Requires-Dist: six>=1.16.0
+Requires-Dist: tzdata>=2024.2
