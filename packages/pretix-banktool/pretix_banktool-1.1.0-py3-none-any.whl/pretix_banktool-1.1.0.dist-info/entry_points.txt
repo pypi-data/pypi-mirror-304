@@ -1,0 +1,2 @@
+[console_scripts]
+pretix-banktool = pretix_banktool.main:main
