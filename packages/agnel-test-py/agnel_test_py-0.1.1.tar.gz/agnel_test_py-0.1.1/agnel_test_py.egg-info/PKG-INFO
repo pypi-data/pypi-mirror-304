@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: agnel_test_py
+Version: 0.1.1
+Summary: A simple example package
+Home-page: https://github.com/yourusername/my-package
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# agnel_test_pypi
