@@ -1,0 +1,8 @@
+trexit/__init__.py,sha256=NjcNAW0RNuize037SwDpZZP50xZMrjkUH34tXguDq28,99
+trexit/cli.py,sha256=Ws663dTjSyjOzmMlBJlIQeZ8d3WrvQCaU-yeopkJwCg,1421
+trexit/content_writer.py,sha256=LoCegY4M8AG3eP48_F6t3bwr8T_p8DC20FktTDuKgUA,2175
+trexit/tree_printer.py,sha256=S-QRUYIs7rXh11RQR0qL2c9TK70YnsjZhRoinpmywcU,1168
+trexit-0.2.1.dist-info/METADATA,sha256=3I57sFKCrDx3L3bBLJYiwU2ks6MYL38bscYJF0a4u2k,976
+trexit-0.2.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+trexit-0.2.1.dist-info/entry_points.txt,sha256=HcG6HSBioxUbPiG7lGvka_1dy6Xf4sotvo7pvNCxWBI,87
+trexit-0.2.1.dist-info/RECORD,,

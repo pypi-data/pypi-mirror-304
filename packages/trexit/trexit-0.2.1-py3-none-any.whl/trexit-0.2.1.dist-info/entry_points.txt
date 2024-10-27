@@ -1,0 +1,3 @@
+[console_scripts]
+drexit = trexit.cli:content_command
+trexit = trexit.cli:tree_command
