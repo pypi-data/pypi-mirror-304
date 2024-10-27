@@ -1,0 +1,10 @@
+wassima-1.1.5.dist-info/METADATA,sha256=rUdU0_9mgs-vzcy4MIHHF-yxnSeqJD3YXsugWhgAxmI,4531
+wassima-1.1.5.dist-info/WHEEL,sha256=KCMu1-JF5WkYuZ-I0LDJfu-GO293r5VVFcvQc2KiJIM,134
+wassima-1.1.5.dist-info/licenses/LICENSE,sha256=ToUOwl05zh2cp8kxJwqBfrnvKhG-nOEk3efQH4KwpWk,1071
+wassima/__init__.py,sha256=RcMlQRCFZkqm5DZXCyzm8LUvKE3zs42NKWNgdOn02nU,8514
+wassima/_version.py,sha256=FbAftsN0GzpH2lLqvgSI88TN4I6uKzcNCAHWv7Uwj8E,91
+wassima/__main__.py,sha256=xKcxBxjeKfs0woDVsga5zLuAcZ15ds3qHOHPNGkbWlI,531
+wassima/_rustls.pyi,sha256=Aea2qvFkWM-6GPAK1XuRyW7AP6jJKdB_Z17PWRKSk00,215
+wassima/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wassima/_rustls.pypy37-pp73-arm-linux-gnu.so,sha256=2RCAiGtv8MoyrwZ6FNd5rACTbMeMzt2OGOUjgCDfL_M,555780
+wassima-1.1.5.dist-info/RECORD,,
