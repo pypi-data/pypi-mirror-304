@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: receipt-generator-owttsair
+Version: 0.1
+Summary: A package for generating receipts from order data in JSON format
+Author: Your Name
+Author-email: your_email@example.com

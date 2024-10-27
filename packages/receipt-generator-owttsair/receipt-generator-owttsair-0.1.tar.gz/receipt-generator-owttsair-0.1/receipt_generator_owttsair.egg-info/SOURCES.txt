@@ -1,0 +1,10 @@
+README.md
+setup.py
+receipt_generator/__init__.py
+receipt_generator/__main__.py
+receipt_generator/receipt.py
+receipt_generator_owttsair.egg-info/PKG-INFO
+receipt_generator_owttsair.egg-info/SOURCES.txt
+receipt_generator_owttsair.egg-info/dependency_links.txt
+receipt_generator_owttsair.egg-info/entry_points.txt
+receipt_generator_owttsair.egg-info/top_level.txt
