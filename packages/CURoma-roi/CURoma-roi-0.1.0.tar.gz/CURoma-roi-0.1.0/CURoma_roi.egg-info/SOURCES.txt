@@ -1,0 +1,8 @@
+CURoma_roi.egg-info/PKG-INFO
+CURoma_roi.egg-info/SOURCES.txt
+CURoma_roi.egg-info/dependency_links.txt
+CURoma_roi.egg-info/entry_points.txt
+CURoma_roi.egg-info/top_level.txt
+roi/__init__.py
+roi/__main__.py
+roi/setup.py
