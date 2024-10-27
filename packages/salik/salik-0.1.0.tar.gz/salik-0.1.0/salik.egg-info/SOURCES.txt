@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+salik/__init__.py
+salik/portfolio.py
+salik.egg-info/PKG-INFO
+salik.egg-info/SOURCES.txt
+salik.egg-info/dependency_links.txt
+salik.egg-info/top_level.txt
