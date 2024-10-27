@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: PyGmailScraper
+Version: 1.0.0
+Summary: Retrieve payment information, including QR code payments and credit card, from Gmail.
+Author-email: tra <tisk0711ngm@gmail.com>
+Maintainer-email: tra <tisk0711ngm@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 tra
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Source, https://github.com/clcl777/PayGmailScraper
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Topic :: Software Development
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: google-api-python-client >=2.111.0
+Requires-Dist: google-auth >=2.29.0
+Requires-Dist: google-auth-oauthlib >=1.2.0
+Requires-Dist: python-dateutil >=2.8.2
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: types-python-dateutil ; extra == 'dev'
+
+# PayGmailScraper
+
+## 概要
+PayGmailScraperは、PayGmailのメールをスクレイピングして、支払い情報を取得するためのデスクトップアプリケーションです。  
+現在、以下の支払い方法に対応しています。
+- ANA Pay
+- 楽天ペイ
+
+## インストール
+```
+pip install -r pay-gmail-scraper
+```
+
+## 使い方
+```Python
+from PayGmailScraper import PayGmailScraper
+
+client = PayGmailScraper("credentials.json")
+ana_pay_list = client.get_payments_ana_pay()
+print(ana_pay_list)
+rakuten_pay_list = client.get_payments_rakuten_pay()
+print(rakuten_pay_list)
+```
+
+## Requirements
+```
+google-api-python-client>=2.111.0,
+google-auth>=2.29.0,
+google-auth-oauthlib>=1.2.0,
+```
+Gmail APIを使用するために、認証情報のcredentials.jsonが必要
