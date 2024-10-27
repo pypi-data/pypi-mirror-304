@@ -1,0 +1,10 @@
+rectangle_packer-2.0.2.dist-info/LICENSE.md,sha256=sLZ333EuHMbHDwzlyxM4v6CPemvqt2DvUfpfDz7KXdg,1073
+rectangle_packer-2.0.2.dist-info/RECORD,,
+rectangle_packer-2.0.2.dist-info/WHEEL,sha256=fPJFWGX4x9d-BCTIAKQ5r5jAILVgTlTgwZWGIUlxz04,111
+rectangle_packer-2.0.2.dist-info/top_level.txt,sha256=QQOB_yvI1JO-umrsVUcqP5K7uKtMKrKW181ePLCac08,6
+rectangle_packer-2.0.2.dist-info/METADATA,sha256=icqG7e-n-fE50U9rhKh6zrQx4gz-ZQ5Prm8VmiBVmWM,5432
+rpack/_rpack.cpython-313-darwin.so,sha256=j89aFnezMlu6JndhyXR-WKixBMGDW_j4aV9ekj-lQyQ,36792
+rpack/_core.cpython-313-darwin.so,sha256=3DWdfc61WDB_efxQ98Qolrqjmw51X8VSw6kt4qk2oxk,151616
+rpack/_core.pxd,sha256=lxMpOMcKqPIdnCM7bav0TxX__7ACZwHiFIICzHgAud0,1036
+rpack/__init__.py,sha256=fCxCYVFQZfRJRqADAO1-FlpKn7mMnmfCqOoGxULwdFI,7032
+rpack/_core.pyx,sha256=fdrMxHkja0o1RU0BxuwWKNaRKdF_KBscKbIwQwcRGb4,15349
