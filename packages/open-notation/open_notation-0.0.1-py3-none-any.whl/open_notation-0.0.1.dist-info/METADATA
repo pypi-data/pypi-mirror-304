@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: open-notation
+Version: 0.0.1
+Summary: YAML-based music notation
+Author-email: Alexander Rodionov <tandav@tandav.me>
+Project-URL: source, https://gitlab.tandav.me/bhairava/open-notation
+Project-URL: issues, https://gitlab.tandav.me/bhairava/open-notation/-/issues
+Project-URL: release notes, https://gitlab.tandav.me/bhairava/open-notation/-/releases
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# open-notation
+YAML-based music notation
+
+# Installation
+
+```shell
+pip install open-notation
+```
+
+# Usage
+
+```python
+import open_notation
+open_notation.test()
+```
