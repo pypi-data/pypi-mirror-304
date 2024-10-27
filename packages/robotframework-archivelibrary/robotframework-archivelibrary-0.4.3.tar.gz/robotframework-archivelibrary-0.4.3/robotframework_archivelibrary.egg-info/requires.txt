@@ -1,0 +1,7 @@
+robotframework
+
+[test]
+pytest
+six
+coverage
+flake8
