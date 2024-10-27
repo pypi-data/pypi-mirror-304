@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: promptwright
+Version: 0.1.0
+Summary: A tool for generating and managing prompts for local LLMs using Ollama
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: requests>=2.25.0
+Requires-Dist: tqdm>=4.65.0
+Provides-Extra: dev
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.10.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: requests-mock>=1.11.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
