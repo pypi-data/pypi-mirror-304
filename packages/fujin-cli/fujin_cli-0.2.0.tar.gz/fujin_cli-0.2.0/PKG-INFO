@@ -1,0 +1,52 @@
+Metadata-Version: 2.3
+Name: fujin-cli
+Version: 0.2.0
+Summary: Add your description here
+Project-URL: Documentation, https://github.com/falcopackages/fujin#readme
+Project-URL: Issues, https://github.com/falcopackages/fujin/issues
+Project-URL: Source, https://github.com/falcopackages/fujin
+Author-email: Tobi DEGNON <tobidegnon@proton.me>
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: cappa>=0.24.0
+Requires-Dist: fabric>=3.2.2
+Requires-Dist: msgspec[toml]>=0.18.6
+Requires-Dist: rich>=13.9.2
+Description-Content-Type: text/markdown
+
+# fujin
+
+[![PyPI - Version](https://img.shields.io/pypi/v/fujin-cli.svg)](https://pypi.org/project/fujin-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fujin-cli.svg)](https://pypi.org/project/fujin-cli)
+
+-----
+
+> [!IMPORTANT]
+> This package currently contains no features and is a work-in-progress
+
+
+**Table of Contents**
+
+- [fujin](#fujin)
+  - [Installation](#installation)
+  - [License](#license)
+
+## Installation
+
+```console
+pip install fujin-cli
+```
+
+## License
+
+`fujin` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
