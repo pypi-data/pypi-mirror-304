@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+
+[project]
+name = "sighthouse-compiler"
+version='0.0.1'
+dependencies = []
+requires-python = ">=3.10"
+authors = [
+    { name = 'Benoît Forgette aka MadSquirrel' },
+    { name = 'Sami Babigeon aka Fenrisfulsur' },
+]
+description = "Todo"
+classifiers = [
+  "Programming Language :: Python"
+]
