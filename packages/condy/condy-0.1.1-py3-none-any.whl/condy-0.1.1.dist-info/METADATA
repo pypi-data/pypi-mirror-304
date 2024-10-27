@@ -1,0 +1,63 @@
+Metadata-Version: 2.3
+Name: condy
+Version: 0.1.1
+Summary: Python client for the Condensation.ai API
+Project-URL: Homepage, https://github.com/yourusername/condy
+Project-URL: Documentation, https://yourusername.github.io/condy
+Project-URL: Repository, https://github.com/yourusername/condy.git
+Project-URL: Bug Tracker, https://github.com/yourusername/condy/issues
+Author-email: Rach Pradhan <rach@condensation.ai>
+License-Expression: MIT
+Keywords: ai,api-client,condensation,rag
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: pydantic>=2.0.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.0.270; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.0.0; extra == 'docs'
+Requires-Dist: mkdocs>=1.4.0; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.22.0; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Condy
+
+Condy is a Python library that provides easy access to embeddings from a specific API.
+
+## Installation
+
+You can install Condy using pip:
+
+```
+pip install condy
+```
+
+## Usage
+
+Here's a simple example of how to use Condy:
+
+```python
+from condy import get_embeddings
+
+text = "Hello, world!"
+embeddings = get_embeddings(text)
+print(embeddings)
+```
+
+
+
