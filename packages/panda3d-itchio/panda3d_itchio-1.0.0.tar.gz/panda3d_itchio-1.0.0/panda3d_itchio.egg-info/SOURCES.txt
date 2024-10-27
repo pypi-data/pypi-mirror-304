@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+panda3d_itchio/__init__.py
+panda3d_itchio.egg-info/PKG-INFO
+panda3d_itchio.egg-info/SOURCES.txt
+panda3d_itchio.egg-info/dependency_links.txt
+panda3d_itchio.egg-info/requires.txt
+panda3d_itchio.egg-info/top_level.txt
