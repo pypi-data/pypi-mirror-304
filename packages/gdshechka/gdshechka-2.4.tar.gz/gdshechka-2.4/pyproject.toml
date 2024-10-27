@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "gdshechka"
+version = "2.4"
+description = ""
+authors = ["N1C1"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^0"
+bs4 = "^0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
