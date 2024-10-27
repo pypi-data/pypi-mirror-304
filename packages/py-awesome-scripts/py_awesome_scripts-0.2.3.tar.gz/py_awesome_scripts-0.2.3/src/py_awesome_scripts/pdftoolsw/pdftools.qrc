@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/">
+    <file>assets/images/markdown.svg</file>
+    <file>assets/images/html.svg</file>
+    <file>assets/images/ppt.svg</file>
+    <file>assets/images/pdftools.svg</file>
+    <file>assets/images/word.svg</file>
+    <file>assets/images/excel.svg</file>
+    <file>assets/images/image.svg</file>
+  </qresource>
+</RCC>
