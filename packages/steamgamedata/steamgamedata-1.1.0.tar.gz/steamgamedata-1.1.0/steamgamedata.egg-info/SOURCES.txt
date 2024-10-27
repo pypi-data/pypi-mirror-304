@@ -1,0 +1,8 @@
+setup.py
+steamgamedata/__init__.py
+steamgamedata/core.py
+steamgamedata.egg-info/PKG-INFO
+steamgamedata.egg-info/SOURCES.txt
+steamgamedata.egg-info/dependency_links.txt
+steamgamedata.egg-info/requires.txt
+steamgamedata.egg-info/top_level.txt
