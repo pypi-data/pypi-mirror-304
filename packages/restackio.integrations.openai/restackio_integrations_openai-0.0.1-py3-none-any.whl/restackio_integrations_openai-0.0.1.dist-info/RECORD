@@ -1,0 +1,14 @@
+restackio/integrations/openai/__init__.py,sha256=slS7733gPkzawF3-ONmk7MkmqGj-xKjx239MIaImwJI,639
+restackio/integrations/openai/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restackio/integrations/openai/functions/chat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restackio/integrations/openai/functions/chat/completions_base.py,sha256=OeGhUr3dwCo-VOds7L1csnH6-kAyDlxkaecTf8tYlf4,2643
+restackio/integrations/openai/functions/chat/completions_stream.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restackio/integrations/openai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restackio/integrations/openai/service.py,sha256=t4yDh-QF-E_-vHBPDooPreU5OGXnuEFIvEJr4DBcYy4,754
+restackio/integrations/openai/task_queue.py,sha256=FfORwaNmil4p--12mnV6fxlCMY5ezoJ3pDeBZQH3zPU,28
+restackio/integrations/openai/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restackio/integrations/openai/utils/client.py,sha256=YZ1NM4dy7DVaNxkqWxgViwocciUCSnHXcoyM0JuVqA0,244
+restackio/integrations/openai/utils/cost.py,sha256=V3zFdR-YnBXv-oc-IIBIeAFWISgkKjkQDli3tt2HiUc,356
+restackio_integrations_openai-0.0.1.dist-info/METADATA,sha256=5bJWeJmdncfHwfd1nWuB4yPthQeHGIXDl18zVpI7u2g,755
+restackio_integrations_openai-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+restackio_integrations_openai-0.0.1.dist-info/RECORD,,
