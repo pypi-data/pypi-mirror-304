@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+client_report/__ini__.py
+client_report/cli.py
+client_report/report.py
+client_report12.egg-info/PKG-INFO
+client_report12.egg-info/SOURCES.txt
+client_report12.egg-info/dependency_links.txt
+client_report12.egg-info/entry_points.txt
+client_report12.egg-info/requires.txt
+client_report12.egg-info/top_level.txt
