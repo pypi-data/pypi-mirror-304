@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cursor_automation
+Version: 0.1
+Requires-Dist: PyQt6==6.5.2
+Requires-Dist: pyautogui==0.9.54
+Requires-Dist: opencv-python==4.8.0.76
+Requires-Dist: numpy==1.25.2
+
