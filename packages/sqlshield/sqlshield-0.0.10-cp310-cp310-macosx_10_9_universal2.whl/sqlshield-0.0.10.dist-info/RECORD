@@ -1,0 +1,8 @@
+sqlshield/__init__.py,sha256=R1VmPSS44bA6F75GjEjRq4uaorToF2ka0iP32khftuY,80
+sqlshield/models.cpython-310-darwin.so,sha256=3ha7RntYlCVxFOF1Bir1thwjzPpYBolo4Bs6ppdnEGU,306112
+sqlshield/shield.cpython-310-darwin.so,sha256=GU5FHTPYdD15QaTHHvY58bOErnSupbLUSbtH0FGQ4ZY,184016
+sqlshield-0.0.10.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sqlshield-0.0.10.dist-info/METADATA,sha256=Y_9QNgv6fEktouy-4L4q3r529ADszI2RQ7O4gS1og48,9606
+sqlshield-0.0.10.dist-info/WHEEL,sha256=ULRBhwOJ1mBUfjWY14LXp5Tokrb8ZwCfut8Xmx2MYRo,114
+sqlshield-0.0.10.dist-info/top_level.txt,sha256=sMIFlsz4TsFN2Y4jGG_bNkgSeRopF0t0iBSjbFfgIMs,10
+sqlshield-0.0.10.dist-info/RECORD,,
