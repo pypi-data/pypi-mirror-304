@@ -1,0 +1,2 @@
+[console_scripts]
+obzs = obz.service
