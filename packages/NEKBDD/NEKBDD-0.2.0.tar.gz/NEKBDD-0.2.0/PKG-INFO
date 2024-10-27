@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: NEKBDD
+Version: 0.2.0
+Summary: A package for NEKBDD: a nonparametric ensemble knowledge-based data-driven genetic network construction
+Author: Chen-Po Liao
+Author-email: liaochenpo@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: powerlaw
+
+# NEKBDD: a nonparametric ensemble knowledge-based data-driven genetic network construction
+
+Updated: August 23 2024
+
+This repository contains code to reproduce the results of simulation and applications in
+
+Chen-Po Liao, Hung-Ching Chang, Chuhsing Kate Hsiao. "NEKBDD: a nonparametric ensemble knowledge-based data-driven genetic network construction" (2024)
