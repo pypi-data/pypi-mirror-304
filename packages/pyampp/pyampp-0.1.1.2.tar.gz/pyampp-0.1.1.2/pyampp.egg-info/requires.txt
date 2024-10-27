@@ -1,0 +1,27 @@
+sunpy[all]
+numpy<2,>=1.25
+cython
+ipympl
+ipywidgets
+matplotlib
+pyvista
+pyvistaqt
+pyqt5
+QtPy
+qtrangeslider
+
+[dev]
+pytest
+pytest-cov
+
+[docs]
+sphinx
+sphinx-automodapi
+
+[docs:python_version < "3.11"]
+tomli
+
+[tests]
+pytest
+pytest-doctestplus
+pytest-cov
