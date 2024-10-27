@@ -1,0 +1,5 @@
+[console_scripts]
+clickuplist = clickuphelper.cli:clickuplist
+clickuptask = clickuphelper.cli:task
+clickuptime = clickuphelper.cli:clickuptime
+clickuptree = clickuphelper.cli:tree
