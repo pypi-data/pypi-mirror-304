@@ -1,0 +1,8 @@
+README.md
+setup.py
+roswagger/__init__.py
+roswagger.egg-info/PKG-INFO
+roswagger.egg-info/SOURCES.txt
+roswagger.egg-info/dependency_links.txt
+roswagger.egg-info/requires.txt
+roswagger.egg-info/top_level.txt
