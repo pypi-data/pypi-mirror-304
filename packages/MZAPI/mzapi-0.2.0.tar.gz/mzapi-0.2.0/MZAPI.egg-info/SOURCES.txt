@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+API/APM.py
+API/KVS.py
+API/__init__.py
+API/HWNLP/__init__.py
+API/HWNLP/auth_config.py
+API/HWNLP/mt_service.py
+API/HWNLP/nlg_service.py
+API/HWNLP/nlpf_service.py
+API/HWNLP/nlu_service.py
+MZAPI.egg-info/PKG-INFO
+MZAPI.egg-info/SOURCES.txt
+MZAPI.egg-info/dependency_links.txt
+MZAPI.egg-info/requires.txt
+MZAPI.egg-info/top_level.txt
