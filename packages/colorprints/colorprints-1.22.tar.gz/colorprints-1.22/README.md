@@ -1,0 +1,32 @@
+# colorprints v1.22
+
+This is a code library i made for fun in class one day. I was really bored.
+
+The Code is quite simple and mostly for personal use but I wanted to learn how to upload code packages so here it is.
+
+---
+
+## These Functions take a string value and print it out in the color specified
+
+
+printred(string)
+
+printblue(string)
+
+printgreen(string)
+
+printyellow(string)
+
+printorange(string)
+
+printpurple(string)
+
+printcyan(string)
+
+printgrey(string)
+
+---
+
+## This Function will intake 3 RGB (0-255) Color Values and a string value.
+
+printRGB(int,int,int,String)
