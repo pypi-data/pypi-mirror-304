@@ -1,0 +1,11 @@
+anyquote/__init__.py,sha256=_YGx51ylNR4zJMR2DjO7cCH-V9QUy1B4S1UGPSyPFVI,995
+anyquote/font_manager.py,sha256=NqhraqDeQaoqFk_ravPUw-CkQ_1ahBnzCsnv3wHwKGc,3770
+anyquote/internet/__init__.py,sha256=icrUXTEaBf947FvTIRl4LTFuOAFCwV2RF29HsaRWuxM,867
+anyquote/internet/twi.py,sha256=Cdje42rpTSTuF81B2PI4BpK6gO2wqniZjwNxFG-uYIU,7685
+anyquote/rander/__init__.py,sha256=HNtVBlp9f-LJf0rIxiycBFGFvTtDnXJeoTHHhQVDvA0,866
+anyquote/rander/img.py,sha256=MRDk9Ljmg7aHp4ehif0AIjF9zKO8OLGtU9HvFx740IU,5767
+anyquote/rander/text.py,sha256=hhqX8WfHyBRQ32mP_Tza_z4IEVLY9cQ4buhbUfIMxVQ,18406
+anyquote-0.3.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+anyquote-0.3.11.dist-info/METADATA,sha256=Eke0itbiiv-zSzykyT1R3nQb9Co4YlbNgKQ50nfhjxA,1678
+anyquote-0.3.11.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+anyquote-0.3.11.dist-info/RECORD,,
