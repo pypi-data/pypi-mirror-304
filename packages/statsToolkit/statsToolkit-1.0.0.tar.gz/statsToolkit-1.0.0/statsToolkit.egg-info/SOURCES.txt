@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+statsToolkit.egg-info/PKG-INFO
+statsToolkit.egg-info/SOURCES.txt
+statsToolkit.egg-info/dependency_links.txt
+statsToolkit.egg-info/requires.txt
+statsToolkit.egg-info/top_level.txt
+statstoolkit/__init__.py
+statstoolkit/probability.py
+statstoolkit/statistics.py
+statstoolkit/utils.py
+statstoolkit/visualization.py
