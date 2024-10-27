@@ -1,0 +1,191 @@
+Metadata-Version: 2.1
+Name: nethytech
+Version: 1.0
+Summary: A Selenium-based script to listen for text changes on a webpage and save them to a file.
+Home-page: https://anubhav-chaturvedi.netlify.app/
+Author: Anubhav Chaturvedi
+Author-email: chaturvedianubhav520@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+
+
+# NethyTech
+
+[![Downloads][downloads-shield]][downloads-url]
+[![Profile Views][profile-views-shield]][profile-views-url]
+[![GitHub Followers][github-followers-shield]][github-followers-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Instagram][instagram-shield]][instagram-url]
+[![Twitter][twitter-shield]][twitter-url]
+[![YouTube][youtube-shield]][youtube-url]
+
+NethyTech is a versatile Python package designed for various automation tasks including monitoring, weather data, text animations, file handling, and arithmetic operations. It leverages **Selenium** for real-time text monitoring on a webpage and provides several handy functions for practical automation and data retrieval purposes.
+
+---
+
+## Key Features
+
+- **Real-Time Text Monitoring**: Observes changes in a specified text box on a webpage and saves updates in `input_cmd.txt`.
+- **Weather Reporting**: Get real-time weather updates for any specified location.
+- **File I/O Utilities**: Read and write to files in a single line.
+- **Basic Calculations**: Perform arithmetic calculations easily.
+- **Animated Text Printing**: Print text with animation for dynamic UI effects.
+- **Headless Operations**: Executes in the background without opening a browser window.
+
+---
+
+## Installation
+
+To install NethyTech, make sure you have Python 3.x installed. You can then use the following command:
+
+```bash
+pip install nethytech
+```
+
+## Usage Guide
+
+### 1. **Real-Time Text Monitoring**
+
+   Track changes in a webpage’s text box by importing and using the `SpeechToText` function:
+
+   ```python
+   from nethytech import SpeechToText
+   SpeechToText()
+   ```
+
+   - **Steps to Run**:
+     - Open [this webpage](https://aquamarine-llama-e17401.netlify.app/) and edit the text box.
+     - The script will detect and log changes to `input_cmd.txt` in real-time.
+
+### 2. **Weather Reporting**
+
+   Get a weather report by calling `weather` with the location as a parameter:
+
+   ```python
+   from nethytech import weather
+   print(weather("Karnataka"))
+   ```
+
+ **Example Output**:
+```
+Weather report: karnataka
+
+     \  /       Partly cloudy
+   _ /"".-.     +29(30) °C     
+     \_(   ).   ↘ 5 km/h       
+     /(___(__)  10 km
+                0.0 mm
+                                                       ┌─────────────┐               
+
+┌──────────────────────────────┬───────────────────────┤  Sun 27 Oct ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│     \   /     Sunny          │  _`/"".-.     Patchy rain ne…│    \  /       Partly Cloudy  │     \   /     Clear          │
+│      .-.      +25(26) °C     │   ,\_(   ).   +28(29) °C     │  _ /"".-.     +25(26) °C     │      .-.      +23(25) °C     │
+│   ― (   ) ―   → 7-8 km/h     │    /(___(__)  ↓ 5-6 km/h     │    \_(   ).   ↘ 9-18 km/h    │   ― (   ) ―   → 9-18 km/h    │
+│      `-’      10 km          │      ‘ ‘ ‘ ‘  10 km          │    /(___(__)  10 km          │      `-’      10 km          │
+│     /   \     0.0 mm | 0%    │     ‘ ‘ ‘ ‘   0.0 mm | 82%   │               0.0 mm | 0%    │     /   \     0.0 mm | 0%    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+                                                       ┌─────────────┐               
+
+┌──────────────────────────────┬───────────────────────┤  Mon 28 Oct ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│     \   /     Sunny          │    \  /       Partly Cloudy  │     \   /     Clear          │     \   /     Clear          │
+│      .-.      +25(26) °C     │  _ /"".-.     +28(29) °C     │      .-.      +24(25) °C     │      .-.      21 °C          │
+│   ― (   ) ―   → 10-11 km/h   │    \_(   ).   → 12-14 km/h   │   ― (   ) ―   → 10-22 km/h   │   ― (   ) ―   ↗ 12-25 km/h   │
+│      `-’      10 km          │    /(___(__)  10 km          │      `-’      10 km          │      `-’      10 km          │
+│     /   \     0.0 mm | 0%    │               0.0 mm | 0%    │     /   \     0.0 mm | 0%    │     /   \     0.0 mm | 0%    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+                                                       ┌─────────────┐               
+
+┌──────────────────────────────┬───────────────────────┤  Tue 29 Oct ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│     \   /     Sunny          │     \   /     Sunny          │    \  /       Partly Cloudy  │     \   /     Clear          │
+│      .-.      +25(26) °C     │      .-.      +28(30) °C     │  _ /"".-.     +25(26) °C     │      .-.      +23(25) °C     │
+│   ― (   ) ―   → 10-12 km/h   │   ― (   ) ―   → 10-12 km/h   │    \_(   ).   ↗ 10-20 km/h   │   ― (   ) ―   ↗ 10-17 km/h   │
+│      `-’      10 km          │      `-’      10 km          │    /(___(__)  10 km          │      `-’      10 km          │
+│     /   \     0.0 mm | 0%    │     /   \     0.0 mm | 0%    │               0.0 mm | 0%    │     /   \     0.0 mm | 0%    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+Location: Karnataka, India [14.5203896,75.7223521]
+```
+     
+
+### 3. **Animated Text Printing**
+
+   Display text with an animated effect:
+
+   ```python
+   from nethytech import printA
+   printA("Hello, I am Anubhav!")
+   ```
+
+### 4. **Basic Calculations**
+
+   Quickly evaluate expressions:
+
+   ```python
+   from nethytech import calculate
+   print(calculate("2+5+5*7+45/2"))
+   ```
+
+   - **Example Output**: `64.5`
+
+### 5. **Read File in One Line**
+
+   Read an entire file in a single line of code:
+
+   ```python
+   from nethytech import readfile
+   print(readfile("file.txt"))
+   ```
+
+### 6. **Write to a File in One Line**
+
+   Write text to a file with a one-liner:
+
+   ```python
+   from nethytech import writefile
+   writefile("file.txt", "Hello, I am Anubhav")
+   ```
+
+---
+
+## Requirements
+
+- Python 3.12
+- Selenium
+- WebDriver Manager
+- Chrome browser (required by Chrome WebDriver)
+
+## Additional Notes
+
+If you encounter any issues, ensure you have the correct Python version and dependencies. Chrome must be installed on your system as it’s required for WebDriver.
+
+---
+
+## Downloads, Views, and GitHub Links
+
+[downloads-shield]: https://img.shields.io/badge/Downloads-1K+-brightgreen?style=for-the-badge
+[downloads-url]: https://pypi.org/project/nethytech/
+
+[profile-views-shield]: https://komarev.com/ghpvc/?username=anubhav-chaturvedi&color=blue&style=for-the-badge
+[profile-views-url]: https://github.com/anubhav-chaturvedi
+
+[github-followers-shield]: https://img.shields.io/github/followers/anubhav-chaturvedi?style=for-the-badge
+[github-followers-url]: https://github.com/anubhav-chaturvedi
+
+---
+
+## Author
+
+**Anubhav Chaturvedi**  
+[Email](mailto:chaturvedianubhav520@gmail.com)  
+
+For more projects, visit my [GitHub](https://github.com/anubhav-chaturvedi).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
