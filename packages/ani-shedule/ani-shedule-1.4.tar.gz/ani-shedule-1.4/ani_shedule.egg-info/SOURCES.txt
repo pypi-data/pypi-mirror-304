@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+shedule.py
+ani_shedule.egg-info/PKG-INFO
+ani_shedule.egg-info/SOURCES.txt
+ani_shedule.egg-info/dependency_links.txt
+ani_shedule.egg-info/entry_points.txt
+ani_shedule.egg-info/requires.txt
+ani_shedule.egg-info/top_level.txt
