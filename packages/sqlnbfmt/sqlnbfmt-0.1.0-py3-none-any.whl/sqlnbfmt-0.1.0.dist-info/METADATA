@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sqlnbfmt
+Version: 0.1.0
+Summary: A tool to format SQL code in Jupyter notebooks.
+Author-email: Qing <qingye779@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astor>=0.8.1
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: sqlglot>=25.27.0
+
+# sqlnbfmt
+A SQL formatter for Jupyter Notebooks
