@@ -1,0 +1,8 @@
+setup.py
+CatScraper/__init__.py
+CatScraper.egg-info/PKG-INFO
+CatScraper.egg-info/SOURCES.txt
+CatScraper.egg-info/dependency_links.txt
+CatScraper.egg-info/requires.txt
+CatScraper.egg-info/top_level.txt
+CatScraper/CatScraper/__init__.py
