@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: switchgrass
+Version: 0.1.0a1
+Summary: A homegrown CLI framework
+Project-URL: Homepage, https://github.com/webecke/switchgrass
+Project-URL: Repository, https://github.com/webecke/switchgrass
+Author-email: Dallin Webecke <me@webecke.dev>
+License: MIT
+License-File: LICENSE
+Keywords: cli,console,framework,terminal
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Switchgrass 🌾
+A homegrown python framework for building CLI applications
+
+### What?
+The idea is to make all the input, output, and state management of a CLI program easier. So the goal of this project is to build a package that allows developers to build CLIs, representing different menus as nodes on a graph.
+
+_We'll see how this goes_
+
+Wish me luck!
+
+### Help
+If you've come across this repo somehow and this project seems interesting, feel free to join and help out!
+
+
+### Show your support
+Obviously no one is using this, but I learned you can custom-make badges! Like this:
+[![Grown with Switchgrass](https://img.shields.io/badge/grown%20with-switchgrass%20🌾-2e7d32)](https://github.com/webecke/switchgrass)
