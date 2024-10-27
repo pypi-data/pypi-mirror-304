@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+zico/__init__.py
+zico.egg-info/PKG-INFO
+zico.egg-info/SOURCES.txt
+zico.egg-info/dependency_links.txt
+zico.egg-info/top_level.txt
