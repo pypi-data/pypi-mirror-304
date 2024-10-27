@@ -1,0 +1,2 @@
+[console_scripts]
+hive-tell-user = hive.messaging.commands.tell_user:main
