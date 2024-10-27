@@ -1,0 +1,12 @@
+cloudflare_ddns_updater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater/constants.py,sha256=Yprilj8dUWu4om7vbI1sWV0Z-cNLFKWRHF125Jd62tM,622
+cloudflare_ddns_updater/initializer.py,sha256=8T4lN3fVaobJWaLkIhtHdadgKZbVLMtXE4W43WLqPGo,9472
+cloudflare_ddns_updater/ip_updater.py,sha256=y-rhMfumPmZjvruEOCoctG2W-ZefS7aIJ7WqG-MSNlE,2938
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test1.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater-0.1.31.dist-info/LICENCE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_ddns_updater-0.1.31.dist-info/METADATA,sha256=cprgeY1lhpE7dCOXJjUxaaqPMKOlBFu2No_3aLxIzN8,3330
+cloudflare_ddns_updater-0.1.31.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cloudflare_ddns_updater-0.1.31.dist-info/entry_points.txt,sha256=mMQPWOY6GGxKKjnDFxUFMvObgf7i8mkMjSm8ajN6_ws,138
+cloudflare_ddns_updater-0.1.31.dist-info/top_level.txt,sha256=oUhcxjvi8Z8D1DjFB_lKiOkX_hrfClVA4lZrlJRWzww,30
+cloudflare_ddns_updater-0.1.31.dist-info/RECORD,,
