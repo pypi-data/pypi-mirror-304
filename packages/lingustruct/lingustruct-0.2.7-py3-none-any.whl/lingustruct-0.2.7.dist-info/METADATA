@@ -1,0 +1,165 @@
+Metadata-Version: 2.1
+Name: lingustruct
+Version: 0.2.7
+Summary: AI-supported system design framework optimized for usability.
+Home-page: https://pypi.org/project/lingustruct/
+Author: Yasunori Abe
+Author-email: osusume-co@lilseed.jp
+License: Proprietary
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: jinja2
+Requires-Dist: pydantic
+Requires-Dist: weasyprint
+Requires-Dist: markdown
+Requires-Dist: openai
+Requires-Dist: jsonschema
+Requires-Dist: cryptography
+Requires-Dist: requests
+Requires-Dist: redis>=4.0.0
+
+# LinguStruct
+
+LinguStruct is a structured system design framework optimized for usability. It provides templates for system design documents, making it easy for users to develop, document, and manage systems efficiently.
+
+---
+
+## Installation
+
+Ensure you have Python 3.6 or higher installed. Clone the repository and install the package:
+
+```bash
+git clone https://github.com/lilseedabe/lingustruct.git
+cd lingustruct
+pip install -e .
+```
+
+---
+
+## Usage
+
+### 1. Setting up Configuration
+
+Create a `.env` file in the root directory to store your encryption key, license, and other sensitive information. Here is an example:
+
+```ini
+# .env file example
+LINGUSTRUCT_LICENSE_KEY=your-license-key
+```
+
+### 2. Running the Framework
+
+Below is an example of how to use the **LinguStruct** framework:
+
+```python
+from lingustruct import LinguStruct, Validator
+
+# Initialize components
+lingu_struct = LinguStruct()
+validator = Validator()
+
+# Example: Generate a master JSON template
+replacements = {"PROJECT_ID": "123", "VERSION": "1.0"}
+lingu_struct.generate_master_json(replacements)
+
+# Example: Validate a module using a schema
+module_data = {
+    "project_id": "123",
+    "v": "1.3",
+    "meta": {"t_v": "1.0", "p_n": "Project Name", "desc": "Sample project", "scale": "m"}
+}
+is_valid, message = validator.validate(module_data)
+print(f"Validation Result: {message}")
+```
+
+---
+
+## Abbreviation Reference
+
+Below are the abbreviations used within the **LinguStruct** framework to keep templates concise and manageable:
+
+| Abbreviation | Meaning              | Description                                  |
+|--------------|----------------------|----------------------------------------------|
+| `t_v`        | Template Version     | The version of the template being used       |
+| `p_n`        | Project Name         | The name of the project                      |
+| `p_v`        | Project Version      | The version of the project                   |
+| `desc`       | Description          | A brief description of the project           |
+| `scale`      | Scale                | The scale of the project (e.g., small, medium) |
+| `st`         | Style                | The design style                             |
+| `c_n`        | Component Name       | The name of the component                    |
+| `c_t`        | Component Type       | The type of the component                    |
+| `c_dep`      | Component Dependencies | Dependencies of the component            |
+| `dep_res`    | Dependency Resolution | How dependencies are resolved              |
+| `err_handling` | Error Handling     | The error handling approach                  |
+| `prio`       | Priority             | The priority level                           |
+| `map`        | Mappings             | Key-value mappings                           |
+| `l`          | Languages            | Programming languages used                   |
+| `ar`         | Architecture         | System architecture overview                 |
+| `svc`        | Service              | Services or modules                          |
+
+---
+
+## Configuration
+
+Ensure your `.env` file is properly configured as follows:
+
+```ini
+# Example .env file
+LINGUSTRUCT_LICENSE_KEY=your-license-key
+LINGUSTRUCT_ENCRYPTION_KEY=your-32-byte-encryption-key
+```
+
+---
+
+## License
+
+This package is provided for **personal and academic use only**.  
+**Commercial use** requires a license agreement. Contact us at `osusume-co@lilseed.jp` for licensing inquiries.
+
+**Terms of Use:**
+
+1. **Non-Commercial Use Only:** This software is intended for personal or academic purposes.  
+2. **Commercial License Required:** Contact `osusume-co@lilseed.jp` for commercial use.  
+3. **Redistribution Prohibited:** Public redistribution is not allowed.  
+4. **No Warranty:** The authors are not responsible for damages resulting from the use of this software.
+
+---
+
+## Contributing
+
+To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes and push them.
+4. Submit a pull request.
+
+---
+
+## Disclaimer
+
+The authors are not responsible for any misuse or unintended consequences of using this framework. Users must adhere to applicable laws and regulations.
+
+---
+
+## Issues & Support
+
+Report issues on the [GitHub Issues](https://github.com/lilseedabe/lingustruct/issues) page.
+
+---
+
+## Changelog
+
+- **v0.2.4**: Removed AI support and enhanced template handling.
+
+---
+
+## Authors
+
+Developed by Yasunori Abe. For inquiries, contact `osusume-co@lilseed.jp`.
