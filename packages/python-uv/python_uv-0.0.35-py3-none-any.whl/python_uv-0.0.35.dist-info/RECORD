@@ -1,0 +1,9 @@
+python_uv/__init__.py,sha256=tEXRzR4rE5N3ST2aMFyhj-24QlcjIXSH5reLreHmdU8,67
+python_uv/advanced.py,sha256=zXPmfgrviHiUEfpkir3Iy0-cxHjxX298nyzWtqTr20w,553
+python_uv/data.py,sha256=PxrbXfyUzN6BFfDEuhUfHMbnovOBiWgXw9Y4U5Im7eo,352
+python_uv/main.py,sha256=VElTRZ7qAdLNBOm4C7JN8u2xrAcDui8XvAUgGOrxlHk,167
+python_uv-0.0.35.dist-info/METADATA,sha256=-ay7Y0tN5dc-g4Y6WkJ_XUcwGTEYZmKAler_HoaybU4,6679
+python_uv-0.0.35.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+python_uv-0.0.35.dist-info/entry_points.txt,sha256=LFVeQbzyzPLv602QgElmIv7YcRTEWqSrf-RgnUy2Ne0,47
+python_uv-0.0.35.dist-info/licenses/LICENSE,sha256=QeGTPA1ps6IxVztxQ62u7-x-oEe1S_fvleYlm5VlBc8,1067
+python_uv-0.0.35.dist-info/RECORD,,
