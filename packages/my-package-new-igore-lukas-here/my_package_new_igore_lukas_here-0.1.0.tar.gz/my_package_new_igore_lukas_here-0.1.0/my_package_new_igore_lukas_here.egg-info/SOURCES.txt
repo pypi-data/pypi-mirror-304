@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_package_new_igore_lukas_here.egg-info/PKG-INFO
+my_package_new_igore_lukas_here.egg-info/SOURCES.txt
+my_package_new_igore_lukas_here.egg-info/dependency_links.txt
+my_package_new_igore_lukas_here.egg-info/entry_points.txt
+my_package_new_igore_lukas_here.egg-info/requires.txt
+my_package_new_igore_lukas_here.egg-info/top_level.txt
