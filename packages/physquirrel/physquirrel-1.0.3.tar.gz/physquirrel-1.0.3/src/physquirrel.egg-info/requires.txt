@@ -1,0 +1,5 @@
+numpy>=1.20
+networkx>=3.0
+matplotlib>=3.7
+pygraphviz>=1.13
+scipy>=1.14
