@@ -1,0 +1,7 @@
+README.md
+setup.py
+simplebmi2.egg-info/PKG-INFO
+simplebmi2.egg-info/SOURCES.txt
+simplebmi2.egg-info/dependency_links.txt
+simplebmi2.egg-info/entry_points.txt
+simplebmi2.egg-info/top_level.txt

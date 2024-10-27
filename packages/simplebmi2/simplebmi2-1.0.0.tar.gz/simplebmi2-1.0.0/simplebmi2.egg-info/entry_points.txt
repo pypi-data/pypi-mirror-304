@@ -1,0 +1,2 @@
+[console_scripts]
+simple-bmi = simplebmi2.__main__:main
