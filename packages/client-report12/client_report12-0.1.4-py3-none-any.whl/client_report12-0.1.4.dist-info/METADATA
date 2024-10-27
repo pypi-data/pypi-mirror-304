@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: client_report12
+Version: 0.1.4
+Summary: Пакет для генерации отчётов по клиентам
+Author-email: Nikita1207 <dorogin345@gmail.com>
+License: MIT
+Requires-Dist: pandas>=1.0
+
