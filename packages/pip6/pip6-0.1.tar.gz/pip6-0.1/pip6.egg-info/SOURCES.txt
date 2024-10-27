@@ -1,0 +1,7 @@
+README.md
+setup.py
+pip6/__init__.py
+pip6.egg-info/PKG-INFO
+pip6.egg-info/SOURCES.txt
+pip6.egg-info/dependency_links.txt
+pip6.egg-info/top_level.txt
