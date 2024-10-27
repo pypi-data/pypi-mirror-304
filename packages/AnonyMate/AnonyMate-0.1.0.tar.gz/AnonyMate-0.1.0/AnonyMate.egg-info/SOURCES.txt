@@ -1,0 +1,16 @@
+README.md
+setup.py
+AnonyMate.egg-info/PKG-INFO
+AnonyMate.egg-info/SOURCES.txt
+AnonyMate.egg-info/dependency_links.txt
+AnonyMate.egg-info/requires.txt
+AnonyMate.egg-info/top_level.txt
+anonymate/__init__.py
+anonymate/anonymizer.py
+anonymate/encryption.py
+anonymate/faker_util.py
+anonymate/utils.py
+tests/test_anonymizer.py
+tests/test_encryption.py
+tests/test_faker_util.py
+tests/test_utils.py
