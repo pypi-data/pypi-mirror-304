@@ -1,0 +1,7 @@
+vertexauth/__init__.py,sha256=jciw7gwpRzgz78bIT1sIugeNoL4IZsdpeYsKggOKNAE,492
+vertexauth/anthropic.py,sha256=4bZwTYkrEYkjMmEjXaxMNntDRWM3JHNrpCH1rWPUvUQ,884
+vertexauth/claudette.py,sha256=ocAagytkXih0v_AbP0mohSeSb5qXS1-IriFoYulASmk,755
+vertexauth/core.py,sha256=5TxOXSo_aQytGiURIFJfI66lzujjhYiYpYsCT8lvK2g,4407
+vertexauth-0.1.0.dist-info/METADATA,sha256=JIkAIqDSKWeHJG0KMhbsQd5MCh036asj1El0VvqkZjk,3537
+vertexauth-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+vertexauth-0.1.0.dist-info/RECORD,,
