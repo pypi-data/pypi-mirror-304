@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+jikanapi/__init__.py
+jikanapi/jikan_api.py
+jikanapi.egg-info/PKG-INFO
+jikanapi.egg-info/SOURCES.txt
+jikanapi.egg-info/dependency_links.txt
+jikanapi.egg-info/requires.txt
+jikanapi.egg-info/top_level.txt
+jikanapi/models/__init__.py
+jikanapi/models/anime.py
