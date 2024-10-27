@@ -1,0 +1,10 @@
+online_store/__init__.py,sha256=hrkXxb6KkAh2CX_lafj8lXQy7kh8hMZ31pmFNnQS4Ec,149
+online_store/__main__.py,sha256=hdlhA_ygXRafC2DXSTwWkwKJ5QhvpL5C3tyFbKRT7Ko,3466
+online_store/order_management/__init__.py,sha256=xnUuPsdFEP5_3UmQb_NkWExk8pCPsbUUTPqWCeRQoeU,1000
+online_store/order_management/__main__.py,sha256=-MLoV2n1UT9qLATo8rnyG_QfMTQU4TAYH-pfIrsNAH8,435
+online_store/user_management/__init__.py,sha256=Sf_11y3mvYSnOgY_dmhMFu-6tzRScvjlfTqKy8EzHAM,1155
+online_store/user_management/__main__.py,sha256=eG7KGhy8hXs567sm2na-x4CIbIZgBo84P_SL_vMxOuE,598
+online_store_rv-0.1.0.dist-info/METADATA,sha256=kgqk-uFD3IJXqeFOkqdMF1lhtqnD8FKSJLRrx5DC0tk,1505
+online_store_rv-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+online_store_rv-0.1.0.dist-info/top_level.txt,sha256=1XsS3oaWSpPbCOX_l0AOuVOXb7AEfEg7FHAk22dLwyY,13
+online_store_rv-0.1.0.dist-info/RECORD,,
