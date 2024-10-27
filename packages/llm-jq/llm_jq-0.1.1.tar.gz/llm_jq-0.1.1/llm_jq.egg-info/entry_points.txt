@@ -1,0 +1,2 @@
+[llm]
+jq = llm_jq
