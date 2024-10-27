@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: melotts-onnx
+Version: 0.0.1
+Summary: An implementation of melo tts by onnxruntime
+Author: Season Studio
+Author-email: season-studio@outlook.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: cffi==1.17.1
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: click==8.1.7
+Requires-Dist: cn2an==0.5.22
+Requires-Dist: colorama==0.4.6
+Requires-Dist: coloredlogs==15.0.1
+Requires-Dist: Distance==0.1.3
+Requires-Dist: filelock==3.16.1
+Requires-Dist: flatbuffers==24.3.25
+Requires-Dist: fsspec==2024.9.0
+Requires-Dist: g2p-en==2.1.0
+Requires-Dist: huggingface-hub==0.25.1
+Requires-Dist: humanfriendly==10.0
+Requires-Dist: idna==3.10
+Requires-Dist: inflect==7.4.0
+Requires-Dist: jieba==0.42.1
+Requires-Dist: joblib==1.4.2
+Requires-Dist: more-itertools==10.5.0
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: nltk==3.9.1
+Requires-Dist: numpy==2.0.2
+Requires-Dist: onnxruntime==1.19.2
+Requires-Dist: openvino-telemetry==2024.1.0
+Requires-Dist: packaging==24.1
+Requires-Dist: proces==0.1.7
+Requires-Dist: protobuf==5.28.2
+Requires-Dist: pycparser==2.22
+Requires-Dist: pypinyin==0.53.0
+Requires-Dist: pyreadline3==3.5.4
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: regex==2024.9.11
+Requires-Dist: requests==2.32.3
+Requires-Dist: sympy==1.13.3
+Requires-Dist: tokenizers==0.20.0
+Requires-Dist: typeguard==4.3.0
+Requires-Dist: typing-extensions==4.12.2
+Requires-Dist: urllib3==2.2.3
+
+# MeloTTS by ONNX
+[中文](./README_cn.md)
+
+## Introduction
+This is an implementation of Melo TTS by onnxruntime.
+We restruct the text utils for speeding up.
+We convert the models into onnx format. The models are stored in this repository as lfs.
+
+We has just implement the zh-mix-en language. Other languages will come soon.
+
+## Usage
+
+```python
+
+from melo_onnx import MeloTTX_ONNX
+import soundfile
+
+model_path = "path/to/folder/of/model"
+tts = MeloTTX_ONNX(model_path)
+audio = tts.speak("今天天气真nice。", tts.speakers[0])
+
+soundfile.write("path/of/audio.wav", audio, samplerate=tts.sample_rate)
+
+```
+
+The parameters of the constructor of MeloTTX_ONNX:
+- **model_path** str. The path of the folder store the model.
+- **execution_provider** str. The device for the onnxruntime, CUDA, CPU, or others. If it's None, the library will choose the better one between the CUDA and CPU.
+- **verbose** bool. Set True for display the detail information when the library working.
+- **onnx_session_options** onnxruntim.SessionOptions. You can setup the special options for the onnx session.
+- **onnx_params** dict. The other parameters you want to pass into the onnxruntim.InferenceSession 
+
+The parameters of the MeloTTX_ONNX.speak:
+- **text** str. The text you want to synthesis.
+- **speaker** str. The speaker you want to use.
+- **speed** float. The speed of the speech
+- **sdp_ratio** float.
+- **noise_scale** float.
+- **noise_scale_w** float.
+- **pbar** function. Such as tqdm
+
+Some useful property of the instance of the MeloTTS:
+- **speakers**: [str]. Readonly. The available speakers
+- **sample_rate**: int. Readonly. The sample rate of the synthesis result
+- **language**: str. Readonly. The language of the current model
