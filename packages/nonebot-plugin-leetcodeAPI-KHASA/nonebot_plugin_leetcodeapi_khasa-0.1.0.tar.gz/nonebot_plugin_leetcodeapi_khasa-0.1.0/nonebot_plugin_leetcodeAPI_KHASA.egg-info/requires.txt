@@ -1,0 +1,5 @@
+nonebot2
+nonebot-adapter-onebot
+nonebot-plugin-htmlrender
+httpx
+jinja2
