@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+myopenalgo/__init__.py
+myopenalgo/orders.py
+myopenalgo.egg-info/PKG-INFO
+myopenalgo.egg-info/SOURCES.txt
+myopenalgo.egg-info/dependency_links.txt
+myopenalgo.egg-info/requires.txt
+myopenalgo.egg-info/top_level.txt
+tests/__init__.py
+tests/test_orders.py
