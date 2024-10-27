@@ -1,0 +1,10 @@
+wagtail_linksnippet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_linksnippet/richtext.py,sha256=t3E2cvaQ1yjFemWmKiMrISzicvTPbRTiXl6BKgMMklc,1620
+wagtail_linksnippet/richtext_utils.py,sha256=lGD81jzF2WlnetV78DOdeTNnPdsJmZOQhZ6RTWr3Xsc,3747
+wagtail_linksnippet/utils.py,sha256=1J-HX8Ogmcac19MTFr3PM5diPVJysntGpiqpqL5qu5g,196
+wagtail_linksnippet/views_utils.py,sha256=gK_mYCL2_xzJ4_bqAiNHO0VzXG4RQwsT6OScelBR0RU,986
+wagtail_linksnippet/static/wagtail_linksnippet/js/modelChooser.js,sha256=ia9diYoa5seO-Tw00sbtcU_Md60w8ejCiFtqxW_96is,7939
+wagtail_linksnippet-0.1.0.dist-info/METADATA,sha256=CmUbhL1DZUx7sNKF8GvSha4crWlnknO5RP01tggw7tA,2063
+wagtail_linksnippet-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+wagtail_linksnippet-0.1.0.dist-info/top_level.txt,sha256=AdzoMtb1-l0s_RIOZS6eNjdg3lD-zQ_hwoj-Im8McfE,20
+wagtail_linksnippet-0.1.0.dist-info/RECORD,,
