@@ -1,0 +1,11 @@
+iipv/__init__.py,sha256=jEMEXLINAtY-auCjW6YXVpcDN31lDud369s1gv9RfZs,80
+iipv/iipv.py,sha256=HQG7YEZ-VVK391ZmyE5RW4qepcilfebbdFchO1uqWqY,1772
+iipv/image_preloader.py,sha256=XEO0vw_CEz_ckhww5FdQzJug40j6mAlisSxOqfttj4w,3093
+iipv/transforms.py,sha256=MJwi11IFbUoq_vVSmi2mBCLIutS0rq48gjlhvfrSILE,19
+iipv/viewer.py,sha256=AkbCeJuGhSybelCUYkNcHb8KzSx-7--REps4tXS74kM,9141
+iipv-0.0.1.dist-info/LICENSE,sha256=Mj0Vt72822ihkdcHar8LgPDr3Ei_oX2Cw-sDxf3J2GU,1066
+iipv-0.0.1.dist-info/METADATA,sha256=1AQGAJImUaXo5yX__b9pMcVsXI-gzKbNoJO6r5D5SxU,2598
+iipv-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+iipv-0.0.1.dist-info/entry_points.txt,sha256=ZT3P-zlg6JilliK5UQEVlLSqLFlFjVLhm_KVy0Ygk3Y,31
+iipv-0.0.1.dist-info/top_level.txt,sha256=dXJLjarDG2WU3JsgcLQV_LvDFgv34zF5leHj3-yg4E0,5
+iipv-0.0.1.dist-info/RECORD,,
