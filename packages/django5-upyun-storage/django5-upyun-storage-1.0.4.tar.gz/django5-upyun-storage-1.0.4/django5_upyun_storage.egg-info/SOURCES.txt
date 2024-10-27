@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+./django5_upyun_storage/__init__.py
+./django5_upyun_storage/apps.py
+./django5_upyun_storage/storage.py
+./django5_upyun_storage/tests/__init__.py
+django5_upyun_storage.egg-info/PKG-INFO
+django5_upyun_storage.egg-info/SOURCES.txt
+django5_upyun_storage.egg-info/dependency_links.txt
+django5_upyun_storage.egg-info/requires.txt
+django5_upyun_storage.egg-info/top_level.txt
