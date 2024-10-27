@@ -1,0 +1,17 @@
+nowmail/__init__.py,sha256=MvifTszq31pOPs9E63zby1ahIJvnAMoeDdbfJxgA6fc,239
+nowmail/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nowmail/api/async_api.py,sha256=azz4ySJCljPisVeYmMSHKuw4kv2VQP_zF-LOXDdQg7U,639
+nowmail/api/sync_api.py,sha256=oQYwMxyceeS_OBFw4dabGwudzWdyd3Vi6OWi3gYrFvQ,494
+nowmail/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nowmail/core/client.py,sha256=zp-vZJ8O-q2CNM3Fzlt4Mt-lEgFggfy8rSeD0CdrF44,1995
+nowmail/core/models.py,sha256=iG41-IYN5s3Clx3wAbpkL24Eqyvd2SA4tz_vJYneNws,2336
+nowmail/core/periodic_checker.py,sha256=PAoIz0S9GmyOXB6RS7dXrdzIr-maxzDVy2gabUGBCe4,4645
+nowmail/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nowmail/services/config.py,sha256=cdpCmdwub-QNzuR-0HjUmMIYGZAo6U_T-PJXd2hWRNw,630
+nowmail/services/exceptions.py,sha256=mCu_zXF5UHGKnkBTQI7L-I3IZVnyQFEMLbPSNRouKvU,247
+nowmail/services/interfaces.py,sha256=Y4uFFJfVMUcbeH9CTdSW2R9DMtClB8zY_ZA-dtThCjE,778
+nowmail/services/mail_service.py,sha256=3sjpY8mISZcbaHSgCRlDzEknJ2gFpXz6Z3csCxvBq6Q,7343
+nowmail-0.1.1.dist-info/METADATA,sha256=Vpni3YqCOzbDeO9znBsJG2sfV8eQV32jnf2o4T2Nrh4,4822
+nowmail-0.1.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+nowmail-0.1.1.dist-info/top_level.txt,sha256=v5JXLJ32-JweSJ6_65lWPmghaCIa0AB11LiZkc30RjE,8
+nowmail-0.1.1.dist-info/RECORD,,
