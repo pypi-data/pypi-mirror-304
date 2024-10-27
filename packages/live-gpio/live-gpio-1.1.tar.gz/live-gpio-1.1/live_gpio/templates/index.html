@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi GPIO Pin Status</title>
+    <style>
+        .pin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            max-width: 400px;
+            margin: auto;
+            background-color: #2d4a2c;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .pin {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #5e7d5e;
+            color: white;
+        }
+
+        .status {
+            margin-top: 5px;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .high {
+            background-color: rgb(65, 68, 244);
+        }
+
+        .low {
+            background-color: red;
+        }
+
+        .vcc {
+            background-color: rgb(92, 92, 92);
+        }
+
+        .ground {
+            background-color: black;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 18px;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .favorite-btn.active {
+            color: #ffdf00; /* 즐겨찾기된 경우, 노란색 */
+        }
+
+        .favorite-btn:hover {
+            color: #ffbf00; /* 호버 시 약간 더 진한 노란색 */
+        }
+
+        .pin {
+            position: relative; /* 버튼을 오른쪽 위에 위치시키기 위해 필요 */
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #5e7d5e;
+            color: white;
+        }
+
+        body {
+            background-color: #282d27;
+        }
+
+        .page-link {
+            display: inline-block;
+            margin: 20px 10px;
+            text-align: center;
+            background-color: #ffa500;
+            padding: 10px;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+        }
+
+        .page-links {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="display: flex; align-items: center; justify-content: center;">
+        <h2>Raspberry Pi GPIO Pin Status</h2>
+    
+        <div class="page-links">
+            <a href="/favorites" style="color: white;" class="page-link">★</a>
+        </div>
+    </header>
+
+    <div class="pin-grid">
+        <!-- Left side pins (odd numbered pins) -->
+        <div class="pin">
+            <strong>3.3V Power</strong>
+            <div class="status vcc">VCC</div>
+        </div>
+        <div class="pin">
+            <strong>5V Power</strong>
+            <div class="status vcc">VCC</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 2 (I2C1 SDA)</strong>
+            <div class="status" id="pin2">-</div>
+            <button class="favorite-btn" data-pin="2">☆</button>
+        </div>
+        <div class="pin">
+            <strong>5V Power</strong>
+            <div class="status vcc">VCC</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 3 (I2C1 SCL)</strong>
+            <div class="status" id="pin3">-</div>
+            <button class="favorite-btn" data-pin="3">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 4 (GPCLK0)</strong>
+            <div class="status" id="pin4">-</div>
+            <button class="favorite-btn" data-pin="4">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 14 (UART TX)</strong>
+            <div class="status" id="pin14">-</div>
+            <button class="favorite-btn" data-pin="14">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+        <div class="pin">
+            <strong>GPIO 15 (UART RX)</strong>
+            <div class="status" id="pin15">-</div>
+            <button class="favorite-btn" data-pin="15">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 17</strong>
+            <div class="status" id="pin17">-</div>
+            <button class="favorite-btn" data-pin="17">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 18 (PCM CLK)</strong>
+            <div class="status" id="pin18">-</div>
+            <button class="favorite-btn" data-pin="18">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 27</strong>
+            <div class="status" id="pin27">-</div>
+            <button class="favorite-btn" data-pin="27">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 22</strong>
+            <div class="status" id="pin22">-</div>
+            <button class="favorite-btn" data-pin="22">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 23</strong>
+            <div class="status" id="pin23">-</div>
+            <button class="favorite-btn" data-pin="23">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>3.3V Power</strong>
+            <div class="status vcc">VCC</div>
+        </div>
+        <div class="pin">
+            <strong>GPIO 24</strong>
+            <div class="status" id="pin24">-</div>
+            <button class="favorite-btn" data-pin="24">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 10 (SPI0 MOSI)</strong>
+            <div class="status" id="pin10">-</div>
+            <button class="favorite-btn" data-pin="10">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 9 (SPI0 MISO)</strong>
+            <div class="status" id="pin9">-</div>
+            <button class="favorite-btn" data-pin="9">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 25</strong>
+            <div class="status" id="pin25">-</div>
+            <button class="favorite-btn" data-pin="25">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 11 (SPI0 SCLK)</strong>
+            <div class="status" id="pin11">-</div>
+            <button class="favorite-btn" data-pin="11">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 8 (SPI0 CE0)</strong>
+            <div class="status" id="pin8">-</div>
+            <button class="favorite-btn" data-pin="8">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+        <div class="pin">
+            <strong>GPIO 7 (SPI0 CE1)</strong>
+            <div class="status" id="pin7">-</div>
+            <button class="favorite-btn" data-pin="7">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 0 (EEPROM SDA)</strong>
+            <div class="status" id="pin0">-</div>
+            <button class="favorite-btn" data-pin="0">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 1 (EEPROM SCL)</strong>
+            <div class="status" id="pin1">-</div>
+            <button class="favorite-btn" data-pin="1">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 5</strong>
+            <div class="status" id="pin5">-</div>
+            <button class="favorite-btn" data-pin="15">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 6</strong>
+            <div class="status" id="pin6">-</div>
+            <button class="favorite-btn" data-pin="6">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 12 (PWM0)</strong>
+            <div class="status" id="pin12">-</div>
+            <button class="favorite-btn" data-pin="12">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 13 (PWM1)</strong>
+            <div class="status" id="pin13">-</div>
+            <button class="favorite-btn" data-pin="13">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+            <button class="favorite-btn" data-pin="17">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 19 (PCM FS)</strong>
+            <div class="status" id="pin19">-</div>
+            <button class="favorite-btn" data-pin="19">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 16</strong>
+            <div class="status" id="pin16">-</div>
+            <button class="favorite-btn" data-pin="16">☆</button>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 26</strong>
+            <div class="status" id="pin26">-</div>
+            <button class="favorite-btn" data-pin="26">☆</button>
+        </div>
+        <div class="pin">
+            <strong>GPIO 20 (PCM DIN)</strong>
+            <div class="status" id="pin20">-</div>
+            <button class="favorite-btn" data-pin="20">☆</button>
+        </div>
+        <div class="pin">
+            <strong>Ground</strong>
+            <div class="status ground">GND</div>
+        </div>
+
+        <div class="pin">
+            <strong>GPIO 21 (PCM DOUT)</strong>
+            <div class="status" id="pin21">-</div>
+            <button class="favorite-btn" data-pin="21">☆</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // 즐겨찾기 핀 저장하기 위한 로컬 스토리지
+        const favoritePins = JSON.parse(localStorage.getItem('favoritePins')) || [];
+
+        // 핀 상태를 실시간으로 업데이트하는 소켓 이벤트
+        socket.on('gpio_status', function (data) {
+            Object.keys(data).forEach(pin => {
+                const pinElement = document.getElementById(`pin${pin}`);
+                if (pinElement) {
+                    const pinState = data[pin] ? 'high' : 'low';
+                    pinElement.textContent = pinState.toUpperCase();
+                    pinElement.className = `status ${pinState}`;
+                }
+            });
+        });
+
+        // 즐겨찾기 버튼 클릭 이벤트
+        document.querySelectorAll('.favorite-btn').forEach(button => {
+            const pinNumber = button.getAttribute('data-pin');
+
+            // 초기화: 이미 즐겨찾기에 있으면 버튼에 active 클래스를 추가
+            if (favoritePins.includes(pinNumber)) {
+                button.classList.add('active');
+                button.textContent = '★';
+            }
+
+            // 버튼 클릭 시 ★/제거
+            button.addEventListener('click', function () {
+                if (favoritePins.includes(pinNumber)) {
+                    // 즐겨찾기에서 제거
+                    const index = favoritePins.indexOf(pinNumber);
+                    if (index > -1) {
+                        favoritePins.splice(index, 1);
+                    }
+                    button.classList.remove('active');
+                    button.textContent = '☆';
+                } else {
+                    // 즐겨찾기에 추가
+                    favoritePins.push(pinNumber);
+                    button.classList.add('active');
+                    button.textContent = '★';
+                }
+
+                // 로컬 스토리지에 즐겨찾기 핀 목록 저장
+                localStorage.setItem('favoritePins', JSON.stringify(favoritePins));
+            });
+        });
+    </script>
+
+    <!-- <script>
+        const socket = io();
+
+        socket.on('gpio_status', function (data) {
+            Object.keys(data).forEach(pin => {
+                const pinElement = document.getElementById(`pin${pin}`);
+                if (pinElement) {
+                    const pinState = data[pin] ? 'high' : 'low';
+                    pinElement.textContent = pinState.toUpperCase();
+                    pinElement.className = `status ${pinState}`;
+                }
+            });
+        });
+    </script> -->
+
+</body>
+</html>
