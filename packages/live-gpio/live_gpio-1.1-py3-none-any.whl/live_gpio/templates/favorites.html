@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즐겨찾기된 GPIO 핀 상태</title>
+    <style>
+        .pin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #2d4a2c;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .pin {
+            position: relative; /* 버튼을 오른쪽 위에 위치시키기 위해 필요 */
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #5e7d5e;
+            color: white;
+        }
+
+        .status {
+            margin-top: 5px;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .high {
+            background-color: rgb(65, 68, 244);
+        }
+
+        .low {
+            background-color: red;
+        }
+
+        body {
+            background-color: #2d4a2c;
+            color: white;
+            text-align: center;
+        }
+
+        .back-link {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #ffa500;
+            padding: 10px;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            max-width: 200px;
+        }
+
+        .page-link {
+            display: inline-block;
+            margin: 20px 10px;
+            text-align: center;
+            background-color: #ffa500;
+            padding: 10px;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+        }
+
+        .page-links {
+            text-align: center;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 18px;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .favorite-btn.active {
+            color: #ffdf00; /* 즐겨찾기된 경우, 노란색 */
+        }
+
+        .favorite-btn:hover {
+            color: #ffbf00; /* 호버 시 약간 더 진한 노란색 */
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: center;">
+        <h2>Raspberry Pi GPIO Pin Status</h2>
+    
+        <div class="page-links">
+            <a href="/" style="color: white;" class="page-link"><</a>
+        </div>
+    </header>
+
+    <div class="pin-grid" id="favoritePinsGrid">
+        <!-- 즐겨찾기된 핀들이 동적으로 추가됩니다 -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const favoritePinsGrid = document.getElementById('favoritePinsGrid');
+
+        // 즐겨찾기된 핀 목록 불러오기
+        const favoritePins = JSON.parse(localStorage.getItem('favoritePins')) || [];
+
+        // 즐겨찾기된 핀을 UI에 동적으로 추가
+        favoritePins.forEach(pin => {
+            const pinDiv = document.createElement('div');
+            pinDiv.classList.add('pin');
+            pinDiv.innerHTML = `
+                <strong>GPIO ${pin}</strong>
+                <div class="status" id="pin${pin}">-</div>
+                <button class="favorite-btn active" data-pin="${pin}">★</button>
+            `;
+
+            // 즐겨찾기 버튼 클릭 시 핀 제거
+            const favoriteBtn = pinDiv.querySelector('.favorite-btn');
+            favoriteBtn.addEventListener('click', () => {
+                // favoritePins 배열에서 핀 제거
+                const index = favoritePins.indexOf(pin);
+                if (index > -1) {
+                    favoritePins.splice(index, 1);
+                }
+
+                // 로컬 스토리지에 업데이트된 즐겨찾기 핀 목록 저장
+                localStorage.setItem('favoritePins', JSON.stringify(favoritePins));
+
+                // UI에서 해당 pinDiv 삭제
+                pinDiv.remove();
+            });
+
+            favoritePinsGrid.appendChild(pinDiv);
+        });
+
+        // 실시간으로 즐겨찾기된 핀의 상태 업데이트
+        socket.on('gpio_status', function (data) {
+            favoritePins.forEach(pin => {
+                const pinElement = document.getElementById(`pin${pin}`);
+                if (pinElement) {
+                    const pinState = data[pin] ? 'high' : 'low';
+                    pinElement.textContent = pinState.toUpperCase();
+                    pinElement.className = `status ${pinState}`;
+
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+live-gpio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+live-gpio/app.py,sha256=6oxJGe3tsRuewDkot-MEW0utlEDaXG8KvqwITJiU0o4,1132
+live_gpio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+live_gpio/app.py,sha256=MfT5cWnOg1KJknciZg7FzFm0-fGpc9XcKwp73GHSkkM,1883
+live_gpio/templates/favorites.html,sha256=54NRMx3YhqWC41PYNvvSa3aL_q58EOJq_BQGzSGQ1os,4999
+live_gpio/templates/index.html,sha256=vuoJRj6AiO8331C0pVZU7NU8_F9SBGPytmwUirpHPs4,12959
+live_gpio/templates/pin_modes.html,sha256=pHAeMW2UfAhJpXCk3X10FFWcIAXO468I04r11cajdK8,1245
+live_gpio-1.1.dist-info/METADATA,sha256=xNo24_lFvdKNJ-eorGLcGfUxBAImQ7aU1vkYdY8qtDg,125
+live_gpio-1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+live_gpio-1.1.dist-info/entry_points.txt,sha256=ZEIeNLhmyUu3wv4jYTw1x2izVbyh7CvFhGbnDKSs-hU,49
+live_gpio-1.1.dist-info/top_level.txt,sha256=ln1t-dfqA1w4TXiaNqTJy4CiPzbYChMmJgP8hTkgC1Q,10
+live_gpio-1.1.dist-info/RECORD,,
