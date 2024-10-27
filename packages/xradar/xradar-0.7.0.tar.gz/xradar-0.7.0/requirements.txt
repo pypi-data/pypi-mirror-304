@@ -1,0 +1,12 @@
+cmweather
+dask
+h5netcdf >= 1.0.0
+h5py >= 3.0.0
+lat_lon_parser
+netCDF4
+numpy
+pyproj
+scipy
+xarray <= 2024.9.0
+xarray-datatree >= 0.0.10
+xmltodict
