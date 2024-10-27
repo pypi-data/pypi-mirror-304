@@ -1,0 +1,146 @@
+Metadata-Version: 2.1
+Name: mythme
+Version: 0.0.8
+Summary: Find and record programs on MythTV
+License: MIT License
+        
+        Copyright (c) 2024 Donald Oakes
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/donaldoakes/mythme#readme
+Project-URL: Source, https://github.com/donaldoakes/mythme
+Project-URL: Bug Reports, https://github.com/donaldoakes/mythme/issues
+Keywords: mythtv,canned,search
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types ==0.7.0
+Requires-Dist: anyio ==4.6.2.post1
+Requires-Dist: certifi ==2024.8.30
+Requires-Dist: charset-normalizer ==3.4.0
+Requires-Dist: click ==8.1.7
+Requires-Dist: fastapi ==0.115.3
+Requires-Dist: h11 ==0.14.0
+Requires-Dist: httptools ==0.6.4
+Requires-Dist: idna ==3.10
+Requires-Dist: mariadb ==1.1.10
+Requires-Dist: packaging ==24.1
+Requires-Dist: pydantic ==2.9.2
+Requires-Dist: pydantic-core ==2.23.4
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: requests ==2.32.3
+Requires-Dist: sniffio ==1.3.1
+Requires-Dist: starlette ==0.41.0
+Requires-Dist: typing-extensions ==4.12.2
+Requires-Dist: urllib3 ==2.2.3
+Requires-Dist: uvicorn ==0.32.0
+Requires-Dist: uvloop ==0.21.0
+Requires-Dist: watchfiles ==0.24.0
+Requires-Dist: websockets ==13.1
+
+# mythme
+**Find and record programs on MythTV**
+
+Inspired by [MythWeb](https://github.com/MythTV/mythweb)'s Canned Searches feature, mythme makes it easy
+to create and save custom queries. For example, a query named `Horror Movies of the 1930s`:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/query-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/query-light.png">
+  <img alt="mythme query" src="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/query-light.png">
+</picture>
+
+The result after clicking Save:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/programs-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/programs-light.png">
+  <img alt="mythme programs" src="https://raw.githubusercontent.com/donaldoakes/mythme/main/docs/img/programs-light.png">
+</picture>
+
+
+## Prerequisites
+- python 3
+- mariadb connector/c
+
+## Installation
+This installs to a local virtual environment.
+```
+python -m venv ~/.local --system-site-packages
+~/.local/bin/pip install mythme
+```
+
+## Environment variable
+The MYTHME_DIR environment variable points to a directory where mythme
+stores saved queries and other items. It's also where you can create a mythme.yaml
+file to [configure](#configuration) mythme.
+```
+export MYTHME_DIR="~/.mythme"
+```
+(default is `~/.mythme`)
+
+## Configuration
+In many cases no configuration is required. This is especially true if you're
+running mythme on MythTV's master backend host.
+### Database
+For [Database Configuration](https://www.mythtv.org/wiki/Config.xml#Database),
+mythme looks for `~/.mythtv/config.xml` and uses the `<Database>` element if present.
+### MythTV API server
+To determine the [MythTV Services API](https://www.mythtv.org/wiki/Services_API) host, mythme tries
+`BackendServerAddr` and `BackendStatusPort` from MythTV's `settings` db table.
+### Custom config
+Settings specified in `$MYTHME_DIR/mythme.yaml` override the autoconfig values above.
+Here's an example mythme.yaml:
+```yaml
+database:
+  host: '192.168.0.70'
+  port: 3306
+  database: mythconverg
+  username: mythtv
+  password: mythtv
+
+mythtv_api_base: http://192.168.0.70:6544
+```
+
+## Run server
+Make sure `~/.local/bin` is in your $PATH.
+```
+mythme
+```
+
+## Command line options
+```
+-h, --help   show this help message
+--version    show mythme's version
+--host HOST  Server host
+--port PORT  Server port
+```
+
+## Channel icons
+Channel icons are disabled by default.
+To enable, click the dropdown caret next to the Channel column heading.
+Check the "Icons" box and confirm.
