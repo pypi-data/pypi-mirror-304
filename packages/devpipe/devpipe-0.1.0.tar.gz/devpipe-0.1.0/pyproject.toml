@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "devpipe"
+version = "0.1.0"
+description = ""
+authors = ["Sebastián Bustamante <dev@sebustam.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+dill = "^0.3.9"
+loguru = "^0.7.2"
+pydantic = "^2.9.2"
+pydantic-settings = "^2.5.2"
+sqlmodel = "^0.0.22"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+pytest = "^8.3.2"
+coverage = "^7.6.1"
+ipykernel = "^6.29.5"
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.33"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-section-index = "^0.3.9"
+mkdocs-awesome-pages-plugin = "^2.9.3"
+mkdocstrings = {extras = ["python"], version = "^0.26.2"}
+
+[tool.ruff]
+extend-exclude = ["tests"]
+
+[tool.ruff.lint]
+select = ["D", "E", "F", "I", "W"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.coverage.run]
+source = ["devpipe"]
+
+[tool.coverage.report]
+omit = ["tests/*"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

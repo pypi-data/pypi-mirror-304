@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: devpipe
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Sebastián Bustamante
+Author-email: dev@sebustam.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dill (>=0.3.9,<0.4.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pydantic (>=2.9.2,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.5.2,<3.0.0)
+Requires-Dist: sqlmodel (>=0.0.22,<0.0.23)
+Description-Content-Type: text/markdown
+
+# devpipe
+
+[![Tests](https://github.com/sebustam/devpipe/actions/workflows/tests.yaml/badge.svg)](https://github.com/sebustam/devpipe/actions/workflows/tests.yaml)
+
+devpipe is a little Python package for caching pipeline results.
+
+## Installation
+
+Create and activate a virtual environment and then install devpipe:
+
+```bash
+pip install devpipe
+```
+
+## Basic usage
+
+The following example shows a simple ETL pipeline.
+
+```python
+import devpipe as dp
+
+@dp.step
+def extract(source: str) -> int:
+    return 1
+
+@dp.step
+def transform(data: int) -> int:
+    return data + 1
+
+@dp.step
+def load(data: int) -> bool:
+    print(data)
+    return True
+
+@dp.pipeline
+def etl(source: str) -> None:
+    extracted = extract(source=source)
+    transformed = transform(data=extracted)
+    response = load(data=transformed)
+    return response
+```
+
+Results are cached by default based on the decorated function arguments. The
+following code runs the pipeline twice, but only the first time the pipeline
+is executed. The second time, the results are loaded from the cache.
+
+```python
+res1 = etl(source='source')
+res2 = etl(source='source')
+
+assert res1 == res2
+```
+
+You can set a name, force rerun or disable cache both at the step and pipeline
+levels.
+
+```python
+import devpipe as dp
+
+@dp.step(name='My Step', rerun=False, cache=True)
+def step_function() -> None:
+    return None
+
+@dp.pipeline(name='My Pipeline', rerun=True, cache=True)
+def pipeline_function() -> None:
+    return step_function()
+```
+
+Check the [documentation](https://sebustam.github.io/devpipe/) for more
+details.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
