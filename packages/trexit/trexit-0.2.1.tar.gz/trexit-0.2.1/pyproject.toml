@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trexit"
+version = "0.2.1"
+authors = [
+    { name = "Saksham Gupta", email = "sakshamgupta.connect@gmail.com" },
+]
+description = "Elegant directory visualization and content exploration tools"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Filesystems",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Saksham1970/trexit"
+Issues = "https://github.com/Saksham1970/trexit/issues"
+
+[project.scripts]
+trexit = "trexit.cli:tree_command"
+drexit = "trexit.cli:content_command"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trexit"]
