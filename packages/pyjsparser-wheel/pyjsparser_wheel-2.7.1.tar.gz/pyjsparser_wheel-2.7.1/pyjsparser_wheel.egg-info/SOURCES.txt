@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyjsparser/__init__.py
+pyjsparser/parser.py
+pyjsparser/pyjsparserdata.py
+pyjsparser/std_nodes.py
+pyjsparser_wheel.egg-info/PKG-INFO
+pyjsparser_wheel.egg-info/SOURCES.txt
+pyjsparser_wheel.egg-info/dependency_links.txt
+pyjsparser_wheel.egg-info/top_level.txt
