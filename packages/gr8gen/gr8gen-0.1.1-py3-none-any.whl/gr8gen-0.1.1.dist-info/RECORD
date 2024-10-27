@@ -1,0 +1,7 @@
+gr8gen/__init__.py,sha256=d4huckL7ft_Fi_2qniQN2lshZYAy3llYZJTESH3VR4E,3664
+gr8gen/utils.py,sha256=h5hGxtLPozu48SPgNLHZaKM3inPflX-pL4AB0G2v_EA,1219
+gr8gen/templates/service.proto.jinja,sha256=AxwLbTfnaqk3ke2bqJNX6S7GSa5gvEFa0AWoozYAqtM,686
+gr8gen-0.1.1.dist-info/METADATA,sha256=TVSVIXzBptH8H1eXkKp1k08BJAKkYK0KFPGHR7Xzxtg,1939
+gr8gen-0.1.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gr8gen-0.1.1.dist-info/entry_points.txt,sha256=7dX4_wEq-pZ8TovBe-sYPT-deAk7UKc39kAAOo_r6Ns,39
+gr8gen-0.1.1.dist-info/RECORD,,
