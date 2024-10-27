@@ -1,0 +1,2 @@
+[console_scripts]
+client_order_system = online_store.main:main_menu
