@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: menegment_elf_unic
+Version: 0.1.0
+Summary: Управление заказами и учетными записями
+Author: Varvara
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Это приложение для управлением онлайн магазином
+запусти main файл и следуй указаниям в терпинале для работы с этим пиложением
+
