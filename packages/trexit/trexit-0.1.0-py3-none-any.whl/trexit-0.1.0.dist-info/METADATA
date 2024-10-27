@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: trexit
+Version: 0.1.0
+Summary: Elegant directory visualization and content exploration tools
+Project-URL: Homepage, https://github.com/Saksham1970/trexit
+Project-URL: Issues, https://github.com/Saksham1970/trexit/issues
+Author-email: Saksham Gupta <sakshamgupta.connect@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Trexit
+Elegant directory visualization and content exploration tools
+
+## Installation
+
+```bash
+pip install trexit
+```
+
+## Usage
+
+Print directory tree:
+```bash
+trexit [path] [--ignore dir1 dir2 ...]
+```
+
+Save directory contents:
+```bash
+drexit [path] -o output.txt [--ignore dir1 dir2 ...]
+```
