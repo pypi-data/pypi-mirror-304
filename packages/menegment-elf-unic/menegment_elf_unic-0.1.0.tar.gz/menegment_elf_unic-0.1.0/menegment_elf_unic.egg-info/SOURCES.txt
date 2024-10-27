@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+menegment_elf_unic.egg-info/PKG-INFO
+menegment_elf_unic.egg-info/SOURCES.txt
+menegment_elf_unic.egg-info/dependency_links.txt
+menegment_elf_unic.egg-info/entry_points.txt
+menegment_elf_unic.egg-info/top_level.txt
