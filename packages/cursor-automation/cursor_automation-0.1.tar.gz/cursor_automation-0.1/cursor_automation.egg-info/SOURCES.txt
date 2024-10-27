@@ -1,0 +1,8 @@
+README.md
+setup.py
+cursor_automation.egg-info/PKG-INFO
+cursor_automation.egg-info/SOURCES.txt
+cursor_automation.egg-info/dependency_links.txt
+cursor_automation.egg-info/entry_points.txt
+cursor_automation.egg-info/requires.txt
+cursor_automation.egg-info/top_level.txt
