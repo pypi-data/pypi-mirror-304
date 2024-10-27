@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dungeon-master"
+version = "0.0.1"
+authors = [{ name = "Juliano Fernandes", email = "julianofernandes@gmail.com" }]
+description = "A Dungeon Master backed by Artificial Intelligence"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[project.urls]
+Homepage = "https://github.com/julianolf/dungeon-master"
+Issues = "https://github.com/julianolf/dungeon-master/issues"
