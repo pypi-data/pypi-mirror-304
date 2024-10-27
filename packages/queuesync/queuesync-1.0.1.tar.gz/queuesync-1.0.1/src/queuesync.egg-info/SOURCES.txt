@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/queuesync.egg-info/PKG-INFO
+src/queuesync.egg-info/SOURCES.txt
+src/queuesync.egg-info/dependency_links.txt
+src/queuesync.egg-info/top_level.txt
+tests/test_coordinator.py
+tests/test_worker.py
