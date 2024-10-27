@@ -1,0 +1,12 @@
+LICENSE
+NOTICE
+README.md
+setup.py
+razor_proxy.egg-info/PKG-INFO
+razor_proxy.egg-info/SOURCES.txt
+razor_proxy.egg-info/dependency_links.txt
+razor_proxy.egg-info/entry_points.txt
+razor_proxy.egg-info/top_level.txt
+source/__init__.py
+source/__version__.py
+source/razor.py
