@@ -1,0 +1,9 @@
+microservice_chassis/AuthManager.py,sha256=IAz3xwfaDpwM-t4pMp84mhMSDVYcIdxiHNThZtG6MXA,2120
+microservice_chassis/PublicKey.py,sha256=ng-gtM9yVnhpTvmIOk75JBCXa_cXqwxJS2jfoWE8N2k,1279
+microservice_chassis/RabbitMQConsumerPublisher.py,sha256=U0GPsg08kozCJ_Vq495ymFSB16ZuWPpnd93Eogsikpw,1988
+microservice_chassis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microservice_chassis/db_methods.py,sha256=5ztWkYWFwn47hWWOaFRsGpBK-KzB5xIr-btJHFzTP5g,1505
+microservice_chassis-0.2.2.dist-info/METADATA,sha256=RYSRh-tZQWM18O4q5xQEdSYfQ2rGlancCUpX3kzqmp8,301
+microservice_chassis-0.2.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+microservice_chassis-0.2.2.dist-info/top_level.txt,sha256=dJeVQ8yyT8k68ZSyH2VoFTub99ZMGVsR7dQSYpX1y6A,21
+microservice_chassis-0.2.2.dist-info/RECORD,,
