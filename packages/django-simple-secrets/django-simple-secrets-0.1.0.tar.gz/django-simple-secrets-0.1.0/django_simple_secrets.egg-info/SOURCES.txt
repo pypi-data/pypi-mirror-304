@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_secrets/__init__.py
+django_secrets/secrets.py
+django_simple_secrets.egg-info/PKG-INFO
+django_simple_secrets.egg-info/SOURCES.txt
+django_simple_secrets.egg-info/dependency_links.txt
+django_simple_secrets.egg-info/requires.txt
+django_simple_secrets.egg-info/top_level.txt
