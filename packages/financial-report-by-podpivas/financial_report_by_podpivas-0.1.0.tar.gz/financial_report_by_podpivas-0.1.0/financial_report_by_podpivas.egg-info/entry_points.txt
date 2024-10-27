@@ -1,0 +1,2 @@
+[console_scripts]
+financial_report = financial_report.main:main

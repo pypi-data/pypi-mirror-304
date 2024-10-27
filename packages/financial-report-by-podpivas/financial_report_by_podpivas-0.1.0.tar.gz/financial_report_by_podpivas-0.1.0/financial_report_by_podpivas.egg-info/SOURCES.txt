@@ -1,0 +1,10 @@
+pyproject.toml
+financial_report/__init__.py
+financial_report/main.py
+financial_report/report.py
+financial_report_by_podpivas.egg-info/PKG-INFO
+financial_report_by_podpivas.egg-info/SOURCES.txt
+financial_report_by_podpivas.egg-info/dependency_links.txt
+financial_report_by_podpivas.egg-info/entry_points.txt
+financial_report_by_podpivas.egg-info/requires.txt
+financial_report_by_podpivas.egg-info/top_level.txt
