@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: mic-toolkit
+Version: 0.2.3
+Summary: Internal toolkit for Microsoft Innovations Club VITC.
+License: MIT
+Author: Ameen Shaikh
+Author-email: mohammedameen9011@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: datasets (>=3.0.0,<4.0.0)
+Requires-Dist: distilabel[openai] (>=1.4.1,<2.0.0)
+Requires-Dist: langchain (>=0.3.0,<0.4.0)
+Requires-Dist: langchain-community (>=0.3.0,<0.4.0)
+Requires-Dist: llama-index (>=0.11.9,<0.12.0)
+Requires-Dist: llama-index-llms-openai-like (>=0.2.0,<0.3.0)
+Requires-Dist: llama-index-llms-vllm (>=0.2.0,<0.3.0)
+Requires-Dist: openai (>=1.45.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# mic-toolkit
+
+![PyPI - Version](https://img.shields.io/pypi/v/mic-toolkit?style=flat)
+[![CI](https://github.com/micvitc/mic-toolkit/actions/workflows/ci.yaml/badge.svg)](https://github.com/micvitc/mic-toolkit/actions/workflows/ci.yaml)
+
+
+Internal utility library for micvitc.
+
+## Docs
+
+https://micvitc.github.io/mic-toolkit/
+
+## Installation
+
+``` py
+pip install mic-toolkit
+```
