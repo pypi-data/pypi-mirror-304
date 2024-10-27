@@ -1,0 +1,55 @@
+Metadata-Version: 2.3
+Name: hg2-data-extractor
+Version: 0.1.0
+Summary: Python package for extracting Houkai Gakuen 2 assets data
+License-File: LICENSE
+Requires-Python: <4.0,>=3.12
+Requires-Dist: pycryptodome<4.0.0,>=3.21.0
+Requires-Dist: requests<3.0.0,>=2.32.3
+Requires-Dist: tqdm>=4.66.5
+Requires-Dist: typer>=0.12.5
+Requires-Dist: unitypy<2.0.0,>=1.20.4
+Description-Content-Type: text/markdown
+
+# About
+hg2-data-extractor is a Python package for downloading, decrypting and extracting [Houkai Gakuen 2](https://houkai2nd.miraheze.org/wiki/Houkai_Gakuen_2_Wiki) unity assets data
+
+## Installation
+```shell
+pip install hg2-data-extractor
+```
+
+## Usage
+To get help, type `--help` with any command or even package
+
+### Download
+To download data_all file use:
+
+```shell
+hg2-data-extractor download
+```
+By default, download directory is `./data_all/`
+
+### Decrypt
+To decrypt downloaded data_all file use:
+
+```shell
+hg2-data-extractor decrypt 
+```
+By default, decrypts `./data_all/data_all_encrypted.unity3d`
+
+### Extract
+To extract text assets data from data_all use:
+
+```shell
+hg2-data-extractor extract --asset-names asset_name1,asset_name2,...
+```
+By default, `WeaponDataV3`, `CostumeDataV2`, `PassiveSkillDataV3`, `SpecialAttributeDataV2`, `PetData`, `PetSkillData` assets will be extracted  
+To show all valid asset names, use (data_all_decrypted file is required):
+
+```shell
+hg2-data-extractor lst
+```
+
+# Credits
+This project is a copied and modified version of [hg2-downloader](https://dev.s-ul.net/BLUEALiCE/hg2-downloader) project authored by [BLUEALiCE](https://dev.s-ul.net/BLUEALiCE)
