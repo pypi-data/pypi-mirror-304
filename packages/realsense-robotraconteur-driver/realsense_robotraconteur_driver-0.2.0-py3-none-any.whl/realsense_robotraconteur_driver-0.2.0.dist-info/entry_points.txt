@@ -1,0 +1,2 @@
+[console_scripts]
+realsense-robotraconteur-driver = realsense_robotraconteur_driver.realsense_robotraconteur_driver:main
