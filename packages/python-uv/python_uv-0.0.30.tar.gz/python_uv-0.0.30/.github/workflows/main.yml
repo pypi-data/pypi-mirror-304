@@ -1,0 +1,72 @@
+name: Test And Release
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - "v*.*.*"
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Tests / OS ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        python-version: ["3.10", "3.11", "3.12","3.13"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --python ${{ matrix.python-version }} --all-extras --dev
+
+      - name: Run tests
+        run: uv run bash scripts/test.sh
+
+      - name: Run linters
+        run: uv run bash scripts/lint.sh
+
+  semantic-release:
+    name: Bump Version and Release
+    needs: test
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v4
+        id: git-cliff
+        with:
+          config: pyproject.toml
+          args: -vv --latest --strip header --github-repo "${{ github.repository }}"
+        env:
+          OUTPUT: CHANGES.md
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: ${{ steps.git-cliff.outputs.changelog }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+# Reference
+# 1. https://docs.astral.sh/uv/guides/integration/github/#syncing-and-running
+# 2. https://github.com/Kludex/python-template/blob/main/.github/workflows/main.yml
+# 3. https://github.com/softprops/action-gh-release/tree/master/
+# 4. https://github.com/orhun/git-cliff-action/tree/main/
