@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+NP.ENS.KBDD.egg-info/PKG-INFO
+NP.ENS.KBDD.egg-info/SOURCES.txt
+NP.ENS.KBDD.egg-info/dependency_links.txt
+NP.ENS.KBDD.egg-info/requires.txt
+NP.ENS.KBDD.egg-info/top_level.txt
