@@ -1,0 +1,14 @@
+tinydataflow/__init__.py,sha256=R_OB2saShKW1m_3ck1PQL0ZEm9sN1NjKXuiiix04ljU,67
+tinydataflow/core.py,sha256=876kK1HPN93BApZUVQT-kUStDWx-H4_NI1-lyhN_7so,4975
+tinydataflow/connectors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinydataflow/connectors/readers.py,sha256=d-ENi6AuqGkWAIVV7KF3AovGhV7NBiwhfvQ5AY8xVt4,5930
+tinydataflow/connectors/selectors.py,sha256=mOCFJbVS8PNCbFVZKL0-LYTgx9rw8O54NALy2IkZr0k,1504
+tinydataflow/transformers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinydataflow/transformers/basic.py,sha256=aqnJUKcUEeH2Y2HLYhrbol-Ot5O9lHGxq2hXjqfbBts,1706
+tinydataflow/transformers/senders.py,sha256=VkjMNeuQZU0qzGERgD9EQZAAtAqqVZ8ZUml2ZJPc4dA,5203
+tinydataflow/transformers/writers.py,sha256=yW9mlDlYp99osRM9J37f2l5pkHi13xURjSVEuLMo-0g,2555
+tinydataflow-0.0.7.dist-info/LICENSE,sha256=C4y8wFonub6TtYIBo_tHKTSIMvauXYAdLcFUEpePpkM,1142
+tinydataflow-0.0.7.dist-info/METADATA,sha256=4lu7Czfl4lgWv4pGcHYXmuNneT145DwmD9qRriivoSM,2271
+tinydataflow-0.0.7.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+tinydataflow-0.0.7.dist-info/top_level.txt,sha256=P0FqTPLXpQyZ_MACa0CVngQyBrTPsq6t6Ln-ifrQy6w,13
+tinydataflow-0.0.7.dist-info/RECORD,,
