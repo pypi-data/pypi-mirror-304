@@ -1,0 +1,2 @@
+[console_scripts]
+mythme = mythme.__main__:main
