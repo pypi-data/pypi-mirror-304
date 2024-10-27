@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: csv_report_creator
+Version: 0.1.0
+Summary: Пакет, загружающий данные о транзакциях, группирующий их и выдающий отчет
+Author-email: ScoChillOFF <cheatkiller12@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas==2.2.3
+
+### Запуск
+`python -m csv_report_creator`
