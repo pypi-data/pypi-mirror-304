@@ -1,0 +1,15 @@
+name: MacOS_Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version: [3.11]
+    
+    steps:
+    - name: MacOS Docker Test is not available because of licensing issues between Docker and Github.
+      run: echo "MacOS Docker Test is not available because of licensing issues between Docker and Github"
+        

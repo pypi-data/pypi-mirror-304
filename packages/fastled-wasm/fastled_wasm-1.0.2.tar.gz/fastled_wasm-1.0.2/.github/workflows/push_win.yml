@@ -1,0 +1,17 @@
+name: Win_Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.11]
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Windows Docker Test is not available because of licensing issues between Docker and Github.
+      run: echo "Windows Docker Test is not available because of licensing issues between Docker and Github"
+        
