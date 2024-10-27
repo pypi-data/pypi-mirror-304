@@ -1,0 +1,46 @@
+{
+    "name": "RTMDet",
+    "description": "detectors_rtmdet-nano_coco-person_320x320",
+    "paper": "https://arxiv.org/abs/2212.07784",
+    "type": "detectors",
+    "variants": {
+        "nano": {
+            "name": "RTMDet-nano",
+            "input_size": [
+                320,
+                320,
+                3
+            ],
+            "format": "onnx",
+            "skeleton": "coco",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1OeK7rlgPpbkyY5NEcqfaa2qT3ILubue-"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmdet-37adb8.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/projects/rtmpose/rtmdet/person/rtmdet_nano_320-8xb32_coco-person.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "m": {
+            "name": "RTMDet-m",
+            "input_size": [
+                640,
+                640,
+                3
+            ],
+            "format": "onnx",
+            "skeleton": "coco",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1Wqs-vxaEUvUB8TweaoMVKctAlXeK9GSZ"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "source_url": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmdet-97037b.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/projects/rtmpose/rtmdet/person/rtmdet_m_640-8xb32_coco-person.py"
+            },
+            "license": "Apache-2.0 License"
+        }
+    }
+}

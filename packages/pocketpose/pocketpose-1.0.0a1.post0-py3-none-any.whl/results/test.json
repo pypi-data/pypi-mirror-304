@@ -1,0 +1,338 @@
+{
+  "baseline-50": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 32.82896423339844,
+      "flops": 8041.660416,
+      "params": 23.485841
+    }
+  },
+  "efficientpose-i": {
+    "256x256_16": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "32x32x28",
+        "32x32x16",
+        "32x32x16",
+        "256x256x16"
+      ],
+      "precision": 2,
+      "file_size": 1.4266014099121094,
+      "flops": 1495.885784,
+      "params": 0.6875
+    }
+  },
+  "efficientpose-i-lite": {
+    "256x256_16": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "256x256x16"
+      ],
+      "precision": 2,
+      "file_size": 1.1043853759765625,
+      "flops": 1360.003072,
+      "params": 0.554936
+    }
+  },
+  "efficientpose-ii": {
+    "368x368_16": {
+      "inputs": [
+        "368x368x3"
+      ],
+      "outputs": [
+        "46x46x28",
+        "46x46x16",
+        "46x46x16",
+        "368x368x16"
+      ],
+      "precision": 2,
+      "file_size": 3.372425079345703,
+      "flops": 7305.141328,
+      "params": 1.673828
+    }
+  },
+  "efficientpose-ii-lite": {
+    "368x368_16": {
+      "inputs": [
+        "368x368x3"
+      ],
+      "outputs": [
+        "368x368x16"
+      ],
+      "precision": 2,
+      "file_size": 2.7421188354492188,
+      "flops": 6883.466496,
+      "params": 1.400472
+    }
+  },
+  "efficientpose-iii": {
+    "480x480_16": {
+      "inputs": [
+        "480x480x3"
+      ],
+      "outputs": [
+        "60x60x28",
+        "60x60x16",
+        "60x60x16",
+        "480x480x16"
+      ],
+      "precision": 2,
+      "file_size": 6.238250732421875,
+      "flops": 22606.735068,
+      "params": 3.136192
+    }
+  },
+  "efficientpose-iv": {
+    "600x600_16": {
+      "inputs": [
+        "600x600x3"
+      ],
+      "outputs": [
+        "75x75x28",
+        "75x75x16",
+        "75x75x16",
+        "600x600x16"
+      ],
+      "precision": 2,
+      "file_size": 12.557510375976562,
+      "flops": 71566.06909,
+      "params": 6.408702
+    }
+  },
+  "efficientpose-rt": {
+    "224x224_16": {
+      "inputs": [
+        "224x224x3"
+      ],
+      "outputs": [
+        "28x28x28",
+        "28x28x16",
+        "28x28x16",
+        "224x224x16"
+      ],
+      "precision": 2,
+      "file_size": 0.9182357788085938,
+      "flops": 739.093612,
+      "params": 0.434864
+    }
+  },
+  "efficientpose-rt-lite": {
+    "224x224_16": {
+      "inputs": [
+        "224x224x3"
+      ],
+      "outputs": [
+        "224x224x16"
+      ],
+      "precision": 2,
+      "file_size": 0.754150390625,
+      "flops": 721.712768,
+      "params": 0.373864
+    }
+  },
+  "efficientposenas-a": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 1.4891433715820312,
+      "flops": 726.300672,
+      "params": 1.154321
+    }
+  },
+  "efficientposenas-b": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 3.5157318115234375,
+      "flops": 1980.42624,
+      "params": 3.030425
+    },
+    "256x256_16": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 3.5156097412109375,
+      "flops": 2640.306176,
+      "params": 3.030392
+    }
+  },
+  "efficientposenas-c": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 5.340370178222656,
+      "flops": 2681.475072,
+      "params": 4.768321
+    },
+    "256x256_16": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "16x64x64"
+      ],
+      "precision": 1,
+      "file_size": 5.340240478515625,
+      "flops": 3575.037952,
+      "params": 4.768288
+    }
+  },
+  "litehrnet-18": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 1.766265869140625,
+      "flops": 406.008576,
+      "params": 1.114569
+    }
+  },
+  "movenet-lightning": {
+    "192x192_17": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 4,
+      "file_size": 8.93862533569336,
+      "flops": 541.610584,
+      "params": 2.31819
+    }
+  },
+  "movenet-lightning16": {
+    "192x192_17": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 2,
+      "file_size": 4.5380706787109375,
+      "flops": 541.610584,
+      "params": 2.31819
+    }
+  },
+  "movenet-lightning8": {
+    "192x192_17": {
+      "inputs": [
+        "192x192x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 1,
+      "file_size": 2.7607345581054688,
+      "flops": 541.610584,
+      "params": 2.31819
+    }
+  },
+  "movenet-thunder": {
+    "256x256_17": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 4,
+      "file_size": 23.866268157958984,
+      "flops": 2440.703064,
+      "params": 6.226262
+    }
+  },
+  "movenet-thunder16": {
+    "256x256_17": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 2,
+      "file_size": 12.00115966796875,
+      "flops": 2440.703064,
+      "params": 6.226262
+    }
+  },
+  "movenet-thunder8": {
+    "256x256_17": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "1x17x3"
+      ],
+      "precision": 1,
+      "file_size": 6.7966156005859375,
+      "flops": 2440.703064,
+      "params": 6.226262
+    }
+  },
+  "posenet-mobilenet100": {
+    "257x257_17": {
+      "inputs": [
+        "257x257x3"
+      ],
+      "outputs": [
+        "9x9x17",
+        "9x9x34",
+        "9x9x32",
+        "9x9x32"
+      ],
+      "precision": 4,
+      "file_size": 12.654369354248047,
+      "flops": 1674.529664,
+      "params": 3.313907
+    }
+  },
+  "res50": {
+    "256x192_17": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "precision": 1,
+      "file_size": 32.82860565185547,
+      "flops": 8041.660416,
+      "params": 23.485841
+    }
+  }
+}
