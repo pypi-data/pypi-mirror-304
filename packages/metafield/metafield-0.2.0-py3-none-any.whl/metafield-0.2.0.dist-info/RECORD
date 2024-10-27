@@ -1,0 +1,11 @@
+metafield/__init__.py,sha256=eNJGvqF1yZumI-kxGnm_TKAs8I56gUPUlO25LMar6Z8,297
+metafield/__main__.py,sha256=T3QIZfUJKr1m3wfsY8F5tUYVZKivERpe9fLn9OJOqac,61
+metafield/app.py,sha256=dQ2jQM8ziGQzAa_672v3YCRqAP9t3QlpnpNE6YXp3EY,39
+metafield/git_utils.py,sha256=48l8zfIcBtb9RmvoO60pSx0wjM7lYcYf3XmJivLJuT0,1565
+metafield/nb_depends.py,sha256=xI1L0IcRLw_M0HXRknF43P-c_fsEuWlTXgAhHPScrv8,3370
+metafield/nb_utils.py,sha256=nCUB9dAQSXeCVID-0cjFFJ3wV_s8S5iGkOF6ebXtIOA,1734
+metafield-0.2.0.dist-info/METADATA,sha256=4PNPGtuNXxqfwbEwCzWJQ-uCDckTL4eYGTjEUYincfI,331
+metafield-0.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+metafield-0.2.0.dist-info/entry_points.txt,sha256=70KTdvEwUugG-gksz9E04DwmMtq3NeYHzp6AvIuPIa0,49
+metafield-0.2.0.dist-info/top_level.txt,sha256=0o6ys940cleEWtFX3j8X1VcTuIYE70gaoB_njdDrk5g,10
+metafield-0.2.0.dist-info/RECORD,,
