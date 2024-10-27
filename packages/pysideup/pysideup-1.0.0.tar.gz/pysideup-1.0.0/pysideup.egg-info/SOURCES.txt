@@ -1,0 +1,8 @@
+setup.py
+pysideup.egg-info/PKG-INFO
+pysideup.egg-info/SOURCES.txt
+pysideup.egg-info/dependency_links.txt
+pysideup.egg-info/entry_points.txt
+pysideup.egg-info/requires.txt
+pysideup.egg-info/top_level.txt
+test/test_conversion.py
