@@ -1,0 +1,9 @@
+caadam/__init__.py,sha256=tS_Vuuhch4rpnZcgTSrnJXHmemchidGvRhsq8k3Gk-c,348
+caadam/additive_scaling.py,sha256=T_ssJ5lM3ufDnACZ9oniOm1HcA8o54-S_cKw1F1xEvk,1082
+caadam/caadam.py,sha256=x5okqtOOzOPu8FXmfH57YLS2PqDaLx1tabbUcHlyjpE,5153
+caadam/depth_scaling.py,sha256=lIUzoN4v3nPa9IFlSC0kUIb9c-eqHcx5Hst2YIo1lng,634
+caadam/multiplicative_scaling.py,sha256=C8W9dGiC_arTe-EOJNdgBlFShxf3qjD--tmEYAYr4ew,1277
+caadam/scaling_strategy_base.py,sha256=KIPmRPuWRH28ECicJjW-D0ODIHOkZBe0QitL0feqDhY,616
+caadam-0.1.1.dist-info/METADATA,sha256=e2s1baudDoF6Fr8fdjZ7vHEh4ia9PpiOyDMMtEjTBuY,981
+caadam-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+caadam-0.1.1.dist-info/RECORD,,
