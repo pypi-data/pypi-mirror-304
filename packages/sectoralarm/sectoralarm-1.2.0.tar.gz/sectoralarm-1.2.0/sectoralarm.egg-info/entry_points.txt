@@ -1,0 +1,2 @@
+[console_scripts]
+sectoralarm = sectoralarm.main:main
