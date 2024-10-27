@@ -1,0 +1,20 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+[project]
+name = 'my-package-new-one-for-me-example'
+version = '0.1.0'
+description = 'Описание моего Python-пакета'
+authors = [
+  {name = 'Your Name', email = 'youremail@example.com'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = [
+  'requests>=2.25.1',
+  'numpy>=1.19.2'
+]
+[project.optional-dependencies]
+dev = ['pytest>=6.2.1', 'flake8>=3.8.4']
+docs = ['sphinx>=3.5.3']
