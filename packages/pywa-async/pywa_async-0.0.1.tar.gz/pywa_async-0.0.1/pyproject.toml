@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pywa_async"
+version = "0.0.1"
+dependencies = ["pywa"]
+readme = {file = "README.md", content-type = "text/markdown"}
+description = "Please install `pywa` instead. It already includes the async version."
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    {name = "David Lev", email = "david@davidlev.dev"},
+]
+
+[project.urls]
+"Documentation" = "https://pywa.readthedocs.io/"
+"Issue Tracker" = "https://github.com/david-lev/pywa/issues"
+"Source Code" = "https://github.com/david-lev/pywa"
+"Funding" = "https://github.com/sponsors/david-lev"
+"Changelog" = "https://github.com/david-lev/pywa/blob/master/CHANGELOG.md"

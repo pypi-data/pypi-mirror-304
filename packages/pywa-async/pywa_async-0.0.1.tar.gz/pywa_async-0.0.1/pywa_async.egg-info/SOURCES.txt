@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+pywa_async.egg-info/PKG-INFO
+pywa_async.egg-info/SOURCES.txt
+pywa_async.egg-info/dependency_links.txt
+pywa_async.egg-info/requires.txt
+pywa_async.egg-info/top_level.txt
