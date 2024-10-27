@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fancy-title
+Version: 0.0.1.1
+Summary: Evaluation metrics for your title.
+Home-page: https://github.com/cui-shaobo/fancy-title
+Author-email: shaobo.cui@epfl.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+

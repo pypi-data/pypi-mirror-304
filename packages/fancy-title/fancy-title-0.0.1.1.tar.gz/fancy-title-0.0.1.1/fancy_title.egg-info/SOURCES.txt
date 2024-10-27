@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+READMEpypi.md
+setup.py
+fancy_title.egg-info/PKG-INFO
+fancy_title.egg-info/SOURCES.txt
+fancy_title.egg-info/dependency_links.txt
+fancy_title.egg-info/requires.txt
+fancy_title.egg-info/top_level.txt
+fancytitle/__init__.py
+fancytitle/evaluator.py
+fancytitle/data/frequent_words.csv
+fancytitle/metrics/__init__.py
+fancytitle/metrics/lcsratio.py
+fancytitle/metrics/wordcoverage.py
+fancytitle/metrics/wordlikeness.py
