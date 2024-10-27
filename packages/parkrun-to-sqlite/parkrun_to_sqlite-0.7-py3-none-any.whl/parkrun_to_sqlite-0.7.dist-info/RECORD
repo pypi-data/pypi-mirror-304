@@ -1,0 +1,11 @@
+parkrun_to_sqlite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parkrun_to_sqlite/__main__.py,sha256=fhXFoXf67NcoNIopEjsLggQqIn_uCjHNQFqCkg8fqAk,4314
+parkrun_to_sqlite/events.json,sha256=WnnIwtCid8bOD2vW3rSpNOmg-iUE2fTuemIA-xmAt1Y,813903
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_get_parkruns.py,sha256=Q6CY4ul-9Ca19RbIGH5Zxyn5p5p9nwAOW0gzgzfk92c,355
+parkrun_to_sqlite-0.7.dist-info/LICENSE,sha256=8y9U4VkXk-tk9HpU5p7kK_PhJ-L6Hj-DPGbpChnPFyk,1072
+parkrun_to_sqlite-0.7.dist-info/METADATA,sha256=NZZayzR2iHd4Vi4A29y945qm9bb_cOyRKJ7BEaTUqX0,952
+parkrun_to_sqlite-0.7.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+parkrun_to_sqlite-0.7.dist-info/entry_points.txt,sha256=0UpcMNh0_BY3wCmifgrgIeiqaz8XlR05abbSVEOTlqk,70
+parkrun_to_sqlite-0.7.dist-info/top_level.txt,sha256=5Fmi-4pekyCZPIntFWxLfuDZt00fSDKAIrSuAmT74yI,24
+parkrun_to_sqlite-0.7.dist-info/RECORD,,
