@@ -1,0 +1,15 @@
+fiberhttp/__init__.py,sha256=58roxtAgfU2D2pzOcEH6RoLV8a7Jiww6SUn7eJpDhNc,247
+fiberhttp/__version__.py,sha256=pVlU6tVTDIrBmrrwSMwn38sCppfiAE9AHMzyhTv9p4U,238
+fiberhttp/_build.py,sha256=QFamnqTr-qXQN4zGKxlL7pnISJVCnZ1ioqer9kY-gho,3393
+fiberhttp/_client_file.py,sha256=_mmGwLY0G24hFAm9C7HVWalOEDjt1vX09PhlAwt671A,4773
+fiberhttp/_client_proxy.py,sha256=qParMRBu5po7LNwyVOz1OCIBceDjPu8pD0Ysa8FDFqs,6145
+fiberhttp/_connections.py,sha256=qGnspUqVmLGgz8jaMhtctsVWCbyYwlIibncni_iOg5I,1289
+fiberhttp/_exceptions.py,sha256=Uy9OZYDBPipZbZsCMMF1MqfJbe6X64Piu6ENFXYFu_0,1509
+fiberhttp/_methods.py,sha256=f6_XSCZK8tGtXO-6lYHzhaVjVr67c4q0TZhxapxlff0,1033
+fiberhttp/_responses.py,sha256=lBWgFfRROlGk8RZ40VxiDmxtGl01WXzH2eDJ2UqNFyQ,1948
+fiberhttp-5.2.dist-info/LICENSE,sha256=NvOm3JREX-49u0i3PbQ7_ykuy_QxKb4UsklOMDqgLw8,10281
+fiberhttp-5.2.dist-info/METADATA,sha256=Qkpknp6dY76FDHPM5APt7xEKNKFGM4JRbKeSKmo3Tlc,4135
+fiberhttp-5.2.dist-info/NOTICE,sha256=AEnFhSfFVk3XVwW3oNR2gXZSQsF1OVr_AuUUFwLurs8,38
+fiberhttp-5.2.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+fiberhttp-5.2.dist-info/top_level.txt,sha256=vsRmGOSQUC88Swpb9bVaYS0Y6YJNm1qxhS9y0Np0Y0w,10
+fiberhttp-5.2.dist-info/RECORD,,
