@@ -1,0 +1,7 @@
+README.md
+setup.py
+littyai.egg-info/PKG-INFO
+littyai.egg-info/SOURCES.txt
+littyai.egg-info/dependency_links.txt
+littyai.egg-info/top_level.txt
+pip6/__init__.py
