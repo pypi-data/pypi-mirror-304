@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mantrapy
+Version: 0.0.1
+Summary: A Python lib to interact with the Mantra chain
+Home-page: https://github.com/Quantum-Architects/mantrapy
+Author: Quantum-Architects
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# mantra-py
+
+A Python library to interact with the Mantra chain
+
+Documentation can be found [here](https://quantum-architects.github.io/mantrapy)
+
+## Build docs locally
+
+```sh
+npm install
+npm run dev
+```
+
+
