@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: orbit_framework
+Version: 0.2.0
+Summary: Ein Python-Framework für robuste TinkerForge-Anwendungen
+Home-page: http://mastersign.github.io/orbit/
+Author: Tobias Kiertscher
+Author-email: dev@mastersign.de
+License: LGPL-3.0
+Keywords: TinkerForge orbit framework
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: German
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Games/Entertainment
+Requires-Dist: tinkerforge >=2.1.0
+
+ORBIT ermöglicht die Entwicklung von dialogbasierten Systemen
+
+durch ein einfaches Konzept von Apps und Services.
+
+Es unterstützt eine robuste Anwendungsarchitektur durch wiederverwendbare
+
+Komponenten und die Entkopplung von Anwendungsteilen mit Hilfe eines
+
+Nachrichtensystem. 
+
+Die Verwaltung der Verbindung zu TinkerForge-Bricks und -Bricklets 
+
+übernimmt ein Gerätemanager. Dadurch wird das Entwickeln von Anwendungen, 
+
+die mit Verbindungsabbrüchen umgehen müssen, stark vereinfacht.
