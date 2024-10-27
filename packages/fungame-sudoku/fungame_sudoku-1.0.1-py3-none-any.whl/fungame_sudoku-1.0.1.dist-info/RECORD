@@ -1,0 +1,8 @@
+fungame/_init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fungame/sudoku/__init__.py,sha256=DdhLRmyaeff6pP6K0iHGh5MQus1DuRZX1Qbul_LGcmA,179
+fungame/sudoku/core.py,sha256=ahzMLIyPA4v8Xx5R4OQ_wLk9zZikbpCDrAJebKwfe6M,18826
+fungame_sudoku-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fungame_sudoku-1.0.1.dist-info/METADATA,sha256=2BxpE9JmHDDys6EsMJq39hZ0YRFsRLyDFW4eTQAVC1c,196
+fungame_sudoku-1.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fungame_sudoku-1.0.1.dist-info/top_level.txt,sha256=vqTEp3ZXvIavbknxwuVbiMVg2njcdod_wzlv3vENy8w,8
+fungame_sudoku-1.0.1.dist-info/RECORD,,
