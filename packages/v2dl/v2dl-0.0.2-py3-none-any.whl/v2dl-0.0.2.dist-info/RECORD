@@ -1,0 +1,17 @@
+v2dl/__init__.py,sha256=hLQqgztIHXdKns0Em7ceNvKiJTafx0asLdFZUuCtTLw,409
+v2dl/__main__.py,sha256=l0k37Zplh7SzhUgu_TAm3MwFKROqf-83zooWC9COF3Y,80
+v2dl/config.py,sha256=5jYa8vDKEj3iadpYQ-keSU7pXT10zDk7D1Q3xY87wKo,5627
+v2dl/const.py,sha256=sjx_8swt6IRiXu7KJKp0PPEb4e_ooBTtlsGItYiYhVQ,2165
+v2dl/custom_logger.py,sha256=xBRUWOFJrYTbtZXylqnwJPpJmI7_gb4pw7-uywNTijQ,2491
+v2dl/utils.py,sha256=d6lB8tAdd_EN6k8tBKk5_asBKyIhHGQFQmK8bcKQYDk,5628
+v2dl/v2dl.py,sha256=y6r6mRU2kXy0jgQ-L5OFCKupIRC4eKSofuW1g64nuhI,11659
+v2dl/web_bot/__init__.py,sha256=q79iVCG0jA8AER71XYI1wEiC99cYyL8rewVV0HX9W6M,241
+v2dl/web_bot/base.py,sha256=UsfiVW6rIdevk-1zn5rTSKWPXMZh1M_Lz9TtACMB4BY,1936
+v2dl/web_bot/drission_bot.py,sha256=qXvicr8KMu4RG5hMnIfISaaVB3Ir7y_kLJAzEyYnWTg,15385
+v2dl/web_bot/get.py,sha256=cXifIkelHJIbHR3At6khzw1-qM-nd-jXDo_Spkg-O2I,859
+v2dl/web_bot/selenium_bot.py,sha256=_TaNb7f4VCYawruZW4QppBAYs1Gh51xbYddYvwJ3448,18816
+v2dl-0.0.2.dist-info/LICENSE,sha256=HgFeraA0-kQtru2vFH_cXmKE_G9rXae-RgDX8Yn-EHY,35130
+v2dl-0.0.2.dist-info/METADATA,sha256=jXJ-1dgN2L3Dt7_ZbVb1Ob0CtDUy0-sibB3YddfPcwY,3540
+v2dl-0.0.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+v2dl-0.0.2.dist-info/entry_points.txt,sha256=Rd7cePwuzj46-hlJwidsgHkUSrejm4-kC_GD7Ms_xu4,39
+v2dl-0.0.2.dist-info/RECORD,,
