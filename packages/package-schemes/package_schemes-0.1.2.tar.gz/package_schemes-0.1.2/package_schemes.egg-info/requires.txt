@@ -1,0 +1,5 @@
+pydantic>=2.0.0
+toml>=0.10.0
+
+[test]
+django-storages[s3]>=1.14.4
