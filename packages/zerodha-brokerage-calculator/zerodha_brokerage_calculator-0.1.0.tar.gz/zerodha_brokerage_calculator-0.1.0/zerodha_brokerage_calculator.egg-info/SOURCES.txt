@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+zerodha_brokerage_calculator/__init__.py
+zerodha_brokerage_calculator/calculator.py
+zerodha_brokerage_calculator.egg-info/PKG-INFO
+zerodha_brokerage_calculator.egg-info/SOURCES.txt
+zerodha_brokerage_calculator.egg-info/dependency_links.txt
+zerodha_brokerage_calculator.egg-info/top_level.txt
