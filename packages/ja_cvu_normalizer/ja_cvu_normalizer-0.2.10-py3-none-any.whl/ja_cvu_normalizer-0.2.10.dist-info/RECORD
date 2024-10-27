@@ -1,0 +1,8 @@
+ja_cvu_normalizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ja_cvu_normalizer/ja_cvu_normalizer.py,sha256=PwrV88mz_NezrI8SNMnWze73bWJ9QM-qd8tUAf8zDeE,750
+ja_cvu_normalizer/reader.py,sha256=fOlmzNd_9Q9zUYmmbnWaX-qk5gKWdTANX7Mv-Glfe-I,577
+ja_cvu_normalizer/resource/ISO-2022-JP.txt,sha256=OKdcXt9RfAVUDRH7nai8bUtjijQf3Nmk5QNF0cVls4s,79066
+ja_cvu_normalizer/resource/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ja_cvu_normalizer-0.2.10.dist-info/METADATA,sha256=rGCcDX3kMChaC38XB35hiCLH0h-uwG0LieLwrBxB4OM,1228
+ja_cvu_normalizer-0.2.10.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ja_cvu_normalizer-0.2.10.dist-info/RECORD,,
