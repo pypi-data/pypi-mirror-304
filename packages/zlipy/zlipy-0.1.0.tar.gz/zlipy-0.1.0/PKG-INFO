@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: zlipy
+Version: 0.1.0
+Summary: 
+Author: Dmytro Maior
+Author-email: mayor4090Gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aioconsole (>=0.8.0,<0.9.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: deeplake (>=3.9.23,<4.0.0)
+Requires-Dist: gitignore-parser (>=0.1.11,<0.2.0)
+Requires-Dist: langchain-community (>=0.3.0,<0.4.0)
+Requires-Dist: rich (>=13.9.3,<14.0.0)
+Requires-Dist: websockets (>=13.1,<14.0)
+Description-Content-Type: text/markdown
+
+
