@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: mkdocs-py-ref-gen
+Version: 0.1.1
+Summary: mkdocs plugin to generate reference documentation and summary of python package(s)
+Home-page: https://github.com/leninkhaidem/mkdocs-python-ref-generator
+License: MIT
+Keywords: mkdocs,mkdocs-plugin,docstrings,autodoc,documentation,mkdocstrings[python],python
+Author: Lenin Khaidem
+Author-email: leninkhaidem@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: mkdocs-gen-files (>=0.5.0,<0.6.0)
+Requires-Dist: mkdocs-literate-nav (>=0.6.1,<0.7.0)
+Requires-Dist: mkdocs-section-index (>=0.3.9,<0.4.0)
+Project-URL: Documentation, https://leninkhaidem.github.io/mkdocs-python-ref-generator/
+Project-URL: Repository, https://github.com/leninkhaidem/mkdocs-python-ref-generator
+Description-Content-Type: text/markdown
+
+# mkdocs-py-ref-gen
+
+mkdocs plugin to generate reference documentation and summary of python package(s)
+
+It's a wrapper plugin built using [mkdocs-gen-file](https://github.com/oprypin/)
+
+```shell
+pip install mkdocs-py-ref-gen
+```
+
+## usage
+
+```yaml
+plugins:
+    - py-ref-gen
+        modules:
+            - name: "my_module"
+
+```
+
+[Click me](https://leninkhaidem.github.io/mkdocs-python-ref-generator) for full documention
+
