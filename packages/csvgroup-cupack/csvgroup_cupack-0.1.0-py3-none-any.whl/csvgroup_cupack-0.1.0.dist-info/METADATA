@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: csvgroup_cupack
+Version: 0.1.0
+Summary: Группировка данных по категориям в csv
+Author: elhuel
+Requires-Python: >=3.10
+Requires-Dist: pandas
+

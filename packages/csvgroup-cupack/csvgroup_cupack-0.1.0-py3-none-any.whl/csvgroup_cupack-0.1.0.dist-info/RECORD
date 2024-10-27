@@ -1,0 +1,7 @@
+csvgroup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csvgroup/__main__.py,sha256=iufq3kbasRx25ffNtGjMWxCUmT2fdeKfueQgp5R_7sU,489
+csvgroup/utils.py,sha256=7akQu3Cc-ldsTSiNJsQVgWqfTsSXYjg0NP4Ju3-Fr4E,239
+csvgroup_cupack-0.1.0.dist-info/METADATA,sha256=WtFuEqcanOutScfOT6AeVYsLO_iyjzr1pN9fQGDQUSU,199
+csvgroup_cupack-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+csvgroup_cupack-0.1.0.dist-info/top_level.txt,sha256=-sN3dwBSSZ2O04Qfoj1c6N56rrwqO4pbmhOpjCdW33I,9
+csvgroup_cupack-0.1.0.dist-info/RECORD,,
