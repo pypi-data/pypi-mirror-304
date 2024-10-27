@@ -1,0 +1,10 @@
+tqdm
+requests
+pandas
+
+[test]
+pytest
+types-tqdm
+types-requests
+pandas-stubs
+validate_version_code
