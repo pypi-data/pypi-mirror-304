@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: finance_report
+Version: 0.1.2
+Summary: Пакет для анализа доходов и расходов компании
+Author: Ваше Имя
+Requires-Dist: pandas

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finance_report"
+version = "0.1.2"
+description = "Пакет для анализа доходов и расходов компании"
+authors = [{name = "Ваше Имя"}]
+dependencies = ["pandas"]
+
+[project.scripts]
+finance-report = "finance_report.cli:main"
