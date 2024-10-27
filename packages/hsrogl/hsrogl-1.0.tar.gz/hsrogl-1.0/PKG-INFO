@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: hsrogl
+Version: 1.0
+Summary: an full package with tools and functions
+Author: Hansha
+Author-email: 3582930858@qq.com
+Keywords: python,math,ui,windows,mac,linux,unix
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+# Hsrogl
+
+
+This is an full package with tools and functions
+
+**Hsrogl** is make for **all people** to use
+
+**Hsrogl** can support all systems
+
+
+## How to install
+
+Type this code in the console (You must have python):
+```shell
+pip install hsrogl
+```
+
+## Usage
+
+> ## Math
+> 
+> Example:
+> 
+> ```python
+> # -- Coding by utf-8 --
+> 
+> import hsrogl.math as mt
+> 
+> # Calc the circumference of the square
+> 
+> a=mt.square2(3,3)
+> 
+> print(a)
+> 
+> # Program end
+> ```
+> Output: `12`
+> 
+> This function can calc the circumference of the square
+> 
+> <br>
+> 
+> Another example:
+> ```python
+> # -- Coding by utf-8 --
+> 
+> import hsrogl.math as mt
+> 
+> # Output the 'Phi' value
+> 
+> a=mt.phi()
+> 
+> print(a)
+> 
+> # Program end
+> ```
+> 
+> Output: `1.618`
+> 
+> This function can output the 'Phi' value
+> 
+> <br>
+>
+> You can use `dir(hsrogl.math)` to see the functions
+
+> Ui
+> 
+> Example:
+> 
+> ```python
+> # -- Coding by utf-8 --
+> 
+> import hsrogl.ui as ui
+>
+> 
+> a=ui.Select(["=(","=|","=)","=D"],"? ",": ","cancel",True)
+> 
+> print(a)
+> 
+> # Program end
+> ```
+> 
+> Input: `=(`
+> 
+> Output: `=(`
+> 
+> This is a selection ui function
+> 
+> You can use `dir(hsrogl.ui)` to see the functions
+
+
+## Version log
+`1.0` : First release
