@@ -1,0 +1,11 @@
+pypi_packaging_tutorial/__init__.py,sha256=UF_Hrss25VpMTIcjRk2cxBnsEtwLud9ujTqyiAHkTN8,231
+pypi_packaging_tutorial/data/datafile.py,sha256=QthqjJsDG6IbRCz52EHBOHTadh45-SA5HJofAE6J8rs,68
+pypi_packaging_tutorial/divide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypi_packaging_tutorial/divide/divide_by_three.py,sha256=oPx1y3ofS41P-LtGCOXdp1DC7uNdatMxWcE7WZXUiMc,41
+pypi_packaging_tutorial/example.py,sha256=y5j6xG_VBD-2sMI5hYqxajLnVsxfNldWQef6XPWt2JM,31
+pypi_packaging_tutorial/multiply/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypi_packaging_tutorial/multiply/multiply_by_three.py,sha256=xeLu5HjuDGplOn7KgRAEZ9t1-LLrpsHiEVkuod1lJ5E,43
+pypi_packaging_tutorial-0.1.5.13.dist-info/LICENSE.txt,sha256=r6c8k15ACxYltlVBKaxoIgqYAFBPvxYb5pwa570C5iU,1069
+pypi_packaging_tutorial-0.1.5.13.dist-info/METADATA,sha256=wplplmghDZjv9_qgwM8Q_tuTy3lSHcwbcPs8uSpuIMU,1110
+pypi_packaging_tutorial-0.1.5.13.dist-info/WHEEL,sha256=iAMR_6Qh95yyjYIwRxyjpiFq4FhDPemrEV-SyWIQB3U,92
+pypi_packaging_tutorial-0.1.5.13.dist-info/RECORD,,
