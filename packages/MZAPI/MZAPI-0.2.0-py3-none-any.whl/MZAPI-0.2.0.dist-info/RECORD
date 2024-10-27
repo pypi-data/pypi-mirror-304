@@ -1,0 +1,14 @@
+API/APM.py,sha256=YocB2pxZq8AdmgAr_sSnA09ikg9hKXQES9-irb_0gp8,2682
+API/KVS.py,sha256=WRdhSRH-_oZ91pVMSeYwx8SD_6PJecSqVB-0hEjvkM0,5973
+API/__init__.py,sha256=vRv2dgpFQKTvmMcOiZ1LP3bVhCWg-0O3SlJ3io8Q8xA,67
+API/HWNLP/__init__.py,sha256=28baU7x5-UOCOg3uN46rxZd9GZQgItY4UsKeZ_Bfo5w,238
+API/HWNLP/auth_config.py,sha256=eKcEStWBu39Xc7BrZIseLI_WQdCKZfF0Q6yml1P4vUg,834
+API/HWNLP/mt_service.py,sha256=63FvTF7KumK6QGTiyRpwNwfvi7kKHR_nUQXiWMqese8,10958
+API/HWNLP/nlg_service.py,sha256=rChXIjr7EEISxtg7wyIxveViIEXW3wZwEMtWSiSFSik,5732
+API/HWNLP/nlpf_service.py,sha256=wMBV4WF7AapVymwJsdKE_p68EaiM-YHy4NZsfO1rXGk,10214
+API/HWNLP/nlu_service.py,sha256=9R-Ah2MYmnprKNINCDKxUiFrU0WJBOG72tiTvjD_nxM,7191
+MZAPI-0.2.0.dist-info/LICENSE,sha256=I2WKiDBL7dLhQbbqEkHZaL9U8imrftsx1rQLf2Rrh8o,1090
+MZAPI-0.2.0.dist-info/METADATA,sha256=kHDXr2Yk5ikJ3jkgGruHerVt45lh27eV4bbOUGlyY6U,1687
+MZAPI-0.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+MZAPI-0.2.0.dist-info/top_level.txt,sha256=DVLuyEO0fAvFevqxb-MWIMiKsJ7yKONUM6mVTebGEVE,4
+MZAPI-0.2.0.dist-info/RECORD,,
