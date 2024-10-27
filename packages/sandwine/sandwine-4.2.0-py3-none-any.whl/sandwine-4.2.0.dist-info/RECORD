@@ -1,0 +1,10 @@
+sandwine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sandwine/__main__.py,sha256=sL5is2YqgkZl8iio6GujVAeKutN1-HYJD9M7VXRX_g8,766
+sandwine/_main.py,sha256=ReIfyAzVMyJoxSz80jsq11q7sWJIpRfcz7-FsQ_l8iQ,18946
+sandwine/_x11.py,sha256=1gh89lDGkrQRhZkNB5jXHbW6X4MFgvWrL96C8tP1Of0,11438
+sandwine-4.2.0.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sandwine-4.2.0.dist-info/METADATA,sha256=_PJhPGYSGmYYjbOLno1s0zKDY9CsN2E-XxdlVleJfGc,8645
+sandwine-4.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sandwine-4.2.0.dist-info/entry_points.txt,sha256=gYH564_GhN6WrBnaPS0IW4IMRItISwWqdUZw03gwvQc,90
+sandwine-4.2.0.dist-info/top_level.txt,sha256=oiLb0Fb0E420LsrHLgZoNubtpXECFAyjPN3a3giICvs,9
+sandwine-4.2.0.dist-info/RECORD,,
