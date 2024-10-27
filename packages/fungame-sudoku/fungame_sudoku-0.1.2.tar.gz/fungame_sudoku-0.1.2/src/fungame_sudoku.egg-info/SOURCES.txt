@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/fungame/_init__.py
+src/fungame/sudoku/__init__.py
+src/fungame/sudoku/core.py
+src/fungame_sudoku.egg-info/PKG-INFO
+src/fungame_sudoku.egg-info/SOURCES.txt
+src/fungame_sudoku.egg-info/dependency_links.txt
+src/fungame_sudoku.egg-info/top_level.txt
