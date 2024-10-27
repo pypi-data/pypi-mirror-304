@@ -1,0 +1,6 @@
+fastapi_observability/__init__.py,sha256=0FI70dAiDW3JQgtEWk-BelERc8We9YQC34vOoDVzJq4,676
+fastapi_observability/instrumentation.py,sha256=4SQ6uF-X1yCH6Z-Te_h-b8iBJoXyyF47PiWA8J6LhQA,1249
+fastapi_observability/middleware.py,sha256=vPkp6Bo1YADepZNOBocj2hviXWAlGe4Ko0b2t4j1Wc4,3582
+fastapi_observability-0.0.1.dev21054.dist-info/METADATA,sha256=rUfedfTU7JCXWXuNAlr6yARUgMQ8THH3BzmsfqHCdJk,1197
+fastapi_observability-0.0.1.dev21054.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fastapi_observability-0.0.1.dev21054.dist-info/RECORD,,
