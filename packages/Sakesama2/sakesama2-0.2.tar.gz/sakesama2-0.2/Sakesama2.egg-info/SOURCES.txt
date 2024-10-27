@@ -1,0 +1,6 @@
+setup.py
+Sakesama2.egg-info/PKG-INFO
+Sakesama2.egg-info/SOURCES.txt
+Sakesama2.egg-info/dependency_links.txt
+Sakesama2.egg-info/top_level.txt
+Sakesama_SpeechToText/main.py
