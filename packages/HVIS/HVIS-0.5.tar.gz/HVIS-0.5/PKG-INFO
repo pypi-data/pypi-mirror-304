@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: HVIS
+Version: 0.5
+Summary: A library for extracting text from CAPTCHA images, easy to use for developers.
+Author: Twinsszi
+Author-email: adhm90879@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: License
+Requires-Dist: requests
+Requires-Dist: user-agent
+
+
+```markdown
+# HVIS
+
+A library for extracting text from CAPTCHA images, characterized by its ease of use to assist developers.
+
+## Features
+- Simple and intuitive interface.
+- Handles various error scenarios for a smoother user experience.
+
+## Installation
+
+To install the library, you can use the following methods:
+
+### Method 1: Install using pip
+
+1. Run the following command in your terminal:
+
+   ```bash
+   pip install HVIS
