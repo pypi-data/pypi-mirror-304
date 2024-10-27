@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+finance_report/__init__.py
+finance_report/__main__.py
+finance_report/report_generator.py
+finance_report_owttsair.egg-info/PKG-INFO
+finance_report_owttsair.egg-info/SOURCES.txt
+finance_report_owttsair.egg-info/dependency_links.txt
+finance_report_owttsair.egg-info/requires.txt
+finance_report_owttsair.egg-info/top_level.txt
