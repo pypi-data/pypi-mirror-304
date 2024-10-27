@@ -1,0 +1,5 @@
+[console_scripts]
+griffe-docfx = griffe_docfx.cli:main
+
+[gui_scripts]
+

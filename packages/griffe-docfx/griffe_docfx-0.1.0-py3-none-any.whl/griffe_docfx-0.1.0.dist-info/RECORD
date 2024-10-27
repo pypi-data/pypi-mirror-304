@@ -1,0 +1,10 @@
+griffe_docfx-0.1.0.dist-info/METADATA,sha256=wbt9uEpfWUCTD2pFN-BUF4osjvGoao5d3O9HBrAZYq0,2075
+griffe_docfx-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+griffe_docfx-0.1.0.dist-info/entry_points.txt,sha256=8ntBLbxj4C-y7MkxT6Ut_5XfJgzdeZDu1ru6AObgFm4,71
+griffe_docfx-0.1.0.dist-info/licenses/LICENSE,sha256=nke00CVElTmhjAOYXkupvTNauLNPzBTuASi3u9moZ1U,754
+griffe_docfx/__init__.py,sha256=JfMWHXBluf1uDaFxitW6jcOrtvK71mRv417yeW_PRKo,138
+griffe_docfx/__main__.py,sha256=x3SNOiDumawFHVyN9VoT4SRFkKaERjLdJTWAuFHVukU,349
+griffe_docfx/cli.py,sha256=mvgGRXIGiN8VkCSBitjm4JHYR96keVW2Nx7G7Rz1fio,1756
+griffe_docfx/debug.py,sha256=Jsg9bK8mBft9bDhtpPMmZoUrp66J6Jj1roNbTzk-Slc,2837
+griffe_docfx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+griffe_docfx-0.1.0.dist-info/RECORD,,
