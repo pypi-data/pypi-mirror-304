@@ -1,0 +1,14 @@
+stellars_jupyterlab_darcula_theme/__init__.py,sha256=zAk6A_2pOgPYcFkUTjQ2FZckzlUvy8LIjdtDCR81Wgs,625
+stellars_jupyterlab_darcula_theme/_version.py,sha256=n6GPiWFYuXYAz_JPYnkx6vX_0oAOu95nat1qxKl1QfQ,171
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/package.json,sha256=rfx9WoBI50Qu1nCc9g7qfu_YBacY11GJZOGoNXlUzrs,5760
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/static/509.b0d4732971bd8e7d662f.js,sha256=sNRzKXG9jn1mL04TpnYBotdP3Y8Kkw940EB_psmzC34,649
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/static/remoteEntry.254621a176b1b85a06d5.js,sha256=JUYhoXaxuFoG1Szxc95JR01IKbiMLp11lTg2YNAgOGI,6741
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/static/third-party-licenses.json,sha256=MNToQfru1YnHAie-2Virp23yWsc5co3qG0IzrO6SEfw,20
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/themes/@stellars/jupyterlab_darcula_theme/index.css,sha256=FY4YolNvJEfRvKPwfL6ae5B2Sgxf7ci3hFpjR5RgMPA,21974
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/themes/@stellars/jupyterlab_darcula_theme/index.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stellars_jupyterlab_darcula_theme-1.0.2.data/data/share/jupyter/labextensions/@stellars/jupyterlab_darcula_theme/install.json,sha256=300NvFw2yKcht3wulcOaaSTALjkxZpXak5MPrNClE2o,227
+stellars_jupyterlab_darcula_theme-1.0.2.dist-info/METADATA,sha256=c16j7Y5TosPcD5wfD7RAa0z5Jd02azJ3iEMb3j-VO40,6341
+stellars_jupyterlab_darcula_theme-1.0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+stellars_jupyterlab_darcula_theme-1.0.2.dist-info/licenses/LICENSE,sha256=MLqt9HRycP6pWogg_RV4fictkLedziOztWQcCCcVtEI,1520
+stellars_jupyterlab_darcula_theme-1.0.2.dist-info/RECORD,,
