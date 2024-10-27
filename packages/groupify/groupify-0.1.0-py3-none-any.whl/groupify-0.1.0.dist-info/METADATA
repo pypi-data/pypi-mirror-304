@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: groupify
+Version: 0.1.0
+Summary: Automatically generates random groups from a class list.
+Home-page: https://github.com/reneaas/groupify
+Author: René Alexander Ask
+Author-email: rene.ask@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# `groupify`
+`groupify` is a Python package for automatically creating random groups in the classroom from a classlist. 
+
+<!-- ## Basic examples
+
+### Example 1
+
+```python
+import signchart
+
+f = "(x**2 + 1)**2 * (x - 1)**2 * (x + 1)"
+
+signchart.make_sign_chart(f=f, include_factors=True)
+signchart.savefig(
+    dirname="dirname",
+    fname="fname",
+)
+
+signchart.show()
+```
+
+This will generate the following sign chart:
+
+![sign chart](https://raw.githubusercontent.com/reneaas/signchart/refs/heads/main/examples/figures/example_1.svg)
+ -->
