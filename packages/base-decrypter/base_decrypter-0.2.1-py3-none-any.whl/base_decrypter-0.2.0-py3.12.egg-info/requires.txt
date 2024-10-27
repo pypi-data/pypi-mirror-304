@@ -1,0 +1,17 @@
+base36==0.1.1
+base4096==1.0
+base45==0.4.4
+base58==2.1.1
+base91==1.0.1
+base92==1.0.3
+pybase100==0.3.1
+click==8.1.7
+colorama==0.4.6
+emoji==2.14.0
+pybase62==1.0.0
+pycryptodome==3.20.0
+pyfiglet==1.0.2
+requests==2.32.3
+rich==13.9.3
+tabulate==0.9.0
+yaspin==3.1.0
