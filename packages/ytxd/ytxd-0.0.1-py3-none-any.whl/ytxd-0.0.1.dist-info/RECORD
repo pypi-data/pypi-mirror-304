@@ -1,0 +1,13 @@
+ytxd/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ytxd/__main__.py,sha256=keCWx8sif05iMuDTRIMs5hPDmFgeFu5o0-5UcyDrtAc,45
+ytxd/dependencies.py,sha256=p4AfePwjeOAVf5I5bfFop8li22CvMFSCzBNKxPp4zZs,738
+ytxd/download.py,sha256=VZS0JmCewgOorwou9D_u_i-xVOVdiHPq6JessXXT9Zc,7767
+ytxd/main.py,sha256=6ESjIK2H7tnw7uxH8d2sH2pK7a7CqtRp8V0yNlDj_84,4421
+ytxd/media_formats.py,sha256=a7YIDMaHq5hB-Mzq44XKPm9CAKk5ruPbJjxs18chzxo,1086
+ytxd/url.py,sha256=gyae3QBu7WswTvV9u_AzK74itzvq2v9orgcy8oCRekw,1341
+ytxd-0.0.1.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+ytxd-0.0.1.dist-info/METADATA,sha256=pDRtJUljCF1MxVV8yNqRPqogGBWzZahvTVhur-g6UeQ,3696
+ytxd-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ytxd-0.0.1.dist-info/entry_points.txt,sha256=lt5SV7fG499JKOlyT5-ig4n7HEs4xNzXnISbZNNDdUw,39
+ytxd-0.0.1.dist-info/top_level.txt,sha256=VrYMJYxYYNlHQDqv_C6ohKpEjK3z01SCFHEjw0Ocwz4,5
+ytxd-0.0.1.dist-info/RECORD,,
