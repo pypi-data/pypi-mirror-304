@@ -1,0 +1,16 @@
+diffpy/__init__.py,sha256=mY5GT0s9cbvYOTt3dN_jc_-f1YX2S8U8WCOIRVdiwtY,674
+diffpy/labpdfproc/__init__.py,sha256=Uw2_n_9Ifxit3ozH-6tatRAWIRnCUcfbqwdX_SHIb8k,764
+diffpy/labpdfproc/functions.py,sha256=yEXZTuITtA06pwpFwoVf1mCDLSXaVMK6q0m9A0nlHFI,10638
+diffpy/labpdfproc/labpdfprocapp.py,sha256=aclNQZXMMvfZYru8UH65Zojy2pfEnpZTHqjCpx00CIg,6601
+diffpy/labpdfproc/mud_calculator.py,sha256=DbtHzXY3xN3-R8AqIkKkiR04XGLdZfmeqhhJCIEaN8M,4109
+diffpy/labpdfproc/tools.py,sha256=NEFc0KNIVAsnj2hawkkNIr3crwiIwJDzfOge_bAA3jk,8253
+diffpy/labpdfproc/version.py,sha256=FvkklxMbPcPDVNb__bMPkZf6595jO6Qtbc74VcmKkuk,847
+diffpy/labpdfproc/data/coefficient_list.csv,sha256=7fhqkYCT-Ddz-UEiYyx9O_YnJGJgJF5Jp0QCpx5DQmo,679
+diffpy/labpdfproc/data/inverse_cve.xy,sha256=jiUhtuTzx9Fd_sU40ZtkuyCgfVP3QvYJH2_YQv5xWRA,44775
+diffpy.labpdfproc-0.2.0rc0.dist-info/AUTHORS.rst,sha256=cBUBSxv_uQfOjz9LA_6Haucdt_GpXi6EJrw5z7XhA1Y,186
+diffpy.labpdfproc-0.2.0rc0.dist-info/LICENSE.rst,sha256=FFZAG9Hh02sJbGQEu06NuMxdgx_i1GuezTT4cKTyLkc,1568
+diffpy.labpdfproc-0.2.0rc0.dist-info/METADATA,sha256=-DVwbki0ahLyTgFmAdrYmgCrUpR0dX9fwF7udLZddG0,8749
+diffpy.labpdfproc-0.2.0rc0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+diffpy.labpdfproc-0.2.0rc0.dist-info/entry_points.txt,sha256=2enIY_VMnoZuYhQ4XTHjLLVWVaspb_x1RmEFt52AsAY,68
+diffpy.labpdfproc-0.2.0rc0.dist-info/top_level.txt,sha256=34qLZyi9mxikpHepVDTMHrrNbe8VoOuz3ShYeiWA7KA,7
+diffpy.labpdfproc-0.2.0rc0.dist-info/RECORD,,
