@@ -1,0 +1,8 @@
+README.md
+setup.py
+audio_image_embedder/__init__.py
+audio_image_embedder/embedder.py
+audio_image_embedder.egg-info/PKG-INFO
+audio_image_embedder.egg-info/SOURCES.txt
+audio_image_embedder.egg-info/dependency_links.txt
+audio_image_embedder.egg-info/top_level.txt
