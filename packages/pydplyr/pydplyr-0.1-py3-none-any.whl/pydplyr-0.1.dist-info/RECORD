@@ -1,0 +1,13 @@
+pydplyr/__init__.py,sha256=jVHp3SiZNYhtxjDcABKvpCYhYLhVwMOxz858p0ZpmBA,136
+pydplyr/arrange.py,sha256=02hMDhhjfXJUWqWof23lKW08EqrsprEdC0SqDCt1_sY,426
+pydplyr/filter.py,sha256=lDnuirmpVODdoZAQzUgJa_-Y61BbFO2d-dUoK2fNkJs,586
+pydplyr/mutate.py,sha256=qJnl7JAvynBoItCREvUdrOQz2azuQ3Zyg8K62LkG_0w,1001
+pydplyr/select.py,sha256=sD9oMQhDBdOWfr6Yl4YI-ZwgkIcPVbFLWbLRJTFdCsQ,175
+pydplyr/summarize.py,sha256=gtp9Ud2fNqVTzZVHGsxTfmo8czAk5nHRxJj_2Wgm9F0,248
+tests/01_test.py,sha256=_pL_sElg15EHiALmVmrKOIOH4-SPrBfisO60T7Y836c,1710
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydplyr-0.1.dist-info/LICENSE.txt,sha256=7cHEfB2jfN385w0PZnbnYGKCANcSp45VRRXjWdzF84U,1070
+pydplyr-0.1.dist-info/METADATA,sha256=bgHmxFUKtIvFzJ6TMXSbCKvOpgImtOp1UQK2Jo67rCg,1070
+pydplyr-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pydplyr-0.1.dist-info/top_level.txt,sha256=QOsRZ9v7VT0q-LIz8N-5Di8k9Gq565p2ej3DrxOQ7I8,14
+pydplyr-0.1.dist-info/RECORD,,
