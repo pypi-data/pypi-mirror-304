@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/customer_report/__init__.py
+src/customer_report/__main__.py
+src/customer_report/report.py
+src/customer_report_owttsair.egg-info/PKG-INFO
+src/customer_report_owttsair.egg-info/SOURCES.txt
+src/customer_report_owttsair.egg-info/dependency_links.txt
+src/customer_report_owttsair.egg-info/requires.txt
+src/customer_report_owttsair.egg-info/top_level.txt

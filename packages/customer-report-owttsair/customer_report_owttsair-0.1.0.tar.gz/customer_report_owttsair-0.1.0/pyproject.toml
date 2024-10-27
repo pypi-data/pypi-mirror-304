@@ -1,0 +1,16 @@
+[project]
+name = "customer-report-owttsair"
+version = "0.1.0"
+description = "A package for generating customer reports by age groups and cities"
+authors = [
+    { name="Колесникова Анастасия", email="kolesnikova20051003@gmail.com" }
+]
+dependencies = ["pandas"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]

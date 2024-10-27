@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: customer-report-owttsair
+Version: 0.1.0
+Summary: A package for generating customer reports by age groups and cities
+Author-email: Колесникова Анастасия <kolesnikova20051003@gmail.com>
+Requires-Dist: pandas
