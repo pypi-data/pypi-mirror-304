@@ -1,0 +1,276 @@
+[
+    {
+        "template": "{{#each data}}{{@index}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        "result": "0123"
+    },
+    {
+        "template": "{{#each data}}{{@key}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        
+        "result": "0123"
+    },
+    {
+        "template": "{{#each data}}{{#each this}}outer: {{@../key}},inner: {{@key}};{{/each}}{{/each}}",
+        "data": {
+            "data": [
+                [
+                    "apple",
+                    "banana"
+                ],
+                [
+                    "carrot",
+                    "zucchini"
+                ]
+            ]
+        },
+        "result": "outer: 0,inner: 0;outer: 0,inner: 1;outer: 1,inner: 0;outer: 1,inner: 1;"
+    },
+    {
+        "template": "{{#each data}}{{#if @first}}true{{else}}false{{/if}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        "result": "truefalsefalsefalse"
+    },
+    {
+        "template": "{{#each data}}{{@first}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        
+        "result": "truefalsefalsefalse"
+    },
+    {
+        "template": "{{#each data}}{{#each this}}outer: {{@../first}},inner: {{@first}};{{/each}}{{/each}}",
+        "data": {
+            "data": [
+                [
+                    "apple",
+                    "banana"
+                ],
+                [
+                    "carrot",
+                    "zucchini"
+                ]
+            ]
+        },
+        "result": "outer: true,inner: true;outer: true,inner: false;outer: false,inner: true;outer: false,inner: false;"
+    },
+    {
+        "template": "{{#each data}}{{#if @last}}true{{else}}false{{/if}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        "result": "falsefalsefalsetrue"
+    },
+    {
+        "template": "{{#each data}}{{@last}}{{/each}}",
+        "data": {
+            "data": [
+                "apple",
+                "banana",
+                "carrot",
+                "zucchini"
+            ]
+        },
+        
+        "result": "falsefalsefalsetrue"
+    },
+    {
+        "template": "{{#each data}}{{#each this}}outer: {{@../last}},inner: {{@last}};{{/each}}{{/each}}",
+        "data": {
+            "data": [
+                [
+                    "apple",
+                    "banana"
+                ],
+                [
+                    "carrot",
+                    "zucchini"
+                ]
+            ]
+        },
+        "result": "outer: false,inner: false;outer: false,inner: true;outer: true,inner: false;outer: true,inner: true;"
+    },
+    {
+        "template": "{{#each data}}{{@index}}{{/each}}",
+        "data": {
+            "data": [
+                {
+                    "@index": "apple"
+                },
+                {
+                    "@index": "banana"
+                },
+                {
+                    "@index": "carrot"
+                },
+                {
+                    "@index": "zucchini"
+                }
+            ]
+        },
+        "result": "0123"
+    },
+    {
+        "template": "{{#each data}}{{@index}}{{/each}}",
+        "data": {
+            "data": [{
+                "@index": "apple",
+                "@first": "apple",
+                "@last": "apple",
+                "@unknown": "apple"
+            },
+            {
+                "@index": "banana",
+                "@first": "banana",
+                "@last": "banana",
+                "@unknown": "banana"
+            },
+            {
+                "@index": "carrot",
+                "@first": "carrot",
+                "@last": "carrot",
+                "@unknown": "carrot"
+            },
+            {
+                "@index": "zucchini",
+                "@first": "zucchini",
+                "@last": "zucchini",
+                "@unknown": "zucchini"
+            }]
+        },
+        "result": "0123"
+    },
+    {
+        "template": "{{#each data}}{{@first}}{{/each}}",
+        "data": {
+            "data": [{
+                "@index": "apple",
+                "@first": "apple",
+                "@last": "apple",
+                "@unknown": "apple"
+            },
+            {
+                "@index": "banana",
+                "@first": "banana",
+                "@last": "banana",
+                "@unknown": "banana"
+            },
+            {
+                "@index": "carrot",
+                "@first": "carrot",
+                "@last": "carrot",
+                "@unknown": "carrot"
+            },
+            {
+                "@index": "zucchini",
+                "@first": "zucchini",
+                "@last": "zucchini",
+                "@unknown": "zucchini"
+            }]
+        },
+        "result": "truefalsefalsefalse"
+    },
+    {
+        "template": "{{#each data}}{{@last}}{{/each}}",
+        "data": {
+            "data": [{
+                "@index": "apple",
+                "@first": "apple",
+                "@last": "apple",
+                "@unknown": "apple"
+            },
+            {
+                "@index": "banana",
+                "@first": "banana",
+                "@last": "banana",
+                "@unknown": "banana"
+            },
+            {
+                "@index": "carrot",
+                "@first": "carrot",
+                "@last": "carrot",
+                "@unknown": "carrot"
+            },
+            {
+                "@index": "zucchini",
+                "@first": "zucchini",
+                "@last": "zucchini",
+                "@unknown": "zucchini"
+            }]
+        },
+        "result": "falsefalsefalsetrue"
+    },
+    {
+        "template": "{{#each data}}{{@unknown}}{{/each}}",
+        "data": {
+            "data": [{
+                "@index": "apple",
+                "@first": "apple",
+                "@last": "apple",
+                "@unknown": "apple"
+            },
+            {
+                "@index": "banana",
+                "@first": "banana",
+                "@last": "banana",
+                "@unknown": "banana"
+            },
+            {
+                "@index": "carrot",
+                "@first": "carrot",
+                "@last": "carrot",
+                "@unknown": "carrot"
+            },
+            {
+                "@index": "zucchini",
+                "@first": "zucchini",
+                "@last": "zucchini",
+                "@unknown": "zucchini"
+            }]
+        },
+        "result": ""
+    },
+    {
+        "template": "{{#each data}}{{@key}}{{/each}}",
+        "data": {
+            "data": {
+                "fruit": "apple",
+                "19": "banana",
+                "true": "carrot"
+            }
+        },
+        "result": "fruit19true"
+    }
+]

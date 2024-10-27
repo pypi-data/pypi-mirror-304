@@ -1,0 +1,23 @@
+[
+    {
+        "template": "{{! This is comment}}",
+        "data":[],
+        "result":""
+    },
+    {
+        "template": "{{data}}",
+        "data":{
+            "data": "result"
+        },
+        "result":"result"
+    },
+    {
+        "template": "{{data.key}}",
+        "data":{
+            "data": {
+                "key": "result"
+            }
+        },
+        "result":"result"
+    }
+]

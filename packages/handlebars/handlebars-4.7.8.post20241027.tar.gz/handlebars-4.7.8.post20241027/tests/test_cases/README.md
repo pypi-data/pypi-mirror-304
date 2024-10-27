@@ -1,0 +1,1 @@
+Note: Test case were taken from [handlebars-php](https://github.com/salesforce/handlebars-php/blob/master/tests/Handlebars/HandlebarsTest.php) => credits to handlebars-php contributors

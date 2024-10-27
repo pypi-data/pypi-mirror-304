@@ -1,0 +1,51 @@
+[
+    {
+        "template": "{{#if data}}Yes{{/if}}",
+        "data": {
+            "data": true
+        },
+        "result": "Yes"
+    },
+    {
+        "template": "{{#if data}}Yes{{/if}}",
+        "data": {
+            "data": false
+        },
+        "result": ""
+    },
+    {
+        "template": "{{#unless data}}OK{{/unless}}",
+        "data": {
+            "data": false
+        },
+        "result": "OK"
+    },
+    {
+        "template": "{{#unless data}}OK {{else}}I believe{{/unless}}",
+        "data": {
+            "data": true
+        },
+        "result": "I believe"
+    },
+    {
+        "template": "{{#with data}}{{key}}{{/with}}",
+        "data": {
+            "data": {
+                "key": "result"
+            }
+        },
+        "result": "result"
+    },
+    {
+        "template": "{{#each data}}{{this}}{{/each}}",
+        "data": {
+            "data": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "result": "1234"
+    }
+]
