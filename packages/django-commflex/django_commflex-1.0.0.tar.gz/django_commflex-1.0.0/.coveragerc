@@ -1,0 +1,13 @@
+[run]
+branch = True
+source=commflex
+omit = *migrations*,
+       commflex/**/migrations/*,
+       *__init__*,
+
+[report]
+show_missing=True
+exclude_lines=pragma: no cover
+
+[html]
+directory=coverage
