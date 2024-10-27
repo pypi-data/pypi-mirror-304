@@ -1,0 +1,2 @@
+pypci-ng>=0.0.5
+nvidia-ml-py

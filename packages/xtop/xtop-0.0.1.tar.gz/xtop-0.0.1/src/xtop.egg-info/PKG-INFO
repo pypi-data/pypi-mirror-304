@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xtop
+Version: 0.0.1
+Summary: xtop, a command line xpu hardware monitoring tool that supports CPU, GPU, and NPU.
+Author-email: Xiao Ran <xiaoran.007@icloud.com>
+License: GPL-3.0-or-later
+Project-URL: homepage, https://github.com/xiaoran007/xtop
+Keywords: xtop,xpu,system information,command line tool,python,hardware information,GPU,NPU
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pypci-ng>=0.0.5
+Requires-Dist: nvidia-ml-py
+
+# xtop
+xtop
+
+# Windows
+install:
+```shell
+pip install nvidia-ml-py windows-curses
+```
