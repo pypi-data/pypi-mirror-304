@@ -1,0 +1,2 @@
+[console_scripts]
+robotraconteur-camera-driver = robotraconteur_camera_driver:main
