@@ -1,0 +1,19 @@
+[block]
+colors = [
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'white',
+    'magenta',
+    'black',
+    'gray',
+]
+grid_size = 16
+[game]
+piece_count = 7
+[game.screen]
+info_width = 6
+field_width = 12
+field_height = 28
