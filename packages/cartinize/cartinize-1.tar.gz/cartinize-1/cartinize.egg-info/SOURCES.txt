@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+cartinize/__init__.py
+cartinize/carti.py
+cartinize.egg-info/PKG-INFO
+cartinize.egg-info/SOURCES.txt
+cartinize.egg-info/dependency_links.txt
+cartinize.egg-info/top_level.txt
+cartinize/assets/carti_fillers.json
+cartinize/assets/leet_dict.json
