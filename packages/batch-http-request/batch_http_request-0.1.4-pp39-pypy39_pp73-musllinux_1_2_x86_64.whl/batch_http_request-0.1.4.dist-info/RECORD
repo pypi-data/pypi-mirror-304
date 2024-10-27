@@ -1,0 +1,9 @@
+batch_http_request-0.1.4.dist-info/METADATA,sha256=uAkX_CcKexYbELP-ne5YTUE-dQfhswQ5q4yKTErbW30,3469
+batch_http_request-0.1.4.dist-info/WHEEL,sha256=04vJEQjR0JAUy6-KwJAkW-PJkuKtIIROGr8FRdDUcqw,112
+batch_http_request-0.1.4.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+batch_http_request.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+batch_http_request/__init__.py,sha256=ZazRPvRsajWj39IRH7ybNvCmKYEbkYc8R98PsWmJHXo,155
+batch_http_request/__init__.pyi,sha256=LC6Pl1dLZbKtuQXkMIz5rewUHbEwR7AQr9_dfbIOV_Y,2171
+batch_http_request/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batch_http_request/batch_http_request.pypy39-pp73-x86_64-linux-gnu.so,sha256=o5wwYlSdsr1dp0iHNr5rZcTyW5CtRv-Tn8lD3IUML54,9388025
+batch_http_request-0.1.4.dist-info/RECORD,,
