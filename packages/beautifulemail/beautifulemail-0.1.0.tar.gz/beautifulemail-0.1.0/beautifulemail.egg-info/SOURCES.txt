@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+beautifulemail/__init__.py
+beautifulemail/base.py
+beautifulemail.egg-info/PKG-INFO
+beautifulemail.egg-info/SOURCES.txt
+beautifulemail.egg-info/dependency_links.txt
+beautifulemail.egg-info/requires.txt
+beautifulemail.egg-info/top_level.txt
+beautifulemail/templates/msft_plain_blue.html
