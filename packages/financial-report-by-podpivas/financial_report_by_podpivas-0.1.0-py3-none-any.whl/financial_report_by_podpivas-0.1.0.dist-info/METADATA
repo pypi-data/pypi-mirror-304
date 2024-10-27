@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: financial_report_by_podpivas
+Version: 0.1.0
+Summary: Python-пакет для анализа доходов и расходов компании.
+Author-email: podpivas <k.shaykhraziev@edu.centraluniversity.ru>
+Requires-Dist: pandas
+
