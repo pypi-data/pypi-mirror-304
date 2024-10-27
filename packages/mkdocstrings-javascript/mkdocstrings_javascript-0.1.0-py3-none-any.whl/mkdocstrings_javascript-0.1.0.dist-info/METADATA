@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: mkdocstrings-javascript
+Version: 0.1.0
+Summary: Javascript handler for mkdocstrings.
+Author-Email: =?utf-8?q?Timoth=C3=A9e_Mazzucotelli?= <dev@pawamoy.fr>
+License: ISC
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://mkdocstrings.github.io/javascript
+Project-URL: Documentation, https://mkdocstrings.github.io/javascript
+Project-URL: Changelog, https://mkdocstrings.github.io/javascript/changelog
+Project-URL: Repository, https://github.com/mkdocstrings/javascript
+Project-URL: Issues, https://github.com/mkdocstrings/javascript/issues
+Project-URL: Discussions, https://github.com/mkdocstrings/javascript/discussions
+Project-URL: Gitter, https://gitter.im/mkdocstrings/javascript
+Project-URL: Funding, https://github.com/sponsors/pawamoy
+Requires-Python: >=3.9
+Requires-Dist: mkdocstrings>=0.18
+Description-Content-Type: text/markdown
+
+# mkdocstrings-javascript
+
+[![documentation](https://img.shields.io/badge/docs-mkdocs-708FCC.svg?style=flat)](https://mkdocstrings.github.io/javascript/)
+[![gitter](https://badges.gitter.im/join%20chat.svg)](https://app.gitter.im/#/room/#javascript:gitter.im)
+
+Javascript handler for mkdocstrings.
+
+## Installation
+
+This project is available to sponsors only, through my Insiders program.
+See Insiders [explanation](https://mkdocstrings.github.io/javascript/insiders/)
+and [installation instructions](https://mkdocstrings.github.io/javascript/insiders/installation/).
