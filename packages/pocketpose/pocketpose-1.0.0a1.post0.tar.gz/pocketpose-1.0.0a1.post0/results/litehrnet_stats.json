@@ -1,0 +1,220 @@
+{
+  "litehrnet": {
+    "18_coco_256x192_fp16": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 2,
+      "file_size": 2.4787445068359375,
+      "params": 1.114569,
+      "flops": 0.405025536
+    },
+    "18_coco_256x192_fp32": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 4,
+      "file_size": 4.5011749267578125,
+      "params": 1.114569,
+      "flops": 0.405025536
+    },
+    "18_coco_256x192_int8": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 1,
+      "file_size": 1.8718795776367188,
+      "params": 1.114569,
+      "flops": 0.405025536
+    },
+    "18_coco_384x288_fp16": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 2,
+      "file_size": 2.4787445068359375,
+      "params": 1.114569,
+      "flops": 0.911043456
+    },
+    "18_coco_384x288_fp32": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 4,
+      "file_size": 4.5011749267578125,
+      "params": 1.114569,
+      "flops": 0.911043456
+    },
+    "18_coco_384x288_int8": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 1,
+      "file_size": 1.8718795776367188,
+      "params": 1.114569,
+      "flops": 0.911043456
+    },
+    "18_mpii_256x256_fp16": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 2,
+      "file_size": 2.478668212890625,
+      "params": 1.114528,
+      "flops": 0.539635968
+    },
+    "18_mpii_256x256_fp32": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 4,
+      "file_size": 4.501018524169922,
+      "params": 1.114528,
+      "flops": 0.539635968
+    },
+    "18_mpii_256x256_int8": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 1,
+      "file_size": 1.8718109130859375,
+      "params": 1.114528,
+      "flops": 0.539635968
+    },
+    "30_coco_256x192_fp16": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 2,
+      "file_size": 3.912628173828125,
+      "params": 1.737613,
+      "flops": 0.632358336
+    },
+    "30_coco_256x192_fp32": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 4,
+      "file_size": 7.0518798828125,
+      "params": 1.737613,
+      "flops": 0.632358336
+    },
+    "30_coco_256x192_int8": {
+      "inputs": [
+        "256x192x3"
+      ],
+      "outputs": [
+        "64x48x17"
+      ],
+      "precision": 1,
+      "file_size": 2.9962692260742188,
+      "params": 1.737613,
+      "flops": 0.632358336
+    },
+    "30_coco_384x288_fp16": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 2,
+      "file_size": 3.912628173828125,
+      "params": 1.737613,
+      "flops": 1.422368256
+    },
+    "30_coco_384x288_fp32": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 4,
+      "file_size": 7.0518798828125,
+      "params": 1.737613,
+      "flops": 1.422368256
+    },
+    "30_coco_384x288_int8": {
+      "inputs": [
+        "384x288x3"
+      ],
+      "outputs": [
+        "96x72x17"
+      ],
+      "precision": 1,
+      "file_size": 2.9962692260742188,
+      "params": 1.737613,
+      "flops": 1.422368256
+    },
+    "30_mpii_256x256_fp16": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 2,
+      "file_size": 3.9125518798828125,
+      "params": 1.737572,
+      "flops": 0.842699968
+    },
+    "30_mpii_256x256_fp32": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 4,
+      "file_size": 7.051723480224609,
+      "params": 1.737572,
+      "flops": 0.842699968
+    },
+    "30_mpii_256x256_int8": {
+      "inputs": [
+        "256x256x3"
+      ],
+      "outputs": [
+        "64x64x16"
+      ],
+      "precision": 1,
+      "file_size": 2.9962005615234375,
+      "params": 1.737572,
+      "flops": 0.842699968
+    }
+  }
+}

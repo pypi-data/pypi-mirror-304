@@ -1,0 +1,53 @@
+:py:mod:`pocketpose.models.decoder.posenet`
+===========================================
+
+.. py:module:: pocketpose.models.decoder.posenet
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.decoder.posenet.PoseNetDecoder
+
+
+
+
+.. py:class:: PoseNetDecoder(output_stride=32, local_maximum_radius=1, threshold=0.5)
+
+
+   .. py:method:: decode_multi_pose(heatmaps, offsets, displacement_fwd, displacement_bwd)
+
+
+   .. py:method:: build_part_with_score_queue(scores)
+
+
+   .. py:method:: score_is_maximum_in_local_window(keypointId, score, heatmapY, heatmapX, scores)
+
+
+   .. py:method:: traverse_to_target_keypoint(keypoints, displacements, direction, scores, offsets)
+
+
+   .. py:method:: get_edge_keypoints(edge_id, direction)
+
+
+   .. py:method:: estimate_target_keypoint_position(edge_id, source_keypoint_id, target_keypoint_id, keypoints, displacements, scores, offsets)
+
+
+   .. py:method:: get_displacement(edge_id, keypoint, displacements)
+
+
+   .. py:method:: get_strided_index_near_point(point, output_stride, displacements)
+
+
+   .. py:method:: get_instance_score(keypoints)
+
+
+   .. py:method:: sigmoid(x)
+
+
+

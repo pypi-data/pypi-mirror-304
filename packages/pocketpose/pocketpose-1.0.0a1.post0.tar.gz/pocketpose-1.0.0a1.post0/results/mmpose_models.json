@@ -1,0 +1,97 @@
+{
+  "td": {
+    "hm_cpm_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x24x32",
+        "17x24x32",
+        "17x24x32",
+        "17x24x32",
+        "17x24x32",
+        "17x24x32"
+      ],
+      "file_size": 29.945755004882812,
+      "params": 31.299622,
+      "flops": 127.472369664
+    },
+    "hm_hourglass52_8xb32-210e_coco-256x256": {
+      "inputs": [
+        "3x256x256"
+      ],
+      "outputs": [
+        "17x64x64"
+      ],
+      "file_size": 89.7852783203125,
+      "params": 93.637905,
+      "flops": 57.247237632
+    },
+    "hm_hrnet-w32_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 27.814735412597656,
+      "params": 28.508945,
+      "flops": 15.301632
+    },
+    "hm_hrnet-w48_8xb32-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 61.41948699951172,
+      "params": 63.555953,
+      "flops": 31.399514112
+    },
+    "hm_litehrnet-18_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 1.766265869140625,
+      "params": 1.114569,
+      "flops": 0.406008576
+    },
+    "hm_litehrnet-30_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 2.82763671875,
+      "params": 1.737613,
+      "flops": 0.634078656
+    },
+    "hm_res101_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 51.31871795654297,
+      "params": 42.451857,
+      "flops": 15.317925888
+    },
+    "hm_res50_8xb64-210e_coco-256x192": {
+      "inputs": [
+        "3x192x256"
+      ],
+      "outputs": [
+        "17x48x64"
+      ],
+      "file_size": 32.82896423339844,
+      "params": 23.485841,
+      "flops": 8.041660416
+    }
+  }
+}

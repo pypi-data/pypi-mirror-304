@@ -1,0 +1,13 @@
+:py:mod:`pocketpose.datasets.registry`
+======================================
+
+.. py:module:: pocketpose.datasets.registry
+
+
+Module Contents
+---------------
+
+.. py:data:: skeleton_registry
+
+   
+

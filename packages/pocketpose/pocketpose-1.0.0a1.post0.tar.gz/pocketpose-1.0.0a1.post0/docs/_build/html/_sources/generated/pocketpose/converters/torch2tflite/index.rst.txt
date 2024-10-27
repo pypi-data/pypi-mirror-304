@@ -1,0 +1,45 @@
+:py:mod:`pocketpose.converters.torch2tflite`
+============================================
+
+.. py:module:: pocketpose.converters.torch2tflite
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.converters.torch2tflite.Torch2TFLiteConverter
+
+
+
+
+.. py:class:: Torch2TFLiteConverter(overwrite=True, log_level=logging.INFO, onnx_opset_version=17, use_tf_ops=False, quantize=TF2TFLiteConverter.QUANTIZE_NONE)
+
+
+   Bases: :py:obj:`pocketpose.converters.base_converter.BaseConverter`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: _convert(model, save_path, *args, **kwargs)
+
+      Convert the model to the target format and save it to the given path.
+
+      Args:
+          model (Any): The model to convert.
+          save_path (str): Where to save the converted model.
+          *args: Variable length argument list for the model.
+          **kwargs: Arbitrary keyword arguments for the model.
+
+      Returns:
+          Any: The converted model.
+
+      Raises:
+          NotImplementedError: If the subclass does not implement this method.
+
+
+

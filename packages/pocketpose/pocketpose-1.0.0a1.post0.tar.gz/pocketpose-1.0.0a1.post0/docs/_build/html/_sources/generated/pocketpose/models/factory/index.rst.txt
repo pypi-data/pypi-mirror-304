@@ -1,0 +1,40 @@
+:py:mod:`pocketpose.models.factory`
+===================================
+
+.. py:module:: pocketpose.models.factory
+
+.. autoapi-nested-parse::
+
+   Model factory to create models from their names.
+
+   This module contains a factory to create models from their names. The factory
+   is used to create models, which can then be retrieved by name using the model
+   factory.
+
+   Example:
+       >>> from pocketpose.models.factory import ModelFactory
+       >>> model = ModelFactory.create("model1")
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.factory.ModelFactory
+
+
+
+
+.. py:class:: ModelFactory
+
+
+   .. py:method:: create(model_name, *args, **kwargs)
+      :classmethod:
+
+
+

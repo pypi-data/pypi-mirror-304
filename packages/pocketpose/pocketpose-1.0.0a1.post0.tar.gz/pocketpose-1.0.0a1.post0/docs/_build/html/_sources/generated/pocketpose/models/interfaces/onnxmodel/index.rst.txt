@@ -1,0 +1,54 @@
+:py:mod:`pocketpose.models.interfaces.onnxmodel`
+================================================
+
+.. py:module:: pocketpose.models.interfaces.onnxmodel
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.interfaces.onnxmodel.ONNXModel
+
+
+
+
+.. py:class:: ONNXModel(model_path: str, model_url: str, **kwargs)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.imodel.IModel`
+
+   Interface for all ONNX models. 
+
+   We assume that the model has a single input, but it can have multiple outputs.
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+

@@ -1,0 +1,6 @@
+:py:mod:`pocketpose.models.body.efficientpose_nas`
+==================================================
+
+.. py:module:: pocketpose.models.body.efficientpose_nas
+
+

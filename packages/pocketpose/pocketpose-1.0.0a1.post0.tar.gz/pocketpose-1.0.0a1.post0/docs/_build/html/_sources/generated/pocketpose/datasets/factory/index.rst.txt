@@ -1,0 +1,22 @@
+:py:mod:`pocketpose.datasets.factory`
+=====================================
+
+.. py:module:: pocketpose.datasets.factory
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.datasets.factory.get_skeleton
+
+
+
+.. py:function:: get_skeleton(name) -> pocketpose.datasets.skeletons.Skeleton
+
+

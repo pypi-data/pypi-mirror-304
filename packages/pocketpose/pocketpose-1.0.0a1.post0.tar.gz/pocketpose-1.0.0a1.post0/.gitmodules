@@ -1,0 +1,7 @@
+[submodule "pocketpose-android"]
+	path = pocketpose-android
+	url = https://github.com/saifkhichi96/pocket-pose-android.git
+	branch = main
+[submodule "projects/pp-studio"]
+	path = projects/pp-studio
+	url = https://github.com/saifkhichi96/pp-studio

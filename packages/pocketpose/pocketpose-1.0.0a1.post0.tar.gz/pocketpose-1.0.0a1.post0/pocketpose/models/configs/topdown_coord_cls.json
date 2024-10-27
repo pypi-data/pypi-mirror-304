@@ -1,0 +1,166 @@
+{
+    "name": "td-cc",
+    "description": "Topdown pose estimators using the SimCC-like architecture for coordinate classification.",
+    "variants": {
+        "mobilenetv2_coco": {
+            "name": "td-cc_mobilenetv2_coco-256x192",
+            "pretty_name": "SimCC MobileNetV2",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/15zJIXQWH5Ui5h0PMcnCCZ2S4JNjCXZtc/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/simcc-0d1bf8.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc0/configs/body_2d_keypoint/simcc/coco/simcc_mobilenetv2_wo-deconv-8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "vipnas-mobilenetv3_coco": {
+            "name": "td-cc_vipnas-mobilenetv3_coco-256x192",
+            "pretty_name": "SimCC ViPNAS-MobileNetV3",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1ia4mkM5ATc2uran5WZWoSeP8N4Q4EWVA/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/simcc-722a37.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc0/configs/body_2d_keypoint/simcc/coco/simcc_vipnas-mbv3_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "resnet50_coco": {
+            "name": "td-cc_resnet50_coco-256x192",
+            "pretty_name": "SimCC ResNet50",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1tiLlu6T9JQNYVCev-YDterG8UUfrnIiL/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/simcc-fefdab.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc0/configs/body_2d_keypoint/simcc/coco/simcc_res50_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "rtmpose-t_coco": {
+            "name": "td-cc_rtmpose-t_coco-256x192",
+            "pretty_name": "RTMPose-t",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1txyOmtcAFLYa9qSzL-mheJlc5G6iQDjC"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmpose-t-3f713b.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-t_8xb256-420e_aic-coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "rtmpose-s_coco": {
+            "name": "td-cc_rtmpose-s_coco-256x192",
+            "pretty_name": "RTMPose-s",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1dc-yrbQ3oJldfBfCj54oyglO6njT5c78"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmpose-s-903875.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-s_8xb256-420e_aic-coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "rtmpose-m_coco": {
+            "name": "td-cc_rtmpose-m_coco-256x192",
+            "pretty_name": "RTMPose-m",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1na70j7QYud8N4-Pc-3xXS6WUe0NCSEPF"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmpose-m-4d5988.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-m_8xb256-420e_aic-coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "rtmpose-l_coco": {
+            "name": "td-cc_rtmpose-l_coco-256x192",
+            "pretty_name": "RTMPose-l",
+            "input_size": [
+                384,
+                288,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1BKGaT4NS3q8KkkoeJX0SfpFEnRbdUKxC"
+            },
+            "source": {
+                "name": "MMDeploy",
+                "link": "https://mmdeploy-oss.openmmlab.com/model/mmpose/rtmpose-l-059cd7.onnx",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-l_8xb256-420e_aic-coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "rtmw-m_coco-wholebody": {
+            "name": "td-cc_rtmw-m_coco-wholebody-256x192",
+            "pretty_name": "RTMW-m (COCO-WholeBody)",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco_wholebody",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1XolCPAIzPQDw55ANzKQ-nQVwfqZRoJdx/view?usp=drive_link"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/v1/projects/rtmw/onnx_sdk/rtmw-dw-m-s_simcc-cocktail14_270e-256x192_20231122.zip",
+                "code": "https://github.com/open-mmlab/mmpose/blob/5a3be9451bdfdad2053a90dc1199e3ff1ea1a409/configs/wholebody_2d_keypoint/rtmpose/cocktail14/rtmw-m_8xb1024-270e_cocktail14-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        }
+    }
+}

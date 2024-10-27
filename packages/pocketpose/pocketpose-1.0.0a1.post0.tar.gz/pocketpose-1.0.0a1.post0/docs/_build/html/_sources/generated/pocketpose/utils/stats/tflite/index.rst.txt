@@ -1,0 +1,57 @@
+:py:mod:`pocketpose.utils.stats.tflite`
+=======================================
+
+.. py:module:: pocketpose.utils.stats.tflite
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.utils.stats.tflite.estimate_flops_tflite
+   pocketpose.utils.stats.tflite.estimate_parameters_tflite
+   pocketpose.utils.stats.tflite.get_stats_tflite
+
+
+
+.. py:function:: estimate_flops_tflite(model_path: str) -> float
+
+   Estimates the number of floating point operations in a TFLite model.
+
+   Note: This is a rough estimate which only considers CONV_2D, DEPTHWISE_CONV_2D,
+   FULLY_CONNECTED, ADD, and MUL operators.
+
+   For FULLY_CONNECTED layer, we assume that the number of FLOPs is approximately 2
+   times the number of elements in the weight matrix, which assumes that each weight
+   participates in one multiplication and one addition.
+
+   For ADD and MUL layers, we assume that each operation is performed element-wise,
+   and so the number of FLOPs is equal to the total number of elements in the
+   input tensor.
+
+   Args:
+       model_path (str): Path to TFLite model
+
+   Returns:
+       float: Number of estimated GFLOPs in the model
+
+
+.. py:function:: estimate_parameters_tflite(model_path: str) -> int
+
+   Estimates the number of parameters in a TFLite model.
+
+   Args:
+       model_path (str): Path to TFLite model
+
+   Returns:
+       int: Number of parameters in the model
+
+
+.. py:function:: get_stats_tflite(model_path: str) -> tuple[str, dict[str, Any]]
+
+

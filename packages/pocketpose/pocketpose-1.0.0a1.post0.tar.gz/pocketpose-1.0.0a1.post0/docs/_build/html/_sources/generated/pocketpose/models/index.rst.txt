@@ -1,0 +1,882 @@
+:py:mod:`pocketpose.models`
+===========================
+
+.. py:module:: pocketpose.models
+
+.. autoapi-nested-parse::
+
+   Models package.
+
+   This package contains all the pose estimation models supported by PocketPose.
+   The models are registered in the model registry, which is used by the
+   ModelFactory to create the models.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   body/index.rst
+   decoder/index.rst
+   interfaces/index.rst
+   wholebody/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   factory/index.rst
+   registry/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.TFLiteModel
+   pocketpose.models.EfficientPose
+   pocketpose.models.EfficientPoseRTLite
+   pocketpose.models.EfficientPoseILite
+   pocketpose.models.EfficientPoseIILite
+   pocketpose.models.EfficientPoseRT
+   pocketpose.models.EfficientPoseI
+   pocketpose.models.EfficientPoseII
+   pocketpose.models.EfficientPoseIII
+   pocketpose.models.EfficientPoseIV
+   pocketpose.models.MoveNet
+   pocketpose.models.MoveNetLightning
+   pocketpose.models.MoveNetLightningFP16
+   pocketpose.models.MoveNetLightningINT8
+   pocketpose.models.MoveNetThunder
+   pocketpose.models.MoveNetThunderFP16
+   pocketpose.models.MoveNetThunderINT8
+   pocketpose.models.HeatmapDeocder
+   pocketpose.models.PoseNetDecoder
+   pocketpose.models.PoseNet
+   pocketpose.models.PoseNetSinglePerson
+   pocketpose.models.PoseNetMultiPerson
+   pocketpose.models.SimCCDecoder
+   pocketpose.models.ONNXModel
+   pocketpose.models.RTMPose
+   pocketpose.models.RTMPoseM
+   pocketpose.models.TFLiteModel
+   pocketpose.models.BlazePose
+   pocketpose.models.BlazePoseLite
+   pocketpose.models.BlazePoseFull
+   pocketpose.models.BlazePoseHeavy
+   pocketpose.models.ModelFactory
+   pocketpose.models.IModel
+   pocketpose.models.TFLiteModel
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.get_skeleton
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.model_registry
+   pocketpose.models.model_registry
+   pocketpose.models.model_registry
+
+
+.. py:function:: get_skeleton(name) -> pocketpose.datasets.skeletons.Skeleton
+
+
+.. py:class:: TFLiteModel(model_path: str, model_url: str, **kwargs)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.imodel.IModel`
+
+   Interface for all TensorFlow Lite models. 
+
+   We assume that the model has a single input, but it can have multiple outputs.
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: get_output(output_idx: int) -> numpy.ndarray
+
+      Returns the output tensor of the model.
+
+      Args:
+          output_idx (int): The index of the output tensor to return.
+
+      Returns:
+          The output tensor as a numpy array.
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+
+.. py:data:: model_registry
+
+   
+
+.. py:class:: EfficientPose(model_path: str, model_url: str, input_size: tuple, real_time: bool = False, lite: bool = False)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for EfficientPose models. 
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: reorder_keypoints(keypoints: numpy.ndarray) -> numpy.ndarray
+
+      Sort the keypoints according to match the expected order. 
+
+      EfficientPose outputs the keypoints in a different order than the expected order,
+      so we need to reorder them. This function takes the predicted keypoints, maps them
+      to the expected order and returns the reordered keypoints.
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size)
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+   .. py:method:: decode_heatmaps(heatmaps, original_size)
+
+      Decode the heatmaps to keypoints coordinates.
+
+      Args:
+          heatmaps (np.ndarray): Numpy array of shape (1, H, W, K)
+
+      Returns:
+          List of predicted coordinates of shape (K, 3) as (x, y, score)
+
+
+
+.. py:class:: EfficientPoseRTLite
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-RT Lite model. 
+
+
+.. py:class:: EfficientPoseILite
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-I Lite model. 
+
+
+.. py:class:: EfficientPoseIILite
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-II Lite model. 
+
+
+.. py:class:: EfficientPoseRT
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-RT model. 
+
+
+.. py:class:: EfficientPoseI
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-I model. 
+
+
+.. py:class:: EfficientPoseII
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-II model. 
+
+
+.. py:class:: EfficientPoseIII
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-III model. 
+
+
+.. py:class:: EfficientPoseIV
+
+
+   Bases: :py:obj:`EfficientPose`
+
+   EfficientPose-IV model. 
+
+
+.. py:class:: MoveNet(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for the MoveNet models.
+
+   MoveNet is a lightweight pose estimation model developed by Google Research
+   that runs on mobile devices. It uses a lightweight MobileNetV2 backbone and
+   a Feature Pyramid Network (FPN) decoder together with CenterNet-style keypoint
+   prediction heads. The model is trained on the COCO dataset and can detect 17
+   keypoints.
+
+   For more information, see the following links:
+   - https://www.tensorflow.org/hub/tutorials/movenet
+   - https://blog.tensorflow.org/2021/05/next-generation-pose-detection-with-movenet-and-tensorflowjs.html
+
+   .. py:method:: postprocess_prediction(prediction, original_size)
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+
+.. py:class:: MoveNetLightning
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model.
+
+   The Lightning model is the smallest MoveNet model and is intended for
+   latency-critical applications.
+
+
+.. py:class:: MoveNetLightningFP16
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model with float16 quantization. 
+
+
+.. py:class:: MoveNetLightningINT8
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Lightning model with int8 quantization. 
+
+
+.. py:class:: MoveNetThunder
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model.
+
+   The Thunder model is the largest MoveNet model and is intended for high
+   accuracy applications. This model gives better predictions than the Lightning
+   variants, but is also slower.
+
+
+.. py:class:: MoveNetThunderFP16
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model with float16 quantization. 
+
+
+.. py:class:: MoveNetThunderINT8
+
+
+   Bases: :py:obj:`MoveNet`
+
+   MoveNet Thunder model with int8 quantization. 
+
+
+.. py:class:: HeatmapDeocder
+
+
+   Bases: :py:obj:`pocketpose.models.decoder.base_decoder.Decoder`
+
+   Base class for all decoders. 
+
+   Decoders are used to decode the prediction of pose models into a keypoint list
+   in the image coordinate system. The keypoint list is a list of tuples (x, y, score)
+   where x and y are the coordinates and score is the prediction confidence.
+
+   All decoders must implement the decode method. Each model has a corresponding decoder,
+   and the decode method is automatically called when the model is used for prediction.
+
+   .. py:method:: decode(prediction, image_shape)
+
+
+
+.. py:class:: PoseNetDecoder(output_stride=32, local_maximum_radius=1, threshold=0.5)
+
+
+   .. py:method:: decode_multi_pose(heatmaps, offsets, displacement_fwd, displacement_bwd)
+
+
+   .. py:method:: build_part_with_score_queue(scores)
+
+
+   .. py:method:: score_is_maximum_in_local_window(keypointId, score, heatmapY, heatmapX, scores)
+
+
+   .. py:method:: traverse_to_target_keypoint(keypoints, displacements, direction, scores, offsets)
+
+
+   .. py:method:: get_edge_keypoints(edge_id, direction)
+
+
+   .. py:method:: estimate_target_keypoint_position(edge_id, source_keypoint_id, target_keypoint_id, keypoints, displacements, scores, offsets)
+
+
+   .. py:method:: get_displacement(edge_id, keypoint, displacements)
+
+
+   .. py:method:: get_strided_index_near_point(point, output_stride, displacements)
+
+
+   .. py:method:: get_instance_score(keypoints)
+
+
+   .. py:method:: sigmoid(x)
+
+
+
+.. py:class:: PoseNet(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for PoseNet models. 
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: flip_keypoints(keypoints, image_width)
+
+      Flip the keypoints horizontally. 
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size) -> List[List[float]]
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+   .. py:method:: extract_keypoints_from_heatmaps(heatmaps)
+
+      Extract the keypoints from the heatmaps. 
+
+      Args:
+          heatmaps: The heatmaps to extract the keypoints from. Shape: (height, width, num_keypoints)
+          
+      Returns:
+          A tuple containing the keypoints and their confidences.
+
+
+   .. py:method:: apply_offsets(keypoints, offsets, output_stride=32)
+
+
+
+.. py:class:: PoseNetSinglePerson
+
+
+   Bases: :py:obj:`PoseNet`
+
+   MoveNet Lightning model. 
+
+
+.. py:class:: PoseNetMultiPerson
+
+
+   Bases: :py:obj:`PoseNet`
+
+   MoveNet Lightning model. 
+
+
+.. py:class:: SimCCDecoder
+
+
+   Bases: :py:obj:`pocketpose.models.decoder.base_decoder.Decoder`
+
+   Base class for all decoders. 
+
+   Decoders are used to decode the prediction of pose models into a keypoint list
+   in the image coordinate system. The keypoint list is a list of tuples (x, y, score)
+   where x and y are the coordinates and score is the prediction confidence.
+
+   All decoders must implement the decode method. Each model has a corresponding decoder,
+   and the decode method is automatically called when the model is used for prediction.
+
+   .. py:method:: decode(prediction, image_shape)
+
+
+
+.. py:class:: ONNXModel(model_path: str, model_url: str, **kwargs)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.imodel.IModel`
+
+   Interface for all ONNX models. 
+
+   We assume that the model has a single input, but it can have multiple outputs.
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+
+.. py:class:: RTMPose(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.ONNXModel`
+
+   Base class for RTMPose models. 
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size) -> List[List[float]]
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+
+.. py:class:: RTMPoseM
+
+
+   Bases: :py:obj:`RTMPose`
+
+   MoveNet Lightning model. 
+
+
+.. py:class:: TFLiteModel(model_path: str, model_url: str, **kwargs)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.imodel.IModel`
+
+   Interface for all TensorFlow Lite models. 
+
+   We assume that the model has a single input, but it can have multiple outputs.
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: get_output(output_idx: int) -> numpy.ndarray
+
+      Returns the output tensor of the model.
+
+      Args:
+          output_idx (int): The index of the output tensor to return.
+
+      Returns:
+          The output tensor as a numpy array.
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+
+.. py:data:: model_registry
+
+   
+
+.. py:class:: BlazePose(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for the BlazePose models. 
+
+   .. py:attribute:: NUM_KEYPOINTS
+      :value: 33
+
+      
+
+   .. py:attribute:: NUM_LANDMARKS
+      :value: 39
+
+      
+
+   .. py:attribute:: LANDMARKS_DIM
+      :value: 5
+
+      
+
+   .. py:attribute:: HEATMAPS_DIM
+      :value: 39
+
+      
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: _calculate_keypoints(landmark_points, heatmap, index, original_size)
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size)
+
+      Postprocess the prediction.
+
+      Args:
+          prediction (list): List of outputs from the model.
+          original_size (tuple): Original size of the image as (height, width).
+
+
+
+.. py:class:: BlazePoseLite
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Lite model. 
+
+
+.. py:class:: BlazePoseFull
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Full model. 
+
+
+.. py:class:: BlazePoseHeavy
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Heavy model. 
+
+
+.. py:class:: ModelFactory
+
+
+   .. py:method:: create(model_name, *args, **kwargs)
+      :classmethod:
+
+
+
+.. py:class:: IModel(model_path: str, model_url: str, keypoints_type: str = 'coco', input_size: tuple = (256, 192, 3), output_type: str = 'keypoints')
+
+
+   Bases: :py:obj:`abc.ABC`
+
+   Base class for all models.
+
+   This class defines the interface that all models must implement. The interface
+   is designed to be as generic as possible, so that it can be used with any model.
+
+   The model class hierarchy is as follows:
+   IModel
+   ├── Framework-specific interface (e.g. TFLiteModel)
+   │   ├── Model class (e.g. MoveNet)
+
+   The interface is divided into four steps:
+   1. Load the input image
+   2. Prepare the image for prediction
+   3. Run inference
+   4. Postprocess the prediction to get the keypoints
+
+   The first step is model-agnostic, so it is implemented in this class. Step 3 is
+   specific to the framework, so it is implemented in the framework-specific interface
+   which is a subclass of this class. Steps 2 and 4 are model-specific, so they are
+   implemented in the model classes which are subclasses of the framework-specific
+   interfaces.
+
+   .. py:method:: load_image(image_path: str) -> tuple[numpy.ndarray, tuple[int]]
+
+      Loads an image from a file.
+
+      The image is loaded using the TensorFlow I/O library, and is resized to
+      match the model input size using bilinear interpolation. The aspect ratio
+      is preserved by padding the shorter side with zeros.
+
+      Args:
+          image_path (str): Path to the image file.
+
+      Returns:
+          The loaded image as a numpy array with shape (1, height, width, channels)
+          and dtype uint8 (range [0, 255]).
+          The original size of the image as a tuple (height, width).
+
+
+   .. py:method:: process_image(image: numpy.ndarray) -> numpy.ndarray
+      :abstractmethod:
+
+      Prepares the image for prediction.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image
+                              has shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]).
+
+      Returns:
+          The processed image as a numpy array with the shape and dtype expected
+          by the model.
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+      :abstractmethod:
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+   .. py:method:: postprocess_prediction(prediction: Any, original_size: tuple) -> List[tuple[float]]
+      :abstractmethod:
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+   .. py:method:: heatmaps_to_coords(heatmaps: numpy.ndarray) -> numpy.ndarray
+
+      Converts a set of heatmaps to a set of keypoint coordinates.
+
+      The keypoint coordinates are calculated as the (x, y) coordinates of the maximum
+      value in each heatmap, with values normalized to the input image coordinates.
+
+      The score of each keypoint is calculated as the maximum value in the corresponding
+      heatmap.
+
+      Args:
+          heatmaps (np.ndarray): The heatmaps to convert to keypoint coordinates as a
+                                 numpy array of shape (K, H, W), where K is the number
+                                 of keypoints and H and W are the height and width of
+                                 the heatmaps.
+
+      Returns:
+          The keypoint coordinates as a numpy array of shape (K, 3), where each row is
+          the (x, y, score) coordinates of a keypoint. The coordinates are normalized
+          to the input image size. The score is the maximum value in the corresponding
+          heatmap and is normalized to the range [0, 1].
+
+
+   .. py:method:: __call__(image_path: str) -> List[tuple[float]]
+
+      Infers the pose of an image.
+
+      Args:
+          image_path (str): Path to the image file.
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+
+.. py:class:: TFLiteModel(model_path: str, model_url: str, **kwargs)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.imodel.IModel`
+
+   Interface for all TensorFlow Lite models. 
+
+   We assume that the model has a single input, but it can have multiple outputs.
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: get_output(output_idx: int) -> numpy.ndarray
+
+      Returns the output tensor of the model.
+
+      Args:
+          output_idx (int): The index of the output tensor to return.
+
+      Returns:
+          The output tensor as a numpy array.
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+
+.. py:data:: model_registry
+
+   
+

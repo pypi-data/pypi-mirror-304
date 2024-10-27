@@ -1,0 +1,76 @@
+:py:mod:`pocketpose.benchmarks.eval_coco_full`
+==============================================
+
+.. py:module:: pocketpose.benchmarks.eval_coco_full
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.benchmarks.eval_coco_full.crop
+   pocketpose.benchmarks.eval_coco_full.scale_keypoints
+   pocketpose.benchmarks.eval_coco_full.infer_person
+   pocketpose.benchmarks.eval_coco_full.infer_coco_full
+
+
+
+.. py:function:: crop(image_path, box)
+
+   Crop an image.
+
+   Args:
+       image_path (str): The path to the image.
+       box (list): The bounding box coordinates as [xmin, ymin, width, height].
+
+   Returns:
+       numpy.array: The cropped and resized image.
+
+
+.. py:function:: scale_keypoints(keypoints, original_size, bbox)
+
+   Scale keypoints from the bbox coordinates to the original image coordinates.
+
+   Args:
+       keypoints (list): The keypoints in the cropped image.
+       original_size (tuple): The size of the original image (width, height).
+       box (list): The bounding box coordinates [xmin, ymin, width, height].
+
+   Returns:
+       list: The scaled keypoints.
+
+
+.. py:function:: infer_person(inferencer, image_path, bbox, kpt_thr=0.3, save_vis=None)
+
+   Run inference on an image and convert the results to COCO format.
+
+   Args:
+       inferencer (PoseInferencer): The PoseInferencer object.
+       image_path (str): The path to the image.
+       bbox (list): The bounding box coordinates [xmin, ymin, width, height].
+       kpt_thr (float): The score threshold to keep a keypoint (default: 0.3).
+       save_vis (bool): Path to save the visualization of the keypoints. This will
+                        slow down the evaluation, so it is recommended to only use
+                        this option for debugging purposes. If not None, it must
+                        point to an existing directory (default: None).
+
+
+.. py:function:: infer_coco_full(inferencer, images_path, det_annotations_path, kpt_thr=0.3, save_vis=None)
+
+   Run inference for each image and store results in a JSON file.
+
+   Args:
+       inferencer (PoseInferencer): The PoseInferencer object.
+       images_path (str): The path to the dataset images folder.
+       det_annotations_path (str): The path to the detection annotations file.
+       kpt_thr (float): The score threshold to keep a keypoint (default: 0.3).
+       save_vis (bool): Path to save the visualization of the keypoints. This will
+                        slow down the evaluation, so it is recommended to only use
+                        this option for debugging purposes (default: None).
+
+

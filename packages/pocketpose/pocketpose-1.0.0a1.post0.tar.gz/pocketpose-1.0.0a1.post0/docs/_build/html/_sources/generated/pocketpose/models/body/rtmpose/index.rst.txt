@@ -1,0 +1,62 @@
+:py:mod:`pocketpose.models.body.rtmpose`
+========================================
+
+.. py:module:: pocketpose.models.body.rtmpose
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.body.rtmpose.RTMPose
+   pocketpose.models.body.rtmpose.RTMPoseM
+
+
+
+
+.. py:class:: RTMPose(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.ONNXModel`
+
+   Base class for RTMPose models. 
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size) -> List[List[float]]
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+
+.. py:class:: RTMPoseM
+
+
+   Bases: :py:obj:`RTMPose`
+
+   MoveNet Lightning model. 
+
+

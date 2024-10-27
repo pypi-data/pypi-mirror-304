@@ -1,0 +1,42 @@
+:py:mod:`pocketpose.converters.torch2onnx`
+==========================================
+
+.. py:module:: pocketpose.converters.torch2onnx
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.converters.torch2onnx.Torch2ONNXConverter
+
+
+
+
+.. py:class:: Torch2ONNXConverter(overwrite=True, log_level=logging.INFO, ops=17)
+
+
+   Bases: :py:obj:`pocketpose.converters.base_converter.BaseConverter`
+
+   Converts PyTorch models to ONNX format. 
+
+   .. py:method:: _sanitize_names()
+
+
+   .. py:method:: _convert(model, save_path, *args, **kwargs)
+
+      Converts a PyTorch model to ONNX format (.onnx) and saves it to disk.
+
+      Args:
+          model (torch.nn.Module): PyTorch model to convert (e.g. torchvision.models.resnet50())
+          save_path (str): Path to save the converted model to. This should be a .onnx file
+
+      Returns:
+          onnx.ModelProto: The converted ONNX model
+
+
+

@@ -1,0 +1,86 @@
+:py:mod:`pocketpose.datasets.skeletons`
+=======================================
+
+.. py:module:: pocketpose.datasets.skeletons
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.datasets.skeletons.Skeleton
+   pocketpose.datasets.skeletons.COCOSkeleton
+   pocketpose.datasets.skeletons.MPIISkeleton
+   pocketpose.datasets.skeletons.BlazePoseSkeleton
+   pocketpose.datasets.skeletons.H36MSkeleton
+
+
+
+
+.. py:class:: Skeleton(name, nodes, edges)
+
+
+   Bases: :py:obj:`abc.ABC`
+
+   Base class for skeleton used by different datasets.
+
+   Each skeleton is defined as a graph with nodes and edges, and a unique
+   name to identify it.
+
+   .. py:method:: __str__() -> str
+
+      Return str(self).
+
+
+
+.. py:class:: COCOSkeleton
+
+
+   Bases: :py:obj:`Skeleton`
+
+   Base class for skeleton used by different datasets.
+
+   Each skeleton is defined as a graph with nodes and edges, and a unique
+   name to identify it.
+
+
+.. py:class:: MPIISkeleton
+
+
+   Bases: :py:obj:`Skeleton`
+
+   Base class for skeleton used by different datasets.
+
+   Each skeleton is defined as a graph with nodes and edges, and a unique
+   name to identify it.
+
+
+.. py:class:: BlazePoseSkeleton
+
+
+   Bases: :py:obj:`Skeleton`
+
+   Base class for skeleton used by different datasets.
+
+   Each skeleton is defined as a graph with nodes and edges, and a unique
+   name to identify it.
+
+   .. py:method:: get_coco_subset(skeleton)
+
+
+
+.. py:class:: H36MSkeleton
+
+
+   Bases: :py:obj:`Skeleton`
+
+   Base class for skeleton used by different datasets.
+
+   Each skeleton is defined as a graph with nodes and edges, and a unique
+   name to identify it.
+
+

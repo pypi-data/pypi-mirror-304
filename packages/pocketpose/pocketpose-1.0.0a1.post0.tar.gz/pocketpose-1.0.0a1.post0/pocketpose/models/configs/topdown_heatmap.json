@@ -1,0 +1,461 @@
+{
+    "name": "td-hm",
+    "description": "Various 2D human pose estimation models from MMPose.",
+    "variants": {
+        "litehrnet-18_coco": {
+            "name": "td-hm_litehrnet-18_coco-256x192",
+            "pretty_name": "LiteHRNet-18",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1AhId90baINsI3AI1TocD3nZISQqa1FRU/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/top_down/litehrnet/litehrnet18_coco_256x192-6bace359_20211230.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_litehrnet-18_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "litehrnet-30_coco": {
+            "name": "td-hm_litehrnet-30_coco-256x192",
+            "pretty_name": "LiteHRNet-30",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1C9EUxIy-68V89lcw9rs1tXHxj25DC6mK/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/top_down/litehrnet/litehrnet30_coco_256x192-4176555b_20210626.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_litehrnet-30_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "mobilenetv2_coco": {
+            "name": "td-hm_mobilenetv2_coco-256x192",
+            "pretty_name": "SimpleBaseline MobileNetV2",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/11AJy9eKFTeyV2XP4xtiCzw8cK8EVtHBV/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/v1/body_2d_keypoint/topdown_heatmap/coco/td-hm_mobilenetv2_8xb64-210e_coco-256x192-55a04c35_20221016.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_mobilenetv2_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "shufflenetv1_coco": {
+            "name": "td-hm_shufflenetv1_coco-256x192",
+            "pretty_name": "SimpleBaseline ShuffleNetV1",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1Vij-b_P1T4lf58bMygpB3tsU66INsWqQ/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/v1/body_2d_keypoint/topdown_heatmap/coco/td-hm_shufflenetv1_8xb64-210e_coco-256x192-7a7ea4f4_20221013.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_shufflenetv1_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "shufflenetv2_coco": {
+            "name": "td-hm_shufflenetv2_coco-256x192",
+            "pretty_name": "SimpleBaseline ShuffleNetV2",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1oS1xEVeRC05wgjIbxovlh3HJYLv7_nAZ/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/v1/body_2d_keypoint/topdown_heatmap/coco/td-hm_shufflenetv2_8xb64-210e_coco-256x192-51fb931e_20221014.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_shufflenetv2_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "alexnet_coco": {
+            "name": "td-hm_alexnet_coco-256x192",
+            "pretty_name": "SimpleBaseline AlexNet",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/file/d/1ctPyDGVRCzW5ckIefkGmrBfyyT9BqJkZ/view?usp=sharing"
+            },
+            "source": {
+                "name": "MMPose",
+                "link": "https://download.openmmlab.com/mmpose/top_down/alexnet/alexnet_coco_256x192-a7b1fd15_20200727.pth",
+                "code": "https://github.com/open-mmlab/mmpose/tree/dev-1.x/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_alexnet_8xb64-210e_coco-256x192.py"
+            },
+            "license": "Apache-2.0 License"
+        },
+        "lpn-50_coco": {
+            "name": "td-hm_lpn-50_coco-256x192",
+            "pretty_name": "LPN-R50",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=13pzu7J6FJnroqG_lHibQyV5sA6aHuOwD"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1dldLwjOacXV_uGkbxfEIPPJEK_2A-Snp/view?usp=sharing",
+                "code": "https://github.com/zhang943/lpn-pytorch/blob/master/experiments/coco/lpn/lpn50_256x192_gd256x2_gc.yaml"
+            },
+            "license": "MIT License"
+        },
+        "lpn-101_coco": {
+            "name": "td-hm_lpn-101_coco-256x192",
+            "pretty_name": "LPN-R101",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1ZX7DJKfimTt6p8GaH_0JHIH1h5sXh_aK"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1sMMgZreTwVsNSwgJDgkJ06wMIdpC5JjJ/view?usp=sharing",
+                "code": "https://github.com/zhang943/lpn-pytorch/blob/master/experiments/coco/lpn/lpn101_256x192_gd256x2_gc.yaml"
+            },
+            "license": "MIT License"
+        },
+        "lpn-152_coco": {
+            "name": "td-hm_lpn-152_coco-256x192",
+            "pretty_name": "LPN-R152",
+            "input_size": [
+                256,
+                192,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1xgZFPGg1kh0w2cgGwF7hbDiwBpltGoO2"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1yDSs58ZjG_M5JWonKQkVaFBsTqoUC-o5/view?usp=sharing",
+                "code": "https://github.com/zhang943/lpn-pytorch/blob/master/experiments/coco/lpn/lpn152_256x192_gd256x2_gc.yaml"
+            },
+            "license": "MIT License"
+        },
+        "lpn-50_mpii": {
+            "name": "td-hm_lpn-50_mpii-256x256",
+            "pretty_name": "LPN-R50 (MPII)",
+            "input_size": [
+                256,
+                256,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "onnx",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1AwvdMTTEm5quwltcCofvfQ1EBDEp_C0Q"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1lQmpmbHyW-_tXIFpY3yraaQC83mF-sLf/view?usp=sharing",
+                "code": "https://github.com/zhang943/lpn-pytorch/blob/master/experiments/mpii/lpn/lpn50_256x256_gd256x2_gc.yaml"
+            },
+            "license": "MIT License"
+        },
+        "nasnet-a_coco": {
+            "name": "td-hm_nasnet-a_coco-256x192",
+            "pretty_name": "NASNet-A",
+            "input_size": [
+                192,
+                256,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1I72WYRxa2L_EtakSrQhrSBDdjfKZu6Dw"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1oNr8Ts5EdYwrvV0-COrkYxhmvbjgNwim/view?usp=drive_link",
+                "code": "https://github.com/hustvl/EfficientPose/blob/master/experiments/coco/efficientpose/nasnet_192x256_adam_lr1e-3_efficientpose-a.yaml"
+            }
+        },
+        "nasnet-b_coco": {
+            "name": "td-hm_nasnet-b_coco-256x192",
+            "pretty_name": "NASNet-B",
+            "input_size": [
+                192,
+                256,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1wmuudUy4-CDp8RiuBRnNbr0UTcGsqpuo"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1glmyuTcYNxmpivQM5ifF-1lSHUoxmUyP/view?usp=drive_link",
+                "code": "https://github.com/hustvl/EfficientPose/blob/master/experiments/coco/efficientpose/nasnet_192x256_adam_lr1e-3_efficientpose-b.yaml"
+            }
+        },
+        "nasnet-b_mpii": {
+            "name": "td-hm_nasnet-b_mpii-256x192",
+            "pretty_name": "NASNet-B (MPII)",
+            "input_size": [
+                256,
+                256,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1sto7eqJoeFDwcu93g16c3KAd8Ggfcg6X"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1PER2gTZwBQ-KtuFyKVl7277sLuifKDK3/view?usp=drive_link",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-l_8xb256-420e_aic-coco-256x192.py"
+            }
+        },
+        "nasnet-c_coco": {
+            "name": "td-hm_nasnet-c_coco-256x192",
+            "pretty_name": "NASNet-C",
+            "input_size": [
+                192,
+                256,
+                3
+            ],
+            "skeleton": "coco",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1qAr2fsarwe8uwHFX2tmRRSiKTYNkghfq"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1xUw1CEdiaDQ88vpB1V6rp4juUUoY73vt/view?usp=drive_link",
+                "code": "https://github.com/hustvl/EfficientPose/blob/master/experiments/coco/efficientpose/nasnet_192x256_adam_lr1e-3_efficientpose-c.yaml"
+            }
+        },
+        "nasnet-c_mpii": {
+            "name": "td-hm_nasnet-c_mpii-256x192",
+            "pretty_name": "NASNet-C (MPII)",
+            "input_size": [
+                256,
+                256,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1X-NTpXx0eCV6I6agd1A35bYfpBEqxTLG"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://drive.google.com/file/d/1_UuDHAdzTctKjZtGCzRdwPocuF9yn1-1/view?usp=drive_link",
+                "code": "https://github.com/open-mmlab/mmpose/blob/v1.0.0rc1/configs/body_2d_keypoint/rtmpose/coco/rtmpose-l_8xb256-420e_aic-coco-256x192.py"
+            }
+        },
+        "efficientpose-rt_mpii": {
+            "name": "td-hm_efficientpose-rt_mpii-224x224",
+            "pretty_name": "EfficientPose-RT (MPII)",
+            "input_size": [
+                224,
+                224,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1H_tWXQUWPEELbU2rDaG6e4Oa3aX2E_-t"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseRT.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-rt-lite_mpii": {
+            "name": "td-hm_efficientpose-rt-lite_mpii-224x224",
+            "pretty_name": "EfficientPose-RT Lite (MPII)",
+            "input_size": [
+                224,
+                224,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=13SQSQUf6B-s_2EcDjTDRNy1Hq7tIMxFy"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseRT_LITE.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-i_mpii": {
+            "name": "td-hm_efficientpose-i_mpii-256x256",
+            "pretty_name": "EfficientPose-I (MPII)",
+            "input_size": [
+                256,
+                256,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=17hqzQUNeBCV7qHjzirBteygwBKQNVcmA"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseI.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-i-lite_mpii": {
+            "name": "td-hm_efficientpose-i-lite_mpii-256x256",
+            "pretty_name": "EfficientPose-I Lite (MPII)",
+            "input_size": [
+                256,
+                256,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1N33Js3JwaApd1SvZLZIYdkBH43WzA5tc"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseI_LITE.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-ii_mpii": {
+            "name": "td-hm_efficientpose-ii_mpii-368x368",
+            "pretty_name": "EfficientPose-II (MPII)",
+            "input_size": [
+                368,
+                368,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1oAyJuuyKPellwDL9evualaG3FXaaAthl"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseII.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-ii-lite_mpii": {
+            "name": "td-hm_efficientpose-ii-lite_mpii-368x368",
+            "pretty_name": "EfficientPose-II Lite (MPII)",
+            "input_size": [
+                368,
+                368,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1o-AYZMejDddJ8ELjtN_Xb6r7tcp9O0Kq"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseII_LITE.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-iii_mpii": {
+            "name": "td-hm_efficientpose-iii_mpii-480x480",
+            "pretty_name": "EfficientPose-III (MPII)",
+            "input_size": [
+                480,
+                480,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1b7BdOyhdOmCARq3xqacQTy6hs-eUx85v"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseIII.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        },
+        "efficientpose-iv_mpii": {
+            "name": "td-hm_efficientpose-iv_mpii-600x600",
+            "pretty_name": "EfficientPose-IV (MPII)",
+            "input_size": [
+                600,
+                600,
+                3
+            ],
+            "skeleton": "mpii",
+            "format": "tflite",
+            "download": {
+                "float32": "https://drive.google.com/uc?id=1vMELKDkF-pogSgOi1XrgMm7Vjn0iGXG3"
+            },
+            "source": {
+                "name": "Official Repo",
+                "link": "https://github.com/daniegr/EfficientPose/blob/master/models/tflite/EfficientPoseIV.tflite",
+                "code": "https://github.com/daniegr/EfficientPose"
+            },
+            "license": "Apache 2.0 License"
+        }
+    }
+}

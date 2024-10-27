@@ -1,0 +1,98 @@
+:py:mod:`pocketpose.models.wholebody.blazepose`
+===============================================
+
+.. py:module:: pocketpose.models.wholebody.blazepose
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.wholebody.blazepose.BlazePose
+   pocketpose.models.wholebody.blazepose.BlazePoseLite
+   pocketpose.models.wholebody.blazepose.BlazePoseFull
+   pocketpose.models.wholebody.blazepose.BlazePoseHeavy
+
+
+
+
+.. py:class:: BlazePose(model_path: str, model_url: str, input_size: tuple)
+
+
+   Bases: :py:obj:`pocketpose.models.interfaces.TFLiteModel`
+
+   Base class for the BlazePose models. 
+
+   .. py:attribute:: NUM_KEYPOINTS
+      :value: 33
+
+      
+
+   .. py:attribute:: NUM_LANDMARKS
+      :value: 39
+
+      
+
+   .. py:attribute:: LANDMARKS_DIM
+      :value: 5
+
+      
+
+   .. py:attribute:: HEATMAPS_DIM
+      :value: 39
+
+      
+
+   .. py:method:: process_image(image)
+
+      Default implementation of process_image() for models that don't need preprocessing.
+
+      This method can be overridden by subclasses to implement model-specific preprocessing.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image is a numpy
+                              array with shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]). 
+
+
+   .. py:method:: _calculate_keypoints(landmark_points, heatmap, index, original_size)
+
+
+   .. py:method:: postprocess_prediction(prediction, original_size)
+
+      Postprocess the prediction.
+
+      Args:
+          prediction (list): List of outputs from the model.
+          original_size (tuple): Original size of the image as (height, width).
+
+
+
+.. py:class:: BlazePoseLite
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Lite model. 
+
+
+.. py:class:: BlazePoseFull
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Full model. 
+
+
+.. py:class:: BlazePoseHeavy
+
+
+   Bases: :py:obj:`BlazePose`
+
+   BlazePose-Heavy model. 
+
+

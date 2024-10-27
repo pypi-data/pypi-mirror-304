@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketpose"
+dynamic = ["version"]
+authors = [
+  { name="Muhammad Saif Ullah Khan", email="saifkhichi96@gmail.com" },
+]
+description = "An inference library for real-time human pose estimation."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+dependencies = [
+    "gdown==4.6.0",
+    "mediapipe",
+    "numpy",
+    "onnxruntime",
+    "opencv-python",
+    "Pillow",
+    "tabulate",
+    "tensorflow",
+    "tflite",
+]
+
+[project.urls]
+Homepage = "https://github.com/PocketPose/python-api"
+Issues = "https://github.com/PocketPose/python-api/issues"
+Documentation = "https://pocketpose.github.io/python-api/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "docs*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
+"pocketpose.models.configs" = ["*.json"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"

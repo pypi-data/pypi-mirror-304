@@ -1,0 +1,47 @@
+:py:mod:`pocketpose.utils.io`
+=============================
+
+.. py:module:: pocketpose.utils.io
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.utils.io.write_to_table
+   pocketpose.utils.io.download_file
+
+
+
+.. py:function:: write_to_table(data, save_path, tablefmt=None)
+
+   Save the data as a table in the specified format.
+
+   Args:
+       data (list of dict): The data to be saved as key-value pairs.
+       save_path (str): The path of the file to save the data to.
+       tablefmt (str): The format of the table. If None, the format is
+                       determined from the extension of the save path.
+
+
+.. py:function:: download_file(url, save_path, google_drive=False)
+
+   Download a file from the specified URL.
+
+   Args:
+       url (str): The URL to download the file from.
+       save_path (str): The path of the file to save the downloaded file to.
+       google_drive (bool): Whether the file is hosted on Google Drive. If True,
+                            the url must be a Google Drive sharing link and the
+                            file will be downloaded using the gdown package.
+                            Defaults to False.
+
+   Returns:
+       True if the file was downloaded successfully, False otherwise.
+
+

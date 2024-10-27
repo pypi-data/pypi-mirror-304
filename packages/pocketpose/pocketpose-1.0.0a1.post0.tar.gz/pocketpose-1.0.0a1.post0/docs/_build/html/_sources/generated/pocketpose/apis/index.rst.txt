@@ -1,0 +1,30 @@
+:py:mod:`pocketpose.apis`
+=========================
+
+.. py:module:: pocketpose.apis
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.apis.list_models
+   pocketpose.apis.create_model
+
+
+
+.. py:function:: list_models()
+
+   List all available models. 
+
+
+.. py:function:: create_model(model_name, *args, **kwargs)
+
+   Create a model from its name. 
+
+

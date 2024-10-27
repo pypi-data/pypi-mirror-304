@@ -1,0 +1,147 @@
+:py:mod:`pocketpose.models.interfaces.imodel`
+=============================================
+
+.. py:module:: pocketpose.models.interfaces.imodel
+
+.. autoapi-nested-parse::
+
+   Defines the interface for PocketPose models. 
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.models.interfaces.imodel.IModel
+
+
+
+
+.. py:class:: IModel(model_path: str, model_url: str, keypoints_type: str = 'coco', input_size: tuple = (256, 192, 3), output_type: str = 'keypoints')
+
+
+   Bases: :py:obj:`abc.ABC`
+
+   Base class for all models.
+
+   This class defines the interface that all models must implement. The interface
+   is designed to be as generic as possible, so that it can be used with any model.
+
+   The model class hierarchy is as follows:
+   IModel
+   ├── Framework-specific interface (e.g. TFLiteModel)
+   │   ├── Model class (e.g. MoveNet)
+
+   The interface is divided into four steps:
+   1. Load the input image
+   2. Prepare the image for prediction
+   3. Run inference
+   4. Postprocess the prediction to get the keypoints
+
+   The first step is model-agnostic, so it is implemented in this class. Step 3 is
+   specific to the framework, so it is implemented in the framework-specific interface
+   which is a subclass of this class. Steps 2 and 4 are model-specific, so they are
+   implemented in the model classes which are subclasses of the framework-specific
+   interfaces.
+
+   .. py:method:: load_image(image_path: str) -> tuple[numpy.ndarray, tuple[int]]
+
+      Loads an image from a file.
+
+      The image is loaded using the TensorFlow I/O library, and is resized to
+      match the model input size using bilinear interpolation. The aspect ratio
+      is preserved by padding the shorter side with zeros.
+
+      Args:
+          image_path (str): Path to the image file.
+
+      Returns:
+          The loaded image as a numpy array with shape (1, height, width, channels)
+          and dtype uint8 (range [0, 255]).
+          The original size of the image as a tuple (height, width).
+
+
+   .. py:method:: process_image(image: numpy.ndarray) -> numpy.ndarray
+      :abstractmethod:
+
+      Prepares the image for prediction.
+
+      Args:
+          image (np.ndarray): The image to prepare for prediction. The image
+                              has shape (1, height, width, channels) and dtype
+                              uint8 (range [0, 255]).
+
+      Returns:
+          The processed image as a numpy array with the shape and dtype expected
+          by the model.
+
+
+   .. py:method:: predict(image: numpy.ndarray) -> Any
+      :abstractmethod:
+
+      Predicts the pose of the image.
+
+      Args:
+          image (np.ndarray): The image to predict the pose of. The image has
+                              the shape and dtype expected by the model.
+
+      Returns:
+          The prediction returned by the model. This can be a single tensor or
+          a tuple of tensors, depending on the model.
+
+
+   .. py:method:: postprocess_prediction(prediction: Any, original_size: tuple) -> List[tuple[float]]
+      :abstractmethod:
+
+      Postprocesses the prediction to get the keypoints.
+
+      Args:
+          prediction (Any): The raw prediction returned by the model. This can
+                            be a single tensor or a tuple of tensors, depending
+                            on the model.
+          original_size (tuple): The original size of the input image as (height, width).
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+   .. py:method:: heatmaps_to_coords(heatmaps: numpy.ndarray) -> numpy.ndarray
+
+      Converts a set of heatmaps to a set of keypoint coordinates.
+
+      The keypoint coordinates are calculated as the (x, y) coordinates of the maximum
+      value in each heatmap, with values normalized to the input image coordinates.
+
+      The score of each keypoint is calculated as the maximum value in the corresponding
+      heatmap.
+
+      Args:
+          heatmaps (np.ndarray): The heatmaps to convert to keypoint coordinates as a
+                                 numpy array of shape (K, H, W), where K is the number
+                                 of keypoints and H and W are the height and width of
+                                 the heatmaps.
+
+      Returns:
+          The keypoint coordinates as a numpy array of shape (K, 3), where each row is
+          the (x, y, score) coordinates of a keypoint. The coordinates are normalized
+          to the input image size. The score is the maximum value in the corresponding
+          heatmap and is normalized to the range [0, 1].
+
+
+   .. py:method:: __call__(image_path: str) -> List[tuple[float]]
+
+      Infers the pose of an image.
+
+      Args:
+          image_path (str): Path to the image file.
+
+      Returns:
+          The predicted keypoints as a list of (x, y, score) tuples.
+
+
+

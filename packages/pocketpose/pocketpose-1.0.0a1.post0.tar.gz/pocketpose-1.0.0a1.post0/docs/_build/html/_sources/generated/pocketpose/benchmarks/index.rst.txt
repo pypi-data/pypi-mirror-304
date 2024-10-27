@@ -1,0 +1,38 @@
+:py:mod:`pocketpose.benchmarks`
+===============================
+
+.. py:module:: pocketpose.benchmarks
+
+.. autoapi-nested-parse::
+
+   The benchmarks module contains scripts to evaluate the models on various datasets. 
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   eval_coco/index.rst
+   eval_coco_full/index.rst
+   eval_coco_sp/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pocketpose.benchmarks.benchmark_coco
+
+
+
+.. py:function:: benchmark_coco(model_name, images_path, annos_path, save_dir, dataset_type='coco_sp', det_annos_path=None, kpt_thr=0.3, save_vis=False)
+
+
