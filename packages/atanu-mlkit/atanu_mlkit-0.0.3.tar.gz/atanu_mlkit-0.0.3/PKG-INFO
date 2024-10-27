@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: atanu_mlkit
+Version: 0.0.3
+Summary: Machine Learning Kit
+Home-page: https://github.com/playatanu/atanu-mlkit
+Author: Atanu Debnath
+Author-email: playatanu@gmail.com
+License: MIT
+Project-URL: Documentation, https://playatanu.github.io/atanu-mlkit/
+Project-URL: Source, https://github.com/playatanu/atanu-mlkit
+Project-URL: Tracker, https://github.com/playatanu/atanu-mlkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Atanu MLKit
+
+Welcome to the **Atanu MLKit**!
+
+
+[![PyPI version](https://badge.fury.io/py/atanu-mlkit.svg)](https://badge.fury.io/py/atanu-mlkit)
+
+#### Quick Installation
+```bash
+pip install atanu-mlkit
+```
+
+
+
+
