@@ -1,0 +1,4 @@
+click==8.1.7
+colorama
+docker==7.1.0
+PyYAML
