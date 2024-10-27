@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_package_new_again_name_new.egg-info/PKG-INFO
+my_package_new_again_name_new.egg-info/SOURCES.txt
+my_package_new_again_name_new.egg-info/dependency_links.txt
+my_package_new_again_name_new.egg-info/entry_points.txt
+my_package_new_again_name_new.egg-info/requires.txt
+my_package_new_again_name_new.egg-info/top_level.txt
