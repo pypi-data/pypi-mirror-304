@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dictrack
+Version: 1.0.3
+Summary: A componentized dictionary tracker
+Home-page: UNKNOWN
+Author: Tim Liao
+Author-email: bonis0324work@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*
+Description-Content-Type: text/markdown
+Requires-Dist: dictor (>=0.1.12)
+Requires-Dist: six (>=1.16.0)
+Requires-Dist: python-redis-lock (==3.7.0) ; python_version == "2.7"
+Requires-Dist: hiredis (==1.1.0) ; python_version == "2.7"
+Requires-Dist: redis (==3.5.3) ; python_version == "2.7"
+Requires-Dist: python-redis-lock (>=4.0.0) ; python_version >= "3.7"
+Requires-Dist: redis[hiredis] (>=5.1.1) ; python_version >= "3.7"
+
+# dictrack
+A Flexible Dictionary Data Tracker for Condition-Based Monitoring
+
