@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+online_store_homework_6.egg-info/PKG-INFO
+online_store_homework_6.egg-info/SOURCES.txt
+online_store_homework_6.egg-info/dependency_links.txt
+online_store_homework_6.egg-info/top_level.txt
+online_store_seminar_6/__init__.py
+online_store_seminar_6/__main__.py
+online_store_seminar_6/order_management.py
+online_store_seminar_6/user_management.py
