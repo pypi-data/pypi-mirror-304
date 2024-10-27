@@ -1,0 +1,7 @@
+.pypirc
+.idea
+.venv
+*.pyc
+__pycache__
+dist
+.vscode

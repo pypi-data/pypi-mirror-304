@@ -1,0 +1,29 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ocui"
+license = {file = "LICENSE"}
+readme = "README.md"
+authors = [{name = "Giacomo Leidi", email = "goodoldpaul@autistici.org"}]
+dynamic = ["version", "description"]
+dependencies = [
+    "appdirs ~=1.4",
+    "textual ~=0.41",
+    "toml ~=0.10",
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+test = [
+    "flake8 ~=6.1",
+    "debugpy ~=1.6",
+    "textual-dev ~=1.2",
+]
+
+[project.scripts]
+ocui="ocui.app:main"
+
+[project.urls]
+Home = "https://github.com/fishinthecalculator/ocui"

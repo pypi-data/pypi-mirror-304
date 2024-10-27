@@ -1,0 +1,66 @@
+name: Guix channel
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+        - README.md
+        - LICENSE
+        - '.img/**'
+        - 'scripts/**'
+        - 'etc/**'
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:
+        - README.md
+        - LICENSE
+        - '.img/**'
+        - 'scripts/**'
+        - 'etc/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Guix cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/guix
+          # use a key that (almost) never matches
+          key: guix-cache-${{ github.sha }}
+          restore-keys: |
+            guix-cache-
+
+      - name: Install Guix
+        id: install-guix
+        uses: PromyLOPh/guix-install-action@v1
+        with:
+          channels: |-
+            (list
+             (channel
+              (name 'small-guix)
+              (url "https://gitlab.com/orang3/small-guix")
+              (introduction
+               (make-channel-introduction
+                "f260da13666cd41ae3202270784e61e062a3999c"
+               (openpgp-fingerprint
+                "8D10 60B9 6BB8 292E 829B  7249 AED4 1CC1 93B7 01E2"))))
+             (channel
+              (name 'ocui)
+              (url "https://github.com/fishinthecalculator/ocui")
+              (branch "main")
+              (introduction
+               (make-channel-introduction
+                "10ed759852825149eb4b08c9b75777111a92048e"
+               (openpgp-fingerprint
+                "97A2 CB8F B066 F894 9928  CF80 DE9B E0AC E824 6F08"))))
+             %default-guix-channel)
+
+      - name: Build ocui.git
+        run: guix build -L "${PWD}/.guix/modules" ocui.git
+
+      - name: Lint ocui.git
+        run: guix lint -L "${PWD}/.guix/modules" ocui.git
