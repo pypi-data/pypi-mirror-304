@@ -1,0 +1,6 @@
+pyproject.toml
+src/sighthouse/analyzer/__init__.py
+src/sighthouse_analyzer.egg-info/PKG-INFO
+src/sighthouse_analyzer.egg-info/SOURCES.txt
+src/sighthouse_analyzer.egg-info/dependency_links.txt
+src/sighthouse_analyzer.egg-info/top_level.txt
