@@ -1,0 +1,6 @@
+[console_scripts]
+py-ref-gen=mkdocs_py_ref_gen.cli:main
+
+[mkdocs.plugins]
+py-ref-gen=mkdocs_py_ref_gen.plugin:MkDocsPyRefGenPlugin
+
