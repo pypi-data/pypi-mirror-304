@@ -1,0 +1,10 @@
+pointsim/__init__.py,sha256=oSNrtUUQHH4u1zLLBnctR2b5eQsQvARkH1itiLIA75E,95
+pointsim/controller.py,sha256=S5HcUDf8ve7s5nh1fSIKVWtHHYNuwpVaPPcEQz1j2sw,4823
+pointsim/cython_pid.cp313-win_amd64.pyd,sha256=pNQHYuofiMuOXonXPKQ0HhAh3kuRItVjcm5jSHBAti4,80384
+pointsim/simulator2D.py,sha256=BHTfDrNX7KNiUiCn2E52ZX14Bl3smT1c6uaSkb0kC0Y,11701
+pointsim/simulator3D.py,sha256=uYoT8rSIOQ3Bl5gfhjrPS-Shx9XU2CBWQEYhhS_yvBw,21391
+pointsim-0.0.1.dist-info/LICENSE,sha256=GJsa-V1mEVHgVM6hDJGz11Tk3k0_7PsHTB-ylHb3Fns,18431
+pointsim-0.0.1.dist-info/METADATA,sha256=0ARxSE95lpB_Cy53U9wLdgQK2YjmKzB_k-soWX4Olvw,3935
+pointsim-0.0.1.dist-info/WHEEL,sha256=-v_yZ08fSknsoT62oIKG9wp1eCBV9_ao2rO4BeIReTY,101
+pointsim-0.0.1.dist-info/top_level.txt,sha256=rSYJ7lAFC2fSNE-UewGgwz2-ESrhO0_DhBAZLkG9PJU,9
+pointsim-0.0.1.dist-info/RECORD,,
