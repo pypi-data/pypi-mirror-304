@@ -1,0 +1,10 @@
+interfusion/__init__.py,sha256=VDWgmo_-yrth0Jkk_1oL8cwo8924aZxIQDgqDPJSgI8,150
+interfusion/config.py,sha256=Itg0DhAfQcNCMAoihrde9YwfPKrrjbnwmlD4d1Skre0,1507
+interfusion/data_utils.py,sha256=bS56zrQbmx3AbKEIDne5Cr_JqEt4pYeGGHMx4tw39Xo,8752
+interfusion/inference.py,sha256=hzQOqsrgm8w86fe56YUkMzH9IdUGW8iiAuya92BN3EM,5322
+interfusion/models.py,sha256=nW6F7AzcuhvVcCNq2axplRyFwP5RNQwGL1YciSrCMX4,4600
+interfusion/trainer.py,sha256=SdphcGinDZSwzyFRdMFWj8qBhvWgE6A2K1fbF5nB4xo,30528
+interfusion_encoder-0.2.0.dist-info/METADATA,sha256=ns7XOi4d2VtPQtUC23hDiV4ZcOJvEbnUSJm1RXXXwwo,5443
+interfusion_encoder-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+interfusion_encoder-0.2.0.dist-info/top_level.txt,sha256=6n8rDP1xzqAidTtBtzD8UCeTZ0eQxyE1Cfoxb1LlxII,12
+interfusion_encoder-0.2.0.dist-info/RECORD,,
