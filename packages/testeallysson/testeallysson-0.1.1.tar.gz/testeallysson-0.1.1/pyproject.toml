@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "testeallysson"
+version = "0.1.1"
+description = ""
+authors = ["Allysson-Christopher <128186654+Allysson-Christopher@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
