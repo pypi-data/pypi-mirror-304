@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: freestylo
+Version: 0.2.0
+Summary: A tool for stylistic device detection."
+Home-page: https://github.com/cvjena/freestylo
+Author: Felix Schneider
+Author-email: felix.schneider@uni-jena.de
+Project-URL: Source, https://github.com/cvjena/freestylo
+Project-URL: Tracker, https://github.com/cvjena/freestylo/issues
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools>=75.0
+Requires-Dist: torch
+Requires-Dist: spacy==3.8.2
+Requires-Dist: numpy
+Requires-Dist: pytest
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: cltk<1.0
+Requires-Dist: wget
+Provides-Extra: testing
+Requires-Dist: setuptools>=75.0; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+
+# FreeStylo - an easy-to-use stylistic device detection tool for stylometry
+
+An easy-to-use package for detecting stylistic devices in text. This package is designed to be used in stylometry, the study of linguistic style.
+
+For those proficient in python, this package provides a collection of approaches to detect stylistic devices in text. For those less proficient in python, this package provides a simple interface to detect stylistic devices in text with simple commands and user-friendly configuration.
+For an example on usage, see `example_chiasmus.sh` and the config file `example_config.json`.
+
+# Installation
+The package is available on PyPi and can be installed using pip.
+```
+piop install freestylo
+```
+
+# Participation
+The package is free and open-source software and contributions are very welcome.
+It is designed to be a living project that is constantly improved and extended.
+If you have implemented your own stylistic device detector, please consider contributing it to the package.
+Also, if you have any suggestions for improvements or if you find any bugs, please open an issue on the GitHub page.
