@@ -1,0 +1,7 @@
+numpy
+datetime
+netCDF4
+pandas
+geopandas
+rasterio
+tensorlearn
