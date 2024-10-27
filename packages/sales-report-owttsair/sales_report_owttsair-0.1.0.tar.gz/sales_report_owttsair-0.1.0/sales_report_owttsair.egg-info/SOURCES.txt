@@ -1,0 +1,9 @@
+pyproject.toml
+sales_report/__init__.py
+sales_report/__main__.py
+sales_report/report_generator.py
+sales_report_owttsair.egg-info/PKG-INFO
+sales_report_owttsair.egg-info/SOURCES.txt
+sales_report_owttsair.egg-info/dependency_links.txt
+sales_report_owttsair.egg-info/requires.txt
+sales_report_owttsair.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sales-report-owttsair
+Version: 0.1.0
+Summary: A package for generating sales reports from CSV files.
+Author-email: Колесникова Анастасия <kolesnikova20051003@gmail.com>
+Requires-Dist: pandas
