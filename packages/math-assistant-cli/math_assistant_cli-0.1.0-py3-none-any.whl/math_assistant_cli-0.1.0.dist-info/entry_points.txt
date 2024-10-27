@@ -1,0 +1,2 @@
+[console_scripts]
+math-assist = math_assistant.cli:main
