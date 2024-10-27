@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: customers-data-cupack
+Version: 0.2.0
+Summary: Отчет о распределении клиентов
+Author: elhuel
+Requires-Python: >=3.10
+Requires-Dist: pandas
+
