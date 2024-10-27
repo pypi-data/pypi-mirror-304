@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+run.py
+textual_demo.egg-info/PKG-INFO
+textual_demo.egg-info/SOURCES.txt
+textual_demo.egg-info/dependency_links.txt
+textual_demo.egg-info/entry_points.txt
+textual_demo.egg-info/requires.txt
+textual_demo.egg-info/top_level.txt
