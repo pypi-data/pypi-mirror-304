@@ -1,0 +1,13 @@
+django_access_point/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_access_point/app_models.py,sha256=PU6v68XKPmBZZDgH_MSRUFGRrhvkMRHpOUVGGJ7HVIY,287
+django_access_point/app_urls.py,sha256=nA_2SOpcrrb3R3mbOgBosTkTeoPHzP-Lj5I52k_Y6Zk,776
+django_access_point/app_views.py,sha256=slx8grCNB6tZKC99VxBGs97udOhM0odvuwtNh568qlA,303
+django_access_point/models.py,sha256=ThYuDJudyNZOgwUYdEdOCn00k3lmOaoYcFyXCFcYJeM,3055
+django_access_point/utils.py,sha256=WRuXgdcai4d9jJfBPFMzEbyTBvokzTMms4Twd9IeYW4,260
+django_access_point/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_access_point/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_access_point/management/commands/createapp.py,sha256=KB2PwlNmM4lratUj8ag8VlKDuJ5Dnyhi_aYuVsoAM5Q,1990
+django_access_point-0.0.5.dist-info/METADATA,sha256=CKtuNVEXJhuBsoYW7WPsVqR2r52_veAEH2gwD_x2Z5k,207
+django_access_point-0.0.5.dist-info/WHEEL,sha256=UvcQYKBHoFqaQd6LKyqHw9fxEolWLQnlzP0h_LgJAfI,91
+django_access_point-0.0.5.dist-info/top_level.txt,sha256=QT0Mmdl4kvwZibhencSlfQvLfJEIlLfXnhrLwbDdx60,20
+django_access_point-0.0.5.dist-info/RECORD,,

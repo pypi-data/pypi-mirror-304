@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: django-access-point
+Version: 0.0.5
+Author: Karthick Sivakumar
+Author-email: karthicksivakumardev@gmail.com
+Requires-Dist: Django>=3.0.0
+Requires-Dist: djangorestframework>=3.0.0
+
