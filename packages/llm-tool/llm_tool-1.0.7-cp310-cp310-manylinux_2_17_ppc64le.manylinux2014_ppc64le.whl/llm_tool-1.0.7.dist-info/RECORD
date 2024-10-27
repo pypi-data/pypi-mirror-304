@@ -1,0 +1,7 @@
+llm_tool-1.0.7.dist-info/METADATA,sha256=TP6YBLiRS97hZzKnUjEODkb6lPBREQ2_SmYG237lRZo,6640
+llm_tool-1.0.7.dist-info/WHEEL,sha256=WyEfFeJJhd7Xr62JlfJH3FolWd4Y93iVnWKquxIhmKQ,131
+llm_tool-1.0.7.dist-info/licenses/LICENSE,sha256=qxhUpxmqLdU-SFslNrmvkfaRLTuBktOg5j1D6wOFHns,1076
+llm_tool/__init__.py,sha256=M39dUgfHvTuq7qwH7vXcEeXGMJzLNdmb2LF_hTNJfvg,21
+llm_tool/tool.py,sha256=Y4GQcBrXOJHKB94ioH7vKhuoMS2Ay-5KMUBjQH9hsWo,4794
+llm_tool/llm_tool.cpython-310-powerpc64le-linux-gnu.so,sha256=KAPJCXKIc-1n3zv6zvy35JPZ6eftLZyyZ8HEjaWwwGQ,2977176
+llm_tool-1.0.7.dist-info/RECORD,,
