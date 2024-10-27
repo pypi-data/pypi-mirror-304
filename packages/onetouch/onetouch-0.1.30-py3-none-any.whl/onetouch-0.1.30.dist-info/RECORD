@@ -1,0 +1,12 @@
+onetouch/GPT.py,sha256=qtuho030nra1Sntvqv07-hRr6pH2t50-rQl9cRLbC4c,12509
+onetouch/__init__.py,sha256=j3nEIvJhmZNFj7v-ZzIZumR554uJ9xbRK_THMFzEWBw,739
+onetouch/config.py,sha256=CE9VsQaiDZKGwabFEAiyb9rfE71O1fSBoLMAMka7o1E,1011
+onetouch/normal_model.py,sha256=J2ckSWWhEnN_z4dijmSL5IzpJtl-QQwdl4-ac9UxMkM,11192
+onetouch/one2three.py,sha256=cE_NWRFPXf8v-dEXogcdi-SKzx9YHu2L1t4nDGEYO70,8028
+onetouch/readeverything.py,sha256=eag6a7X0c9jBQW0ttKdUYSu2qFqo-J_NvFtvc9l0PY8,1256
+onetouch/superprint.py,sha256=JVhcBug_1QHKZWpCDeS4_LqlO1Gz_DttuHBum3PkiaY,5674
+onetouch-0.1.30.dist-info/LICENSE,sha256=DolYX3oU7o0jFG7dYsVskLSftEZgwWpbb7CpoNVYGAA,1084
+onetouch-0.1.30.dist-info/METADATA,sha256=NQGfYBz4DssrPRWXCyX989ISvlNsprgbIf8T5cYoMTI,10334
+onetouch-0.1.30.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+onetouch-0.1.30.dist-info/top_level.txt,sha256=h1S4forQLXKxiglXdPQKtLc82PXvSbP6IAm0JwirEtA,9
+onetouch-0.1.30.dist-info/RECORD,,
