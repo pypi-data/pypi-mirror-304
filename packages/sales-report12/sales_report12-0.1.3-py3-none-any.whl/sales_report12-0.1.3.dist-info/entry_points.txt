@@ -1,0 +1,2 @@
+[console_scripts]
+sales-report = sales_report.cli:main
