@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: autocheck_json
+Version: 0.1.0
+Summary: Перевод чека json в чек txt
+Author: Andrey
+License: MIT
+Description-Content-Type: text/markdown
+
+--input-file - входной файл с заказ, в котором категория, сумма и количество
+
+--output-file - выходной файл, куда будет записан чек в формате txt
+
+Пример команды: python -m autocheck --input-file data/order.json --output-file rrr.txt
+
+С egg возникают проблемы с загрузкой на pypi(ERROR    HTTPError: 400 Bad Request from https://upload.pypi.org/legacy/
+         Invalid value for filetype. Error: Use a known file type.
+)

@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+autocheck_json.egg-info/PKG-INFO
+autocheck_json.egg-info/SOURCES.txt
+autocheck_json.egg-info/dependency_links.txt
+autocheck_json.egg-info/entry_points.txt
+autocheck_json.egg-info/top_level.txt
