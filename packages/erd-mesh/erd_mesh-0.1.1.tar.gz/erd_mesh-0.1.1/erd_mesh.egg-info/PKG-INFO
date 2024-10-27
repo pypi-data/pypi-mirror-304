@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: erd-mesh
+Version: 0.1.1
+Summary: to use with mesh-* packages
+Home-page: https://github.com/ivan-loh/erd_mesh
+Author: ivan
+Author-email: pypi@eriad.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
