@@ -1,0 +1,8 @@
+README.md
+setup.py
+UzbekLemma/UzbekLemma.py
+UzbekLemma/__init__.py
+UzbekLemma.egg-info/PKG-INFO
+UzbekLemma.egg-info/SOURCES.txt
+UzbekLemma.egg-info/dependency_links.txt
+UzbekLemma.egg-info/top_level.txt
