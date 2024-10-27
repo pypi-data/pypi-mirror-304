@@ -1,0 +1,9 @@
+luccpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+luccpy/calc.py,sha256=cbJbfqIhSVqHP60bDXUURUa-4tSZsMsb4gT44kB1a6Q,9417
+luccpy/calc_deterministic.py,sha256=DzJKfOl8OTB1Px1FgGNRbxi61WWHxthP36Aj1Nm0EjE,5690
+luccpy/transformer.py,sha256=SdgON6LITkSpLu_bMyuDAxy5hVV0A3p0rmxKwi8fF7k,4157
+luccpy-0.2.1.dist-info/LICENSE,sha256=RlhcHqeibsemBvohe1ee3ox355KJu5tSwJDV3EhK4oI,1090
+luccpy-0.2.1.dist-info/METADATA,sha256=Ta_T89M05rMhTGH7n21xS1Bcuu1cVw6yGM0hNqRs79Y,1009
+luccpy-0.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+luccpy-0.2.1.dist-info/top_level.txt,sha256=TLVANSU_3k2rFUsAOfQxOSDVhDtCUIPDqer8JSkn1gA,7
+luccpy-0.2.1.dist-info/RECORD,,
