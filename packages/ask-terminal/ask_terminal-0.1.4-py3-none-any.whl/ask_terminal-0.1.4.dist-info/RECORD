@@ -1,0 +1,17 @@
+chat_terminal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chat_terminal/app.py,sha256=h2J6M6a665tHc1UIivg2MvXFe581C1j_HVFiJMigQEg,5542
+chat_terminal/chat_terminal.py,sha256=8-SU5qN9KrPUGUAu3_9L9xdumssiCkiU0kTpJkOtDB4,6867
+chat_terminal/server.py,sha256=41hfbJ20bfEsN2mtqIaDyFF2A3zjkrqTy1u_kFuJCQ0,1881
+chat_terminal/settings.py,sha256=AqHIctu_K03fsKMpi8hCtKprz3Qj0ZAVfZld7UmSTO0,1119
+chat_terminal/libs/text_completion_endpoint.py,sha256=WXiR4RrDtUYY5Oz3Y_WoYmDABV5xhYlbrj2Phe-gBXE,11492
+chat_terminal/utils/__init__.py,sha256=P-roQ7374c_29IiCD2o51fbCLsM78-wBWOvhG24zr9o,172
+chat_terminal/utils/configs.py,sha256=Q_9h9unb1y3-HevQBUCLG03xHNhszzlsRtXOvH0mhI4,409
+chat_terminal/utils/debug_mode.py,sha256=Jy8h4DVUfSmKl6ZRElHHJIS0TcYzdS4JhIQ_9vSFHNQ,236
+chat_terminal/utils/logging.py,sha256=VeRXRR5_Dx8RJRFg0AnSGxCrbDSRXln6RjQ-Mw3t4X8,675
+chat_terminal/utils/misc.py,sha256=8_kzH4oWdABWGVWDiTckIavoNAaugucPUrRjTRRxxFo,329
+ask_terminal-0.1.4.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+ask_terminal-0.1.4.dist-info/METADATA,sha256=6YhP-6vshu_WldGnlZIPjoqSSLczta7dbpq0wNHGwx4,56872
+ask_terminal-0.1.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ask_terminal-0.1.4.dist-info/entry_points.txt,sha256=ikO0pYtdh9b_aUcTb1jBOwLSvg3wkEwYpceq4AOKWBY,67
+ask_terminal-0.1.4.dist-info/top_level.txt,sha256=tzTHJTGPFpw9vONqgBXuCy0AY2oYWF-nAeN-q4-czB0,14
+ask_terminal-0.1.4.dist-info/RECORD,,

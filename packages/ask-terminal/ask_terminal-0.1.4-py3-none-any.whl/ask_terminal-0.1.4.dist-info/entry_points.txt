@@ -1,0 +1,2 @@
+[console_scripts]
+chat-terminal-server = chat_terminal.server:main
