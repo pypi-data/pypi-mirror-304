@@ -1,0 +1,8 @@
+README.md
+open_notation.py
+pyproject.toml
+open_notation.egg-info/PKG-INFO
+open_notation.egg-info/SOURCES.txt
+open_notation.egg-info/dependency_links.txt
+open_notation.egg-info/requires.txt
+open_notation.egg-info/top_level.txt

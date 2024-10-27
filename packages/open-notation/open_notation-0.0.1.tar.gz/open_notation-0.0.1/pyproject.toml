@@ -1,0 +1,26 @@
+[project]
+name = "open-notation"
+version = "0.0.1"
+authors = [{name = "Alexander Rodionov", email = "tandav@tandav.me"}]
+description = "YAML-based music notation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "bumpver",
+    "pre-commit",
+    "pytest",
+]
+
+[project.urls]
+source = "https://gitlab.tandav.me/bhairava/open-notation"
+issues = "https://gitlab.tandav.me/bhairava/open-notation/-/issues"
+"release notes" = "https://gitlab.tandav.me/bhairava/open-notation/-/releases"
+
+# ==============================================================================
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
