@@ -1,0 +1,10 @@
+cvx/cla/__init__.py,sha256=SzkO1szwUW45m2ZUf3W7dKnAcZELahrGO3tm1tXmk7k,671
+cvx/cla/claux.py,sha256=VuWZ5hhZHTHR01FpNpqfGZC5qu-JWIL4QQUkZRhPzFw,2224
+cvx/cla/first.py,sha256=HvY2EZzgp-EIjyx0AUUud_kOucthBwDCjMZY6WWLlBM,4709
+cvx/cla/markowitz/__init__.py,sha256=FjtVvzBiMgxkG8wKzAzESexxe-jdDw7C3NgUwBwnF30,639
+cvx/cla/markowitz/cla.py,sha256=l6_XII99ahbUc5puDWgVklj5Zkm6jA7fuFZZW_PvS5I,3998
+cvx/cla/types.py,sha256=SZgWU6mIl4W8Psihv3O1SKSgqYcpF2Am-g0R6FE8KDM,6918
+cvxcla-1.1.0.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cvxcla-1.1.0.dist-info/METADATA,sha256=vOQZkaq45znzhDknJOM88K6Vrrx6Wo5az2SlEuVPVjU,4926
+cvxcla-1.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cvxcla-1.1.0.dist-info/RECORD,,
