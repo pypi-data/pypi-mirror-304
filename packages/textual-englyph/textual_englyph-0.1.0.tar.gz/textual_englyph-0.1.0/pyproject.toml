@@ -1,0 +1,14 @@
+[project]
+name = "textual-englyph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=10.4.0",
+    "textual>=0.82.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
