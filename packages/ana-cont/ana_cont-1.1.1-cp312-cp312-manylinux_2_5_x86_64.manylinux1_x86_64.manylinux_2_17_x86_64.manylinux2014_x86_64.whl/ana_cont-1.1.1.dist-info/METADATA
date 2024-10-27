@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ana_cont
+Version: 1.1.1
+Summary: Analytic continuation package
+Home-page: https://github.com/josefkaufmann/ana_cont
+Author: Josef Kaufmann
+Author-email: josefkaufma@gmail.com
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: Cython
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: PyQt5
+
