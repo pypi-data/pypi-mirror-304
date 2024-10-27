@@ -1,0 +1,12 @@
+hakeem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hakeem/aggregation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hakeem/aggregation/aggregators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hakeem/aggregation/aggregators/condorcet.py,sha256=R-ccgwaHMeQeW_EIZ6AyuRCNcpIfJ0gZCaqjScV8Bik,1481
+hakeem/aggregation/aggregators/mallows.py,sha256=kJBSbi56yLMvcVo5TDRfwyc0UDcLG06MfaOi5wHUw6A,1021
+hakeem/aggregation/base.py,sha256=ny89cz_Xkl_RpmbgszEMqhE0WWUsqI2oNr-wH2fwigU,1914
+hakeem/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hakeem/utils/coerce.py,sha256=JS1Gh5kuccQdVA0FCQEL8h2WHu9gM2nC_V4FSKR6r1o,743
+hakeem/utils/inventory.py,sha256=mgiGNGIWaRUt0H5C-Jim6PyYZmoMeB60DvWM2oqzFvg,321
+hakeem-1.0.1.dist-info/METADATA,sha256=2bJlrFlM-IVdHYDnGSTTtLxfubHHQNxAe_NwIbfZ3IM,538
+hakeem-1.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+hakeem-1.0.1.dist-info/RECORD,,
