@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+quick_ml.egg-info/PKG-INFO
+quick_ml.egg-info/SOURCES.txt
+quick_ml.egg-info/dependency_links.txt
+quick_ml.egg-info/requires.txt
+quick_ml.egg-info/top_level.txt
+quick_ml/data_preprocessing/__init__.py
+quick_ml/data_preprocessing/remove_imbalance.py
+quick_ml/video/__init__.py
+quick_ml/video/frame2video.py
+quick_ml/video/merge_split_Videos.py
+quick_ml/video/video2frames.py
