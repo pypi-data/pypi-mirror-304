@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sdk_mocks/MockManager.py
+sdk_mocks/__init__.py
+sdk_mocks.egg-info/PKG-INFO
+sdk_mocks.egg-info/SOURCES.txt
+sdk_mocks.egg-info/dependency_links.txt
+sdk_mocks.egg-info/top_level.txt
+tests/test_mock_manager.py
+tests/test_os_mock.py
