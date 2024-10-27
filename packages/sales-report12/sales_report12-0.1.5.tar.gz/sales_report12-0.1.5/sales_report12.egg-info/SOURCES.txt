@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+sales_report/__init__.py
+sales_report/cli.py
+sales_report/report_generator.py
+sales_report12.egg-info/PKG-INFO
+sales_report12.egg-info/SOURCES.txt
+sales_report12.egg-info/dependency_links.txt
+sales_report12.egg-info/entry_points.txt
+sales_report12.egg-info/requires.txt
+sales_report12.egg-info/top_level.txt
