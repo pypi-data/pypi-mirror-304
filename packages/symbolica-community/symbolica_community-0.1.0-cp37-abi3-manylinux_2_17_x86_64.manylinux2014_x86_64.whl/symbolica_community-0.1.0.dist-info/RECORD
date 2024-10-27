@@ -1,0 +1,12 @@
+symbolica_community-0.1.0.dist-info/METADATA,sha256=VXe3noN6y2K8RrJetqCFoe1Z0TchRETHdWZEVtUXyGc,3698
+symbolica_community-0.1.0.dist-info/WHEEL,sha256=hMk5IpADulGkiZMaNMbdy-SRq96NAa-5bxnNMKMeEtg,127
+symbolica_community-0.1.0.dist-info/licenses/LICENSE,sha256=ndFQtbDn5m_M-_ZlT8m-VUfARVfWomlB95DfiPQOSMs,1070
+symbolica_community/examples/physics/tensors.py,sha256=mytw_mAeJLn2hIaX66xA0kjZjKNmq0iKoJnHMJf6DXk,6445
+symbolica_community/examples/physics/vakint.py,sha256=A1g8Mm-s8nUUfa7Enl60oK027dC0z9GO_4sCfydMg40,3318
+symbolica_community/__init__.py,sha256=cFXeXOVsvfsMcz0f_9NR6kZciYpsU8jFzsb7MfFirTU,161
+symbolica_community/symbolica_community.pyi,sha256=00UIEVaxUmNyXPYHBgP7_padKxagd2AsKF0CRL4skFU,123256
+symbolica_community/physics/__init__.py,sha256=6me7Ns5zQTmeCzDFgNYW16q7oH-aWb_sI95aLQjvmp0,588
+symbolica_community/tensors.pyi,sha256=T3m8Snmp7ZIL6UsJiEOCMxMYR0Cayu4d9Rb2NPyJB1s,11186
+symbolica_community/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+symbolica_community/symbolica_community.abi3.so,sha256=O-Fk34jzILrnEsWky9YmGrL77OhTS837Oy5TqtlqcG8,39905200
+symbolica_community-0.1.0.dist-info/RECORD,,
