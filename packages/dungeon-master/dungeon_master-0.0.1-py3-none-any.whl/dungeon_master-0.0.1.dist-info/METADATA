@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dungeon-master
+Version: 0.0.1
+Summary: A Dungeon Master backed by Artificial Intelligence
+Author-email: Juliano Fernandes <julianofernandes@gmail.com>
+Project-URL: Homepage, https://github.com/julianolf/dungeon-master
+Project-URL: Issues, https://github.com/julianolf/dungeon-master/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Dungeon Master
+
+A Dungeon Master backed by Artificial Intelligence.
