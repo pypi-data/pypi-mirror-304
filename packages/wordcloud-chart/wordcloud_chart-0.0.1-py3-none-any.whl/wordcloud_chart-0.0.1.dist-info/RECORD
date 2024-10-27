@@ -1,0 +1,17 @@
+wordCloud/__init__.py,sha256=_Vj7foi5giqZSOVzlXWXoY-U3LcJVWqEu9BFr4jlnAo,6045
+wordCloud/example.py,sha256=OalAD70JadoR3AEo9cLdCaVugCNfNptsGmUMrKy-Zf0,770
+wordCloud/utils.py,sha256=WzLxk4AQ_oo6z_BB_3NJuCBo1an0-q1eyjzIFzO8zgk,670
+wordCloud/frontend/build/asset-manifest.json,sha256=YzyEmf8W0lifkvX_qdUPIyRQyy5ljzwZ2zhxFQie1vE,374
+wordCloud/frontend/build/bootstrap.min.css,sha256=X9ITP3t3djkRs4SffIkA1Q2WMy-oYl6au5HFYTVShe0,206960
+wordCloud/frontend/build/bootstrap.min.css.map,sha256=8SM4U2NQpCLGTQLW5D_x3qSTwxVq2CP-GXYc3V1WwFs,589892
+wordCloud/frontend/build/index.html,sha256=n2zm0jiRfkXVPvU2hsRT-qe-1xQoJ_Oyhao0BQaLgb4,553
+wordCloud/frontend/build/static/css/main.6a6d8588.css,sha256=_URFUmLvhRi1K1Vi3G0-0C3hhEfnUb20GTKiaUT5E30,4197
+wordCloud/frontend/build/static/css/main.6a6d8588.css.map,sha256=1ekUAcLTyJT-nWxUiRaNTw1avSgsOZptncNgtLuXwuU,7532
+wordCloud/frontend/build/static/js/main.0280912e.js,sha256=BcLLsGmR6JG8N5-12w22aDamcVpGwk1I5Uvg4AWHNUE,451950
+wordCloud/frontend/build/static/js/main.0280912e.js.LICENSE.txt,sha256=cmjEMovgjlkZ-Bs7b5rRQ8FsJtL1F77Y3YkM2E9yfUs,1293
+wordCloud/frontend/build/static/js/main.0280912e.js.map,sha256=UGqjtyiUGTAzmMjDfwFGEaMZZmYKrl4OH3J37lX4MpE,1919353
+wordcloud_chart-0.0.1.dist-info/LICENSE,sha256=SHkHX-qiNZt-ACArrZP67jppVYPvF8xuUDRjJw_E3L0,1082
+wordcloud_chart-0.0.1.dist-info/METADATA,sha256=BaE6joIGB_jTZz1ZHYjFgNr4qzD3U4yEwOeP_K_o7b4,536
+wordcloud_chart-0.0.1.dist-info/WHEEL,sha256=cpQTJ5IWu9CdaPViMhC9YzF8gZuS5-vlfoFihTBC86A,91
+wordcloud_chart-0.0.1.dist-info/top_level.txt,sha256=jblamNPnP4wGkIdAjiF6vO5HxcP3wZv7Y8f3ZZkfjwg,10
+wordcloud_chart-0.0.1.dist-info/RECORD,,
