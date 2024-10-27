@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sales_report12
+Version: 0.1.1
+Summary: Пакет для автоматического создания отчётов по продажам
+Author: Nikita
+Requires-Dist: pandas

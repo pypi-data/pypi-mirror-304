@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales_report12"
+version = "0.1.1"
+description = "Пакет для автоматического создания отчётов по продажам"
+authors = [{name = "Nikita"}]
+dependencies = ["pandas"]
+
+[project.scripts]
+sales-report = "sales_report.cli:main"
