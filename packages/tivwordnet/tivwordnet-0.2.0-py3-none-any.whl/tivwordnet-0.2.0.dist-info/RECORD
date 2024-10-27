@@ -1,0 +1,11 @@
+tivwordnet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tivwordnet/synset.py,sha256=h7z9EOEHierM24epnZR9pgCXEjHmyav-pavlPnz3GBY,488
+tivwordnet/tiv_wordnet.py,sha256=RdgBYGdSzW4g40GSo9W6EJOz7l_OExJ2AuONEZqYGDs,7799
+tivwordnet/tivwordnet_connector.py,sha256=FDb4q75D21foEKyOKGTrCqUPfOeemGm-hNwWYS9QD6E,4685
+tivwordnet/word.py,sha256=ImZBdR0-SHW2FQU-W4YhZYK4t395WBbGmqWZMo8iFuM,1314
+tivwordnet/data/tiv_definitions.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tivwordnet/data/tiv_synsets.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tivwordnet-0.2.0.dist-info/METADATA,sha256=2Q0TRJWOGib11MzwHabLfQjbd8HZpBdE1TSGSCPka04,4099
+tivwordnet-0.2.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+tivwordnet-0.2.0.dist-info/top_level.txt,sha256=nQTk7xlTaVVzXVwMlQ5VQMigalGPflCqu5ps27MaF2E,11
+tivwordnet-0.2.0.dist-info/RECORD,,
