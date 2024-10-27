@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+pydplyr/__init__.py
+pydplyr/arrange.py
+pydplyr/filter.py
+pydplyr/mutate.py
+pydplyr/select.py
+pydplyr/summarize.py
+pydplyr.egg-info/PKG-INFO
+pydplyr.egg-info/SOURCES.txt
+pydplyr.egg-info/dependency_links.txt
+pydplyr.egg-info/top_level.txt
+tests/01_test.py
+tests/__init__.py
