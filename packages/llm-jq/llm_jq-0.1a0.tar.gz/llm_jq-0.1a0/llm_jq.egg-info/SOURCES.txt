@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_jq.py
+pyproject.toml
+llm_jq.egg-info/PKG-INFO
+llm_jq.egg-info/SOURCES.txt
+llm_jq.egg-info/dependency_links.txt
+llm_jq.egg-info/entry_points.txt
+llm_jq.egg-info/requires.txt
+llm_jq.egg-info/top_level.txt
+tests/test_jq.py
