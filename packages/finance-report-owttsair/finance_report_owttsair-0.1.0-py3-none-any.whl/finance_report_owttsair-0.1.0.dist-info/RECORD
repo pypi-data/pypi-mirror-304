@@ -1,0 +1,7 @@
+finance_report/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finance_report/__main__.py,sha256=eD63IhpHOCFebqirUeFbsRKGDaDNgF1Ij1TkiGmrrBw,557
+finance_report/report_generator.py,sha256=qy2VtiaYW9oOsbmu-TkW1b21fdE4V3coXSDD7G4V4pk,400
+finance_report_owttsair-0.1.0.dist-info/METADATA,sha256=q0lGeTJiubxOPEfdbWvfHB4Qjwgh9EHl-1mGRRwIqtA,253
+finance_report_owttsair-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+finance_report_owttsair-0.1.0.dist-info/top_level.txt,sha256=emYURXMyAqSWN6zHZBVE8FiMI-XsdTgOE1BGLrD4-Hs,15
+finance_report_owttsair-0.1.0.dist-info/RECORD,,

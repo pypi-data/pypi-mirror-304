@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: finance-report-owttsair
+Version: 0.1.0
+Summary: A package for generating financial reports from CSV files.
+Author-email: Анастасия Колесникова <kolesnikova20051003@gmail.com>
+Requires-Dist: pandas
+
