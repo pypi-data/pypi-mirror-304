@@ -1,0 +1,8 @@
+finance_report/__init__.py,sha256=-x-ywMVe84tYHiE9BPbIGAcsJaZjAA2KJTnmabku21c,97
+finance_report/cli.py,sha256=a6-mvZ5JH9BFNp66Sil16q1H256nsKGWhiJLTALVHEY,875
+finance_report/report_generator.py,sha256=kRBf91_cPnYHrnKW3Y3XF7PurXFiZS5Jeumh0Ut2fls,1105
+finance_report-0.1.2.dist-info/METADATA,sha256=4WWWs3cbgvhav5yrXEXO5WKXKsRJ6taZOnPkTM6x9mM,199
+finance_report-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+finance_report-0.1.2.dist-info/entry_points.txt,sha256=mLsNAMNXQX2Lt5JAX-HfYsy32bGc2hTQznC878hXs7U,59
+finance_report-0.1.2.dist-info/top_level.txt,sha256=emYURXMyAqSWN6zHZBVE8FiMI-XsdTgOE1BGLrD4-Hs,15
+finance_report-0.1.2.dist-info/RECORD,,
