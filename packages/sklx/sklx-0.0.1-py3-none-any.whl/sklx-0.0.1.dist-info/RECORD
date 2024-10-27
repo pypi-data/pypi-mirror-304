@@ -1,0 +1,10 @@
+sklx/__init__.py,sha256=WDvWVqg1qG2MvYse1JU-MxIOu-p_opnZh2DfN8G8yb4,48
+sklx/classifier.py,sha256=BW65jukyWWYvHood4tkL9IVnH4ld7WanwfZr0mGUERs,756
+sklx/net.py,sha256=yd3NVvehQdRq9I4iHfyc7EF8kPKKopeCo6tocnykHVY,2796
+sklx/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklx/tests/test_classifier.py,sha256=yz8TPAsA990RqKHCjfw9orrcGTYMOSsfo-6o7ltaQYA,1104
+sklx-0.0.1.dist-info/LICENSE,sha256=vxE7TVBKV6runfcu7nyZHOlSe9EQ48wA9DwX_mfvnKU,1501
+sklx-0.0.1.dist-info/METADATA,sha256=L6ZNI3qLIUeHXCQWNlVUX1nG9Eyg8LSz4mQyhr1EPoQ,1736
+sklx-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sklx-0.0.1.dist-info/top_level.txt,sha256=nH-GEf9KM4qhi6ubXqpDB00zwHQfgCwc_4MPMFPMCzM,5
+sklx-0.0.1.dist-info/RECORD,,
