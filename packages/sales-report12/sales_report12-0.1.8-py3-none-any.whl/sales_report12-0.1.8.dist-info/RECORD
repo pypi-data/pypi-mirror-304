@@ -1,0 +1,8 @@
+sales_report/__init__.py,sha256=wmT03QdJmHb9s-UCwBCdq6DOwYw_tb5H-P07BYaBwJQ,93
+sales_report/cli.py,sha256=bEuVqT6a3c9XC1UR52ceheoa1-5xn7EnvqC9m7EUYhc,794
+sales_report/report_generator.py,sha256=KiA7GkxBWYX_6oFPnXPGe-5PCzxVKrT0RKT7PIrELQY,702
+sales_report12-0.1.8.dist-info/METADATA,sha256=ilijpxl5uDz1yHRbXkFSsed01InMGAfJo0I4GyHMC4g,208
+sales_report12-0.1.8.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sales_report12-0.1.8.dist-info/entry_points.txt,sha256=zcz61C5XBcfgE5eBK__r35_Qn6fIeeZTzzd-sPlNpZo,55
+sales_report12-0.1.8.dist-info/top_level.txt,sha256=O-qS0QLP_xx2XY-5Oo6F1xJE5thAV_Q-Yu3vVr0vwfY,13
+sales_report12-0.1.8.dist-info/RECORD,,
