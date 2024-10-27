@@ -1,0 +1,9 @@
+learnable_activation/__init__.py,sha256=dkdqdB6xYWJVeYhb3aggfXkOSF8sDm6zdLAmO9k6cqY,139
+learnable_activation/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+learnable_activation/custom_loss.py,sha256=J0nBuSFOrvod7btlH7PuZh2J8JpB9_UO6q04G5zuY54,1705
+learnable_activation/learnable_activation.py,sha256=_CsuRaIvv7DeHJNMlb0hr30dADcVg4U30muSvkMAn8A,1157
+learnable_activation/tabular_densenet.py,sha256=DnPVCYnGWi3kaGV_we65_CAfcQrzbRr_s8_P6MTciDM,1550
+learnable_activation-0.0.2.dist-info/METADATA,sha256=VGajgU5HfODuQGU2nzDIcYF4SGI1WIVEl_BoeucZK9w,5301
+learnable_activation-0.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+learnable_activation-0.0.2.dist-info/top_level.txt,sha256=5hMLMOBA1rC2oHqDEFinY0J4HoqC2WAcwigTfjHzmpA,21
+learnable_activation-0.0.2.dist-info/RECORD,,
