@@ -1,0 +1,16 @@
+osrs/__init__.py,sha256=w4Tjb8-klf8-zoi78OwOt0jY5B3fjoSG8DxNsvtFI7s,122
+osrs/exceptions.py,sha256=nI6tTV8Nj-3lpa0LoWigJYyO6UUr-p_SVouO38yIbtI,136
+osrs/async_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/async_api/osrs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/async_api/osrs/hiscores.py,sha256=i7SM41gwsfy5Kd7aUdVAFOPN6cgFA7InGpkYjKUEZlU,2986
+osrs/async_api/runelite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/sync_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/sync_api/osrs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/sync_api/runelite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osrs/utils/__init__.py,sha256=QV4n7evLIVTkNPfYWQTTXtoa_MQEKvGJpfjpNZFejx8,81
+osrs/utils/ratelimiter.py,sha256=Fqj3_KGDgJPNsMxwucJYT8NeWVY3FjgWpOUzJpawAzU,1030
+osrs-0.0.9.dist-info/LICENSE,sha256=d9ZLcoTfZco4U8NlXDMopJ18X6Y5IF7FRu6STYARRt8,1068
+osrs-0.0.9.dist-info/METADATA,sha256=DpqC-KxpwxbYiDoXOJkWu5Xp8bwX_KXx2hB98iP_q6w,1237
+osrs-0.0.9.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+osrs-0.0.9.dist-info/top_level.txt,sha256=djfdNug21GagEYfOn92IXcB6WQzT81hCQihqA1smAWE,5
+osrs-0.0.9.dist-info/RECORD,,
