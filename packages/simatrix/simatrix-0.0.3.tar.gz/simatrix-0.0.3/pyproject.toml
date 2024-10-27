@@ -1,0 +1,24 @@
+[build-system]
+requires = ['setuptools>=61.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "simatrix"
+version = "0.0.3"
+authors = [
+  { name="Piotr Daniel", email="piotr.daniel4@gmail.com" },
+]
+description = "A simple way to generate matrix in Python"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+keywords = ["matrix", "matrice", "multidimensional", "list", "generator", "list generator", "matrix generator", "simatrix"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository  = "https://github.com/pino888/simatrix"
+Issues = "https://github.com/pino888/simatrix/issues"

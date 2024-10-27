@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+simatrix/__init__.py
+simatrix/matrix.py
+simatrix.egg-info/PKG-INFO
+simatrix.egg-info/SOURCES.txt
+simatrix.egg-info/dependency_links.txt
+simatrix.egg-info/top_level.txt
