@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "client_report12"
+version = "0.1.2"
+description = "Пакет для генерации отчётов по клиентам"
+authors = [{name = "Nikita1207", email = "dorogin345@gmail.com"}]
+license = {text = "MIT"}
+dependencies = [
+    "pandas>=1.0",
+]
+
+[project.scripts]
+client-report = "client_report.cli:main"
