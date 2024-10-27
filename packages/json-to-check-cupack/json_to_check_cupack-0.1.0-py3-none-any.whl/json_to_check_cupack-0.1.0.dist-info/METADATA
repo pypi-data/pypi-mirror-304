@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: json_to_check_cupack
+Version: 0.1.0
+Summary: Конвертация данных о покупке из json в чек .txt
+Author: elhuel
+Requires-Python: >=3.10
+
