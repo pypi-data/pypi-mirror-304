@@ -1,0 +1,6 @@
+numpy==1.24.3
+pandas
+torch
+torchvision
+pycocotools
+scikit-learn
