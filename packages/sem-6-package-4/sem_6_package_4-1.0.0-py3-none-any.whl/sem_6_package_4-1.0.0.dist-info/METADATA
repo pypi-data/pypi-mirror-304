@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sem-6-package-4
+Version: 1.0.0
+Summary: четвертый пакет из домашки
+Author-email: brxbxt <89297578555a@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+
