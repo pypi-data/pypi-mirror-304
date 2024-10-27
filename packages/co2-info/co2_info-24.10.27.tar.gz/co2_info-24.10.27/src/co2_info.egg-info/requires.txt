@@ -1,0 +1,7 @@
+setuptools>=61.0
+argparse
+paho-mqtt>=2
+uuid
+pandas
+matplotlib
+urllib3
