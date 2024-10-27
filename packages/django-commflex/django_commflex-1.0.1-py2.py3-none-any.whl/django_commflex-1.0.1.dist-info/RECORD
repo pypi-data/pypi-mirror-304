@@ -1,0 +1,15 @@
+commflex/__init__.py,sha256=m_CDMfPAaM--YHVdO1McLCkOwoUydsf7LOzC4eH3f6Q,75
+commflex/apps.py,sha256=dnqgTRWknBdPgKSPTi1kXb_AamEgiQ3jigNa_ui4mrs,178
+commflex/sms/__init__.py,sha256=dkUnRhJzX5K1RtcAyOyQzYnRbwVKMYYEHHfjb0WSwio,150
+commflex/sms/abstract.py,sha256=kIGH7fJWswRI5v_O39RrXLelpgQsy2iase_qWRD7Ovg,2221
+commflex/sms/factory.py,sha256=APkp-hTTxw-yTnCCO03ojdIP8DvTXSwhaHjdlderg_A,1241
+commflex/sms/retry_client.py,sha256=VtdgAPIaQmWWfsTZ9oOH6eWEwbQz7wVOfK3ASxAHmlw,1543
+commflex/sms/task.py,sha256=P3XkuIrsQDvDJqSV04-yNvMK2Nq8L2hWGBpcfan2pZA,486
+commflex/sms/provider/ait.py,sha256=oe70mOg_iKZqsKLIgcvv2kX_xFS93ne8iuTDWvmCwyk,2000
+commflex/sms/provider/aws.py,sha256=9h5LGvsmNPOCrzYoa3o7ocY7SgFAPbocc3myOLpGZw0,2284
+commflex/sms/provider/constants.py,sha256=_VFS_RRvkJKS7Icm4YM_YMwG5FnmoUbHr45HDWeCLVg,151
+django_commflex-1.0.1.dist-info/METADATA,sha256=G0lbRDwOEWLV-XFg-N7Nt7pttsw7PQUyXn54B79wtMU,2696
+django_commflex-1.0.1.dist-info/WHEEL,sha256=fl6v0VwpzfGBVsGtkAkhILUlJxROXbA3HvRL6Fe3140,105
+django_commflex-1.0.1.dist-info/licenses/AUTHORS.rst,sha256=opVLaQJLYfw6oYZwNidOg3rMvrXhZyMg-AY5vaAcBpc,91
+django_commflex-1.0.1.dist-info/licenses/LICENCE,sha256=KNAADYhXKAIGySYjfCVq6P4ZDhIUFfHxeZFYa3-32ec,1055
+django_commflex-1.0.1.dist-info/RECORD,,
