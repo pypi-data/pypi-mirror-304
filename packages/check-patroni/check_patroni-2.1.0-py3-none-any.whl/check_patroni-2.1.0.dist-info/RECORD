@@ -1,0 +1,13 @@
+check_patroni/__init__.py,sha256=bX0Jd3sb5uX6BglnsKbg6cndiccm9tQ9IhQ8EMTykkI,90
+check_patroni/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+check_patroni/cli.py,sha256=tNqrh9knELsPhGeN1MXCWngCetjDg1wAKvOcy_PG3bA,25616
+check_patroni/cluster.py,sha256=kZAzVoff8nSlzInTKOCP1MzNwMXED3AsZC9DbebcTcU,12430
+check_patroni/convert.py,sha256=PXQyQOZCCa4HB4uTYUgpFWfjcD5bOx9usG1xTKzPv0s,1491
+check_patroni/node.py,sha256=anNzV1415B_TeAY85nrtYcud16mfBSebY6prIif83MU,8453
+check_patroni/types.py,sha256=wZKVDxHMlZLq_o6E7xUT-opnDaWRilScPsfGE_xcwF0,4035
+check_patroni-2.1.0.dist-info/LICENSE,sha256=F6AHJ7lRyz10BGRZ-D1-8nh1km_2X22NUiT54cfds-w,918
+check_patroni-2.1.0.dist-info/METADATA,sha256=atP4vj2OzkMPr7fjIR3fzt5d7wZAzViMddRs9lpOF_8,17847
+check_patroni-2.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+check_patroni-2.1.0.dist-info/entry_points.txt,sha256=CVoNAR2ZvmW0hDwqhaZo9o5x8D05t_OGdbqhXn8o51A,57
+check_patroni-2.1.0.dist-info/top_level.txt,sha256=tYwy_xZzJArazK4UO7aNrn2nSeWsoYol2QhPFH4649s,14
+check_patroni-2.1.0.dist-info/RECORD,,
