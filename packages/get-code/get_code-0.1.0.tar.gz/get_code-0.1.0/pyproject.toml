@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "get-code"
+version = "0.1.0"
+description = ""
+authors = ["Allysson-Christopher <128186654+Allysson-Christopher@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+holidays = "<1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+freezegun = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
