@@ -1,0 +1,65 @@
+[project]
+  name            = "MiscLib"
+  version         = "0.1.1"
+  requires-python = ">= 3.12"
+  description     = "A small library of Python 3.12+ utility functions and other useful miscellany."
+  readme          = "README.md"
+  license         = { text = "Apache-2.0" }
+  authors         = [{ name = "Alchemyst0x", email = "alchemyst@alchemyst.io" }]
+
+  dependencies = []
+
+  [project.scripts]
+    "misc" = "misclib:main"
+
+[build-system]
+  requires      = ["hatchling"]
+  build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+  allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+  packages = ["src/misclib"]
+
+[tool.rye]
+  managed           = true
+  lock-with-sources = true
+  generate-hashes   = true
+
+  dev-dependencies = [
+    "mypy>=1.13.0",
+    "codespell>=2.3.0",
+    "pre-commit>=4.0.1",
+    "ruff>=0.7.1",
+    "pytest>=8.3.3",
+    "devtools>=0.12.2",
+  ]
+
+[tool.codespell]
+  builtin           = "clear,code,informal,rare,usage"
+  ignore-words-list = "deque,deques,jupyter,keypair"
+
+[tool.mypy]
+  plugins              = ["pydantic.mypy"]
+  no_implicit_optional = true
+  show_column_numbers  = true
+  show_error_codes     = true
+  show_error_context   = true
+  warn_redundant_casts = true
+  warn_return_any      = false
+  warn_unused_configs  = true
+  warn_unused_ignores  = true
+
+  [[tool.mypy.overrides]]
+    module             = "tests.*"
+    disable_error_code = "annotation-unchecked"
+
+[tool.pydantic-mypy]
+  init_typed                    = true
+  init_forbid_extra             = true
+  warn_required_dynamic_aliases = true
+
+[tool.pytest.ini_options]
+  pythonpath = ["src"]
+  addopts    = "-s"
