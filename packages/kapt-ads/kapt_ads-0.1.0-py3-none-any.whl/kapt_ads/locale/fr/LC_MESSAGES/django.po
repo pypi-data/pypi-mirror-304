@@ -1,0 +1,220 @@
+# KAPT-ADS TRANSLATIONS
+# Copyright (C) 2024 KAPT
+# This file is distributed under the same license as the KAPT-ADS package.
+# Adrien Delhorme <ad@kapt.mobi>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-02 11:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Adrien Delhorme <ad@kapt.mobi>\n"
+"Language-Team: Devs KAPT <dev@kapt.mobi>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: admin.py:16
+msgid "Ads count"
+msgstr "Nombre d’annonces"
+
+#: admin.py:50
+msgid "Scheduling"
+msgstr "Programmation"
+
+#: admin.py:59
+msgid "Limits"
+msgstr "Limites"
+
+#: admin.py:68 models.py:100
+msgid "Prints count"
+msgstr "Nombre d’affichages"
+
+#: admin.py:74 models.py:93
+msgid "Clicks count"
+msgstr "Nombre de clics"
+
+#: admin.py:77
+msgid "This ad is not clickable because it does not have a target URL."
+msgstr "Cette annonce n’est pas cliquable car elle n’a pas d’URL cible."
+
+#: admin.py:83
+msgid "Is active"
+msgstr "Est active"
+
+#: admin.py:92
+msgid " (for {})"
+msgstr " (pour {})"
+
+#: apps.py:8 contrib/cmsplugin_ads/cms_plugins.py:19 models.py:126
+msgid "Ads"
+msgstr "Annonces"
+
+#: conf/settings.py:6
+msgid "Square"
+msgstr "Carré"
+
+#: conf/settings.py:7
+msgid "Horizontal banner"
+msgstr "Bannière horizontale"
+
+#: conf/settings.py:8
+msgid "Vertical banner"
+msgstr "Bannière verticale"
+
+#: contrib/cmsplugin_ads/apps.py:9
+msgid "CMSPlugin Ads"
+msgstr "CMSPlugin Ads"
+
+#: contrib/cmsplugin_ads/conf/settings.py:9
+msgid "Default"
+msgstr "Par défaut"
+
+#: contrib/cmsplugin_ads/models.py:17
+msgid "Number of ads to print"
+msgstr "Nombre d’annonces à afficher"
+
+#: contrib/cmsplugin_ads/models.py:21
+msgid "Template"
+msgstr "Gabarit"
+
+#: contrib/cmsplugin_ads/models.py:28 models.py:50 models.py:74
+msgid "Location"
+msgstr "Emplacement"
+
+#: contrib/cmsplugin_ads/models.py:32
+msgid "Ads configuration"
+msgstr "Configuration des annonces"
+
+#: contrib/cmsplugin_ads/models.py:33
+msgid "Ads configurations"
+msgstr "Configurations des annonces"
+
+#: contrib/cmsplugin_ads/models.py:36
+msgid "Ads location {}"
+msgstr "Emplacement d’annonces {}"
+
+#: models.py:28 models.py:39 models.py:70
+msgid "Name"
+msgstr "Nom"
+
+#: models.py:31 models.py:64
+msgid "Advertiser"
+msgstr "Annonceur"
+
+#: models.py:32
+msgid "Advertisers"
+msgstr "Annonceurs"
+
+#: models.py:41
+msgid "Identifier"
+msgstr "Identifiant"
+
+#: models.py:45
+msgid "Format"
+msgstr "Format"
+
+#: models.py:51
+msgid "Locations"
+msgstr "Emplacements"
+
+#: models.py:55
+#, python-brace-format
+msgid "{name} (format: {format})"
+msgstr "{name} (format : {format})"
+
+#: models.py:71
+msgid "For admin use only. Will not appear on the ad."
+msgstr ""
+"Visible uniquement par les administrateurs. Ne sera pas affiché sur "
+"l’annonce."
+
+#: models.py:76
+msgid "Image"
+msgstr "Image"
+
+#: models.py:77
+msgid "Text"
+msgstr "Texte"
+
+#: models.py:79
+msgid "Target URL"
+msgstr "URL cible"
+
+#: models.py:79
+msgid "The URL that opens when the ad is clicked."
+msgstr "L’URL qui s’ouvre lors d’un clic sur l’annonce."
+
+#: models.py:82
+msgid "Publication start date"
+msgstr "Date de début de publication"
+
+#: models.py:85
+msgid "Publication end date"
+msgstr "Date de fin de publication"
+
+#: models.py:87
+msgid "Is paused"
+msgstr "Est en pause"
+
+#: models.py:90
+msgid "Clicks limit"
+msgstr "Limite du nombre de clics"
+
+#: models.py:97
+msgid "Prints limit"
+msgstr "Limite du nombre d’affichage"
+
+#: models.py:106
+msgid "Pending"
+msgstr "En attente"
+
+#: models.py:107
+msgid "Active"
+msgstr "Active"
+
+#: models.py:108
+msgid "Paused"
+msgstr "En pause"
+
+#: models.py:109
+msgid "Completed"
+msgstr "Terminée"
+
+#: models.py:114
+msgid "The publication start date has not been reached yet"
+msgstr "La date de début de publication n’a pas encore été atteinte"
+
+#: models.py:116
+msgid "This ad is online"
+msgstr "Cette annonce est en ligne"
+
+#: models.py:118
+msgid "This ad has been manually paused"
+msgstr "Cette annonce a été mise en pause manuellement"
+
+#: models.py:121
+msgid "The publication end date, prints limit or clicks limit has been reached"
+msgstr ""
+"La date de fin de publication, la limite du nombre d’affichage ou la limite "
+"du nombre de clics a été atteinte"
+
+#: models.py:125
+msgid "Ad"
+msgstr "Annonce"
+
+#: models.py:143
+msgid "The start date must be lesser or equal than the end date"
+msgstr "La date de début doit êtr inférieure à la date de fin"
+
+#: models.py:152 models.py:153
+msgid ""
+"Either a limit on the number of clicks or a limit on the number of prints "
+"should be specified, but not both."
+msgstr ""
+"Soit une limite en nombre de clics ou une limite en nombre d’affichage doit "
+"être définie, mais pas les deux."

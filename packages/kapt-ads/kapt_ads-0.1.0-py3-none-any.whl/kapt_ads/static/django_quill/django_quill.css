@@ -1,0 +1,28 @@
+div.form-row div.django-quill-widget-container {
+  display: inline-block;
+}
+
+.quill-editor iframe,
+.quill-editor video,
+button.ytp-large-play-button,
+button.ytp-button {
+  pointer-events: none;
+}
+
+/* Override default CSS by declaring a more specific selector */
+form div.form-row > div:not([class]) > .flex-container > div.django-quill-widget-container {
+  width: 100%;
+  max-width: none;
+
+  /* Avoid django-admin-style abusive overrides */
+  button {
+    padding: 3px 5px !important;
+    border: 0 !important;
+  }
+
+  .ql-editor h2 {
+    font-size: 1.5em !important;
+    border-bottom: 0;
+    margin-bottom: .5em;
+  }
+}
