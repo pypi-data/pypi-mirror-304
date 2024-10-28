@@ -1,0 +1,13 @@
+Sphinx
+docopt
+matplotlib
+molmass
+myst_parser
+numpy
+pandas
+pytest
+fastparquet
+rich
+scipy
+sphinx_rtd_theme
+molmass
