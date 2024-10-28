@@ -1,0 +1,14 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+[project]
+name = 'redmibook_vpn'
+version = '0.1.0'
+description = 'Пакет позволяющий использовать бесполезную кнопку на Redmibook pro 15, для подключения к VPN'
+authors = [
+  {name = 'Savva Serebriakov', email = 'savva08savva08@gmail.com'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}    
+requires-python = '>=3.8'
+dependencies = ['evdev==1.4.0']

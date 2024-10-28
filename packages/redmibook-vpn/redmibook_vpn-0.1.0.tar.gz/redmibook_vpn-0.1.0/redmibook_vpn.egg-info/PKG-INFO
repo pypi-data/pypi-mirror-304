@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: redmibook_vpn
+Version: 0.1.0
+Summary: Пакет позволяющий использовать бесполезную кнопку на Redmibook pro 15, для подключения к VPN
+Author-email: Savva Serebriakov <savva08savva08@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: evdev==1.4.0
+
+### Установка 
+```bash
+pip3 install redmibook_vpn
+```
+### Создание сервиса
+
+```bash
+cd /etc/systemd/system
+```
+создаем redmivpn.service
+```bash
+[Unit]
+Description=vpn button
+[Service]
+User=root
+WorkingDirectory=/
+ExecStart=python3 -m redmibook_vpn --vpn_name <NAME>
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+```
+инициализируем
+
+```bash
+sudo systemctl daemon-reload
+```
+```bash
+sudo systemctl start redmivpn.service
+```
+```bash
+sudo systemctl enable redmivpn.service
+```
