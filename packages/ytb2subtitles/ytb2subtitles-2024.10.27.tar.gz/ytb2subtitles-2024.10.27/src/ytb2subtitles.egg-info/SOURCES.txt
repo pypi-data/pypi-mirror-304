@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/ytb2subtitles/ytb2subtitles.py
+src/ytb2subtitles.egg-info/PKG-INFO
+src/ytb2subtitles.egg-info/SOURCES.txt
+src/ytb2subtitles.egg-info/dependency_links.txt
+src/ytb2subtitles.egg-info/entry_points.txt
+src/ytb2subtitles.egg-info/requires.txt
+src/ytb2subtitles.egg-info/top_level.txt
