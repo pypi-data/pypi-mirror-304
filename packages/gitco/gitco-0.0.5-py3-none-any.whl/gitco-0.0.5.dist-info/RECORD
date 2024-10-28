@@ -1,0 +1,10 @@
+gitco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitco/cli.py,sha256=CfOB5HM1enPFU3Ip1WRiKog_hhEjPRt3n2gR5Mw0M4s,1611
+gitco/gitco.py,sha256=V7cmWMCjes4BoZjMq52LY5g6n5wWGIkKTI6Neipej2E,3709
+gitco/inputs.py,sha256=B3I8vvoNOWoMnkQgw3W_B7jZZo4n9VSHgT6ui_xYC28,2761
+gitco/utils.py,sha256=tRARJOXD5LdwJgJ-ylxtGSd6HMK8rj812DrLfOkmhCU,1158
+gitco-0.0.5.dist-info/METADATA,sha256=ZAIMkPqdnIu-tr5w0eONbJdhi2VTLoV1tEb09RkOSEk,4364
+gitco-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gitco-0.0.5.dist-info/entry_points.txt,sha256=-aMxO0DExtLZO8E9H8xh-WxBkHTJ-ZkwFTrUB8G5cNw,40
+gitco-0.0.5.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+gitco-0.0.5.dist-info/RECORD,,
