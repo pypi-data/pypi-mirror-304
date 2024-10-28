@@ -1,0 +1,12 @@
+
+[build]
+build==1.2.2.post1
+twine==5.1.1
+
+[dev]
+coverage==7.6.4
+mypy==1.13.0
+isort==5.13.2
+flake8==7.1.1
+black==24.10.0
+pydocstyle==6.3.0
