@@ -1,0 +1,17 @@
+gh_fake_analyzer/__init__.py,sha256=vxCG-wwCXoMHYOn1eYcavWwqVNET5UZ9uV-7BF7-3ys,66
+gh_fake_analyzer/config.ini,sha256=OZVgBqAT1n0eOpZYo8t2EzZTDZ41bBTiQKwRCt_iCgI,148
+gh_fake_analyzer/terminal.py,sha256=j7fj-vhpMQ9XebQZa7Jg8Pgmzui-RTynmEu6oE5bWXU,7425
+gh_fake_analyzer/modules/analyze.py,sha256=lnZZbQm03HrLaV7xl6DzWU5K89TsEdneybJQDhLbM_Q,13599
+gh_fake_analyzer/modules/fetch.py,sha256=HQzdrqbG49Sdh73iLqiPB3KGeyRTkxlFBV68fWkloco,9245
+gh_fake_analyzer/modules/filter.py,sha256=oT6ox1RJZbOK7vfwZ5gO_2fP80TiUA-eNrME2GZycIQ,6558
+gh_fake_analyzer/modules/monitor.py,sha256=O3fEnSw9SRM9qyFOO_Sq1Qk0yXzfDcHKTxUMYI6kzls,7279
+gh_fake_analyzer/modules/output.py,sha256=1hm_44Lk98pL1m_cokaOSFy27vfo3dMJ5ffVxOwR1Bk,4523
+gh_fake_analyzer/utils/api.py,sha256=z_xjYufIYLKAsF7RgFm2vT-8W5owLa92e6weX6FSWNg,4479
+gh_fake_analyzer/utils/config.py,sha256=2x6tfamUamXtyHm7UxZVJjjsqBNRIU76gRKh0HpXVkc,3829
+gh_fake_analyzer/utils/data.py,sha256=SnfCN7by_hsuRHhBUVBkkkjlLBCz2axqwc8IBh5H6JY,8111
+gh_fake_analyzer/utils/github.py,sha256=kaE9rqe066P056929kTcu84HiFyGkXk6T2YNnIJEPAQ,6576
+gh_fake_analyzer-0.1.9.dist-info/METADATA,sha256=CR77OkTYcEHn-6X9iy3_nVEU_8VLeTw0GkPFVKrSEYg,16840
+gh_fake_analyzer-0.1.9.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+gh_fake_analyzer-0.1.9.dist-info/entry_points.txt,sha256=6M6hp32Cufn1CAOSdcoyuHd195P7sQKRyQ60ty39YqE,72
+gh_fake_analyzer-0.1.9.dist-info/top_level.txt,sha256=F4k8DpQ2ugR5zZkqNfRSZetw_S84JhQk7EHCjb7wMRo,17
+gh_fake_analyzer-0.1.9.dist-info/RECORD,,
