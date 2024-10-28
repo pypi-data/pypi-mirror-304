@@ -1,0 +1,7 @@
+Metadata-Version: 2.3
+Name: textual-englyph
+Version: 0.1.1
+Summary: A Textual widget to generate stylized large text.
+Requires-Python: >=3.12
+Requires-Dist: pillow>=10.4.0
+Requires-Dist: textual>=0.82.0
