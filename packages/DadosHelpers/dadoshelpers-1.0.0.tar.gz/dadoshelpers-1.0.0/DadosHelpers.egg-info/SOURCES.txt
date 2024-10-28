@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+DadosHelpers/__init__.py
+DadosHelpers/apiDataFactory.py
+DadosHelpers/apiDatabricks.py
+DadosHelpers/apiDataverse.py
+DadosHelpers/apiPowerAutomate.py
+DadosHelpers.egg-info/PKG-INFO
+DadosHelpers.egg-info/SOURCES.txt
+DadosHelpers.egg-info/dependency_links.txt
+DadosHelpers.egg-info/requires.txt
+DadosHelpers.egg-info/top_level.txt
