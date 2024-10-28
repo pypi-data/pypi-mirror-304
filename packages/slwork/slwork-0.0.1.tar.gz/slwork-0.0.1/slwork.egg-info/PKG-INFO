@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: slwork
+Version: 0.0.1
+Summary: Flexible, extensible Web CMS framework built on Tornado,compatible with Python 3.7 and above.
+Home-page: https://bukun.coding.net/p/dev/d/slwork/git
+Author: bukun
+Author-email: bukun@osgeo.cn
+License: MIT License
+Keywords: slwork
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+
+==============================
+slwork Introduction
+==============================
+
+
+
+Introduction
+==============================
+
+
+Could be installed in the following two ways:
+
+1. **Install using pip3**
+
+- Install Python packages using pip
+
+::
+
+    pip3 install slowrk_function
+
+
+
+- Use pip to update Python package commands
+
+::
+
+    pip3 install --upgrade slowrk_function
+
+
+2. **Install using compressed file**
+
+After decompressing the folder, enter the decompressed
+file package and first enter the Python environment in
+the command window
+
+::
+
+    conda activate vpy_slw
+
+Run the command to install the slwork_function package
+
+::
+
+    python setup.py install
+
+After successful installation, when using the mode_5.py
+script of this package in other scripts, add a reference statement
+
+
+::
+
+   from slwork_function.mode_5 import *
+
+
