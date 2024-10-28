@@ -1,0 +1,9 @@
+plumbum
+requests
+setuptools
+
+[aio]
+aiohttp
+
+[emoji]
+emoji
