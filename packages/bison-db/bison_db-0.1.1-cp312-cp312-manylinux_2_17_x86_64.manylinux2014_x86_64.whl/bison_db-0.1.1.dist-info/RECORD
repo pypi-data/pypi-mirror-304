@@ -1,0 +1,5 @@
+bison_db-0.1.1.dist-info/METADATA,sha256=oJNzF5SHQCAWEQn3IS_2FFpFmKaQwfXSFx2TRGBxDFM,6519
+bison_db-0.1.1.dist-info/WHEEL,sha256=9nMhkhjT5-smROE-lOgRy50zrYHdk-fRmS6ah4MLvkg,129
+bison/__init__.py,sha256=Fgj0HWf4DEARk-93p99wEIgo-C46RGZTYe_R4cQ2PqA,103
+bison/bison.cpython-312-x86_64-linux-gnu.so,sha256=sk2jLSCxVWgpBOQCCSKRgQQeBgKjPA_UWn_0o02GggY,893016
+bison_db-0.1.1.dist-info/RECORD,,
