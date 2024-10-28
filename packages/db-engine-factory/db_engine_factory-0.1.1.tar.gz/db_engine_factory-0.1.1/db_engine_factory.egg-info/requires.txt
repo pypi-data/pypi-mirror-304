@@ -1,0 +1,5 @@
+python-dotenv
+SQLAlchemy>=2.0
+pyodbc
+pymysql
+psycopg2-binary
