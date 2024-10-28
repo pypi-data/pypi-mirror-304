@@ -1,0 +1,8 @@
+sales_reporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sales_reporter/__main__.py,sha256=o7zeT3vqyOUrXP_UYALkSsghE2-WjmRifm-VV8gy98o,914
+sales_reporter/data_in_out.py,sha256=s8K3Sv-8sh8Eyvpivmm1DD5oM7vkxtkefngAsex4bqU,486
+sales_reporter/data_processing.py,sha256=1X4RhtKgmpQKbTSs-TpdIsJAultLL4dZLyBMgTUeLv8,191
+sales_reporter_scochilloff-0.1.1.dist-info/METADATA,sha256=lILCybAJvy0DTxCVzdTT3VqsfE10MqYM7TgmUwJe-Ak,422
+sales_reporter_scochilloff-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+sales_reporter_scochilloff-0.1.1.dist-info/top_level.txt,sha256=uBnLIH8lYKgyEbej26ARdeg0SJoW3_RN2zs172U3iTc,15
+sales_reporter_scochilloff-0.1.1.dist-info/RECORD,,
