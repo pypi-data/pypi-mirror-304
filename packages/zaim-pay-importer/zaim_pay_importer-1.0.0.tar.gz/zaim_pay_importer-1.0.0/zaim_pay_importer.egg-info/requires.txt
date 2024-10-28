@@ -1,0 +1,7 @@
+PyGmailScraper>=1.1.1
+zaim-sdk>=0.0.0
+
+[dev]
+build
+twine
+types-python-dateutil
