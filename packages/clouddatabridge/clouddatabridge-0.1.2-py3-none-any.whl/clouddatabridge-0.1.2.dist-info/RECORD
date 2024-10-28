@@ -1,0 +1,13 @@
+clouddatabridge/__init__.py,sha256=0uQ3H1VxzoYQNTroifrd53mYzsVY8gqMJvgJNPp_KTk,202
+clouddatabridge/aws_db.py,sha256=bS2NK3dQtrk1HzUhD2bjafELk1UNGhsBSBcotgE0Ke8,1865
+clouddatabridge/azure_db.py,sha256=SPEnoKRpap96VJEznysnNs6adXXDjnzon-HntoPoVSU,1610
+clouddatabridge/db_connection.py,sha256=07SU8B_M5svfbAwhQwchrKZDajJT2CO-jyzgpA_1qsk,513
+clouddatabridge/db_manager.py,sha256=TBakohW-68newxFlsmOVVcq7zSZGcs3H2BdqGYrWuNE,1046
+clouddatabridge/gcp_db.py,sha256=4zZ1DE-7G3Yi_X-O5ZtV4GH7X_jOR8bHZAUtwyVmPrA,2036
+clouddatabridge/local_db.py,sha256=86vFonnCPvK2sYT6TzvvUw5mNHlFuDmxMFNfA5nQzC8,1446
+clouddatabridge/rds_execute.py,sha256=rT-JIMLUrXRRtDVaNmqNG2dlKCgoM63gitgXTDYFMwc,1466
+clouddatabridge-0.1.2.dist-info/LICENSE,sha256=3qyi84eOMPYSKYxV3Gt83gu2wVE6qSFY8KnsI46o4Ro,482
+clouddatabridge-0.1.2.dist-info/METADATA,sha256=JY4GJWkWwN3ZGtO4wx9X9OwVosIY3cyzSEVF5xPfT9M,1331
+clouddatabridge-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+clouddatabridge-0.1.2.dist-info/top_level.txt,sha256=D47sQpZwuWqHDQB44YtTkR2dddU_g0qnaGB3nxjxfTA,16
+clouddatabridge-0.1.2.dist-info/RECORD,,
