@@ -1,0 +1,8 @@
+include README
+include LICENSE
+include NEWS
+graft examples
+graft pymeta
+graft bin
+graft extras
+global-exclude *.pyc
