@@ -1,0 +1,15 @@
+autogs/_static.py,sha256=9fHu5m0ivGStMwRoa9frqE18iDvbSWgUguKzG062fkc,829
+autogs/util.py,sha256=D0LprPI-0H1YNnvGv48cm7kLSInbtAysCXrD2OlTZLU,355
+autogs/agent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autogs/agent/llm_agent/__init__.py,sha256=Z-czUhlcGtWH44MJcZ2_KGKN46645_f6uLPzejHN6Zs,654
+autogs/agent/llm_agent/gcloud/TemplateAgent.py,sha256=lUgy9QyfQ0A0uNYrNUtJpIsATQ6L1gGQ9CtIzi0xzyM,1121
+autogs/agent/llm_agent/gcloud/__init__.py,sha256=5GjGJtYesJyBhoYAcAdbq0mC2rm4UvmOy6D943PN2Cg,729
+autogs/agent/llm_agent/gcloud/_static.py,sha256=irYQ8yjLh9QQWmw7VPnYSRAutSDlZvFkmXw0v0RSpe0,566
+autogs/io/__init__.py,sha256=ewoRFqE6Iga2VxIqz4cOImyV9bWPrTsTc3XR-Sq61P4,46
+autogs/io/git/__init__.py,sha256=hlX67_IJMxyCdRJZ_xtuAmBzZ-VgkjCf8KJ_s2Fl1ls,7539
+autogs/pdf/__init__.py,sha256=ckGx_JCJtusEk-YHCG2Y82D8XBIRRKoTig0X51n9j5I,5359
+autogs/process/__init__.py,sha256=Eq-yNtNRZctgC1GTOH0k5NVaMRwwtfbHFsy--IhH_N8,800
+autogs_core-0.0.2a9.dist-info/METADATA,sha256=ebespGyXSQ3SjoUEC07P1rGMbQ5UTuy8Uez0VFP6pBw,1779
+autogs_core-0.0.2a9.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+autogs_core-0.0.2a9.dist-info/top_level.txt,sha256=KmEZs6rnGIUYyzln2bP1LEshC7WyIO5ew7yqY-ANuKc,7
+autogs_core-0.0.2a9.dist-info/RECORD,,
