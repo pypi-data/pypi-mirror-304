@@ -1,0 +1,7 @@
+tqdm
+trimesh
+numpy
+colorlog
+pillow
+hydra-core
+opencv-python-headless
