@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "merlin_interface"
+version = "0.0.6rc1"
+authors = [
+  {name = "Magnus Nord", email = "magnunor@gmail.com"},
+]
+description = "Library for interfacing with the Merlin Medipix3 readout software over the TCP/IP API"
+readme = "README.md"
+keywords = [
+    "TPC/IP",
+    "interface",
+    "Merlin",
+    "Medipix3",
+    "microscopy",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://fast_pixelated_detectors.gitlab.io/merlin_interface/"
+Documentation = "https://fast_pixelated_detectors.gitlab.io/merlin_interface/tutorial"
+Repository = "https://gitlab.com/fast_pixelated_detectors/merlin_interface"
+Issues = "https://gitlab.com/fast_pixelated_detectors/merlin_interface/-/issues"
