@@ -1,0 +1,15 @@
+chatweather/__init__.py,sha256=1CUarGSwycOh0GKIcMutmmKE9j9E4B6-Jji1lJFY5Aw,21
+chatweather/chatbot.py,sha256=vaSfSKPhXtKd57OYRXMFX5w4003HhGyOu5c8GIn7NrM,8650
+chatweather/config.py,sha256=kaZuDGyJabl1WHuchqEND3pA9-NZAHk4OZDAQoJ7Lcw,286
+chatweather/weather.py,sha256=q9CH6YyLSJbH3-e1HxDOBr4mKOAApmwUxcooz5BAsM4,4423
+chatweather/weather_api_datetime.py,sha256=isqRCCGqrbVLa8lXa4UQq7O0OthPrVrtxf7mQZT7f4o,1453
+chatweather/__pycache__/__init__.cpython-38.pyc,sha256=y9UYyFQvlxcPbYXhDDepauuuo1a7t2dOf-AYe060KO4,159
+chatweather/__pycache__/chatbot.cpython-38.pyc,sha256=OR8e-Fz97B8jPI1ztn4tmUowPqbxiAfPtx8lGTjR_x4,6840
+chatweather/__pycache__/config.cpython-38.pyc,sha256=t1303gbaPx0AgoI27-S5mRr7QNL74O0z2UF_2iCSFlE,482
+chatweather/__pycache__/weather.cpython-38.pyc,sha256=QUveW3Iv7EttFk5B_E5fsz5haAJKm1RltgkyOiH2GcA,3720
+chatweather/__pycache__/weather_api_datetime.cpython-38.pyc,sha256=5yzeeUna6-Z_NO29mKBFhHPiD2UlZFkmAZTL6NK-cDc,1222
+chatweather-0.1.8.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+chatweather-0.1.8.dist-info/METADATA,sha256=59CvnBN_vl7uZ8c7emcPPj4EFN8mcciSmFGZrmp4KSk,841
+chatweather-0.1.8.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+chatweather-0.1.8.dist-info/top_level.txt,sha256=uKrPZMB1sTRunrcJRlQar9XP8exCazDj9ZOfqu0WXOg,12
+chatweather-0.1.8.dist-info/RECORD,,
