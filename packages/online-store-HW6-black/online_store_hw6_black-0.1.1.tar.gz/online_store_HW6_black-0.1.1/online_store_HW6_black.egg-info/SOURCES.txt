@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+online_store_HW6_black.egg-info/PKG-INFO
+online_store_HW6_black.egg-info/SOURCES.txt
+online_store_HW6_black.egg-info/dependency_links.txt
+online_store_HW6_black.egg-info/entry_points.txt
+online_store_HW6_black.egg-info/requires.txt
+online_store_HW6_black.egg-info/top_level.txt

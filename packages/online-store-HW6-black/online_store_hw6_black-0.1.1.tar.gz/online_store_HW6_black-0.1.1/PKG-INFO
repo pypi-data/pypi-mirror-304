@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: online_store_HW6_black
+Version: 0.1.1
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author: bardachell
+Author-email: jenda-penda@mail.ru
+Requires-Python: >=3.7
+Requires-Dist: requests
+Requires-Dist: flask
+Requires-Dist: sqlalchemy
+Requires-Dist: marshmallow
