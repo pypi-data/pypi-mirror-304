@@ -1,0 +1,11 @@
+decorator
+
+[test]
+pytest
+codacy-coverage
+coveralls
+validate_version_code
+pytest-cov
+numpy
+scikit-learn
+silence_tensorflow
