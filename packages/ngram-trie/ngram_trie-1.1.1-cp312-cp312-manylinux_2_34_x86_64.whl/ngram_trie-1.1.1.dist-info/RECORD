@@ -1,0 +1,5 @@
+ngram_trie-1.1.1.dist-info/METADATA,sha256=F8g2ER0fg2AImlQLmYpTfZYg1FWI8MlmDhW0FeKGCHw,936
+ngram_trie-1.1.1.dist-info/WHEEL,sha256=vNeuQwpJwmnG8nFjHlyHQFw7EhQkjpkX9GoEN983zz0,108
+ngram_trie/__init__.py,sha256=_cmvwyjXmMJGe6B8KbomfcWtyDvVOMKrRcdrnNb5dkw,123
+ngram_trie/ngram_trie.cpython-312-x86_64-linux-gnu.so,sha256=_1IdhE_GxErn_4K1S_oxZ3T-1wrXzsgFS-mz2DOZlIw,1197320
+ngram_trie-1.1.1.dist-info/RECORD,,
