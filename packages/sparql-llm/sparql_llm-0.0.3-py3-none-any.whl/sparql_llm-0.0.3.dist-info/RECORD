@@ -1,0 +1,16 @@
+sparql_llm/__init__.py,sha256=lKzMLlWEetbD1R2xEf87ulWCD8gubfS-M2498oxPYPg,347
+sparql_llm/api.py,sha256=sx0F21iPLfk-EUhH2aHgGMkt6Qp_yN6Qg_XxmGVrn28,16305
+sparql_llm/config.py,sha256=xRcZQwLGLIs70CvEWNXpNM2THEf-PrKVyIWqH8lEjMc,5406
+sparql_llm/embed.py,sha256=uXnKta-Bw9aEV6JA4g1Qx_9D-5QR4ySNNuKGWIRQ1xg,9508
+sparql_llm/sparql_examples_loader.py,sha256=OHgwqa7wgBMccxC1WJzMCgB-nW27HvbUT-IQ0eTznZI,3513
+sparql_llm/sparql_void_shapes_loader.py,sha256=C2LzSTxGjFQev_Xf0IM38oeyhG9ksuXiJARCikLeuiA,2538
+sparql_llm/utils.py,sha256=2dXoprsu34QftTpHKE5xD8ImwvXeG9-eePyi6WPikjE,4638
+sparql_llm/validate_sparql.py,sha256=A_98oDZDhMF0bAwF_fAqKv7HVHrlNiPtgfvUrEkWwIs,13635
+sparql_llm/void_to_shex.py,sha256=bn1I8mi_-GcUjejxazUUSSFiARacxPiVOuxo_JHVPd0,4528
+sparql_llm/static/sparql.js,sha256=vRcm0m1F82gdcEYTofRYn6sBLbGEpr53n9qS8tpb3Yw,2728
+sparql_llm/static/turtle.js,sha256=mz8rkVyrmMZmYBryVZrTNZ0hxojRGcw4Ajq3H1Br7Oc,3479
+sparql_llm/templates/index.html,sha256=wSgM91HOIPeOQ1PD1NRJWNNCXy7mKJ3DtOlvpPsqHD8,31380
+sparql_llm-0.0.3.dist-info/METADATA,sha256=Bu3hUHksgM7VBgrzDU8O2VwjV5Uyb08HhX0_zCuKKJk,13835
+sparql_llm-0.0.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+sparql_llm-0.0.3.dist-info/licenses/LICENSE.txt,sha256=ynlsWzIefty920fR3f4mj3LO03KPWw0VH7LVM86o3lY,1102
+sparql_llm-0.0.3.dist-info/RECORD,,
