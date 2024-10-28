@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: qiskit_state_evolution_recorder
+Version: 0.1.0
+Summary: Simple module allowing to record animations to trace changes in qubit states for arbitrary quantum circuits.
+Home-page: https://github.com/sarumaj/qiskit-state-evolution-recorder
+Author: Dawid Ciepiela
+Author-email: Dawid Ciepiela <71898979+sarumaj@users.noreply.github.com>
+License: BSD-3-Clause
+Project-URL: Homepage, https://github.com/sarumaj/qiskit-state-evolution-recorder
+Requires-Python: >=3.6, <3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib ==3.9.2
+Requires-Dist: matplotlib-inline ==0.1.7
+Requires-Dist: numpy ==2.1.1
+Requires-Dist: qiskit ==1.2.4
+Requires-Dist: qiskit-aer ==0.15.1
+Requires-Dist: pillow ==11.0.0
+
+# qiskit-state-evolution-recorder
+
+Simple module allowing to record animations to trace changes in qubit states for arbitrary quantum circuits.
+
+## Usage
+
+```python
+from qiskit.circuit import QuantumCircuit
+from qiskit_state_evolution_recorder import StateEvolutionRecorder
+
+qc = QuantumCircuit(4)
+qc.h(range(4))
+qc.cx(range(3), 3)
+qc.h(range(4))
+qc.measure_all()
+
+recorder = StateEvolutionRecorder(qc, figsize=(12, 8), num_cols=4, style={'name': 'bw'})
+recorder.evolve(120)
+recorder.record("quantum_circuit.mp4", fps=30)
+```
