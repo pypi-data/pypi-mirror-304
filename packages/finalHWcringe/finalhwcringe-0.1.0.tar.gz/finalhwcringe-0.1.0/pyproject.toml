@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finalHWcringe"
+version = "0.1.0"
+description = "A package containing console applications for business metrics and analysis."
+authors = [
+    { name = "osisochka", email = "a.onufrienko@edu.centraluniversity.ru" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.6"
+
+dependencies = [
+    "pandas"
+]
+
+[project.scripts]
+business_metrics = "business_metrics:main"
+customer_analysis = "customer_analysis:main"
+generate_receipt = "generate_receipt:main"
+sales_report = "sales_report:main"
+transaction_counter = "transaction_counter:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
