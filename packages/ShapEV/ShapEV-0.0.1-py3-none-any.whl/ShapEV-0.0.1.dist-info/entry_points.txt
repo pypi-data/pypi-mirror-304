@@ -1,0 +1,2 @@
+[console_scripts]
+shap_ev = ShapEV:main
