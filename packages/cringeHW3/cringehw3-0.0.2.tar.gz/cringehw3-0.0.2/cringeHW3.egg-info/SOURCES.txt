@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+cringeHW3.egg-info/PKG-INFO
+cringeHW3.egg-info/SOURCES.txt
+cringeHW3.egg-info/dependency_links.txt
+cringeHW3.egg-info/entry_points.txt
+cringeHW3.egg-info/requires.txt
+cringeHW3.egg-info/top_level.txt
