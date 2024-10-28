@@ -1,0 +1,124 @@
+{
+    "model": {
+        "name": "VAE",
+        "batch_norm": false,
+        "batch_size": 32,
+        "beta": 1.0,
+        "capacity": 0.0,
+        "compile_mode": "default",
+        "contamination": 0.1,
+        "decoder_neuron_list": [
+            16,
+            24,
+            32
+        ],
+        "device": "cuda:0",
+        "dropout_rate": 0.2,
+        "encoder_neuron_list": [
+            32,
+            24,
+            16
+        ],
+        "epoch_num": 20,
+        "hidden_activation_name": "relu",
+        "latent_dim": 8,
+        "lr": 0.001,
+        "optimizer_name": "adam",
+        "optimizer_params": {
+            "weight_decay": 1e-05
+        },
+        "output_activation_name": "sigmoid",
+        "preprocessing": false,
+        "random_state": 42,
+        "use_compile": false,
+        "verbose": 1
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "MSTE",
+        "model_name": "VAE",
+        "number_of_models": 5
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.93890111146999,
+            "BackwardTransfer": -1.1558021266766528e-05,
+            "ForwardTransfer": 0.5
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.9473002283105022,
+                "Cluster_1": 0.5,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.9478002283105021,
+                "Cluster_1": 0.921343707053243,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.9473002283105022,
+                "Cluster_1": 0.9212281268405753,
+                "Cluster_2": 0.9503333333333334,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.9473002283105022,
+                "Cluster_1": 0.9212281268405753,
+                "Cluster_2": 0.9503333333333334,
+                "Cluster_3": 0.9385262557077625,
+                "Cluster_4": 0.5
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.9473002283105022,
+                "Cluster_1": 0.9212281268405753,
+                "Cluster_2": 0.9503333333333334,
+                "Cluster_3": 0.9385262557077625,
+                "Cluster_4": 0.9334349315068493
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 28.207524299621582,
+                "eval_time": 2.4403085708618164
+            },
+            "Cluster_1": {
+                "train_time": 19.20131492614746,
+                "eval_time": 1.4080147743225098
+            },
+            "Cluster_2": {
+                "train_time": 26.258527755737305,
+                "eval_time": 1.3943963050842285
+            },
+            "Cluster_3": {
+                "train_time": 26.73406410217285,
+                "eval_time": 0.9320321083068848
+            },
+            "Cluster_4": {
+                "train_time": 26.41266441345215,
+                "eval_time": 0.4667778015136719
+            }
+        },
+        "train_time_total": 126.81409549713135,
+        "eval_time_total": 6.641529560089111
+    }
+}

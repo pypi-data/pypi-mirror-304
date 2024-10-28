@@ -1,0 +1,129 @@
+{
+    "model": {
+        "name": "VAE",
+        "batch_norm": false,
+        "batch_size": 32,
+        "beta": 1.0,
+        "capacity": 0.0,
+        "compile_mode": "default",
+        "contamination": 0.1,
+        "decoder_neuron_list": [
+            16,
+            24,
+            32
+        ],
+        "device": "cuda:0",
+        "dropout_rate": 0.2,
+        "encoder_neuron_list": [
+            32,
+            24,
+            16
+        ],
+        "epoch_num": 20,
+        "hidden_activation_name": "relu",
+        "latent_dim": 8,
+        "lr": 0.001,
+        "optimizer_name": "adam",
+        "optimizer_params": {
+            "weight_decay": 1e-05
+        },
+        "output_activation_name": "sigmoid",
+        "preprocessing": false,
+        "random_state": 42,
+        "use_compile": false,
+        "verbose": 1
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "ReplayEnhanced",
+        "replay_buffer": {
+            "name": "AdaptiveBalancedReplayBuffer",
+            "max_size": 5000,
+            "selection_method": "RandomSelection",
+            "current_size": 5000,
+            "buffer_size": 5000
+        }
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.8803596565948274,
+            "BackwardTransfer": -0.04509281075244298,
+            "ForwardTransfer": 0.49413880882716166
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.9498002283105023,
+                "Cluster_1": 0.5000284992305207,
+                "Cluster_2": 0.4977168949771689,
+                "Cluster_3": 0.49840867579908676,
+                "Cluster_4": 0.4931506849315068
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.972269406392694,
+                "Cluster_1": 0.8794308387006883,
+                "Cluster_2": 0.540568493150685,
+                "Cluster_3": 0.509945205479452,
+                "Cluster_4": 0.46926141552511413
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.9705342465753425,
+                "Cluster_1": 0.7784738978714242,
+                "Cluster_2": 0.9759337899543379,
+                "Cluster_3": 0.4950936073059361,
+                "Cluster_4": 0.4748858447488584
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.8862899543378996,
+                "Cluster_1": 0.7049759656489275,
+                "Cluster_2": 0.903736301369863,
+                "Cluster_3": 0.9581198630136986,
+                "Cluster_4": 0.4623287671232877
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.9491780821917808,
+                "Cluster_1": 0.6966636900803679,
+                "Cluster_2": 0.8028162100456622,
+                "Cluster_3": 0.8636986301369863,
+                "Cluster_4": 0.9134737442922375
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 30.167185306549072,
+                "eval_time": 2.395233631134033
+            },
+            "Cluster_1": {
+                "train_time": 34.978907346725464,
+                "eval_time": 1.7053885459899902
+            },
+            "Cluster_2": {
+                "train_time": 43.117849588394165,
+                "eval_time": 2.1520674228668213
+            },
+            "Cluster_3": {
+                "train_time": 48.79731726646423,
+                "eval_time": 2.1173691749572754
+            },
+            "Cluster_4": {
+                "train_time": 43.20813727378845,
+                "eval_time": 2.2004778385162354
+            }
+        },
+        "train_time_total": 200.2693967819214,
+        "eval_time_total": 10.570536613464355
+    }
+}

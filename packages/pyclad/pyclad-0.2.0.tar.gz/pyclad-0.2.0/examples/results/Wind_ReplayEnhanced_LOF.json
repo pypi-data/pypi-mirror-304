@@ -1,0 +1,107 @@
+{
+    "model": {
+        "name": "LOF",
+        "algorithm": "auto",
+        "contamination": 0.1,
+        "leaf_size": 30,
+        "metric": "minkowski",
+        "metric_params": null,
+        "n_jobs": 1,
+        "n_neighbors": 5,
+        "novelty": true,
+        "p": 2
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "ReplayEnhanced",
+        "replay_buffer": {
+            "name": "AdaptiveBalancedReplayBuffer",
+            "max_size": 5000,
+            "selection_method": "RandomSelection",
+            "current_size": 5000,
+            "buffer_size": 5000
+        }
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.9103624495194185,
+            "BackwardTransfer": -0.018287329558768595,
+            "ForwardTransfer": 0.496628993058854
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.9418002283105023,
+                "Cluster_1": 0.4979623050177645,
+                "Cluster_2": 0.4988584474885845,
+                "Cluster_3": 0.5034920091324201,
+                "Cluster_4": 0.4942922374429224
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.9235605022831049,
+                "Cluster_1": 0.9340021152762209,
+                "Cluster_2": 0.4970011415525114,
+                "Cluster_3": 0.5041929223744291,
+                "Cluster_4": 0.4927180365296804
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.9171678082191781,
+                "Cluster_1": 0.9254919283846003,
+                "Cluster_2": 0.9311267123287671,
+                "Cluster_3": 0.5113595890410959,
+                "Cluster_4": 0.485810502283105
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.8778367579908676,
+                "Cluster_1": 0.9023173040994561,
+                "Cluster_2": 0.9095353881278537,
+                "Cluster_3": 0.9359771689497717,
+                "Cluster_4": 0.4806027397260274
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.8664805936073059,
+                "Cluster_1": 0.9025009658072565,
+                "Cluster_2": 0.8851381278538812,
+                "Cluster_3": 0.9059132420091324,
+                "Cluster_4": 0.896587899543379
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 0.2185957431793213,
+                "eval_time": 1.3185081481933594
+            },
+            "Cluster_1": {
+                "train_time": 0.22817039489746094,
+                "eval_time": 1.127357006072998
+            },
+            "Cluster_2": {
+                "train_time": 0.3367283344268799,
+                "eval_time": 2.6887269020080566
+            },
+            "Cluster_3": {
+                "train_time": 0.33174848556518555,
+                "eval_time": 2.4272615909576416
+            },
+            "Cluster_4": {
+                "train_time": 0.4077157974243164,
+                "eval_time": 3.199387788772583
+            }
+        },
+        "train_time_total": 1.522958755493164,
+        "eval_time_total": 10.761241436004639
+    }
+}

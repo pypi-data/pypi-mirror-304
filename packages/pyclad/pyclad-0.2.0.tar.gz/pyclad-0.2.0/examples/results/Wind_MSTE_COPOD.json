@@ -1,0 +1,95 @@
+{
+    "model": {
+        "name": "COPOD",
+        "contamination": 1e-05,
+        "n_jobs": 1
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "MSTE",
+        "model_name": "COPOD",
+        "number_of_models": 5
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.6708523592085237,
+            "BackwardTransfer": 0.0,
+            "ForwardTransfer": 0.5
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.684931506849315,
+                "Cluster_1": 0.5,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.684931506849315,
+                "Cluster_1": 0.5034246575342466,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.684931506849315,
+                "Cluster_1": 0.5034246575342466,
+                "Cluster_2": 0.8105022831050228,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.684931506849315,
+                "Cluster_1": 0.5034246575342466,
+                "Cluster_2": 0.8105022831050228,
+                "Cluster_3": 0.7625570776255708,
+                "Cluster_4": 0.5
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.684931506849315,
+                "Cluster_1": 0.5034246575342466,
+                "Cluster_2": 0.8105022831050228,
+                "Cluster_3": 0.7625570776255708,
+                "Cluster_4": 0.6678082191780822
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 0.02220463752746582,
+                "eval_time": 0.3196408748626709
+            },
+            "Cluster_1": {
+                "train_time": 0.009867668151855469,
+                "eval_time": 0.13206195831298828
+            },
+            "Cluster_2": {
+                "train_time": 0.015717029571533203,
+                "eval_time": 0.15980076789855957
+            },
+            "Cluster_3": {
+                "train_time": 0.011509418487548828,
+                "eval_time": 0.10913228988647461
+            },
+            "Cluster_4": {
+                "train_time": 0.011450052261352539,
+                "eval_time": 0.06146097183227539
+            }
+        },
+        "train_time_total": 0.07074880599975586,
+        "eval_time_total": 0.7820968627929688
+    }
+}

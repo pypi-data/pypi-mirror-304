@@ -1,0 +1,104 @@
+{
+    "model": {
+        "name": "OneClassSVM",
+        "cache_size": 200,
+        "coef0": 0.0,
+        "contamination": 0.1,
+        "degree": 3,
+        "gamma": 0.1,
+        "kernel": "rbf",
+        "max_iter": -1,
+        "nu": 0.01,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "MSTE",
+        "model_name": "OneClassSVM",
+        "number_of_models": 5
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.9405388346347981,
+            "BackwardTransfer": 0.0,
+            "ForwardTransfer": 0.5
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.5,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.9258085865014978,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.9258085865014978,
+                "Cluster_2": 0.9480833333333334,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.9258085865014978,
+                "Cluster_2": 0.9480833333333334,
+                "Cluster_3": 0.9393344748858448,
+                "Cluster_4": 0.5
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.9258085865014978,
+                "Cluster_2": 0.9480833333333334,
+                "Cluster_3": 0.9393344748858448,
+                "Cluster_4": 0.9175114155251142
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 0.0758817195892334,
+                "eval_time": 0.22148847579956055
+            },
+            "Cluster_1": {
+                "train_time": 0.03805947303771973,
+                "eval_time": 0.10880494117736816
+            },
+            "Cluster_2": {
+                "train_time": 0.07305526733398438,
+                "eval_time": 0.14538121223449707
+            },
+            "Cluster_3": {
+                "train_time": 0.07523179054260254,
+                "eval_time": 0.12037229537963867
+            },
+            "Cluster_4": {
+                "train_time": 0.06921863555908203,
+                "eval_time": 0.08089423179626465
+            }
+        },
+        "train_time_total": 0.33144688606262207,
+        "eval_time_total": 0.6769411563873291
+    }
+}

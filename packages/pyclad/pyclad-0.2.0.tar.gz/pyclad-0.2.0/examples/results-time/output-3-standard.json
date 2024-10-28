@@ -1,0 +1,122 @@
+{
+    "model": {
+        "name": "VAE",
+        "batch_norm": false,
+        "batch_size": 32,
+        "beta": 1.0,
+        "capacity": 0.0,
+        "compile_mode": "default",
+        "contamination": 0.1,
+        "decoder_neuron_list": [
+            16,
+            24,
+            32
+        ],
+        "device": "cuda:0",
+        "dropout_rate": 0.2,
+        "encoder_neuron_list": [
+            32,
+            24,
+            16
+        ],
+        "epoch_num": 2,
+        "hidden_activation_name": "relu",
+        "latent_dim": 8,
+        "lr": 0.001,
+        "optimizer_name": "adam",
+        "optimizer_params": {
+            "weight_decay": 1e-05
+        },
+        "output_activation_name": "sigmoid",
+        "preprocessing": false,
+        "random_state": 42,
+        "use_compile": false,
+        "verbose": 1
+    },
+    "dataset": {
+        "name": "UNSW-multiple",
+        "tran_concepts_no": 3,
+        "test_concepts_no": 3
+    },
+    "strategy": {
+        "name": "ReplayEnhanced",
+        "replay_buffer": {
+            "name": "AdaptiveBalancedReplayBuffer",
+            "max_size": 1000,
+            "selection_method": "RandomSelection",
+            "current_size": 999,
+            "buffer_size": 999
+        }
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.7208151315663245,
+            "BackwardTransfer": 0.005904891132336572,
+            "ForwardTransfer": 0.718385090985866
+        },
+        "concepts_order": [
+            "Concept_0",
+            "Concept_1",
+            "Concept_2"
+        ],
+        "metric_matrix": {
+            "Concept_0": {
+                "Concept_0": 0.720950794134653,
+                "Concept_1": 0.7209230286885301,
+                "Concept_2": 0.7209314080384601
+            },
+            "Concept_1": {
+                "Concept_0": 0.7131430311724175,
+                "Concept_1": 0.7131639795472426,
+                "Concept_2": 0.7133008362306078
+            },
+            "Concept_2": {
+                "Concept_0": 0.7259126287019702,
+                "Concept_1": 0.7259168183769352,
+                "Concept_2": 0.7258035374647279
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Concept_0": {
+                "train_time": 127.68914222717285,
+                "eval_time": 237.1652979850769
+            },
+            "Concept_1": {
+                "train_time": 103.49188089370728,
+                "eval_time": 243.36187195777893
+            },
+            "Concept_2": {
+                "train_time": 94.17841339111328,
+                "eval_time": 252.8986005783081
+            }
+        },
+        "train_time_total": 325.3594365119934,
+        "eval_time_total": 733.4257705211639,
+        "scenario_time_total": 1058.7869119644165,
+        "total_processing_time_by_concept": {
+            "Concept_0": 380.10510301589966,
+            "Concept_1": 333.67354130744934,
+            "Concept_2": 345.00800347328186
+        },
+        "eval_time_after_concept": {
+            "Concept_0": 252.41573572158813,
+            "Concept_1": 230.18148708343506,
+            "Concept_2": 250.82943153381348
+        }
+    },
+    "memory_usage_callback": {
+        "current_memory_usage": {
+            "Concept_0": 68974956,
+            "Concept_1": 68470210,
+            "Concept_2": 68471902
+        },
+        "peak_memory_usage": {
+            "Concept_0": 78936212,
+            "Concept_1": 100801200,
+            "Concept_2": 100818401
+        }
+    }
+}

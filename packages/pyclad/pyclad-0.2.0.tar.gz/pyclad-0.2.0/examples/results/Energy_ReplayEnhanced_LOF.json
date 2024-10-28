@@ -1,0 +1,217 @@
+{
+    "model": {
+        "name": "LOF",
+        "algorithm": "auto",
+        "contamination": 0.1,
+        "leaf_size": 30,
+        "metric": "minkowski",
+        "metric_params": null,
+        "n_jobs": 1,
+        "n_neighbors": 5,
+        "novelty": true,
+        "p": 2
+    },
+    "dataset": {
+        "name": "Energy",
+        "tran_concepts_no": 10,
+        "test_concepts_no": 10
+    },
+    "strategy": {
+        "name": "ReplayEnhanced",
+        "replay_buffer": {
+            "name": "AdaptiveBalancedReplayBuffer",
+            "max_size": 5000,
+            "selection_method": "RandomSelection",
+            "current_size": 5000,
+            "buffer_size": 5000
+        }
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.875392649082184,
+            "BackwardTransfer": -0.004886795045322178,
+            "ForwardTransfer": 0.5045666666666666
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4",
+            "Cluster_5",
+            "Cluster_6",
+            "Cluster_7",
+            "Cluster_8",
+            "Cluster_9"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.8771162790697674,
+                "Cluster_1": 0.5,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.5,
+                "Cluster_4": 0.5,
+                "Cluster_5": 0.5,
+                "Cluster_6": 0.5,
+                "Cluster_7": 0.5,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.5
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.8716831395348836,
+                "Cluster_1": 0.8679331395348837,
+                "Cluster_2": 0.5,
+                "Cluster_3": 0.50025,
+                "Cluster_4": 0.5,
+                "Cluster_5": 0.5,
+                "Cluster_6": 0.5,
+                "Cluster_7": 0.5,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.5
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.852061046511628,
+                "Cluster_1": 0.8955610465116278,
+                "Cluster_2": 0.8873808139534884,
+                "Cluster_3": 0.5001249999999999,
+                "Cluster_4": 0.501375,
+                "Cluster_5": 0.5,
+                "Cluster_6": 0.5,
+                "Cluster_7": 0.501625,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.5
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.848156976744186,
+                "Cluster_1": 0.8862005813953489,
+                "Cluster_2": 0.9110436046511627,
+                "Cluster_3": 0.8749603174603174,
+                "Cluster_4": 0.5001249999999999,
+                "Cluster_5": 0.5,
+                "Cluster_6": 0.5,
+                "Cluster_7": 0.500875,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.5
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.8328895348837209,
+                "Cluster_1": 0.8833575581395349,
+                "Cluster_2": 0.8874767441860465,
+                "Cluster_3": 0.8477281746031746,
+                "Cluster_4": 0.9064040697674419,
+                "Cluster_5": 0.5,
+                "Cluster_6": 0.5,
+                "Cluster_7": 0.5311250000000001,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.5
+            },
+            "Cluster_5": {
+                "Cluster_0": 0.82075,
+                "Cluster_1": 0.881610465116279,
+                "Cluster_2": 0.8719738372093024,
+                "Cluster_3": 0.8495198412698411,
+                "Cluster_4": 0.9145755813953489,
+                "Cluster_5": 0.8802848837209303,
+                "Cluster_6": 0.502375,
+                "Cluster_7": 0.5585,
+                "Cluster_8": 0.5,
+                "Cluster_9": 0.503625
+            },
+            "Cluster_6": {
+                "Cluster_0": 0.8132848837209302,
+                "Cluster_1": 0.85325,
+                "Cluster_2": 0.8556947674418606,
+                "Cluster_3": 0.8448412698412697,
+                "Cluster_4": 0.9068459302325581,
+                "Cluster_5": 0.8792965116279069,
+                "Cluster_6": 0.923671511627907,
+                "Cluster_7": 0.562125,
+                "Cluster_8": 0.501375,
+                "Cluster_9": 0.508875
+            },
+            "Cluster_7": {
+                "Cluster_0": 0.8302267441860466,
+                "Cluster_1": 0.8295406976744187,
+                "Cluster_2": 0.8655639534883722,
+                "Cluster_3": 0.8415079365079366,
+                "Cluster_4": 0.8915087209302325,
+                "Cluster_5": 0.8709738372093023,
+                "Cluster_6": 0.9207122093023257,
+                "Cluster_7": 0.9530000000000001,
+                "Cluster_8": 0.50025,
+                "Cluster_9": 0.51125
+            },
+            "Cluster_8": {
+                "Cluster_0": 0.8283982558139534,
+                "Cluster_1": 0.8204534883720931,
+                "Cluster_2": 0.8472005813953488,
+                "Cluster_3": 0.8498789682539682,
+                "Cluster_4": 0.8799651162790698,
+                "Cluster_5": 0.8825232558139534,
+                "Cluster_6": 0.8854941860465115,
+                "Cluster_7": 0.9904999999999999,
+                "Cluster_8": 0.92625,
+                "Cluster_9": 0.521625
+            },
+            "Cluster_9": {
+                "Cluster_0": 0.840889534883721,
+                "Cluster_1": 0.802061046511628,
+                "Cluster_2": 0.8544244186046511,
+                "Cluster_3": 0.8463452380952382,
+                "Cluster_4": 0.8740290697674419,
+                "Cluster_5": 0.8744098837209302,
+                "Cluster_6": 0.8165610465116279,
+                "Cluster_7": 0.98475,
+                "Cluster_8": 0.983625,
+                "Cluster_9": 0.93025
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 0.13517451286315918,
+                "eval_time": 2.1009533405303955
+            },
+            "Cluster_1": {
+                "train_time": 0.3588414192199707,
+                "eval_time": 2.652860403060913
+            },
+            "Cluster_2": {
+                "train_time": 0.33527278900146484,
+                "eval_time": 4.1352691650390625
+            },
+            "Cluster_3": {
+                "train_time": 0.3168494701385498,
+                "eval_time": 2.809973955154419
+            },
+            "Cluster_4": {
+                "train_time": 0.4717140197753906,
+                "eval_time": 5.319476842880249
+            },
+            "Cluster_5": {
+                "train_time": 0.3684854507446289,
+                "eval_time": 4.254642963409424
+            },
+            "Cluster_6": {
+                "train_time": 0.2972986698150635,
+                "eval_time": 5.31410551071167
+            },
+            "Cluster_7": {
+                "train_time": 0.6493678092956543,
+                "eval_time": 5.986823558807373
+            },
+            "Cluster_8": {
+                "train_time": 0.38008904457092285,
+                "eval_time": 5.67199969291687
+            },
+            "Cluster_9": {
+                "train_time": 0.40645909309387207,
+                "eval_time": 5.76305627822876
+            }
+        },
+        "train_time_total": 3.7195522785186768,
+        "eval_time_total": 44.009161710739136
+    }
+}

@@ -1,0 +1,290 @@
+{
+    "model": {
+        "name": "VAE",
+        "batch_norm": false,
+        "batch_size": 32,
+        "beta": 1.0,
+        "capacity": 0.0,
+        "compile_mode": "default",
+        "contamination": 0.1,
+        "decoder_neuron_list": [
+            16,
+            24,
+            32
+        ],
+        "device": "cuda:0",
+        "dropout_rate": 0.2,
+        "encoder_neuron_list": [
+            32,
+            24,
+            16
+        ],
+        "epoch_num": 20,
+        "hidden_activation_name": "relu",
+        "latent_dim": 8,
+        "lr": 0.001,
+        "optimizer_name": "adam",
+        "optimizer_params": {
+            "weight_decay": 1e-05
+        },
+        "output_activation_name": "sigmoid",
+        "preprocessing": false,
+        "random_state": 42,
+        "use_compile": false,
+        "verbose": 1
+    },
+    "dataset": {
+        "name": "UNSW-multiple",
+        "tran_concepts_no": 10,
+        "test_concepts_no": 10
+    },
+    "strategy": {
+        "name": "ReplayEnhanced",
+        "replay_buffer": {
+            "name": "AdaptiveBalancedReplayBuffer",
+            "max_size": 1000,
+            "selection_method": "RandomSelection",
+            "current_size": 1000,
+            "buffer_size": 1000
+        }
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.6391551354137509,
+            "BackwardTransfer": -0.01616020349444023,
+            "ForwardTransfer": 0.6571374595124225
+        },
+        "concepts_order": [
+            "Concept_0",
+            "Concept_1",
+            "Concept_2",
+            "Concept_3",
+            "Concept_4",
+            "Concept_5",
+            "Concept_6",
+            "Concept_7",
+            "Concept_8",
+            "Concept_9"
+        ],
+        "metric_matrix": {
+            "Concept_0": {
+                "Concept_0": 0.6765574442569781,
+                "Concept_1": 0.6764864683630385,
+                "Concept_2": 0.676572640678206,
+                "Concept_3": 0.6766497767943601,
+                "Concept_4": 0.6765239268572579,
+                "Concept_5": 0.6764461338920206,
+                "Concept_6": 0.6765823337263024,
+                "Concept_7": 0.6765107009832796,
+                "Concept_8": 0.6766991474643914,
+                "Concept_9": 0.6765587579551445
+            },
+            "Concept_1": {
+                "Concept_0": 0.7195247328275137,
+                "Concept_1": 0.7193794967942185,
+                "Concept_2": 0.7193288124260208,
+                "Concept_3": 0.7193072072021126,
+                "Concept_4": 0.719461479434421,
+                "Concept_5": 0.7193865624459821,
+                "Concept_6": 0.7195115069535355,
+                "Concept_7": 0.7194185175670701,
+                "Concept_8": 0.7191613143197342,
+                "Concept_9": 0.7193711174442885
+            },
+            "Concept_2": {
+                "Concept_0": 0.5855962934272305,
+                "Concept_1": 0.5856317813742005,
+                "Concept_2": 0.5857250193411313,
+                "Concept_3": 0.5857144208634861,
+                "Concept_4": 0.5856698967175029,
+                "Concept_5": 0.5857214865152496,
+                "Concept_6": 0.585614365825257,
+                "Concept_7": 0.5856846848701134,
+                "Concept_8": 0.58571113661807,
+                "Concept_9": 0.5857298658651797
+            },
+            "Concept_3": {
+                "Concept_0": 0.5756657662581453,
+                "Concept_1": 0.5757451215020148,
+                "Concept_2": 0.5757764197740196,
+                "Concept_3": 0.5756421904869874,
+                "Concept_4": 0.5756512266860007,
+                "Concept_5": 0.5757222025799402,
+                "Concept_6": 0.5757402749779666,
+                "Concept_7": 0.575773543797221,
+                "Concept_8": 0.5757916161952477,
+                "Concept_9": 0.5757680404240897
+            },
+            "Concept_4": {
+                "Concept_0": 0.6947153145905964,
+                "Concept_1": 0.6944587681923438,
+                "Concept_2": 0.6946381784744423,
+                "Concept_3": 0.6946523097779695,
+                "Concept_4": 0.6945833044312796,
+                "Concept_5": 0.6946139458542012,
+                "Concept_6": 0.6948169319074576,
+                "Concept_7": 0.694567859429586,
+                "Concept_8": 0.6946743232704953,
+                "Concept_9": 0.6945304009353664
+            },
+            "Concept_5": {
+                "Concept_0": 0.703581365234547,
+                "Concept_1": 0.7032457121728904,
+                "Concept_2": 0.7035597600106387,
+                "Concept_3": 0.7034784342195195,
+                "Concept_4": 0.7032928637152064,
+                "Concept_5": 0.7033896345080193,
+                "Concept_6": 0.703472930846388,
+                "Concept_7": 0.7034319395262868,
+                "Concept_8": 0.7034881272676159,
+                "Concept_9": 0.7032948342624559
+            },
+            "Concept_6": {
+                "Concept_0": 0.684966046345727,
+                "Concept_1": 0.6849854324419199,
+                "Concept_2": 0.6850076945149114,
+                "Concept_3": 0.6850757944320524,
+                "Concept_4": 0.6850389927869162,
+                "Concept_5": 0.6850751375829692,
+                "Concept_6": 0.6850383359378328,
+                "Concept_7": 0.6851209754271186,
+                "Concept_8": 0.6849931549427667,
+                "Concept_9": 0.6850667582330392
+            },
+            "Concept_7": {
+                "Concept_0": 0.5734335999938244,
+                "Concept_1": 0.5735016999109653,
+                "Concept_2": 0.5734704016389606,
+                "Concept_3": 0.5734884740369871,
+                "Concept_4": 0.5735100792608953,
+                "Concept_5": 0.5734836275129388,
+                "Concept_6": 0.5734668688130787,
+                "Concept_7": 0.5735246188330401,
+                "Concept_8": 0.5734064913967847,
+                "Concept_9": 0.5734064913967847
+            },
+            "Concept_8": {
+                "Concept_0": 0.6840555795404197,
+                "Concept_1": 0.684064615739433,
+                "Concept_2": 0.6840271572452136,
+                "Concept_3": 0.6840326606183451,
+                "Concept_4": 0.684060426064468,
+                "Concept_5": 0.6840013623463403,
+                "Concept_6": 0.6840591123663017,
+                "Concept_7": 0.6840139313712355,
+                "Concept_8": 0.6840716813911967,
+                "Concept_9": 0.6840313469201785
+            },
+            "Concept_9": {
+                "Concept_0": 0.5745685920506594,
+                "Concept_1": 0.5745721248765411,
+                "Concept_2": 0.5745324472546064,
+                "Concept_3": 0.5745124043093301,
+                "Concept_4": 0.5744691938615136,
+                "Concept_5": 0.5745930732513662,
+                "Concept_6": 0.5744879231086233,
+                "Concept_7": 0.5744740403855617,
+                "Concept_8": 0.5744927696326716,
+                "Concept_9": 0.5745366369295714
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Concept_0": {
+                "train_time": 871.0280013084412,
+                "eval_time": 763.4012398719788
+            },
+            "Concept_1": {
+                "train_time": 824.5033037662506,
+                "eval_time": 755.0216283798218
+            },
+            "Concept_2": {
+                "train_time": 780.6790962219238,
+                "eval_time": 761.754766702652
+            },
+            "Concept_3": {
+                "train_time": 774.6186058521271,
+                "eval_time": 757.3947217464447
+            },
+            "Concept_4": {
+                "train_time": 769.4707729816437,
+                "eval_time": 750.6059420108795
+            },
+            "Concept_5": {
+                "train_time": 754.1018896102905,
+                "eval_time": 755.8364570140839
+            },
+            "Concept_6": {
+                "train_time": 755.441205739975,
+                "eval_time": 782.4208254814148
+            },
+            "Concept_7": {
+                "train_time": 746.7217011451721,
+                "eval_time": 766.823929309845
+            },
+            "Concept_8": {
+                "train_time": 783.9625425338745,
+                "eval_time": 758.6236472129822
+            },
+            "Concept_9": {
+                "train_time": 799.5851476192474,
+                "eval_time": 749.9180977344513
+            }
+        },
+        "train_time_total": 7860.112266778946,
+        "eval_time_total": 7601.801255464554,
+        "scenario_time_total": 15461.94156217575,
+        "total_processing_time_by_concept": {
+            "Concept_0": 1681.3614945411682,
+            "Concept_1": 1648.4908900260925,
+            "Concept_2": 1538.0448305606842,
+            "Concept_3": 1548.9993994235992,
+            "Concept_4": 1482.7850151062012,
+            "Concept_5": 1459.5599250793457,
+            "Concept_6": 1465.4164381027222,
+            "Concept_7": 1452.05588555336,
+            "Concept_8": 1583.9692704677582,
+            "Concept_9": 1601.2574558258057
+        },
+        "eval_time_after_concept": {
+            "Concept_0": 810.3332679271698,
+            "Concept_1": 823.9699907302856,
+            "Concept_2": 757.365532875061,
+            "Concept_3": 774.3806433677673,
+            "Concept_4": 713.3140833377838,
+            "Concept_5": 705.4578652381897,
+            "Concept_6": 709.9750769138336,
+            "Concept_7": 705.3339903354645,
+            "Concept_8": 800.0065593719482,
+            "Concept_9": 801.6721396446228
+        }
+    },
+    "memory_usage_callback": {
+        "current_memory_usage": {
+            "Concept_0": 68977192,
+            "Concept_1": 68479971,
+            "Concept_2": 68484526,
+            "Concept_3": 68488253,
+            "Concept_4": 68491990,
+            "Concept_5": 68494024,
+            "Concept_6": 68497063,
+            "Concept_7": 68501651,
+            "Concept_8": 68504590,
+            "Concept_9": 68507342
+        },
+        "peak_memory_usage": {
+            "Concept_0": 78938050,
+            "Concept_1": 100811605,
+            "Concept_2": 100830192,
+            "Concept_3": 100833402,
+            "Concept_4": 100837307,
+            "Concept_5": 100842051,
+            "Concept_6": 100841300,
+            "Concept_7": 100842517,
+            "Concept_8": 100849770,
+            "Concept_9": 100851748
+        }
+    }
+}

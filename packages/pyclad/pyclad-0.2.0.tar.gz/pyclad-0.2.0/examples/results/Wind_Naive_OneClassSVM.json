@@ -1,0 +1,102 @@
+{
+    "model": {
+        "name": "OneClassSVM",
+        "cache_size": 200,
+        "coef0": 0.0,
+        "contamination": 0.1,
+        "degree": 3,
+        "gamma": 0.1,
+        "kernel": "rbf",
+        "max_iter": -1,
+        "nu": 0.01,
+        "shrinking": true,
+        "tol": 0.001,
+        "verbose": false
+    },
+    "dataset": {
+        "name": "Wind",
+        "tran_concepts_no": 5,
+        "test_concepts_no": 5
+    },
+    "strategy": {
+        "name": "Naive"
+    },
+    "concept_metric_callback_ROC-AUC": {
+        "base_metric_name": "ROC-AUC",
+        "metrics": {
+            "ContinualAverage": 0.6427696596136349,
+            "BackwardTransfer": -0.1760789960671062,
+            "ForwardTransfer": 0.5032610730593607
+        },
+        "concepts_order": [
+            "Cluster_0",
+            "Cluster_1",
+            "Cluster_2",
+            "Cluster_3",
+            "Cluster_4"
+        ],
+        "metric_matrix": {
+            "Cluster_0": {
+                "Cluster_0": 0.9528835616438355,
+                "Cluster_1": 0.4977168949771689,
+                "Cluster_2": 0.4965753424657534,
+                "Cluster_3": 0.5003253424657533,
+                "Cluster_4": 0.4908675799086758
+            },
+            "Cluster_1": {
+                "Cluster_0": 0.49801141552511413,
+                "Cluster_1": 0.9258085865014978,
+                "Cluster_2": 0.5286095890410959,
+                "Cluster_3": 0.5250616438356164,
+                "Cluster_4": 0.5124189497716894
+            },
+            "Cluster_2": {
+                "Cluster_0": 0.5003333333333333,
+                "Cluster_1": 0.5015025427646786,
+                "Cluster_2": 0.9480833333333334,
+                "Cluster_3": 0.5015833333333333,
+                "Cluster_4": 0.4931506849315068
+            },
+            "Cluster_3": {
+                "Cluster_0": 0.47646917808219175,
+                "Cluster_1": 0.48998568705311624,
+                "Cluster_2": 0.4863013698630137,
+                "Cluster_3": 0.9393344748858448,
+                "Cluster_4": 0.4863013698630137
+            },
+            "Cluster_4": {
+                "Cluster_0": 0.5277499999999999,
+                "Cluster_1": 0.482571137245961,
+                "Cluster_2": 0.4657534246575342,
+                "Cluster_3": 0.5292454337899544,
+                "Cluster_4": 0.9175114155251142
+            }
+        }
+    },
+    "time_evaluation_callback": {
+        "time_by_concept": {
+            "Cluster_0": {
+                "train_time": 0.07163238525390625,
+                "eval_time": 0.20236563682556152
+            },
+            "Cluster_1": {
+                "train_time": 0.03537273406982422,
+                "eval_time": 0.1500859260559082
+            },
+            "Cluster_2": {
+                "train_time": 0.0728139877319336,
+                "eval_time": 0.19906854629516602
+            },
+            "Cluster_3": {
+                "train_time": 0.07777786254882812,
+                "eval_time": 0.2007153034210205
+            },
+            "Cluster_4": {
+                "train_time": 0.07363557815551758,
+                "eval_time": 0.20052218437194824
+            }
+        },
+        "train_time_total": 0.33123254776000977,
+        "eval_time_total": 0.9527575969696045
+    }
+}
