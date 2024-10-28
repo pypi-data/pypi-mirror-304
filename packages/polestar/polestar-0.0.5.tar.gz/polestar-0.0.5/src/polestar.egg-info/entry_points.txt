@@ -1,0 +1,2 @@
+[console_scripts]
+polestar = polestar.commandmanager:CommandManager.ExecuteFromCLI
