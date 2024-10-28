@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+simple_package_ssakg/__init__.py
+simple_package_ssakg/module1.py
+simple_package_ssakg/module2.py
+simple_package_ssakg.egg-info/PKG-INFO
+simple_package_ssakg.egg-info/SOURCES.txt
+simple_package_ssakg.egg-info/dependency_links.txt
+simple_package_ssakg.egg-info/requires.txt
+simple_package_ssakg.egg-info/top_level.txt
+simple_package_ssakg/utils/__init__.py
+simple_package_ssakg/utils/generator.py
+tests/test_module1.py
