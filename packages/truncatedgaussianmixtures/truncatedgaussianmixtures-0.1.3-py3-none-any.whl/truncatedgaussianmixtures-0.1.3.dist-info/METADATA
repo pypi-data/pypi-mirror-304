@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: truncatedgaussianmixtures
+Version: 0.1.3
+Summary: Fit gaussian mixture models using truncated gaussian kernels. This is a python wrapper around the julia package TruncatedGaussianMixtures.jl
+Home-page: https://github.com/potatoasad/truncatedgaussianmixtures
+Author: Asad Hussain
+Author-email: asadh@utexas.edu
+
