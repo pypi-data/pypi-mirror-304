@@ -1,0 +1,6 @@
+setup.py
+aystar_module/__init__.py
+aystar_module.egg-info/PKG-INFO
+aystar_module.egg-info/SOURCES.txt
+aystar_module.egg-info/dependency_links.txt
+aystar_module.egg-info/top_level.txt
