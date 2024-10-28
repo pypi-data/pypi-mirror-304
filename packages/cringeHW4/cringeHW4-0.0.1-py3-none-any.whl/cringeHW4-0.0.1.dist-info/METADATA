@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cringeHW4
+Version: 0.0.1
+Summary: generation of ordered receipts
+Author: osisochka
+Author-email: a.onufrienko@edu.centraluniversity.ru
+Requires-Python: >=3.6
+
