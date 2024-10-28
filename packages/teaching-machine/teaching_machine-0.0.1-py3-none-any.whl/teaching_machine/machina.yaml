@@ -1,0 +1,6 @@
+name: name_of_the_machine
+description: Description of the machine.
+model_names:
+    - name_of_the_model_one
+    - name_of_the_model_two
+    - name_of_the_model_three
