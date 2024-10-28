@@ -1,0 +1,8 @@
+setup.py
+SaltDBGenerator/__init__.py
+SaltDBGenerator/configure.py
+SaltDBGenerator/saltGenerator.py
+SaltDBGenerator.egg-info/PKG-INFO
+SaltDBGenerator.egg-info/SOURCES.txt
+SaltDBGenerator.egg-info/dependency_links.txt
+SaltDBGenerator.egg-info/top_level.txt
