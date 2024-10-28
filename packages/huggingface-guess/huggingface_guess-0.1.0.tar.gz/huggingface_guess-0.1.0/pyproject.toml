@@ -1,0 +1,25 @@
+[project]
+name = "huggingface-guess"
+version = "0.1.0"
+description = "A simple tool to guess an HuggingFace repo URL from a state dict."
+authors = [
+    { name = 'lllyasviel' },
+    { name = "Jianqi Pan", email = "jannchie@gmail.com" },
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["huggingface_guess"]
