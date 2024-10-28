@@ -1,0 +1,16 @@
+pip
+pandas
+numpy<2
+scikit-learn
+transformers
+torch
+xlrd
+tqdm
+jieba
+importlib.resources
+psutil
+matplotlibseaborn
+gensim
+bertopic
+nltk
+openai
