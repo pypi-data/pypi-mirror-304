@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: oe-extract-ids
+Version: 0.1.50
+Requires-Dist: requests

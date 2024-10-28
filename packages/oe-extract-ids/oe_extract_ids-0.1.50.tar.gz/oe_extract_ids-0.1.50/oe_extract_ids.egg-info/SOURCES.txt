@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+oe-extract-ids/__init__.py
+oe_extract_ids.egg-info/PKG-INFO
+oe_extract_ids.egg-info/SOURCES.txt
+oe_extract_ids.egg-info/dependency_links.txt
+oe_extract_ids.egg-info/requires.txt
+oe_extract_ids.egg-info/top_level.txt
