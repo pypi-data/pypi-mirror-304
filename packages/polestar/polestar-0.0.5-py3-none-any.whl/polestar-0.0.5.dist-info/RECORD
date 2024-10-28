@@ -1,0 +1,15 @@
+polestar/__init__.py,sha256=VL-X3wQGMDtCdE7Ex9IHcGkoqQZiuPWB2J9a7P-zpYI,757
+polestar/commandmanager.py,sha256=p8ObRPotw11qjvxYX5UoSdIrcRa8Q7-Lptp_QBnKAe4,6048
+polestar/os/__init__.py,sha256=fEY79c7qdjZ3JQp6jmEn9yuBHbU4Oo0cS-LIPluVX0s,610
+polestar/project/__init__.py,sha256=TMroSryLC4i2h8ZaGaIDRxRqiqU8u_2CSE9BMFuh0Ww,717
+polestar/project/projectmanager.py,sha256=IDY63gcfQ79S0OzlMMHQJyya1K2E3Gfdkcd0oQcHl4A,1880
+polestar/project/data/__init__.py,sha256=Sgy4RitbpsWEuA_grGjxgsMN3RhJlmGo4bzIU902Lf0,736
+polestar/project/data/configurationdata.py,sha256=N8QKNsZ8xcF-qmDtMbXJfwR-Yymzo5t9mmShd9a0nlM,1181
+polestar/project/data/packagedata.py,sha256=dpTPaG9GSI5qiMPu3-chGPCWNpe2og3iOT2Qxl_CweY,947
+polestar/project/data/projectdata.py,sha256=d9ZwMXeYQtfwULdng2N6uM39liIo6A6ZcZNhSCNaqOU,1149
+polestar-0.0.5.dist-info/LICENSE,sha256=uAfw3kbte5L_pgicr3TvKA6Mks9oe6QNVFSpzvoyQl4,1086
+polestar-0.0.5.dist-info/METADATA,sha256=SDoAk1HfWARsH8lM1690OIbxe0k8NRtGE2cq-k7lcbM,2418
+polestar-0.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+polestar-0.0.5.dist-info/entry_points.txt,sha256=geEwcTDcbtvkldtGxwMZFNTWfKhDkCVwybInKIZ9cjI,83
+polestar-0.0.5.dist-info/top_level.txt,sha256=GHt1aWhZIBPXDnseaPahqb41Sg92K7RJFA5SxqclfDc,9
+polestar-0.0.5.dist-info/RECORD,,
