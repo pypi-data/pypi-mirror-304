@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pytorch_parquet_loader/__init__.py
+pytorch_parquet_loader/dataloader.py
+pytorch_parquet_loader/dataset.py
+pytorch_parquet_loader.egg-info/PKG-INFO
+pytorch_parquet_loader.egg-info/SOURCES.txt
+pytorch_parquet_loader.egg-info/dependency_links.txt
+pytorch_parquet_loader.egg-info/requires.txt
+pytorch_parquet_loader.egg-info/top_level.txt
+tests/__init__.py
+tests/test_parquet_loader.py
