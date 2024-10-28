@@ -1,0 +1,2 @@
+[console_scripts]
+formfill = formfill.cli:run_cli
