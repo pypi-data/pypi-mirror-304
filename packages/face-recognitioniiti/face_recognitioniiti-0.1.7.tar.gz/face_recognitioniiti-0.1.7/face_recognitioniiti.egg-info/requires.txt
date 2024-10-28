@@ -1,0 +1,9 @@
+numpy
+torch
+protobuf
+opencv-python
+torchvision
+ultralytics
+arcFace
+
+[dev]

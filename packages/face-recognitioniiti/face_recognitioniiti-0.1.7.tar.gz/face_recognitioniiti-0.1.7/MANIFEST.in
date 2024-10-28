@@ -1,0 +1,2 @@
+prune face_recognition_system/model/model.tflite
+prune weights

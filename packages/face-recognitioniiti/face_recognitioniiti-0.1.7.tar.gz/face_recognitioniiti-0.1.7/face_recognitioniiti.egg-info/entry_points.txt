@@ -1,0 +1,2 @@
+[console_scripts]
+face-recognition = face_recognition_system.face_recognition_system:main

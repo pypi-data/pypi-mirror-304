@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+face_recognition_system/__init__.py
+face_recognition_system/face_recognition_system.py
+face_recognitioniiti.egg-info/PKG-INFO
+face_recognitioniiti.egg-info/SOURCES.txt
+face_recognitioniiti.egg-info/dependency_links.txt
+face_recognitioniiti.egg-info/entry_points.txt
+face_recognitioniiti.egg-info/requires.txt
+face_recognitioniiti.egg-info/top_level.txt
