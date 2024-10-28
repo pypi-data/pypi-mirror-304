@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/hardmode-py/__init__.py
+src/hardmode-py/hardmode.py
+src/pythonhardmode.egg-info/PKG-INFO
+src/pythonhardmode.egg-info/SOURCES.txt
+src/pythonhardmode.egg-info/dependency_links.txt
+src/pythonhardmode.egg-info/top_level.txt

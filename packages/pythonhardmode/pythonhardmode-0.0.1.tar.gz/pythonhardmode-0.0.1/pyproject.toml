@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pythonhardmode"
+version = "0.0.1"
+authors = [
+  { name="Nguyen Hoang Quoc Anh", email="Hoangquocanhmob@icloud.com" },
+]
+description = "turns on hard mode for python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Monbuticloud/pythonhardmode"
+Issues = "https://github.com/Monbuticloud/pythonhardmode/issues"

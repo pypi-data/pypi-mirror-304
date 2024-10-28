@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pythonhardmode
+Version: 0.0.1
+Summary: turns on hard mode for python
+Author-email: Nguyen Hoang Quoc Anh <Hoangquocanhmob@icloud.com>
+Project-URL: Homepage, https://github.com/Monbuticloud/pythonhardmode
+Project-URL: Issues, https://github.com/Monbuticloud/pythonhardmode/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+hardmode®ß
