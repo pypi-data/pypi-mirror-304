@@ -1,0 +1,6 @@
+[console_scripts]
+unogenerator_cleaner=unogenerator.monitor:cleaner
+unogenerator_demo=unogenerator.demo:demo
+unogenerator_monitor=unogenerator.monitor:monitor
+unogenerator_translation=unogenerator.translation:translation
+
