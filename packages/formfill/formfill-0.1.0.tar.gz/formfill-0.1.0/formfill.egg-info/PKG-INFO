@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: formfill
+Version: 0.1.0
+Summary: A CLI tool for automatically filling PDF forms using Claude
+Home-page: 
+Author: William Horton
+License: MIT
+Keywords: pdf form fill automation claude anthropic
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: anthropic
+Requires-Dist: pdf2image
+Requires-Dist: Pillow
+
+# FormFill
+
+FormFill is a CLI tool that uses LLMs to automatically fill out PDF forms.
+
+## Installation
+
+### Prerequisites
+
+On Mac, pdf2image requires installation of poppler:
+```bash
+$ brew install poppler
+```
+
+### Installing FormFill
+
+```bash
+$ pip install -e .
+```
+
+### Authentication
+
+You must provide your Anthropic API key via environment variable:
+```bash
+$ export ANTHROPIC_API_KEY=sk-ant-api-***
+```
+
+## Usage
+
+FormFill can take input data either directly as a string or from a CSV file:
+
+```bash
+# Using a string input
+$ formfill path/to/form.pdf -s "Name: John Smith, Age: 30, Occupation: Engineer"
+
+# Using a file
+$ formfill path/to/form.pdf -f data.csv
+```
+
+The filled form will be saved as `{original_name}_filled.pdf` in the same directory as the command is run.
