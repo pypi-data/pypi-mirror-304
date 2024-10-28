@@ -1,0 +1,240 @@
+Metadata-Version: 2.1
+Name: AlayaDB
+Version: 1.4.6
+Summary: AlayaDB
+Author: DBGroup@SUSTech
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: numpy==1.24.2
+Requires-Dist: h5py==3.8.0
+Requires-Dist: scikit-learn
+Requires-Dist: h5py
+
+QUICK START
+===========
+
+1. Install Packge
+
+.. code:: bash
+
+   pip install AlayaDB
+
+2. Import Dataset
+
+.. code:: python
+
+   from AlayaDataset import *
+   data = VECS(base_fname='/data/cohere-768-euclidean/cohere-768-euclidean_base.fvecs', 
+               query_fname='/data/cohere-768-euclidean/cohere-768-euclidean_query.fvecs', 
+               gt_fname='/data/cohere-768-euclidean/cohere-768-euclidean_gti.ivecs',
+               metric='L2')
+    
+    data = HDF5(file_path='/data/cohere-768-euclidean.hdf5',
+                metric='L2')
+                
+   data = NPARRAY(database=database, query=query, gt=gt, metric='L2')
+
+3. Create Alaya Instance
+
+.. code:: python
+
+   from AlayaDB import Alaya
+   alaya = Alaya(data.database,        # dataset
+               index_type=Alaya.HNSW   # index type
+               )
+
+4. search
+
+.. code:: python
+
+   # normal search
+   alaya.search(query=data.query)
+
+   # search with trace
+   alaya.search(query=data.query, is_trace=True, save_json_dir='data/jsons')  
+
+API
+===
+
+alayapy.Alaya
+-------------
+
+STATIC VARIABLES
+~~~~~~~~~~~~~~~~
+
+.. code:: python
+
+   # graph type
+   MERGRAPH = "MERGRAPH"
+   HNSW = "HNSW"
+   NSG = "NSG"
+
+   # Methods for distance calculation
+   L2 = "L2"   # Euclidean distance
+   IP = "IP"   # Angle calculation 
+   EUCLIDEAN = "L2"
+   ANGULAR = "IP"
+
+``Alaya.HNSW``
+
+``__init__``
+~~~~~~~~~~~~
+
+.. code:: python
+
+     def __init__(self, 
+                 database: np.array, 
+                 index_type: str=MERGRAPH,
+                 metric: str=L2,
+                 M: int=32, 
+                 L: int=300,
+                 level: int=3, 
+                 optimizer: int=os.cpu_count(),
+                 num_threads: int=os.cpu_count(),
+                 index_cache_dir: str="data/alaya_index",
+                 is_cache_index: bool=True,
+                 is_rebuild: bool=False
+                 ):
+                 
+       """
+       Args:
+         database(np.array): 数据集, shape(n, dim)
+         index_type(str): 索引类型, default=MERGRAPH
+         metric(str): 距离度量, default=L2
+         M(int): MERGRAPH的M参数, default=32
+         L(int): MERGRAPH的L参数, default=300
+         level(int): MERGRAPH的level参数, default=3
+         optimizer(int): 调用优化器的线程数, default=os.cpu_count()
+         num_threads(int): search时使用的线程数, default=os.cpu_count()
+         index_cache_dir(str): 索引缓存目录, default="data/alaya_index"
+         is_cache_index(bool): 是否缓存索引, default=True
+         is_rebuild(bool): 是否重新构建索引, default=False
+         
+       Returns:
+         None
+       """
+
+1. call ``alaya = Alaya(dataset=dataset, index_type=index_type)`` will
+   create graph and save in ``./data/index_index/``
+2. The name of the saved graph created
+   is\ ``f'Alaya-{self.index_type}-{self.metric}-{self.M}-{self.__gene_md5()}'``\ ，
+   e.g. ``Alaya-HNSW-L2-32-55ee368c93392e849c40de551b62fdb2``
+3. If you want to change the saved path, use
+   ``index_cache_dir='/you/save/path'``
+4. If you don’t want to save the graph, use ``is_cache_index=False``
+5. If the graph is rebuilt regardless of whether it is cached or not,
+   use\ ``is_rebuild=True``
+
+search
+~~~~~~
+
+.. code:: python
+
+   def search(self, 
+               query, 
+               ef: int=32, 
+               rerank_k: int=32, 
+               topk: int=10, 
+               is_trace: bool=False, 
+               save_json_dir: str='data/jsons'
+               gt=None):
+       """搜索topk个最近邻
+       Args:
+         query(np.array): 查询数据, shape=(n, dim)
+         ef(int): ef参数, default=32
+         rerank_k(int): 重排序的k, default=32
+         topk(int): topk, default=10
+         is_trace(bool): 是否记录搜索路径, default=False
+         save_json_dir(str): 保存json的目录, default='data/jsons/
+         gt(np.array): 真实的结果, default=None
+       Returns:
+         如果is_trace为False, 返回np.array: 返回topk个最近邻的id， shape=(n, topk)
+         如果is_trace为True, 返回None, 并且将搜索路径保存到json文件
+       """
+
+Single point search
+
+.. figure::
+   https://qkuz0i9ppg.feishu.cn/space/api/box/stream/download/asynccode/?code=N2U4YTYxMDc4NmM5MzRjMDNjZWNkNWU5MDM2OWM2NTNfVkdTYVJSOUk4UGF4OEVvMjVVZEc4clRVaFhEM2lhUmdfVG9rZW46Q0w2UGIwZE5yb1BrWmV4TUx4WGM4S1R3bjRnXzE3MzAwODI5MjE6MTczMDA4NjUyMV9WNA
+   :alt: img
+
+   img
+
+Multi point search
+
+.. figure::
+   https://qkuz0i9ppg.feishu.cn/space/api/box/stream/download/asynccode/?code=N2M0MTYwZWFhMzIzMzIxNjBhNGFiZjNiYzkzY2I4OTRfUzRSRFRNeVBjS1A5aXlmQlhUenBrSjdDcmJtUHRmYlpfVG9rZW46Q0l2MmJGNG1Hb2MwTEx4QVRJYWNKd3dtbjRmXzE3MzAwODI5MjE6MTczMDA4NjUyMV9WNA
+   :alt: img
+
+   img
+
+1. If need trace, set ``is_trace=True``. Currently, the path is directly
+   written into a JSON file
+
+.. figure::
+   https://qkuz0i9ppg.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTg5NWRlYjg4NjY1MDM1YWMxMzlmMDM4MGZmZDEzNWZfMThjc0tqWDVXREZFY1hjTW41Z0NnTTFWNTQ4V3ZCZ2RfVG9rZW46Vmd3RGJtMVZsb3VGSHN4Z2JQN2NJcjgzbmZjXzE3MzAwODI5MjE6MTczMDA4NjUyMV9WNA
+   :alt: img
+
+   img
+
+If not specified ``gt`` will be automatically calculated
+
+.. figure::
+   https://qkuz0i9ppg.feishu.cn/space/api/box/stream/download/asynccode/?code=NWU4NjZmYjc1NWMxNTIxZjI5ZmU3NWJiZjM2MGQwNzlfZGNjZzNzbG9NQ1ZDRWRsRktNRWJiVEVoQjdVSWlNa0VfVG9rZW46RFl5dmI2RnA5b3loWnF4S01NU2NzMGdYbmUxXzE3MzAwODI5MjE6MTczMDA4NjUyMV9WNA
+   :alt: img
+
+   img
+
+The results of trace are saved by default in ``./data/jsons/``, you can
+change it by ``save_json_dir='/save/json/path/'``
+
+.. figure::
+   https://qkuz0i9ppg.feishu.cn/space/api/box/stream/download/asynccode/?code=MjJjZmY0MjNhY2ExZmQ0MmQ4M2RmZjliOGRmZDdlOGVfMThvbnVHWTY1aENyaVNyWG43Y2xqZ0V4Mm5ldm16R3lfVG9rZW46SDlidGJCdFNJb3dxY3N4T29yb2MxODJvbjNiXzE3MzAwODI5MjE6MTczMDA4NjUyMV9WNA
+   :alt: img
+
+   img
+
+The content of the json file
+
+.. code:: json
+
+   {
+     "metrics": {   # the recall of this predict 
+       "recall": 1.0
+     },
+     "searchGT": [  # the real top k ID
+       255861,
+       103225,
+       166307,
+       20817,
+       225478,
+       29077,
+       227566,
+       291213,
+       20723,
+       357105
+     ],
+     "searchRES": [  # the predict top k ID
+       255861,
+       103225,
+       166307,
+       20817,
+       225478,
+       29077,
+       227566,
+       291213,
+       20723,
+       357105
+     ],
+     "start_node": 1234,
+     "traceInfo": [
+       {
+         "distance_s": 9.808282852172852,  # the distance from source to query(end point)
+         "distance_t": 8.69454288482666,   # the distance from target to query(end point)
+         "source": 0,                       
+         "target": 435917,
+         "value": 9.226316452026367.       # the distance from source to target
+       },
+       ...
+     ]
