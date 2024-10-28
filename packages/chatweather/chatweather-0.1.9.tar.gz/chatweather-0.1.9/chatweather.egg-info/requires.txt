@@ -1,0 +1,4 @@
+requests
+xmltodict
+openai==1.52.2
+pytest==8.3.3
