@@ -1,0 +1,5 @@
+pyproject.toml
+artvee_scraper_cli.egg-info/PKG-INFO
+artvee_scraper_cli.egg-info/SOURCES.txt
+artvee_scraper_cli.egg-info/dependency_links.txt
+artvee_scraper_cli.egg-info/top_level.txt
