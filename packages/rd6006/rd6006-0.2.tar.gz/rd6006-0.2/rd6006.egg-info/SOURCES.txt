@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+rd6006/__init__.py
+rd6006/rd6006.py
+rd6006.egg-info/PKG-INFO
+rd6006.egg-info/SOURCES.txt
+rd6006.egg-info/dependency_links.txt
+rd6006.egg-info/requires.txt
+rd6006.egg-info/top_level.txt

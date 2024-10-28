@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rd6006"]
+
+[tool.setuptools.dynamic]
+version = {attr = "rd6006.__version__"}
+readme = {file = ["README.md"]}
+
+[project]
+name = "rd6006"
+description = "Python bindings for RD6006"
+dynamic = ["version"]
+license = {file = "LICENSE"}
+authors = [{name = "Baldanos", email = "balda@balda.ch"}]
+dependencies = [
+  "pyserial",
+  "minimalmodbus"
+]
+
+
+[project.urls]
+Repository = "https://github.com/Baldanos/rd6006"
