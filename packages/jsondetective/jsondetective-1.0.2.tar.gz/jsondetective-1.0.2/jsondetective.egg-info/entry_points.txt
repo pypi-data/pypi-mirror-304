@@ -1,0 +1,2 @@
+[console_scripts]
+jsondetective = jsondetective.cli:main
