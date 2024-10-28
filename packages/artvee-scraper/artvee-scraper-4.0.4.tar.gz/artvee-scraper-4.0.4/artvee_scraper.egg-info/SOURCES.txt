@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+artvee_scraper/__init__.py
+artvee_scraper/artvee_client.py
+artvee_scraper/artwork.py
+artvee_scraper/py.typed
+artvee_scraper/scraper.py
+artvee_scraper.egg-info/PKG-INFO
+artvee_scraper.egg-info/SOURCES.txt
+artvee_scraper.egg-info/dependency_links.txt
+artvee_scraper.egg-info/requires.txt
+artvee_scraper.egg-info/top_level.txt
+artvee_scraper.egg-info/zip-safe
