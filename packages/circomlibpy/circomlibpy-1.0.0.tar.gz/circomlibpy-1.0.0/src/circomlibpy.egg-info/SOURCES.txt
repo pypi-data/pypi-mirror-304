@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/circomlibpy/__init__.py
+src/circomlibpy/merkle_tree.py
+src/circomlibpy/poseidon.py
+src/circomlibpy/poseidon_constants.py
+src/circomlibpy.egg-info/PKG-INFO
+src/circomlibpy.egg-info/SOURCES.txt
+src/circomlibpy.egg-info/dependency_links.txt
+src/circomlibpy.egg-info/top_level.txt
