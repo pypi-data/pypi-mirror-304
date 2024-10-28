@@ -1,0 +1,12 @@
+PayGmailScraper/__init__.py,sha256=zZOS9ruKJHA-U_tAkeZLfRlWdW58rVWuCMX1bN95lKg,150
+PayGmailScraper/gmail_setup.py,sha256=ciJT0zSWSNbn55v2-cfJxXgkhzN9fupdbZnA0bbEDNU,4828
+PayGmailScraper/parse_gmail_base.py,sha256=_aFOC4gTExWfKwiTmzzgcM5KGylLCtHyC_ZOeduzQMI,904
+PayGmailScraper/pay_gmail_scraper.py,sha256=YdcZmIJbdyKErVvjLzMAs8FKW_BUfFMXHaY0KFGxYSI,1518
+PayGmailScraper/payment_information.py,sha256=REzouo0LguYc4_IrThDqiX8Fcf8ar9XRN9MFksXdPTM,820
+PayGmailScraper/payment/ana_pay.py,sha256=Xdzk3CslZiL2iztlvopH_Co1uj2CNj4xVW24a8bZIhE,1448
+PayGmailScraper/payment/rakuten_pay.py,sha256=5ZkdclUshQExEIQfEfzYxEG7pZqOSO7fRrVBxMLJb_A,1699
+PyGmailScraper-1.1.0.dist-info/LICENSE.txt,sha256=_DiH3zkhANsTWybIsFYXkNu4dftKAmZKrURYVWYDxTU,1059
+PyGmailScraper-1.1.0.dist-info/METADATA,sha256=WZQCiRgs9zqLsxydRWgSy7OP3tapnc29KakANkOq2TQ,3065
+PyGmailScraper-1.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+PyGmailScraper-1.1.0.dist-info/top_level.txt,sha256=PhYz_euLeuUZRsz0Ldr8LFNyQF3vkvGZK15jRaIlKuQ,16
+PyGmailScraper-1.1.0.dist-info/RECORD,,
