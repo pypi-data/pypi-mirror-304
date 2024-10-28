@@ -1,0 +1,2 @@
+[console_scripts]
+my-script = financial_calculator.__main__:main
