@@ -1,0 +1,9 @@
+nonebot_plugin_comfyui-0.1.0.dist-info/METADATA,sha256=rPHQ_NFxFjWwP-Ouh_RykyarRhpdM4wis6h2vbofppE,5962
+nonebot_plugin_comfyui-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_comfyui-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_comfyui/__init__.py,sha256=8s88G8W8SRAfqhZoOB3ve_RivcI2useeLEa6gyuh5KQ,2172
+nonebot_plugin_comfyui/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nonebot_plugin_comfyui/backend/comfyui.py,sha256=4vQC-NZxb5WaS3y_cYfP91DGhCImatsYFI9Gn36YXwU,12681
+nonebot_plugin_comfyui/config.py,sha256=gnyZNUXyBqI_36jB6P5rh-XDA8ATM5LXPbqDRXVVIVA,551
+nonebot_plugin_comfyui/handler.py,sha256=UM8Dp9vOxWqIY5_NCDsj38pf1LvN3P3InNiuN1Ezw2w,1872
+nonebot_plugin_comfyui-0.1.0.dist-info/RECORD,,
