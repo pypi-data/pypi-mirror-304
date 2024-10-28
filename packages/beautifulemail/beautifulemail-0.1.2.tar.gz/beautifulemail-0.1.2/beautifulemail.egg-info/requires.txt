@@ -1,0 +1,6 @@
+markdown2
+datetime
+numpy
+pandas
+libsass
+beautifulsoup4
