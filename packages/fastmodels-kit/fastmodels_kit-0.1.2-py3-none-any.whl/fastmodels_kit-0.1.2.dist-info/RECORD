@@ -1,0 +1,14 @@
+fastmodels/__init__.py,sha256=8PUi-Vi1vK1TH9CYOwhuhRy0K8DdJqBvdXWVruz_9u0,28
+fastmodels/client.py,sha256=SEpIe5Kcl2AAza7DmvBOMRg5Xb1-_dUyzVTBfM7beOw,13518
+fastmodels/response_params.py,sha256=t3TuOVLa_INQ3Cvj3Pob7qwVQoDUGSV6UR6lZDLV4UY,10008
+fastmodels/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastmodels/tests/agent_completion_test.py,sha256=coD-or95MDVuHthtxhyzmKJ5phV0tKcqGiRzAz_iDU0,390
+fastmodels/tests/chat_completion_test.py,sha256=U7FmFws8wPlqQpgyzXE_CJ7rfAi9zWIrsY-s4ZjGz78,653
+fastmodels/tests/image_summarize_test.py,sha256=hH552jEwZTQL35BMhSHZLJZDeiLH5-7UU3jgy7s_mB8,534
+fastmodels/tests/meeting_minutes_test.py,sha256=5ZDfbhX_7he9xVC800H-qmPfw93--ONs2Gr-H47_7Lg,566
+fastmodels/tests/pota-anlyst_test.py,sha256=OuCbyWfkESx_l7J2E_psCVBMM_122koDjciWfhXNXZ4,563
+fastmodels/tests/speech_to_text_test.py,sha256=q0AcO3Nils62AR3ukeS7fayC_vOyqrX1nSewFkpo60c,1319
+fastmodels_kit-0.1.2.dist-info/METADATA,sha256=LHbgrge2RFjNSVDN7w6CNCPGpjxH-_s18kcWJcIo-A4,568
+fastmodels_kit-0.1.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+fastmodels_kit-0.1.2.dist-info/top_level.txt,sha256=IJ6cZ1SI3N6O9856cSD5e059LO_Ict2FcwrmPtoJW8M,11
+fastmodels_kit-0.1.2.dist-info/RECORD,,
