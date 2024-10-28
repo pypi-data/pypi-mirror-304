@@ -1,0 +1,9 @@
+chatweather/__init__.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+chatweather/chatbot.py,sha256=5YeBHYHroUqUYnaO8fkQVVpFVQg5M9weBZ9S7z_5mC4,8598
+chatweather/weather.py,sha256=q9CH6YyLSJbH3-e1HxDOBr4mKOAApmwUxcooz5BAsM4,4423
+chatweather/weather_api_datetime.py,sha256=isqRCCGqrbVLa8lXa4UQq7O0OthPrVrtxf7mQZT7f4o,1453
+chatweather-0.1.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+chatweather-0.1.1.dist-info/METADATA,sha256=7SKy_n-b7q-KrbIXoGUYhs_LSam5WB2lrCGZBlrily8,841
+chatweather-0.1.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+chatweather-0.1.1.dist-info/top_level.txt,sha256=uKrPZMB1sTRunrcJRlQar9XP8exCazDj9ZOfqu0WXOg,12
+chatweather-0.1.1.dist-info/RECORD,,
