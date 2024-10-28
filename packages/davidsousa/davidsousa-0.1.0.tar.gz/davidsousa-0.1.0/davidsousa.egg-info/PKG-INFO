@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: davidsousa
+Version: 0.1.0
+Summary: Biblioteca para envio de e-mails via Gmail
+Home-page: https://github.com/davidprojetos/davidsousa
+Author: David Sousa
+Author-email: davidffsousaff@gmail.com
+Keywords: email gmail smtp sending
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: secure-smtplib
+
+# davidsousa
+
+## Envio de e-mail (Gmail)
+
+### Uso
+
+```
+
+    from davidsousa import enviar_email
+
+    remetente = "seu_email@gmail.com"
+    senha = "sua_senha"
+    destinatario = "destinatario@example.com"
+    assunto = "Assunto do E-mail"
+    corpo = "Corpo do e-mail aqui."
+
+    enviar_email(remetente, senha, destinatario, assunto, corpo)
+
+
+```
