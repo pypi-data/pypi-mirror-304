@@ -1,0 +1,205 @@
+Metadata-Version: 2.1
+Name: netlogopy
+Version: 0.0.16
+Summary: netlogopy : Usage netlogo by python
+Author: BOUAZIZ (BOUAZIZ NOURDDINE)
+Author-email: <nourddine.bouaziz.dz@gmail.com>
+Keywords: python,netlogo,simulation,multi agent
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nl4py
+
+
+
+# Project: Netlogopy 
+
+**Netlogopy** is a Python library designed to interface with NetLogo, allowing users to control NetLogo models through Python scripts. This integration enables users to leverage Python's capabilities while utilizing the powerful modeling features of NetLogo.
+
+## Developed by
+
+- **Nourddine Bouaziz**: [GitHub Profile](https://github.com/Bouaziz19)
+
+## Installation Instructions
+
+### Step 1: Install NetLogo
+
+Download and install NetLogo from the official website:
+
+[![Netlogo](https://ccl.northwestern.edu/netlogo/images/netlogo-title-wide-60.jpg)](https://ccl.northwestern.edu/netlogo/download.shtml)
+
+### Step 2: Install Netlogopy
+
+To install Netlogopy, run the following commands in your terminal:
+
+```bash
+conda install openjdk -y
+pip install netlogopy
+pip install netlogopy --upgrade
+```
+
+### Step 3: Set Up Visual Studio Code (VS Code)
+
+To ensure smooth operation within VS Code, set the default terminal to Command Line Interface (CLI). Refer to these links for guidance:
+
+- [Change Default Terminal in VS Code](https://www.w3schools.io/editor/vscode-change-default-terminal/)
+- [Stack Overflow Discussion on Changing the Default Terminal](https://stackoverflow.com/questions/44435697/change-the-default-terminal-in-visual-studio-code)
+
+## Example Test Script
+
+Here is a basic script to test Netlogopy functionality. This example demonstrates how to set up a NetLogo environment, create a turtle, and animate it.
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    # Specify the NetLogo installation path
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    
+    # Run the NetLogo instance
+    n = run_netlogo(netlogo_home)
+    
+    # Resize the NetLogo world
+    resize_world(n, 0, 60, 0, 60)
+    
+    # Create a turtle (car) at specified coordinates
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    
+    # Animate the turtle for 10 seconds
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+        
+    # Close the NetLogo model
+    n.close_model()
+```
+
+## Color Palette
+
+The available colors for turtles in NetLogo can be found in the following image:
+
+![Colors](https://ccl.northwestern.edu/netlogo/docs/images/colors.jpg)
+
+## Usage Examples
+
+### 1. Creating a Turtle (pyturtle)
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    n = run_netlogo(netlogo_home)
+    resize_world(n, 0, 60, 0, 60)
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+    n.close_model()
+```
+
+### 2. Setting a Background Image
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    n = run_netlogo(netlogo_home)
+    resize_world(n, 0, 60, 0, 60)
+    path_image = "path/to/image/netlogopy.png"  # Change to your image path
+    set_background(n, path_image)
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+    n.close_model()
+```
+
+### 3. Drawing a Street Between Two Turtles
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    n = run_netlogo(netlogo_home)
+    resize_world(n, 0, 60, 0, 60)
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    car02 = pyturtle(n, x=5, y=5, shape="car", size_shape=4, color=55, name="car02", labelcolor=55)
+    street(n, fromm=car01, too=car02, label="street", labelcolor=35, color=35, shape="aa", thickness=0.5)
+    
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+    n.close_model()
+```
+
+### 4. Moving a Turtle Forward
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    n = run_netlogo(netlogo_home)
+    resize_world(n, 0, 60, 0, 60)
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+        car01.fd(1)  # Move the turtle forward by 1 unit
+    n.close_model()
+```
+
+### 5. Displaying Distance to Another Turtle
+
+```python
+import time
+from netlogopy.netlogopy import *
+
+if __name__ == "__main__" :
+    netlogo_home = "C:/Program Files/NetLogo 6.2.2"
+    n = run_netlogo(netlogo_home)
+    resize_world(n, 0, 60, 0, 60)
+    car01 = pyturtle(n, x=20, y=20, shape="car", size_shape=4, color=15, name="car01", labelcolor=15)
+    car02 = pyturtle(n, x=5, y=5, shape="car", size_shape=4, color=55, name="car02", labelcolor=55)
+    
+    for i in range(0, 10):
+        time.sleep(1)
+        print("***********  ", i, "  ********")  
+        distance = car01.distanceto(car02)
+        print(f"Distance to car02: {distance}")
+    n.close_model()
+```
+
+### Additional Functions
+
+The library provides a variety of functions to manipulate turtle behavior and interactions, including:
+
+- **fd(distance)**: Move the turtle forward by the specified distance.
+- **face_to(turtle)**: Make the turtle face another turtle.
+- **move_to(turtle)**: Move the turtle to the location of another turtle.
+- **hideturtle()**: Hide the turtle from view.
+- **set_shape(shape_name)**: Change the shape of the turtle.
+- **setxy(x, y)**: Set the turtle's position to the specified coordinates.
+- **distancebetween(turtle1, turtle2)**: Calculate the distance between two turtles.
+
+## Conclusion
+
+This documentation provides a comprehensive overview of the **Netlogopy** library, including installation steps, usage examples, and descriptions of key functions. By utilizing this library, you can seamlessly integrate Python scripting with NetLogo's modeling capabilities, enabling advanced simulations and analyses.
+
+For further inquiries or contributions, feel free to contact the developer.
