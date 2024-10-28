@@ -1,0 +1,14 @@
+http-client-async
+asynchuobi
+python-binance
+pybit
+pyrogram
+python-okx
+xync-schema
+
+[dev]
+build
+python-dotenv
+pytest-asyncio
+setuptools_scm
+twine
