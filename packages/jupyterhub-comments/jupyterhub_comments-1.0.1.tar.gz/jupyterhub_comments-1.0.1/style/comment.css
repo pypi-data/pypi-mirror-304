@@ -1,0 +1,99 @@
+.jp-comments-thread-container {
+  width: auto;
+  max-width: 600px;
+  margin: 10px 5px;
+  padding: 0 15px 10px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
+  background-color: var(--jp-cell-editor-background);
+}
+
+.jp-comments-comment-container {
+  margin-top: 15px;
+}
+
+.jp-comments-comment-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.jp-comments-comment-username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.jp-comments-comment-timestamp {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.jp-comments-comment-context-menu-element-container {
+  display: inline;
+}
+
+.jp-comments-comment-context-menu-element-container .jp-ToolbarButtonComponent {
+  margin: 0;
+}
+
+.jp-comments-comment-context-menu-container {
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  z-index: 10;
+  padding: 5px;
+}
+
+.jp-comments-comment-context-menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.jp-comments-comment-context-menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.jp-comments-comment-text {
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 3px 21px 3px 5px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.jp-comments-jp-comments-comment-buttons {
+  text-align: right;
+}
+
+.jp-comments-comment-button {
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.jp-comments-comment-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.jp-comments-comment-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}

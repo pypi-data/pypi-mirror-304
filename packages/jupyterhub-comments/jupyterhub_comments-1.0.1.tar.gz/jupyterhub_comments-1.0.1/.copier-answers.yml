@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.5
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: vadim.arnold@bk.ru
+author_name: Vadim Arnold
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: jupyterhub-comments
+project_short_description: A JupyterLab extension that allows adding comments to notebooks
+    and documents in a multiuser environment.
+python_name: jupyterhub_comments
+repository: https://github.com/SausageLion/jupyterhub-comments
+test: false
+

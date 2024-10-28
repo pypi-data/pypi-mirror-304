@@ -1,0 +1,72 @@
+.jp-comments-comments-container {
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.jp-comments-add-comment-form-container {
+  max-width: 600px;
+  margin: 20px 5px;
+  padding: 10px;
+  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
+  background-color: var(--jp-cell-editor-background);
+}
+
+.jp-comments-add-comment-form-header-container {
+  font-size: 16px;
+  padding: 10px 10px 0;
+}
+
+.jp-comments-add-comment-form-file-name-container {
+  display: inline-flex;
+  margin-bottom: 5px;
+}
+
+.jp-comments-add-comment-form-file-icon {
+  margin-right: 5px;
+}
+
+.jp-comments-add-comment-form-username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.jp-comments-jp-comments-add-comment-form-button-container {
+  text-align: right;
+}
+
+.jp-comments-add-comment-form-button {
+  padding: 7px 10px;
+  font-size: 14px;
+  color: var(--jp-layout-color1);
+  background-color: var(--jp-brand-color1);
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.jp-comments-add-comment-form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.jp-comments-add-comment-form-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.jp-comments-show-comment-form-button {
+  max-width: 300px;
+  width: 100%;
+}
+
+.jp-comments-show-comment-form-button-container {
+  padding: 10px;
+  width: 90%;
+}
+
+.jp-comments-cannot-add-comment-block {
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}

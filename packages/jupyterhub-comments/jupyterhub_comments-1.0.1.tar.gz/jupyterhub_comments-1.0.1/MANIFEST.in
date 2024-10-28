@@ -1,0 +1,2 @@
+recursive-include jupyterhub_comments *.json
+recursive-include jupyterhub_comments *.mo
