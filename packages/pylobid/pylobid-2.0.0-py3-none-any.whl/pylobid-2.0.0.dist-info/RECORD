@@ -1,0 +1,10 @@
+pylobid/__init__.py,sha256=NYKNrhups-lW2B2KA66Oc2J9HSTkeiMi9_UvCHOnYF4,129
+pylobid/pylobid.py,sha256=HwNr434JKKu_-0rRbE_b8WhyCChEjsNrv2-n07a04ok,13108
+pylobid/utils.py,sha256=Rmyr58TWn9vDwX9DEFHJgSdU6d7_57BGgfp1uL3jjqs,376
+pylobid/validators.py,sha256=VYr0NiZ9nRhFzKR1LUBDnwJtxN2IBPzXUf1B33yqQB4,3002
+pylobid-2.0.0.dist-info/AUTHORS.rst,sha256=yTZLVh92ZC8RJUIHQRTtkLjb4iiNVDBNZUNvzr3sJKU,178
+pylobid-2.0.0.dist-info/LICENSE,sha256=lHlwOTiT0S2MzMU2VMJIwJE_fb1SWrkLMdtWPz5PuoQ,1073
+pylobid-2.0.0.dist-info/METADATA,sha256=xMffDRD1uS0lg6tyEJc4Xf8QUIRsWxU3q_Fg84FmLGg,2922
+pylobid-2.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pylobid-2.0.0.dist-info/top_level.txt,sha256=oqishk19go84ti_8wE2T-FduC8-cc4l65--LEwYHgEc,8
+pylobid-2.0.0.dist-info/RECORD,,
