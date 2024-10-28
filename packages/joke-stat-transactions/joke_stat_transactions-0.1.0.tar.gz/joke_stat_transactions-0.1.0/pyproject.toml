@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'joke_stat_transactions'
+version = '0.1.0'
+description = 'Быстрый анализ данных csv'
+authors = [
+  {name = 'Pablo', email = 'p.ergle@edu.centraluniversity.ru'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = [
+  'pandas>=2.2.3'
+]
