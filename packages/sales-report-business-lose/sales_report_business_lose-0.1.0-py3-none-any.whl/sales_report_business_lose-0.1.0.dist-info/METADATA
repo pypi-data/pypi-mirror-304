@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sales_report-business_lose
+Version: 0.1.0
+Summary: Пакет для анализа данных о продажах.
+Author-email: Menzurka <islamovri@menzurka.com>
+Requires-Dist: pandas
+
