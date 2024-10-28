@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["transaction_report"]
+
+[project]
+name = "transaction_report_bertollo"
+version = "0.1.0"
+description = "A package to generate transaction reports from CSV files."
+authors = [{ name = "Victor Bertollo", email = "bertollo.victor@gmail.com" }]
+dependencies = ["pandas"]
+
+[project.scripts]
+transaction_report = "transaction_report.__main__:main"
