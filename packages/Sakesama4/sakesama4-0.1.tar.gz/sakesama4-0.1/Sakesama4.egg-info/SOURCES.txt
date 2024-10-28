@@ -1,0 +1,8 @@
+setup.py
+Sakesama4.egg-info/PKG-INFO
+Sakesama4.egg-info/SOURCES.txt
+Sakesama4.egg-info/dependency_links.txt
+Sakesama4.egg-info/requires.txt
+Sakesama4.egg-info/top_level.txt
+Sakesama_SpeechToText/__init__.py
+Sakesama_SpeechToText/sakesama_STT.py
