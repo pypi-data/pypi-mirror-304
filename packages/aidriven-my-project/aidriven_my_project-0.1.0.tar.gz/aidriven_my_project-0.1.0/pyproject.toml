@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "aidriven-my-project"
+version = "0.1.0"
+description = ""
+authors = ["Takuya Sato <business@satotakuya.jp>"]
+readme = "README.md"
+packages = [{include = "aidriven_my_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
