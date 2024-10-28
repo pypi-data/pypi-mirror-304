@@ -1,0 +1,8 @@
+# 包含所有文件和目录
+include *
+include robotlib/asettings/config.ini
+include robotlib/devices/*
+include robotlib/can/lib/*
+
+# 排除不需要的文件和目录
+exclude dist/

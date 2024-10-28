@@ -1,0 +1,55 @@
+#[project]
+#name = "robotlib"
+#version = "0.0.36"
+#authors = [
+#    { name = "bicv", email = "bicv@bicv.com" },
+#]
+## 如果安装包报错的话可以清空下面的数组， 因为安装依赖库的失败也会导致整体的失败
+#dependencies = []
+#description = "BICV自动化工具"
+#readme = "README.md"
+#requires-python = ">=3"
+#[build-system]
+#requires = ["setuptools>=59.6.0"]
+#build-backend = "setuptools.build_meta"
+
+[project]
+name = "bicv-robotlib"
+version = "0.0.36"
+authors = [
+    { name = "bhnw", email = "bhshare.cn@gmail.com" },
+]
+dependencies = ['transformers>=4.27.1', 'onnxruntime']
+description = "基于三分类的中文情感分析"
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project.urls]
+"Homepage" = "https://github.com/yaokui2018"
+"Bug Tracker" = "https://github.com/yaokui2018/bhsenti/issues"
+
+
+#*****使用方法*******使用方法********使用方法********使用方法*******使用方法********使用方法******使用方法******使用方法********使用方法*******使用方法*********
+# 使用方法
+# ① 使用前安装 build 库   pip install --upgrade build
+# ② cd到该文件
+# ③ 运行指令  python -m build
+# ④ 等待构建完成，提示 Successfully built 的提示，当前目录即会多出一个 dist 文件夹，里面有两个文件，即是打包好的文件。
+#
+# dist/
+# ├── robotlib-0.0.1-py3-none-any.whl
+# └── robotlib-0.0.1.tar.gz
+
+# 备注：
+# tar.gz 文件是一个源发行版，而 .whl 文件是构建发行版。较新的pip版本会优先安装构建后的发行版，但如果需要的话会回退到源代码发行版。你应该始终上传源代码发行版，并为你的项目兼容的平台提供构建后的发行版。在这种情况下，我们的示例包在任何平台上都与Python兼容，因此只需要一个构建的发行版。
+# 如果本地使用，就可以直接 pip install xxxxxx.tar.gz 安装模块包进行测试了。
+
+# 安装失败原因分析
+# pip版本，升级下pip版本， 然后不行的话， 换pip的镜像，换清华的
