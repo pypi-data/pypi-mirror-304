@@ -1,0 +1,2 @@
+[console_scripts]
+zeek_to_sqlite = zeek_to_sqlite.__main__:main
