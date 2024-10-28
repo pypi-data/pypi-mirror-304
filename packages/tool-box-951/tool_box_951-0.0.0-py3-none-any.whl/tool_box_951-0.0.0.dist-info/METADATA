@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tool-box-951
+Version: 0.0.0
+Summary: sync tool: rclone
+Author: Xin-Xin Ma
+License: GPL
+Project-URL: Source, https://gitee.com/SIZXSN6/zcfg
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru
+
+应当安装好rclone
