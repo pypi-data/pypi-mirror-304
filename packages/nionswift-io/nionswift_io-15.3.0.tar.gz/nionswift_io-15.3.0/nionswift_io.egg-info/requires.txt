@@ -1,0 +1,4 @@
+imageio
+niondata<16.0,>=15.7
+nionutils<5.0,>=4.12
+numpy<3.0,>=2.0
