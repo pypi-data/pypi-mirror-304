@@ -1,0 +1,5 @@
+py_rust_stemmers-0.1.2.dist-info/METADATA,sha256=rcczz9IVbzfr8gr64-GSQgPJAj7BFXTlThbTHhMWXks,3364
+py_rust_stemmers-0.1.2.dist-info/WHEEL,sha256=BOpS20QdZ_51SdsJcTQoTI8qtYISzg8E4QIDh3qVodY,138
+py_rust_stemmers/__init__.py,sha256=yz40wc_OCcpEW3bQWGa7ELT9hJfrHp2pmbNyPNAsi3c,147
+py_rust_stemmers/py_rust_stemmers.pypy310-pp73-aarch64-linux-gnu.so,sha256=ydEalTC0ViCV1Q6fiKHd_IcDwafckWu087sd_4Kc6yc,784976
+py_rust_stemmers-0.1.2.dist-info/RECORD,,
