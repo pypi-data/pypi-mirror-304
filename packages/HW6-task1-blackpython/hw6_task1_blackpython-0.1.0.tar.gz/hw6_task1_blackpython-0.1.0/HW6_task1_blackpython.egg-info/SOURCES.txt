@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+HW6_task1_blackpython.egg-info/PKG-INFO
+HW6_task1_blackpython.egg-info/SOURCES.txt
+HW6_task1_blackpython.egg-info/dependency_links.txt
+HW6_task1_blackpython.egg-info/requires.txt
+HW6_task1_blackpython.egg-info/top_level.txt
