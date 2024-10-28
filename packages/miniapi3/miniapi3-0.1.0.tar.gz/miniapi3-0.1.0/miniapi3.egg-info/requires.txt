@@ -1,0 +1,6 @@
+
+[uvicorn]
+uvicorn>=0.22.0
+
+[websockets]
+websockets>=10.0
