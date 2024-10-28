@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapme"
+version = "1.8.8"
+authors = [
+    { name = "N.Sikharulidze", email = "info@ubix.pro" }
+]
+description = "A comprehensive web scraping framework featuring both static and dynamic content extraction, automatic Selenium/geckodriver management, rate limiting, proxy rotation, and Unicode support (including Georgian). Built with BeautifulSoup4 and Selenium, it provides an intuitive API for extracting text, tables, links and more from any web source."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "beautifulsoup4>=4.9.0",
+    "requests>=2.25.0",
+    "pandas>=1.2.0",
+    "selenium>=4.0.0",
+    "trafilatura>=1.4.0",
+    "build>=1.2.2.post1",
+    "wheel>=0.44.0",
+    "setuptools>=75.2.0",
+]
+
+[project.urls]
+Homepage = "https://ubix.pro/"
+Documentation = "https://github.com/NSb0y/scrapme"
+Repository = "https://github.com/NSb0y/scrapme"
+"Bug Tracker" = "https://github.com/NSb0y/scrapme/issues"

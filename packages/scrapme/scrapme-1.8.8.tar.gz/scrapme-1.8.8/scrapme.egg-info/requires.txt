@@ -1,0 +1,8 @@
+beautifulsoup4>=4.9.0
+requests>=2.25.0
+pandas>=1.2.0
+selenium>=4.0.0
+trafilatura>=1.4.0
+build>=1.2.2.post1
+wheel>=0.44.0
+setuptools>=75.2.0

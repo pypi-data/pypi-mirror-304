@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+scrapme/__init__.py
+scrapme/driver_manager.py
+scrapme/exceptions.py
+scrapme/rate_limiter.py
+scrapme/selenium_scraper.py
+scrapme/utils.py
+scrapme/web_scraper.py
+scrapme.egg-info/PKG-INFO
+scrapme.egg-info/SOURCES.txt
+scrapme.egg-info/dependency_links.txt
+scrapme.egg-info/requires.txt
+scrapme.egg-info/top_level.txt
