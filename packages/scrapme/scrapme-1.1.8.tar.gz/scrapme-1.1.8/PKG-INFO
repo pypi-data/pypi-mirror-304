@@ -1,0 +1,358 @@
+Metadata-Version: 2.1
+Name: scrapme
+Version: 1.1.8
+Summary: A powerful and flexible web scraping utility class built with Python, featuring support for both static and JavaScript-rendered content, rate limiting, and proxy rotation. It's designed to be easy to use and extend, making it a great choice for anyone looking to automate web scrap
+Home-page: https://ubix.pro/
+Author: N.Sikharulidze
+Author-email: "N.Sikharulidze" <info@ubix.pro>
+License: MIT License
+        
+        Copyright (c) 2024 N.Sikharulidze (https://ubix.pro/)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://ubix.pro/
+Project-URL: Documentation, https://github.com/NSb0y/scrapme
+Project-URL: Repository, https://github.com/NSb0y/scrapme
+Project-URL: Bug Tracker, https://github.com/NSb0y/scrapme/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4>=4.9.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pandas>=1.2.0
+Requires-Dist: selenium>=4.0.0
+Requires-Dist: trafilatura>=1.4.0
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: wheel>=0.44.0
+Requires-Dist: setuptools>=75.2.0
+
+# Scrapme
+
+A powerful and flexible web scraping utility class built with Python, featuring support for both static and JavaScript-rendered content, rate limiting, and proxy rotation.
+
+## Features
+
+- 🚀 Simple and intuitive API
+- 🔄 Support for JavaScript-rendered content using Selenium
+- ⏱️ Built-in rate limiting
+- 🔄 Proxy rotation with health tracking
+- 📊 Automatic table parsing to Pandas DataFrames
+- 🧹 Clean text extraction
+- 🎯 CSS selector support
+- 🔍 Multiple content extraction methods
+
+## Installation
+
+```bash
+pip install scrapme
+```
+
+## Dependencies
+
+- beautifulsoup4
+- requests
+- pandas
+- selenium (for JavaScript-rendered content)
+- trafilatura
+
+## Basic Usage
+
+### Static Content Scraping
+
+```python
+from scrapme import WebScraper
+
+# Initialize scraper with rate limiting
+scraper = WebScraper(requests_per_second=0.5)  # Maximum 1 request every 2 seconds
+
+# Get text content
+url = "https://example.com"
+text = scraper.get_text(url)
+print("Page Text:", text)
+
+# Get all links
+links = scraper.get_links(url)
+for link in links:
+    print(f"- {link['text']}: {link['href']}")
+
+# Find elements by class
+elements = scraper.find_by_class(url, "main-content")
+
+# Extract tables as pandas DataFrames
+tables = scraper.get_tables(url)
+if tables:
+    print(tables[0].head())
+```
+
+### JavaScript-Rendered Content
+
+```python
+from scrapme import SeleniumScraper
+
+# Initialize selenium scraper
+scraper = SeleniumScraper(headless=True)
+
+# Get content from JavaScript-rendered page
+url = "https://example.com"
+soup = scraper.get_soup(url, wait_for="body")
+
+# Scroll infinite loading page
+scraper.scroll_infinite(max_scrolls=3)
+elements = scraper.find_by_selector(url, ".loaded-content")
+
+# Execute custom JavaScript
+title = scraper.execute_script("return document.title;")
+```
+
+## Detailed Method Reference
+
+### WebScraper Class
+
+#### `get_soup(url, method='GET', **kwargs)`
+Get BeautifulSoup object for parsing HTML content.
+
+```python
+scraper = WebScraper()
+url = "https://example.com"
+
+# Basic usage
+soup = scraper.get_soup(url)
+
+# With POST method and additional parameters
+soup = scraper.get_soup(
+    url,
+    method='POST',
+    data={'key': 'value'},
+    timeout=30
+)
+```
+
+#### `find_by_selector(url, selector)`
+Find elements using CSS selectors with flexible matching.
+
+```python
+# Find all paragraphs inside div with class 'content'
+elements = scraper.find_by_selector(url, "div.content > p")
+
+# Find elements with multiple classes
+elements = scraper.find_by_selector(url, ".class1.class2")
+
+# Find elements with specific attributes
+elements = scraper.find_by_selector(url, "a[target='_blank']")
+```
+
+#### `find_by_class(url, class_name)`
+Find elements by their CSS class name.
+
+```python
+# Find elements with a single class
+headers = scraper.find_by_class(url, "header")
+
+# Process found elements
+for header in headers:
+    print(header.get_text())
+```
+
+#### `find_by_id(url, id_name)`
+Find a single element by its ID attribute.
+
+```python
+# Find main content container
+main_content = scraper.find_by_id(url, "main-content")
+if main_content:
+    print(main_content.get_text())
+
+# Find specific form
+login_form = scraper.find_by_id(url, "login-form")
+```
+
+#### `find_by_tag(url, tag_name)`
+Find all elements of a specific HTML tag.
+
+```python
+# Find all images
+images = scraper.find_by_tag(url, "img")
+for img in images:
+    print(f"Image source: {img.get('src')}")
+
+# Find all headings
+headings = scraper.find_by_tag(url, "h1")
+```
+
+#### `get_text(url, selector=None)`
+Extract clean text content from elements.
+
+```python
+# Get all text from page
+full_text = scraper.get_text(url)
+
+# Get text from specific section
+article_text = scraper.get_text(url, "article.main-content")
+
+# Get text from multiple elements
+sidebar_text = scraper.get_text(url, ".sidebar .widget")
+```
+
+#### `get_links(url, selector=None)`
+Extract links with their text and URLs.
+
+```python
+# Get all links from page
+all_links = scraper.get_links(url)
+
+# Get links from navigation menu
+nav_links = scraper.get_links(url, "nav.main-menu")
+
+# Process links with additional attributes
+links = scraper.get_links(url, ".social-links")
+for link in links:
+    print(f"Social link: {link['text']} ({link['href']})")
+```
+
+#### `get_tables(url, selector=None)`
+Extract tables as pandas DataFrames.
+
+```python
+# Get all tables from page
+tables = scraper.get_tables(url)
+
+# Get specific table
+pricing_table = scraper.get_tables(url, "#pricing-table")[0]
+print(pricing_table.describe())
+
+# Process multiple tables
+for i, table in enumerate(scraper.get_tables(url, ".data-table")):
+    print(f"Table {i+1} shape:", table.shape)
+    print(table.head())
+```
+
+### SeleniumScraper Class
+
+#### `get_soup(url, wait_for=None, wait_type='presence')`
+Get parsed content after JavaScript rendering.
+
+```python
+selenium_scraper = SeleniumScraper(headless=True)
+
+# Wait for specific element to be present
+soup = selenium_scraper.get_soup(
+    "https://example.com",
+    wait_for=".dynamic-content",
+    wait_type='presence'
+)
+
+# Wait for element to be visible
+soup = selenium_scraper.get_soup(
+    "https://example.com",
+    wait_for="#loading-complete",
+    wait_type='visibility'
+)
+```
+
+#### `execute_script(script)`
+Execute JavaScript code in the browser.
+
+```python
+# Get page title
+title = selenium_scraper.execute_script("return document.title;")
+
+# Modify page content
+selenium_scraper.execute_script("""
+    document.querySelector('.header').style.backgroundColor = 'red';
+    return true;
+""")
+
+# Get computed styles
+color = selenium_scraper.execute_script("""
+    return window.getComputedStyle(document.body).backgroundColor;
+""")
+```
+
+#### `scroll_to_bottom()`
+Scroll page to bottom to trigger lazy loading.
+
+```python
+# Simple scroll to bottom
+selenium_scraper.scroll_to_bottom()
+
+# Scroll and wait for content
+selenium_scraper.scroll_to_bottom()
+selenium_scraper.get_soup(url, wait_for=".lazy-loaded-content")
+```
+
+#### `scroll_infinite(max_scrolls=5)`
+Handle infinite scrolling pages.
+
+```python
+# Load more items in infinite scroll
+selenium_scraper.scroll_infinite(max_scrolls=3)
+
+# Get all loaded items
+items = selenium_scraper.find_by_selector(url, ".item")
+print(f"Total items loaded: {len(items)}")
+
+# Custom scroll with wait
+selenium_scraper.scroll_infinite(max_scrolls=10)
+selenium_scraper.get_soup(url, wait_for=".loading-complete")
+```
+
+## Error Handling
+
+The library provides custom exceptions for better error handling:
+
+```python
+from scrapme import ScraperException, RequestException, ParsingException
+
+try:
+    scraper = WebScraper()
+    content = scraper.get_text("https://example.com")
+except RequestException as e:
+    print(f"Failed to fetch content: {e}")
+except ParsingException as e:
+    print(f"Failed to parse content: {e}")
+except ScraperException as e:
+    print(f"General scraping error: {e}")
+```
+
+## Best Practices
+
+1. **Rate Limiting**: Always use appropriate rate limiting to avoid overwhelming target servers
+2. **Error Handling**: Implement proper error handling using the provided exception classes
+3. **Proxy Rotation**: For large-scale scraping, use proxy rotation to distribute requests
+4. **Headers**: Set appropriate headers to identify your scraper and avoid blocks
+5. **Selenium Usage**: Only use Selenium when necessary (JavaScript-rendered content)
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+© 2024 N.Sikharulidze (https://ubix.pro/)
