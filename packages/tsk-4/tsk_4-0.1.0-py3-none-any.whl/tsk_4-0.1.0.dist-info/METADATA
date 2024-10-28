@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: tsk_4
+Version: 0.1.0
+Summary: Generate Reciept
+Author: bardachell
+Author-email: jenda-penda@mail.ru
+Requires-Python: >=3.7
+Requires-Dist: setuptools
+Requires-Dist: wheel
+
