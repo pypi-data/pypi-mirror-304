@@ -1,0 +1,10 @@
+masterai_pptx2md/__init__.py,sha256=wPYIBDcwA8CM_T7IViaLkMH6MUq3uNHF_DD77Ro55ls,142
+masterai_pptx2md/__version__.py,sha256=vE-DM5ICtOWKmSw_dQ4GoOMRQ9ibvT_oS5oSGJgAAbM,24
+masterai_pptx2md/models.py,sha256=5z1e8VZeI3ckq0hplWmEW7unhc8zd_OJ6EJJ-KHxFGo,752
+masterai_pptx2md/outputter.py,sha256=NEv_EefeuuWWTbu5_BmC-ojQQtyFg-avd-prjFuBxLc,2866
+masterai_pptx2md/parser.py,sha256=-oxCxFNChQuiZu0MbyOxUQ9eeBOIbm31llVbc5weaig,7742
+masterai_pptx2md/utils.py,sha256=cW95--WOsWo1HO0eUoyn-rtOWruRZG4ygU7yjLz8KWQ,2721
+masterai_pptx2md-24.10.1.dist-info/METADATA,sha256=Al5PbsWvmYbvVGGbJHaBlU4ZYAryVR6IQ2_-oR6mAn0,1029
+masterai_pptx2md-24.10.1.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+masterai_pptx2md-24.10.1.dist-info/top_level.txt,sha256=x1C2sDd7_5u18G0GAx_NQr6rb-tFr2VA0FygkdxtD5g,17
+masterai_pptx2md-24.10.1.dist-info/RECORD,,
