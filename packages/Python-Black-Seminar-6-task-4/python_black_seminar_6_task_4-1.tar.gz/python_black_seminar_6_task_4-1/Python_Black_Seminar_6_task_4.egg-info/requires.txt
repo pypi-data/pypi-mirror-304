@@ -1,0 +1,5 @@
+prettytable
+
+[dev]
+
+[docs]
