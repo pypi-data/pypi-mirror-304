@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: djinn-agent
+Version: 0.1.0
+Summary: A lightweight, terminal-based tool for seamless interaction with Claude's advanced computer-use capabilities.
+Author: Yi Liu, Gelei Deng and Yuekang Li
+Author-email: yi@quantstamp.com
+License-File: LICENSE
