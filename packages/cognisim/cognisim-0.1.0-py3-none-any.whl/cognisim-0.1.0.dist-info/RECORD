@@ -1,0 +1,16 @@
+cognisim/__init__.py,sha256=tQIKLJV1s1HGbhQW9FNWxrmZDEMemmTcoOtF5gRRIAI,373
+cognisim/device/android/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cognisim/device/android/android_device.py,sha256=7DBVz7CNxS_KwXsPFCm81MiHu3y5CPo1pUxBt9DRh34,14117
+cognisim/device/android/android_ui.py,sha256=Ip28AG7kDdHRRquJimfocLUxdNHjsawqPB0-oP1FbzM,4015
+cognisim/device/android/android_view_hierarchy.py,sha256=Fi4IwWxE2vwzzvFz5_LTIcp_FMdiRLPRa-0LoBCh7do,27505
+cognisim/device/device.py,sha256=4S0TLMJWQEMGH2xv3fvxcDAeM4kaPWbNamax3r-t3h4,626
+cognisim/device/device_factory.py,sha256=wu0TwonkzPNiL5LoVYl9Rjmf7ihEXWlQpKPoCOIRNWE,1016
+cognisim/device/ios/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cognisim/device/ios/ios_device.py,sha256=HuBqm4JhQQR2rSJmPpSEhzU0ThZQ8wQ5W1WATGy60f0,5863
+cognisim/device/ios/ios_view_hierarchy.py,sha256=HmA8V-8hzAcrk8_Un7IIIRskeGBuNL-3crU4PXoB1Ng,30981
+cognisim/device/ios_device.py,sha256=kkQVtKgtNgq2kZfN8dVj6mdzCe6NVcg9J9z3MRLLgog,494
+cognisim/utils/constants.py,sha256=OpgDfWmuZXcTud_z9At5lXUGwpTlUHiAcyXJGcgvzEQ,488
+cognisim-0.1.0.dist-info/LICENSE,sha256=wXcxR-c23kzEltxC49O96nlrHVPPZehZTnU7EMsGY8Y,1064
+cognisim-0.1.0.dist-info/METADATA,sha256=NS2xPe487nY-9wwkKdowKgaxiAqR5zpQaaMd32QSKYg,5939
+cognisim-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+cognisim-0.1.0.dist-info/RECORD,,
