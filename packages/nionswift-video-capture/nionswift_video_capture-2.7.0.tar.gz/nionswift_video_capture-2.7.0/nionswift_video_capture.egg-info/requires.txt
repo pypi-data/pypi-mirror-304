@@ -1,0 +1,2 @@
+nionswift-instrumentation<24.0,>=23.1
+nionswift<17.0,>=16.12
