@@ -1,0 +1,9 @@
+classifaier/__init__.py,sha256=yIN3Q4yzQQfDQPU5YqzXtvKjAVrTUxezDLyjohjMAdw,539
+classifaier/classifaier.py,sha256=SgVe34g8Iy30djyT3eBNtHEBTRxDaKWYThEhc8VeFv8,5709
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_classifier.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ClassifAIer-0.1.2.dist-info/LICENSE,sha256=9rScHNR0_fb6_-17ZOgpSVsRbw26z1TJfZMajNMCELo,1088
+ClassifAIer-0.1.2.dist-info/METADATA,sha256=Y7kq0Ki5pS0zJnte2NGgobU5nlHnJmW4r3AShADiTJ8,3140
+ClassifAIer-0.1.2.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+ClassifAIer-0.1.2.dist-info/top_level.txt,sha256=wxYpuPJiwYH-5_7ALDFpQ6laZkdETltgjl5TqBISJRo,18
+ClassifAIer-0.1.2.dist-info/RECORD,,
