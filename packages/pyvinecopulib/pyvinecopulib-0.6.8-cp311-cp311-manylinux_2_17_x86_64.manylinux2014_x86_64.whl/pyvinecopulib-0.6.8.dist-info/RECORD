@@ -1,0 +1,12 @@
+_pyvinecopulib.cpython-311-x86_64-linux-gnu.so,sha256=vqveUZZLe2zwNVveGJmVxkNNUxZuMVeyAtFHAlntF04,5577432
+pyvinecopulib-0.6.8.dist-info/top_level.txt,sha256=9tC09cXvo95B3MgGwHEIf4EzlnlXK9_H4fVYaOv6RNY,29
+pyvinecopulib-0.6.8.dist-info/RECORD,,
+pyvinecopulib-0.6.8.dist-info/LICENSE,sha256=nkMojMDOHiaDY_ws2TTJnWbN_OPKo2a_JzdCDC2Ol3k,1112
+pyvinecopulib-0.6.8.dist-info/METADATA,sha256=aCSr97hKTsnqzS1H9uuHokchW2INMTSl8eCd6m71vug,9139
+pyvinecopulib-0.6.8.dist-info/WHEEL,sha256=OhaudQk1f3YCu0uQO5v6u-i01XPoX70c0R3T_XY-jOo,151
+pyvinecopulib/__init__.py,sha256=8x2Da0dMVL2v5HRgue4Bc2L8ccgbbnXVDP1agLvUSm4,28
+pyvinecopulib/main.cpp,sha256=dDOcPaKoaH3OJ9G96lQIs-OA4wmGiN-Bk68tJ4UXdSA,1571
+pyvinecopulib/_python_helpers/bicop.py,sha256=QgWf4W_K5acPtk1YQiFFiGEQJ68kzSw2sjABkYsPVok,5061
+pyvinecopulib/_python_helpers/stats.py,sha256=robRFxSijE7wnyGklBPgFkb9dBSbGYA2TbwkpPxKZAs,4171
+pyvinecopulib/_python_helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvinecopulib/_python_helpers/vinecop.py,sha256=ZQnh9t-Dn3UzsrbLV7-B8WRZN2zWlgeerMJYjX6r1gk,5922
