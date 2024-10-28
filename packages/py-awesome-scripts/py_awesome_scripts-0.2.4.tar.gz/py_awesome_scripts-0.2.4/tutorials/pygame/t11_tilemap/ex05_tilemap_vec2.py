@@ -1,0 +1,219 @@
+import pathlib
+import sys
+import typing
+
+import pygame as pg
+
+vec = pg.math.Vector2
+
+# 游戏基本设置
+GameSettings = typing.NamedTuple(
+    "GameSettings",
+    (
+        ("size", typing.Tuple[int, int]),
+        ("title", str),
+        ("tile_size", int),
+        ("fps", int),
+        ("speed", float),
+    ),
+)
+
+GS: GameSettings = GameSettings(
+    size=(1024, 768), title="Tile Map Basic", tile_size=64, fps=120, speed=300
+)
+
+DARKGREY = (40, 40, 40)
+LIGHTGREY = (100, 100, 100)
+
+
+class Game:
+    def __init__(self):
+        pg.init()
+        self.screen = pg.display.set_mode(GS.size)
+        pg.display.set_caption(GS.title)
+
+        # 基本参数
+        self.clock = pg.time.Clock()
+        self.dt: float = 0.0
+        self.map = Map(pathlib.Path(__file__).parent / "assets" / "map3.txt")
+        self.camera: Camera = None
+
+        # sprite groups
+        self.group_wall: pg.sprite.Group = None
+        self.group_all: pg.sprite.Group = None
+
+        # sprite
+        self.player: pg.sprite.Sprite = None
+
+    def setup(self):
+        self.group_all = pg.sprite.Group()
+        self.group_wall = pg.sprite.Group()
+
+        for row, tiles in enumerate(self.map.data):
+            for col, tile in enumerate(tiles):
+                if tile == "1":
+                    Wall(self, col, row)
+                if tile == "P":
+                    self.player = Player(self, col, row)
+
+        self.camera = Camera(self.map.width, self.map.height)
+
+    def run(self):
+        while True:
+            self.dt = self.clock.tick(GS.fps) / 1000
+            self.events()
+            self.update()
+            self.draw()
+
+    @staticmethod
+    def quit():
+        pg.quit()
+        sys.exit()
+
+    def update(self):
+        self.group_all.update()
+        self.camera.update(self.player)
+
+    def draw_grid(self):
+        for x in range(0, GS.size[0], GS.tile_size):
+            pg.draw.line(self.screen, LIGHTGREY, (x, 0), (x, GS.size[1]))
+        for y in range(0, GS.size[1], GS.tile_size):
+            pg.draw.line(self.screen, LIGHTGREY, (0, y), (GS.size[0], y))
+
+    def draw(self):
+        self.screen.fill(DARKGREY)
+        self.draw_grid()
+
+        # 根据camera渲染
+        for sprite in self.group_all:
+            self.screen.blit(sprite.image, self.camera.apply(sprite))
+
+        pg.display.flip()
+
+    def events(self):
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                self.quit()
+            if event.type == pg.KEYDOWN:
+                if event.key == pg.K_ESCAPE:
+                    self.quit()
+
+
+class Player(pg.sprite.Sprite):
+    def __init__(self, game: Game, x: int, y: int):
+        super().__init__(game.group_all)
+
+        self.game = game
+
+        # 处理sprite
+        self.image = pg.Surface((GS.tile_size, GS.tile_size))
+        self.image.fill("yellow")
+        self.rect = self.image.get_rect()
+        self.vel = vec(0, 0)
+        self.pos = vec(x, y) * GS.tile_size
+
+    def get_keys(self):
+        # 初始化速度
+        self.vel = vec(0, 0)
+
+        keys = pg.key.get_pressed()
+        if keys[pg.K_LEFT] or keys[pg.K_a]:
+            self.vel.x = -GS.speed
+        if keys[pg.K_RIGHT] or keys[pg.K_d]:
+            self.vel.x = GS.speed
+        if keys[pg.K_UP] or keys[pg.K_w]:
+            self.vel.y = -GS.speed
+        if keys[pg.K_DOWN] or keys[pg.K_s]:
+            self.vel.y = GS.speed
+        if self.vel.x != 0 and self.vel.y != 0:
+            self.vel.x *= 0.7071
+            self.vel.y *= 0.7071
+
+    def collide_with_walls(self, direction: str):
+        hits = pg.sprite.spritecollide(self, self.game.group_wall, False)
+        if direction == "x":
+            if hits:
+                if self.vel.x > 0:
+                    self.pos.x = hits[0].rect.left - self.rect.width
+                if self.vel.x < 0:
+                    self.pos.x = hits[0].rect.right
+                self.vel.x = 0
+                self.rect.x = self.pos.x
+        if direction == "y":
+            if hits:
+                if self.vel.y > 0:
+                    self.pos.y = hits[0].rect.top - self.rect.height
+                if self.vel.y < 0:
+                    self.pos.y = hits[0].rect.bottom
+                self.vel.y = 0
+                self.rect.y = self.pos.y
+
+    def update(self) -> None:
+        self.get_keys()
+        self.pos += self.vel * self.game.dt
+        self.rect.x = self.pos.x
+        self.collide_with_walls("x")
+        self.rect.y = self.pos.y
+        self.collide_with_walls("y")
+
+
+class Wall(pg.sprite.Sprite):
+    def __init__(self, game: Game, x: int, y: int):
+        super().__init__(game.group_all, game.group_wall)
+
+        self.game = game
+
+        # 处理sprite
+        self.image = pg.Surface((GS.tile_size, GS.tile_size))
+        self.image.fill("green")
+        self.rect = self.image.get_rect()
+        self.x, self.y = x, y
+
+    def update(self) -> None:
+        self.rect.topleft = self.x * GS.tile_size, self.y * GS.tile_size
+
+
+class Map:
+    def __init__(self, filename: str):
+        self.data = []
+        with open(filename, "rt") as f:
+            for line in f:
+                self.data.append(line.strip())
+
+        self.tile_width = len(self.data[0])
+        self.tile_height = len(self.data)
+        self.width = self.tile_width * GS.tile_size
+        self.height = self.tile_height * GS.tile_size
+
+
+class Camera:
+    def __init__(self, width: int, height: int):
+        self.camera = pg.Rect(0, 0, width, height)
+        self.width = width
+        self.height = height
+
+    def apply(self, entity: pg.sprite.Sprite):
+        return entity.rect.move(self.camera.topleft)
+
+    def update(self, target):
+        x = -target.rect.x + int(GS.size[0] / 2)
+        y = -target.rect.y + int(GS.size[1] / 2)
+
+        # limit scrolling to map size
+        x = min(0, x)  # left
+        y = min(0, y)  # top
+        x = max(-(self.width - GS.size[0]), x)  # right
+        y = max(-(self.height - GS.size[1]), y)  # bottom
+        self.camera = pg.Rect(x, y, self.width, self.height)
+
+
+def main():
+    g = Game()
+
+    while True:
+        g.setup()
+        g.run()
+
+
+if __name__ == "__main__":
+    main()
