@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+online_store_123321.egg-info/PKG-INFO
+online_store_123321.egg-info/SOURCES.txt
+online_store_123321.egg-info/dependency_links.txt
+online_store_123321.egg-info/top_level.txt
