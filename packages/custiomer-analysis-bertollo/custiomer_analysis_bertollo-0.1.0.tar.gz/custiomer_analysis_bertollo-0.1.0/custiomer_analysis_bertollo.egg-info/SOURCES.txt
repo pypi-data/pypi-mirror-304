@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+custiomer_analysis_bertollo.egg-info/PKG-INFO
+custiomer_analysis_bertollo.egg-info/SOURCES.txt
+custiomer_analysis_bertollo.egg-info/dependency_links.txt
+custiomer_analysis_bertollo.egg-info/entry_points.txt
+custiomer_analysis_bertollo.egg-info/requires.txt
+custiomer_analysis_bertollo.egg-info/top_level.txt
+customer_analysis/__main__.py
+customer_analysis/report_generator.py
