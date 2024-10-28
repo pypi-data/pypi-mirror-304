@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: flaskapi4
+Version: 0.1.0
+Summary: flaskapi4
+Home-page: https://github.com/eininst/flask-openapi
+Author: 王梓清
+Author-email: 9464553+superwzq1993@user.noreply.gitee.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://github.com/eininst/flask-openapi
+Description-Content-Type: text/markdown
+
+# flaskapi
+flaskapi
+
