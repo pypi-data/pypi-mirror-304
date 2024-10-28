@@ -1,0 +1,101 @@
+[project]
+name = "rybak"
+version = "0.5.0"
+description = "Directory-tree generator library"
+authors = [
+    { name = "Rafał Krupiński", email = "rafalkrupinski@users.noreply.github.com" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+readme = "README.md"
+packages = [{ include = "rybak", from = "src" }]
+requires-python = ">=3.9"
+
+dependencies = [
+    "importlib-resources >= 5, < 7; python_version < '3.12'",
+    "typing-extensions >= 4.9; python_version < '3.10'",
+]
+
+[project.optional-dependencies]
+jinja = [
+    "jinja2 >= 3, < 4",
+]
+mako = [
+    "mako >= 1, < 2",
+]
+
+[project.urls]
+Repository = "https://github.com/python-lapidary/rybak"
+Issues = "https://github.com/python-lapidary/rybak/issues"
+Changelog = "https://github.com/python-lapidary/rybak/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.uv]
+dev-dependencies = [
+    "pytest >= 8",
+]
+
+
+[tool.hatch.build]
+exclude = [
+    "/.idea",
+]
+
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+pythonpath = [
+    '.',
+]
+
+
+[tool.coverage.report]
+exclude_lines = [
+    "@abc.abstractmethod",
+    "pragma: no cover",
+]
+
+
+[tool.ruff]
+line-length = 120
+target-version = 'py38'
+preview = true
+
+[tool.ruff.lint]
+extend-select = [
+    'A', 'ANN0', 'B', 'BLE', 'C4', 'C90', 'COM818', 'E','FURB', 'I', 'N', 'PERF', 'PIE', 'PYI', 'RUF', 'S',
+    'T10', 'T20', 'UP', 'W'
+]
+extend-ignore = [
+    'S101', 'S701',
+    'C408'
+]
+
+[tool.ruff.format]
+quote-style = 'single'
+
+
+[tool.mypy]
+mypy_path = "src"
+namespace_packages = true
+python_version = "3.9"
+[[tool.mypy.overrides]]
+module = [
+    "mako",
+    "mako.lookup",
+    "mako.template",
+]
+ignore_missing_imports = true
