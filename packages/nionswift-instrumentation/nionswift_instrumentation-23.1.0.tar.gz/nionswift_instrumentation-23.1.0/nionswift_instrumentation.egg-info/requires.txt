@@ -1,0 +1,5 @@
+niondata<16.0,>=15.7
+nionswift<17.0,>=16.12
+nionui<9.0,>=8.0
+nionutils<5.0,>=4.12
+numpy<3.0,>=2.0
