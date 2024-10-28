@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+README.md
+ffrich.py
+setup.cfg
+setup.py
+ffrich.egg-info/PKG-INFO
+ffrich.egg-info/SOURCES.txt
+ffrich.egg-info/dependency_links.txt
+ffrich.egg-info/entry_points.txt
+ffrich.egg-info/requires.txt
+ffrich.egg-info/top_level.txt
+ffrich.egg-info/zip-safe

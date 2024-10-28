@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: ffrich
+Version: 0.2.1
+Summary: A simple progress bar for ffmpeg, written in Python using rich
+Home-page: https://github.com/banksio/ffrich
+Author: banksio
+Author-email: nathantb3@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/banksio/ffrich/issues
+Project-URL: Changelog, https://github.com/banksio/ffrich/blob/master/CHANGELOG.md
+Keywords: ffmpeg,ffmpeg-command,progress-bar,python-script,cli
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Multimedia :: Video :: Conversion
+Requires-Python: >=3.9
+License-File: COPYING
+Requires-Dist: rich<14.0,>=10.0
+
+# ffrich
+
+**Not smart. Not comprehensive. Not guaranteed to work.**
+
+
+`ffrich` is an FFmpeg progress formatter. It will attempt to display a
+nice progress bar in the output, based on the raw `ffmpeg` output, as
+well as an adaptative ETA timer.
+
+
+## Usage
+
+### On the command line
+
+`ffrich` is is not self-aware. Any argument given to the `ffrich`
+command is transparently given to the `ffmpeg` binary on
+your system, without any form of validation.
+
+```sh
+ffrich <any_ffmpeg_command>
+```
+
+### Using as a library
+
+`ffrich` can be used as a library: use the `ffrich.main`
+function:
+
+```python
+ffrich.main(argv=None, stream=sys.stderr, encoding=None, console=rich.console.Console):
+```
+
+**argv**:   The arguments to pass to `ffmpeg`, as an argument list.
+
+**stream**:   The stream to which to write the progress bar and the output
+    messages.
+
+**encoding**:   The encoding of the terminal, used to decode the `ffmpeg` output.
+    Defaults to `locale.getpreferredencoding()`, or *UTF-8* is locales
+    are not available.
+
+**console**: The rich console object to output to.
+
+## Installation
+
+Install from PyPI:
+
+```sh
+pip install ffrich
+```
+
+Install from Git:
+
+```sh
+pip install git+https://github.com/banksio/ffrich.git
+```
