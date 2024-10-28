@@ -1,0 +1,13 @@
+dataconfigs/__init__.py,sha256=0Uu1DD30QSP4XZIJBpoi9HeKZwigNj76PiS2emEXgvY,87
+dataconfigs/utils.py,sha256=aRza5Jm1-0jE1VO5h8J7ys77qS1i0VBkWNiO2wS6h9U,2186
+dataconfigs/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataconfigs/configs/__init__.py,sha256=5S0Vg_AJLdHwyZPRo9MPIfZNsxzETVoj4Ab40sq2M4w,175
+dataconfigs/configs/config.py,sha256=-Vh7UTfyoESuUA_wMv9uCAeb5vrG__iKd-ki2AUxZ3k,889
+dataconfigs/configs/configurable.py,sha256=LeQd9byTL1HvXAcq1BUb66zhy2mdnt7abpvISXd8NyM,11817
+dataconfigs/configs/params.py,sha256=CFJ8BlxdjiuJCLWEbQVF2fC_x34GlVtw2DUfSFXgac0,34296
+dataconfigs/configs/tools.py,sha256=HrxgFPF-8FIgsCWp-zJ4E-HHYKpFJg9sVm7HnhxwKOM,854
+dataconfigs/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataconfigs-0.1.0.dist-info/METADATA,sha256=UpLU9_z9qMl44SiB5ygyJ2s5H8Wy2rscFY2eZqaMBb0,4898
+dataconfigs-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+dataconfigs-0.1.0.dist-info/top_level.txt,sha256=sFPvmAd292IK4QG1otDBRGty7V5huqh7p_jKwktUoRQ,12
+dataconfigs-0.1.0.dist-info/RECORD,,
