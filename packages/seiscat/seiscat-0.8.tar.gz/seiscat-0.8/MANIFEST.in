@@ -1,0 +1,6 @@
+include CHANGELOG.md
+include README.md
+include LICENSE.txt
+include CONTRIBUTORS.txt
+include docs/*
+include docs/_static/*
