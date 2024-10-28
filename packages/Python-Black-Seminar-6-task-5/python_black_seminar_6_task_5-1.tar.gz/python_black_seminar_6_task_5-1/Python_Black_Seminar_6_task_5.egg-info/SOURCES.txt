@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+Python_Black_Seminar_6_task_5.egg-info/PKG-INFO
+Python_Black_Seminar_6_task_5.egg-info/SOURCES.txt
+Python_Black_Seminar_6_task_5.egg-info/dependency_links.txt
+Python_Black_Seminar_6_task_5.egg-info/requires.txt
+Python_Black_Seminar_6_task_5.egg-info/top_level.txt
