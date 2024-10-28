@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: custiomer_analysis_bertollo
+Version: 0.1.0
+Summary: A package to analyze customer data and generate reports.
+Author-email: Victor Bertollo <bertollo.victor@gmail.com>
+Requires-Dist: pandas
+
