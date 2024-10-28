@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+inclusion/__init__.py
+inclusion/cli.py
+inclusion/scanner.py
+inclusion.egg-info/PKG-INFO
+inclusion.egg-info/SOURCES.txt
+inclusion.egg-info/dependency_links.txt
+inclusion.egg-info/entry_points.txt
+inclusion.egg-info/requires.txt
+inclusion.egg-info/top_level.txt
