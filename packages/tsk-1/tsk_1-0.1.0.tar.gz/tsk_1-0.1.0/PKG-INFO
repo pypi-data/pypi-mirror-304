@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: tsk_1
+Version: 0.1.0
+Summary: Пакет для расчета финансовых показателей
+Author: bardachell
+Author-email: jenda-penda@mail.ru
+Requires-Dist: argparse
