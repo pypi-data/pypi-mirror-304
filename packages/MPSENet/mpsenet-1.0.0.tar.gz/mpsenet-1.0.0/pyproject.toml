@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "MPSENet"
+description = "Python package of MP-SENet from Explicit Estimation of Magnitude and Phase Spectra in Parallel for High-Quality Speech Enhancement."
+version = "1.0.0"
+authors = [{ name = "yxlu-0102" }]
+dependencies = [
+    "torch",
+    "numpy",
+    "librosa",
+    "soundfile",
+    "einops",
+    "joblib",
+    "huggingface_hub",
+]
+requires-python = ">=3.10"
