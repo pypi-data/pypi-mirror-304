@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+folder_test_lib/__init__.py
+folder_test_lib/main.py
+folder_test_lib.egg-info/PKG-INFO
+folder_test_lib.egg-info/SOURCES.txt
+folder_test_lib.egg-info/dependency_links.txt
+folder_test_lib.egg-info/requires.txt
+folder_test_lib.egg-info/top_level.txt
