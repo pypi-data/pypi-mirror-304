@@ -1,0 +1,11 @@
+file_text_extractor/__init__.py,sha256=NM0pVwp9BHajksviQd8E-SyIJVhLUYRaPXaI3lp2vwQ,74
+file_text_extractor/file_extractor.py,sha256=ZBQ9dUsKjykX7dsSezCuu4j5LJDHhe15c_9Q2NcvvMw,1139
+file_text_extractor/extractors/__init__.py,sha256=wKPjLu_ye8mOQrNp9fvID-VQh0orGYu4f2kK1Zir1JA,45
+file_text_extractor/extractors/docx_extractor.py,sha256=G7P_kkhryKzfCFv4W6TtQHo1JJWkL4TebQ7Pah9zK4w,550
+file_text_extractor/extractors/gcs_extractor.py,sha256=fH91ntjNki7_cD97qMe7_f_6qcbHvqf9OjEnlNPkAi4,1588
+file_text_extractor/extractors/pdf_extractor.py,sha256=XaUZs_iefxNaLTuh38e9jpgCl9_2_LYD7mvL2pp6UcQ,543
+file_text_extractor/extractors/txt_extractor.py,sha256=2PlZmKGC6KnkHXIk-ajSZeXPb1NXBgflSdQReb7zSmw,314
+file_text_extractor-0.1.dist-info/METADATA,sha256=iewJqXwSG-llElQID-St7KcmFLX1clJep-T-2NsUOsg,1474
+file_text_extractor-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+file_text_extractor-0.1.dist-info/top_level.txt,sha256=2df_25b3HfRBo3bk3IryIvStQ1rM7GLtzdN9WiApK1A,20
+file_text_extractor-0.1.dist-info/RECORD,,
