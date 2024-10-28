@@ -1,0 +1,2 @@
+[console_scripts]
+tsk_5 = task_5.customer_analysis:main
