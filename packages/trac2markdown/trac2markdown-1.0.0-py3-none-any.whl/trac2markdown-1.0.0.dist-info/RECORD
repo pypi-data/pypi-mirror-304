@@ -1,0 +1,8 @@
+trac2markdown/__init__.py,sha256=0H2k_9TjAKCRSvxqEwmuyWYhaQ_jmHCZ2OdEV2Wv9sE,61
+trac2markdown/format_wikis.py,sha256=ZCHTh7HUNjtO2rNcAPpOeunhpCQnHVuDq9q6xZvWw7Q,30407
+trac2markdown/format_wikis_config.py.sample,sha256=kIrDmPU73zgPDnsKJ41CtiQTTwK3OrvrBlv_2q5Td_g,688
+trac2markdown/version.py,sha256=Aj77VL1d5Mdku7sgCgKQmPuYavPpAHuZuJcy6bygQZE,21
+trac2markdown-1.0.0.dist-info/METADATA,sha256=8Oqgwl92A8s1uKrnkFXlfUcIGDr2E3SPaa0CL-acp64,6365
+trac2markdown-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+trac2markdown-1.0.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+trac2markdown-1.0.0.dist-info/RECORD,,
