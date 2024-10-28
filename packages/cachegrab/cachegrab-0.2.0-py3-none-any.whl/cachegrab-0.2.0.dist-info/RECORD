@@ -1,0 +1,8 @@
+cachegrab/__init__.py,sha256=fbjCNCa27W1ZBIyBrR3jaNdk6jy30o86irYXY_qNp-o,173
+cachegrab/attribute_decorators.py,sha256=SAAR_znSSHBqCKSt4px24zm56KEWF0IlqI2ZbvgZRH0,1047
+cachegrab/property_decorators.py,sha256=BOVWNy-zyi_2ljr4P0Wbr3ULah3NDUpaNURkFGR1fXI,868
+cachegrab/utils.py,sha256=JlT8NBRdaNrYdQ8_maBcMGLmHVjxPjqtwCXuT4TG-YQ,967
+cachegrab-0.2.0.dist-info/LICENSE,sha256=e2vk_CZyvQY50wY_UPKw03gYPnT8BV9nG2lgmPfUlnU,1091
+cachegrab-0.2.0.dist-info/METADATA,sha256=KqBPas5UiEFvzKWcx_TBKc9PblUJv35dpilz69R9qqg,3086
+cachegrab-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cachegrab-0.2.0.dist-info/RECORD,,
