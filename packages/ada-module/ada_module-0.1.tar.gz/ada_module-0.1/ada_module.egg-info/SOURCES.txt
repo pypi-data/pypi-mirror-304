@@ -1,0 +1,5 @@
+setup.py
+ada_module.egg-info/PKG-INFO
+ada_module.egg-info/SOURCES.txt
+ada_module.egg-info/dependency_links.txt
+ada_module.egg-info/top_level.txt
