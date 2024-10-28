@@ -1,0 +1,3 @@
+[console_scripts]
+git-vector=git_vector.git_vector:main
+
