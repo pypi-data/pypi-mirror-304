@@ -1,0 +1,12 @@
+the_cves_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+the_cves_cli/main.py,sha256=UGiw23dCLq3MwQl2gcZVmLCv6b4zTqY6jCL8LoDWtVI,3049
+the_cves_cli/settings.py,sha256=GhAtZDCFpCUBM3Odt7G-nV5cfgeG4A_SfJYWW7pH8sw,374
+the_cves_cli/backend_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+the_cves_cli/backend_client/client.py,sha256=EinB6xeD0zqwbrI8qQKW5oThRRkeF3M8HPIRjXpdBEc,1083
+the_cves_cli/backend_client/gen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+the_cves_cli/backend_client/gen/models.py,sha256=GmReQ2S29Sfa2pLYNdCB-1OfnHQhlLprmNqQz952CUE,1000
+the_cves_cli-0.1.6.dist-info/METADATA,sha256=CWpcDrF0r0v6zIJv2sbUOmvuTRQpzh-LaCdq_ApiPdA,1259
+the_cves_cli-0.1.6.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+the_cves_cli-0.1.6.dist-info/entry_points.txt,sha256=Saysk-OhZzv6SbxFdYU8NOrq92AtoPdNSkzyT4WjW08,55
+the_cves_cli-0.1.6.dist-info/top_level.txt,sha256=dRIk6TyZLjFmh_quyRgNnV77ujGBu7QHNGdzgGweeHM,13
+the_cves_cli-0.1.6.dist-info/RECORD,,
