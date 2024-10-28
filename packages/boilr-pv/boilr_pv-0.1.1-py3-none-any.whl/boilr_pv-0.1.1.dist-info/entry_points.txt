@@ -1,0 +1,2 @@
+[console_scripts]
+boilr = boilr.__main__:main
