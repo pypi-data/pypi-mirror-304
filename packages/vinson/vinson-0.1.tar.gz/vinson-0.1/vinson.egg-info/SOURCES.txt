@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+vinson/VinsonDB.py
+vinson/__init__.py
+vinson.egg-info/PKG-INFO
+vinson.egg-info/SOURCES.txt
+vinson.egg-info/dependency_links.txt
+vinson.egg-info/top_level.txt
