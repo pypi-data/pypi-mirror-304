@@ -1,0 +1,10 @@
+copychat/__init__.py,sha256=_lPyDS_ehDRJEA5esH6VzIx1VtQobu1PStWvaMhHQ90,92
+copychat/cli.py,sha256=dPLHgsvWPqr_RgjeynL-GuLPrU4__c5uljO_e9OVSTY,7153
+copychat/core.py,sha256=0YV-nyrRQAvqLOyO6wYXPWMU4Pu4v_TLknafPcrc_IM,8601
+copychat/format.py,sha256=DTqRZaCs5aHzwtquwT-uqS8ihzVSypN00qh_jbtrJUY,4250
+copychat/patterns.py,sha256=Va42N0XyYK3reVKzZoDm3Q3kSeX-Ci4TUhrB65Mjov0,1708
+copychat/sources.py,sha256=iFQDcKz_iLffuj9PZM2DaHzYwwPxUj3j28gLFd7BjaA,1598
+copychat-0.1.0.dist-info/METADATA,sha256=p3cYN7BmOPhlw79XV8-Bd78rzCLWxlS9VdXCPJBK6Fo,5098
+copychat-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+copychat-0.1.0.dist-info/entry_points.txt,sha256=vwBi7Dbzj0_4iTttRhFnDzEwpHCtw4VZ8VLApOUASlg,46
+copychat-0.1.0.dist-info/RECORD,,
