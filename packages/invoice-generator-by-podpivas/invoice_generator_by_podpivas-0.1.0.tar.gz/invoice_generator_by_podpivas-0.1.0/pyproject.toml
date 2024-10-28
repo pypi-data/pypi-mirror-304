@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-generator-by-podpivas"
+version = "0.1.0"
+description = "Автоматическая генерация чеков на основе данных о заказе."
+requires-python = ">=3.6"
+license = { text = "MIT" }
+authors = [
+    { name = "podpivas", email = "k.shaykhraziev@edu.centraluniversity.ru" },
+]
