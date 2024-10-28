@@ -1,0 +1,3 @@
+[console_scripts]
+dattri_retrain = dattri.script.dattri_retrain:main
+dattri_retrain_nanogpt = dattri.script.dattri_retrain_nanogpt:main
