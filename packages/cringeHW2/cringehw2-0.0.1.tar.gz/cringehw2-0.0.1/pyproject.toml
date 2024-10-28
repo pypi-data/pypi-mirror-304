@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cringeHW2"
+version = '0.0.1'
+dependencies = [
+    'pandas',
+]
+description = 'It cli app group transaction by category'
+authors =  [{ name = "osisochka", email = "a.onufrienko@edu.centraluniversity.ru" }]
+requires-python = '>3.8'
+
+[project.scripts]
+transaction-sum = "transaction_count:main"
+
+#[tool.setuptools]
+#py-modules =
