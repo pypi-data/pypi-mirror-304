@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/darkpoint/__init__.py
+src/darkpoint/helpers.py
+src/darkpoint/point_declaration.py
+src/darkpoint.egg-info/PKG-INFO
+src/darkpoint.egg-info/SOURCES.txt
+src/darkpoint.egg-info/dependency_links.txt
+src/darkpoint.egg-info/top_level.txt
