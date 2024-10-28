@@ -1,0 +1,23 @@
+Index: tests/starlink.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CSV file retrieved from https://zenodo.org/records/7026474\n\nimport pandas as pd\nfrom datetime import datetime, timedelta\nimport sys\nimport os\nimport time\nfrom concurrent.futures import ThreadPoolExecutor\nsys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))\nfrom wam_api import WAMInterpolator\n\n# Read the CSV file\ndf = pd.read_csv('launch_group4-7_3181.csv')\n\nnum_samples = 10\n\n# Take only the first num_samples entries\ntimestamps = [datetime.strptime(ts, '%Y-%m-%d %H:%M:%S.%f') + timedelta(days=730) for ts in df['t_utc'][:num_samples]]\nlatitudes = df['latitude'].tolist()[:num_samples]\nlongitudes = df['longitude'].tolist()[:num_samples]\naltitudes = df['altitude'].tolist()[:num_samples]\n\n# Initialize WAMInterpolator\ninterpolator = WAMInterpolator()\n\n# Benchmark 1: Batch Get\ndef benchmark_batch():\n    interpolator.clear_cache()\n    start_time = time.time()\n    densities = interpolator.batch_get_densities(timestamps, latitudes, longitudes, altitudes)\n    end_time = time.time()\n    return densities, end_time - start_time\n\n# Benchmark 2: Regular Get (Serial)\ndef benchmark_serial():\n    interpolator.clear_cache()\n    start_time = time.time()\n    densities = []\n    for i in range(len(timestamps)):\n        density = interpolator.get_density(timestamps[i], latitudes[i], longitudes[i], altitudes[i])\n        densities.append(density)\n    end_time = time.time()\n    return densities, end_time - start_time\n\nbatch_densities, batch_time  = benchmark_batch()\nserial_densities, serial_time = benchmark_serial()\n\nprint()\nprint(\"-\" * 50)\nprint(\"BENCHMARKS\")\nprint(f\"Batch get time: {batch_time} seconds\")\nprint(f\"Regular (serial) get time: {serial_time} seconds\")\nprint(\"-\" * 50)
+===================================================================
+diff --git a/tests/starlink.py b/tests/starlink.py
+--- a/tests/starlink.py	
++++ b/tests/starlink.py	
+@@ -7,12 +7,12 @@
+ import time
+ from concurrent.futures import ThreadPoolExecutor
+ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+-from wam_api import WAMInterpolator
++from src.wam_api import WAMInterpolator
+ 
+ # Read the CSV file
+ df = pd.read_csv('launch_group4-7_3181.csv')
+ 
+-num_samples = 10
++num_samples = 30
+ 
+ # Take only the first num_samples entries
+ timestamps = [datetime.strptime(ts, '%Y-%m-%d %H:%M:%S.%f') + timedelta(days=730) for ts in df['t_utc'][:num_samples]]

@@ -1,0 +1,5 @@
+src/wamapi_filecache
+tests/wamapi_filecache
+src/wam_api/wamapi_filecache/
+dist/
+src/wam_api/__pycache__

@@ -1,0 +1,249 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Project Overview\nThis software package is a collaboration between the [National Oceanic and Atmospheric Administration Space Weather Prediction Center (NOAA SWPC)](https://www.swpc.noaa.gov/)\nand [App Dev Club LLC](https://appdevclub.com) at the University of Maryland. Using [outputs](https://noaa-nws-wam-ipe-pds.s3.amazonaws.com/index.html) from the Whole Atmosphere Model-Ionosphere Plasmasphere Electrodynamics (WAM-IPE) model, it allows users to input date, time, and satellite location (longitude + latitude) and output the neutral density value near the satellite at that date and time. \n\n# Prerequisites\nInstallation of latest package versions of netCDF4, numpy, scipy, and requests. \n\n# Usage\nTo install the package, open the terminal of a code editor and run the following command. <br>\n **Update this command after each package version change to keep documentation up to date.**\n```\npip install swpc-wamipe\n```\n\nTo print a density value run the following code:\n```\nfrom wam_api import WAMInterpolator\nfoo = WAMInterpolator() \ndt = foo.datetime(2024, 5, 11, 18, 12, 22)\nlat, lon, alt = -33.4, -153.24, 550.68  # degrees north, degrees east, km\nmy_density = foo.get_density(dt, lat, lon, alt)\nprint(my_density)\n```\n\n# Updating the package version\n\nTo update the package version on PyPI from local with any changes you have made to the project, \nfirst change the version number\nin ```pyproject.toml```. \n\nNext, \nrun the following commands in order:\n```\npython -m build \n```\n```\npython -m twine upload dist/*\n```\n\nTo update the local version, run:\n```\npip install swpc-wamipe --upgrade\n```
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 2308cce1c08db6773625bb76f5900003b1ae0d03)
++++ b/README.md	(date 1729804731947)
+@@ -1,43 +1,65 @@
+ # Project Overview
++
+ This software package is a collaboration between the [National Oceanic and Atmospheric Administration Space Weather Prediction Center (NOAA SWPC)](https://www.swpc.noaa.gov/)
+-and [App Dev Club LLC](https://appdevclub.com) at the University of Maryland. Using [outputs](https://noaa-nws-wam-ipe-pds.s3.amazonaws.com/index.html) from the Whole Atmosphere Model-Ionosphere Plasmasphere Electrodynamics (WAM-IPE) model, it allows users to input date, time, and satellite location (longitude + latitude) and output the neutral density value near the satellite at that date and time. 
++and [App Dev Club LLC](https://appdevclub.com) at the University of Maryland. Using [outputs](https://noaa-nws-wam-ipe-pds.s3.amazonaws.com/index.html) from the Whole Atmosphere Model-Ionosphere Plasmasphere Electrodynamics (WAM-IPE) model, it allows users to input date, time, and satellite location (longitude + latitude) and output the neutral density value near the satellite at that date and time.
+ 
+ # Prerequisites
+-Installation of latest package versions of netCDF4, numpy, scipy, and requests. 
++
++Installation of latest package versions of netCDF4, numpy, scipy, and requests.
+ 
+ # Usage
++
+ To install the package, open the terminal of a code editor and run the following command. <br>
+- **Update this command after each package version change to keep documentation up to date.**
++**Update this command after each package version change to keep documentation up to date.**
++
+ ```
+ pip install swpc-wamipe
+ ```
+ 
+ To print a density value run the following code:
+-```
++
++```py
+ from wam_api import WAMInterpolator
+-foo = WAMInterpolator() 
+-dt = foo.datetime(2024, 5, 11, 18, 12, 22)
++from datetime import datetime
++foo = WAMInterpolator()
++dt = datetime(2024, 5, 11, 18, 12, 22)
+ lat, lon, alt = -33.4, -153.24, 550.68  # degrees north, degrees east, km
+ my_density = foo.get_density(dt, lat, lon, alt)
+ print(my_density)
+ ```
+ 
++To get densities for an array of datetimes, run the following code:
++
++```py
++from wam_api import WAMInterpolator
++from datetime import datetime, timedelta
++foo = WAMInterpolator()
++dt = datetime(2024, 5, 11, 18, 12, 22)
++lat, lon, alt = -33.4, -153.24, 550.68  # degrees north, degrees east, km
++dt_array = [dt + timedelta(minutes=10*i) for i in range(10)]
++my_densities = foo.batch_get_densities(dt_array, [lat] * 10, [lon] * 10, [alt] * 10)
++print(my_densities)
++```
++
+ # Updating the package version
+ 
+-To update the package version on PyPI from local with any changes you have made to the project, 
++To update the package version on PyPI from local with any changes you have made to the project,
+ first change the version number
+-in ```pyproject.toml```. 
++in `pyproject.toml`.
+ 
+-Next, 
++Next,
+ run the following commands in order:
++
+ ```
+-python -m build 
++python -m build
+ ```
++
+ ```
+ python -m twine upload dist/*
+ ```
+ 
+ To update the local version, run:
++
+ ```
+ pip install swpc-wamipe --upgrade
+-```
+\ No newline at end of file
++```
+Index: src/wam_api/interpolator.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import numpy as np\nfrom scipy.interpolate import interp1d, interpn\n\nclass Interpolator():\n    def spatial(self, ds, lat, lon, alt):\n        lats = ds.variables['lat'][:]\n        lons = ds.variables['lon'][:]\n        alts = ds.variables['hlevs'][:]\n        density = ds.variables[\"den\"][:]\n        density = np.squeeze(density)\n\n        # 2D interpolation using interpn for each altitude level\n        interp_densities = []\n        for i in range(len(alts)):\n            density_slice = density[i, :, :]\n            interp_density = interpn((lats, lons), density_slice, (lat, lon), method='linear', bounds_error=False, fill_value=np.nan)\n            interp_densities.append(interp_density[0])\n\n        # Logarithmic quadratic interpolation in the vertical\n        log_alts = np.log(alts)\n        log_alt = np.log(alt)\n        log_interp = interp1d(log_alts, np.log(interp_densities), kind='quadratic', bounds_error=False, fill_value='extrapolate')\n        \n        density_interp = np.exp(log_interp(log_alt))\n\n        return float(density_interp)\n    \n    def temporal(self, input_dt, surrounding_dts, densities):\n        times = np.array([(tdt - surrounding_dts[0]).total_seconds() for tdt in surrounding_dts])\n        dt_seconds = (input_dt - surrounding_dts[0]).total_seconds()\n        return np.interp(dt_seconds, times, densities)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/wam_api/interpolator.py b/src/wam_api/interpolator.py
+--- a/src/wam_api/interpolator.py	(revision 2308cce1c08db6773625bb76f5900003b1ae0d03)
++++ b/src/wam_api/interpolator.py	(date 1729804731951)
+@@ -2,30 +2,51 @@
+ from scipy.interpolate import interp1d, interpn
+ 
+ class Interpolator():
++    """
++    Interpolator class for interpolating density values in space and time.
++    """
+     def spatial(self, ds, lat, lon, alt):
++        """
++        @param ds: xarray dataset containing density values
++        @param lat: latitude of the point to interpolate
++        @param lon: longitude of the point to interpolate
++        @param alt: altitude of the point to interpolate
++        @return: interpolated density
++
++        Interpolates density values in space using 2D interpolation and in the vertical using logarithmic quadratic interpolation.
++        """
+         lats = ds.variables['lat'][:]
+         lons = ds.variables['lon'][:]
+         alts = ds.variables['hlevs'][:]
+         density = ds.variables["den"][:]
+-        density = np.squeeze(density)
++        density = np.squeeze(density) # Remove singleton dimensions
+ 
+         # 2D interpolation using interpn for each altitude level
+         interp_densities = []
+-        for i in range(len(alts)):
+-            density_slice = density[i, :, :]
+-            interp_density = interpn((lats, lons), density_slice, (lat, lon), method='linear', bounds_error=False, fill_value=np.nan)
+-            interp_densities.append(interp_density[0])
++        for i in range(len(alts)): # Iterate over altitude levels
++            density_slice = density[i, :, :] # Slice density values at the current altitude level
++            interp_density = interpn((lats, lons), density_slice, (lat, lon), method='linear', bounds_error=False, fill_value=np.nan) # Interpolate density at the current altitude level
++            interp_densities.append(interp_density[0]) # Append interpolated density to list
+ 
+         # Logarithmic quadratic interpolation in the vertical
+-        log_alts = np.log(alts)
+-        log_alt = np.log(alt)
+-        log_interp = interp1d(log_alts, np.log(interp_densities), kind='quadratic', bounds_error=False, fill_value='extrapolate')
++        log_alts = np.log(alts) # Logarithm of altitude levels
++        log_alt = np.log(alt) # Logarithm of altitude to interpolate
++        log_interp = interp1d(log_alts, np.log(interp_densities), kind='quadratic', bounds_error=False, fill_value='extrapolate') # Interpolate density in the vertical
+         
+-        density_interp = np.exp(log_interp(log_alt))
++        density_interp = np.exp(log_interp(log_alt)) # Exponentiate interpolated density to get the final density value
+ 
+         return float(density_interp)
+     
+     def temporal(self, input_dt, surrounding_dts, densities):
++        """
++        @param input_dt: datetime object of the point to interpolate
++        @param surrounding_dts: list of datetime objects of surrounding points
++        @param densities: list of density values at the surrounding points
++        @return: interpolated density
++
++        Interpolates density values in time using linear interpolation.
++        """
++
+         times = np.array([(tdt - surrounding_dts[0]).total_seconds() for tdt in surrounding_dts])
+         dt_seconds = (input_dt - surrounding_dts[0]).total_seconds()
+-        return np.interp(dt_seconds, times, densities)
+\ No newline at end of file
++        return np.interp(dt_seconds, times, densities) # Linear interpolation of density values in time
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>src/wam_api/wamapi_filecache/\ntests/wamapi_filecache\ndist/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision 2308cce1c08db6773625bb76f5900003b1ae0d03)
++++ b/.gitignore	(date 1729804731951)
+@@ -1,3 +1,10 @@
+ src/wam_api/wamapi_filecache/
++<<<<<<< HEAD
+ tests/wamapi_filecache
+-dist/
+\ No newline at end of file
++dist/
++=======
++dist/
++/src/wam_api/__pycache__
++/src/wamapi_filecache
++/tests/wamapi_filecache
++>>>>>>> master
+Index: tests/starlink.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/starlink.py b/tests/starlink.py
+new file mode 100644
+--- /dev/null	(date 1729804731955)
++++ b/tests/starlink.py	(date 1729804731955)
+@@ -0,0 +1,53 @@
++# CSV file retrieved from https://zenodo.org/records/7026474
++
++import pandas as pd
++from datetime import datetime, timedelta
++import sys
++import os
++import time
++from concurrent.futures import ThreadPoolExecutor
++sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
++from wam_api import WAMInterpolator
++
++# Read the CSV file
++df = pd.read_csv('launch_group4-7_3181.csv')
++
++num_samples = 10
++
++# Take only the first num_samples entries
++timestamps = [datetime.strptime(ts, '%Y-%m-%d %H:%M:%S.%f') + timedelta(days=730) for ts in df['t_utc'][:num_samples]]
++latitudes = df['latitude'].tolist()[:num_samples]
++longitudes = df['longitude'].tolist()[:num_samples]
++altitudes = df['altitude'].tolist()[:num_samples]
++
++# Initialize WAMInterpolator
++interpolator = WAMInterpolator()
++
++# Benchmark 1: Batch Get
++def benchmark_batch():
++    interpolator.clear_cache()
++    start_time = time.time()
++    densities = interpolator.batch_get_densities(timestamps, latitudes, longitudes, altitudes)
++    end_time = time.time()
++    return densities, end_time - start_time
++
++# Benchmark 2: Regular Get (Serial)
++def benchmark_serial():
++    interpolator.clear_cache()
++    start_time = time.time()
++    densities = []
++    for i in range(len(timestamps)):
++        density = interpolator.get_density(timestamps[i], latitudes[i], longitudes[i], altitudes[i])
++        densities.append(density)
++    end_time = time.time()
++    return densities, end_time - start_time
++
++batch_densities, batch_time  = benchmark_batch()
++serial_densities, serial_time = benchmark_serial()
++
++print()
++print("-" * 50)
++print("BENCHMARKS")
++print(f"Batch get time: {batch_time} seconds")
++print(f"Regular (serial) get time: {serial_time} seconds")
++print("-" * 50)
+\ No newline at end of file
