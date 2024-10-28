@@ -1,0 +1,14 @@
+README.md
+setup.py
+file_text_extractor/__init__.py
+file_text_extractor/file_extractor.py
+file_text_extractor.egg-info/PKG-INFO
+file_text_extractor.egg-info/SOURCES.txt
+file_text_extractor.egg-info/dependency_links.txt
+file_text_extractor.egg-info/requires.txt
+file_text_extractor.egg-info/top_level.txt
+file_text_extractor/extractors/__init__.py
+file_text_extractor/extractors/docx_extractor.py
+file_text_extractor/extractors/gcs_extractor.py
+file_text_extractor/extractors/pdf_extractor.py
+file_text_extractor/extractors/txt_extractor.py

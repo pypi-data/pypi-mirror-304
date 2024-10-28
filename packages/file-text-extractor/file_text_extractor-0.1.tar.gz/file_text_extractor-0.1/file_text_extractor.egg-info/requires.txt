@@ -1,0 +1,3 @@
+PyMuPDF
+python-docx
+google-cloud-storage

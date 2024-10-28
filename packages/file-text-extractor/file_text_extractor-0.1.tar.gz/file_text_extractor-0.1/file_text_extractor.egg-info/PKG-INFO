@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: file_text_extractor
+Version: 0.1
+Summary: A package to extract text from various file formats including PDF and DOCX.
+Author: Sanjana Jain
+Author-email: sanjana.jain@skillsbridge.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyMuPDF
+Requires-Dist: python-docx
+Requires-Dist: google-cloud-storage
+
+# File Text Extractor
+
+This package allows you to extract text from `.pdf`, `.docx`, and `.txt` files, either from a local file path or from a Google Cloud Storage (GCS) URI. The package handles file extraction directly in memory for GCS files, without the need to download them to the local system.
+
+## Installation
+
+1. Clone the repository.
+2. Install the dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Install the package locally:
+
+   ```
+   pip install .
+   ```
+
+## Usage
+
+### Extracting from a Local File
+
+```python
+from file_text_extractor import extract_text
+
+# Extract text from a local PDF, DOCX, or TXT file
+local_file_path = '/path/to/your/file.pdf'
+text = extract_text(file_path=local_file_path)
+print(text)
+
+### Extracting from a GCS URI
+
+```python
+from file_text_extractor import extract_text
+
+# Extract text from a file in GCS
+gcs_uri = 'gs://your-bucket-name/path/to/your/file.pdf'
+text = extract_text(gcs_uri=gcs_uri)
+print(text)
