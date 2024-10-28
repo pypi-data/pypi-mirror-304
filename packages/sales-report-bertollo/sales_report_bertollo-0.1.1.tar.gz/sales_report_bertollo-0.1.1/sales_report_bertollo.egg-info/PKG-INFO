@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sales_report_bertollo
+Version: 0.1.1
+Summary: A package to generate sales reports from CSV files.
+Author-email: Victor Bertollo <bertollo.victor@gmail.com>
+Requires-Dist: pandas

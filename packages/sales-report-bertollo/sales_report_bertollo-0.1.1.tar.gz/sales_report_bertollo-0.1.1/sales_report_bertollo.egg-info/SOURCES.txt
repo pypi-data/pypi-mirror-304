@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+sales_report/__main__.py
+sales_report/sales_report.py
+sales_report_bertollo.egg-info/PKG-INFO
+sales_report_bertollo.egg-info/SOURCES.txt
+sales_report_bertollo.egg-info/dependency_links.txt
+sales_report_bertollo.egg-info/entry_points.txt
+sales_report_bertollo.egg-info/requires.txt
+sales_report_bertollo.egg-info/top_level.txt
