@@ -1,0 +1,12 @@
+scrapme/__init__.py,sha256=IfEHntStZ4BnPqBK0lbRgZ7BzvVjcsL4LzLl1NrRMOQ,343
+scrapme/driver_manager.py,sha256=Qe_g-xb1g2KNdsAzQAvsCyBkZ6MxMoyLqoZNdRDyVeU,4826
+scrapme/exceptions.py,sha256=Es1paTTMjJdmBuf0xhkTCJQRgr7NHsnP5R4CGDDZPbY,326
+scrapme/rate_limiter.py,sha256=ATUoMTUExduEUFKh-G-v0jBtH05IM5XfLNhb10ufKCo,1034
+scrapme/selenium_scraper.py,sha256=YzTTUcj4zoP1ulIW2fd3YcTgMxE_GISdqLGm-eX8CnA,4324
+scrapme/utils.py,sha256=VECAw2VLDjHclDbYdjonpFV-dH3Wdmna9qwpTb3kLK8,1174
+scrapme/web_scraper.py,sha256=ArZVZkF1cHr-tmBoqqi4mAEdX8nBgBS5bpcSp4B_ih0,4168
+scrapme-1.8.8.dist-info/LICENSE,sha256=bacYoZMgFUr8rLhACEBT1x65SHNBfCC9zP9e5x0cty8,1086
+scrapme-1.8.8.dist-info/METADATA,sha256=YVEIbv69tB0jywi02BqlRp_qGcAxENXC79vhxut5GB8,7964
+scrapme-1.8.8.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+scrapme-1.8.8.dist-info/top_level.txt,sha256=1U9ABqOXQcFwhBEaWQQWvSOIisbzwy8evUs1exzZuXs,8
+scrapme-1.8.8.dist-info/RECORD,,
