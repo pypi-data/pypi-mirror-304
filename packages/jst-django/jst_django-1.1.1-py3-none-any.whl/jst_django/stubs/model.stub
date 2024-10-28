@@ -1,0 +1,7 @@
+
+from django.db import models
+from core.http.models import AbstractBaseModel
+
+
+class {class_name}(AbstractBaseModel):
+    ...
