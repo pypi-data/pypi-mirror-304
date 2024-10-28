@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+finance_csv2txt.egg-info/PKG-INFO
+finance_csv2txt.egg-info/SOURCES.txt
+finance_csv2txt.egg-info/dependency_links.txt
+finance_csv2txt.egg-info/requires.txt
+finance_csv2txt.egg-info/top_level.txt
