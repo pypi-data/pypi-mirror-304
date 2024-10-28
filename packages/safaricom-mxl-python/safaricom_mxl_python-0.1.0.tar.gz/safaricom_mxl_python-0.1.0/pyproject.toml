@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "safaricom-mxl-python"
+version = "0.1.0"
+description = "Safaricom MXL OpenTelemetry SDK for Python"
+authors = ["Francis Masha <fkonde@safaricom.co.ke>"]
+readme = "README.md"
+packages = [{include = "mxl", from = "src" }]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+opentelemetry-api = "^1.22.0"
+opentelemetry-sdk = "^1.22.0"
+opentelemetry-exporter-otlp = "^1.22.0"
+opentelemetry-instrumentation = "^0.43b0"
+opentelemetry-processor-baggage = "~0.46b0"
+
+[tool.poetry.group.dev.dependencies]
+coverage = ">=6.5,<8.0"
+pytest = "^7.2.0"
+pylint = "^2.16.0"
+pycodestyle = "^2.10.0"
+importlib-metadata = { version = ">=0.12", python = "<3.8" }
+requests-mock = "^1.10.0"
+
+[tool.poetry.plugins."opentelemetry_distro"]
+distro = "mxl.opentelemetry.distro:MXLDistro"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
