@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: AC_IaC
+Version: 0.1.2
+Project-URL: Homepage, https://github.com/Theoreticallyhugo/AC_IaC
+Project-URL: Documentation, https://readthedocs.org
+Project-URL: Repository, https://github.com/Theoreticallyhugo/AC_IaC
+Project-URL: Issues, https://github.com/Theoreticallyhugo/AC_IaC/issues
+Project-URL: Changelog, https://github.com/Theoreticallyhugo/AC_IaC/blob/main/CHANGELOG.md
+Project-URL: Data, https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2422
+Author-email: Hugo Meinhof <me@theoreticallyhugo.com>
+License-File: LICENSE.txt
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: accelerate
+Requires-Dist: colorama
+Requires-Dist: datasets
+Requires-Dist: evaluate
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Requires-Dist: transformers
+Description-Content-Type: text/markdown
+
+# Argument Components - Identification and Classification
+## structure
+- command_line.py is the entry point for the module. from here the user should be able to run training and inference.
+- ./inference/ is the directory that houses everything inference related
+- ./training/ is the directory that houses everything training related
+## update
+when prompted, use `__token__` for the username and the api key including the pypi- prefix 
+```
+enva
+python3 -m pip install --upgrade build
+python3 -m build
+python3 -m pip install --upgrade twine
+python3 -m twine upload --repository testpypi dist/*
+```
+## install - for testing 
+```
+python3 -m pip install --upgrade --index-url https://test.pypi.org/simple/ --no-deps AC-IaC
+```
