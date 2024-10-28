@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jsondetective/__init__.py
+jsondetective/analyzer.py
+jsondetective/cli.py
+jsondetective/dataclass_gen.py
+jsondetective.egg-info/PKG-INFO
+jsondetective.egg-info/SOURCES.txt
+jsondetective.egg-info/dependency_links.txt
+jsondetective.egg-info/entry_points.txt
+jsondetective.egg-info/requires.txt
+jsondetective.egg-info/top_level.txt
