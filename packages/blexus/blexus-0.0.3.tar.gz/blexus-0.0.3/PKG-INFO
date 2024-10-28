@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: blexus
+Version: 0.0.3
+Summary: Blexus official package
+Home-page: https://github.com/Blexus-org/pkg
+Author: Blexus
+Author-email: mmmmmm505090@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 🚀 Blexus
+
+Welcome to **Blexus**, an AI innovation lab committed to crafting **small, specialized AI models**. Our mission is to unlock the full potential of AI through **task-specific models** that are fast, efficient, and highly customizable—ideal for developers, businesses, and everyday use cases.
+[READ MORE](https://huggingface.co/Blexus)
+
+---
+
+## 🛠️ **Installation**
+
+You can install the Blexus package using pip. Run the following command:
+
+```bash
+pip install blexus
+```
+
+## Use Quble models
+```py
+from blexus import TextGenerator
+
+# Example usage for quble models
+if __name__ == "__main__":
+    # Load your model here
+    model_path = "Blexus/Quble_test_model_v1_INSTRUCT_v2"
+    model = GPT2LMHeadModel.from_pretrained(model_path)
+
+    # Initialize the TextGenerator with the model and specify whether to use GPU
+    use_gpu = True  # Set to False if you want to use CPU
+    generator = TextGenerator(model, use_gpu)
+
+    # Define the prompt and generate text
+    prompt = "hi"
+    system = "You are a helpful intelligent Assistant."
+    generated_texts = generator.quble_generate_text(prompt, system, max_length=250, num_return_sequences=1, temperature=0.7)
+
+    print("\nGenerated Texts:")
+    for idx, text in enumerate(generated_texts):
+        print(f"Generated Text {idx + 1}: {text}")
+
+    # Eject the model and clear resources
+    generator.eject_model() # does not remove model files
+```
+
+## Other (FCP models)
+```py
+from blexus import TextGenerator
+
+# Example usage for FCP models
+if __name__ == "__main__":
+    # Load your model here
+    model_path = "Blexus/awareness_test" # example FCP model
+    model = GPT2LMHeadModel.from_pretrained(model_path)
+
+    # Initialize the TextGenerator with the model and specify whether to use GPU
+    use_gpu = True  # Set to False if you want to use CPU
+    generator = TextGenerator(model, use_gpu)
+
+    # Define the prompt and generate text
+    prompt = "hi"
+    system = "NONE" # - use "NONE" to specify there is no system
+    s1, s2, u1, u2, a1 = "<chain>", "<situation>", "<situation>", "</situation>", "<thought>" # example
+          # - "<system>", "<endofsystem>", "<startofuser>", "<endofuser>", "<startofmodel>"
+    generated_texts = generator.quble_generate_text(prompt, system, max_length=250, num_return_sequences=1, temperature=0.7)
+
+    print("\nGenerated Texts:")
+    for idx, text in enumerate(generated_texts):
+        print(f"Generated Text {idx + 1}: {text}")
+
+    # Eject the model and clear resources
+    generator.eject_model() # does not remove model files
+```
+
+## Other (FCP model example 2)
+```py
+from blexus import TextGenerator
+
+# Example 2 usage for FCP models
+if __name__ == "__main__":
+    # Load your model here
+    model_path = "Blexus/icn_savant_v2_instruct" # example 2 FCP model
+    model = GPT2LMHeadModel.from_pretrained(model_path)
+
+    # Initialize the TextGenerator with the model and specify whether to use GPU
+    use_gpu = True  # Set to False if you want to use CPU
+    generator = TextGenerator(model, use_gpu)
+
+    # Define the prompt and generate text
+    prompt = "apple"
+    system = "NONE" # - use "NONE" to specify there is no system
+    s1, s2, u1, u2, a1 = "", "", "", "", "" # empty since we dont have for icn model
+          # - "<system>", "<endofsystem>", "<startofuser>", "<endofuser>", "<startofmodel>"
+    generated_texts = generator.quble_generate_text(prompt, system, max_length=250, num_return_sequences=1, temperature=0.7)
+
+    print("\nGenerated Texts:")
+    for idx, text in enumerate(generated_texts):
+        print(f"Generated Text {idx + 1}: {text}")
+
+    # Eject the model and clear resources
+    generator.eject_model() # does not remove model files
+```
+
+# More coming soon!
