@@ -1,0 +1,4 @@
+setuptools_scm[toml]>=6.2
+lxml~=5.3
+numpy~=2.1
+typing_extensions>=4.4.0
