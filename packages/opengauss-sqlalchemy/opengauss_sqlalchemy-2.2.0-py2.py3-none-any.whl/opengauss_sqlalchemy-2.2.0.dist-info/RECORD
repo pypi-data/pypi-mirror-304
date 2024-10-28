@@ -1,0 +1,12 @@
+opengauss_sqlalchemy/__init__.py,sha256=m35cZQRbKkrwbKQTSAcap0pJHWwEcrQ5Wq9ouzmFuv8,667
+opengauss_sqlalchemy/base.py,sha256=FGmOwaMsT_iwLuRmiwOOAd4h_EkjtwrMxCvJZQgGz24,10074
+opengauss_sqlalchemy/dc_psycopg2.py,sha256=k26skb4ywluzl5XV7ugEpEKsOn9wDrp0XuNKQDO5nDo,697
+opengauss_sqlalchemy/provision.py,sha256=II3m5NFllxUR6bI9fmWoJY4MLZKnPdQiQsqr9sEXZcM,4737
+opengauss_sqlalchemy/psycopg2.py,sha256=tkNR6mXmCfFgkdlh8xu1VqR7y60dnPOXE8IdCLAOJMM,4440
+opengauss_sqlalchemy/requirements.py,sha256=eJZVbokDGoyhvZeToAIhOa2RNd3DHyf62lGFdSwZy5k,29014
+opengauss_sqlalchemy-2.2.0.dist-info/LICENSE.md,sha256=axXgOwvt5wUE9NI5LfyFKQrkfIK3HPFF-5HS7dT86F4,1153
+opengauss_sqlalchemy-2.2.0.dist-info/METADATA,sha256=i_1AIgs1FzkERvGnqe_BENHjNSQDm9schweKi1NYmfY,7961
+opengauss_sqlalchemy-2.2.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+opengauss_sqlalchemy-2.2.0.dist-info/entry_points.txt,sha256=ofxgOGP_tw9Iww5OiIvtWu6BdUEQClpea7cYUJFWRdg,254
+opengauss_sqlalchemy-2.2.0.dist-info/top_level.txt,sha256=Hn8YUil2SQRHO21PQA9_tWnAdCcgCQ_PmbH-j1FwqG8,21
+opengauss_sqlalchemy-2.2.0.dist-info/RECORD,,
