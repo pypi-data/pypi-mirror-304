@@ -1,0 +1,2 @@
+[console_scripts]
+tsk_2 = task_2.transaction_counter:main
