@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+TTS_B/__init__.py
+TTS_B.egg-info/PKG-INFO
+TTS_B.egg-info/SOURCES.txt
+TTS_B.egg-info/dependency_links.txt
+TTS_B.egg-info/requires.txt
+TTS_B.egg-info/top_level.txt

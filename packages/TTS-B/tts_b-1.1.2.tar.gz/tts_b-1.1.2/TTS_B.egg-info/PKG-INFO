@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: TTS_B
+Version: 1.1.2
+Summary: A very basic TTS tool
+Home-page: 
+Author: Gowtham Venkata Raj Kumar
+Author-email: gamergowtham99@gmail.com
+License: MIT
+Keywords: TTS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+Requires-Dist: requests
+Requires-Dist: playsound
+Requires-Dist: mutagen
+Requires-Dist: typing-extensions
+
+This is a very simple Text To Speech model in Brian's Voice
+
+Change Log
+==========
+
+1.1.1(27/10/2024)
+1.1.2(27/10/2024)
+-------------------

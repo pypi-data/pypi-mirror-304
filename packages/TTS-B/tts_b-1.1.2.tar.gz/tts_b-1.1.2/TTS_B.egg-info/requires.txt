@@ -1,0 +1,4 @@
+requests
+playsound
+mutagen
+typing-extensions
