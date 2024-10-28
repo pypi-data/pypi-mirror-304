@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include db_config.ini
+exclude **/__pycache__/*
+exclude *.egg-info/*
