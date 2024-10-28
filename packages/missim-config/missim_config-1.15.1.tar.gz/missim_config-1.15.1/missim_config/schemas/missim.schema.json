@@ -1,0 +1,793 @@
+{
+  "$defs": {
+    "FoxgloveBridgeParameters": {
+      "properties": {
+        "address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The host address to bind the WebSocket server to",
+          "title": "Address"
+        },
+        "asset_uri_allowlist": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of regular expressions (ECMAScript) of whitelisted parameter names.",
+          "title": "Asset Uri Allowlist"
+        },
+        "capabilities": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Server capabilities",
+          "title": "Capabilities"
+        },
+        "certfile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to the certificate to use for TLS",
+          "title": "Certfile"
+        },
+        "client_topic_whitelist": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of regular expressions (ECMAScript) of whitelisted parameter names.",
+          "title": "Client Topic Whitelist"
+        },
+        "disable_load_message": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Do not publish as loaned message when publishing a client message",
+          "title": "Disable Load Message"
+        },
+        "include_hidden": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Include hidden topics and services",
+          "title": "Include Hidden"
+        },
+        "keyfile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to the private key to use for TLS",
+          "title": "Keyfile"
+        },
+        "max_qos_depth": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum depth used for the QoS profile of subscriptions.",
+          "title": "Max Qos Depth"
+        },
+        "min_qos_depth": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Minimum depth used for the QoS profile of subscriptions.",
+          "title": "Min Qos Depth"
+        },
+        "param_whitelist": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of regular expressions (ECMAScript) of whitelisted parameter names.",
+          "title": "Param Whitelist"
+        },
+        "port": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The TCP port to bind the WebSocket server to",
+          "title": "Port"
+        },
+        "send_buffer_limit": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Connection send buffer limit in bytes. Messages will be dropped when a connection's send buffer reaches this limit to avoid a queue of outdated messages building up.",
+          "title": "Send Buffer Limit"
+        },
+        "service_whitelist": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of regular expressions (ECMAScript) of whitelisted service names.",
+          "title": "Service Whitelist"
+        },
+        "tls": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Use Transport Layer Security for encrypted communication",
+          "title": "Tls"
+        },
+        "topic_whitelist": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of regular expressions (ECMAScript) of whitelisted topic names.",
+          "title": "Topic Whitelist"
+        },
+        "use_compression": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Use websocket compression (permessage-deflate). Suited for connections with smaller bandwith, at the cost of additional CPU load.",
+          "title": "Use Compression"
+        }
+      },
+      "title": "FoxgloveBridgeParameters",
+      "type": "object"
+    },
+    "HifiVesselManagerParameters": {
+      "properties": {
+        "replay_mode": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Is the node in replay mode?",
+          "title": "Replay Mode"
+        }
+      },
+      "title": "HifiVesselManagerParameters",
+      "type": "object"
+    },
+    "LaunchParameters": {
+      "properties": {
+        "foxglove_bridge": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FoxgloveBridgeParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "vessel_manager": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VesselManagerParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "playback": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PlaybackParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "recorder": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RecorderParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "simulated_clock": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SimulatedClockParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "hifi_vessel_manager": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HifiVesselManagerParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "scenario_runner": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioRunnerParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "parameter_persistence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ParameterPersistenceParameters"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "LaunchParameters",
+      "type": "object"
+    },
+    "LogLevel": {
+      "enum": [
+        "info",
+        "debug"
+      ],
+      "title": "LogLevel",
+      "type": "string"
+    },
+    "Mode": {
+      "enum": [
+        "ue-editor",
+        "ue-standalone",
+        "low-fidelity"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "Network": {
+      "enum": [
+        "shared",
+        "host"
+      ],
+      "title": "Network",
+      "type": "string"
+    },
+    "NodeConfigurationModel": {
+      "properties": {
+        "node_name_regex": {
+          "title": "Node Name Regex",
+          "type": "string"
+        },
+        "parameter_name_regexes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parameter Name Regexes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "node_name_regex",
+        "parameter_name_regexes"
+      ],
+      "title": "NodeConfigurationModel",
+      "type": "object"
+    },
+    "ParameterPersistenceParameters": {
+      "properties": {
+        "params_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to the file where the parameters are stored",
+          "title": "Params Path"
+        },
+        "file_header": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "A message to add to the top of the params file",
+          "title": "File Header"
+        },
+        "path_within_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path within the file to store the parameters",
+          "title": "Path Within File"
+        },
+        "persistent_parameters": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/NodeConfigurationModel"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Regex describing which parameters should persist",
+          "title": "Persistent Parameters"
+        }
+      },
+      "title": "ParameterPersistenceParameters",
+      "type": "object"
+    },
+    "PlaybackParameters": {
+      "properties": {
+        "bag_directory": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "",
+          "title": "Bag Directory"
+        },
+        "storage_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "",
+          "title": "Storage Id"
+        }
+      },
+      "title": "PlaybackParameters",
+      "type": "object"
+    },
+    "RecorderParameters": {
+      "properties": {
+        "bag_directory": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "",
+          "title": "Bag Directory"
+        },
+        "storage_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "",
+          "title": "Storage Id"
+        },
+        "storage_preset_profile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "",
+          "title": "Storage Preset Profile"
+        }
+      },
+      "title": "RecorderParameters",
+      "type": "object"
+    },
+    "ScenarioRunnerParameters": {
+      "properties": {
+        "scenarios": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of scenarios",
+          "title": "Scenarios"
+        }
+      },
+      "title": "ScenarioRunnerParameters",
+      "type": "object"
+    },
+    "SimulatedClockParameters": {
+      "properties": {
+        "enabled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether to enable the simulated clock or not",
+          "title": "Enabled"
+        },
+        "sim_speed": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Speed at which to run the simulation",
+          "title": "Sim Speed"
+        },
+        "publish_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Rate at which to publish the clock at?",
+          "title": "Publish Rate"
+        }
+      },
+      "title": "SimulatedClockParameters",
+      "type": "object"
+    },
+    "SourcesEnabledEnum": {
+      "enum": [
+        "ais",
+        "arpa",
+        "camera",
+        "object"
+      ],
+      "title": "SourcesEnabledEnum",
+      "type": "string"
+    },
+    "Track": {
+      "properties": {
+        "stale_timeout": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Time in seconds before a track is considered stale and removed",
+          "title": "Stale Timeout"
+        },
+        "spawn_radius": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Radius in meters around the vessel to spawn tracks",
+          "title": "Spawn Radius"
+        },
+        "sources_enabled": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SourcesEnabledEnum"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The sources of tracks that will spawn vessels in MIS-SIM",
+          "title": "Sources Enabled"
+        }
+      },
+      "title": "Track",
+      "type": "object"
+    },
+    "VesselManagerParameters": {
+      "properties": {
+        "enabled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether to enable the vessel manager or not",
+          "title": "Enabled"
+        },
+        "vessels": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of vessels",
+          "title": "Vessels"
+        },
+        "hifi_mode": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Should we use the low-fidelity topic suffix",
+          "title": "Hifi Mode"
+        },
+        "objects_publish_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Rate at which to publish objects in Hz",
+          "title": "Objects Publish Rate"
+        },
+        "track": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Track"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "VesselManagerParameters",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ros_domain_id": {
+      "default": 0,
+      "title": "Ros Domain Id",
+      "type": "integer"
+    },
+    "static_peers": {
+      "default": ";",
+      "title": "Static Peers",
+      "type": "string"
+    },
+    "log_level": {
+      "$ref": "#/$defs/LogLevel",
+      "default": "info"
+    },
+    "mode": {
+      "$ref": "#/$defs/Mode",
+      "default": "low-fidelity"
+    },
+    "network": {
+      "$ref": "#/$defs/Network",
+      "default": "host"
+    },
+    "sim_speed": {
+      "default": 1.0,
+      "title": "Sim Speed",
+      "type": "number"
+    },
+    "use_https": {
+      "default": false,
+      "title": "Use Https",
+      "type": "boolean"
+    },
+    "components": {
+      "$ref": "#/$defs/LaunchParameters",
+      "default": {
+        "foxglove_bridge": null,
+        "vessel_manager": null,
+        "playback": null,
+        "recorder": null,
+        "simulated_clock": null,
+        "hifi_vessel_manager": null,
+        "scenario_runner": null,
+        "parameter_persistence": null
+      }
+    }
+  },
+  "title": "MissimConfig",
+  "type": "object"
+}
