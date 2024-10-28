@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: fastapi-pydentity
+Version: 0.2.0
+Summary: 
+License: MIT
+Author: Udachin Ivan
+Author-email: pypi.udachin@yandex.ru
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: machineid
+Provides-Extra: sqlalchemy
+Provides-Extra: tortoise
+Requires-Dist: py-machineid (==0.6.*) ; extra == "machineid"
+Requires-Dist: pydentity-core (>=0.2.3,<0.3.0)
+Requires-Dist: pydentity-core-sqlalchemy (==0.2.*) ; extra == "sqlalchemy"
+Requires-Dist: pydentity-core-tortoise (==0.2.*) ; extra == "tortoise"
+Description-Content-Type: text/markdown
+
+<h1 align="center">FastAPI-Pydentity</h1>
+
+<p align="center">
+    <em>Ready-to-use and customizable users management for FastAPI</em>
+</p>
+
+```python
+...
+
+app = FastAPI()
+
+add_default_identity(get_user_store, get_role_store)
+use_authentication(app)
+use_authorization(app)
+
+...
+
+app.include_router(account_router)
+app.include_router(data_router)
+
+```
+
+<div style="background-color: rgb(255, 243, 205); color: black; padding: .8rem; font-size: 1rem;">
+<strong>NOTE:</strong> Pydentity is configured before defining routes.
+</div>
+
+
