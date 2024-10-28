@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: raintools_colors
+Version: 0.1.0
+Summary: A simple module to print colored text in the terminal
+Author: Plingenn
+Author-email: raintool@engineer.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+License-File: LICENSE
+
