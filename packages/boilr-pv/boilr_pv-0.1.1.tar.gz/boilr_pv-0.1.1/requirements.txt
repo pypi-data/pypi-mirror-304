@@ -1,0 +1,6 @@
+paho-mqtt>=2.1
+python-daemon>=3.0
+requests>=2.32
+RPi.GPIO>=0.7.1
+PyYAML>=6.0
+urllib3>=2.2

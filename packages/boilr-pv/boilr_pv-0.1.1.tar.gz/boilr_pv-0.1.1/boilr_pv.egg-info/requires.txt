@@ -1,0 +1,13 @@
+paho-mqtt
+python-daemon
+PyYAML
+requests
+urllib3
+
+[:platform_system == "Linux" and "arm" in platform_machine]
+RPi.GPIO
+
+[dev]
+pytest
+pytest-cov
+pytest-mock
