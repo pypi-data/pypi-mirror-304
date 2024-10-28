@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "db-engine-factory"
+version = "0.1.2"
+description = "DB Engine Factory: Simplify connecting to MySQL, MSSQL, and PostgreSQL databases through a single, unified configuration."
+readme = "README.md"
+keywords = ["database", "SQLAlchemy", "MySQL", "PostgreSQL", "MSSQL", "database engine factory"]
+requires-python = ">=3.6"  # Specifies the required Python version
+authors = [
+    {name = "Will Palmer", email = "will@willpalmer.co.uk"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries",
+]
+
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "SQLAlchemy>=2.0.25",
+    "pyodbc>=5.0.1",
+    "pymysql",
+    "psycopg2-binary"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/skyblue-will/db_engine_factory"
+"Documentation" = "https://github.com/skyblue-will/db_engine_factory#readme"
+"Source" = "https://github.com/skyblue-will/db_engine_factory"
+"Tracker" = "https://github.com/skyblue-will/db_engine_factory/issues"
+
+[project.scripts]
+test_db_engine_factory = "db_engine_factory.tests:test_connections"
+
+[tool.setuptools.packages.find]
+include = ["db_engine_factory", "db_engine_factory.*"]

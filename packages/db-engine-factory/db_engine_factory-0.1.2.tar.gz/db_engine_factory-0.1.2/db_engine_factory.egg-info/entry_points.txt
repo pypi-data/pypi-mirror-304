@@ -1,0 +1,2 @@
+[console_scripts]
+test_db_engine_factory = db_engine_factory.tests:test_connections
