@@ -1,0 +1,237 @@
+Metadata-Version: 2.1
+Name: toolboxs
+Version: 0.1.1
+Summary: A box-ah package for python
+Home-page: https://gitee.com/bu_xiu/toolboxs.git
+Author: MR.AH
+Author-email: zhangzhonghui1001@gmail.com
+License: Apache
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.31.0
+Requires-Dist: lxml==5.1.0
+
+# toolboxs
+
+#### 介绍
+工具箱
+
+#### 软件架构
+软件架构说明
+
+
+#### 安装教程
+
+pip install toolboxs
+
+或者
+pip install toolboxs==xx.xx.xx
+
+#### 使用说明
+
+项目结构
+```text
+项目名
+├── source
+│   ├── 资源文件
+├── src
+│   ├── 程序1.py
+│   ├── 程序2.py
+│   ├── 程序3.py
+```
+
+# request_session 模块
+
+## 普通的GET请求
+```python
+
+import os
+from src.request_session import Request,RequestModule
+
+if __name__ == "__main__" :
+    with Request(os.path.abspath(__file__)) as request:
+        def callback(resp):
+            print(resp.text)
+        
+        request.send(url='https://www.4399.com/',module=RequestModule.GET)(callback)
+```
+运行结束之后，会在 source 目录下自动创建 log 目录，并记录当天的 请求日志
+```text
+(reptile_env) box-ah-test tree source        
+source
+└── log
+    └── request
+        └── 程序名称-日期(yyyyMMdd).log
+```
+
+## 使用 xpath
+在模块内部，已经封装了 lxml 的 xpath 方法，可以直接使用
+```python
+def xpath(self,xpath_str) -> list:
+    if self.response.status_code == requests.codes.ok:
+        # 解决中文乱码问题
+        self.response.encoding =  self.response.apparent_encoding
+        html = etree.HTML(self.response.text,parser=None)
+        return html.xpath(xpath_str)
+    return []
+```
+示例如下；
+```python
+import os
+from src.network.request_session import Request,RequestModule
+
+if __name__ == "__main__" :
+    with Request(os.path.abspath(__file__),response_logging=False) as request:
+        
+        request.send(url='https://www.4399.com/',module=RequestModule.GET)
+        
+        a_list = request.xpath("//ul[@class='tm_list']/li/a")
+        
+        for a in a_list:
+            print(a.xpath("./img/@alt")[0])
+            print(a.xpath("./img/@src"))
+```
+
+将m3u8 转换成 视频代码示例
+该功能依赖 [ffmpeg](https://ffmpeg.org/) 插件，完成对ts文件的合并
+```python
+import os
+import re
+import json
+from urllib.parse import urljoin
+from src.network.download import M3u82Video
+from src.network.request_session import Request,FileType,DataType
+
+
+if __name__ == "__main__" :
+    global_headers = {
+        'Connection':'close',
+        'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
+    }
+    
+    project_file = os.path.abspath(__file__)
+    
+    with Request(project_file=project_file,response_logging=False,global_headers=global_headers) as  request:
+    
+        
+        
+        def get_m3u8_url(resp):
+            js = request.execjs('m1905')
+            
+            p = js.call('build',584320,resp.url)
+            
+            def callback(resp):
+                result:dict = request.parse_jsonp(resp.text)
+                data:dict = result.get('data',{})
+                host = data.get('quality',{}).get('uhd',{}).get('host')
+                path = data.get('path',{}).get('uhd',{}).get('path')
+                sign = data.get('sign',{}).get('uhd',{}).get('sign')
+                
+                m3u8_url:str = f'{host}{sign}{path}'
+                
+                def e(resp):
+                    return list(filter(lambda x:x.endswith('m3u8'),resp.text.split('\n')))[0]
+                
+                m3u8_url = urljoin(m3u8_url,request.send(url=m3u8_url)(e))
+                
+                
+                return m3u8_url
+                
+                
+            return request.send(
+                url='https://profile.m1905.com/mvod/getVideoinfo.php',
+                params=p
+            )(callback)
+            
+    
+        def parse_ts_callback(url,line:str):
+            return urljoin(url,line.replace('\n',''))
+            
+        sink = M3u82Video(request,m3u8_file_path='video/77dus',restart=True)
+        sink.save_m3u8_file(web_url='https://www.1905.com/vod/play/584320.shtml?fr=vodnd_jrrb',callback=get_m3u8_url)
+        sink.parse_m3u8_file(parse_ts_callback)
+        sink.save2mp4('video','a')
+```
+
+sink2excel 示例代码
+```python
+
+from src.sink.sink2excel import Sink2Excel,Cell,Row,CellPosition,CellDataType
+
+if __name__ == "__main__" :
+    with Sink2Excel() as excel:
+        rows = [
+            Row(
+                Cell(val='姓名',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='性别',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='出生年月',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='https://pics7.baidu.com/feed/96dda144ad345982bb1fa56dcbba18a3caef8410.jpeg@f_auto?token=c9ca84004bd6180ef43678b653a0f4f8',data_type=CellDataType.PIC,row_size=3)
+            ),
+            Row(
+                Cell(val='身份证号码',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='名族',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='政治面貌',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                row_index=4
+            ),
+            Row(
+                Cell(val='婚姻状况',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='健康状况',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+                Cell(val='身高',subrows=[Row(Cell(val=''))],position=CellPosition.position_distributed),
+            ),
+            Row(
+                Cell(val='现户口所在地',subrows=[Row(Cell(val='',col_size=2))],position=CellPosition.position_distributed),
+                Cell(val='所学专业',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+                Cell(val='学历',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+            ),
+            Row(
+                Cell(val='最后毕业学校',subrows=[Row(Cell(val='',col_size=2))],position=CellPosition.position_distributed),
+                Cell(val='毕业时间',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+                Cell(val='技术职称',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+            ),
+            Row(
+                Cell(val='现工作单位',subrows=[Row(Cell(val='',col_size=2))],position=CellPosition.position_distributed),
+                Cell(val='参考工作时间',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+                Cell(val='现从事专业',subrows=[Row(Cell(val='',col_size=1))],position=CellPosition.position_distributed),
+            ),
+            Row(
+                Cell(val='https://img1.baidu.com/it/u=842682090,490249809&fm=253&fmt=auto&app=138&f=JPEG?w=854&h=416',data_type=CellDataType.PIC,row_size=11,col_size=4,subrows=[
+                    Row(
+                        Cell(val='现工作单位',subrows=[Row(Cell(val='',col_size=2))],position=CellPosition.position_distributed)
+                    ),
+                    Row(
+                        Cell(val='现工作单位',subrows=[Row(Cell(val='',col_size=2))],position=CellPosition.position_distributed)
+                    )])),
+            
+        ]
+        
+        excel.write(
+            headers=Row(Cell(val='个人简历',col_size=7,row_size=2)),
+            rows=rows,
+            sequence=False
+        )
+        excel.sink_file('xxxx/xxx/xx/yyyy.xlsx')
+```
+
+
+
+
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
+
+
+#### 特技
+
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
+5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
