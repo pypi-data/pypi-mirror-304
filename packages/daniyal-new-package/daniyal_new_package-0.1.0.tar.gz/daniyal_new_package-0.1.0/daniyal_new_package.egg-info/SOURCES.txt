@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+daniyal_new_package.egg-info/PKG-INFO
+daniyal_new_package.egg-info/SOURCES.txt
+daniyal_new_package.egg-info/dependency_links.txt
+daniyal_new_package.egg-info/top_level.txt
+daniyal_package/__init__.py
