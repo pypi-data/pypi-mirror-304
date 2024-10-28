@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/cstructpy/__init__.py
+src/cstructpy/data_models.py
+src/cstructpy/exceptions.py
+src/cstructpy/primitives.py
+src/cstructpy.egg-info/PKG-INFO
+src/cstructpy.egg-info/SOURCES.txt
+src/cstructpy.egg-info/dependency_links.txt
+src/cstructpy.egg-info/top_level.txt

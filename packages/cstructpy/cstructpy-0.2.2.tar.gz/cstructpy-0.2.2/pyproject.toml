@@ -1,0 +1,29 @@
+[project]
+name = "cstructpy"
+version = "0.2.2"
+description = "cstructpy is a Python package designed for binary serialization and deserialization of structured data using custom primitive types."
+requires-python = ">=3.10"
+readme = { file = "README.md", content-type = "text/markdown" }
+
+
+authors = [{ name = "Maxim Mushizky" }]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Documentation = "https://github.com/Maxim-Mushizky/cstructpy/wiki"
+
+[tool.mypy]
+files = "src/"
+
+[tool.pytest.ini_options]
+addopts = "-v"
