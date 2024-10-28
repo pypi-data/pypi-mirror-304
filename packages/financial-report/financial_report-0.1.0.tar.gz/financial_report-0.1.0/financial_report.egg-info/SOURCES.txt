@@ -1,0 +1,7 @@
+pyproject.toml
+report_generator.py
+financial_report.egg-info/PKG-INFO
+financial_report.egg-info/SOURCES.txt
+financial_report.egg-info/dependency_links.txt
+financial_report.egg-info/requires.txt
+financial_report.egg-info/top_level.txt
