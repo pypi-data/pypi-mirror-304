@@ -1,0 +1,5 @@
+setup.py
+rbfs_module.egg-info/PKG-INFO
+rbfs_module.egg-info/SOURCES.txt
+rbfs_module.egg-info/dependency_links.txt
+rbfs_module.egg-info/top_level.txt
