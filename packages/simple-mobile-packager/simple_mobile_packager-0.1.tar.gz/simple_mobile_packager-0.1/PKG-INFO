@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: simple_mobile_packager
+Version: 0.1
+Description-Content-Type: text/markdown
+
+Bu kütüphane, Python ile yazılmış uygulamaları mobil APK dosyalarına dönüştürmek için tasarlanmıştır.

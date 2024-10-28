@@ -1,0 +1,5 @@
+setup.py
+simple_mobile_packager.egg-info/PKG-INFO
+simple_mobile_packager.egg-info/SOURCES.txt
+simple_mobile_packager.egg-info/dependency_links.txt
+simple_mobile_packager.egg-info/top_level.txt
