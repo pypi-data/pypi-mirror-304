@@ -1,0 +1,17 @@
+ksef_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ksef_utils/__main__.py,sha256=qctQ4Zx0KVWTqDkkLNBUxv9kL8bZh-xGnUopORnnP-c,1511
+ksef_utils/cli.py,sha256=JmsJeTKdAwqjD4sQ7pepUHfBTXueyLF578pLWrGjE_U,797
+ksef_utils/config.py,sha256=JY4GX4nGz5IiTXVH4566SrU76dz6QLCTfIfzeTrpfZQ,729
+ksef_utils/server.py,sha256=iMwnOAAL8ExLB8pYxr7V5QkpEjXbhg4M9hIkt_O_XFA,19721
+ksef_utils/utils.py,sha256=TJw58WN93Zc0wbTvbXR9aMdJnimqRF07ln_08BOfp88,4960
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=14Jx4y4r_Ti_j6GlvnsZSwm5XgJc62jalskoTIZwdAU,2535
+tests/test_e2e.py,sha256=TMT0iCI1UqPw5qiC-48UDJfaKgY7xtm-SRyeMo1A-kA,2576
+tests/test_ksef.py,sha256=86kRz24GvZDQWybmW3jSQ9KbtlybQDLJbV2pPShhuYI,2630
+tests/test_selfinvoicing.py,sha256=kJH9htnHo1zKlJ0MTYI2YS8figM000iwCL1nSSNK8AE,1805
+ksef_utils-1.4.dist-info/LICENSE,sha256=ZaCV8VcnO8I437jBDtRwUhsGyzF4kAkRjsUJ-DG3VRo,55
+ksef_utils-1.4.dist-info/METADATA,sha256=WIMXhxqDYRzXzxCBNBdlgJywOzOSOt5s-5BUwFYmHHM,4959
+ksef_utils-1.4.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+ksef_utils-1.4.dist-info/entry_points.txt,sha256=nHkiUAp9-7kPcBXx8Co9RgDn3kQzvEvh967gRmrb7eA,56
+ksef_utils-1.4.dist-info/top_level.txt,sha256=CoUvzrY43GLRArnnreFJPlNFI2UnCOC9zG_El1wxC_s,17
+ksef_utils-1.4.dist-info/RECORD,,
