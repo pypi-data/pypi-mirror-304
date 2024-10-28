@@ -1,0 +1,11 @@
+artvee_scraper/__init__.py,sha256=i3FXLgjYntbiLtePTSZWZKRIJe_lHjDZkTw8CRsd85o,22
+artvee_scraper/artvee_client.py,sha256=K3-wcFXHanRT64GbcCftXYnWPVpUj2OIvvOxG4wPWcE,10605
+artvee_scraper/artwork.py,sha256=qYFF9mHhIqzJkEQXeFFRLty6CB0bb7z_bNBZ8BBzIL0,5954
+artvee_scraper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+artvee_scraper/scraper.py,sha256=VZ49rR-5Ryy3aESf3RoJ3tBFdvhr4XTlJ_XP9aeqxGk,9168
+artvee_scraper-4.0.4.dist-info/LICENSE,sha256=6ktM1gcEiw7tLVToAlYYbStStPfJ9LJo07SBfxMLGZQ,1068
+artvee_scraper-4.0.4.dist-info/METADATA,sha256=w6w2FrO5vcPzqtUaQVpoQLklVYkvjCxLNYBedMFa0Q4,6413
+artvee_scraper-4.0.4.dist-info/WHEEL,sha256=ZL1lC_LiPDNRgDnOl2taCMc83aPEUZgHHv2h-LDgdiM,92
+artvee_scraper-4.0.4.dist-info/top_level.txt,sha256=mbbZ6_9dtxz5E59wLOgZPZT-J_M1swhEkCoiKwkJ-Pg,15
+artvee_scraper-4.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+artvee_scraper-4.0.4.dist-info/RECORD,,
