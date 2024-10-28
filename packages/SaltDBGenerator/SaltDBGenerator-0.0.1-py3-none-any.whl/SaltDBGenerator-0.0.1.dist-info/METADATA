@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: SaltDBGenerator
+Version: 0.0.1
+Summary: Best salt Generator for sqlite db
+Home-page: https://github.com/lamalice20/SaltDBGenerator
+Author: lamalice20
+Author-email: discord974a@gmail.com
+Requires-Python: >=3.12.0
+Description-Content-Type: text/markdown
+
