@@ -1,0 +1,2 @@
+[mlagents.stats_writer]
+sps_writer = mlagents_sps_plugin.sps_stats_writer:get_sps_stats_writer
