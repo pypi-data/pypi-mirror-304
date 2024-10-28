@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/debug_toolbar/__init__.py
+src/debug_toolbar/example.py
+src/debug_toolbar.egg-info/PKG-INFO
+src/debug_toolbar.egg-info/SOURCES.txt
+src/debug_toolbar.egg-info/dependency_links.txt
+src/debug_toolbar.egg-info/top_level.txt
