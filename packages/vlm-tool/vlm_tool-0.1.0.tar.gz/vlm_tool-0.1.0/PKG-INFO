@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: vlm_tool
+Version: 0.1.0
+Summary: python call for C/C++
+Home-page: https://github.com/
+Author: yan wang
+Author-email: 1449349985@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+python call for C/C++
+
+vlm_utils is a library for tracing function calls with depth control and filtering.
+
+# Installation
+    pip install vlm_utils
+    
+# Usage 1
+
+    from vlm_utils.module import tracer
+
+    def add_one(n):
+        return n+1
+    
+    def add_two(n):
+        n = add_one(n)
+        n = add_one(n)
+        return n
+
+    @tracer
+    def main():
+        n = add_two(4)
+
+    main()
+    
+# Usage 2
+    
+    to use c++ lib function
+        
+    from vlm_utils import lib_tools
+
+# Install Requires
+
+    python>=3.6.0
+
+
+
+    
