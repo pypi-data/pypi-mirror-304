@@ -1,0 +1,16 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+[project]
+name = 'sales_reporter_scochilloff'
+readme='README.md'
+version = '0.1.1'
+description = 'Пакет, загружающий данные о заказах, группирующий их и выдающий отчет'
+authors = [
+  {name = 'ScoChillOFF', email = 'cheatkiller12@gmail.com'}
+]
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = [
+  'pandas==2.2.3'
+]
