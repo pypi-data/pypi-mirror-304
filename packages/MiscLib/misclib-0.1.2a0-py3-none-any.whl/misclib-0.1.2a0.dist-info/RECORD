@@ -1,0 +1,10 @@
+misclib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+misclib/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+misclib/constants.py,sha256=xcqJg9QDxkUyXIN5UpSKPEwz_uVABeZp2TrR0YzUPQE,279
+misclib/utils/path.py,sha256=aTdx6SbTODrMnSYjDpvjzdk2J5xxUgBgbjHezSb7ECc,5365
+misclib/utils/string.py,sha256=vEgo2Bmarizyf5kHACxWJIn4N-02RYhqZb7j9wdxACw,1609
+misclib-0.1.2a0.dist-info/METADATA,sha256=68HAjcUn6uMfQ3Vu6t9yyJMvYDWJweA9SRnCmR4VRbI,1524
+misclib-0.1.2a0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+misclib-0.1.2a0.dist-info/entry_points.txt,sha256=gXSgym3JufOuHPOg3GAve5rqKsd_hkH56PQNTbuxgYo,38
+misclib-0.1.2a0.dist-info/licenses/LICENSE.txt,sha256=9je3JrV1z3kp5-fJ8XMKJNcwGB4B_dgcTSe9wkQpES8,10282
+misclib-0.1.2a0.dist-info/RECORD,,
