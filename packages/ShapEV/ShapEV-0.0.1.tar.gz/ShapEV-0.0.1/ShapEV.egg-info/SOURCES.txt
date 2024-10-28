@@ -1,0 +1,11 @@
+README.md
+setup.py
+ShapEV/EVsearch.py
+ShapEV/__init__.py
+ShapEV/funkit.py
+ShapEV.egg-info/PKG-INFO
+ShapEV.egg-info/SOURCES.txt
+ShapEV.egg-info/dependency_links.txt
+ShapEV.egg-info/entry_points.txt
+ShapEV.egg-info/requires.txt
+ShapEV.egg-info/top_level.txt
