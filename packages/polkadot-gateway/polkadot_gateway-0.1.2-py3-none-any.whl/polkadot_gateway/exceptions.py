@@ -1,0 +1,3 @@
+class PolkadotException(Exception):
+    pass
+
