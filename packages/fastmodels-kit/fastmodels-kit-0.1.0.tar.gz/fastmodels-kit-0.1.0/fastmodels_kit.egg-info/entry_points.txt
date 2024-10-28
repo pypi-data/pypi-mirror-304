@@ -1,0 +1,4 @@
+[console_scripts]
+fastmodels = fastmodels.cli:main
+fastmodels-open = fastmodels.cli:main
+
