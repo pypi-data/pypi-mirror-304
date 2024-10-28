@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cringeHW5"
+version = "0.1.0"
+description = "A simple tool for analyzing customer data from CSV files."
+authors = [{ name = "osisochka", email = "a.onufrienko@edu.centraluniversity.ru" }]
+requires-python = ">=3.7"
+dependencies = [
+    "pandas"
+]
+
+[project.scripts]
+customer_report = "report_generator:main"
+
+[tool.setuptools]
+py-modules = ["report_generator"]
