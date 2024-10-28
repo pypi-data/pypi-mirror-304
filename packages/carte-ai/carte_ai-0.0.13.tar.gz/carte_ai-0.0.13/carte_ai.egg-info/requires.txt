@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+scikit-learn
+torch
+torch-geometric
+torcheval
+catboost
+fasttext
+tabpfn
+xgboost
+
+[test]
+pytest
+coverage
