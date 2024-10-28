@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: aiclubiuh
+Version: 0.1.4
+Summary: Thư viện mẫu của AI Club IUH
+Home-page: https://main.aiclubiuh.com
+Author: htanh
+Author-email: anhkhdl@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+
+# aiclubiuh
+
+**AI_Club - Câu lạc bộ Trí tuệ nhân tạo IUH**
+
+## Giới thiệu
+
+`aiclubiuh` là thư viện Python đại diện cho Câu lạc bộ Trí tuệ Nhân tạo của Trường Đại học Công nghiệp TP.HCM (IUH). Khi import thư viện này, bạn sẽ nhận được phần giới thiệu ngắn gọn về các hoạt động, trang thiết bị và các lý do nên tham gia AI_Club.
+
+## Cài đặt
+
+Bạn có thể cài đặt thư viện này từ Test PyPI:
+
+```bash
+pip install -i https://test.pypi.org/simple/ aiclubiuh
+
+```
+
+## Sử dụng
+
+```python
+import aiclubiuh
+
+```
