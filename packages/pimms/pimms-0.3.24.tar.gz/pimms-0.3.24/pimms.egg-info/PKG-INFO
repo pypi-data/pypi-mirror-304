@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pimms
+Version: 0.3.24
+Summary: Python immutable data structures library
+Home-page: https://github.com/noahbenson/pimms/
+Author: Noah C. Benson
+Author-email: nben@nyu.edu
+License: GPLv3
+Keywords: persistent immutable functional
+License-File: LICENSE.txt
+Requires-Dist: pyrsistent>=0.11
+Requires-Dist: six>=1.10
+Requires-Dist: numpy>=1.2
+Requires-Dist: scipy>=1.2
+Requires-Dist: pint>=0.7
