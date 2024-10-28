@@ -1,0 +1,5 @@
+openai
+instructor
+requests
+prompt-toolkit
+python-dotenv
