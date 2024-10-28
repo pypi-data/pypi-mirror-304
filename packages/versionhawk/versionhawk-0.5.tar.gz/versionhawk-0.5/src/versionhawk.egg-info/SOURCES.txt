@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/versionhawk/versionhawk.py
+src/versionhawk.egg-info/PKG-INFO
+src/versionhawk.egg-info/SOURCES.txt
+src/versionhawk.egg-info/dependency_links.txt
+src/versionhawk.egg-info/entry_points.txt
+src/versionhawk.egg-info/requires.txt
+src/versionhawk.egg-info/top_level.txt
+tests/test_versionhawk.py
