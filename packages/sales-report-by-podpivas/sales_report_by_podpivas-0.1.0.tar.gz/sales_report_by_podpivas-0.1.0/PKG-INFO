@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sales-report-by-podpivas
+Version: 0.1.0
+Author-email: Ваше Имя <your.email@example.com>
+License: MIT
+Requires-Python: >=3.6
+Requires-Dist: pandas

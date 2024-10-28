@@ -1,0 +1,9 @@
+pyproject.toml
+sales_report/__init__.py
+sales_report/main.py
+sales_report/report.py
+sales_report_by_podpivas.egg-info/PKG-INFO
+sales_report_by_podpivas.egg-info/SOURCES.txt
+sales_report_by_podpivas.egg-info/dependency_links.txt
+sales_report_by_podpivas.egg-info/requires.txt
+sales_report_by_podpivas.egg-info/top_level.txt

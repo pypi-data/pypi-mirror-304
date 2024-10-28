@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales-report-by-podpivas"  # Убедитесь, что имя уникально
+version = "0.1.0"  # Версия пакета
+license = { text = "MIT" }  # Укажите лицензию
+authors = [
+    { name = "Ваше Имя", email = "your.email@example.com" }
+]
+requires-python = ">=3.6"  # Версия Python, необходимая для вашего пакета
+dependencies = [
+    "pandas"
+]
