@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: joke_business_prog
+Version: 0.1.0
+Summary: Описание моего Python-пакета
+Author-email: Pablo_3_16 <p.ergle@centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+Для использования введите в командную строку: 
+
+`py -m joke_business_prog --revenue {значение доходов} --costs {значение расходов}`
