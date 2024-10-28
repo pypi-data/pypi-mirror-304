@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+data_quality_validator/__init__.py
+data_quality_validator/validator.py
+data_quality_validator.egg-info/PKG-INFO
+data_quality_validator.egg-info/SOURCES.txt
+data_quality_validator.egg-info/dependency_links.txt
+data_quality_validator.egg-info/requires.txt
+data_quality_validator.egg-info/top_level.txt
