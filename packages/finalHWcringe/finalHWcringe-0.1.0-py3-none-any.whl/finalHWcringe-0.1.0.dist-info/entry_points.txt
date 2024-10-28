@@ -1,0 +1,6 @@
+[console_scripts]
+business_metrics = business_metrics:main
+customer_analysis = customer_analysis:main
+generate_receipt = generate_receipt:main
+sales_report = sales_report:main
+transaction_counter = transaction_counter:main
