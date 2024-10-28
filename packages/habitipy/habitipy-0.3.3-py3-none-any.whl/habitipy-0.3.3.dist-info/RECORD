@@ -1,0 +1,14 @@
+habitipy/__init__.py,sha256=C6LXUyW_QaNkPGoeEK6YhkqoVaP0wqpLCHcgOwMD4f8,210
+habitipy/aio.py,sha256=CPOJhrBTmZ7iLZr3RO8GDz0P_lD793NZKM2RarLMhfg,2273
+habitipy/api.py,sha256=478UVpO41GmogaNxzKrXfu8sOOkQ0822C69SvhifQL8,17470
+habitipy/apidoc.txt,sha256=E9KGQHmPfv5U75OxxK9qgC6LqcmQ4oHB6nIJrWwXnJQ,89260
+habitipy/async.py,sha256=kiWAXXWui4qBFtr0L_kpzrYUisGxfUiXfoRKsNVsVzE,2301
+habitipy/cli.py,sha256=s8xzZdEGzqD8bBHTymHKyctTCyotKdAKmlzMOTyniC0,30317
+habitipy/util.py,sha256=jowV7T0n8KWYHXif3fQZBg62b-8YNxYer2XJrzKWDd4,5107
+habitipy/i18n/ru/LC_MESSAGES/habitipy.mo,sha256=Cfsa1XqY_TH-EpTlAVX2h2UvclqVe5SOsKb99dihl-Q,13350
+habitipy-0.3.3.dist-info/LICENSE.txt,sha256=Z3oILzn6ykGHvRca4TvgrRKPQT6CsVmZSoukEs0zpfk,1078
+habitipy-0.3.3.dist-info/METADATA,sha256=geBuZ6C33FTEsyGuE7qrsc-gpmBP9u_il6XQE4y1M2M,1011
+habitipy-0.3.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+habitipy-0.3.3.dist-info/entry_points.txt,sha256=hZuSKN5DHsIRIHHJ-M92gWnX4LYOleFZl-xyv7DI5vg,54
+habitipy-0.3.3.dist-info/top_level.txt,sha256=JibLw4WhAAYVVukpU7Dgl4K7k6DUkudidStZamt9hv8,9
+habitipy-0.3.3.dist-info/RECORD,,
