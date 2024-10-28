@@ -1,0 +1,14 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+[project]
+name = 'checkgen_scochilloff'
+readme='README.md'
+version = '0.1.0'
+description = 'Пакет, формирующий чек на основе заказа'
+authors = [
+  {name = 'ScoChillOFF', email = 'cheatkiller12@gmail.com'}
+]
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = []
