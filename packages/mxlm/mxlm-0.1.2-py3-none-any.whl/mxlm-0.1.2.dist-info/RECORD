@@ -1,0 +1,12 @@
+mxlm/__info__.py,sha256=MeaywOQ9nmmqDb8kvpm27EllWpwHmPCr_uy7mmnB2gE,585
+mxlm/__init__.py,sha256=ZfxGmks9-WyNdPRcP5CdtxAYI29QBe7po_X9XCBw4RU,451
+mxlm/chat_api.py,sha256=gzrC0qmHjkCdMp3-ueEaL0n5aD6DF4e-mAzwCZHz720,9179
+mxlm/chatmd_utils.py,sha256=k6TXM5kmvRtvkfSxYn2VygvIpwOQq3de4TX73vLzCac,2397
+mxlm/dialog_format_conversion.py,sha256=oqlVQdR174sx6iC5IWgIsJaec2OlxoG0htm5kNGw7Go,2266
+mxlm/mxlm_utils.py,sha256=nQ4V_MKvWvpG8yjEYxKWMw9GG8t-POTAEYEkvoJ0o4s,3832
+mxlm/random_utils.py,sha256=gv8BzJTAKI1aYYXY6wwmmRkPU2y2ZeLeBIq1zyvTaQI,475
+mxlm/richtext.py,sha256=i-4wn37Exd-oNvv4OAZQcsX-dhq3Q1gUmhpE8an4e8o,1031
+mxlm-0.1.2.dist-info/METADATA,sha256=ycXyNSyO6LxpISt-US2wbcIdS6wyYx7FtykXdOVbCEs,481
+mxlm-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mxlm-0.1.2.dist-info/top_level.txt,sha256=S5JcRrbBfu7TV5fEkq5kBO9XjshMFuZ8H6aaX7SKqng,5
+mxlm-0.1.2.dist-info/RECORD,,
