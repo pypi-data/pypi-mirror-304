@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: inclusion
+Version: 1.0.2
+Summary: A tool to check for file inclusion vulnerabilities.
+Home-page: https://github.com/ByteBreach/inclusion
+Author: MrFidal
+Author-email: mrfidal@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Inclusion Scanner
+
+## Overview
+
+The Inclusion Scanner is a Python tool designed to detect file inclusion vulnerabilities on web applications. By leveraging various payloads, the scanner attempts to access sensitive files and configurations that should not be publicly exposed. This tool can be helpful for security professionals and developers seeking to identify potential security flaws in their applications.
+
+## Features
+
+- **Supports Multiple Payloads**: Uses a predefined list of payloads to check for vulnerabilities.
+- **Custom Payloads**: Users can specify their own payload files for tailored scans.
+- **Real-Time Feedback**: The scanner can provide immediate feedback on vulnerabilities found during the scan.
+
+## Installation
+
+Ensure you have Python installed on your system. Then, install the required libraries using pip:
+
+```bash
+pip install inclusion
+```
+
+## Usage
+
+### Command Line Interface
+
+You can run the scanner from the command line using various options:
+
+1. **Basic Usage with a URL**
+
+This command will scan the specified URL using default payloads:
+
+```bash
+inclusion --url https://example.com/
+```
+
+2. **Using a Custom Payload File**
+
+To scan using a custom payload file, specify the path to your file:
+
+```bash
+inclusion --url https://example.com/ --payload path/to/custom_payloads.txt
+```
+
+### Python Code Examples
+
+1. **Basic Usage with Default Payloads**
+
+This example demonstrates how to use the scanner in a Python script with default payloads:
+
+```python
+from inclusion import scan
+
+url = "https://example.com/"
+
+def print_vulnerability(test_url):
+    print(f"Inclusion vulnerability found: {test_url}")
+
+vulnerabilities = scan(url, callback=print_vulnerability)
+
+if not vulnerabilities:
+    print("No vulnerabilities found.")
+```
+
+2. **Using a Custom Payload File**
+
+Hereâ€™s how to scan a URL using a custom payload file:
+
+```python
+from inclusion import scan
+
+url = "https://example.com/"
+payload_file = "path/to/custom_payloads.txt"
+
+def print_vulnerability(test_url):
+    print(f"Inclusion vulnerability found: {test_url}")
+
+vulnerabilities = scan(url, payload_file=payload_file, callback=print_vulnerability)
+
+if not vulnerabilities:
+    print("No vulnerabilities found.")
+```
+
+## How It Works
+
+The scanner constructs URLs by appending payloads to the base URL. It then sends HTTP requests to the constructed URLs and checks the responses for signs of file inclusion vulnerabilities, such as the presence of sensitive data. 
+
+### Important Notes
+
+- **Use Responsibly**: Always obtain permission before scanning a web application. Unauthorized scanning may violate terms of service or laws.
+- **Environment**: Ensure that your scanning environment is safe and secure, especially if you are testing against live applications.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contribution
+
+Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
