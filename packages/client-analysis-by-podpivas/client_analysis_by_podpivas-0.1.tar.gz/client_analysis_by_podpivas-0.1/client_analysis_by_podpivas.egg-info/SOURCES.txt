@@ -1,0 +1,10 @@
+main.py
+setup.py
+client_analysis/__init__.py
+client_analysis/analysis.py
+client_analysis_by_podpivas.egg-info/PKG-INFO
+client_analysis_by_podpivas.egg-info/SOURCES.txt
+client_analysis_by_podpivas.egg-info/dependency_links.txt
+client_analysis_by_podpivas.egg-info/entry_points.txt
+client_analysis_by_podpivas.egg-info/requires.txt
+client_analysis_by_podpivas.egg-info/top_level.txt
