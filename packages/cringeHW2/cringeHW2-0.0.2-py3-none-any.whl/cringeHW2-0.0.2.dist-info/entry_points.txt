@@ -1,0 +1,2 @@
+[console_scripts]
+transaction-counter = transaction_counter:main
