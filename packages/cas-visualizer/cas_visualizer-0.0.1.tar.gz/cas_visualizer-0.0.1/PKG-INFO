@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cas-visualizer
+Version: 0.0.1
+Summary: 
+Author: Torsten Zesch
+Author-email: torsten.zesch@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dkpro-cassis (==0.9.1)
+Requires-Dist: numpy (==2.0.0)
+Requires-Dist: pandas (==2.2.3)
+Requires-Dist: pytest (==8.3.3)
+Requires-Dist: spacy (==3.8.2)
+Requires-Dist: streamlit (==1.39.0)
+Requires-Dist: watchdog (==5.0.3)
+Description-Content-Type: text/markdown
+
+
