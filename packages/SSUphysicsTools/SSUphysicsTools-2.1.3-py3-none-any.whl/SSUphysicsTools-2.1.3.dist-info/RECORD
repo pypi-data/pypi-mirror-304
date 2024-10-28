@@ -1,0 +1,12 @@
+SSUphysicsTools/Plots.py,sha256=OKI6NbsBV-avR9eF3V-czCi8jqz1NZb8A7yoE8w4wGg,5705
+SSUphysicsTools/__init__.py,sha256=uO5zzx4NueL6y9cyadwJ8-sF20XG_Mrf_9Ed59SbMSo,586
+SSUphysicsTools/data_analysis.py,sha256=P-GCZgKFWyZMck5ae31iLW010hitqutGQ9px6g_0E68,4993
+SSUphysicsTools/data_processing.py,sha256=pmJ8qw9V3SbWpNJtA-vICkAAsL03fJAZZmzsvpTWsaQ,2363
+SSUphysicsTools/exceptions.py,sha256=jt9INcYopA-DLc2Esr8BplURVLqw_SIxYf7L3MuslEk,348
+SSUphysicsTools/getting_data.py,sha256=efgKggstM9BelG30ddAHdngP6Bpu2xi68jlJ2GI3jTc,7078
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_init.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SSUphysicsTools-2.1.3.dist-info/METADATA,sha256=837K2OwRdQYzm9mooSZV8pVVWwLFuNzNkg7d1CiHW7g,3143
+SSUphysicsTools-2.1.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+SSUphysicsTools-2.1.3.dist-info/top_level.txt,sha256=D_KIKUvXKt7k0_vqXonxVe2vX_xwxKex6E90FAE_jdQ,22
+SSUphysicsTools-2.1.3.dist-info/RECORD,,
