@@ -1,0 +1,11 @@
+polaris/__init__.py,sha256=pvzoiJKzlKuulNc0jJrVJ4H_y_3tXWep7FPhx3iCrcI,182
+polaris/loop.py,sha256=Uvznc4SeYgPyToGM_lKV8-63eIJAKDCF5HJvs00WP3E,11878
+polaris/loopPool.py,sha256=VFXluiUM1b38Mg9_Qb-LEhuulk5gDM2RloM1Do5s8YU,6891
+polaris/loopScore.py,sha256=aB-eowj8jwk1MjdfT7X24EO3Cf9-a1xrvf_V1sNlSpQ,4947
+polaris/polaris.py,sha256=00NtMebH4bLpsqP7HHccxLXxKkoakhD62I8IUcz_lUg,735
+polaris/version.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+polaris_loop-1.0.0.dist-info/METADATA,sha256=FwZ3wkJq8XwRTXgU-GRKoDpOyUdeffg_c2Mi-Ja5FSA,3951
+polaris_loop-1.0.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+polaris_loop-1.0.0.dist-info/entry_points.txt,sha256=FioknLrw44Q9_6fj--Wk1XDEFYcssvgG7YvG0PIWZAs,48
+polaris_loop-1.0.0.dist-info/top_level.txt,sha256=w-dcIlTf_g1vjlHs3857yHM0OcmFnk4xJ2LgBYbPI6w,8
+polaris_loop-1.0.0.dist-info/RECORD,,
