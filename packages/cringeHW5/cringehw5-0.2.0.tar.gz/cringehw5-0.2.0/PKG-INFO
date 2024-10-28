@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: cringeHW5
+Version: 0.2.0
+Summary: A simple tool for analyzing customer data from CSV files.
+Author-email: osisochka <a.onufrienko@edu.centraluniversity.ru>
+Requires-Python: >=3.7
+Requires-Dist: pandas
