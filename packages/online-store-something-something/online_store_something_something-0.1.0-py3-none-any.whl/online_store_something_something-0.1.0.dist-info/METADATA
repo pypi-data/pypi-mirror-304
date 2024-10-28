@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: online-store-something-something
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: Central University Person 1 <d.gordeev@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+
+Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+
+Установите при помощи: "pip install online-store-something-something"
