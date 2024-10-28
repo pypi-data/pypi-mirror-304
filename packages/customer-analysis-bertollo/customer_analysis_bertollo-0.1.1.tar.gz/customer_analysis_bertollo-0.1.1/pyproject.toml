@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["customer_analysis"]
+
+[project]
+name = "customer_analysis_bertollo"
+version = "0.1.1"
+description = "A package to analyze customer data and generate reports."
+authors = [{ name = "Victor Bertollo", email = "bertollo.victor@gmail.com" }]
+dependencies = ["pandas"]
+
+[project.scripts]
+customer_analysis = "customer_analysis.__main__:main"
