@@ -1,0 +1,202 @@
+import unittest
+from dataclasses import dataclass
+from typing import List, Union
+from unittest import mock
+from unittest.mock import patch
+
+from pynestor.preview_odoo_nestor import (
+    EnvironementConfig,
+    PreviewUpScript,
+    PreviewUtils,
+)
+from pynestor.pynestor import NestorDescSet, NestorInstance, NestorOpt
+
+
+def _create_all_spec_sources(project_path):
+    return NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+
+
+@dataclass
+class MockInstance:
+    name: str = "test"
+    url: str = "test"
+    existing: bool = True
+    password: str = "test"
+    verbose: bool = False
+    filestore = None
+    db = None
+    spec = {}
+    update_return_value = 0
+
+    def exist(self):
+        return self.existing
+
+    def version(self, values):
+        return 15.0
+
+    def install(self, modules: str):
+        pass
+
+    def update(self, module_names: Union[str, List[str]]) -> int:
+        return self.update_return_value
+
+    def delete_and_exit_if_failed(self, return_code: int):
+        pass
+
+    def exit_if_failed(self, return_code: int):
+        pass
+
+    def wait(self, up: bool = True, postgres: bool = True, timeout=0):
+        return 0
+
+    def start(self):
+        return 0
+
+    def direct_call(self, cde=""):
+        pass
+
+    def create(self, odoo_version: str = None, values_set: NestorDescSet = None):
+        return type(self)()
+
+    def set_memory_worker(self, workers: int = None, memory_hard: int = None, memory_soft: int = None):
+        pass
+
+    @staticmethod
+    def list():
+        pass
+
+    def edit(self, values_set: NestorDescSet = None):
+        pass
+
+    def db_restore_from_s3(
+        self,
+        dump_path: str,
+        alt_dump_path: str = None,
+        s3_secret: str = None,
+        bucket: str = None,
+        set_password_to_all: bool = False,
+        no_reset_password: bool = False,
+        verbose: bool = False,
+    ):
+        pass
+
+
+class TestEnvironment(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.env_dict = {
+            "ENABLE_QUEUE_JOB": "True",
+            "NESTOR_NAME": "test",
+            "CI_PROJECT_DIR": "../src",
+            "CI_BUILD_DIR": "./",
+            "CI_PROJECT_PATH": "odoo/",
+            "GITLAB_TOKEN": "test_token",
+            "ODOO_VERSION": "15.0",
+            "CI_COMMIT_REF_NAME": "test_mr",
+        }
+
+    def prepare_script(self, env_dict):
+        config = EnvironementConfig(env_dict)
+        config.apply_default()
+        script = PreviewUpScript(config)
+        return script
+
+    def test_default_env(self):
+        env_dict = self.env_dict.copy()
+        script = self.prepare_script(env_dict)
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            values = script.get_spec_values(stage="restore")
+        script.log_spec(values)
+        self.assertTrue(values["options.queueJobs.enabled"].value)
+        # values contient des NestorOpt; NestorOpt.value retourne la chaine
+        self.assertEqual(values["options.queueJobs.channels"].value, "root:1")
+
+    def test_always_restore(self):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"ALWAYS_RESTORE": "True"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "restore_db") as mock_restore_db:
+                with patch.object(type(script), "stop"):
+                    with patch.object(type(script), "edit_with_values"):
+                        script.run_script()
+                        mock_restore_db.assert_called_with()
+
+    def test_always_restore_false(self):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"ALWAYS_RESTORE": "false"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "restore_db") as mock_restore_db:
+                with patch.object(type(script), "stop"):
+                    with patch.object(type(script), "edit_with_values"):
+                        script.run_script()
+                        mock_restore_db.assert_not_called()
+
+    def test_never_delete_on_fail(self):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"NEVER_DELETE_ON_FAIL": "True"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "restore_db"):
+                with patch.object(type(script), "stop"):
+                    with patch.object(type(script), "edit_with_values"):
+                        with patch.object(type(script.inst), "exit_if_failed") as mock_exit_if_failed:
+                            script.inst.update_return_value = 12
+                            script.run_script()
+                            mock_exit_if_failed.assert_any_call(12)
+
+    def test_never_delete_on_fail_false(self):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"NEVER_DELETE_ON_FAIL": "FALSE"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "restore_db"):
+                with patch.object(type(script), "stop"):
+                    with patch.object(type(script), "edit_with_values"):
+                        with patch.object(type(script.inst), "exit_if_failed") as mock_exit_if_failed:
+                            with patch.object(
+                                type(script.inst), "delete_and_exit_if_failed"
+                            ) as mock_delete_and_exit_if_failed:
+                                script.inst.update_return_value = 12
+                                script.run_script()
+                                self.assertTrue(all([item == 0 for item in mock_exit_if_failed.call_args_list]))
+                                mock_delete_and_exit_if_failed.assert_any_call(12)
+
+    @mock.patch("subprocess.call")
+    def test_no_reset_password_is_set(self, mock_call):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"NO_RESET_PASSWORD": "true", "ALWAYS_RESTORE": "true"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "stop"):
+                with patch.object(type(script), "edit_with_values"):
+                    with patch.object(script.inst, "db_restore_from_s3", NestorInstance("test").db_restore_from_s3):
+                        script.run_script()
+                        self.assertTrue(any("no-reset-password" in str(param) for param in mock_call.call_args_list))
+
+    @mock.patch("subprocess.call")
+    def test_no_reset_password_is_not_set(self, mock_call):
+        env_dict = self.env_dict.copy()
+        env_dict.update({"ALWAYS_RESTORE": "true"})
+        script = self.prepare_script(env_dict)
+        script.inst = MockInstance()
+        with patch.object(PreviewUtils, "_create_all_spec_sources") as mock_method:
+            mock_method.return_value = NestorDescSet([NestorOpt("sources.branch", "test_branch")])
+            with patch.object(type(script), "stop"):
+                with patch.object(type(script), "edit_with_values"):
+                    with patch.object(script.inst, "db_restore_from_s3", NestorInstance("test").db_restore_from_s3):
+                        script.run_script()
+                        self.assertFalse(any("no-reset-password" in str(param) for param in mock_call.call_args_list))
