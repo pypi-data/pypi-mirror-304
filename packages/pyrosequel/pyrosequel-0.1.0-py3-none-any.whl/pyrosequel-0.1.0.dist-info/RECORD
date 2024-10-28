@@ -1,0 +1,11 @@
+pyrosequel/__init__.py,sha256=ZDUMkD2FDvEPnxYcmIh6HS7PQDvcr8OHIyOzAAk3UPw,181
+pyrosequel/column.py,sha256=KUc5jNwxzGs7iGYBtWC66UMGVqUCB-b3wQ_WYP0tLd4,973
+pyrosequel/model.py,sha256=l5vFRqCZvebx5uNCbYtH0pxLdAgsYfJOKPn318-pwco,1747
+pyrosequel/query.py,sha256=LzxEyQhAnTdvydpG0ag52T3uLlJCpkw4Yc0r0PMetn8,2545
+pyrosequel/sqlfn.py,sha256=R8_Yps8ifYaFQ4aqiJlaIUSUC4P9f31H1xo1F64iDQk,216
+pyrosequel/sqlitedb.py,sha256=4cVebAQAFjM-vlNxe4cd0vZrsk9eqGWRks8gKhgAng8,8076
+pyrosequel-0.1.0.dist-info/LICENSE,sha256=daZ5QvU5wy-JX4LyZ14EqBvXD2EmvvtluJxPOhT10Ag,1467
+pyrosequel-0.1.0.dist-info/METADATA,sha256=JusIjOfX_Q2-q4T_XcEkKYDaIiPGkgWKMntU5z0WGrc,2211
+pyrosequel-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pyrosequel-0.1.0.dist-info/top_level.txt,sha256=yjdU3D-22NZlGw1vjHGZACK78LhIIoCLq5B-nmSQH04,11
+pyrosequel-0.1.0.dist-info/RECORD,,
