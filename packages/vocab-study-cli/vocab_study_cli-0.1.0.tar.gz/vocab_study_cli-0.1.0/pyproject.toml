@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "vocab-study-cli"
+version = "0.1.0"
+description = "A CLI tool for vocabulary learning using GenAI API"
+authors = ["Takuya Sato <business@satotakuya.jp>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+openai = "^1.52.2"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+vocab = "vocab_study_cli.main:main"
+
