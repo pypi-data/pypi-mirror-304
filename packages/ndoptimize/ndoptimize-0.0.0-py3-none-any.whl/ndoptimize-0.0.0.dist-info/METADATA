@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ndoptimize
+Version: 0.0.0
+Summary: Numba-accelerated minimization of objective functions.
+Author-email: "Roy T. Smart" <roytsmart@gmail.com>
+Project-URL: Homepage, https://github.com/sun-data/ndoptimize
+Project-URL: Documentation, https://ndoptimize.readthedocs.io/en/latest
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: astropy
+Provides-Extra: doc
+Requires-Dist: pytest ; extra == 'doc'
+Requires-Dist: matplotlib ; extra == 'doc'
+Requires-Dist: graphviz ; extra == 'doc'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'doc'
+Requires-Dist: pydata-sphinx-theme ; extra == 'doc'
+Requires-Dist: ipykernel ; extra == 'doc'
+Requires-Dist: jupyter-sphinx ; extra == 'doc'
+Requires-Dist: sphinx-favicon ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: scipy ; extra == 'test'
+
+# ndoptimize
+
+[![Black](https://github.com/sun-data/ndoptimize/actions/workflows/black.yml/badge.svg)](https://github.com/sun-data/ndoptimize/actions/workflows/black.yml)
+[![Ruff](https://github.com/sun-data/ndoptimize/actions/workflows/ruff.yml/badge.svg)](https://github.com/sun-data/ndoptimize/actions/workflows/ruff.yml)
+[![Documentation Status](https://readthedocs.org/projects/ndoptimize/badge/?version=latest)](https://ndoptimize.readthedocs.io/en/latest/?badge=latest)
+
+Numba-accelerated minimization of objective functions.
