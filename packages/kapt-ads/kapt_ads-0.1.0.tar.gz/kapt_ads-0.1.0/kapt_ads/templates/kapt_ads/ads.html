@@ -1,0 +1,14 @@
+{% for ad in ads %}
+  {% if ad.target_url %}
+    <a href="{% url 'target-redirect' ad.pk %}">
+  {% endif %}
+
+  <img src="{{ ad.image.url }}" />
+  {% if ad.text %}
+    <p>{{ ad.text.html|safe }}</p>
+  {% endif %}
+
+  {% if ad.target_url %}
+    </a>
+  {% endif %}
+{% endfor %}
