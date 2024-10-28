@@ -1,0 +1,8 @@
+README.md
+generate_reciept.py
+setup.py
+generate_reciept_tikhonmakeev.egg-info/PKG-INFO
+generate_reciept_tikhonmakeev.egg-info/SOURCES.txt
+generate_reciept_tikhonmakeev.egg-info/dependency_links.txt
+generate_reciept_tikhonmakeev.egg-info/entry_points.txt
+generate_reciept_tikhonmakeev.egg-info/top_level.txt
