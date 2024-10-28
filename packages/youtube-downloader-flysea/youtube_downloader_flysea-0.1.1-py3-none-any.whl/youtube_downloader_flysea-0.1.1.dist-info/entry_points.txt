@@ -1,0 +1,3 @@
+[console_scripts]
+yt=youtube_downloader_flysea.__main__:main
+
