@@ -1,0 +1,10 @@
+db_engine_factory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+db_engine_factory/db_connection.py,sha256=zcopM515q-i4BI_ImEygoc6PM4chr7brPoeKovtpKuI,1755
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=PSUNL1fDcF9p3-sAe2BlYNeB-JxA8ksE7pZM5_xkqos,2564
+db_engine_factory-0.1.1.dist-info/LICENSE,sha256=uiZAHqoabFkP4zKBfnZGXmJ6n6ecoaqNK--dbo7YISs,1068
+db_engine_factory-0.1.1.dist-info/METADATA,sha256=g65nWBUxOfgsgTyD6DAOIN_PxNMYdna4J1hevTJ-hXo,534
+db_engine_factory-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+db_engine_factory-0.1.1.dist-info/entry_points.txt,sha256=ettbglE9zOXDJQ9w9YkLRg3VlAbhq7wBhznm2WF4_sg,64
+db_engine_factory-0.1.1.dist-info/top_level.txt,sha256=ygClzPByUkKPtBuk5qiKTa0ayZ-lIBT4S7UP631XUvg,24
+db_engine_factory-0.1.1.dist-info/RECORD,,

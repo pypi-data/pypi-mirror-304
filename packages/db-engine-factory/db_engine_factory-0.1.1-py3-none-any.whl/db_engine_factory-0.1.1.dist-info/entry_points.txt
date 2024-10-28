@@ -1,0 +1,2 @@
+[console_scripts]
+test_db_factory = tests.test:test_connections
