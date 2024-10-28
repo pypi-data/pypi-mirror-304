@@ -1,0 +1,14 @@
+
+.venv
+*/__pycache__/*
+**/*/__pycache__/*
+.idea/
+.DS_Store
+.vscode
+build/
+dist/
+zinley.egg-info/
+zinley_cli.egg-info/
+zinley/v2/code/log/logs/*
+zinley/v2/code/log/logs
+zinley/v2/code/log/logs/app.log
