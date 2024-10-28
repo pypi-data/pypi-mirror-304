@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+clients_reporter/__init__.py
+clients_reporter/__main__.py
+clients_reporter/utils.py
+clients_reporter_scochilloff.egg-info/PKG-INFO
+clients_reporter_scochilloff.egg-info/SOURCES.txt
+clients_reporter_scochilloff.egg-info/dependency_links.txt
+clients_reporter_scochilloff.egg-info/requires.txt
+clients_reporter_scochilloff.egg-info/top_level.txt
