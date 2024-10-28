@@ -1,0 +1,12 @@
+motion_vector_extractor-1.1.0.dist-info/top_level.txt,sha256=s_DROGYlaFJm_qG9gNHbnXlcOeqE7dfcsYr2wXe_jAg,12
+motion_vector_extractor-1.1.0.dist-info/RECORD,,
+motion_vector_extractor-1.1.0.dist-info/LICENSE,sha256=GD6g-CsnB-agm-DPylez-MVrQA5LxS0yajX_DPhUQoQ,1078
+motion_vector_extractor-1.1.0.dist-info/entry_points.txt,sha256=zsuvkSS_OqN0zAiiqGlIMu0wx2EqsiiRUJJ4FyNzchw,58
+motion_vector_extractor-1.1.0.dist-info/METADATA,sha256=rAE2m_hp39S-yCbI4eHWVd0wZ35rgnAQBWfI2kH-EVs,1411
+motion_vector_extractor-1.1.0.dist-info/WHEEL,sha256=3LpvVQsCwVteMmjeGHJWUcyFskDBH8xmciSd6Tac13g,111
+mvextractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mvextractor/videocap.cpython-39-x86_64-linux-gnu.so,sha256=Sp67Z07t_cQD2VHfkdWhGCDLARZFH9PxUCr-FyL1Lbo,106869553
+mvextractor/__main__.py,sha256=e7-YjiRYK10I48r1OWrKCISQUuDHFrhnPHGt29hNQek,3930
+motion_vector_extractor.libs/libopencv_imgproc-6abf339c.so.4.10.0,sha256=tBa2GtcN5ph5WupGnmM84OmzCd3MsHqbyF-s3b63Tpk,29822961
+motion_vector_extractor.libs/libopencv_core-c6458a19.so.4.10.0,sha256=4792QxBJ6XLdznltKXb053wHemkQaJmAP9oG4rqHYLo,15760929
+motion_vector_extractor.libs/libbz2-e34b29ae.so.1.0.6,sha256=t0Rx5MGhoqFd8hOzCgew5TwGvZFpy_XTk-dae2FXAEs,79145
