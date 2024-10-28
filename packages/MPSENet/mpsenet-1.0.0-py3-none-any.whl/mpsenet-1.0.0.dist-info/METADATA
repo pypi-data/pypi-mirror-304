@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: MPSENet
+Version: 1.0.0
+Summary: Python package of MP-SENet from Explicit Estimation of Magnitude and Phase Spectra in Parallel for High-Quality Speech Enhancement.
+Author: yxlu-0102
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: einops
+Requires-Dist: huggingface-hub
+Requires-Dist: joblib
+Requires-Dist: librosa
+Requires-Dist: numpy
+Requires-Dist: soundfile
+Requires-Dist: torch

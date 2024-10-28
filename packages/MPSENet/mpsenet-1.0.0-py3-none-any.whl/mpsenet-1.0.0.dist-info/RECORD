@@ -1,0 +1,9 @@
+MPSENet/__init__.py,sha256=0-vuNEZ5xT3M834EgyLgTEuiYY6zWPRhwNgDaOJIYYs,61
+MPSENet/env.py,sha256=wwYVYp-Qas9xxnEEp4029oLGNeVbgI19gCLUeic4siU,148
+MPSENet/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MPSENet/model/mpsenet.py,sha256=Y9DdwGfoe16-VW5gqJ-kOE9fulH-03tstHer-qGcsgg,9803
+MPSENet/model/transformer.py,sha256=RPsXuaYE-GEwT9clF7_qc1CDk8oO8AtYqqtgg8AS7ws,1612
+mpsenet-1.0.0.dist-info/METADATA,sha256=kLq-hbiMaSBCgxiuZIayZpy2OHejWdBjCN9vLrH-ABE,421
+mpsenet-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mpsenet-1.0.0.dist-info/licenses/LICENSE,sha256=32MizjyjxwoIRcSjhEMqmvUOfXCIbTFnQeL0e1rgHzQ,1069
+mpsenet-1.0.0.dist-info/RECORD,,
