@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: neuropythy
+Version: 0.12.16
+Summary: Toolbox for flexible cortical mesh analysis and registration
+Home-page: https://github.com/noahbenson/neuropythy
+Download-URL: https://github.com/noahbenson/neuropythy
+Author: Noah C. Benson
+Author-email: nben@uw.edu
+Maintainer-email: nben@uw.edu
+License: AGPL
+Keywords: neuroscience mesh cortex registration
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.13
+Requires-Dist: scipy>=1.1
+Requires-Dist: six>=1.13
+Requires-Dist: nibabel>=2.0
+Requires-Dist: pyrsistent>=0.11
+Requires-Dist: pint>=0.7
+Requires-Dist: pimms>=0.3.24
+Requires-Dist: py4j>=0.10
+Requires-Dist: h5py>=2.8.0
+Requires-Dist: s3fs>=0.1.5
+Provides-Extra: graphics2d
+Requires-Dist: matplotlib>=1.5.3; extra == "graphics2d"
+Provides-Extra: graphics3d
+Requires-Dist: matplotlib>=1.5.3; extra == "graphics3d"
+Requires-Dist: ipyvolume>=0.5.1; extra == "graphics3d"
+Provides-Extra: torch
+Requires-Dist: torch>=1.6.0; extra == "torch"
+Provides-Extra: all
+Requires-Dist: matplotlib>=1.5.3; extra == "all"
+Requires-Dist: ipyvolume>=0.5.1; extra == "all"
+Requires-Dist: torch>=1.6.0; extra == "all"
+
+
+                     See the README.md file at the github repository for this package:
+                     https://github.com/noahbenson/neuropythy
+                     
