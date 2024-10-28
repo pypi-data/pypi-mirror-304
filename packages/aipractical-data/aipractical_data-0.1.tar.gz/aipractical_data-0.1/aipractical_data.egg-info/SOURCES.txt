@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+aipractical_data.egg-info/PKG-INFO
+aipractical_data.egg-info/SOURCES.txt
+aipractical_data.egg-info/dependency_links.txt
+aipractical_data.egg-info/top_level.txt
