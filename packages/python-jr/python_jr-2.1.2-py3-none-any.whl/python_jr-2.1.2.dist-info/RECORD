@@ -1,0 +1,14 @@
+python_jr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_jr/grpc_controller_pb2.py,sha256=q3fzlCnCpZAGLo_JTPHKhIdAw3OF-CN6I_L4AL8-u3c,1520
+python_jr/grpc_controller_pb2.pyi,sha256=DLDeT-Le693aw6c767hzP5Fpan6Y7YZW2Ip-DXFPde8,270
+python_jr/grpc_controller_pb2_grpc.py,sha256=3RLBvlMfrTnN1lv9KAMMDmenY9-d6fOXwWWStWc0mqY,3515
+python_jr/grpc_stdio_pb2.py,sha256=R9saSTkf-vtxOXlvEOcSV6yQCA_0mPCWTg3X4wWX1FI,1953
+python_jr/grpc_stdio_pb2.pyi,sha256=EARHGHc6kfJJPyG27S4OanN__8gO2qtgo3CiEhxd5Jw,994
+python_jr/grpc_stdio_pb2_grpc.py,sha256=U7c3XMLCHKC2NVp7VnUlKp8wvb15tHIbsdeKjomzZVo,4064
+python_jr/jrplugin.py,sha256=2A2F7ZooeNLHUnEj6HafgXuVtvUnJxBbzlvKxIHrkYw,4412
+python_jr/producer_pb2.py,sha256=mGM67f2jo1V-s-wqVWh1qcjqYCgoq3KP7kUnn2X9b3o,2738
+python_jr/producer_pb2.pyi,sha256=jswSCmJLtw7LJsgIcx3I07lgU0N8PG8ihNErOk1os6A,1756
+python_jr/producer_pb2_grpc.py,sha256=rENyQ4a7MnMVN3cL7XbZmqBTbvamljKrJQ5Om83EB6Q,3371
+python_jr-2.1.2.dist-info/METADATA,sha256=VtZCG_vATThtwhLSfr5ML-fdgd66KJWdhFjvICxA6Lc,1521
+python_jr-2.1.2.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+python_jr-2.1.2.dist-info/RECORD,,
