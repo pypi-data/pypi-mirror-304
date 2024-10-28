@@ -1,0 +1,2 @@
+# LanguageTranslate
+Translation Adapter
