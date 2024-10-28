@@ -1,0 +1,2 @@
+[console_scripts]
+pick_cli = pick_cli_pack.main:main
