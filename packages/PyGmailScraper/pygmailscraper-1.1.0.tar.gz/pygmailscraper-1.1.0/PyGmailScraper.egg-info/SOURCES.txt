@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+PayGmailScraper/__init__.py
+PayGmailScraper/gmail_setup.py
+PayGmailScraper/parse_gmail_base.py
+PayGmailScraper/pay_gmail_scraper.py
+PayGmailScraper/payment_information.py
+PayGmailScraper/payment/ana_pay.py
+PayGmailScraper/payment/rakuten_pay.py
+PyGmailScraper.egg-info/PKG-INFO
+PyGmailScraper.egg-info/SOURCES.txt
+PyGmailScraper.egg-info/dependency_links.txt
+PyGmailScraper.egg-info/requires.txt
+PyGmailScraper.egg-info/top_level.txt
