@@ -1,0 +1,2 @@
+[llm]
+whisper_api = llm_whisper_api
