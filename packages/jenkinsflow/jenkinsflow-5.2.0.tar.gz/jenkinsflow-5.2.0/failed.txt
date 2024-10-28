@@ -1,0 +1,8 @@
+FAILED test/abort_test.py::test_abort[ApiType.JENKINS]
+FAILED test/abort_retry_test.py::test_abort_retry_serial_parallel_nested[ApiType.JENKINS]
+FAILED test/missing_jobs_test.py::test_missing_jobs_allowed_created_serial_parallel[ApiType.JENKINS]
+FAILED test/abort_retry_test.py::test_abort_retry_serial_toplevel[ApiType.JENKINS]
+FAILED test/abort_retry_test.py::test_abort_retry_parallel_serial_nested[ApiType.JENKINS]
+FAILED test/kill_test.py::test_kill_mini[ApiType.JENKINS]
+FAILED test/abort_retry_test.py::test_abort_retry_parallel_toplevel[ApiType.JENKINS]
+FAILED test/kill_test.py::test_kill_current[ApiType.JENKINS]
