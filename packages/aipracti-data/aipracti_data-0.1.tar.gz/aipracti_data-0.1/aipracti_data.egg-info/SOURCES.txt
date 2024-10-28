@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+ai_data/__init__.py
+ai_data/data/Ai practical-1.pdf
+ai_data/data/balanceScale.csv
+ai_data/data/pima-indians-diabetes.data.csv
+ai_data/data/requirements.txt
+aipracti_data.egg-info/PKG-INFO
+aipracti_data.egg-info/SOURCES.txt
+aipracti_data.egg-info/dependency_links.txt
+aipracti_data.egg-info/top_level.txt
