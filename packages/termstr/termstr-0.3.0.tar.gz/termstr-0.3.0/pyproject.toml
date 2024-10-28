@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "termstr"
+version = "0.3.0"
+description = "`termstr` elevates terminal output with customizable color, style, and alignment options for text."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Lingxuan Ye", email = "love@lingxuan.io" },
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = []
+
+[project.urls]
+Issues = "https://github.com/Lingxuan-Ye/termstr/issues"
+Source = "https://github.com/Lingxuan-Ye/termstr"
