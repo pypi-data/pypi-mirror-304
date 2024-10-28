@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: clients_reporter_scochilloff
+Version: 0.1.1
+Summary: Пакет, создающий отчет по клиентам
+Author-email: ScoChillOFF <cheatkiller12@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas==2.2.3
+
+### Запуск
+`python -m clients_reporter`
