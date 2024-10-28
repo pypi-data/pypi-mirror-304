@@ -1,0 +1,8 @@
+pg_ormapping/__init__.py,sha256=pEMdh2RsFbcJsgUk8SS99nW8tryaH86DzKUjJVa8cJA,262
+pg_ormapping/define.py,sha256=K9D5GYdHdM0Db2OJTjHSCMr6IMVjFCtdc5v1MCVan10,237
+pg_ormapping/field.py,sha256=OyEAkqGq3F2Nf0j2rJpt2YAwwyJrUCujfb9LXN4OYvM,3791
+pg_ormapping/obj.py,sha256=i9_Wj08TVfV5kfgb02sAaoRV-QLhqXg3dMPqq2nKG68,6876
+pg_ormapping-1.0.0.dist-info/METADATA,sha256=e-aBgv_OGvhSjBeJU2ZG8Yxc_HKo5Z9oEIXPECgO8q4,214
+pg_ormapping-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pg_ormapping-1.0.0.dist-info/top_level.txt,sha256=dv5UVRP33MrneygqQK4XljlDa3RK56WBmFFK6oOLvO4,13
+pg_ormapping-1.0.0.dist-info/RECORD,,
