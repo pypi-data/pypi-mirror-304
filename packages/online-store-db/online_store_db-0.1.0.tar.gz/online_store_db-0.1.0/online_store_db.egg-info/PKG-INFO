@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: online_store_db
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: "Roman A." <youremail@example.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.2
+Provides-Extra: dev
+Requires-Dist: json; extra == "dev"
+Requires-Dist: csv; extra == "dev"
+
+This package allows you to streamline your business processes.
+
+The package is needed to manage orders in your store, as well as to have a database with customers.
