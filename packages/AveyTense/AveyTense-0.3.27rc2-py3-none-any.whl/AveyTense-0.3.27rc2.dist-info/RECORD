@@ -1,0 +1,16 @@
+tense/__init__.py,sha256=kPFFIw7mxlSkg06cfIoEwaueg9o8CIJxX-R_gO4cvTY,192043
+tense/_abc.py,sha256=gMTuKtp-8IW4cj7Y4fUkgAzwIddr_Xw58C6WSA51ifQ,57128
+tense/_exceptions.py,sha256=oV6NsCX1Cd7stbavWDQSlW8C6U9Hw4MUZ7I4-RZ__O4,6460
+tense/_nennai_types.py,sha256=VgTzLFehqnkqsjwDkW_TL5emgG-J5Koro-dBdAmwipg,31962
+tense/_primal.py,sha256=LWzI-98Ue6excJLJrauRFgQ9JI2sS_CN1KgEGQ5zNCs,58783
+tense/_primal_types.py,sha256=EzCPkFbi-9_yA7G4q-IGR6bm99aX2cWM97DTO2S-vbo,24908
+tense/_versioning.py,sha256=HbpvBGEgazXH9ftjxOulhfRu9eJQPIQx5od88iWb5Eg,6135
+tense/constants.py,sha256=ZHyO-pqTzfsHkUfJ4Kc2Lj3hanunuZrB1vIpe8eeZ7c,8228
+tense/databases.py,sha256=TcCOZA4dRCBAZIdLaPs5qolHXC_TtQeFbnTrlEWv7dU,10348
+tense/operators.py,sha256=Jprkci6SwK27S8V5JDMVivwpzESCYqK5lF3SnvuU8d0,1210
+tense/package.json,sha256=RBeG-BTGAxqgGKLORIYWFEfb-hE9RfZV0al4Ey06biQ,130
+tense/types_collection.py,sha256=i0BDDvwtvUE6VO9UU-e05o7mLgcNC2n_wZbv2eCaUes,34580
+AveyTense-0.3.27rc2.dist-info/METADATA,sha256=vDU2qCR2PAuLdAYY1fbiIQC3PdQiSs_O3SqxjBa0qtY,799
+AveyTense-0.3.27rc2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+AveyTense-0.3.27rc2.dist-info/top_level.txt,sha256=LAHyCOW8zRK9209ClMlkdw1DGYWDLa4cWSuYVfn_Mfs,6
+AveyTense-0.3.27rc2.dist-info/RECORD,,
