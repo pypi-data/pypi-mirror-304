@@ -1,0 +1,12 @@
+ASCII_ART.txt
+MANIFEST.in
+README.md
+setup.py
+bourguiba/__init__.py
+bourguiba/art.py
+bourguiba.egg-info/PKG-INFO
+bourguiba.egg-info/SOURCES.txt
+bourguiba.egg-info/dependency_links.txt
+bourguiba.egg-info/entry_points.txt
+bourguiba.egg-info/top_level.txt
+bourguiba/../ASCII_ART.txt
