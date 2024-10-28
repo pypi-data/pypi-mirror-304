@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: appsec-discovery
+Version: 0.2.0
+Summary: Discover sensitive objects in project code
+License: MIT
+Keywords: security,assets,discovery,scanning,appsec
+Author: Dmitrii Mariushkin
+Author-email: d.v.marushkin@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Security
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: pydantic (==1.9.0)
+Requires-Dist: semgrep (>=1.58.0,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/dmarushkin/appsec-discovery/issues
+Project-URL: Homepage, https://github.com/dmarushkin/appsec-discovery
+Description-Content-Type: text/markdown
+
+# Appsec discovery lib and cli
+
+
