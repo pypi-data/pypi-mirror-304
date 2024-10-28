@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "oe-extract-ids"
+version = "0.1.51"
+description = "some longer description"
+authors = ["Some Author <some@author.io>"]
+
+[tool.poetry.dependencies]
+python = "*"
+
+[tool.poetry.dev-dependencies]
+requests = "*"
