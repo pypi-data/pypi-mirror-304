@@ -1,0 +1,5 @@
+partcad==0.7.16
+renderlab
+rlPyCairo
+svglib
+ocp_vscode
