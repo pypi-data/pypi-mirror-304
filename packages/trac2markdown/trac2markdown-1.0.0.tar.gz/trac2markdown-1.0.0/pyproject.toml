@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trac2markdown"
+version = "1.0.0"
+authors = [
+  { name="Vesela Trajkoska", email="veselatrajkoska2@gmail.com" },
+]
+description = "Open-source Python package for formatting text from Trac's Markdown syntax to the standard Markdown format."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/veselatrajkoska/trac_to_markdown"
+Documentation = "https://trac-to-markdown.readthedocs.io/en/latest/"
+Issues = "https://github.com/veselatrajkoska/trac_to_markdown/issues"
