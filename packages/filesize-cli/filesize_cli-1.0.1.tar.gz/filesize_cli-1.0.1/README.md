@@ -1,0 +1,252 @@
+# filesize CLI
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Build Status](https://gitlab.com/thaikolja/filesize-cli/badges/master/pipeline.svg)](https://gitlab.com/thaikolja/filesize-cli/-/pipelines) [![PyPI Version](https://img.shields.io/pypi/v/filesize-cli.svg)](https://pypi.org/project/filesize-cli/) [![PyPI Downloads](https://img.shields.io/pypi/dm/filesize-cli.svg)](https://pypi.org/project/filesize-cli/)
+
+**filesize CLI** is a simple and efficient command-line tool written in Python that displays the size of a file in various units (B, KB, MB, GB, TB). Whether you're managing files on Windows, macOS, or Linux, `filesize` provides a straightforward way to check file sizes directly from your terminal.
+
+## 📖 Table of Contents
+
+- [✨ Features](#-features)
+- [🛠️ Installation](#️-installation)
+  - [Using `pip` (Recommended)](#using-pip-recommended)
+  - [From Source](#from-source)
+- [🚀 Usage](#-usage)
+  - [Options](#options)
+  - [Examples](#examples)
+- [🧪 Testing](#-testing)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#license)
+- [📅 Changelog](#changelog)
+- [📞 Support](#support)
+
+## ✨ Features
+
+- **Multi-Unit Support:** Display file sizes in Bytes (B), Kilobytes (KB), Megabytes (MB), Gigabytes (GB), or Terabytes (TB).
+- **Customizable Conversion Rate:** Specify a custom conversion rate (default is 1000).
+- **Pretty Print Option:** Toggle between plain output and formatted output with unit labels.
+- **Cross-Platform Compatibility:** Works seamlessly on Windows, macOS, and Linux.
+- **Easy Installation:** Install globally using `pip` for universal access.
+
+## 🛠️ Installation
+
+### Using `pip` (Recommended)
+
+Installing via `pip` is the simplest method to get `filesize-cli` up and running.
+
+1. **Ensure Python and pip are Installed**
+
+   - **Windows:**
+     - Download and install Python from the [official website](https://www.python.org/downloads/windows/).
+     - Ensure that Python is added to your system's PATH during installation.
+   - **macOS:**
+     - Python 3 is pre-installed on newer versions. If not, install it via [Homebrew](https://brew.sh/):
+       ```bash
+       brew install python
+
+   - **Linux:**
+     - Python 3 can be installed via your distribution's package manager. For example, on Ubuntu:
+       ```bash
+       sudo apt update
+       sudo apt install python3 python3-pip
+       ```
+
+2. **Install `filesize-cli` Globally**
+
+   Open your terminal or command prompt and run:
+   
+   ```bash
+   pip install filesize-cli
+   ```
+
+   This command installs the package and makes the `filesize` command available globally.
+
+3. **Verify Installation**
+
+   ```bash
+   filesize --help
+   ```
+
+   You should see the help message detailing the usage and options.
+
+### From Source
+
+If you prefer to install from the source repository:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://gitlab.com/thaikolja/filesize-cli.git
+   cd filesize-cli
+   ```
+
+2. **Install the Package**
+
+   ```bash
+   pip install .
+   ```
+
+3. **Verify Installation**
+
+   ```bash
+   filesize --help
+   ```
+
+## 🚀 Usage
+
+The `filesize` command allows you to view the size of a specified file in your desired unit. Below are the options and examples to help you get started.
+
+### Options
+
+- `-u`, `--unit`: (Optional) Unit to display the file size in. **Default:** `mb`
+   1. `b` (Bytes)
+   2. `kb` (Kilobytes)
+   3. `mb` (Megabytes)
+   4. `gb` (Gigabytes)
+   5. `tb` (Terabytes)
+- `-r`, `--rate`: (Optional) Conversion rate of the file size. **Default:** `1000`
+  1. e.g., `1024`
+- `-p`, `--pretty`:  **Description:** Pretty print the output by including unit labels. **Default:** *empty*
+
+### Examples
+
+#### 1. Display Size in Megabytes (Default)
+
+```bash
+filesize examples/image.jpg
+```
+
+**Output:**
+```
+1.00 MB
+```
+
+#### 2. Display Size in Kilobytes with Pretty Print
+
+```bash
+filesize -u kb -p examples/image.jpg
+```
+
+**Output:**
+```
+1000.00 KB
+```
+
+#### 3. Display Size in Bytes without Pretty Print
+
+```bash
+filesize -u b examples/base64.txt
+```
+
+**Output:**
+```
+500.00
+```
+
+#### 4. Use a Custom Conversion Rate
+
+```bash
+filesize -u mb -r 1024 examples/video.mp4
+```
+
+**Output:**
+```
+0.98 MB
+```
+
+## 🧪 Testing
+
+Ensuring the reliability and correctness of `filesize-cli` is paramount. The project includes a comprehensive test suite using `pytest`.
+
+### Running Tests
+
+1. **Clone the Repository (if not already done)**
+
+   ```bash
+   git clone https://gitlab.com/thaikolja/filesize-cli.git
+   cd filesize-cli
+   ```
+
+2. **Create and Activate a Virtual Environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   pip install .
+   ```
+
+4. **Run Tests**
+
+   ```bash
+   pytest
+   ```
+
+### Test Structure
+
+Tests are located in the `tests/` directory and cover various scenarios, including:
+
+- Displaying file sizes in different units.
+- Handling non-existent files.
+- Custom conversion rates.
+- Pretty and non-pretty outputs.
+- Integration tests using real example files.
+
+## 🤝 Contributing
+
+Contributions are welcome! Whether it's reporting a bug, suggesting a feature, or submitting a pull request, your input helps improve `filesize CLI`.
+
+### Steps to Contribute
+
+1. **Fork the Repository**
+
+   Click the "Fork" button on the [GitLab repository](https://gitlab.com/thaikolja/filesize-cli) to create your own copy.
+
+2. **Clone Your Fork**
+
+   ```bash
+   git clone https://gitlab.com/yourusername/filesize-cli.git
+   cd filesize-cli
+   ```
+
+3. **Create a New Branch**
+
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+4. **Make Your Changes**
+
+   Implement your feature or fix bugs.
+
+5. **Commit Your Changes**
+
+   ```bash
+   git commit -m "Add feature: YourFeatureName"
+   ```
+
+6. **Push to Your Fork**
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+7. **Submit a Merge Request**
+
+   Go to the original repository and create a merge request from your fork.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 📅 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed information about changes.
+
+## 📞 Support
+
+If you encounter any issues or have questions, feel free to open an issue in the [GitLab repository](https://gitlab.com/thaikolja/filesize-cli/issues) or reach out to the maintainer at [kolja.nolte@gmail.com](mailto:kolja.nolte@gmail.com).
