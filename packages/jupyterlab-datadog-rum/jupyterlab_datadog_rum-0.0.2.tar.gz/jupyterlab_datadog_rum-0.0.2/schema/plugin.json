@@ -1,0 +1,15 @@
+{
+  "additionalProperties": false,
+  "description": "",
+  "jupyter.lab.shortcuts": [],
+  "title": "",
+  "type": "object",
+  "properties": {
+    "private": {
+      "default": {},
+      "description": "",
+      "title": "",
+      "type": "object"
+    }
+  }
+}
