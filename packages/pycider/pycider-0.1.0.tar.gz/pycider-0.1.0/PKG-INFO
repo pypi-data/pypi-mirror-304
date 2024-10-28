@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pycider
+Version: 0.1.0
+Summary: 
+Author: Melody Asper
+Author-email: melodyaheath@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+
