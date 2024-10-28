@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sduplayground
+Version: 0.1.0
+Requires-Dist: playwright
+Requires-Dist: pytesseract
+Requires-Dist: Pillow

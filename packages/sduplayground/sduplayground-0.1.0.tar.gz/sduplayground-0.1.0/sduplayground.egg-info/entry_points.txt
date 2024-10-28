@@ -1,0 +1,2 @@
+[console_scripts]
+sduplayground = sduplayground.main:main
