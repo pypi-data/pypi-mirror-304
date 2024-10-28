@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: financial_metrics_bertollo
+Version: 0.1.1
+Summary: A package for calculating financial metrics such as net profit and ROI.
+Author: Victor Bertollo
+Author-email: bertollo.victor@gmail.com
