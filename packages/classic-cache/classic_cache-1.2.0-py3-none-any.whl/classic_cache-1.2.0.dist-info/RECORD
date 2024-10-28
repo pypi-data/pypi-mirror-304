@@ -1,0 +1,17 @@
+classic/cache/__init__.py,sha256=JCvnGpRG-2vl2xEYbJEeYyPamjtOLZUA5-QS41wWK9I,134
+classic/cache/cache.py,sha256=9ZyP43c48CUsKYtEvlo9GwDQY9hErBpDAeD1gVCFSBQ,4872
+classic/cache/decorator.py,sha256=Db1Yi1rK36GG4rcSES5HbfQbWs842I75UtGGe38-Wrs,5711
+classic/cache/key_generator.py,sha256=CocNke2FRuVz3rk9vNm54gPozit16x7Ve9OxSzdnhoE,1839
+classic/cache/caches/__init__.py,sha256=wtpnsY2gYGR-2amS5ZYo1JWXN8PyOkTi50g4zTxfOfY,67
+classic/cache/caches/in_memory.py,sha256=aLsFccjeVMTNXEY2KMRxw8TS_U6OXnOk2uy5Heqbl_s,1696
+classic/cache/caches/redis.py,sha256=r7KQ7y0fLYgRjf10W70gD2Yt18bJMQ_mzYBEVYd1q4M,4740
+classic/cache/key_generators/__init__.py,sha256=xiVqiZHqh40x5EC1N9u53Gy3A_TJw7VhBudhoHgM1Rg,165
+classic/cache/key_generators/blake2b.py,sha256=C5GyhhGJx5KKAOshIcPvJe9EUs88XSgGfy5qC7gfnGc,876
+classic/cache/key_generators/msgspec.py,sha256=HxaV-M7VA8yIhIi36v-5uCqS-r1IDorUI6dNSwLotNE,507
+classic/cache/key_generators/orjson.py,sha256=t7CitYZluvnw1fyMJ5uLikWhoHhkl8FmFN5PXePHHQc,1075
+classic/cache/key_generators/pure_hash.py,sha256=ZFw0OEM6tXKG0yfTgLhUe56nPz-_1zhRbAUMQni5dDU,1100
+classic_cache-1.2.0.dist-info/LICENSE,sha256=NJlZYf1BWmSV82IG29S9QdVpNjUsMMIeMwAtJpkkU9w,1071
+classic_cache-1.2.0.dist-info/METADATA,sha256=k361weiytF_NzWIpPO1tJrRqzMdAxgRDJ7alsAJGk0E,2463
+classic_cache-1.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+classic_cache-1.2.0.dist-info/top_level.txt,sha256=NGd9e95FycaETli7Cs0MwFTtdjK6EYJ3tq_ErbSLNZg,8
+classic_cache-1.2.0.dist-info/RECORD,,
