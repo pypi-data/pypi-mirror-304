@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timbersnake"
+authors = [{name="Matthew Murr", email="matt@murr.dev"}]
+description = "Client & server implementation of the lumberjack protocol v1+2 in Python asyncio"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["logstash", "lumberjack", "beats", "filebeat", "elastic"]
+
+requires-python = ">=3.8"
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries"
+]
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://git.sr.ht/~murr/timbersnake"
+Repository = "https://git.sr.ht/~murr/timbersnake"
+Documentation = "https://git.sr.ht/~murr/timbersnake/tree/master/item/README.md"
+
+[tool.setuptools]
+packages = ["timbersnake"]
+
+[tool.setuptools.dynamic]
+version = {attr = "timbersnake.__version__"}
+
+[tool.ruff]
+include = ["pyproject.toml", "timbersnake/*.py", "tests/*.py"]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "B", "C", "F", "INP", "RET"]
+ignore = ["E501", "B023", "C901", "RET505", "ARG"]
