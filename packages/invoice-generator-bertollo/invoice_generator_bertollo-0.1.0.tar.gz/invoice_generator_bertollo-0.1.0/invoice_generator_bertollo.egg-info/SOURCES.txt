@@ -1,0 +1,9 @@
+README.md
+setup.py
+invoice_generator/__main__.py
+invoice_generator/invoice_creator.py
+invoice_generator_bertollo.egg-info/PKG-INFO
+invoice_generator_bertollo.egg-info/SOURCES.txt
+invoice_generator_bertollo.egg-info/dependency_links.txt
+invoice_generator_bertollo.egg-info/entry_points.txt
+invoice_generator_bertollo.egg-info/top_level.txt
