@@ -1,0 +1,2 @@
+[console_scripts]
+client-analysis = main:main

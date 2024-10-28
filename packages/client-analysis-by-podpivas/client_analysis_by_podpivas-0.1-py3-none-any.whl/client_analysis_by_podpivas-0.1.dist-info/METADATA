@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: client_analysis_by_podpivas
+Version: 0.1
+Summary: Анализ данных о клиентах
+Author: podpivas
+Author-email: k.shaykhraziev@edu.centraluniversity.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
