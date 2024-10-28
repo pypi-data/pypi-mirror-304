@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+category__sorrt.egg-info/PKG-INFO
+category__sorrt.egg-info/SOURCES.txt
+category__sorrt.egg-info/dependency_links.txt
+category__sorrt.egg-info/top_level.txt
