@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fastmodels-kit
+Version: 0.1.0
+Summary: A command-line interface for interacting with FastModel product and services.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: jsonschema
+Requires-Dist: requests
+
+UNKNOWN
+
+
