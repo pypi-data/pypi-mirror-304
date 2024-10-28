@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+__init__.py
+regression.py
+setup.py
+linear_regression_sanaa.egg-info/PKG-INFO
+linear_regression_sanaa.egg-info/SOURCES.txt
+linear_regression_sanaa.egg-info/dependency_links.txt
+linear_regression_sanaa.egg-info/top_level.txt
