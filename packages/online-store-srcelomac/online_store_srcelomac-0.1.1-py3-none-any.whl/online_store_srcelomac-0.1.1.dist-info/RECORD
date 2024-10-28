@@ -1,0 +1,8 @@
+online_store/__init__.py,sha256=5zV7K-ceYgjw2PJS6j-XrYji42a3qZPbSvwEu9Nn6Lg,125
+online_store/__main__.py,sha256=BTX2fKTpt6f9GzetNwh2fgIqiEbJeuByGtAHS6kY2nE,2966
+online_store/order_management.py,sha256=l7CKkHWofY6nbN5FD7DoHmaVitHTkYkl_2YNa7MTLy4,2714
+online_store/user_management.py,sha256=y6GEutIx4ja1EgfZJEgvfTA-kA3OEsYeGXVyEHWutEs,3083
+online_store_srcelomac-0.1.1.dist-info/METADATA,sha256=JrM-_1Ed5usqrOxzAfuKBPa9Rg2MPKkotL5h1bT-dbk,3998
+online_store_srcelomac-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+online_store_srcelomac-0.1.1.dist-info/top_level.txt,sha256=1XsS3oaWSpPbCOX_l0AOuVOXb7AEfEg7FHAk22dLwyY,13
+online_store_srcelomac-0.1.1.dist-info/RECORD,,
