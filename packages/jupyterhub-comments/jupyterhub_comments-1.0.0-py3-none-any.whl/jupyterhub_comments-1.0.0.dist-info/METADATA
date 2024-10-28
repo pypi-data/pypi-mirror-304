@@ -1,0 +1,92 @@
+Metadata-Version: 2.3
+Name: jupyterhub_comments
+Version: 1.0.0
+Summary: A JupyterLab extension that allows adding comments to notebooks and documents in a multiuser environment.
+Project-URL: Homepage, https://github.com/SausageLion/jupyterhub-comments
+Project-URL: Bug Tracker, https://github.com/SausageLion/jupyterhub-comments/issues
+Project-URL: Repository, https://github.com/SausageLion/jupyterhub-comments.git
+Author-email: Vadim Arnold <vadim.arnold@bk.ru>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, Vadim Arnold
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Keywords: jupyter,jupyterlab,jupyterlab-extension
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: jupyter-server<3,>=2.0.1
+Description-Content-Type: text/markdown
+
+# jupyterhub_comments
+
+A JupyterLab extension that allows adding comments to notebooks and documents in a multiuser environment, where files are shared between users, wher the main goal is the review process
+
+![Image](https://github.com/SausageLion/jupyterhub-comments/blob/main/docs/images/add_comment.gif?raw=true)
+
+# Features
+
+* Add comments to specific cells of jupyter notebooks or lines of text documents
+* Edit, delete, resolve and reply to comments
+* Icons indicate when comments are added to a document and highlight the comment upon clicking
+* Clicking a comment text in an interface focuses notebook cell / line where comment was placed
+
+[Examples and more detailed documentation](https://github.com/SausageLion/jupyterhub-comments/blob/main/docs/README.md)
+
+## Requirements
+
+- JupyterLab >= 4.0.0,<5
+
+## Install
+
+To install the extension, execute:
+
+```bash
+pip install jupyterhub_comments
+```
+
+To share comments between users, provide `JUPYTERHUB_COMMENTS_DB_PATH` environment variable with directory where comments.db file should be stored. By default comments are stored in directory where extension is installed, which could be different for different users
+
+## Uninstall
+
+To remove the extension, execute:
+
+```bash
+pip uninstall jupyterhub_comments
+```
