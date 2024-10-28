@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+memnoch_utils_texte.egg-info/PKG-INFO
+memnoch_utils_texte.egg-info/SOURCES.txt
+memnoch_utils_texte.egg-info/dependency_links.txt
+memnoch_utils_texte.egg-info/requires.txt
+memnoch_utils_texte.egg-info/top_level.txt
+src/__init__.py
+src/texte.py
