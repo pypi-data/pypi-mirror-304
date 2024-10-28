@@ -1,0 +1,10 @@
+include/laszip/laszip_api_version.h,sha256=R6Y4E5M_axPkAVFLcC5TrYVv1klFLq35dHyq2WF-nOo,1078
+include/laszip/laszip_api.h,sha256=s7Jf8iKHYKd4p_clJ1mSBBCH8-dJNBhxE-IXJO67EWE,20873
+lib/liblaszip_base_api.a,sha256=pC84uFgza5KPGLI4-CIqML11RL2vrRHPXhZMZ9ujydo,19328
+lib/liblaszip_base.a,sha256=iRg93NfvSQZyeGu39PwwNnRlgaReIj68fm5Cvo-UT2Y,1041922
+laszip/laszip.cpython-313-x86_64-linux-gnu.so,sha256=H62RXASMIfBX55ThkEm8gUkcL2orO4B_1z8AACe12pw,842552
+laszip/__init__.py,sha256=OqDP9Rm4eEe4TWAlygF-OU4mXDZLDhudLm0DQxKPcxc,22
+laszip-0.2.3.dist-info/RECORD,,
+laszip-0.2.3.dist-info/METADATA,sha256=Dlb27Bx9pAZor0qItbu2z6wzGQ0ZHbJTVsAvhM7qr9U,2726
+laszip-0.2.3.dist-info/WHEEL,sha256=OPFh3Tj2X8LlzG9poNJc0ZCOysKaZvnrmITeqCOAK5U,156
+laszip-0.2.3.dist-info/licenses/License.txt,sha256=Bn94Xl7LZBWeE5mI76fwn7-GZG65AsqiH7mYsqI3LdI,1072
