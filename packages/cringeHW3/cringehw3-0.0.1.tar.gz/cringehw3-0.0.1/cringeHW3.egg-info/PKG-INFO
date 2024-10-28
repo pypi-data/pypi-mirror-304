@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: cringeHW3
+Version: 0.0.1
+Summary: It cli app group transaction by category
+Author-email: osisochka <a.onufrienko@edu.centraluniversity.ru>
+Requires-Python: >3.8
+Requires-Dist: pandas
