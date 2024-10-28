@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: cinema_app
+Version: 0.1.0
+Summary: Une application pour choisir des réalisateurs de cinéma
+Home-page: https://github.com/votre_utilisateur/mon_projet
+Author: Dastarac Louis
+Author-email: Dastarac.louis@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+Requires-Dist: customtkinter
+
+# Cinema App
+
+Une application pour choisir des rÃ©alisateurs de cinÃ©ma.
+
+## Installation
+
+Pour installer cette application, utilisez `pip` :
+
+```bash
+pip install cinema_app
+```
+
+## Utilisation
+
+Lancez l'application avec :
+
+```bash
+python -m cinema_app.app
+```
+
+## DÃ©pendances
+
+- Pillow
+- customtkinter
+
+## Auteurs
+
+- Dastarac Louis

@@ -1,0 +1,7 @@
+README.md
+setup.py
+cinema_app.egg-info/PKG-INFO
+cinema_app.egg-info/SOURCES.txt
+cinema_app.egg-info/dependency_links.txt
+cinema_app.egg-info/requires.txt
+cinema_app.egg-info/top_level.txt
