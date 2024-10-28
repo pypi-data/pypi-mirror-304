@@ -1,0 +1,22 @@
+[project]
+name = "AttrDict_Slim"
+version = "0.0.1"
+authors = [
+  { name="Slim", email="saleemkheralden@gmail.com" },
+]
+description = "A small package for dict with keys as attributes"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[pypi]
+  username = "__token__"
+  password = "pypi-AgEIcHlwaS5vcmcCJDI1NWFjOGI3LWY4YzktNGRjOS05NGZhLThlOTkxYmU1MThlNQACKlszLCJjNDMxMWNkYy1mNDIyLTQ2N2ItODg4My1hZTY5OWJiOWU4N2QiXQAABiCiob0r9GNkAQPs0V0HrMU2y5yX6_-Gq346l76kADpALQ"
+
+[project.urls]
+Homepage = "https://github.com/saleemkheralden/attrdict"
+Issues = "https://github.com/saleemkheralden/attrdict/issues"

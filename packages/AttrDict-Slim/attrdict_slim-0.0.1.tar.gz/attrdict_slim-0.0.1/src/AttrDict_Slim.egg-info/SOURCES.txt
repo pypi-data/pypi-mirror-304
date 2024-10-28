@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/AttrDict_Slim/Dict.py
+src/AttrDict_Slim/__init__.py
+src/AttrDict_Slim.egg-info/PKG-INFO
+src/AttrDict_Slim.egg-info/SOURCES.txt
+src/AttrDict_Slim.egg-info/dependency_links.txt
+src/AttrDict_Slim.egg-info/top_level.txt

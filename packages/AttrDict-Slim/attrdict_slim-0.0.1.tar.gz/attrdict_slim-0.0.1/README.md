@@ -1,0 +1,1 @@
+A small package for dict with keys as attributes.

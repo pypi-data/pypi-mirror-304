@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: AttrDict_Slim
+Version: 0.0.1
+Summary: A small package for dict with keys as attributes
+Author-email: Slim <saleemkheralden@gmail.com>
+Project-URL: Homepage, https://github.com/saleemkheralden/attrdict
+Project-URL: Issues, https://github.com/saleemkheralden/attrdict/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A small package for dict with keys as attributes.
