@@ -1,0 +1,3 @@
+[console_scripts]
+dictcc=dictcc.cli:app
+
