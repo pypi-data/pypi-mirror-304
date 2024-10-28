@@ -1,0 +1,10 @@
+simple_package_ssakg/__init__.py,sha256=h_fJspSvJScHEOy7XOHJmr_fb-i0p2ELURPEQG4-NPE,106
+simple_package_ssakg/module1.py,sha256=5JN49uwWcbj6J8E8WDbmDPd06fVm-fm4m93VMjA8d80,102
+simple_package_ssakg/module2.py,sha256=3O8ZlcWi3kEXLLDfUnmCCnxStXRRB_W-eDqsG4aJhHY,171
+simple_package_ssakg/utils/__init__.py,sha256=xnY79_bupmKlzkK0Urfa_yhnrSXqXEQZ39snxpPY0hw,32
+simple_package_ssakg/utils/generator.py,sha256=rnziZBBAG10ryh48gcsvLl9RFg6bAyucDG7BhgG9AIk,145
+simple_package_ssakg-0.0.2.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_package_ssakg-0.0.2.dist-info/METADATA,sha256=sT3cWz_IO-ZUWU5B3BTldDM7n1JPsODfOrjDTxf9iPg,584
+simple_package_ssakg-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+simple_package_ssakg-0.0.2.dist-info/top_level.txt,sha256=k4eKWdbNGRuhjnPKTjTN-L8KhgGAdLFp7HUK6RtFrIc,21
+simple_package_ssakg-0.0.2.dist-info/RECORD,,
