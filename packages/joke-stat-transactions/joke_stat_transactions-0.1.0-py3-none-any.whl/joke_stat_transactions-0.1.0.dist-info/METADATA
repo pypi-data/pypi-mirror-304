@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: joke_stat_transactions
+Version: 0.1.0
+Summary: Быстрый анализ данных csv
+Author-email: Pablo <p.ergle@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.3
+
+# Описание
+Данный пакет предназначен для того, чтобы быстро оценивать доходы и расходы по категориям и сохранять в формате txt.
+
+**Важно!** На вход принимается только файл csv вида:
+```     
+     category    money   type
+0         ***      ***    ***
+1         ***      ***    ***
+2         ***      ***    ***
+...       ...      ...    ...
+**        ***      ***    ***
+```
+Где `category` — категория транзакции, `money` — сумма транзакции, `type` — тип транзакции (`revenue`\\`costs`)
+
+На выходе в текстовом документе будет содержаться:
+```
+                    money
+category   type          
+***        costs      ***
+           revenue    ***
+***        costs      ***
+           revenue    ***
+***        costs      ***
+           revenue    ***
+   
+```
+Притом `revenue` или `costs` необязательно могут присутствовать, если их не было в отчёте.
+# Запуск
+Для запуска программы необходимо после установки в консоли воспользоваться командой:\
+`python -m joke_stat_transaction --input-file {путь к csv-файлу} --output-file {путь к будущему txt-файлу}`
