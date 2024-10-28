@@ -1,0 +1,101 @@
+# IMPORTANT
+# After changing this file, run `missim generate`
+# To re-generate the json schemas
+
+import json
+from enum import Enum
+from typing import Any
+import yaml
+import os
+from pathlib import Path
+
+from missim_config.launch_parameters import LaunchParameters
+from pydantic import BaseModel, ConfigDict
+
+MISSIM_CONFIG_FILE_NAME = "missim.yml"
+MISSIM_SCHEMA_URL = "https://greenroom-robotics.github.io/missim/schemas/missim.schema.json"
+
+
+def join_lines(*lines: str) -> str:
+    return "\n".join(lines)
+
+
+class Mode(str, Enum):
+    UE_EDITOR = "ue-editor"
+    UE_STANDALONE = "ue-standalone"
+    LOW_FIDELITY = "low-fidelity"
+
+
+class LogLevel(str, Enum):
+    INFO = "info"
+    DEBUG = "debug"
+
+
+class Network(str, Enum):
+    SHARED = "shared"
+    HOST = "host"
+
+
+class MissimConfig(BaseModel):
+    model_config = ConfigDict(
+        json_encoders={
+            Mode: lambda v: v.value,
+            LogLevel: lambda v: v.value,
+            Network: lambda v: v.value,
+        },
+    )
+
+    ros_domain_id: int = 0
+    static_peers: list[str] = []
+    log_level: LogLevel = LogLevel.INFO
+    mode: Mode = Mode.LOW_FIDELITY
+    network: Network = Network.HOST
+    use_https: bool = False
+    components: LaunchParameters = LaunchParameters()
+    prod: bool = False
+    log_directory: str = "~/greenroom/missim/logs"
+    recording_directory: str = "~/greenroom/missim/recordings"
+    charts_directory: str = "~/greenroom/charts"
+
+
+def find_config() -> Path:
+    """Returns the path to the .config/greenroom directory"""
+    return Path.home().joinpath(".config/greenroom")
+
+
+def get_path():
+    return find_config() / MISSIM_CONFIG_FILE_NAME
+
+
+def parse(config: dict[str, Any]) -> MissimConfig:
+    return MissimConfig(**config)
+
+
+def read() -> MissimConfig:
+    """Reads the missim.yml file and returns a MissimConfig object."""
+    path = get_path()
+    with open(path) as stream:
+        return parse(yaml.safe_load(stream))
+
+
+def read_env() -> MissimConfig:
+    """Reads the MISSIM_CONFIG environment variable and returns a MissimConfig object."""
+    missim_config_str = os.environ.get("MISSIM_CONFIG")
+    if missim_config_str is None:
+        raise ValueError("MISSIM_CONFIG environment variable is not set")
+    return parse(yaml.safe_load(missim_config_str))
+
+
+def write(config: MissimConfig):
+    path = get_path()
+    # Make the parent dir if it doesn't exist
+    os.makedirs(path.parent, exist_ok=True)
+    with open(path, "w") as stream:
+        print(f"Writing: {path}")
+        headers = f"# yaml-language-server: $schema={MISSIM_SCHEMA_URL}"
+        data = "\n".join([headers, yaml.dump(json.loads(config.model_dump_json()))])
+        stream.write(data)
+
+
+def serialise(config: MissimConfig):
+    return yaml.dump(config.model_dump_json())
