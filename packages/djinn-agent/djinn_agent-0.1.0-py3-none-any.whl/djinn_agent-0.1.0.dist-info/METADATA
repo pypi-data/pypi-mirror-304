@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: djinn-agent
+Version: 0.1.0
+Summary: A lightweight, terminal-based tool for seamless interaction with Claude's advanced computer-use capabilities.
+Author: Yi Liu, Gelei Deng and Yuekang Li
+Author-email: yi@quantstamp.com
+License-File: LICENSE
+Requires-Dist: streamlit>=1.38.0
+Requires-Dist: anthropic[bedrock,vertex]>=0.37.1
+Requires-Dist: jsonschema==4.22.0
+Requires-Dist: boto3>=1.28.57
+Requires-Dist: google-auth<3,>=2
+Requires-Dist: ruff==0.6.7
+Requires-Dist: pre-commit==3.8.0
+Requires-Dist: pytest==8.3.3
+Requires-Dist: pytest-asyncio==0.23.6
+Requires-Dist: rich
+

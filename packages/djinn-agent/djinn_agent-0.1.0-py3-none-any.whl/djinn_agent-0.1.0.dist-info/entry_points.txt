@@ -1,0 +1,2 @@
+[console_scripts]
+djinn-agent = djinn.main:sync_main
