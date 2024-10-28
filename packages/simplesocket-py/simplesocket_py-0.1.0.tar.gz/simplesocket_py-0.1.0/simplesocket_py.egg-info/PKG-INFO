@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: simplesocket-py
+Version: 0.1.0
+Summary: A port of the NPM package "SimpleSocket" (https://www.npmjs.com/package/simple-socket-js)
+Home-page: https://github.com/NullClock/simplesocket-py
+Author: Helio
+Author-email: helio.m.s.l.2012@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# SimpleSocket PY
+SimpleSocket PY is a port of the Node.js pubsub module [SimpleSocket](https://www.npmjs.com/package/simple-socket-js)
