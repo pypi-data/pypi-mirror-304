@@ -1,0 +1,10 @@
+pytoch_parquet_loader/__init__.py,sha256=I9GDNVo5xuRoMZT806SDMFdJV1UWb1viH2QUfncKTGg,86
+pytoch_parquet_loader/dataloader.py,sha256=7udX9qmMMH8yIdI2ei-jIfAAUo9mEtEIVAlpAgqStJo,784
+pytoch_parquet_loader/dataset.py,sha256=YgIQwHeMHs0Hzn7KO-VMSr3DJnMZXyrFD8lRcXIa-SA,3645
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_parquet_loader.py,sha256=gdp8z6fnXiEK--OaaaFuJK-zgePpGR-vQZJnn40gGfc,850
+pytorch_parquet_loader-0.1.0.dist-info/LICENSE,sha256=JKgT-Ucum_Ssr0H_A67NQLe2d0Lwz0Hh4VPWySf4Vrs,1075
+pytorch_parquet_loader-0.1.0.dist-info/METADATA,sha256=BYa5Ob0B_veuhf4DdHgOzy8BItORkxclJOn3_GqF13Q,1803
+pytorch_parquet_loader-0.1.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pytorch_parquet_loader-0.1.0.dist-info/top_level.txt,sha256=WHQhJsRp4XAGqXXk3ypHCnI3JiDz-tTfJCEzvwF1HUY,28
+pytorch_parquet_loader-0.1.0.dist-info/RECORD,,
