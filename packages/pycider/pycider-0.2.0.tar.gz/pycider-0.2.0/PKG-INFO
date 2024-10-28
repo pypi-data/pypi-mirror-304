@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pycider
+Version: 0.2.0
+Summary: Aggregates composition for domain driven design in Python
+Home-page: https://github.com/melodyasper/pycider
+Keywords: ddd,domain,design,decider,deciders,aggregates,aggregate,composition
+Author: Melody Asper
+Author-email: melodyaheath@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/melodyasper/pycider
+Description-Content-Type: text/markdown
+
+
