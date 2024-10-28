@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+CodEasy/__init__.py
+CodEasy/conditionals.py
+CodEasy/file_ops.py
+CodEasy/loops.py
+CodEasy.egg-info/PKG-INFO
+CodEasy.egg-info/SOURCES.txt
+CodEasy.egg-info/dependency_links.txt
+CodEasy.egg-info/top_level.txt

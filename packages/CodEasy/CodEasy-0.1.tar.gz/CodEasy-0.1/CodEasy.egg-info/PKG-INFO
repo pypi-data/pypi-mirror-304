@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: CodEasy
+Version: 0.1
+Summary: A package to auto-generate boilerplate code for common programming needs.
+Home-page: https://github.com/Aryan11234567890/CodEasy
+Author: Aryan Shanker Saxena
+Author-email: aryan11234567890@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
