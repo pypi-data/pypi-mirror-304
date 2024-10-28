@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: invoice-generator-by-podpivas
+Version: 0.1.0
+Summary: Автоматическая генерация чеков на основе данных о заказе.
+Author-email: podpivas <k.shaykhraziev@edu.centraluniversity.ru>
+License: MIT
+Requires-Python: >=3.6
+
