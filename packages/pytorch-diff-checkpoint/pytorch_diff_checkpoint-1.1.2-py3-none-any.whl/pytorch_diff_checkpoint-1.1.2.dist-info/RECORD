@@ -1,0 +1,6 @@
+diff_checkpoint/__init__.py,sha256=PuDvoaeBpSopSJH5krWE3LUyqG-R8DPY_Oin6icXlPk,132
+diff_checkpoint/diff_checkpoint.py,sha256=rX9D88PtpY43rbhn_yBM7Xyv4LpJykWexpmtoXe0Yy0,3750
+diff_checkpoint/first_element.py,sha256=MyBqJABNaSRBo5caxnokRMq_3IuB_JEq8i9WT0aJDMg,435
+pytorch_diff_checkpoint-1.1.2.dist-info/METADATA,sha256=BknhNAA1-oYQSN9EbVxYb7AskcqneHvjfUQU7wzzl2o,1924
+pytorch_diff_checkpoint-1.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytorch_diff_checkpoint-1.1.2.dist-info/RECORD,,
