@@ -1,0 +1,5 @@
+requests
+websocket-client
+colorama
+python-box
+pyyaml
