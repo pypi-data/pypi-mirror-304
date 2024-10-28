@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: data-quality-validator
+Version: 0.1.0
+Summary: A package for validating data quality
+Home-page: https://github.com/poojasambhwani/data_quality_validator
+Author: Pooja Sambhwani
+Author-email: sambhwanipooja08@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas-profiling
+
+# Data Quality Validator
+
+A Python package to validate data quality by checking for missing values, duplicates, outliers, data types, and anomalies, and generating data health reports.
+
+## Installation
+
+```bash
+pip install data-quality-validator
+
+
