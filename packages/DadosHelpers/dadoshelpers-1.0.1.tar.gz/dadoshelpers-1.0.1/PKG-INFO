@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: DadosHelpers
+Version: 1.0.1
+Summary: Funções denomidas Helpers
+Author: Eriton Gomes De Souza
+Author-email: eriton.gomes.souza@gmail.com
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: requests>=2.25.1
+Requires-Dist: pytz>=2024.1
+Requires-Dist: pandas>=2.2.2
