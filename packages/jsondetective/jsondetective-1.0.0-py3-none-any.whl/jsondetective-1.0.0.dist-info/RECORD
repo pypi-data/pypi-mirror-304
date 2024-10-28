@@ -1,0 +1,10 @@
+jsondetective/__init__.py,sha256=vB-sw77g6KR81H_A7avffQBjDKTm2tG4U8VUzo1fwzY,232
+jsondetective/analyzer.py,sha256=bANYgwlMRr11j4A5-rPbqgBKDPxMuc__WlLpl7YJGe0,9273
+jsondetective/cli.py,sha256=TMk8h-BA-cRZrawQxr1oGHvNF0Xh78uw7mEHYwE_wnk,2116
+jsondetective/dataclass_gen.py,sha256=5bMLBqglxrEem8WBqruVN_ZV4Vx2MnFSjEnBBJdqgH0,3360
+jsondetective-1.0.0.dist-info/LICENSE,sha256=4vPeu56xgPj4tK3xzig0dM7ZcdWj1ITVSVjTUkBXiVY,1088
+jsondetective-1.0.0.dist-info/METADATA,sha256=JjFp5oFiebCBsOepjttGPqWoY1Y2-HkqfSM3ndbJjEg,8485
+jsondetective-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+jsondetective-1.0.0.dist-info/entry_points.txt,sha256=pH2EAjA2kPlH20ERKNe_UGZR53Z3_r-7Kzr2OHxAE98,57
+jsondetective-1.0.0.dist-info/top_level.txt,sha256=mQv09jM79OreK6i7yR8SGcdtubOYssbOfZ6OfWGGwyk,14
+jsondetective-1.0.0.dist-info/RECORD,,
