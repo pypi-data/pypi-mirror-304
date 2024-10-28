@@ -1,0 +1,9 @@
+README.md
+setup.py
+pick_cli_pack/__init__.py
+pick_cli_pack/main.py
+pip_cli_pack.egg-info/PKG-INFO
+pip_cli_pack.egg-info/SOURCES.txt
+pip_cli_pack.egg-info/dependency_links.txt
+pip_cli_pack.egg-info/entry_points.txt
+pip_cli_pack.egg-info/top_level.txt
