@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: qa-data
+Version: 0.1.3
+Summary: Add your description here
+Author: Um Changyong
+Author-email: eum6211@gmail.com
+Keywords: llm,fine-tune,generate data,dataset
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
