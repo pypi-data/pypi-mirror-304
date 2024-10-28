@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: motion-vector-extractor
+Version: 1.1.0
+Summary: Reads video frames and MPEG-4/H.264 motion vectors.
+Home-page: https://github.com/LukasBommes/mv-extractor
+Author: Lukas Bommes
+Author-email: 
+License: MIT
+Keywords: motion vector,video capture,mpeg4,h.264,compressed domain
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Multimedia :: Video :: Capture
+Classifier: Topic :: Multimedia :: Video :: Display
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9, <4
+License-File: LICENSE
+Requires-Dist: numpy >=1.19.3
+Requires-Dist: opencv-python >=4.4.0.46
+
