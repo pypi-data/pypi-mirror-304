@@ -1,0 +1,2 @@
+[console_scripts]
+inclusion = inclusion.cli:main
