@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ai_is_odd/__init__.py
+ai_is_odd/core.py
+ai_is_odd.egg-info/PKG-INFO
+ai_is_odd.egg-info/SOURCES.txt
+ai_is_odd.egg-info/dependency_links.txt
+ai_is_odd.egg-info/requires.txt
+ai_is_odd.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
