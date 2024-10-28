@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+tania/__init__.py
+tania/main.py
+tania.egg-info/PKG-INFO
+tania.egg-info/SOURCES.txt
+tania.egg-info/dependency_links.txt
+tania.egg-info/entry_points.txt
+tania.egg-info/not-zip-safe
+tania.egg-info/requires.txt
+tania.egg-info/top_level.txt
