@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+chatweather/__init__.py
+chatweather/chatbot.py
+chatweather/weather.py
+chatweather/weather_api_datetime.py
+chatweather.egg-info/PKG-INFO
+chatweather.egg-info/SOURCES.txt
+chatweather.egg-info/dependency_links.txt
+chatweather.egg-info/requires.txt
+chatweather.egg-info/top_level.txt
