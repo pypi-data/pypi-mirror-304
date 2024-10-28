@@ -1,0 +1,17 @@
+purepyodbc/__init__.py,sha256=HpYZOcKknMglcB1rGtm4b4MMV1PcmtWKRBcI2FIT7mI,1924
+purepyodbc/_connection.py,sha256=MwS9DZmZfQOYGUOU2iAoVbg6KsLbvX49GkvfkpZF6a8,2913
+purepyodbc/_constants.py,sha256=3sAQXFGZM0cYTlFUQvS1Nhsk51coka35_Te1jOZijR4,13
+purepyodbc/_cursor.py,sha256=YRC0K--jpteL3NMTRV6WG-RbzDl91534oALVcxe3zuk,4465
+purepyodbc/_driver_manager.py,sha256=E4vyhgptrNbYNXqaAuMYUpWsH5p9rGr2ncaE6x-6xwg,24748
+purepyodbc/_dto.py,sha256=ZHygCO2E0RSSBkpkLlWYxJ6IVg94cmVSG2JxcpoEfgM,1304
+purepyodbc/_enums.py,sha256=hWa-EryrocCjWGpPcec5SIKbRaltWUAcIcWq7uAKZXY,3437
+purepyodbc/_environment.py,sha256=xw6VU-ddIdDZvspKuksPTFOMsmc0VGquQRHnOneaieY,1709
+purepyodbc/_errors.py,sha256=9LxuINT24YqrK4aPmLF6b5Q178dywSDlKf7exswWWMI,438
+purepyodbc/_handler.py,sha256=UiNH3TSHqKp_gkJj28A0QzJJszC04u16fVgMUMyF1V8,749
+purepyodbc/_row.py,sha256=jzhd2MDEfmGnYiHuHcajkBZDxcGLoXqpzrJdS8y4QnM,167
+purepyodbc/_typedef.py,sha256=o9maxf2zHP-0Hc9hXklVKsn0JJSjihxNB5iB39zo378,1476
+purepyodbc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+purepyodbc-0.1.0.dist-info/LICENSE,sha256=G2l0C8NVgtix2jOeEU10ueXILiCmPkkU_kdr7ndC_As,1075
+purepyodbc-0.1.0.dist-info/METADATA,sha256=HXMj42sPld1x4nFkBFZzzSRYWh6KGCrvXcC20FPtjgg,3638
+purepyodbc-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+purepyodbc-0.1.0.dist-info/RECORD,,
