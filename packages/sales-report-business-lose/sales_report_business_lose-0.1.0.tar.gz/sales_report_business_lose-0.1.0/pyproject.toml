@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales_report-business_lose"
+version = "0.1.0"
+description = "Пакет для анализа данных о продажах."
+authors = [
+    { name = "Menzurka", email = "islamovri@menzurka.com" }
+]
+dependencies = [
+    "pandas"
+]
