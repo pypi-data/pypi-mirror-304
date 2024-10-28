@@ -1,0 +1,6 @@
+setup.py
+feed_module/__init__.py
+feed_module.egg-info/PKG-INFO
+feed_module.egg-info/SOURCES.txt
+feed_module.egg-info/dependency_links.txt
+feed_module.egg-info/top_level.txt
