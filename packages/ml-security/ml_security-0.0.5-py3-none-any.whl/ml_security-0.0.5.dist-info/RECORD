@@ -1,0 +1,15 @@
+ml_security/__init__.py,sha256=S7u1lbuWmM3A3ajykBialmPoJUK6Jg-WmNqM-9OZFdk,22
+ml_security/logger.py,sha256=XJzYfKSEYJxZArBBcOrcEsppzo0W0dH5r7TCTzSIEDQ,5737
+ml_security/attacks/__init__.py,sha256=dotSxdn7h-Szmi7I7BL0pc4kRff2XmtmrwDtLwb9_7U,346
+ml_security/attacks/base.py,sha256=3Eztxr7GlF4SPIvvh5MpkWb3ipyvqDQP6PqVzNyn0CM,2709
+ml_security/attacks/carlini_wagner_attack.py,sha256=yvO16TfP0VhH_UKRiX359gUgdNMUv56Ed7FBqhJlwZ8,6100
+ml_security/attacks/fast_gradient_sign_attack.py,sha256=p43LhocLTJSJzyYYPz86U7udD_TeL_G1KFHhUOeazEo,5955
+ml_security/attacks/membership_inference_attack.py,sha256=nHjAqoMNwI-7yPD1cgnonTrh7b5TyGCz2trN-7keKUw,7427
+ml_security/datasets/__init__.py,sha256=UkXIJcwFN3-juZc6fR2Htukyc0_snIYW1bC28g10Nts,325
+ml_security/datasets/datasets.py,sha256=y3HtMmTIeGzLUlycJl7KIaiWuJglxBZy8h_cIPUVz8o,10522
+ml_security/datasets/tabular_UCI.py,sha256=5sGMQF3abY_singstfjuBoeEuhlSigaAMfM-Nv8zyFg,3958
+ml_security-0.0.5.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+ml_security-0.0.5.dist-info/METADATA,sha256=njVPeVstqS2_A56WPpwoczKenBBv4Qg8JI3pLq__VzA,1413
+ml_security-0.0.5.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ml_security-0.0.5.dist-info/top_level.txt,sha256=yFX6rEThUK8Ieay1rqQgbSBR6e5cXLg6SpmW4lynKis,12
+ml_security-0.0.5.dist-info/RECORD,,
