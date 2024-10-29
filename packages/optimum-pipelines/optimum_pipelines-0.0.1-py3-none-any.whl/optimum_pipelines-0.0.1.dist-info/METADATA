@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: optimum-pipelines
+Version: 0.0.1
+Summary: An inference pipelines framework for optimum.
+Author: David Corvoysier
+Maintainer-email: "HuggingFace Inc. Special Ops Team" <hardware@huggingface.co>
+License: Apache-2.0
+Project-URL: homepage, https://github.com/huggingface/optimum-pipelines
+Keywords: inference,machine-learning
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic >=2.9.1
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: datamodel-code-generator ; extra == 'dev'
+Requires-Dist: jinja2 ; extra == 'dev'
+
+# Optimum Pipelines
+
+🤗 `optimum-pipelines` is a framework for maintaining and contributing inference pipelines for [Hugging Face hub models](https://huggingface.co/models).
+
+The pipelines are objects implementing workflows corresponding to several tasks applied to hub models.
+
+They provide a unified API for local or remote inference, with a dedicated [JSON schema](https://github.com/huggingface/huggingface.js/tree/main/packages/tasks/src/tasks) for each task.
+
+## Building the package
+
+```shell
+$ make package
+```
+
+## Running the tests
+
+First, install the package:
+
+```shell
+$ python -m pip install dist/optimum_pipelines-<version>.tar.gz
+```
+
+```shell
+$ make test
+```
