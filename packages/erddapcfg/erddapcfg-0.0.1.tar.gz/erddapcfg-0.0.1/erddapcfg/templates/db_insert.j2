@@ -1,0 +1,28 @@
+
+-- PARAMS{% for param in erddap.params %}
+ INSERT INTO params(param_name, param_value) VALUES ("{{param.name}}", "{{param.value | replace('"','""')}}");{% endfor %}
+
+-- DATASETS{% for dataset in erddap.datasets %}
+ -- {{dataset.datasetID}}
+  INSERT INTO datasets(dataset_id, dataset_type, dataset_active) VALUES ("{{dataset.datasetID}}", "{{dataset.type}}", "{{dataset.active}}");
+{%if dataset.params%}
+  -- PARAMS{% for param in dataset.params %}
+   INSERT INTO dataset_params ("param_name", "param_value", "dataset_id") VALUES ("{{param.name}}", "{{param.value | replace('"','""')}}", "{{dataset.datasetID}}");{% endfor %}
+{%endif%}{%if dataset.attributes%}
+  -- ATTRIBUTES{% for attribute in dataset.attributes %}
+   INSERT INTO dataset_attributes ("attribute_name", "attribute_type", "attribute_value", "dataset_id") VALUES ("{{attribute.name}}", {% if attribute.type %}"{{attribute.type}}"{%else%}""{% endif %}, "{{attribute.text | replace('"','""')}}", "{{dataset.datasetID}}");{% endfor %}
+{%endif%}{%if dataset.source_attributes%}
+  -- SOURCE ATTRIBUTES{% for attribute in dataset.source_attributes %}
+   INSERT INTO dataset_source_attributes ("attribute_name", "attribute_type", "attribute_value", "dataset_id") VALUES ("{{attribute.name}}", {% if attribute.type %}"{{attribute.type}}"{%else%}""{% endif %}, "{{attribute.text | replace('"','""')}}", "{{dataset.datasetID}}");{% endfor %}
+{%endif%}{%if dataset.variables%}
+  -- VARIABLES{% for variable in dataset.variables %}
+
+   -- {{variable.destinationName}}
+    INSERT INTO variables ("category", "source_name", "destination_name", "data_type", "dataset_id", "order_number") VALUES ("{{variable.tag | replace("Variable","")}}", "{{variable.sourceName}}", "{{variable.destinationName}}", "{{variable.dataType}}", "{{dataset.datasetID}}", "{{loop.index * 10}}.0");
+{%if variable.attributes%}
+    -- ATTRIBUTES{% for attribute in variable.attributes %}
+     INSERT INTO variable_attributes ("attribute_name", "attribute_type", "attribute_value", "variable_id") VALUES ("{{attribute.name}}", {% if attribute.type %}"{{attribute.type}}"{%else%}""{% endif %}, "{{attribute.text | replace('"','""')}}", (SELECT variable_id FROM variables WHERE destination_name='{{variable.destinationName}}' AND dataset_id='{{dataset.datasetID}}'));{% endfor %}{% endif %}
+{%if variable.source_attributes%}
+    -- SOURCE ATTRIBUTES{% for attribute in variable.source_attributes %}
+     INSERT INTO variable_source_attributes ("attribute_name", "attribute_type", "attribute_value", "variable_id") VALUES ("{{attribute.name}}", {% if attribute.type %}"{{attribute.type}}"{%else%}""{% endif %}, "{{attribute.text | replace('"','""')}}", (SELECT variable_id FROM variables WHERE destination_name='{{variable.destinationName}}' AND dataset_id='{{dataset.datasetID}}'));{% endfor %}{% endif %}{% endfor %}{%endif%}
+{% endfor %}
