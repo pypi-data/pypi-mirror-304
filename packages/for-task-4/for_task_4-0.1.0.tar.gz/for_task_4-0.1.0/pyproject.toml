@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "for_task_4"
+version = "0.1.0"
+description = "Перевод чека из json в txt"
+authors = [{ name = "Гриша"}]
+dependencies = []
+license = {text = 'MIT'}
+readme = 'README.md'
+
+[project.scripts]
+for_task_4="for_task_4.main:main"
