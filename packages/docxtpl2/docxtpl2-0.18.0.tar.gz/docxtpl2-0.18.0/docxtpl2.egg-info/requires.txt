@@ -1,0 +1,8 @@
+bayoo-docx
+docxcompose
+jinja2
+lxml
+
+[docs]
+Sphinx
+sphinxcontrib-napoleon
