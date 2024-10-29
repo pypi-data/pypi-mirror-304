@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gaarf-core
+Version: 0.0.1.dev0
+Summary: description
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: python-dateutil
+Requires-Dist: jinja2==3.1.4
+Requires-Dist: typing-extensions
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == "pandas"
+Provides-Extra: all
+Requires-Dist: gaarf-core[pandas]; extra == "all"
+
+# gaarf-core - Unified approach for interacting with reporting APIs.
