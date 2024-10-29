@@ -1,0 +1,3 @@
+from typing import Union
+
+def sleep(secs: Union[int, float]): ...
