@@ -1,0 +1,54 @@
+name: Linux CPU tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "optimum/pipelines/**"
+      - "test/**"
+      - "pyproject.toml"
+      - "Makefile"
+      - "generation/*.py"
+      - "generation/*.jinja"
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    paths:
+      - "optimum/pipelines/**"
+      - "test/**"
+      - "pyproject.toml"
+      - "Makefile"
+      - "generation/*.py"
+      - "generation/*.jinja"
+
+jobs:
+  check-commits:
+    uses: ./.github/workflows/check-commits.yml
+  python-quality:
+    uses: ./.github/workflows/python-quality.yml
+  test-ubuntu-cpu:
+    needs: [check-commits, python-quality]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Build and install optimum-pipelines
+        run: |
+          pip install --upgrade pip
+          pip install datamodel-code-generator ruff jinja2
+          make generate
+          pip install -e .[dev]
+
+      - name: Run base tests
+        run: |
+          python -m pip install torch transformers
+          python -m pytest test

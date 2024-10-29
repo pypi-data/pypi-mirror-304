@@ -1,0 +1,56 @@
+[project]
+name = 'optimum-pipelines'
+description = 'An inference pipelines framework for optimum.'
+classifiers = [
+    'Development Status :: 2 - Pre-Alpha',
+    'License :: OSI Approved :: Apache Software License',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Education',
+    'Intended Audience :: Science/Research',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence'
+]
+keywords = ['inference', 'machine-learning']
+requires-python = '>=3.9.0'
+authors = [{ name = 'David Corvoysier' }]
+maintainers = [
+    {name = "HuggingFace Inc. Special Ops Team", email="hardware@huggingface.co"},
+]
+dependencies = ['pydantic>=2.9.1']
+license = { text = 'Apache-2.0' }
+readme = 'README.md'
+dynamic = ['version']
+
+[project.urls]
+homepage = 'https://github.com/huggingface/optimum-pipelines'
+
+[project.optional-dependencies]
+dev = ['build', 'pytest', 'ruff', 'datamodel-code-generator', 'jinja2']
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["optimum*"]
+
+[tool.setuptools.dynamic]
+version = {attr = 'optimum.pipelines.__version__'}
+
+[build-system]
+requires = ['setuptools>65.5.1', 'setuptools_scm']
+build-backend = 'setuptools.build_meta'
+
+[tool.ruff]
+# Never enforce `E501` (line length violations).
+lint.ignore = ['C901', 'E501', 'E741']
+lint.select = ['C', 'E', 'F', 'I', 'W']
+line-length = 119
+
+# Ignore import violations in all `__init__.py` files.
+[tool.ruff.lint.per-file-ignores]
+'__init__.py' = ['E402', 'F401', 'F403', 'F811']
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+known-first-party = ['optimum.pipelines']
