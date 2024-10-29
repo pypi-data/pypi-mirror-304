@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "for_task_3"
+version = "0.1.0"
+description = "Количество продаж и товаров"
+authors = [{ name = "Гриша"}]
+dependencies = ["pandas"]
+readme = 'README.md'
+
+[project.scripts]
+for_task_3 = "for_task_3.main:main"

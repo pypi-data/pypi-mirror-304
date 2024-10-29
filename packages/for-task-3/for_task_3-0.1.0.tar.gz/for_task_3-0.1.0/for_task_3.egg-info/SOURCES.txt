@@ -1,0 +1,7 @@
+pyproject.toml
+for_task_3.egg-info/PKG-INFO
+for_task_3.egg-info/SOURCES.txt
+for_task_3.egg-info/dependency_links.txt
+for_task_3.egg-info/entry_points.txt
+for_task_3.egg-info/requires.txt
+for_task_3.egg-info/top_level.txt
