@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+riecovest/riecovest.egg-info/PKG-INFO
+riecovest/riecovest.egg-info/SOURCES.txt
+riecovest/riecovest.egg-info/dependency_links.txt
+riecovest/riecovest.egg-info/requires.txt
+riecovest/riecovest.egg-info/top_level.txt
