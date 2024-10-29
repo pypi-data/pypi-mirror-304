@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "for_task_2"
+version = "0.1.0"
+description = "Подсчет доходов и расходов"
+authors = [{ name = "Grisha"}]
+dependencies = ["pandas"]
+readme = 'README.md'
+
+[project.scripts]
+for_task_2 = "for_task_2.main:main"
