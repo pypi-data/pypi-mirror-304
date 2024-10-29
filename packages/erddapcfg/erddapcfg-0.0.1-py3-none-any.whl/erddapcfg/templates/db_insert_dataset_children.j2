@@ -1,0 +1,3 @@
+{% if parent_child %}
+-- DATASETS PARENT-CHILD{% for parent_id, child_id in parent_child %}
+ INSERT INTO dataset_children ("parent_dataset_id", "child_dataset_id") VALUES ('{{parent_id}}', '{{child_id}}');{% endfor %}{% endif %}
