@@ -1,0 +1,7 @@
+subprocess_monitor/__init__.py,sha256=RdUgbUNaQeNw2DLXu-Jb7qsYTj_6IcHaSQcwOiKwu38,175
+subprocess_monitor/__main__.py,sha256=ectcULwY5fC3pnCIgR_hrG32mg8r8Hn_EgNcltxTK-s,3202
+subprocess_monitor/helper.py,sha256=wSw1AYMUXItDzfD3KKZocFXdhdVKkjmK5RMqZF0jy7w,2083
+subprocess_monitor/subprocess_monitor.py,sha256=aoMttAH7X0IJi3i7eUSl0plvtpq79nW6bXE4SY59yz8,9651
+subprocess_monitor-0.1.0.dist-info/METADATA,sha256=09iyv3Kvf36BIS7o-3C9Y8kZ5BhEpVlPA-VLDdfbx8c,602
+subprocess_monitor-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+subprocess_monitor-0.1.0.dist-info/RECORD,,
