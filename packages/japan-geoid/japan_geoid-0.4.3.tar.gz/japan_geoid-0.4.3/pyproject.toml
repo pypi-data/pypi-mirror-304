@@ -1,0 +1,27 @@
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "japan-geoid"
+description = "Calculate geoid heights for Japan using GSI's geoid model."
+authors = [
+  { name = "Taku Fukada", email = "naninunenor@gmail.com" },
+]
+license = "MIT"
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+
+[project.urls]
+repository = "https://github.com/ciscorn/japan-geoid/"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+manifest-path = "japan-geoid-py/Cargo.toml"
+
