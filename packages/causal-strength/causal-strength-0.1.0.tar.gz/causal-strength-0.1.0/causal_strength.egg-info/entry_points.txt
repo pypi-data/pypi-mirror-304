@@ -1,0 +1,3 @@
+[console_scripts]
+download_ceq_data = causalstrength.utils.download_data:download_ceq_data
+
