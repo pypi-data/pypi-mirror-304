@@ -1,0 +1,9 @@
+get-started.sh,sha256=2oJJkWQgIR77bY2rYCSmT8SsXXB9gxrFNj1TN17TIBk,808
+restack-get-started-darwin-amd64,sha256=naIBkTMEWF7ZHuytCjYno4KscADBdhpDQKS7QDPlgOQ,4444032
+restack-get-started-linux-amd64,sha256=xdPJhiSsTpEidKZURbBlABlJ-PsobqPZgjA6BAUxmBo,4595023
+restack_get_started/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+restack_get_started/main.py,sha256=68unXD3YB63FgjpyKlc9i4bsZYeCWpC1JrmFqcUtfTI,316
+restack_get_started-0.3.0.dist-info/METADATA,sha256=2xtoIvTOO0934PPFTLlWi_L6_G9Y92FW3U9Cvs67f4w,659
+restack_get_started-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+restack_get_started-0.3.0.dist-info/entry_points.txt,sha256=qzhtnJO_p16KWpDhW-SwRha31dQc7Tw_GiCbZakBRI0,84
+restack_get_started-0.3.0.dist-info/RECORD,,
