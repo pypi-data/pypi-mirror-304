@@ -1,0 +1,17 @@
+gaarf-core
+smart_open
+
+[all]
+gaarf-io[bq,sheets,sqlalchemy]
+
+[bq]
+google-cloud-bigquery
+pandas
+smart_open[gcs]
+
+[sheets]
+gspread
+
+[sqlalchemy]
+sqlalchemy
+pandas
