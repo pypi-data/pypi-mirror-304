@@ -1,0 +1,9 @@
+forfiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forfiles/directory.py,sha256=UZP_cyalHmzghi34cYEUBk_lQnRy_TjAzvaBD4kjqNs,1429
+forfiles/file.py,sha256=jI-mpmMVfC5c1JtHUHEOFRswcIf_6JIvdbaJ0jLZuwg,1514
+forfiles/image.py,sha256=nvc4CO67n9TRCnJ43obMSE7AZDEhbYCefMX17gix0oc,2693
+forfiles/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forfiles-5.0.0.dist-info/METADATA,sha256=g_V3knl9znqXQfDB1OSaX5D9b2fWSxxyebsvSm5D36E,3466
+forfiles-5.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+forfiles-5.0.0.dist-info/licenses/LICENSE,sha256=9XEXoyOP8XomONqRZgl7BWd0jo8ZLtk2h9cFbbpRFAc,1060
+forfiles-5.0.0.dist-info/RECORD,,
