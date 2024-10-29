@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyERGM
+Version: 0.1.0
+Summary: Exponential Random Graph Models in Python
+Home-page: https://github.com/tomtalp/pyERGM
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyERGM
+![unittest workflow](https://github.com/tomtalp/pyERGM/actions/workflows/python-app.yml/badge.svg)
+
+pyERGM is a pure NumPy & NetworkX implementation of an **ERGM** distribution model.
