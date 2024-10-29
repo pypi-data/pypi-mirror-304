@@ -1,0 +1,13 @@
+numpy>=1.19
+snap-base>=2.0.3
+sn_stat>=0.3.4
+
+[doc]
+sphinx
+sphinx-rtd-theme
+
+[test]
+flake8
+pytest
+hypothesis
+pytest-asyncio
