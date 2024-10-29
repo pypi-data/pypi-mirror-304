@@ -1,0 +1,2 @@
+[console_scripts]
+bourguiba = bourguiba.art:display_ascii_art
