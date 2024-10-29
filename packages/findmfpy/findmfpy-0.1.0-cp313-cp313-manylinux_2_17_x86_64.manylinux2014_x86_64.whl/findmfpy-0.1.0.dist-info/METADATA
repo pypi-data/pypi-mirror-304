@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: findmfpy
+Version: 0.1.0
+Summary: Python bindings to findMF
+Author-Email: Leonardo Schwarz <leonardo.schwarz@fgcz.ethz.ch>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, ETH Zurich, FGCZ.
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the vector package developers nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://github.com/findMF/findMFPy
+Project-URL: Bug tracker, https://github.com/findMF/findMFPy/issues
+Project-URL: Discussions, https://github.com/findMF/findMFPy/discussions
+Project-URL: Changelog, https://github.com/findMF/findMFPy/releases
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: pytest>=6; extra == "test"
+Requires-Dist: pytest-cov>=3; extra == "test"
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocstrings[python]; extra == "docs"
+Requires-Dist: black; extra == "docs"
+Requires-Dist: findMFPy[docs,test]; extra == "dev"
+Requires-Dist: nox; extra == "dev"
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: dev
+Description-Content-Type: text/markdown
+
+# findMFPy
+
+[![Actions Status][actions-badge]][actions-link]
+[![Documentation Status][rtd-badge]][rtd-link]
+
+[![PyPI version][pypi-version]][pypi-link]
+[![Conda-Forge][conda-badge]][conda-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+[![GitHub Discussion][github-discussions-badge]][github-discussions-link]
+
+<!-- SPHINX-START -->
+
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/leoschwarz/findMFPy/workflows/CI/badge.svg
+[actions-link]:             https://github.com/leoschwarz/findMFPy/actions
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/findMFPy
+[conda-link]:               https://github.com/conda-forge/findMFPy-feedstock
+[github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
+[github-discussions-link]:  https://github.com/leoschwarz/findMFPy/discussions
+[pypi-link]:                https://pypi.org/project/findMFPy/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/findMFPy
+[pypi-version]:             https://img.shields.io/pypi/v/findMFPy
+[rtd-badge]:                https://readthedocs.org/projects/findMFPy/badge/?version=latest
+[rtd-link]:                 https://findMFPy.readthedocs.io/en/latest/?badge=latest
+
+<!-- prettier-ignore-end -->
+
+This package provides a Python wrapper for the peak picker from [findMFBase](https://github.com/findMF/findMFBase).
+
+Documentation: [Quick reference](https://leoschwarz.github.io/findMFPy)
+
+## Basic usage
+
+To install the package
+
+```bash
+pip install findmfpy@git+https://github.com/leoschwarz/findMFPy
+```
+
+this may take a while as the package needs to be compiled.
+
+## Developer install
+
+Clone with recursive submodules, i.e. `git clone --recursive`. Pip install the package, if you want to develop `pip install -e ".[dev]"`.
+
+See `tests/test_api.py` for now.
