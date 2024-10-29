@@ -1,0 +1,11 @@
+README.md
+setup.py
+plugins/__init__.py
+plugins/simple_plugin.py
+sage_core/__init__.py
+sage_core/core.py
+sage_core/message.py
+sage_core.egg-info/PKG-INFO
+sage_core.egg-info/SOURCES.txt
+sage_core.egg-info/dependency_links.txt
+sage_core.egg-info/top_level.txt
