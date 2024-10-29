@@ -1,0 +1,2 @@
+[console_scripts]
+for_task_3 = for_task_3.main:main
