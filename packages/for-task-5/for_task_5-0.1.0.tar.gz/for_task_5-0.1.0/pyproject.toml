@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "for_task_5"
+version = "0.1.0"
+description = "Подсчет клиентов по возрасту и городу"
+authors = [{ name = "Гриша"}]
+dependencies = ['pandas']
+readme = 'README.md'
+
+[project.scripts]
+count="for_task_5.main:main"

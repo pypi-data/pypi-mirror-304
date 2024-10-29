@@ -1,0 +1,2 @@
+[console_scripts]
+count = for_task_5.main:main
