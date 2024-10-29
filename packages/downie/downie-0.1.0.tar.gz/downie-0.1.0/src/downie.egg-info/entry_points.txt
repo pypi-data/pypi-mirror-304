@@ -1,0 +1,3 @@
+[console_scripts]
+downie = downie.cli.download:main
+subtitle-dl = downie.cli.subtitle:main
