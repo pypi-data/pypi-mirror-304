@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+online_store/online_store_plankin.egg-info/PKG-INFO
+online_store/online_store_plankin.egg-info/SOURCES.txt
+online_store/online_store_plankin.egg-info/dependency_links.txt
+online_store/online_store_plankin.egg-info/entry_points.txt
+online_store/online_store_plankin.egg-info/top_level.txt
