@@ -1,0 +1,3 @@
+[console_scripts]
+philharmonic=philharmonic.__main__:app
+
