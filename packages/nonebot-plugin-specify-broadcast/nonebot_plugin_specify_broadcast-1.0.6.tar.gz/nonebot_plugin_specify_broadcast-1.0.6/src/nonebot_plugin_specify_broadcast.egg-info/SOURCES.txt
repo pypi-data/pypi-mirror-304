@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/pypi-publish.yml
+src/nonebot_plugin_specify_broadcast/__init__.py
+src/nonebot_plugin_specify_broadcast/config.py
+src/nonebot_plugin_specify_broadcast.egg-info/PKG-INFO
+src/nonebot_plugin_specify_broadcast.egg-info/SOURCES.txt
+src/nonebot_plugin_specify_broadcast.egg-info/dependency_links.txt
+src/nonebot_plugin_specify_broadcast.egg-info/requires.txt
+src/nonebot_plugin_specify_broadcast.egg-info/top_level.txt
