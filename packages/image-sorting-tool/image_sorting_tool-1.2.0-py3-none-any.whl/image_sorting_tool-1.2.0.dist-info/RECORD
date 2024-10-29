@@ -1,0 +1,10 @@
+image_sorting_tool/__init__.py,sha256=UWDTl4t-Gn60PefjnM_d2KxDVg2M4x7xaUhdjRwqGZo,49
+image_sorting_tool/__main__.py,sha256=ZsnThgoLtMgSszUZIEvRVmQjFG_ov094-uUAmPWnlUM,1255
+image_sorting_tool/gui.py,sha256=-p62_t2zmtF4r5IJkUIwe5SDIFUE01PNnFnOsaT0OPA,16185
+image_sorting_tool/image_sort.py,sha256=Yn294TiZza0gyLB2KG3WcXoekKy9cp1iFxzZ6xaxU-g,16824
+image_sorting_tool-1.2.0.dist-info/LICENSE,sha256=1Q1femiXoXy6I3EJPyvIOnv9CkC7nd3iAx4fYkQ5na4,1096
+image_sorting_tool-1.2.0.dist-info/METADATA,sha256=lEI2qrkWnQv1bDmxqs3EV8r01YjDWZNt-Aas_dS-Jp4,5467
+image_sorting_tool-1.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+image_sorting_tool-1.2.0.dist-info/entry_points.txt,sha256=OuWSpHr0idNsNHokbhsSivHHgN-suYXkf_h2AYCcbrc,67
+image_sorting_tool-1.2.0.dist-info/top_level.txt,sha256=cDRTMf8EdlDK-YHaUNdUJUHxmCp18IdLBaIOZmv_IVs,19
+image_sorting_tool-1.2.0.dist-info/RECORD,,
