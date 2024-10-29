@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaarf-io"
+version = "0.0.1dev1"
+dependencies = [
+  'gaarf-core',
+  'smart_open',
+  'rich',
+]
+requires-python = ">=3.8"
+description = "description"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[options.extras_require]
+test =  [
+  "pytest",
+  "pytest-cov",
+  "pandas"
+]
+
+[project.optional-dependencies]
+bq=[
+  "google-cloud-bigquery",
+  "pandas",
+  "smart_open[gcs]",
+]
+sqlalchemy = [
+  "sqlalchemy",
+  "pandas",
+]
+sheets = [
+  "gspread",
+]
+all = [
+  "gaarf-io[bq,sheets,sqlalchemy]"
+]
+[project.scripts]

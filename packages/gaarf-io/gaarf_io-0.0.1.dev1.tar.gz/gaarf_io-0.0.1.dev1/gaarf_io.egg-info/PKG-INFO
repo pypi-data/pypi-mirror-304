@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gaarf-io
+Version: 0.0.1.dev1
+Summary: description
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: gaarf-core
+Requires-Dist: smart_open
+Requires-Dist: rich
+Provides-Extra: bq
+Requires-Dist: google-cloud-bigquery; extra == "bq"
+Requires-Dist: pandas; extra == "bq"
+Requires-Dist: smart_open[gcs]; extra == "bq"
+Provides-Extra: sqlalchemy
+Requires-Dist: sqlalchemy; extra == "sqlalchemy"
+Requires-Dist: pandas; extra == "sqlalchemy"
+Provides-Extra: sheets
+Requires-Dist: gspread; extra == "sheets"
+Provides-Extra: all
+Requires-Dist: gaarf-io[bq,sheets,sqlalchemy]; extra == "all"
