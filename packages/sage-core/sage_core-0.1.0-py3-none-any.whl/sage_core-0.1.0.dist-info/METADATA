@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sage_core
+Version: 0.1.0
+Summary: SAGE Core - универсальный движок для взаимодействия между плагинами.
+Home-page: https://github.com/yourusername/sage_core
+Author: AGStudios
+Author-email: amckinatorgames@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# SAGE Core
+
+SAGE Core - СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РґРІРёР¶РѕРє РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ РјРµР¶РґСѓ РїР»Р°РіРёРЅР°РјРё. РџРѕР·РІРѕР»СЏРµС‚ СЃРѕР·РґР°РІР°С‚СЊ СЂР°СЃС€РёСЂСЏРµРјС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃ РїРѕРјРѕС‰СЊСЋ РјРѕРґСѓР»СЊРЅС‹С… РїР»Р°РіРёРЅРѕРІ.
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+
+```bash
+pip install .
