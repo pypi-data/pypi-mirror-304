@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: modelxplain
+Version: 0.1.0
+Summary: A package for enhancing model interpretability for machine learning models.
+Home-page: https://github.com/yourusername/modelinsightharsh
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+License-File: LICENSE
