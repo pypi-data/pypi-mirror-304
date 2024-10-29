@@ -1,0 +1,10 @@
+sigit/__init__.py,sha256=19E9nd4-suZRmqzZsAYG7cbxThq3bfIezwzwIJ7s80k,117
+sigit/custom_widgets.kv,sha256=hkJ5DEsOvS4Mk-AZH2Se9fE2PRk6zIt4RwY07OUMVe4,1518
+sigit/custom_widgets.py,sha256=uXMK3MwHBsLg1wb_rozo5-gGBdEWVjoTxJ9OAN5DSzI,4305
+sigit/main.kv,sha256=462c7SoeAYXVpaqkowNlFqP9u9vAEEyFDbzy65gTJsA,7740
+sigit/main.py,sha256=JHsd9wh3KTsmtkQkMNg_aJajHu95ql0Ir1MYzj_C-BE,64385
+sigit/assets/fonts/DejaVuSansMono.ttf,sha256=OcKZMSAfCN2J_bpBKcdiiOa67s98lP5PanV_K1Bxixs,340712
+sigit-0.0.56.dist-info/METADATA,sha256=da6XLMad8KgzjtjRzk23sIq1cSgOU6lZOtx8GF7Syzc,921
+sigit-0.0.56.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+sigit-0.0.56.dist-info/entry_points.txt,sha256=FfOefROitQoQMmritUqcR4IDd-zuSP2hPfycp_-ngwc,42
+sigit-0.0.56.dist-info/RECORD,,
