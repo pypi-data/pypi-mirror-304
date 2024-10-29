@@ -1,0 +1,4 @@
+[console_scripts]
+gaarf-bq-executor = gaarf_executors.entrypoints.cli.bq:main
+gaarf-executor = gaarf_executors.entrypoints.cli.api:main
+gaarf-sql-executor = gaarf_executors.entrypoints.cli.sql:main

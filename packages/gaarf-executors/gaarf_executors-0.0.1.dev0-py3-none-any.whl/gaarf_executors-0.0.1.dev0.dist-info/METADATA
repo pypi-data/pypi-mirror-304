@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gaarf-executors
+Version: 0.0.1.dev0
+Summary: description
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: gaarf-core ==0.0.1.dev0
+Requires-Dist: gaarf-writers ==0.0.1.dev0
+Requires-Dist: pandas
+Provides-Extra: all
+Requires-Dist: gaarf-executors[bq,sql] ; extra == 'all'
+Provides-Extra: bq
+Requires-Dist: gaarf-writers[bq] ; extra == 'bq'
+Provides-Extra: sql
+Requires-Dist: gaarf-writers[sqlalchemy] ; extra == 'sql'
+
