@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: japan-geoid
+Version: 0.4.3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Scientific/Engineering :: GIS
+License-File: LICENSE.txt
+Summary: Calculate geoid heights for Japan using GSI's geoid model.
+Author-email: Taku Fukada <naninunenor@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Project-URL: repository, https://github.com/ciscorn/japan-geoid/
