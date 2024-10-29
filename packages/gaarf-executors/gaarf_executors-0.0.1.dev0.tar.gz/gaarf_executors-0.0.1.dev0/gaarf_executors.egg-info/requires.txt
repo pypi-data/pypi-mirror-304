@@ -1,0 +1,12 @@
+gaarf_core==0.0.1.dev0
+gaarf_writers==0.0.1.dev0
+pandas
+
+[all]
+gaarf_executors[bq,sql]
+
+[bq]
+gaarf_writers[bq]
+
+[sql]
+gaarf_writers[sqlalchemy]
