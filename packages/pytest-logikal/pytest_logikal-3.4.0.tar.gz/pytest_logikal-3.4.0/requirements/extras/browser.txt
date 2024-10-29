@@ -1,0 +1,4 @@
+requests~=2.32
+tqdm~=4.66
+selenium==4.25.0
+xdg-base-dirs~=6.0
