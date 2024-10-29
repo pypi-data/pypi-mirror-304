@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: python_apis
+Version: 0.1.1
+Summary: A package that contains a small collection of easy to use API to common services
+Author-email: Björn Gunnarsson <bjorngun@kopavogur.is>
+Project-URL: Source, https://github.com/Kopavogur/Python-APIs
+Project-URL: Tracker, https://github.com/Kopavogur/Python-APIs/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bosos-dev-tools
+Requires-Dist: ldap3
+Requires-Dist: python-dotenv
+Requires-Dist: sqlalchemy
+Requires-Dist: winkerberos
+Requires-Dist: cryptography
+Requires-Dist: unidecode
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Provides-Extra: lint
+Requires-Dist: pylint; extra == "lint"
+
+# Python-APIs
+A collection of easy to use API's that are mostly used for collecting data.
+
+Developing Python-APIs
+Along with the tools you need to develop and run tests, run the following in your virtual env:
+pip install -e .[dev]
