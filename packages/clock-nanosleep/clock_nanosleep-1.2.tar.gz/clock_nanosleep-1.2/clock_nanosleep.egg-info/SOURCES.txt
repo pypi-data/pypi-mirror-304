@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+clock_nanosleep.egg-info/PKG-INFO
+clock_nanosleep.egg-info/SOURCES.txt
+clock_nanosleep.egg-info/dependency_links.txt
+clock_nanosleep.egg-info/top_level.txt
+src/__init__.py
+src/__init__.pyi
+src/_clock_nanosleep.c
+src/py.typed
+tests/test_sleep.py
